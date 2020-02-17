@@ -1,0 +1,63 @@
+C:\Users\Borga\Desktop\a-software-solution-for-media-bazaar\Media Bazaar\obj\Debug\Media Bazaar.csprojAssemblyReference.cache
+C:\Users\Borga\Desktop\a-software-solution-for-media-bazaar\Media Bazaar\obj\Debug\Media_Bazaar.Login.resources
+C:\Users\Borga\Desktop\a-software-solution-for-media-bazaar\Media Bazaar\obj\Debug\Media_Bazaar.Properties.Resources.resources
+C:\Users\Borga\Desktop\a-software-solution-for-media-bazaar\Media Bazaar\obj\Debug\Media Bazaar.csproj.GenerateResource.cache
+C:\Users\Borga\Desktop\a-software-solution-for-media-bazaar\Media Bazaar\bin\Debug\Media Bazaar.exe.config
+C:\Users\Borga\Desktop\a-software-solution-for-media-bazaar\Media Bazaar\bin\Debug\Media Bazaar.exe
+C:\Users\Borga\Desktop\a-software-solution-for-media-bazaar\Media Bazaar\bin\Debug\Media Bazaar.pdb
+C:\Users\Borga\Desktop\a-software-solution-for-media-bazaar\Media Bazaar\obj\Debug\Media Bazaar.exe
+C:\Users\Borga\Desktop\a-software-solution-for-media-bazaar\Media Bazaar\obj\Debug\Media Bazaar.pdb
+C:\Users\Borga\Desktop\a-software-solution-for-media-bazaar\Media Bazaar\obj\Debug\Media_Bazaar.Main.resources
+C:\Users\Borga\Desktop\Media Bazaar\bin\Debug\Media Bazaar.exe.config
+C:\Users\Borga\Desktop\Media Bazaar\bin\Debug\Media Bazaar.exe
+C:\Users\Borga\Desktop\Media Bazaar\bin\Debug\Media Bazaar.pdb
+C:\Users\Borga\Desktop\Media Bazaar\obj\Debug\Media Bazaar.csprojAssemblyReference.cache
+C:\Users\Borga\Desktop\Media Bazaar\obj\Debug\Media_Bazaar.Login.resources
+C:\Users\Borga\Desktop\Media Bazaar\obj\Debug\Media_Bazaar.Main.resources
+C:\Users\Borga\Desktop\Media Bazaar\obj\Debug\Media_Bazaar.Properties.Resources.resources
+C:\Users\Borga\Desktop\Media Bazaar\obj\Debug\Media Bazaar.csproj.GenerateResource.cache
+C:\Users\Borga\Desktop\Media Bazaar\obj\Debug\Media Bazaar.exe
+C:\Users\Borga\Desktop\Media Bazaar\obj\Debug\Media Bazaar.pdb
+C:\Users\Msi\Desktop\Media Bazaar Backup\bin\Debug\Media Bazaar.exe.config
+C:\Users\Msi\Desktop\Media Bazaar Backup\bin\Debug\Media Bazaar.exe
+C:\Users\Msi\Desktop\Media Bazaar Backup\bin\Debug\Media Bazaar.pdb
+C:\Users\Msi\Desktop\Media Bazaar Backup\obj\Debug\Media Bazaar.csprojAssemblyReference.cache
+C:\Users\Msi\Desktop\Media Bazaar Backup\obj\Debug\Media_Bazaar.Login.resources
+C:\Users\Msi\Desktop\Media Bazaar Backup\obj\Debug\Media_Bazaar.Main.resources
+C:\Users\Msi\Desktop\Media Bazaar Backup\obj\Debug\Media_Bazaar.Properties.Resources.resources
+C:\Users\Msi\Desktop\Media Bazaar Backup\obj\Debug\Media Bazaar.csproj.GenerateResource.cache
+C:\Users\Msi\Desktop\Media Bazaar Backup\obj\Debug\Media Bazaar.exe
+C:\Users\Msi\Desktop\Media Bazaar Backup\obj\Debug\Media Bazaar.pdb
+C:\Users\Borga\Desktop\Media Bazaar Backup\bin\Debug\Media Bazaar.exe.config
+C:\Users\Borga\Desktop\Media Bazaar Backup\bin\Debug\Media Bazaar.exe
+C:\Users\Borga\Desktop\Media Bazaar Backup\bin\Debug\Media Bazaar.pdb
+C:\Users\Borga\Desktop\Media Bazaar Backup\obj\Debug\Media_Bazaar.Login.resources
+C:\Users\Borga\Desktop\Media Bazaar Backup\obj\Debug\Media_Bazaar.Properties.Resources.resources
+C:\Users\Borga\Desktop\Media Bazaar Backup\obj\Debug\Media Bazaar.csproj.GenerateResource.cache
+C:\Users\Borga\Desktop\Media Bazaar Backup\obj\Debug\Media Bazaar.exe
+C:\Users\Borga\Desktop\Media Bazaar Backup\obj\Debug\Media Bazaar.pdb
+C:\Users\Borga\Desktop\Media Bazaar Backup\obj\Debug\Media_Bazaar.MainAdmin.resources
+C:\Users\Borga\Desktop\Media Bazaar Backup\obj\Debug\Media_Bazaar.MainDepot.resources
+C:\Users\Borga\Desktop\Media Bazaar Backup\obj\Debug\Media_Bazaar.MainManager.resources
+C:\Users\Borga\Desktop\Media Bazaar Backup\obj\Debug\Media_Bazaar.AdminEmployees.resources
+C:\Users\Borga\Desktop\Media Bazaar Backup\obj\Debug\Media_Bazaar.AdminSchedule.resources
+C:\Users\Borga\Desktop\Media Bazaar Backup\obj\Debug\Media_Bazaar.ManagerEmployees.resources
+C:\Users\Borga\Desktop\Media Bazaar Backup\obj\Debug\Media_Bazaar.ManagerStatistics.resources
+C:\Users\Borga\Desktop\Media Bazaar Backup\obj\Debug\Media_Bazaar.ManagerStocks.resources
+C:\Users\Borga\Desktop\Media Bazaar Backup\obj\Debug\Media_Bazaar.AdminProfile.resources
+C:\Users\Borga\Desktop\Media Bazaar Backup\obj\Debug\Media_Bazaar.ManagerProfile.resources
+C:\Users\Borga\Desktop\Media Bazaar Backup\obj\Debug\Media_Bazaar.DepotProfile.resources
+C:\Users\Borga\Desktop\Media Bazaar Backup\obj\Debug\Media_Bazaar.DepotSchedule.resources
+C:\Users\Borga\Desktop\Media Bazaar Backup\obj\Debug\Media_Bazaar.DepotStock.resources
+C:\Users\Borga\Desktop\Media Bazaar Backup - Copy\bin\Debug\Media Bazaar.exe.config
+C:\Users\Borga\Desktop\Media Bazaar Backup - Copy\bin\Debug\Media Bazaar.exe
+C:\Users\Borga\Desktop\Media Bazaar Backup - Copy\bin\Debug\Media Bazaar.pdb
+C:\Users\Borga\Desktop\Media Bazaar Backup - Copy\obj\Debug\Media Bazaar.csprojAssemblyReference.cache
+C:\Users\Borga\Desktop\Media Bazaar Backup - Copy\obj\Debug\Media_Bazaar.Login.resources
+C:\Users\Borga\Desktop\Media Bazaar Backup - Copy\obj\Debug\Media_Bazaar.MainAdmin.resources
+C:\Users\Borga\Desktop\Media Bazaar Backup - Copy\obj\Debug\Media_Bazaar.MainDepot.resources
+C:\Users\Borga\Desktop\Media Bazaar Backup - Copy\obj\Debug\Media_Bazaar.MainManager.resources
+C:\Users\Borga\Desktop\Media Bazaar Backup - Copy\obj\Debug\Media_Bazaar.Properties.Resources.resources
+C:\Users\Borga\Desktop\Media Bazaar Backup - Copy\obj\Debug\Media Bazaar.csproj.GenerateResource.cache
+C:\Users\Borga\Desktop\Media Bazaar Backup - Copy\obj\Debug\Media Bazaar.exe
+C:\Users\Borga\Desktop\Media Bazaar Backup - Copy\obj\Debug\Media Bazaar.pdb
