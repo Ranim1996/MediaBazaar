@@ -17,50 +17,106 @@ namespace Media_Bazaar
         {
             InitializeComponent();
             loginForm = DataManage.loginForm;
-            btnWhite.Visible = false;
-            pnlProfile.Visible = false;
-            pnlSchedule.Visible = false;
-            pnlStock.Visible = false;
+           
         }
-        private void makeVisibleOnly(Panel panel)
+        
+
+        private void MainDepot_Load(object sender, EventArgs e)
         {
-            btnWhite.Visible = true;
-            pnlProfile.Visible = false;
-            pnlSchedule.Visible = false;
-            pnlStock.Visible = false;
-            panel.Visible = true;
+            tabControl1.Appearance = TabAppearance.FlatButtons;
+            tabControl1.ItemSize = new Size(0, 1);
+            tabControl1.SizeMode = TabSizeMode.Fixed;
+            tabControl1.TabPages[0].BackColor = Color.FromArgb(116, 208, 252);
         }
 
-        private void makeHeightEqual(Button button) //To display the tab we are using
+        private void bunifuFlatButton9_Click(object sender, EventArgs e)
         {
-            btnWhite.Height = button.Height;
-            btnWhite.Top = button.Top;
+            tabControl1.SelectedTab = tabPage1;
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
+        private void bunifuFlatButton16_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            loginForm.Show();
-            btnWhite.Height = btnLogout.Height;
-            btnWhite.Top = btnLogout.Top;
+            tabControl1.SelectedTab = tabPage1;
         }
 
-        private void btnProfile_Click(object sender, EventArgs e)
+        private void bunifuFlatButton20_Click(object sender, EventArgs e)
         {
-            makeVisibleOnly(pnlProfile);
-            makeHeightEqual(btnProfile);
+            tabControl1.SelectedTab = tabPage1;
         }
 
-        private void btnSchedule_Click(object sender, EventArgs e)
+        private void bunifuFlatButton23_Click(object sender, EventArgs e)
         {
-            makeVisibleOnly(pnlSchedule);
-            makeHeightEqual(btnSchedule);
+            tabControl1.SelectedTab = tabPage1;
         }
 
-        private void btnStock_Click(object sender, EventArgs e)
+        private void bunifuFlatButton26_Click(object sender, EventArgs e)
         {
-            makeVisibleOnly(pnlStock);
-            makeHeightEqual(btnStock);
+            tabControl1.SelectedTab = tabPage1;
+        }
+
+        private void bunifuFlatButton12_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage2;
+        }
+
+        private void bunifuFlatButton17_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage2;
+        }
+
+        private void bunifuFlatButton21_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage2;
+        }
+
+        private void bunifuFlatButton24_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage2;
+        }
+
+        private void bunifuFlatButton27_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage2;
+        }
+
+        private void bunifuFlatButton19_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage4;
+        }
+
+        private void bunifuFlatButton18_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage4;
+        }
+
+        private void bunifuFlatButton22_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage4;
+        }
+
+        private void bunifuFlatButton25_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage4;
+        }
+
+        private void bunifuFlatButton28_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage4;
+        }
+
+        private void bunifuFlatButton29_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage3;
+        }
+
+        private void bunifuFlatButton31_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage5;
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -61,3 +61,18 @@ C:\Users\Borga\Desktop\Media Bazaar Backup - Copy\obj\Debug\Media_Bazaar.Propert
 C:\Users\Borga\Desktop\Media Bazaar Backup - Copy\obj\Debug\Media Bazaar.csproj.GenerateResource.cache
 C:\Users\Borga\Desktop\Media Bazaar Backup - Copy\obj\Debug\Media Bazaar.exe
 C:\Users\Borga\Desktop\Media Bazaar Backup - Copy\obj\Debug\Media Bazaar.pdb
+E:\Semester2Project\a-software-solution-for-media-bazaar\Media Bazaar\bin\Debug\Media Bazaar.exe.config
+E:\Semester2Project\a-software-solution-for-media-bazaar\Media Bazaar\bin\Debug\Media Bazaar.exe
+E:\Semester2Project\a-software-solution-for-media-bazaar\Media Bazaar\bin\Debug\Media Bazaar.pdb
+E:\Semester2Project\a-software-solution-for-media-bazaar\Media Bazaar\obj\Debug\Media Bazaar.csprojAssemblyReference.cache
+E:\Semester2Project\a-software-solution-for-media-bazaar\Media Bazaar\obj\Debug\Media_Bazaar.Login.resources
+E:\Semester2Project\a-software-solution-for-media-bazaar\Media Bazaar\obj\Debug\Media_Bazaar.MainAdmin.resources
+E:\Semester2Project\a-software-solution-for-media-bazaar\Media Bazaar\obj\Debug\Media_Bazaar.MainDepot.resources
+E:\Semester2Project\a-software-solution-for-media-bazaar\Media Bazaar\obj\Debug\Media_Bazaar.MainManager.resources
+E:\Semester2Project\a-software-solution-for-media-bazaar\Media Bazaar\obj\Debug\Media_Bazaar.Properties.Resources.resources
+E:\Semester2Project\a-software-solution-for-media-bazaar\Media Bazaar\obj\Debug\Media Bazaar.csproj.GenerateResource.cache
+E:\Semester2Project\a-software-solution-for-media-bazaar\Media Bazaar\obj\Debug\Media Bazaar.exe
+E:\Semester2Project\a-software-solution-for-media-bazaar\Media Bazaar\obj\Debug\Media Bazaar.pdb
+E:\Semester2Project\a-software-solution-for-media-bazaar\Media Bazaar\bin\Debug\Bunifu_UI_v1.52(2).dll
+E:\Semester2Project\a-software-solution-for-media-bazaar\Media Bazaar\obj\Debug\Media Bazaar.csproj.CopyComplete
+E:\Semester2Project\a-software-solution-for-media-bazaar\Media Bazaar\bin\Debug\Bunifu_UI_v1.5.3.dll

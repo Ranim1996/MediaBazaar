@@ -4,6 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
+
 namespace Media_Bazaar
 {
     static class Program
@@ -18,5 +21,6 @@ namespace Media_Bazaar
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
         }
+
     }
 }
