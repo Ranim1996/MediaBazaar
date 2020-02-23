@@ -31,92 +31,59 @@ namespace Media_Bazaar
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
-
-
-
-        private void tbUsername_Click(object sender, EventArgs e)
+        //closes login form and exits the app
+        private void btnLoginExit_Click(object sender, EventArgs e)
         {
-            tbUsername.Clear();
+            Application.Exit();
         }
 
-        private void tbPassword_Click(object sender, EventArgs e)
-        {
-            tbPassword.Clear();
-        }
-
-
-
-        private void bunifuFlatButton2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        //Minimize login form
+        private void btnLoginMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void bunifuFlatButton6_Click(object sender, EventArgs e)
+        //Login, to be modified when the database will be made
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-
             if (tbUsername.Text == "Admin" && tbPassword.Text == "1234")
             {
                 tbUsername.Text = "Username";
                 tbPassword.Text = "Password";
-                this.Visible = false;
-                DataManage.username = tbUsername.Text;
-                DataManage.loginForm = this;
                 MainAdmin MainAdmin = new MainAdmin();
                 MainAdmin.Show();
-            }
-
-            if (tbUsername.Text == "Manager" && tbPassword.Text == "1234")
-            {
-                tbUsername.Text = "Username";
-                tbPassword.Text = "Password";
                 this.Visible = false;
-                DataManage.username = tbUsername.Text;
-                DataManage.loginForm = this;
-                MainManager MainManager = new MainManager();
-                MainManager.Show();
-            }
-
-            if (tbUsername.Text == "Depot" && tbPassword.Text == "1234")
-            {
-                tbUsername.Text = "Username";
-                tbPassword.Text = "Password";
-                this.Visible = false;
-                DataManage.username = tbUsername.Text;
-                DataManage.loginForm = this;
-                MainDepot MainDepot = new MainDepot();
-                MainDepot.Show();
             }
             else
             {
-                //MessageBox.Show("Wrong Username/Password");
+                if (tbUsername.Text == "Manager" && tbPassword.Text == "1234")
+                {
+                    tbUsername.Text = "Username";
+                    tbPassword.Text = "Password";
+                    MainManager MainManager = new MainManager();
+                    MainManager.Show();
+                    this.Visible = false;
+                }
+                else
+                {
+                    if (tbUsername.Text == "Depot" && tbPassword.Text == "1234")
+                    {
+                        tbUsername.Text = "Username";
+                        tbPassword.Text = "Password";
+                        MainDepot MainDepot = new MainDepot();
+                        MainDepot.Show();
+                        this.Visible = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Wrong Username/Password");
+                        tbUsername.Text = "Username";
+                        tbPassword.Text = "Password";
+                    }
+                }
             }
         }
 
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbUsername_KeyDown(object sender, KeyEventArgs e)
-        {
-            //if (e.KeyCode == Keys.Enter)
-            //{
-            //    tbPassword.Focus();
-            //}
-        }
-
-        private void tbPassword_KeyDown(object sender, KeyEventArgs e)
-        {
-            //if (e.KeyCode == Keys.Enter)
-            //{
-            //    btnLogin.Focus();
-            //}
-        }
+        
     }
 }

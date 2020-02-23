@@ -19,7 +19,12 @@ namespace Media_Bazaar
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+
+            //DO NOT CHANGE THESE
+            Login log = new Login();
+            log.Show();
+            Application.Run();
+            
         }
 
     }

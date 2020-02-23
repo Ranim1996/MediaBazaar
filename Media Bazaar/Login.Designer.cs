@@ -34,8 +34,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnLoginMinimize = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnLoginExit = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnLogin = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -48,15 +48,12 @@
             this.tbUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.tbUsername.Location = new System.Drawing.Point(63, 233);
-            this.tbUsername.Margin = new System.Windows.Forms.Padding(4);
-            this.tbUsername.Multiline = true;
+            this.tbUsername.Location = new System.Drawing.Point(47, 189);
             this.tbUsername.Name = "tbUsername";
-            this.tbUsername.Size = new System.Drawing.Size(239, 30);
+            this.tbUsername.Size = new System.Drawing.Size(179, 19);
             this.tbUsername.TabIndex = 2;
-            this.tbUsername.Text = "Username            ";
-            this.tbUsername.Click += new System.EventHandler(this.tbUsername_Click);
-            this.tbUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbUsername_KeyDown);
+            this.tbUsername.Text = "Username";
+           
             // 
             // tbPassword
             // 
@@ -64,33 +61,28 @@
             this.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.tbPassword.Location = new System.Drawing.Point(63, 282);
-            this.tbPassword.Margin = new System.Windows.Forms.Padding(4);
-            this.tbPassword.Multiline = true;
+            this.tbPassword.Location = new System.Drawing.Point(47, 229);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '*';
-            this.tbPassword.Size = new System.Drawing.Size(239, 30);
+            this.tbPassword.Size = new System.Drawing.Size(179, 19);
             this.tbPassword.TabIndex = 3;
             this.tbPassword.Text = "Password:";
-            this.tbPassword.Click += new System.EventHandler(this.tbPassword_Click);
-            this.tbPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbPassword_KeyDown);
+            
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(63, 351);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(47, 285);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(239, 1);
+            this.panel1.Size = new System.Drawing.Size(179, 1);
             this.panel1.TabIndex = 7;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(63, 292);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(47, 237);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(239, 1);
+            this.panel2.Size = new System.Drawing.Size(179, 1);
             this.panel2.TabIndex = 8;
             // 
             // pictureBox1
@@ -99,84 +91,83 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(323, 431);
+            this.pictureBox1.Size = new System.Drawing.Size(242, 350);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            
             // 
-            // bunifuFlatButton1
+            // btnLoginMinimize
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "_";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = null;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(243, 13);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(26, 26);
-            this.bunifuFlatButton1.TabIndex = 13;
-            this.bunifuFlatButton1.Text = "_";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            this.btnLoginMinimize.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnLoginMinimize.BackColor = System.Drawing.Color.White;
+            this.btnLoginMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLoginMinimize.BorderRadius = 0;
+            this.btnLoginMinimize.ButtonText = "_";
+            this.btnLoginMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLoginMinimize.DisabledColor = System.Drawing.Color.Gray;
+            this.btnLoginMinimize.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnLoginMinimize.Iconimage = null;
+            this.btnLoginMinimize.Iconimage_right = null;
+            this.btnLoginMinimize.Iconimage_right_Selected = null;
+            this.btnLoginMinimize.Iconimage_Selected = null;
+            this.btnLoginMinimize.IconMarginLeft = 0;
+            this.btnLoginMinimize.IconMarginRight = 0;
+            this.btnLoginMinimize.IconRightVisible = true;
+            this.btnLoginMinimize.IconRightZoom = 0D;
+            this.btnLoginMinimize.IconVisible = true;
+            this.btnLoginMinimize.IconZoom = 90D;
+            this.btnLoginMinimize.IsTab = false;
+            this.btnLoginMinimize.Location = new System.Drawing.Point(182, 11);
+            this.btnLoginMinimize.Name = "btnLoginMinimize";
+            this.btnLoginMinimize.Normalcolor = System.Drawing.Color.White;
+            this.btnLoginMinimize.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnLoginMinimize.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnLoginMinimize.selected = false;
+            this.btnLoginMinimize.Size = new System.Drawing.Size(20, 21);
+            this.btnLoginMinimize.TabIndex = 13;
+            this.btnLoginMinimize.Text = "_";
+            this.btnLoginMinimize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLoginMinimize.Textcolor = System.Drawing.Color.Black;
+            this.btnLoginMinimize.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoginMinimize.Click += new System.EventHandler(this.btnLoginMinimize_Click);
             // 
-            // bunifuFlatButton2
+            // btnLoginExit
             // 
-            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.Red;
-            this.bunifuFlatButton2.BackColor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton2.BorderRadius = 0;
-            this.bunifuFlatButton2.ButtonText = "X";
-            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.Iconimage = null;
-            this.bunifuFlatButton2.Iconimage_right = null;
-            this.bunifuFlatButton2.Iconimage_right_Selected = null;
-            this.bunifuFlatButton2.Iconimage_Selected = null;
-            this.bunifuFlatButton2.IconMarginLeft = 0;
-            this.bunifuFlatButton2.IconMarginRight = 0;
-            this.bunifuFlatButton2.IconRightVisible = true;
-            this.bunifuFlatButton2.IconRightZoom = 0D;
-            this.bunifuFlatButton2.IconVisible = true;
-            this.bunifuFlatButton2.IconZoom = 90D;
-            this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(284, 13);
-            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
-            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.Size = new System.Drawing.Size(26, 26);
-            this.bunifuFlatButton2.TabIndex = 14;
-            this.bunifuFlatButton2.Text = "X";
-            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton2.Click += new System.EventHandler(this.bunifuFlatButton2_Click);
+            this.btnLoginExit.Activecolor = System.Drawing.Color.Red;
+            this.btnLoginExit.BackColor = System.Drawing.Color.White;
+            this.btnLoginExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLoginExit.BorderRadius = 0;
+            this.btnLoginExit.ButtonText = "X";
+            this.btnLoginExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLoginExit.DisabledColor = System.Drawing.Color.Gray;
+            this.btnLoginExit.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnLoginExit.Iconimage = null;
+            this.btnLoginExit.Iconimage_right = null;
+            this.btnLoginExit.Iconimage_right_Selected = null;
+            this.btnLoginExit.Iconimage_Selected = null;
+            this.btnLoginExit.IconMarginLeft = 0;
+            this.btnLoginExit.IconMarginRight = 0;
+            this.btnLoginExit.IconRightVisible = true;
+            this.btnLoginExit.IconRightZoom = 0D;
+            this.btnLoginExit.IconVisible = true;
+            this.btnLoginExit.IconZoom = 90D;
+            this.btnLoginExit.IsTab = false;
+            this.btnLoginExit.Location = new System.Drawing.Point(213, 11);
+            this.btnLoginExit.Name = "btnLoginExit";
+            this.btnLoginExit.Normalcolor = System.Drawing.Color.White;
+            this.btnLoginExit.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnLoginExit.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnLoginExit.selected = false;
+            this.btnLoginExit.Size = new System.Drawing.Size(20, 21);
+            this.btnLoginExit.TabIndex = 14;
+            this.btnLoginExit.Text = "X";
+            this.btnLoginExit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLoginExit.Textcolor = System.Drawing.Color.Black;
+            this.btnLoginExit.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoginExit.Click += new System.EventHandler(this.btnLoginExit_Click);
             // 
             // btnLogin
             // 
@@ -199,42 +190,42 @@
             this.btnLogin.IconVisible = false;
             this.btnLogin.IconZoom = 90D;
             this.btnLogin.IsTab = false;
-            this.btnLogin.Location = new System.Drawing.Point(63, 331);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogin.Location = new System.Drawing.Point(47, 269);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnLogin.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnLogin.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogin.selected = false;
-            this.btnLogin.Size = new System.Drawing.Size(239, 63);
+            this.btnLogin.Size = new System.Drawing.Size(179, 51);
             this.btnLogin.TabIndex = 15;
             this.btnLogin.Text = "Login";
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLogin.Textcolor = System.Drawing.Color.White;
             this.btnLogin.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Click += new System.EventHandler(this.bunifuFlatButton6_Click);
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(112, 74);
+            this.pictureBox2.Location = new System.Drawing.Point(84, 60);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(136, 122);
+            this.pictureBox2.Size = new System.Drawing.Size(102, 99);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 16;
             this.pictureBox2.TabStop = false;
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(323, 431);
+            this.ClientSize = new System.Drawing.Size(242, 350);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.bunifuFlatButton2);
-            this.Controls.Add(this.bunifuFlatButton1);
+            this.Controls.Add(this.btnLoginExit);
+            this.Controls.Add(this.btnLoginMinimize);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tbPassword);
@@ -242,7 +233,6 @@
             this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
@@ -259,8 +249,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        private Bunifu.Framework.UI.BunifuFlatButton btnLoginMinimize;
+        private Bunifu.Framework.UI.BunifuFlatButton btnLoginExit;
         private Bunifu.Framework.UI.BunifuFlatButton btnLogin;
         private System.Windows.Forms.PictureBox pictureBox2;
     }

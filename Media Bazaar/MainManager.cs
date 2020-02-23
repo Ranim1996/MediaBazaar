@@ -12,26 +12,12 @@ namespace Media_Bazaar
 {
     public partial class MainManager : Form
     {
-        Login loginForm;
+
         public MainManager()
         {
-            InitializeComponent();
-            loginForm = DataManage.loginForm;
-            
+            InitializeComponent();           
         }
-        
-
-
-        private void btnStocks_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void bunifuFlatButton49_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void MainManager_Load(object sender, EventArgs e)
         {
             tabControl1.Appearance = TabAppearance.FlatButtons;
@@ -40,294 +26,78 @@ namespace Media_Bazaar
             tabControl1.TabPages[0].BackColor = Color.FromArgb(116, 208, 252);
         }
 
-        private void bunifuFlatButton13_Click(object sender, EventArgs e)
-        {
 
+        //----------------------------------Start
+        //All buttons connections for the AdminForm 
+        //DO NOT Modify THIS !!!
+        private void btnSearchTABemplStats_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabSearchEmpl;
         }
 
-        private void bunifuFlatButton45_Click(object sender, EventArgs e)
+        private void btnLogOutTABdepart_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedTab = tabPage6;
+            Login log = new Login();
+            log.Show();
+            this.Visible = false;
         }
 
-        private void bunifuFlatButton6_Click(object sender, EventArgs e)
+        private void MainManager_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            Application.Exit();
         }
 
-        private void bunifuFlatButton10_Click(object sender, EventArgs e)
+        private void btnShiftsTABemplStats_Click(object sender, EventArgs e)
         {
-
+            tabControl1.SelectedTab = tabShiftStats;
         }
 
-        private void bunifuFlatButton11_Click(object sender, EventArgs e)
+        private void btnDepartStockTABemplStats_Click(object sender, EventArgs e)
         {
-
+            tabControl1.SelectedTab = tabDepartStats;
         }
 
-        private void bunifuFlatButton12_Click(object sender, EventArgs e)
+        private void btnEmployeesTABshiftStats_Click(object sender, EventArgs e)
         {
-
+            tabControl1.SelectedTab = tabEmployeeStats;
         }
 
-        private void bunifuFlatButton13_Click_1(object sender, EventArgs e)
+        private void btnStatisticsTABsearch_Click(object sender, EventArgs e)
         {
-
+            tabControl1.SelectedTab = tabEmployeeStats;
         }
-
-        private void bunifuFlatButton14_Click(object sender, EventArgs e)
+        //Here information about the employee should be added, in order to display his correct info on the profile TAB.
+        private void btnViewProfile_Click(object sender, EventArgs e)
         {
-
+            tabControl1.SelectedTab = tabProfile;
         }
+        //----------------------------------------Finish
 
-        private void bunifuFlatButton15_Click(object sender, EventArgs e)
+
+
+        //------------------------------start
+        //Method for changing back color of the selected menu
+        public void ChangeBackColorOfMenus(TabControl tc)
         {
-
+            if(tc.SelectedTab == tabEmployeeStats || tc.SelectedTab == tabShiftStats || tc.SelectedTab == tabDepartStats)
+            {
+                btnStatsTABdepart.BackColor = Color.FromArgb(32, 126, 177);
+                btnStatsTABemployeeStats.BackColor = Color.FromArgb(32, 126, 177);
+                btnStatisticsTABshiftStats.BackColor = Color.FromArgb(32, 126, 177);
+            }
+            else
+            {
+                if(tc.SelectedTab == tabSearchEmpl || tc.SelectedTab == tabProfile)
+                {
+                    btnSearchTABprofile.BackColor = Color.FromArgb(32, 126, 177); 
+                    btnSearchTABsearch.BackColor = Color.FromArgb(32, 126, 177);
+                }
+            }
         }
-
-        private void bunifuFlatButton1_Click_1(object sender, EventArgs e)
+        private void timerSelectedMenu_Tick(object sender, EventArgs e)
         {
-
+            ChangeBackColorOfMenus(tabControl1);
         }
-
-        private void bunifuFlatButton2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuFlatButton3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuFlatButton4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuFlatButton5_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuFlatButton7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuFlatButton8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuFlatButton54_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuFlatButton19_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuFlatButton20_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuFlatButton21_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuFlatButton22_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuFlatButton23_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuFlatButton24_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuFlatButton25_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuFlatButton28_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuFlatButton29_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuFlatButton30_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuFlatButton31_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuFlatButton9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuFlatButton37_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuFlatButton38_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuFlatButton39_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuFlatButton46_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuFlatButton47_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuFlatButton48_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel21_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel10_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void bunifuFlatButton13_Click_2(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = tabPage6;
-        }
-
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = tabPage6;
-        }
-
-        private void bunifuFlatButton3_Click_1(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = tabPage6;
-        }
-
-        private void bunifuFlatButton8_Click_1(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = tabPage6;
-        }
-
-        private void bunifuFlatButton6_Click_1(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = tabPage6;
-        }
-
-        private void bunifuFlatButton12_Click_1(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = tabPage6;
-        }
-
-        private void bunifuFlatButton18_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = tabPage6;
-        }
-
-        private void bunifuFlatButton46_Click_1(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = tabPage3;
-        }
-
-        private void bunifuFlatButton2_Click_1(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = tabPage3;
-        }
-
-        private void bunifuFlatButton7_Click_1(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = tabPage3;
-        }
-
-        private void bunifuFlatButton16_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = tabPage3;
-        }
-
-        private void bunifuFlatButton19_Click_1(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = tabPage3;
-        }
-
-        private void bunifuFlatButton14_Click_1(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = tabPage1;
-        }
-
-        private void bunifuFlatButton4_Click_1(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = tabPage1;
-        }
-
-        private void bunifuFlatButton10_Click_1(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = tabPage1;
-        }
-
-        private void bunifuFlatButton15_Click_1(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = tabPage2;
-        }
-
-        private void bunifuFlatButton5_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = tabPage2;
-        }
-
-        private void bunifuFlatButton11_Click_1(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = tabPage2;
-        }
-
-        private void bunifuFlatButton17_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = tabPage4;
-        }
+        //---------------------------------------------------finish
     }
 }

@@ -12,14 +12,11 @@ namespace Media_Bazaar
 {
     public partial class MainDepot : Form
     {
-        Login loginForm;
+
         public MainDepot()
         {
-            InitializeComponent();
-            loginForm = DataManage.loginForm;
-           
+            InitializeComponent();           
         }
-        
 
         private void MainDepot_Load(object sender, EventArgs e)
         {
@@ -29,94 +26,82 @@ namespace Media_Bazaar
             tabControl1.TabPages[0].BackColor = Color.FromArgb(116, 208, 252);
         }
 
-        private void bunifuFlatButton9_Click(object sender, EventArgs e)
+        //----------------------------------Start
+        //All buttons connections for the AdminForm 
+        //DO NOT Modify THIS !!!
+        private void btnIncomingStockTABrequest_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedTab = tabPage1;
+            tabControl1.SelectedTab = tabIncomingStock;
         }
 
-        private void bunifuFlatButton16_Click(object sender, EventArgs e)
+        private void btnStockTABrequest_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedTab = tabPage1;
+            tabControl1.SelectedTab = tabStock;
         }
 
-        private void bunifuFlatButton20_Click(object sender, EventArgs e)
+        private void btnLogOutTABrequest_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedTab = tabPage1;
+            Login log = new Login();
+            log.Show();
+            this.Visible = false;
         }
 
-        private void bunifuFlatButton23_Click(object sender, EventArgs e)
+        private void MainDepot_FormClosing(object sender, FormClosingEventArgs e)
         {
-            tabControl1.SelectedTab = tabPage1;
+            Application.Exit();
         }
 
-        private void bunifuFlatButton26_Click(object sender, EventArgs e)
+        private void btnMakeReqTABincomingStock_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedTab = tabPage1;
+            tabControl1.SelectedTab = tabMakeReq;
         }
 
-        private void bunifuFlatButton12_Click(object sender, EventArgs e)
+        private void btnCheckIncomingStock_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedTab = tabPage2;
+            //INFORMATION about the incoming stock MUST be parsed in this method
+            tabControl1.SelectedTab = tabIncomingStockDetails;
         }
 
-        private void bunifuFlatButton17_Click(object sender, EventArgs e)
+        private void btnViewStock_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedTab = tabPage2;
+            //INFORMATION about stock MUST be parsed in this method
+            tabControl1.SelectedTab = tabInfoStock;
         }
+        //----------------------------------------Finish
 
-        private void bunifuFlatButton21_Click(object sender, EventArgs e)
+
+        //------------------------------start
+        //Method for changing back color of the selected menu
+        public void ChangeMenuColor(TabControl tc)
         {
-            tabControl1.SelectedTab = tabPage2;
+            if(tc.SelectedTab == tabMakeReq)
+            {
+                btnMakeReqTABrequest.BackColor = Color.FromArgb(32, 126, 177);
+            }
+            else
+            {
+                if(tc.SelectedTab == tabIncomingStock || tc.SelectedTab == tabIncomingStockDetails)
+                {
+                    btnIncomingStockTABincomingStock.BackColor = Color.FromArgb(32, 126, 177);
+                    btnIncomingStockTABincomingStockDet.BackColor = Color.FromArgb(32, 126, 177);
+                }
+                else
+                {
+                    if(tc.SelectedTab == tabStock || tc.SelectedTab == tabInfoStock)
+                    {
+                        btnStockTABstock.BackColor = Color.FromArgb(32, 126, 177);
+                        btnStockTABstockInfo.BackColor = Color.FromArgb(32, 126, 177);  
+                    }
+                }
+            }
         }
-
-        private void bunifuFlatButton24_Click(object sender, EventArgs e)
+        private void timerChangeMenuColor_Tick(object sender, EventArgs e)
         {
-            tabControl1.SelectedTab = tabPage2;
+            ChangeMenuColor(tabControl1);
         }
+        //----------------------------------------Finish
 
-        private void bunifuFlatButton27_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = tabPage2;
-        }
 
-        private void bunifuFlatButton19_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = tabPage4;
-        }
 
-        private void bunifuFlatButton18_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = tabPage4;
-        }
-
-        private void bunifuFlatButton22_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = tabPage4;
-        }
-
-        private void bunifuFlatButton25_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = tabPage4;
-        }
-
-        private void bunifuFlatButton28_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = tabPage4;
-        }
-
-        private void bunifuFlatButton29_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = tabPage3;
-        }
-
-        private void bunifuFlatButton31_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedTab = tabPage5;
-        }
-
-        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

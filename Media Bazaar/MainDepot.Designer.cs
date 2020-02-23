@@ -28,26 +28,105 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainDepot));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabMakeReq = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel27 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnLogOutTABrequest = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnMakeReqTABrequest = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnIncomingStockTABrequest = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnStockTABrequest = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnMakeRequest = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.tabIncomingStock = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnLogOutTABincomingStock = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnMakeReqTABincomingStock = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.btnIncomingStockTABincomingStock = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnStockTABincomingStock = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btnCheckIncomingStock = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.tabIncomingStockDetails = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnLogOutTABincomingStockDet = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnMakeReqTABincomingStockDet = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.btnIncomingStockTABincomingStockDet = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnStockTABincomingStockDet = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.tabStock = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel24 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel25 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnLogOutTABstock = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnMakeReqTABstock = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.btnIncomingStockTABstock = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnStockTABstock = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.tableLayoutPanel26 = new System.Windows.Forms.TableLayoutPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel31 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.btnViewStock = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
+            this.tabInfoStock = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel32 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel33 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnLogOutTABstockInfo = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnMakeReqTABstockInfo = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.btnIncomingStockTABstockInfo = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnStockTABstockInfo = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.tableLayoutPanel34 = new System.Windows.Forms.TableLayoutPanel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel35 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.listBox3 = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel29 = new System.Windows.Forms.TableLayoutPanel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel30 = new System.Windows.Forms.TableLayoutPanel();
@@ -97,80 +176,49 @@
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel27 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.bunifuFlatButton9 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.bunifuFlatButton12 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.bunifuFlatButton19 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
-            this.bunifuFlatButton16 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.bunifuFlatButton17 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton18 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
-            this.bunifuFlatButton20 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.bunifuFlatButton21 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton22 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel24 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel25 = new System.Windows.Forms.TableLayoutPanel();
-            this.bunifuFlatButton23 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.bunifuFlatButton24 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton25 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.tableLayoutPanel26 = new System.Windows.Forms.TableLayoutPanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel31 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel32 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel33 = new System.Windows.Forms.TableLayoutPanel();
-            this.bunifuFlatButton26 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.bunifuFlatButton27 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton28 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.tableLayoutPanel34 = new System.Windows.Forms.TableLayoutPanel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel35 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.bunifuFlatButton29 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.bunifuFlatButton30 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
-            this.bunifuFlatButton31 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.panel16 = new System.Windows.Forms.Panel();
+            this.timerChangeMenuColor = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
+            this.tabMakeReq.SuspendLayout();
+            this.tableLayoutPanel27.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.tableLayoutPanel9.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.tableLayoutPanel15.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel16.SuspendLayout();
+            this.tabIncomingStock.SuspendLayout();
+            this.tableLayoutPanel16.SuspendLayout();
+            this.tableLayoutPanel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.tableLayoutPanel18.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.tableLayoutPanel19.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.tabIncomingStockDetails.SuspendLayout();
+            this.tableLayoutPanel20.SuspendLayout();
+            this.tableLayoutPanel21.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.tableLayoutPanel22.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.tableLayoutPanel23.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.tabStock.SuspendLayout();
+            this.tableLayoutPanel24.SuspendLayout();
+            this.tableLayoutPanel25.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.tableLayoutPanel26.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.tableLayoutPanel31.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.tabInfoStock.SuspendLayout();
+            this.tableLayoutPanel32.SuspendLayout();
+            this.tableLayoutPanel33.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.tableLayoutPanel34.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.tableLayoutPanel35.SuspendLayout();
+            this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -180,62 +228,1641 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tableLayoutPanel27.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.tableLayoutPanel9.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.tableLayoutPanel15.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.tableLayoutPanel16.SuspendLayout();
-            this.tableLayoutPanel17.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.tableLayoutPanel18.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.tableLayoutPanel19.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.tableLayoutPanel20.SuspendLayout();
-            this.tableLayoutPanel21.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.tableLayoutPanel22.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.tableLayoutPanel23.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.tableLayoutPanel24.SuspendLayout();
-            this.tableLayoutPanel25.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.tableLayoutPanel26.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.tableLayoutPanel31.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.tabPage5.SuspendLayout();
-            this.tableLayoutPanel32.SuspendLayout();
-            this.tableLayoutPanel33.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            this.tableLayoutPanel34.SuspendLayout();
-            this.panel14.SuspendLayout();
-            this.tableLayoutPanel35.SuspendLayout();
-            this.panel15.SuspendLayout();
-            this.panel16.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabMakeReq);
+            this.tabControl1.Controls.Add(this.tabIncomingStock);
+            this.tabControl1.Controls.Add(this.tabIncomingStockDetails);
+            this.tabControl1.Controls.Add(this.tabStock);
+            this.tabControl1.Controls.Add(this.tabInfoStock);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1196, 528);
+            this.tabControl1.Size = new System.Drawing.Size(897, 429);
             this.tabControl1.TabIndex = 18;
+            // 
+            // tabMakeReq
+            // 
+            this.tabMakeReq.Controls.Add(this.tableLayoutPanel27);
+            this.tabMakeReq.Location = new System.Drawing.Point(4, 22);
+            this.tabMakeReq.Margin = new System.Windows.Forms.Padding(2);
+            this.tabMakeReq.Name = "tabMakeReq";
+            this.tabMakeReq.Padding = new System.Windows.Forms.Padding(2);
+            this.tabMakeReq.Size = new System.Drawing.Size(889, 403);
+            this.tabMakeReq.TabIndex = 10;
+            this.tabMakeReq.Text = "Request";
+            this.tabMakeReq.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel27
+            // 
+            this.tableLayoutPanel27.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel27.ColumnCount = 2;
+            this.tableLayoutPanel27.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.375F));
+            this.tableLayoutPanel27.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.625F));
+            this.tableLayoutPanel27.Controls.Add(this.tableLayoutPanel1, 0, 0);
+            this.tableLayoutPanel27.Controls.Add(this.tableLayoutPanel9, 1, 0);
+            this.tableLayoutPanel27.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel27.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel27.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel27.Name = "tableLayoutPanel27";
+            this.tableLayoutPanel27.RowCount = 1;
+            this.tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel27.Size = new System.Drawing.Size(885, 399);
+            this.tableLayoutPanel27.TabIndex = 20;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.btnLogOutTABrequest, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.btnMakeReqTABrequest, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnIncomingStockTABrequest, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btnStockTABrequest, 0, 3);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 6;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(194, 395);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // btnLogOutTABrequest
+            // 
+            this.btnLogOutTABrequest.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnLogOutTABrequest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnLogOutTABrequest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLogOutTABrequest.BorderRadius = 0;
+            this.btnLogOutTABrequest.ButtonText = "LOG OUT";
+            this.btnLogOutTABrequest.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogOutTABrequest.DisabledColor = System.Drawing.Color.Gray;
+            this.btnLogOutTABrequest.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnLogOutTABrequest.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnLogOutTABrequest.Iconimage = null;
+            this.btnLogOutTABrequest.Iconimage_right = null;
+            this.btnLogOutTABrequest.Iconimage_right_Selected = null;
+            this.btnLogOutTABrequest.Iconimage_Selected = null;
+            this.btnLogOutTABrequest.IconMarginLeft = 0;
+            this.btnLogOutTABrequest.IconMarginRight = 0;
+            this.btnLogOutTABrequest.IconRightVisible = false;
+            this.btnLogOutTABrequest.IconRightZoom = 0D;
+            this.btnLogOutTABrequest.IconVisible = false;
+            this.btnLogOutTABrequest.IconZoom = 90D;
+            this.btnLogOutTABrequest.IsTab = false;
+            this.btnLogOutTABrequest.Location = new System.Drawing.Point(3, 357);
+            this.btnLogOutTABrequest.Name = "btnLogOutTABrequest";
+            this.btnLogOutTABrequest.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnLogOutTABrequest.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnLogOutTABrequest.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnLogOutTABrequest.selected = false;
+            this.btnLogOutTABrequest.Size = new System.Drawing.Size(188, 35);
+            this.btnLogOutTABrequest.TabIndex = 10;
+            this.btnLogOutTABrequest.Text = "LOG OUT";
+            this.btnLogOutTABrequest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLogOutTABrequest.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnLogOutTABrequest.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOutTABrequest.Click += new System.EventHandler(this.btnLogOutTABrequest_Click);
+            // 
+            // btnMakeReqTABrequest
+            // 
+            this.btnMakeReqTABrequest.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnMakeReqTABrequest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnMakeReqTABrequest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMakeReqTABrequest.BorderRadius = 0;
+            this.btnMakeReqTABrequest.ButtonText = "Make Request";
+            this.btnMakeReqTABrequest.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMakeReqTABrequest.DisabledColor = System.Drawing.Color.Gray;
+            this.btnMakeReqTABrequest.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMakeReqTABrequest.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnMakeReqTABrequest.Iconimage = null;
+            this.btnMakeReqTABrequest.Iconimage_right = null;
+            this.btnMakeReqTABrequest.Iconimage_right_Selected = null;
+            this.btnMakeReqTABrequest.Iconimage_Selected = null;
+            this.btnMakeReqTABrequest.IconMarginLeft = 0;
+            this.btnMakeReqTABrequest.IconMarginRight = 0;
+            this.btnMakeReqTABrequest.IconRightVisible = false;
+            this.btnMakeReqTABrequest.IconRightZoom = 0D;
+            this.btnMakeReqTABrequest.IconVisible = false;
+            this.btnMakeReqTABrequest.IconZoom = 90D;
+            this.btnMakeReqTABrequest.IsTab = false;
+            this.btnMakeReqTABrequest.Location = new System.Drawing.Point(3, 121);
+            this.btnMakeReqTABrequest.Name = "btnMakeReqTABrequest";
+            this.btnMakeReqTABrequest.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnMakeReqTABrequest.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnMakeReqTABrequest.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnMakeReqTABrequest.selected = false;
+            this.btnMakeReqTABrequest.Size = new System.Drawing.Size(188, 53);
+            this.btnMakeReqTABrequest.TabIndex = 5;
+            this.btnMakeReqTABrequest.Text = "Make Request";
+            this.btnMakeReqTABrequest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnMakeReqTABrequest.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnMakeReqTABrequest.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(190, 114);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // btnIncomingStockTABrequest
+            // 
+            this.btnIncomingStockTABrequest.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnIncomingStockTABrequest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnIncomingStockTABrequest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnIncomingStockTABrequest.BorderRadius = 0;
+            this.btnIncomingStockTABrequest.ButtonText = "Incoming Stock";
+            this.btnIncomingStockTABrequest.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIncomingStockTABrequest.DisabledColor = System.Drawing.Color.Gray;
+            this.btnIncomingStockTABrequest.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnIncomingStockTABrequest.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnIncomingStockTABrequest.Iconimage = null;
+            this.btnIncomingStockTABrequest.Iconimage_right = null;
+            this.btnIncomingStockTABrequest.Iconimage_right_Selected = null;
+            this.btnIncomingStockTABrequest.Iconimage_Selected = null;
+            this.btnIncomingStockTABrequest.IconMarginLeft = 0;
+            this.btnIncomingStockTABrequest.IconMarginRight = 0;
+            this.btnIncomingStockTABrequest.IconRightVisible = false;
+            this.btnIncomingStockTABrequest.IconRightZoom = 0D;
+            this.btnIncomingStockTABrequest.IconVisible = false;
+            this.btnIncomingStockTABrequest.IconZoom = 90D;
+            this.btnIncomingStockTABrequest.IsTab = false;
+            this.btnIncomingStockTABrequest.Location = new System.Drawing.Point(3, 180);
+            this.btnIncomingStockTABrequest.Name = "btnIncomingStockTABrequest";
+            this.btnIncomingStockTABrequest.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnIncomingStockTABrequest.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnIncomingStockTABrequest.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnIncomingStockTABrequest.selected = false;
+            this.btnIncomingStockTABrequest.Size = new System.Drawing.Size(188, 53);
+            this.btnIncomingStockTABrequest.TabIndex = 2;
+            this.btnIncomingStockTABrequest.Text = "Incoming Stock";
+            this.btnIncomingStockTABrequest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnIncomingStockTABrequest.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnIncomingStockTABrequest.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncomingStockTABrequest.Click += new System.EventHandler(this.btnIncomingStockTABrequest_Click);
+            // 
+            // btnStockTABrequest
+            // 
+            this.btnStockTABrequest.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnStockTABrequest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnStockTABrequest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnStockTABrequest.BorderRadius = 0;
+            this.btnStockTABrequest.ButtonText = "Stock";
+            this.btnStockTABrequest.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStockTABrequest.DisabledColor = System.Drawing.Color.Gray;
+            this.btnStockTABrequest.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnStockTABrequest.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnStockTABrequest.Iconimage = null;
+            this.btnStockTABrequest.Iconimage_right = null;
+            this.btnStockTABrequest.Iconimage_right_Selected = null;
+            this.btnStockTABrequest.Iconimage_Selected = null;
+            this.btnStockTABrequest.IconMarginLeft = 0;
+            this.btnStockTABrequest.IconMarginRight = 0;
+            this.btnStockTABrequest.IconRightVisible = false;
+            this.btnStockTABrequest.IconRightZoom = 0D;
+            this.btnStockTABrequest.IconVisible = false;
+            this.btnStockTABrequest.IconZoom = 90D;
+            this.btnStockTABrequest.IsTab = false;
+            this.btnStockTABrequest.Location = new System.Drawing.Point(3, 239);
+            this.btnStockTABrequest.Name = "btnStockTABrequest";
+            this.btnStockTABrequest.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnStockTABrequest.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnStockTABrequest.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnStockTABrequest.selected = false;
+            this.btnStockTABrequest.Size = new System.Drawing.Size(188, 53);
+            this.btnStockTABrequest.TabIndex = 6;
+            this.btnStockTABrequest.Text = "Stock";
+            this.btnStockTABrequest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnStockTABrequest.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnStockTABrequest.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStockTABrequest.Click += new System.EventHandler(this.btnStockTABrequest_Click);
+            // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.tableLayoutPanel9.ColumnCount = 1;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel9.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.panel3, 0, 1);
+            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(200, 2);
+            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 2;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(683, 395);
+            this.tableLayoutPanel9.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(2, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(679, 59);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Make Request";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.tableLayoutPanel15);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(2, 61);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(679, 332);
+            this.panel3.TabIndex = 1;
+            // 
+            // tableLayoutPanel15
+            // 
+            this.tableLayoutPanel15.ColumnCount = 1;
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel15.Controls.Add(this.panel7, 0, 0);
+            this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
+            this.tableLayoutPanel15.RowCount = 1;
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 332F));
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(679, 332);
+            this.tableLayoutPanel15.TabIndex = 0;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.panel16);
+            this.panel7.Controls.Add(this.listBox2);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel7.Location = new System.Drawing.Point(2, 2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(675, 328);
+            this.panel7.TabIndex = 1;
+            // 
+            // panel16
+            // 
+            this.panel16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel16.Controls.Add(this.label8);
+            this.panel16.Controls.Add(this.comboBox1);
+            this.panel16.Controls.Add(this.btnMakeRequest);
+            this.panel16.Controls.Add(this.label9);
+            this.panel16.Controls.Add(this.textBox1);
+            this.panel16.Location = new System.Drawing.Point(29, 41);
+            this.panel16.Margin = new System.Windows.Forms.Padding(2);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(364, 184);
+            this.panel16.TabIndex = 6;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(12, 14);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(91, 18);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Choose Stock";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(166, 11);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(143, 26);
+            this.comboBox1.TabIndex = 0;
+            // 
+            // btnMakeRequest
+            // 
+            this.btnMakeRequest.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnMakeRequest.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMakeRequest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnMakeRequest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMakeRequest.BorderRadius = 0;
+            this.btnMakeRequest.ButtonText = "Make Request";
+            this.btnMakeRequest.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMakeRequest.DisabledColor = System.Drawing.Color.Gray;
+            this.btnMakeRequest.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnMakeRequest.Iconimage = null;
+            this.btnMakeRequest.Iconimage_right = null;
+            this.btnMakeRequest.Iconimage_right_Selected = null;
+            this.btnMakeRequest.Iconimage_Selected = null;
+            this.btnMakeRequest.IconMarginLeft = 0;
+            this.btnMakeRequest.IconMarginRight = 0;
+            this.btnMakeRequest.IconRightVisible = false;
+            this.btnMakeRequest.IconRightZoom = 0D;
+            this.btnMakeRequest.IconVisible = false;
+            this.btnMakeRequest.IconZoom = 90D;
+            this.btnMakeRequest.IsTab = false;
+            this.btnMakeRequest.Location = new System.Drawing.Point(15, 135);
+            this.btnMakeRequest.Name = "btnMakeRequest";
+            this.btnMakeRequest.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnMakeRequest.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnMakeRequest.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnMakeRequest.selected = false;
+            this.btnMakeRequest.Size = new System.Drawing.Size(294, 29);
+            this.btnMakeRequest.TabIndex = 4;
+            this.btnMakeRequest.Text = "Make Request";
+            this.btnMakeRequest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnMakeRequest.Textcolor = System.Drawing.Color.White;
+            this.btnMakeRequest.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(12, 58);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(62, 18);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Quantity";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(166, 58);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(143, 25);
+            this.textBox1.TabIndex = 3;
+            // 
+            // listBox2
+            // 
+            this.listBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 18;
+            this.listBox2.Location = new System.Drawing.Point(417, 41);
+            this.listBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(233, 184);
+            this.listBox2.TabIndex = 5;
+            // 
+            // tabIncomingStock
+            // 
+            this.tabIncomingStock.Controls.Add(this.tableLayoutPanel16);
+            this.tabIncomingStock.Location = new System.Drawing.Point(4, 22);
+            this.tabIncomingStock.Margin = new System.Windows.Forms.Padding(2);
+            this.tabIncomingStock.Name = "tabIncomingStock";
+            this.tabIncomingStock.Padding = new System.Windows.Forms.Padding(2);
+            this.tabIncomingStock.Size = new System.Drawing.Size(889, 403);
+            this.tabIncomingStock.TabIndex = 11;
+            this.tabIncomingStock.Text = "IncomingStock";
+            this.tabIncomingStock.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel16
+            // 
+            this.tableLayoutPanel16.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel16.ColumnCount = 2;
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.375F));
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.625F));
+            this.tableLayoutPanel16.Controls.Add(this.tableLayoutPanel17, 0, 0);
+            this.tableLayoutPanel16.Controls.Add(this.tableLayoutPanel18, 1, 0);
+            this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel16.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel16.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
+            this.tableLayoutPanel16.RowCount = 1;
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(885, 399);
+            this.tableLayoutPanel16.TabIndex = 21;
+            // 
+            // tableLayoutPanel17
+            // 
+            this.tableLayoutPanel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.tableLayoutPanel17.ColumnCount = 1;
+            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel17.Controls.Add(this.btnLogOutTABincomingStock, 0, 5);
+            this.tableLayoutPanel17.Controls.Add(this.btnMakeReqTABincomingStock, 0, 1);
+            this.tableLayoutPanel17.Controls.Add(this.pictureBox4, 0, 0);
+            this.tableLayoutPanel17.Controls.Add(this.btnIncomingStockTABincomingStock, 0, 2);
+            this.tableLayoutPanel17.Controls.Add(this.btnStockTABincomingStock, 0, 3);
+            this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel17.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel17.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel17.Name = "tableLayoutPanel17";
+            this.tableLayoutPanel17.RowCount = 6;
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(194, 395);
+            this.tableLayoutPanel17.TabIndex = 0;
+            // 
+            // btnLogOutTABincomingStock
+            // 
+            this.btnLogOutTABincomingStock.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnLogOutTABincomingStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnLogOutTABincomingStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLogOutTABincomingStock.BorderRadius = 0;
+            this.btnLogOutTABincomingStock.ButtonText = "LOG OUT";
+            this.btnLogOutTABincomingStock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogOutTABincomingStock.DisabledColor = System.Drawing.Color.Gray;
+            this.btnLogOutTABincomingStock.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnLogOutTABincomingStock.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnLogOutTABincomingStock.Iconimage = null;
+            this.btnLogOutTABincomingStock.Iconimage_right = null;
+            this.btnLogOutTABincomingStock.Iconimage_right_Selected = null;
+            this.btnLogOutTABincomingStock.Iconimage_Selected = null;
+            this.btnLogOutTABincomingStock.IconMarginLeft = 0;
+            this.btnLogOutTABincomingStock.IconMarginRight = 0;
+            this.btnLogOutTABincomingStock.IconRightVisible = false;
+            this.btnLogOutTABincomingStock.IconRightZoom = 0D;
+            this.btnLogOutTABincomingStock.IconVisible = false;
+            this.btnLogOutTABincomingStock.IconZoom = 90D;
+            this.btnLogOutTABincomingStock.IsTab = false;
+            this.btnLogOutTABincomingStock.Location = new System.Drawing.Point(3, 357);
+            this.btnLogOutTABincomingStock.Name = "btnLogOutTABincomingStock";
+            this.btnLogOutTABincomingStock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnLogOutTABincomingStock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnLogOutTABincomingStock.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnLogOutTABincomingStock.selected = false;
+            this.btnLogOutTABincomingStock.Size = new System.Drawing.Size(188, 35);
+            this.btnLogOutTABincomingStock.TabIndex = 11;
+            this.btnLogOutTABincomingStock.Text = "LOG OUT";
+            this.btnLogOutTABincomingStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLogOutTABincomingStock.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnLogOutTABincomingStock.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOutTABincomingStock.Click += new System.EventHandler(this.btnLogOutTABrequest_Click);
+            // 
+            // btnMakeReqTABincomingStock
+            // 
+            this.btnMakeReqTABincomingStock.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnMakeReqTABincomingStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnMakeReqTABincomingStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMakeReqTABincomingStock.BorderRadius = 0;
+            this.btnMakeReqTABincomingStock.ButtonText = "Make Request";
+            this.btnMakeReqTABincomingStock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMakeReqTABincomingStock.DisabledColor = System.Drawing.Color.Gray;
+            this.btnMakeReqTABincomingStock.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMakeReqTABincomingStock.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnMakeReqTABincomingStock.Iconimage = null;
+            this.btnMakeReqTABincomingStock.Iconimage_right = null;
+            this.btnMakeReqTABincomingStock.Iconimage_right_Selected = null;
+            this.btnMakeReqTABincomingStock.Iconimage_Selected = null;
+            this.btnMakeReqTABincomingStock.IconMarginLeft = 0;
+            this.btnMakeReqTABincomingStock.IconMarginRight = 0;
+            this.btnMakeReqTABincomingStock.IconRightVisible = false;
+            this.btnMakeReqTABincomingStock.IconRightZoom = 0D;
+            this.btnMakeReqTABincomingStock.IconVisible = false;
+            this.btnMakeReqTABincomingStock.IconZoom = 90D;
+            this.btnMakeReqTABincomingStock.IsTab = false;
+            this.btnMakeReqTABincomingStock.Location = new System.Drawing.Point(3, 121);
+            this.btnMakeReqTABincomingStock.Name = "btnMakeReqTABincomingStock";
+            this.btnMakeReqTABincomingStock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnMakeReqTABincomingStock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnMakeReqTABincomingStock.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnMakeReqTABincomingStock.selected = false;
+            this.btnMakeReqTABincomingStock.Size = new System.Drawing.Size(188, 53);
+            this.btnMakeReqTABincomingStock.TabIndex = 5;
+            this.btnMakeReqTABincomingStock.Text = "Make Request";
+            this.btnMakeReqTABincomingStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnMakeReqTABincomingStock.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnMakeReqTABincomingStock.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMakeReqTABincomingStock.Click += new System.EventHandler(this.btnMakeReqTABincomingStock_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(190, 114);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
+            // btnIncomingStockTABincomingStock
+            // 
+            this.btnIncomingStockTABincomingStock.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnIncomingStockTABincomingStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnIncomingStockTABincomingStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnIncomingStockTABincomingStock.BorderRadius = 0;
+            this.btnIncomingStockTABincomingStock.ButtonText = "Incoming Stock";
+            this.btnIncomingStockTABincomingStock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIncomingStockTABincomingStock.DisabledColor = System.Drawing.Color.Gray;
+            this.btnIncomingStockTABincomingStock.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnIncomingStockTABincomingStock.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnIncomingStockTABincomingStock.Iconimage = null;
+            this.btnIncomingStockTABincomingStock.Iconimage_right = null;
+            this.btnIncomingStockTABincomingStock.Iconimage_right_Selected = null;
+            this.btnIncomingStockTABincomingStock.Iconimage_Selected = null;
+            this.btnIncomingStockTABincomingStock.IconMarginLeft = 0;
+            this.btnIncomingStockTABincomingStock.IconMarginRight = 0;
+            this.btnIncomingStockTABincomingStock.IconRightVisible = false;
+            this.btnIncomingStockTABincomingStock.IconRightZoom = 0D;
+            this.btnIncomingStockTABincomingStock.IconVisible = false;
+            this.btnIncomingStockTABincomingStock.IconZoom = 90D;
+            this.btnIncomingStockTABincomingStock.IsTab = false;
+            this.btnIncomingStockTABincomingStock.Location = new System.Drawing.Point(3, 180);
+            this.btnIncomingStockTABincomingStock.Name = "btnIncomingStockTABincomingStock";
+            this.btnIncomingStockTABincomingStock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnIncomingStockTABincomingStock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnIncomingStockTABincomingStock.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnIncomingStockTABincomingStock.selected = false;
+            this.btnIncomingStockTABincomingStock.Size = new System.Drawing.Size(188, 53);
+            this.btnIncomingStockTABincomingStock.TabIndex = 2;
+            this.btnIncomingStockTABincomingStock.Text = "Incoming Stock";
+            this.btnIncomingStockTABincomingStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnIncomingStockTABincomingStock.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnIncomingStockTABincomingStock.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btnStockTABincomingStock
+            // 
+            this.btnStockTABincomingStock.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnStockTABincomingStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnStockTABincomingStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnStockTABincomingStock.BorderRadius = 0;
+            this.btnStockTABincomingStock.ButtonText = "Stock";
+            this.btnStockTABincomingStock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStockTABincomingStock.DisabledColor = System.Drawing.Color.Gray;
+            this.btnStockTABincomingStock.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnStockTABincomingStock.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnStockTABincomingStock.Iconimage = null;
+            this.btnStockTABincomingStock.Iconimage_right = null;
+            this.btnStockTABincomingStock.Iconimage_right_Selected = null;
+            this.btnStockTABincomingStock.Iconimage_Selected = null;
+            this.btnStockTABincomingStock.IconMarginLeft = 0;
+            this.btnStockTABincomingStock.IconMarginRight = 0;
+            this.btnStockTABincomingStock.IconRightVisible = false;
+            this.btnStockTABincomingStock.IconRightZoom = 0D;
+            this.btnStockTABincomingStock.IconVisible = false;
+            this.btnStockTABincomingStock.IconZoom = 90D;
+            this.btnStockTABincomingStock.IsTab = false;
+            this.btnStockTABincomingStock.Location = new System.Drawing.Point(3, 239);
+            this.btnStockTABincomingStock.Name = "btnStockTABincomingStock";
+            this.btnStockTABincomingStock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnStockTABincomingStock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnStockTABincomingStock.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnStockTABincomingStock.selected = false;
+            this.btnStockTABincomingStock.Size = new System.Drawing.Size(188, 53);
+            this.btnStockTABincomingStock.TabIndex = 6;
+            this.btnStockTABincomingStock.Text = "Stock";
+            this.btnStockTABincomingStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnStockTABincomingStock.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnStockTABincomingStock.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStockTABincomingStock.Click += new System.EventHandler(this.btnStockTABrequest_Click);
+            // 
+            // tableLayoutPanel18
+            // 
+            this.tableLayoutPanel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.tableLayoutPanel18.ColumnCount = 1;
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel18.Controls.Add(this.label4, 0, 0);
+            this.tableLayoutPanel18.Controls.Add(this.panel8, 0, 1);
+            this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel18.Location = new System.Drawing.Point(200, 2);
+            this.tableLayoutPanel18.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel18.Name = "tableLayoutPanel18";
+            this.tableLayoutPanel18.RowCount = 2;
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(683, 395);
+            this.tableLayoutPanel18.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(2, 0);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(679, 59);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Incoming Stock";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.Controls.Add(this.tableLayoutPanel19);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(2, 61);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(679, 332);
+            this.panel8.TabIndex = 1;
+            // 
+            // tableLayoutPanel19
+            // 
+            this.tableLayoutPanel19.ColumnCount = 1;
+            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel19.Controls.Add(this.panel9, 0, 0);
+            this.tableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel19.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel19.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel19.Name = "tableLayoutPanel19";
+            this.tableLayoutPanel19.RowCount = 1;
+            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 332F));
+            this.tableLayoutPanel19.Size = new System.Drawing.Size(679, 332);
+            this.tableLayoutPanel19.TabIndex = 0;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.btnCheckIncomingStock);
+            this.panel9.Controls.Add(this.checkedListBox1);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel9.Location = new System.Drawing.Point(2, 2);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(675, 328);
+            this.panel9.TabIndex = 1;
+            // 
+            // btnCheckIncomingStock
+            // 
+            this.btnCheckIncomingStock.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnCheckIncomingStock.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnCheckIncomingStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnCheckIncomingStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCheckIncomingStock.BorderRadius = 0;
+            this.btnCheckIncomingStock.ButtonText = "Check";
+            this.btnCheckIncomingStock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCheckIncomingStock.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCheckIncomingStock.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnCheckIncomingStock.Iconimage = null;
+            this.btnCheckIncomingStock.Iconimage_right = null;
+            this.btnCheckIncomingStock.Iconimage_right_Selected = null;
+            this.btnCheckIncomingStock.Iconimage_Selected = null;
+            this.btnCheckIncomingStock.IconMarginLeft = 0;
+            this.btnCheckIncomingStock.IconMarginRight = 0;
+            this.btnCheckIncomingStock.IconRightVisible = false;
+            this.btnCheckIncomingStock.IconRightZoom = 0D;
+            this.btnCheckIncomingStock.IconVisible = false;
+            this.btnCheckIncomingStock.IconZoom = 90D;
+            this.btnCheckIncomingStock.IsTab = false;
+            this.btnCheckIncomingStock.Location = new System.Drawing.Point(237, 272);
+            this.btnCheckIncomingStock.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnCheckIncomingStock.Name = "btnCheckIncomingStock";
+            this.btnCheckIncomingStock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnCheckIncomingStock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnCheckIncomingStock.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnCheckIncomingStock.selected = false;
+            this.btnCheckIncomingStock.Size = new System.Drawing.Size(212, 41);
+            this.btnCheckIncomingStock.TabIndex = 3;
+            this.btnCheckIncomingStock.Text = "Check";
+            this.btnCheckIncomingStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCheckIncomingStock.Textcolor = System.Drawing.Color.White;
+            this.btnCheckIncomingStock.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckIncomingStock.Click += new System.EventHandler(this.btnCheckIncomingStock_Click);
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(75, 41);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(538, 184);
+            this.checkedListBox1.TabIndex = 0;
+            // 
+            // tabIncomingStockDetails
+            // 
+            this.tabIncomingStockDetails.Controls.Add(this.tableLayoutPanel20);
+            this.tabIncomingStockDetails.Location = new System.Drawing.Point(4, 22);
+            this.tabIncomingStockDetails.Margin = new System.Windows.Forms.Padding(2);
+            this.tabIncomingStockDetails.Name = "tabIncomingStockDetails";
+            this.tabIncomingStockDetails.Padding = new System.Windows.Forms.Padding(2);
+            this.tabIncomingStockDetails.Size = new System.Drawing.Size(889, 403);
+            this.tabIncomingStockDetails.TabIndex = 12;
+            this.tabIncomingStockDetails.Text = "IncomingStockDetails";
+            this.tabIncomingStockDetails.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel20
+            // 
+            this.tableLayoutPanel20.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel20.ColumnCount = 2;
+            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.375F));
+            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.625F));
+            this.tableLayoutPanel20.Controls.Add(this.tableLayoutPanel21, 0, 0);
+            this.tableLayoutPanel20.Controls.Add(this.tableLayoutPanel22, 1, 0);
+            this.tableLayoutPanel20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel20.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel20.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel20.Name = "tableLayoutPanel20";
+            this.tableLayoutPanel20.RowCount = 1;
+            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel20.Size = new System.Drawing.Size(885, 399);
+            this.tableLayoutPanel20.TabIndex = 21;
+            // 
+            // tableLayoutPanel21
+            // 
+            this.tableLayoutPanel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.tableLayoutPanel21.ColumnCount = 1;
+            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel21.Controls.Add(this.btnLogOutTABincomingStockDet, 0, 5);
+            this.tableLayoutPanel21.Controls.Add(this.btnMakeReqTABincomingStockDet, 0, 1);
+            this.tableLayoutPanel21.Controls.Add(this.pictureBox5, 0, 0);
+            this.tableLayoutPanel21.Controls.Add(this.btnIncomingStockTABincomingStockDet, 0, 2);
+            this.tableLayoutPanel21.Controls.Add(this.btnStockTABincomingStockDet, 0, 3);
+            this.tableLayoutPanel21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel21.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel21.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel21.Name = "tableLayoutPanel21";
+            this.tableLayoutPanel21.RowCount = 6;
+            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel21.Size = new System.Drawing.Size(194, 395);
+            this.tableLayoutPanel21.TabIndex = 0;
+            // 
+            // btnLogOutTABincomingStockDet
+            // 
+            this.btnLogOutTABincomingStockDet.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnLogOutTABincomingStockDet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnLogOutTABincomingStockDet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLogOutTABincomingStockDet.BorderRadius = 0;
+            this.btnLogOutTABincomingStockDet.ButtonText = "LOG OUT";
+            this.btnLogOutTABincomingStockDet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogOutTABincomingStockDet.DisabledColor = System.Drawing.Color.Gray;
+            this.btnLogOutTABincomingStockDet.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnLogOutTABincomingStockDet.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnLogOutTABincomingStockDet.Iconimage = null;
+            this.btnLogOutTABincomingStockDet.Iconimage_right = null;
+            this.btnLogOutTABincomingStockDet.Iconimage_right_Selected = null;
+            this.btnLogOutTABincomingStockDet.Iconimage_Selected = null;
+            this.btnLogOutTABincomingStockDet.IconMarginLeft = 0;
+            this.btnLogOutTABincomingStockDet.IconMarginRight = 0;
+            this.btnLogOutTABincomingStockDet.IconRightVisible = false;
+            this.btnLogOutTABincomingStockDet.IconRightZoom = 0D;
+            this.btnLogOutTABincomingStockDet.IconVisible = false;
+            this.btnLogOutTABincomingStockDet.IconZoom = 90D;
+            this.btnLogOutTABincomingStockDet.IsTab = false;
+            this.btnLogOutTABincomingStockDet.Location = new System.Drawing.Point(3, 357);
+            this.btnLogOutTABincomingStockDet.Name = "btnLogOutTABincomingStockDet";
+            this.btnLogOutTABincomingStockDet.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnLogOutTABincomingStockDet.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnLogOutTABincomingStockDet.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnLogOutTABincomingStockDet.selected = false;
+            this.btnLogOutTABincomingStockDet.Size = new System.Drawing.Size(188, 35);
+            this.btnLogOutTABincomingStockDet.TabIndex = 11;
+            this.btnLogOutTABincomingStockDet.Text = "LOG OUT";
+            this.btnLogOutTABincomingStockDet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLogOutTABincomingStockDet.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnLogOutTABincomingStockDet.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOutTABincomingStockDet.Click += new System.EventHandler(this.btnLogOutTABrequest_Click);
+            // 
+            // btnMakeReqTABincomingStockDet
+            // 
+            this.btnMakeReqTABincomingStockDet.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnMakeReqTABincomingStockDet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnMakeReqTABincomingStockDet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMakeReqTABincomingStockDet.BorderRadius = 0;
+            this.btnMakeReqTABincomingStockDet.ButtonText = "Make Request";
+            this.btnMakeReqTABincomingStockDet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMakeReqTABincomingStockDet.DisabledColor = System.Drawing.Color.Gray;
+            this.btnMakeReqTABincomingStockDet.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMakeReqTABincomingStockDet.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnMakeReqTABincomingStockDet.Iconimage = null;
+            this.btnMakeReqTABincomingStockDet.Iconimage_right = null;
+            this.btnMakeReqTABincomingStockDet.Iconimage_right_Selected = null;
+            this.btnMakeReqTABincomingStockDet.Iconimage_Selected = null;
+            this.btnMakeReqTABincomingStockDet.IconMarginLeft = 0;
+            this.btnMakeReqTABincomingStockDet.IconMarginRight = 0;
+            this.btnMakeReqTABincomingStockDet.IconRightVisible = false;
+            this.btnMakeReqTABincomingStockDet.IconRightZoom = 0D;
+            this.btnMakeReqTABincomingStockDet.IconVisible = false;
+            this.btnMakeReqTABincomingStockDet.IconZoom = 90D;
+            this.btnMakeReqTABincomingStockDet.IsTab = false;
+            this.btnMakeReqTABincomingStockDet.Location = new System.Drawing.Point(3, 121);
+            this.btnMakeReqTABincomingStockDet.Name = "btnMakeReqTABincomingStockDet";
+            this.btnMakeReqTABincomingStockDet.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnMakeReqTABincomingStockDet.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnMakeReqTABincomingStockDet.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnMakeReqTABincomingStockDet.selected = false;
+            this.btnMakeReqTABincomingStockDet.Size = new System.Drawing.Size(188, 53);
+            this.btnMakeReqTABincomingStockDet.TabIndex = 5;
+            this.btnMakeReqTABincomingStockDet.Text = "Make Request";
+            this.btnMakeReqTABincomingStockDet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnMakeReqTABincomingStockDet.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnMakeReqTABincomingStockDet.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMakeReqTABincomingStockDet.Click += new System.EventHandler(this.btnMakeReqTABincomingStock_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(2, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(190, 114);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
+            // 
+            // btnIncomingStockTABincomingStockDet
+            // 
+            this.btnIncomingStockTABincomingStockDet.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnIncomingStockTABincomingStockDet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnIncomingStockTABincomingStockDet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnIncomingStockTABincomingStockDet.BorderRadius = 0;
+            this.btnIncomingStockTABincomingStockDet.ButtonText = "Incoming Stock";
+            this.btnIncomingStockTABincomingStockDet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIncomingStockTABincomingStockDet.DisabledColor = System.Drawing.Color.Gray;
+            this.btnIncomingStockTABincomingStockDet.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnIncomingStockTABincomingStockDet.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnIncomingStockTABincomingStockDet.Iconimage = null;
+            this.btnIncomingStockTABincomingStockDet.Iconimage_right = null;
+            this.btnIncomingStockTABincomingStockDet.Iconimage_right_Selected = null;
+            this.btnIncomingStockTABincomingStockDet.Iconimage_Selected = null;
+            this.btnIncomingStockTABincomingStockDet.IconMarginLeft = 0;
+            this.btnIncomingStockTABincomingStockDet.IconMarginRight = 0;
+            this.btnIncomingStockTABincomingStockDet.IconRightVisible = false;
+            this.btnIncomingStockTABincomingStockDet.IconRightZoom = 0D;
+            this.btnIncomingStockTABincomingStockDet.IconVisible = false;
+            this.btnIncomingStockTABincomingStockDet.IconZoom = 90D;
+            this.btnIncomingStockTABincomingStockDet.IsTab = false;
+            this.btnIncomingStockTABincomingStockDet.Location = new System.Drawing.Point(3, 180);
+            this.btnIncomingStockTABincomingStockDet.Name = "btnIncomingStockTABincomingStockDet";
+            this.btnIncomingStockTABincomingStockDet.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnIncomingStockTABincomingStockDet.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnIncomingStockTABincomingStockDet.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnIncomingStockTABincomingStockDet.selected = false;
+            this.btnIncomingStockTABincomingStockDet.Size = new System.Drawing.Size(188, 53);
+            this.btnIncomingStockTABincomingStockDet.TabIndex = 2;
+            this.btnIncomingStockTABincomingStockDet.Text = "Incoming Stock";
+            this.btnIncomingStockTABincomingStockDet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnIncomingStockTABincomingStockDet.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnIncomingStockTABincomingStockDet.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncomingStockTABincomingStockDet.Click += new System.EventHandler(this.btnIncomingStockTABrequest_Click);
+            // 
+            // btnStockTABincomingStockDet
+            // 
+            this.btnStockTABincomingStockDet.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnStockTABincomingStockDet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnStockTABincomingStockDet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnStockTABincomingStockDet.BorderRadius = 0;
+            this.btnStockTABincomingStockDet.ButtonText = "Stock";
+            this.btnStockTABincomingStockDet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStockTABincomingStockDet.DisabledColor = System.Drawing.Color.Gray;
+            this.btnStockTABincomingStockDet.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnStockTABincomingStockDet.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnStockTABincomingStockDet.Iconimage = null;
+            this.btnStockTABincomingStockDet.Iconimage_right = null;
+            this.btnStockTABincomingStockDet.Iconimage_right_Selected = null;
+            this.btnStockTABincomingStockDet.Iconimage_Selected = null;
+            this.btnStockTABincomingStockDet.IconMarginLeft = 0;
+            this.btnStockTABincomingStockDet.IconMarginRight = 0;
+            this.btnStockTABincomingStockDet.IconRightVisible = false;
+            this.btnStockTABincomingStockDet.IconRightZoom = 0D;
+            this.btnStockTABincomingStockDet.IconVisible = false;
+            this.btnStockTABincomingStockDet.IconZoom = 90D;
+            this.btnStockTABincomingStockDet.IsTab = false;
+            this.btnStockTABincomingStockDet.Location = new System.Drawing.Point(3, 239);
+            this.btnStockTABincomingStockDet.Name = "btnStockTABincomingStockDet";
+            this.btnStockTABincomingStockDet.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnStockTABincomingStockDet.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnStockTABincomingStockDet.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnStockTABincomingStockDet.selected = false;
+            this.btnStockTABincomingStockDet.Size = new System.Drawing.Size(188, 53);
+            this.btnStockTABincomingStockDet.TabIndex = 6;
+            this.btnStockTABincomingStockDet.Text = "Stock";
+            this.btnStockTABincomingStockDet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnStockTABincomingStockDet.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnStockTABincomingStockDet.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStockTABincomingStockDet.Click += new System.EventHandler(this.btnStockTABrequest_Click);
+            // 
+            // tableLayoutPanel22
+            // 
+            this.tableLayoutPanel22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.tableLayoutPanel22.ColumnCount = 1;
+            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel22.Controls.Add(this.label5, 0, 0);
+            this.tableLayoutPanel22.Controls.Add(this.panel10, 0, 1);
+            this.tableLayoutPanel22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel22.Location = new System.Drawing.Point(200, 2);
+            this.tableLayoutPanel22.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel22.Name = "tableLayoutPanel22";
+            this.tableLayoutPanel22.RowCount = 2;
+            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
+            this.tableLayoutPanel22.Size = new System.Drawing.Size(683, 395);
+            this.tableLayoutPanel22.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(2, 0);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(679, 59);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Incoming Stock(Details)";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.White;
+            this.panel10.Controls.Add(this.tableLayoutPanel23);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(2, 61);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(679, 332);
+            this.panel10.TabIndex = 1;
+            // 
+            // tableLayoutPanel23
+            // 
+            this.tableLayoutPanel23.ColumnCount = 1;
+            this.tableLayoutPanel23.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel23.Controls.Add(this.panel11, 0, 0);
+            this.tableLayoutPanel23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel23.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel23.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel23.Name = "tableLayoutPanel23";
+            this.tableLayoutPanel23.RowCount = 1;
+            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 332F));
+            this.tableLayoutPanel23.Size = new System.Drawing.Size(679, 332);
+            this.tableLayoutPanel23.TabIndex = 0;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.listBox1);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel11.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel11.Location = new System.Drawing.Point(2, 2);
+            this.panel11.Margin = new System.Windows.Forms.Padding(2);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(675, 328);
+            this.panel11.TabIndex = 1;
+            // 
+            // listBox1
+            // 
+            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 18;
+            this.listBox1.Location = new System.Drawing.Point(107, 28);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(445, 220);
+            this.listBox1.TabIndex = 0;
+            // 
+            // tabStock
+            // 
+            this.tabStock.Controls.Add(this.tableLayoutPanel24);
+            this.tabStock.Location = new System.Drawing.Point(4, 22);
+            this.tabStock.Margin = new System.Windows.Forms.Padding(2);
+            this.tabStock.Name = "tabStock";
+            this.tabStock.Padding = new System.Windows.Forms.Padding(2);
+            this.tabStock.Size = new System.Drawing.Size(889, 403);
+            this.tabStock.TabIndex = 13;
+            this.tabStock.Text = "Stock";
+            this.tabStock.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel24
+            // 
+            this.tableLayoutPanel24.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel24.ColumnCount = 2;
+            this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.375F));
+            this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.625F));
+            this.tableLayoutPanel24.Controls.Add(this.tableLayoutPanel25, 0, 0);
+            this.tableLayoutPanel24.Controls.Add(this.tableLayoutPanel26, 1, 0);
+            this.tableLayoutPanel24.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel24.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel24.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel24.Name = "tableLayoutPanel24";
+            this.tableLayoutPanel24.RowCount = 1;
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel24.Size = new System.Drawing.Size(885, 399);
+            this.tableLayoutPanel24.TabIndex = 21;
+            // 
+            // tableLayoutPanel25
+            // 
+            this.tableLayoutPanel25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.tableLayoutPanel25.ColumnCount = 1;
+            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel25.Controls.Add(this.btnLogOutTABstock, 0, 5);
+            this.tableLayoutPanel25.Controls.Add(this.btnMakeReqTABstock, 0, 1);
+            this.tableLayoutPanel25.Controls.Add(this.pictureBox6, 0, 0);
+            this.tableLayoutPanel25.Controls.Add(this.btnIncomingStockTABstock, 0, 2);
+            this.tableLayoutPanel25.Controls.Add(this.btnStockTABstock, 0, 3);
+            this.tableLayoutPanel25.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel25.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel25.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel25.Name = "tableLayoutPanel25";
+            this.tableLayoutPanel25.RowCount = 6;
+            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel25.Size = new System.Drawing.Size(194, 395);
+            this.tableLayoutPanel25.TabIndex = 0;
+            // 
+            // btnLogOutTABstock
+            // 
+            this.btnLogOutTABstock.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnLogOutTABstock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnLogOutTABstock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLogOutTABstock.BorderRadius = 0;
+            this.btnLogOutTABstock.ButtonText = "LOG OUT";
+            this.btnLogOutTABstock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogOutTABstock.DisabledColor = System.Drawing.Color.Gray;
+            this.btnLogOutTABstock.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnLogOutTABstock.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnLogOutTABstock.Iconimage = null;
+            this.btnLogOutTABstock.Iconimage_right = null;
+            this.btnLogOutTABstock.Iconimage_right_Selected = null;
+            this.btnLogOutTABstock.Iconimage_Selected = null;
+            this.btnLogOutTABstock.IconMarginLeft = 0;
+            this.btnLogOutTABstock.IconMarginRight = 0;
+            this.btnLogOutTABstock.IconRightVisible = false;
+            this.btnLogOutTABstock.IconRightZoom = 0D;
+            this.btnLogOutTABstock.IconVisible = false;
+            this.btnLogOutTABstock.IconZoom = 90D;
+            this.btnLogOutTABstock.IsTab = false;
+            this.btnLogOutTABstock.Location = new System.Drawing.Point(3, 357);
+            this.btnLogOutTABstock.Name = "btnLogOutTABstock";
+            this.btnLogOutTABstock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnLogOutTABstock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnLogOutTABstock.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnLogOutTABstock.selected = false;
+            this.btnLogOutTABstock.Size = new System.Drawing.Size(188, 35);
+            this.btnLogOutTABstock.TabIndex = 11;
+            this.btnLogOutTABstock.Text = "LOG OUT";
+            this.btnLogOutTABstock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLogOutTABstock.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnLogOutTABstock.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOutTABstock.Click += new System.EventHandler(this.btnLogOutTABrequest_Click);
+            // 
+            // btnMakeReqTABstock
+            // 
+            this.btnMakeReqTABstock.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnMakeReqTABstock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnMakeReqTABstock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMakeReqTABstock.BorderRadius = 0;
+            this.btnMakeReqTABstock.ButtonText = "Make Request";
+            this.btnMakeReqTABstock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMakeReqTABstock.DisabledColor = System.Drawing.Color.Gray;
+            this.btnMakeReqTABstock.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMakeReqTABstock.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnMakeReqTABstock.Iconimage = null;
+            this.btnMakeReqTABstock.Iconimage_right = null;
+            this.btnMakeReqTABstock.Iconimage_right_Selected = null;
+            this.btnMakeReqTABstock.Iconimage_Selected = null;
+            this.btnMakeReqTABstock.IconMarginLeft = 0;
+            this.btnMakeReqTABstock.IconMarginRight = 0;
+            this.btnMakeReqTABstock.IconRightVisible = false;
+            this.btnMakeReqTABstock.IconRightZoom = 0D;
+            this.btnMakeReqTABstock.IconVisible = false;
+            this.btnMakeReqTABstock.IconZoom = 90D;
+            this.btnMakeReqTABstock.IsTab = false;
+            this.btnMakeReqTABstock.Location = new System.Drawing.Point(3, 121);
+            this.btnMakeReqTABstock.Name = "btnMakeReqTABstock";
+            this.btnMakeReqTABstock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnMakeReqTABstock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnMakeReqTABstock.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnMakeReqTABstock.selected = false;
+            this.btnMakeReqTABstock.Size = new System.Drawing.Size(188, 53);
+            this.btnMakeReqTABstock.TabIndex = 5;
+            this.btnMakeReqTABstock.Text = "Make Request";
+            this.btnMakeReqTABstock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnMakeReqTABstock.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnMakeReqTABstock.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMakeReqTABstock.Click += new System.EventHandler(this.btnMakeReqTABincomingStock_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(2, 2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(190, 114);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 0;
+            this.pictureBox6.TabStop = false;
+            // 
+            // btnIncomingStockTABstock
+            // 
+            this.btnIncomingStockTABstock.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnIncomingStockTABstock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnIncomingStockTABstock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnIncomingStockTABstock.BorderRadius = 0;
+            this.btnIncomingStockTABstock.ButtonText = "Incoming Stock";
+            this.btnIncomingStockTABstock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIncomingStockTABstock.DisabledColor = System.Drawing.Color.Gray;
+            this.btnIncomingStockTABstock.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnIncomingStockTABstock.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnIncomingStockTABstock.Iconimage = null;
+            this.btnIncomingStockTABstock.Iconimage_right = null;
+            this.btnIncomingStockTABstock.Iconimage_right_Selected = null;
+            this.btnIncomingStockTABstock.Iconimage_Selected = null;
+            this.btnIncomingStockTABstock.IconMarginLeft = 0;
+            this.btnIncomingStockTABstock.IconMarginRight = 0;
+            this.btnIncomingStockTABstock.IconRightVisible = false;
+            this.btnIncomingStockTABstock.IconRightZoom = 0D;
+            this.btnIncomingStockTABstock.IconVisible = false;
+            this.btnIncomingStockTABstock.IconZoom = 90D;
+            this.btnIncomingStockTABstock.IsTab = false;
+            this.btnIncomingStockTABstock.Location = new System.Drawing.Point(3, 180);
+            this.btnIncomingStockTABstock.Name = "btnIncomingStockTABstock";
+            this.btnIncomingStockTABstock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnIncomingStockTABstock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnIncomingStockTABstock.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnIncomingStockTABstock.selected = false;
+            this.btnIncomingStockTABstock.Size = new System.Drawing.Size(188, 53);
+            this.btnIncomingStockTABstock.TabIndex = 2;
+            this.btnIncomingStockTABstock.Text = "Incoming Stock";
+            this.btnIncomingStockTABstock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnIncomingStockTABstock.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnIncomingStockTABstock.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncomingStockTABstock.Click += new System.EventHandler(this.btnIncomingStockTABrequest_Click);
+            // 
+            // btnStockTABstock
+            // 
+            this.btnStockTABstock.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnStockTABstock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnStockTABstock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnStockTABstock.BorderRadius = 0;
+            this.btnStockTABstock.ButtonText = "Stock";
+            this.btnStockTABstock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStockTABstock.DisabledColor = System.Drawing.Color.Gray;
+            this.btnStockTABstock.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnStockTABstock.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnStockTABstock.Iconimage = null;
+            this.btnStockTABstock.Iconimage_right = null;
+            this.btnStockTABstock.Iconimage_right_Selected = null;
+            this.btnStockTABstock.Iconimage_Selected = null;
+            this.btnStockTABstock.IconMarginLeft = 0;
+            this.btnStockTABstock.IconMarginRight = 0;
+            this.btnStockTABstock.IconRightVisible = false;
+            this.btnStockTABstock.IconRightZoom = 0D;
+            this.btnStockTABstock.IconVisible = false;
+            this.btnStockTABstock.IconZoom = 90D;
+            this.btnStockTABstock.IsTab = false;
+            this.btnStockTABstock.Location = new System.Drawing.Point(3, 239);
+            this.btnStockTABstock.Name = "btnStockTABstock";
+            this.btnStockTABstock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnStockTABstock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnStockTABstock.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnStockTABstock.selected = false;
+            this.btnStockTABstock.Size = new System.Drawing.Size(188, 53);
+            this.btnStockTABstock.TabIndex = 6;
+            this.btnStockTABstock.Text = "Stock";
+            this.btnStockTABstock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnStockTABstock.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnStockTABstock.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // tableLayoutPanel26
+            // 
+            this.tableLayoutPanel26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.tableLayoutPanel26.ColumnCount = 1;
+            this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel26.Controls.Add(this.label6, 0, 0);
+            this.tableLayoutPanel26.Controls.Add(this.panel12, 0, 1);
+            this.tableLayoutPanel26.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel26.Location = new System.Drawing.Point(200, 2);
+            this.tableLayoutPanel26.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel26.Name = "tableLayoutPanel26";
+            this.tableLayoutPanel26.RowCount = 2;
+            this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
+            this.tableLayoutPanel26.Size = new System.Drawing.Size(683, 395);
+            this.tableLayoutPanel26.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(2, 0);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(679, 59);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Stock";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.White;
+            this.panel12.Controls.Add(this.tableLayoutPanel31);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel12.Location = new System.Drawing.Point(2, 61);
+            this.panel12.Margin = new System.Windows.Forms.Padding(2);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(679, 332);
+            this.panel12.TabIndex = 1;
+            // 
+            // tableLayoutPanel31
+            // 
+            this.tableLayoutPanel31.ColumnCount = 1;
+            this.tableLayoutPanel31.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel31.Controls.Add(this.panel13, 0, 0);
+            this.tableLayoutPanel31.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel31.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel31.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel31.Name = "tableLayoutPanel31";
+            this.tableLayoutPanel31.RowCount = 1;
+            this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 332F));
+            this.tableLayoutPanel31.Size = new System.Drawing.Size(679, 332);
+            this.tableLayoutPanel31.TabIndex = 0;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.btnViewStock);
+            this.panel13.Controls.Add(this.checkedListBox2);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel13.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel13.Location = new System.Drawing.Point(2, 2);
+            this.panel13.Margin = new System.Windows.Forms.Padding(2);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(675, 328);
+            this.panel13.TabIndex = 1;
+            // 
+            // btnViewStock
+            // 
+            this.btnViewStock.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnViewStock.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnViewStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnViewStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnViewStock.BorderRadius = 0;
+            this.btnViewStock.ButtonText = "View stock";
+            this.btnViewStock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnViewStock.DisabledColor = System.Drawing.Color.Gray;
+            this.btnViewStock.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnViewStock.Iconimage = null;
+            this.btnViewStock.Iconimage_right = null;
+            this.btnViewStock.Iconimage_right_Selected = null;
+            this.btnViewStock.Iconimage_Selected = null;
+            this.btnViewStock.IconMarginLeft = 0;
+            this.btnViewStock.IconMarginRight = 0;
+            this.btnViewStock.IconRightVisible = false;
+            this.btnViewStock.IconRightZoom = 0D;
+            this.btnViewStock.IconVisible = false;
+            this.btnViewStock.IconZoom = 90D;
+            this.btnViewStock.IsTab = false;
+            this.btnViewStock.Location = new System.Drawing.Point(238, 263);
+            this.btnViewStock.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnViewStock.Name = "btnViewStock";
+            this.btnViewStock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnViewStock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnViewStock.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnViewStock.selected = false;
+            this.btnViewStock.Size = new System.Drawing.Size(193, 41);
+            this.btnViewStock.TabIndex = 4;
+            this.btnViewStock.Text = "View stock";
+            this.btnViewStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnViewStock.Textcolor = System.Drawing.Color.White;
+            this.btnViewStock.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewStock.Click += new System.EventHandler(this.btnViewStock_Click);
+            // 
+            // checkedListBox2
+            // 
+            this.checkedListBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkedListBox2.FormattingEnabled = true;
+            this.checkedListBox2.Location = new System.Drawing.Point(82, 46);
+            this.checkedListBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.checkedListBox2.Name = "checkedListBox2";
+            this.checkedListBox2.Size = new System.Drawing.Size(511, 164);
+            this.checkedListBox2.TabIndex = 0;
+            // 
+            // tabInfoStock
+            // 
+            this.tabInfoStock.Controls.Add(this.tableLayoutPanel32);
+            this.tabInfoStock.Location = new System.Drawing.Point(4, 22);
+            this.tabInfoStock.Margin = new System.Windows.Forms.Padding(2);
+            this.tabInfoStock.Name = "tabInfoStock";
+            this.tabInfoStock.Padding = new System.Windows.Forms.Padding(2);
+            this.tabInfoStock.Size = new System.Drawing.Size(889, 403);
+            this.tabInfoStock.TabIndex = 14;
+            this.tabInfoStock.Text = "InfoStock";
+            this.tabInfoStock.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel32
+            // 
+            this.tableLayoutPanel32.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel32.ColumnCount = 2;
+            this.tableLayoutPanel32.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.375F));
+            this.tableLayoutPanel32.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.625F));
+            this.tableLayoutPanel32.Controls.Add(this.tableLayoutPanel33, 0, 0);
+            this.tableLayoutPanel32.Controls.Add(this.tableLayoutPanel34, 1, 0);
+            this.tableLayoutPanel32.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel32.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel32.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel32.Name = "tableLayoutPanel32";
+            this.tableLayoutPanel32.RowCount = 1;
+            this.tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel32.Size = new System.Drawing.Size(885, 399);
+            this.tableLayoutPanel32.TabIndex = 21;
+            // 
+            // tableLayoutPanel33
+            // 
+            this.tableLayoutPanel33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.tableLayoutPanel33.ColumnCount = 1;
+            this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel33.Controls.Add(this.btnLogOutTABstockInfo, 0, 5);
+            this.tableLayoutPanel33.Controls.Add(this.btnMakeReqTABstockInfo, 0, 1);
+            this.tableLayoutPanel33.Controls.Add(this.pictureBox8, 0, 0);
+            this.tableLayoutPanel33.Controls.Add(this.btnIncomingStockTABstockInfo, 0, 2);
+            this.tableLayoutPanel33.Controls.Add(this.btnStockTABstockInfo, 0, 3);
+            this.tableLayoutPanel33.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel33.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel33.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel33.Name = "tableLayoutPanel33";
+            this.tableLayoutPanel33.RowCount = 6;
+            this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel33.Size = new System.Drawing.Size(194, 395);
+            this.tableLayoutPanel33.TabIndex = 0;
+            // 
+            // btnLogOutTABstockInfo
+            // 
+            this.btnLogOutTABstockInfo.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnLogOutTABstockInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnLogOutTABstockInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLogOutTABstockInfo.BorderRadius = 0;
+            this.btnLogOutTABstockInfo.ButtonText = "LOG OUT";
+            this.btnLogOutTABstockInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogOutTABstockInfo.DisabledColor = System.Drawing.Color.Gray;
+            this.btnLogOutTABstockInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnLogOutTABstockInfo.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnLogOutTABstockInfo.Iconimage = null;
+            this.btnLogOutTABstockInfo.Iconimage_right = null;
+            this.btnLogOutTABstockInfo.Iconimage_right_Selected = null;
+            this.btnLogOutTABstockInfo.Iconimage_Selected = null;
+            this.btnLogOutTABstockInfo.IconMarginLeft = 0;
+            this.btnLogOutTABstockInfo.IconMarginRight = 0;
+            this.btnLogOutTABstockInfo.IconRightVisible = false;
+            this.btnLogOutTABstockInfo.IconRightZoom = 0D;
+            this.btnLogOutTABstockInfo.IconVisible = false;
+            this.btnLogOutTABstockInfo.IconZoom = 90D;
+            this.btnLogOutTABstockInfo.IsTab = false;
+            this.btnLogOutTABstockInfo.Location = new System.Drawing.Point(3, 357);
+            this.btnLogOutTABstockInfo.Name = "btnLogOutTABstockInfo";
+            this.btnLogOutTABstockInfo.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnLogOutTABstockInfo.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnLogOutTABstockInfo.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnLogOutTABstockInfo.selected = false;
+            this.btnLogOutTABstockInfo.Size = new System.Drawing.Size(188, 35);
+            this.btnLogOutTABstockInfo.TabIndex = 11;
+            this.btnLogOutTABstockInfo.Text = "LOG OUT";
+            this.btnLogOutTABstockInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLogOutTABstockInfo.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnLogOutTABstockInfo.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOutTABstockInfo.Click += new System.EventHandler(this.btnLogOutTABrequest_Click);
+            // 
+            // btnMakeReqTABstockInfo
+            // 
+            this.btnMakeReqTABstockInfo.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnMakeReqTABstockInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnMakeReqTABstockInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMakeReqTABstockInfo.BorderRadius = 0;
+            this.btnMakeReqTABstockInfo.ButtonText = "Make Request";
+            this.btnMakeReqTABstockInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMakeReqTABstockInfo.DisabledColor = System.Drawing.Color.Gray;
+            this.btnMakeReqTABstockInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMakeReqTABstockInfo.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnMakeReqTABstockInfo.Iconimage = null;
+            this.btnMakeReqTABstockInfo.Iconimage_right = null;
+            this.btnMakeReqTABstockInfo.Iconimage_right_Selected = null;
+            this.btnMakeReqTABstockInfo.Iconimage_Selected = null;
+            this.btnMakeReqTABstockInfo.IconMarginLeft = 0;
+            this.btnMakeReqTABstockInfo.IconMarginRight = 0;
+            this.btnMakeReqTABstockInfo.IconRightVisible = false;
+            this.btnMakeReqTABstockInfo.IconRightZoom = 0D;
+            this.btnMakeReqTABstockInfo.IconVisible = false;
+            this.btnMakeReqTABstockInfo.IconZoom = 90D;
+            this.btnMakeReqTABstockInfo.IsTab = false;
+            this.btnMakeReqTABstockInfo.Location = new System.Drawing.Point(3, 121);
+            this.btnMakeReqTABstockInfo.Name = "btnMakeReqTABstockInfo";
+            this.btnMakeReqTABstockInfo.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnMakeReqTABstockInfo.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnMakeReqTABstockInfo.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnMakeReqTABstockInfo.selected = false;
+            this.btnMakeReqTABstockInfo.Size = new System.Drawing.Size(188, 53);
+            this.btnMakeReqTABstockInfo.TabIndex = 5;
+            this.btnMakeReqTABstockInfo.Text = "Make Request";
+            this.btnMakeReqTABstockInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnMakeReqTABstockInfo.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnMakeReqTABstockInfo.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMakeReqTABstockInfo.Click += new System.EventHandler(this.btnMakeReqTABincomingStock_Click);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(2, 2);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(190, 114);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 0;
+            this.pictureBox8.TabStop = false;
+            // 
+            // btnIncomingStockTABstockInfo
+            // 
+            this.btnIncomingStockTABstockInfo.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnIncomingStockTABstockInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnIncomingStockTABstockInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnIncomingStockTABstockInfo.BorderRadius = 0;
+            this.btnIncomingStockTABstockInfo.ButtonText = "Incoming Stock";
+            this.btnIncomingStockTABstockInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIncomingStockTABstockInfo.DisabledColor = System.Drawing.Color.Gray;
+            this.btnIncomingStockTABstockInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnIncomingStockTABstockInfo.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnIncomingStockTABstockInfo.Iconimage = null;
+            this.btnIncomingStockTABstockInfo.Iconimage_right = null;
+            this.btnIncomingStockTABstockInfo.Iconimage_right_Selected = null;
+            this.btnIncomingStockTABstockInfo.Iconimage_Selected = null;
+            this.btnIncomingStockTABstockInfo.IconMarginLeft = 0;
+            this.btnIncomingStockTABstockInfo.IconMarginRight = 0;
+            this.btnIncomingStockTABstockInfo.IconRightVisible = false;
+            this.btnIncomingStockTABstockInfo.IconRightZoom = 0D;
+            this.btnIncomingStockTABstockInfo.IconVisible = false;
+            this.btnIncomingStockTABstockInfo.IconZoom = 90D;
+            this.btnIncomingStockTABstockInfo.IsTab = false;
+            this.btnIncomingStockTABstockInfo.Location = new System.Drawing.Point(3, 180);
+            this.btnIncomingStockTABstockInfo.Name = "btnIncomingStockTABstockInfo";
+            this.btnIncomingStockTABstockInfo.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnIncomingStockTABstockInfo.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnIncomingStockTABstockInfo.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnIncomingStockTABstockInfo.selected = false;
+            this.btnIncomingStockTABstockInfo.Size = new System.Drawing.Size(188, 53);
+            this.btnIncomingStockTABstockInfo.TabIndex = 2;
+            this.btnIncomingStockTABstockInfo.Text = "Incoming Stock";
+            this.btnIncomingStockTABstockInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnIncomingStockTABstockInfo.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnIncomingStockTABstockInfo.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncomingStockTABstockInfo.Click += new System.EventHandler(this.btnIncomingStockTABrequest_Click);
+            // 
+            // btnStockTABstockInfo
+            // 
+            this.btnStockTABstockInfo.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnStockTABstockInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnStockTABstockInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnStockTABstockInfo.BorderRadius = 0;
+            this.btnStockTABstockInfo.ButtonText = "Stock";
+            this.btnStockTABstockInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStockTABstockInfo.DisabledColor = System.Drawing.Color.Gray;
+            this.btnStockTABstockInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnStockTABstockInfo.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnStockTABstockInfo.Iconimage = null;
+            this.btnStockTABstockInfo.Iconimage_right = null;
+            this.btnStockTABstockInfo.Iconimage_right_Selected = null;
+            this.btnStockTABstockInfo.Iconimage_Selected = null;
+            this.btnStockTABstockInfo.IconMarginLeft = 0;
+            this.btnStockTABstockInfo.IconMarginRight = 0;
+            this.btnStockTABstockInfo.IconRightVisible = false;
+            this.btnStockTABstockInfo.IconRightZoom = 0D;
+            this.btnStockTABstockInfo.IconVisible = false;
+            this.btnStockTABstockInfo.IconZoom = 90D;
+            this.btnStockTABstockInfo.IsTab = false;
+            this.btnStockTABstockInfo.Location = new System.Drawing.Point(3, 239);
+            this.btnStockTABstockInfo.Name = "btnStockTABstockInfo";
+            this.btnStockTABstockInfo.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnStockTABstockInfo.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnStockTABstockInfo.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnStockTABstockInfo.selected = false;
+            this.btnStockTABstockInfo.Size = new System.Drawing.Size(188, 53);
+            this.btnStockTABstockInfo.TabIndex = 6;
+            this.btnStockTABstockInfo.Text = "Stock";
+            this.btnStockTABstockInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnStockTABstockInfo.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnStockTABstockInfo.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStockTABstockInfo.Click += new System.EventHandler(this.btnStockTABrequest_Click);
+            // 
+            // tableLayoutPanel34
+            // 
+            this.tableLayoutPanel34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.tableLayoutPanel34.ColumnCount = 1;
+            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel34.Controls.Add(this.label7, 0, 0);
+            this.tableLayoutPanel34.Controls.Add(this.panel14, 0, 1);
+            this.tableLayoutPanel34.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel34.Location = new System.Drawing.Point(200, 2);
+            this.tableLayoutPanel34.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel34.Name = "tableLayoutPanel34";
+            this.tableLayoutPanel34.RowCount = 2;
+            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
+            this.tableLayoutPanel34.Size = new System.Drawing.Size(683, 395);
+            this.tableLayoutPanel34.TabIndex = 1;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(2, 0);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(679, 59);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Name of stock";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.White;
+            this.panel14.Controls.Add(this.tableLayoutPanel35);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel14.Location = new System.Drawing.Point(2, 61);
+            this.panel14.Margin = new System.Windows.Forms.Padding(2);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(679, 332);
+            this.panel14.TabIndex = 1;
+            // 
+            // tableLayoutPanel35
+            // 
+            this.tableLayoutPanel35.ColumnCount = 1;
+            this.tableLayoutPanel35.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel35.Controls.Add(this.panel15, 0, 0);
+            this.tableLayoutPanel35.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel35.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel35.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel35.Name = "tableLayoutPanel35";
+            this.tableLayoutPanel35.RowCount = 1;
+            this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 332F));
+            this.tableLayoutPanel35.Size = new System.Drawing.Size(679, 332);
+            this.tableLayoutPanel35.TabIndex = 0;
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.listBox3);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel15.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel15.Location = new System.Drawing.Point(2, 2);
+            this.panel15.Margin = new System.Windows.Forms.Padding(2);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(675, 328);
+            this.panel15.TabIndex = 1;
+            // 
+            // listBox3
+            // 
+            this.listBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.ItemHeight = 18;
+            this.listBox3.Location = new System.Drawing.Point(119, 43);
+            this.listBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(438, 202);
+            this.listBox3.TabIndex = 0;
             // 
             // tableLayoutPanel29
             // 
@@ -310,16 +1937,16 @@
             // 
             this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea7.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend1";
+            this.chart1.Legends.Add(legend7);
             this.chart1.Location = new System.Drawing.Point(69, 57);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            series7.ChartArea = "ChartArea1";
+            series7.Legend = "Legend1";
+            series7.Name = "Series1";
+            this.chart1.Series.Add(series7);
             this.chart1.Size = new System.Drawing.Size(300, 241);
             this.chart1.TabIndex = 0;
             // 
@@ -327,16 +1954,16 @@
             // 
             this.chart2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
+            chartArea8.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            this.chart2.Legends.Add(legend8);
             this.chart2.Location = new System.Drawing.Point(387, 57);
             this.chart2.Name = "chart2";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart2.Series.Add(series2);
+            series8.ChartArea = "ChartArea1";
+            series8.Legend = "Legend1";
+            series8.Name = "Series1";
+            this.chart2.Series.Add(series8);
             this.chart2.Size = new System.Drawing.Size(300, 241);
             this.chart2.TabIndex = 1;
             // 
@@ -379,7 +2006,7 @@
             this.bunifuFlatButton15.IconZoom = 90D;
             this.bunifuFlatButton15.IsTab = false;
             this.bunifuFlatButton15.Location = new System.Drawing.Point(510, 4);
-            this.bunifuFlatButton15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton15.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton15.Name = "bunifuFlatButton15";
             this.bunifuFlatButton15.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton15.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -414,7 +2041,7 @@
             this.bunifuFlatButton14.IconZoom = 90D;
             this.bunifuFlatButton14.IsTab = false;
             this.bunifuFlatButton14.Location = new System.Drawing.Point(257, 4);
-            this.bunifuFlatButton14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton14.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton14.Name = "bunifuFlatButton14";
             this.bunifuFlatButton14.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton14.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -449,7 +2076,7 @@
             this.bunifuFlatButton13.IconZoom = 90D;
             this.bunifuFlatButton13.IsTab = false;
             this.bunifuFlatButton13.Location = new System.Drawing.Point(4, 4);
-            this.bunifuFlatButton13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton13.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton13.Name = "bunifuFlatButton13";
             this.bunifuFlatButton13.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton13.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -516,7 +2143,7 @@
             this.bunifuFlatButton46.IconZoom = 90D;
             this.bunifuFlatButton46.IsTab = false;
             this.bunifuFlatButton46.Location = new System.Drawing.Point(4, 223);
-            this.bunifuFlatButton46.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton46.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton46.Name = "bunifuFlatButton46";
             this.bunifuFlatButton46.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton46.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -563,7 +2190,7 @@
             this.bunifuFlatButton45.IconZoom = 90D;
             this.bunifuFlatButton45.IsTab = false;
             this.bunifuFlatButton45.Location = new System.Drawing.Point(4, 150);
-            this.bunifuFlatButton45.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton45.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton45.Name = "bunifuFlatButton45";
             this.bunifuFlatButton45.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton45.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -639,16 +2266,16 @@
             // 
             this.chart5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            chartArea3.Name = "ChartArea1";
-            this.chart5.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart5.Legends.Add(legend3);
+            chartArea9.Name = "ChartArea1";
+            this.chart5.ChartAreas.Add(chartArea9);
+            legend9.Name = "Legend1";
+            this.chart5.Legends.Add(legend9);
             this.chart5.Location = new System.Drawing.Point(86, 53);
             this.chart5.Name = "chart5";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart5.Series.Add(series3);
+            series9.ChartArea = "ChartArea1";
+            series9.Legend = "Legend1";
+            series9.Name = "Series1";
+            this.chart5.Series.Add(series9);
             this.chart5.Size = new System.Drawing.Size(300, 300);
             this.chart5.TabIndex = 1;
             // 
@@ -656,16 +2283,16 @@
             // 
             this.chart6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea4.Name = "ChartArea1";
-            this.chart6.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart6.Legends.Add(legend4);
+            chartArea10.Name = "ChartArea1";
+            this.chart6.ChartAreas.Add(chartArea10);
+            legend10.Name = "Legend1";
+            this.chart6.Legends.Add(legend10);
             this.chart6.Location = new System.Drawing.Point(489, 53);
             this.chart6.Name = "chart6";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chart6.Series.Add(series4);
+            series10.ChartArea = "ChartArea1";
+            series10.Legend = "Legend1";
+            series10.Name = "Series1";
+            this.chart6.Series.Add(series10);
             this.chart6.Size = new System.Drawing.Size(300, 300);
             this.chart6.TabIndex = 2;
             // 
@@ -708,7 +2335,7 @@
             this.bunifuFlatButton11.IconZoom = 90D;
             this.bunifuFlatButton11.IsTab = false;
             this.bunifuFlatButton11.Location = new System.Drawing.Point(510, 4);
-            this.bunifuFlatButton11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton11.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton11.Name = "bunifuFlatButton11";
             this.bunifuFlatButton11.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton11.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -743,7 +2370,7 @@
             this.bunifuFlatButton10.IconZoom = 90D;
             this.bunifuFlatButton10.IsTab = false;
             this.bunifuFlatButton10.Location = new System.Drawing.Point(257, 4);
-            this.bunifuFlatButton10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton10.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton10.Name = "bunifuFlatButton10";
             this.bunifuFlatButton10.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton10.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -778,7 +2405,7 @@
             this.bunifuFlatButton8.IconZoom = 90D;
             this.bunifuFlatButton8.IsTab = false;
             this.bunifuFlatButton8.Location = new System.Drawing.Point(4, 4);
-            this.bunifuFlatButton8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton8.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton8.Name = "bunifuFlatButton8";
             this.bunifuFlatButton8.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton8.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -845,7 +2472,7 @@
             this.bunifuFlatButton7.IconZoom = 90D;
             this.bunifuFlatButton7.IsTab = false;
             this.bunifuFlatButton7.Location = new System.Drawing.Point(4, 223);
-            this.bunifuFlatButton7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton7.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton7.Name = "bunifuFlatButton7";
             this.bunifuFlatButton7.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton7.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -892,7 +2519,7 @@
             this.bunifuFlatButton6.IconZoom = 90D;
             this.bunifuFlatButton6.IsTab = false;
             this.bunifuFlatButton6.Location = new System.Drawing.Point(4, 150);
-            this.bunifuFlatButton6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton6.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton6.Name = "bunifuFlatButton6";
             this.bunifuFlatButton6.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton6.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -968,16 +2595,16 @@
             // 
             this.chart3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            chartArea5.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chart3.Legends.Add(legend5);
+            chartArea11.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea11);
+            legend11.Name = "Legend1";
+            this.chart3.Legends.Add(legend11);
             this.chart3.Location = new System.Drawing.Point(101, 56);
             this.chart3.Name = "chart3";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chart3.Series.Add(series5);
+            series11.ChartArea = "ChartArea1";
+            series11.Legend = "Legend1";
+            series11.Name = "Series1";
+            this.chart3.Series.Add(series11);
             this.chart3.Size = new System.Drawing.Size(300, 300);
             this.chart3.TabIndex = 1;
             // 
@@ -985,16 +2612,16 @@
             // 
             this.chart4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea6.Name = "ChartArea1";
-            this.chart4.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chart4.Legends.Add(legend6);
+            chartArea12.Name = "ChartArea1";
+            this.chart4.ChartAreas.Add(chartArea12);
+            legend12.Name = "Legend1";
+            this.chart4.Legends.Add(legend12);
             this.chart4.Location = new System.Drawing.Point(489, 56);
             this.chart4.Name = "chart4";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chart4.Series.Add(series6);
+            series12.ChartArea = "ChartArea1";
+            series12.Legend = "Legend1";
+            series12.Name = "Series1";
+            this.chart4.Series.Add(series12);
             this.chart4.Size = new System.Drawing.Size(300, 300);
             this.chart4.TabIndex = 2;
             // 
@@ -1037,7 +2664,7 @@
             this.bunifuFlatButton5.IconZoom = 90D;
             this.bunifuFlatButton5.IsTab = false;
             this.bunifuFlatButton5.Location = new System.Drawing.Point(510, 4);
-            this.bunifuFlatButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton5.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton5.Name = "bunifuFlatButton5";
             this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton5.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -1072,7 +2699,7 @@
             this.bunifuFlatButton4.IconZoom = 90D;
             this.bunifuFlatButton4.IsTab = false;
             this.bunifuFlatButton4.Location = new System.Drawing.Point(257, 4);
-            this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton4.Name = "bunifuFlatButton4";
             this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -1107,7 +2734,7 @@
             this.bunifuFlatButton3.IconZoom = 90D;
             this.bunifuFlatButton3.IsTab = false;
             this.bunifuFlatButton3.Location = new System.Drawing.Point(4, 4);
-            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -1174,7 +2801,7 @@
             this.bunifuFlatButton2.IconZoom = 90D;
             this.bunifuFlatButton2.IsTab = false;
             this.bunifuFlatButton2.Location = new System.Drawing.Point(4, 223);
-            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -1221,7 +2848,7 @@
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
             this.bunifuFlatButton1.Location = new System.Drawing.Point(4, 150);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -1233,1442 +2860,72 @@
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.tableLayoutPanel27);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1188, 499);
-            this.tabPage1.TabIndex = 10;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.tableLayoutPanel16);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1017, 499);
-            this.tabPage2.TabIndex = 11;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.tableLayoutPanel20);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1017, 499);
-            this.tabPage3.TabIndex = 12;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel27
-            // 
-            this.tableLayoutPanel27.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel27.ColumnCount = 2;
-            this.tableLayoutPanel27.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.375F));
-            this.tableLayoutPanel27.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.625F));
-            this.tableLayoutPanel27.Controls.Add(this.tableLayoutPanel1, 0, 0);
-            this.tableLayoutPanel27.Controls.Add(this.tableLayoutPanel9, 1, 0);
-            this.tableLayoutPanel27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel27.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel27.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel27.Name = "tableLayoutPanel27";
-            this.tableLayoutPanel27.RowCount = 1;
-            this.tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel27.Size = new System.Drawing.Size(1182, 493);
-            this.tableLayoutPanel27.TabIndex = 20;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.bunifuFlatButton9, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuFlatButton12, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.bunifuFlatButton19, 0, 3);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 6;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(258, 489);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // bunifuFlatButton9
-            // 
-            this.bunifuFlatButton9.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.bunifuFlatButton9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton9.BorderRadius = 0;
-            this.bunifuFlatButton9.ButtonText = "Make Request";
-            this.bunifuFlatButton9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton9.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuFlatButton9.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton9.Iconimage = null;
-            this.bunifuFlatButton9.Iconimage_right = null;
-            this.bunifuFlatButton9.Iconimage_right_Selected = null;
-            this.bunifuFlatButton9.Iconimage_Selected = null;
-            this.bunifuFlatButton9.IconMarginLeft = 0;
-            this.bunifuFlatButton9.IconMarginRight = 0;
-            this.bunifuFlatButton9.IconRightVisible = false;
-            this.bunifuFlatButton9.IconRightZoom = 0D;
-            this.bunifuFlatButton9.IconVisible = false;
-            this.bunifuFlatButton9.IconZoom = 90D;
-            this.bunifuFlatButton9.IsTab = false;
-            this.bunifuFlatButton9.Location = new System.Drawing.Point(4, 150);
-            this.bunifuFlatButton9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton9.Name = "bunifuFlatButton9";
-            this.bunifuFlatButton9.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton9.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.bunifuFlatButton9.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton9.selected = false;
-            this.bunifuFlatButton9.Size = new System.Drawing.Size(250, 65);
-            this.bunifuFlatButton9.TabIndex = 5;
-            this.bunifuFlatButton9.Text = "Make Request";
-            this.bunifuFlatButton9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bunifuFlatButton9.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.bunifuFlatButton9.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton9.Click += new System.EventHandler(this.bunifuFlatButton9_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(3, 2);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(252, 142);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
-            // bunifuFlatButton12
-            // 
-            this.bunifuFlatButton12.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.bunifuFlatButton12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton12.BorderRadius = 0;
-            this.bunifuFlatButton12.ButtonText = "Incoming Stock";
-            this.bunifuFlatButton12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton12.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuFlatButton12.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton12.Iconimage = null;
-            this.bunifuFlatButton12.Iconimage_right = null;
-            this.bunifuFlatButton12.Iconimage_right_Selected = null;
-            this.bunifuFlatButton12.Iconimage_Selected = null;
-            this.bunifuFlatButton12.IconMarginLeft = 0;
-            this.bunifuFlatButton12.IconMarginRight = 0;
-            this.bunifuFlatButton12.IconRightVisible = false;
-            this.bunifuFlatButton12.IconRightZoom = 0D;
-            this.bunifuFlatButton12.IconVisible = false;
-            this.bunifuFlatButton12.IconZoom = 90D;
-            this.bunifuFlatButton12.IsTab = false;
-            this.bunifuFlatButton12.Location = new System.Drawing.Point(4, 223);
-            this.bunifuFlatButton12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton12.Name = "bunifuFlatButton12";
-            this.bunifuFlatButton12.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton12.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.bunifuFlatButton12.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton12.selected = false;
-            this.bunifuFlatButton12.Size = new System.Drawing.Size(250, 65);
-            this.bunifuFlatButton12.TabIndex = 2;
-            this.bunifuFlatButton12.Text = "Incoming Stock";
-            this.bunifuFlatButton12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bunifuFlatButton12.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.bunifuFlatButton12.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton12.Click += new System.EventHandler(this.bunifuFlatButton12_Click);
-            // 
-            // tableLayoutPanel9
-            // 
-            this.tableLayoutPanel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.tableLayoutPanel9.ColumnCount = 1;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel9.Controls.Add(this.panel3, 0, 1);
-            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(267, 2);
-            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
-            this.tableLayoutPanel9.RowCount = 2;
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(912, 489);
-            this.tableLayoutPanel9.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(906, 73);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Make Request";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.tableLayoutPanel15);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 75);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(906, 412);
-            this.panel3.TabIndex = 1;
-            // 
-            // tableLayoutPanel15
-            // 
-            this.tableLayoutPanel15.ColumnCount = 1;
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel15.Controls.Add(this.panel7, 0, 0);
-            this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel15.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
-            this.tableLayoutPanel15.RowCount = 1;
-            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 478F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(906, 412);
-            this.tableLayoutPanel15.TabIndex = 0;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.panel16);
-            this.panel7.Controls.Add(this.listBox2);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel7.Location = new System.Drawing.Point(3, 3);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(900, 406);
-            this.panel7.TabIndex = 1;
-            // 
-            // bunifuFlatButton19
-            // 
-            this.bunifuFlatButton19.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.bunifuFlatButton19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton19.BorderRadius = 0;
-            this.bunifuFlatButton19.ButtonText = "Stock";
-            this.bunifuFlatButton19.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton19.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuFlatButton19.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton19.Iconimage = null;
-            this.bunifuFlatButton19.Iconimage_right = null;
-            this.bunifuFlatButton19.Iconimage_right_Selected = null;
-            this.bunifuFlatButton19.Iconimage_Selected = null;
-            this.bunifuFlatButton19.IconMarginLeft = 0;
-            this.bunifuFlatButton19.IconMarginRight = 0;
-            this.bunifuFlatButton19.IconRightVisible = false;
-            this.bunifuFlatButton19.IconRightZoom = 0D;
-            this.bunifuFlatButton19.IconVisible = false;
-            this.bunifuFlatButton19.IconZoom = 90D;
-            this.bunifuFlatButton19.IsTab = false;
-            this.bunifuFlatButton19.Location = new System.Drawing.Point(4, 296);
-            this.bunifuFlatButton19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton19.Name = "bunifuFlatButton19";
-            this.bunifuFlatButton19.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton19.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.bunifuFlatButton19.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton19.selected = false;
-            this.bunifuFlatButton19.Size = new System.Drawing.Size(250, 65);
-            this.bunifuFlatButton19.TabIndex = 6;
-            this.bunifuFlatButton19.Text = "Stock";
-            this.bunifuFlatButton19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bunifuFlatButton19.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.bunifuFlatButton19.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton19.Click += new System.EventHandler(this.bunifuFlatButton19_Click);
-            // 
-            // tableLayoutPanel16
-            // 
-            this.tableLayoutPanel16.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel16.ColumnCount = 2;
-            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.375F));
-            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.625F));
-            this.tableLayoutPanel16.Controls.Add(this.tableLayoutPanel17, 0, 0);
-            this.tableLayoutPanel16.Controls.Add(this.tableLayoutPanel18, 1, 0);
-            this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel16.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
-            this.tableLayoutPanel16.RowCount = 1;
-            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(1011, 493);
-            this.tableLayoutPanel16.TabIndex = 21;
-            // 
-            // tableLayoutPanel17
-            // 
-            this.tableLayoutPanel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.tableLayoutPanel17.ColumnCount = 1;
-            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel17.Controls.Add(this.bunifuFlatButton16, 0, 1);
-            this.tableLayoutPanel17.Controls.Add(this.pictureBox4, 0, 0);
-            this.tableLayoutPanel17.Controls.Add(this.bunifuFlatButton17, 0, 2);
-            this.tableLayoutPanel17.Controls.Add(this.bunifuFlatButton18, 0, 3);
-            this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel17.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel17.Name = "tableLayoutPanel17";
-            this.tableLayoutPanel17.RowCount = 6;
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(220, 489);
-            this.tableLayoutPanel17.TabIndex = 0;
-            // 
-            // bunifuFlatButton16
-            // 
-            this.bunifuFlatButton16.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.bunifuFlatButton16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton16.BorderRadius = 0;
-            this.bunifuFlatButton16.ButtonText = "Make Request";
-            this.bunifuFlatButton16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton16.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuFlatButton16.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton16.Iconimage = null;
-            this.bunifuFlatButton16.Iconimage_right = null;
-            this.bunifuFlatButton16.Iconimage_right_Selected = null;
-            this.bunifuFlatButton16.Iconimage_Selected = null;
-            this.bunifuFlatButton16.IconMarginLeft = 0;
-            this.bunifuFlatButton16.IconMarginRight = 0;
-            this.bunifuFlatButton16.IconRightVisible = false;
-            this.bunifuFlatButton16.IconRightZoom = 0D;
-            this.bunifuFlatButton16.IconVisible = false;
-            this.bunifuFlatButton16.IconZoom = 90D;
-            this.bunifuFlatButton16.IsTab = false;
-            this.bunifuFlatButton16.Location = new System.Drawing.Point(4, 150);
-            this.bunifuFlatButton16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton16.Name = "bunifuFlatButton16";
-            this.bunifuFlatButton16.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton16.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.bunifuFlatButton16.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton16.selected = false;
-            this.bunifuFlatButton16.Size = new System.Drawing.Size(212, 65);
-            this.bunifuFlatButton16.TabIndex = 5;
-            this.bunifuFlatButton16.Text = "Make Request";
-            this.bunifuFlatButton16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bunifuFlatButton16.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.bunifuFlatButton16.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton16.Click += new System.EventHandler(this.bunifuFlatButton16_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(3, 2);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(214, 142);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
-            // 
-            // bunifuFlatButton17
-            // 
-            this.bunifuFlatButton17.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.bunifuFlatButton17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton17.BorderRadius = 0;
-            this.bunifuFlatButton17.ButtonText = "Incoming Stock";
-            this.bunifuFlatButton17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton17.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuFlatButton17.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton17.Iconimage = null;
-            this.bunifuFlatButton17.Iconimage_right = null;
-            this.bunifuFlatButton17.Iconimage_right_Selected = null;
-            this.bunifuFlatButton17.Iconimage_Selected = null;
-            this.bunifuFlatButton17.IconMarginLeft = 0;
-            this.bunifuFlatButton17.IconMarginRight = 0;
-            this.bunifuFlatButton17.IconRightVisible = false;
-            this.bunifuFlatButton17.IconRightZoom = 0D;
-            this.bunifuFlatButton17.IconVisible = false;
-            this.bunifuFlatButton17.IconZoom = 90D;
-            this.bunifuFlatButton17.IsTab = false;
-            this.bunifuFlatButton17.Location = new System.Drawing.Point(4, 223);
-            this.bunifuFlatButton17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton17.Name = "bunifuFlatButton17";
-            this.bunifuFlatButton17.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton17.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.bunifuFlatButton17.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton17.selected = false;
-            this.bunifuFlatButton17.Size = new System.Drawing.Size(212, 65);
-            this.bunifuFlatButton17.TabIndex = 2;
-            this.bunifuFlatButton17.Text = "Incoming Stock";
-            this.bunifuFlatButton17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bunifuFlatButton17.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.bunifuFlatButton17.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton17.Click += new System.EventHandler(this.bunifuFlatButton17_Click);
-            // 
-            // bunifuFlatButton18
-            // 
-            this.bunifuFlatButton18.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.bunifuFlatButton18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton18.BorderRadius = 0;
-            this.bunifuFlatButton18.ButtonText = "Stock";
-            this.bunifuFlatButton18.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton18.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuFlatButton18.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton18.Iconimage = null;
-            this.bunifuFlatButton18.Iconimage_right = null;
-            this.bunifuFlatButton18.Iconimage_right_Selected = null;
-            this.bunifuFlatButton18.Iconimage_Selected = null;
-            this.bunifuFlatButton18.IconMarginLeft = 0;
-            this.bunifuFlatButton18.IconMarginRight = 0;
-            this.bunifuFlatButton18.IconRightVisible = false;
-            this.bunifuFlatButton18.IconRightZoom = 0D;
-            this.bunifuFlatButton18.IconVisible = false;
-            this.bunifuFlatButton18.IconZoom = 90D;
-            this.bunifuFlatButton18.IsTab = false;
-            this.bunifuFlatButton18.Location = new System.Drawing.Point(4, 296);
-            this.bunifuFlatButton18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton18.Name = "bunifuFlatButton18";
-            this.bunifuFlatButton18.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton18.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.bunifuFlatButton18.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton18.selected = false;
-            this.bunifuFlatButton18.Size = new System.Drawing.Size(212, 65);
-            this.bunifuFlatButton18.TabIndex = 6;
-            this.bunifuFlatButton18.Text = "Stock";
-            this.bunifuFlatButton18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bunifuFlatButton18.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.bunifuFlatButton18.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton18.Click += new System.EventHandler(this.bunifuFlatButton18_Click);
-            // 
-            // tableLayoutPanel18
-            // 
-            this.tableLayoutPanel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.tableLayoutPanel18.ColumnCount = 1;
-            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel18.Controls.Add(this.label4, 0, 0);
-            this.tableLayoutPanel18.Controls.Add(this.panel8, 0, 1);
-            this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel18.Location = new System.Drawing.Point(229, 2);
-            this.tableLayoutPanel18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel18.Name = "tableLayoutPanel18";
-            this.tableLayoutPanel18.RowCount = 2;
-            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel18.Size = new System.Drawing.Size(779, 489);
-            this.tableLayoutPanel18.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(3, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(773, 73);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Incoming Stock";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Controls.Add(this.tableLayoutPanel19);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(3, 75);
-            this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(773, 412);
-            this.panel8.TabIndex = 1;
-            // 
-            // tableLayoutPanel19
-            // 
-            this.tableLayoutPanel19.ColumnCount = 1;
-            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel19.Controls.Add(this.panel9, 0, 0);
-            this.tableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel19.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel19.Name = "tableLayoutPanel19";
-            this.tableLayoutPanel19.RowCount = 1;
-            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 478F));
-            this.tableLayoutPanel19.Size = new System.Drawing.Size(773, 412);
-            this.tableLayoutPanel19.TabIndex = 0;
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.bunifuFlatButton29);
-            this.panel9.Controls.Add(this.checkedListBox1);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel9.Location = new System.Drawing.Point(3, 3);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(767, 406);
-            this.panel9.TabIndex = 1;
-            // 
-            // tableLayoutPanel20
-            // 
-            this.tableLayoutPanel20.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel20.ColumnCount = 2;
-            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.375F));
-            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.625F));
-            this.tableLayoutPanel20.Controls.Add(this.tableLayoutPanel21, 0, 0);
-            this.tableLayoutPanel20.Controls.Add(this.tableLayoutPanel22, 1, 0);
-            this.tableLayoutPanel20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel20.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel20.Name = "tableLayoutPanel20";
-            this.tableLayoutPanel20.RowCount = 1;
-            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel20.Size = new System.Drawing.Size(1011, 493);
-            this.tableLayoutPanel20.TabIndex = 21;
-            // 
-            // tableLayoutPanel21
-            // 
-            this.tableLayoutPanel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.tableLayoutPanel21.ColumnCount = 1;
-            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel21.Controls.Add(this.bunifuFlatButton20, 0, 1);
-            this.tableLayoutPanel21.Controls.Add(this.pictureBox5, 0, 0);
-            this.tableLayoutPanel21.Controls.Add(this.bunifuFlatButton21, 0, 2);
-            this.tableLayoutPanel21.Controls.Add(this.bunifuFlatButton22, 0, 3);
-            this.tableLayoutPanel21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel21.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel21.Name = "tableLayoutPanel21";
-            this.tableLayoutPanel21.RowCount = 6;
-            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel21.Size = new System.Drawing.Size(220, 489);
-            this.tableLayoutPanel21.TabIndex = 0;
-            // 
-            // bunifuFlatButton20
-            // 
-            this.bunifuFlatButton20.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.bunifuFlatButton20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton20.BorderRadius = 0;
-            this.bunifuFlatButton20.ButtonText = "Make Request";
-            this.bunifuFlatButton20.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton20.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuFlatButton20.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton20.Iconimage = null;
-            this.bunifuFlatButton20.Iconimage_right = null;
-            this.bunifuFlatButton20.Iconimage_right_Selected = null;
-            this.bunifuFlatButton20.Iconimage_Selected = null;
-            this.bunifuFlatButton20.IconMarginLeft = 0;
-            this.bunifuFlatButton20.IconMarginRight = 0;
-            this.bunifuFlatButton20.IconRightVisible = false;
-            this.bunifuFlatButton20.IconRightZoom = 0D;
-            this.bunifuFlatButton20.IconVisible = false;
-            this.bunifuFlatButton20.IconZoom = 90D;
-            this.bunifuFlatButton20.IsTab = false;
-            this.bunifuFlatButton20.Location = new System.Drawing.Point(4, 150);
-            this.bunifuFlatButton20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton20.Name = "bunifuFlatButton20";
-            this.bunifuFlatButton20.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton20.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.bunifuFlatButton20.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton20.selected = false;
-            this.bunifuFlatButton20.Size = new System.Drawing.Size(212, 65);
-            this.bunifuFlatButton20.TabIndex = 5;
-            this.bunifuFlatButton20.Text = "Make Request";
-            this.bunifuFlatButton20.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bunifuFlatButton20.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.bunifuFlatButton20.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton20.Click += new System.EventHandler(this.bunifuFlatButton20_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(3, 2);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(214, 142);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
-            // 
-            // bunifuFlatButton21
-            // 
-            this.bunifuFlatButton21.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.bunifuFlatButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton21.BorderRadius = 0;
-            this.bunifuFlatButton21.ButtonText = "Incoming Stock";
-            this.bunifuFlatButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton21.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuFlatButton21.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton21.Iconimage = null;
-            this.bunifuFlatButton21.Iconimage_right = null;
-            this.bunifuFlatButton21.Iconimage_right_Selected = null;
-            this.bunifuFlatButton21.Iconimage_Selected = null;
-            this.bunifuFlatButton21.IconMarginLeft = 0;
-            this.bunifuFlatButton21.IconMarginRight = 0;
-            this.bunifuFlatButton21.IconRightVisible = false;
-            this.bunifuFlatButton21.IconRightZoom = 0D;
-            this.bunifuFlatButton21.IconVisible = false;
-            this.bunifuFlatButton21.IconZoom = 90D;
-            this.bunifuFlatButton21.IsTab = false;
-            this.bunifuFlatButton21.Location = new System.Drawing.Point(4, 223);
-            this.bunifuFlatButton21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton21.Name = "bunifuFlatButton21";
-            this.bunifuFlatButton21.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton21.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.bunifuFlatButton21.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton21.selected = false;
-            this.bunifuFlatButton21.Size = new System.Drawing.Size(212, 65);
-            this.bunifuFlatButton21.TabIndex = 2;
-            this.bunifuFlatButton21.Text = "Incoming Stock";
-            this.bunifuFlatButton21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bunifuFlatButton21.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.bunifuFlatButton21.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton21.Click += new System.EventHandler(this.bunifuFlatButton21_Click);
-            // 
-            // bunifuFlatButton22
-            // 
-            this.bunifuFlatButton22.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.bunifuFlatButton22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton22.BorderRadius = 0;
-            this.bunifuFlatButton22.ButtonText = "Stock";
-            this.bunifuFlatButton22.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton22.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuFlatButton22.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton22.Iconimage = null;
-            this.bunifuFlatButton22.Iconimage_right = null;
-            this.bunifuFlatButton22.Iconimage_right_Selected = null;
-            this.bunifuFlatButton22.Iconimage_Selected = null;
-            this.bunifuFlatButton22.IconMarginLeft = 0;
-            this.bunifuFlatButton22.IconMarginRight = 0;
-            this.bunifuFlatButton22.IconRightVisible = false;
-            this.bunifuFlatButton22.IconRightZoom = 0D;
-            this.bunifuFlatButton22.IconVisible = false;
-            this.bunifuFlatButton22.IconZoom = 90D;
-            this.bunifuFlatButton22.IsTab = false;
-            this.bunifuFlatButton22.Location = new System.Drawing.Point(4, 296);
-            this.bunifuFlatButton22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton22.Name = "bunifuFlatButton22";
-            this.bunifuFlatButton22.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton22.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.bunifuFlatButton22.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton22.selected = false;
-            this.bunifuFlatButton22.Size = new System.Drawing.Size(212, 65);
-            this.bunifuFlatButton22.TabIndex = 6;
-            this.bunifuFlatButton22.Text = "Stock";
-            this.bunifuFlatButton22.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bunifuFlatButton22.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.bunifuFlatButton22.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton22.Click += new System.EventHandler(this.bunifuFlatButton22_Click);
-            // 
-            // tableLayoutPanel22
-            // 
-            this.tableLayoutPanel22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.tableLayoutPanel22.ColumnCount = 1;
-            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel22.Controls.Add(this.label5, 0, 0);
-            this.tableLayoutPanel22.Controls.Add(this.panel10, 0, 1);
-            this.tableLayoutPanel22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel22.Location = new System.Drawing.Point(229, 2);
-            this.tableLayoutPanel22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel22.Name = "tableLayoutPanel22";
-            this.tableLayoutPanel22.RowCount = 2;
-            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel22.Size = new System.Drawing.Size(779, 489);
-            this.tableLayoutPanel22.TabIndex = 1;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(3, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(773, 73);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Incoming Sotck(Details)";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.Controls.Add(this.tableLayoutPanel23);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(3, 75);
-            this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(773, 412);
-            this.panel10.TabIndex = 1;
-            // 
-            // tableLayoutPanel23
-            // 
-            this.tableLayoutPanel23.ColumnCount = 1;
-            this.tableLayoutPanel23.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel23.Controls.Add(this.panel11, 0, 0);
-            this.tableLayoutPanel23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel23.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel23.Name = "tableLayoutPanel23";
-            this.tableLayoutPanel23.RowCount = 1;
-            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 478F));
-            this.tableLayoutPanel23.Size = new System.Drawing.Size(773, 412);
-            this.tableLayoutPanel23.TabIndex = 0;
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.listBox1);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel11.Location = new System.Drawing.Point(3, 3);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(767, 406);
-            this.panel11.TabIndex = 1;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.tableLayoutPanel24);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1017, 499);
-            this.tabPage4.TabIndex = 13;
-            this.tabPage4.Text = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel24
-            // 
-            this.tableLayoutPanel24.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel24.ColumnCount = 2;
-            this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.375F));
-            this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.625F));
-            this.tableLayoutPanel24.Controls.Add(this.tableLayoutPanel25, 0, 0);
-            this.tableLayoutPanel24.Controls.Add(this.tableLayoutPanel26, 1, 0);
-            this.tableLayoutPanel24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel24.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel24.Name = "tableLayoutPanel24";
-            this.tableLayoutPanel24.RowCount = 1;
-            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel24.Size = new System.Drawing.Size(1011, 493);
-            this.tableLayoutPanel24.TabIndex = 21;
-            // 
-            // tableLayoutPanel25
-            // 
-            this.tableLayoutPanel25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.tableLayoutPanel25.ColumnCount = 1;
-            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel25.Controls.Add(this.bunifuFlatButton23, 0, 1);
-            this.tableLayoutPanel25.Controls.Add(this.pictureBox6, 0, 0);
-            this.tableLayoutPanel25.Controls.Add(this.bunifuFlatButton24, 0, 2);
-            this.tableLayoutPanel25.Controls.Add(this.bunifuFlatButton25, 0, 3);
-            this.tableLayoutPanel25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel25.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel25.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel25.Name = "tableLayoutPanel25";
-            this.tableLayoutPanel25.RowCount = 6;
-            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel25.Size = new System.Drawing.Size(220, 489);
-            this.tableLayoutPanel25.TabIndex = 0;
-            // 
-            // bunifuFlatButton23
-            // 
-            this.bunifuFlatButton23.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.bunifuFlatButton23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton23.BorderRadius = 0;
-            this.bunifuFlatButton23.ButtonText = "Make Request";
-            this.bunifuFlatButton23.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton23.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuFlatButton23.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton23.Iconimage = null;
-            this.bunifuFlatButton23.Iconimage_right = null;
-            this.bunifuFlatButton23.Iconimage_right_Selected = null;
-            this.bunifuFlatButton23.Iconimage_Selected = null;
-            this.bunifuFlatButton23.IconMarginLeft = 0;
-            this.bunifuFlatButton23.IconMarginRight = 0;
-            this.bunifuFlatButton23.IconRightVisible = false;
-            this.bunifuFlatButton23.IconRightZoom = 0D;
-            this.bunifuFlatButton23.IconVisible = false;
-            this.bunifuFlatButton23.IconZoom = 90D;
-            this.bunifuFlatButton23.IsTab = false;
-            this.bunifuFlatButton23.Location = new System.Drawing.Point(4, 150);
-            this.bunifuFlatButton23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton23.Name = "bunifuFlatButton23";
-            this.bunifuFlatButton23.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton23.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.bunifuFlatButton23.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton23.selected = false;
-            this.bunifuFlatButton23.Size = new System.Drawing.Size(212, 65);
-            this.bunifuFlatButton23.TabIndex = 5;
-            this.bunifuFlatButton23.Text = "Make Request";
-            this.bunifuFlatButton23.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bunifuFlatButton23.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.bunifuFlatButton23.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton23.Click += new System.EventHandler(this.bunifuFlatButton23_Click);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(3, 2);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(214, 142);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 0;
-            this.pictureBox6.TabStop = false;
-            // 
-            // bunifuFlatButton24
-            // 
-            this.bunifuFlatButton24.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.bunifuFlatButton24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton24.BorderRadius = 0;
-            this.bunifuFlatButton24.ButtonText = "Incoming Stock";
-            this.bunifuFlatButton24.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton24.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuFlatButton24.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton24.Iconimage = null;
-            this.bunifuFlatButton24.Iconimage_right = null;
-            this.bunifuFlatButton24.Iconimage_right_Selected = null;
-            this.bunifuFlatButton24.Iconimage_Selected = null;
-            this.bunifuFlatButton24.IconMarginLeft = 0;
-            this.bunifuFlatButton24.IconMarginRight = 0;
-            this.bunifuFlatButton24.IconRightVisible = false;
-            this.bunifuFlatButton24.IconRightZoom = 0D;
-            this.bunifuFlatButton24.IconVisible = false;
-            this.bunifuFlatButton24.IconZoom = 90D;
-            this.bunifuFlatButton24.IsTab = false;
-            this.bunifuFlatButton24.Location = new System.Drawing.Point(4, 223);
-            this.bunifuFlatButton24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton24.Name = "bunifuFlatButton24";
-            this.bunifuFlatButton24.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton24.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.bunifuFlatButton24.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton24.selected = false;
-            this.bunifuFlatButton24.Size = new System.Drawing.Size(212, 65);
-            this.bunifuFlatButton24.TabIndex = 2;
-            this.bunifuFlatButton24.Text = "Incoming Stock";
-            this.bunifuFlatButton24.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bunifuFlatButton24.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.bunifuFlatButton24.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton24.Click += new System.EventHandler(this.bunifuFlatButton24_Click);
-            // 
-            // bunifuFlatButton25
-            // 
-            this.bunifuFlatButton25.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.bunifuFlatButton25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton25.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton25.BorderRadius = 0;
-            this.bunifuFlatButton25.ButtonText = "Stock";
-            this.bunifuFlatButton25.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton25.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuFlatButton25.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton25.Iconimage = null;
-            this.bunifuFlatButton25.Iconimage_right = null;
-            this.bunifuFlatButton25.Iconimage_right_Selected = null;
-            this.bunifuFlatButton25.Iconimage_Selected = null;
-            this.bunifuFlatButton25.IconMarginLeft = 0;
-            this.bunifuFlatButton25.IconMarginRight = 0;
-            this.bunifuFlatButton25.IconRightVisible = false;
-            this.bunifuFlatButton25.IconRightZoom = 0D;
-            this.bunifuFlatButton25.IconVisible = false;
-            this.bunifuFlatButton25.IconZoom = 90D;
-            this.bunifuFlatButton25.IsTab = false;
-            this.bunifuFlatButton25.Location = new System.Drawing.Point(4, 296);
-            this.bunifuFlatButton25.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton25.Name = "bunifuFlatButton25";
-            this.bunifuFlatButton25.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton25.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.bunifuFlatButton25.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton25.selected = false;
-            this.bunifuFlatButton25.Size = new System.Drawing.Size(212, 65);
-            this.bunifuFlatButton25.TabIndex = 6;
-            this.bunifuFlatButton25.Text = "Stock";
-            this.bunifuFlatButton25.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bunifuFlatButton25.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.bunifuFlatButton25.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton25.Click += new System.EventHandler(this.bunifuFlatButton25_Click);
-            // 
-            // tableLayoutPanel26
-            // 
-            this.tableLayoutPanel26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.tableLayoutPanel26.ColumnCount = 1;
-            this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel26.Controls.Add(this.label6, 0, 0);
-            this.tableLayoutPanel26.Controls.Add(this.panel12, 0, 1);
-            this.tableLayoutPanel26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel26.Location = new System.Drawing.Point(229, 2);
-            this.tableLayoutPanel26.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel26.Name = "tableLayoutPanel26";
-            this.tableLayoutPanel26.RowCount = 2;
-            this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel26.Size = new System.Drawing.Size(779, 489);
-            this.tableLayoutPanel26.TabIndex = 1;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(3, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(773, 73);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Stock";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.White;
-            this.panel12.Controls.Add(this.tableLayoutPanel31);
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(3, 75);
-            this.panel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(773, 412);
-            this.panel12.TabIndex = 1;
-            // 
-            // tableLayoutPanel31
-            // 
-            this.tableLayoutPanel31.ColumnCount = 1;
-            this.tableLayoutPanel31.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel31.Controls.Add(this.panel13, 0, 0);
-            this.tableLayoutPanel31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel31.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel31.Name = "tableLayoutPanel31";
-            this.tableLayoutPanel31.RowCount = 1;
-            this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 478F));
-            this.tableLayoutPanel31.Size = new System.Drawing.Size(773, 412);
-            this.tableLayoutPanel31.TabIndex = 0;
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.bunifuFlatButton31);
-            this.panel13.Controls.Add(this.checkedListBox2);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel13.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel13.Location = new System.Drawing.Point(3, 3);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(767, 406);
-            this.panel13.TabIndex = 1;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.tableLayoutPanel32);
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1017, 499);
-            this.tabPage5.TabIndex = 14;
-            this.tabPage5.Text = "tabPage5";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel32
-            // 
-            this.tableLayoutPanel32.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel32.ColumnCount = 2;
-            this.tableLayoutPanel32.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.375F));
-            this.tableLayoutPanel32.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.625F));
-            this.tableLayoutPanel32.Controls.Add(this.tableLayoutPanel33, 0, 0);
-            this.tableLayoutPanel32.Controls.Add(this.tableLayoutPanel34, 1, 0);
-            this.tableLayoutPanel32.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel32.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel32.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel32.Name = "tableLayoutPanel32";
-            this.tableLayoutPanel32.RowCount = 1;
-            this.tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel32.Size = new System.Drawing.Size(1011, 493);
-            this.tableLayoutPanel32.TabIndex = 21;
-            // 
-            // tableLayoutPanel33
-            // 
-            this.tableLayoutPanel33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.tableLayoutPanel33.ColumnCount = 1;
-            this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel33.Controls.Add(this.bunifuFlatButton26, 0, 1);
-            this.tableLayoutPanel33.Controls.Add(this.pictureBox8, 0, 0);
-            this.tableLayoutPanel33.Controls.Add(this.bunifuFlatButton27, 0, 2);
-            this.tableLayoutPanel33.Controls.Add(this.bunifuFlatButton28, 0, 3);
-            this.tableLayoutPanel33.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel33.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel33.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel33.Name = "tableLayoutPanel33";
-            this.tableLayoutPanel33.RowCount = 6;
-            this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel33.Size = new System.Drawing.Size(220, 489);
-            this.tableLayoutPanel33.TabIndex = 0;
-            // 
-            // bunifuFlatButton26
-            // 
-            this.bunifuFlatButton26.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.bunifuFlatButton26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton26.BorderRadius = 0;
-            this.bunifuFlatButton26.ButtonText = "Make Request";
-            this.bunifuFlatButton26.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton26.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuFlatButton26.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton26.Iconimage = null;
-            this.bunifuFlatButton26.Iconimage_right = null;
-            this.bunifuFlatButton26.Iconimage_right_Selected = null;
-            this.bunifuFlatButton26.Iconimage_Selected = null;
-            this.bunifuFlatButton26.IconMarginLeft = 0;
-            this.bunifuFlatButton26.IconMarginRight = 0;
-            this.bunifuFlatButton26.IconRightVisible = false;
-            this.bunifuFlatButton26.IconRightZoom = 0D;
-            this.bunifuFlatButton26.IconVisible = false;
-            this.bunifuFlatButton26.IconZoom = 90D;
-            this.bunifuFlatButton26.IsTab = false;
-            this.bunifuFlatButton26.Location = new System.Drawing.Point(4, 150);
-            this.bunifuFlatButton26.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton26.Name = "bunifuFlatButton26";
-            this.bunifuFlatButton26.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton26.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.bunifuFlatButton26.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton26.selected = false;
-            this.bunifuFlatButton26.Size = new System.Drawing.Size(212, 65);
-            this.bunifuFlatButton26.TabIndex = 5;
-            this.bunifuFlatButton26.Text = "Make Request";
-            this.bunifuFlatButton26.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bunifuFlatButton26.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.bunifuFlatButton26.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton26.Click += new System.EventHandler(this.bunifuFlatButton26_Click);
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(3, 2);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(214, 142);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 0;
-            this.pictureBox8.TabStop = false;
-            // 
-            // bunifuFlatButton27
-            // 
-            this.bunifuFlatButton27.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.bunifuFlatButton27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton27.BorderRadius = 0;
-            this.bunifuFlatButton27.ButtonText = "Incoming Stock";
-            this.bunifuFlatButton27.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton27.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuFlatButton27.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton27.Iconimage = null;
-            this.bunifuFlatButton27.Iconimage_right = null;
-            this.bunifuFlatButton27.Iconimage_right_Selected = null;
-            this.bunifuFlatButton27.Iconimage_Selected = null;
-            this.bunifuFlatButton27.IconMarginLeft = 0;
-            this.bunifuFlatButton27.IconMarginRight = 0;
-            this.bunifuFlatButton27.IconRightVisible = false;
-            this.bunifuFlatButton27.IconRightZoom = 0D;
-            this.bunifuFlatButton27.IconVisible = false;
-            this.bunifuFlatButton27.IconZoom = 90D;
-            this.bunifuFlatButton27.IsTab = false;
-            this.bunifuFlatButton27.Location = new System.Drawing.Point(4, 223);
-            this.bunifuFlatButton27.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton27.Name = "bunifuFlatButton27";
-            this.bunifuFlatButton27.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton27.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.bunifuFlatButton27.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton27.selected = false;
-            this.bunifuFlatButton27.Size = new System.Drawing.Size(212, 65);
-            this.bunifuFlatButton27.TabIndex = 2;
-            this.bunifuFlatButton27.Text = "Incoming Stock";
-            this.bunifuFlatButton27.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bunifuFlatButton27.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.bunifuFlatButton27.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton27.Click += new System.EventHandler(this.bunifuFlatButton27_Click);
-            // 
-            // bunifuFlatButton28
-            // 
-            this.bunifuFlatButton28.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.bunifuFlatButton28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton28.BorderRadius = 0;
-            this.bunifuFlatButton28.ButtonText = "Stock";
-            this.bunifuFlatButton28.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton28.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuFlatButton28.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton28.Iconimage = null;
-            this.bunifuFlatButton28.Iconimage_right = null;
-            this.bunifuFlatButton28.Iconimage_right_Selected = null;
-            this.bunifuFlatButton28.Iconimage_Selected = null;
-            this.bunifuFlatButton28.IconMarginLeft = 0;
-            this.bunifuFlatButton28.IconMarginRight = 0;
-            this.bunifuFlatButton28.IconRightVisible = false;
-            this.bunifuFlatButton28.IconRightZoom = 0D;
-            this.bunifuFlatButton28.IconVisible = false;
-            this.bunifuFlatButton28.IconZoom = 90D;
-            this.bunifuFlatButton28.IsTab = false;
-            this.bunifuFlatButton28.Location = new System.Drawing.Point(4, 296);
-            this.bunifuFlatButton28.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton28.Name = "bunifuFlatButton28";
-            this.bunifuFlatButton28.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton28.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.bunifuFlatButton28.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton28.selected = false;
-            this.bunifuFlatButton28.Size = new System.Drawing.Size(212, 65);
-            this.bunifuFlatButton28.TabIndex = 6;
-            this.bunifuFlatButton28.Text = "Stock";
-            this.bunifuFlatButton28.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bunifuFlatButton28.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.bunifuFlatButton28.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton28.Click += new System.EventHandler(this.bunifuFlatButton28_Click);
-            // 
-            // tableLayoutPanel34
-            // 
-            this.tableLayoutPanel34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.tableLayoutPanel34.ColumnCount = 1;
-            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel34.Controls.Add(this.label7, 0, 0);
-            this.tableLayoutPanel34.Controls.Add(this.panel14, 0, 1);
-            this.tableLayoutPanel34.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel34.Location = new System.Drawing.Point(229, 2);
-            this.tableLayoutPanel34.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel34.Name = "tableLayoutPanel34";
-            this.tableLayoutPanel34.RowCount = 2;
-            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel34.Size = new System.Drawing.Size(779, 489);
-            this.tableLayoutPanel34.TabIndex = 1;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(3, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(773, 73);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Name of stock";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.White;
-            this.panel14.Controls.Add(this.tableLayoutPanel35);
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel14.Location = new System.Drawing.Point(3, 75);
-            this.panel14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(773, 412);
-            this.panel14.TabIndex = 1;
-            // 
-            // tableLayoutPanel35
-            // 
-            this.tableLayoutPanel35.ColumnCount = 1;
-            this.tableLayoutPanel35.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel35.Controls.Add(this.panel15, 0, 0);
-            this.tableLayoutPanel35.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel35.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel35.Name = "tableLayoutPanel35";
-            this.tableLayoutPanel35.RowCount = 1;
-            this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 478F));
-            this.tableLayoutPanel35.Size = new System.Drawing.Size(773, 412);
-            this.tableLayoutPanel35.TabIndex = 0;
-            // 
-            // panel15
-            // 
-            this.panel15.Controls.Add(this.listBox3);
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel15.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel15.Location = new System.Drawing.Point(3, 3);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(767, 406);
-            this.panel15.TabIndex = 1;
-            // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(100, 51);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(583, 268);
-            this.checkedListBox1.TabIndex = 0;
-            // 
-            // bunifuFlatButton29
-            // 
-            this.bunifuFlatButton29.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton29.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.bunifuFlatButton29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.bunifuFlatButton29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton29.BorderRadius = 0;
-            this.bunifuFlatButton29.ButtonText = "Check";
-            this.bunifuFlatButton29.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton29.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton29.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton29.Iconimage = null;
-            this.bunifuFlatButton29.Iconimage_right = null;
-            this.bunifuFlatButton29.Iconimage_right_Selected = null;
-            this.bunifuFlatButton29.Iconimage_Selected = null;
-            this.bunifuFlatButton29.IconMarginLeft = 0;
-            this.bunifuFlatButton29.IconMarginRight = 0;
-            this.bunifuFlatButton29.IconRightVisible = false;
-            this.bunifuFlatButton29.IconRightZoom = 0D;
-            this.bunifuFlatButton29.IconVisible = false;
-            this.bunifuFlatButton29.IconZoom = 90D;
-            this.bunifuFlatButton29.IsTab = false;
-            this.bunifuFlatButton29.Location = new System.Drawing.Point(249, 337);
-            this.bunifuFlatButton29.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.bunifuFlatButton29.Name = "bunifuFlatButton29";
-            this.bunifuFlatButton29.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.bunifuFlatButton29.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton29.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton29.selected = false;
-            this.bunifuFlatButton29.Size = new System.Drawing.Size(282, 51);
-            this.bunifuFlatButton29.TabIndex = 3;
-            this.bunifuFlatButton29.Text = "Check";
-            this.bunifuFlatButton29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton29.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton29.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton29.Click += new System.EventHandler(this.bunifuFlatButton29_Click);
-            // 
-            // listBox1
-            // 
-            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 22;
-            this.listBox1.Location = new System.Drawing.Point(143, 34);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(459, 312);
-            this.listBox1.TabIndex = 0;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(221, 14);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(189, 30);
-            this.comboBox1.TabIndex = 0;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(16, 17);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(113, 22);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Choose Stock";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(16, 71);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 22);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "Quantity";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(221, 71);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(189, 29);
-            this.textBox1.TabIndex = 3;
-            // 
-            // bunifuFlatButton30
-            // 
-            this.bunifuFlatButton30.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton30.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuFlatButton30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.bunifuFlatButton30.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton30.BorderRadius = 0;
-            this.bunifuFlatButton30.ButtonText = "Make Request";
-            this.bunifuFlatButton30.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton30.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton30.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton30.Iconimage = null;
-            this.bunifuFlatButton30.Iconimage_right = null;
-            this.bunifuFlatButton30.Iconimage_right_Selected = null;
-            this.bunifuFlatButton30.Iconimage_Selected = null;
-            this.bunifuFlatButton30.IconMarginLeft = 0;
-            this.bunifuFlatButton30.IconMarginRight = 0;
-            this.bunifuFlatButton30.IconRightVisible = false;
-            this.bunifuFlatButton30.IconRightZoom = 0D;
-            this.bunifuFlatButton30.IconVisible = false;
-            this.bunifuFlatButton30.IconZoom = 90D;
-            this.bunifuFlatButton30.IsTab = false;
-            this.bunifuFlatButton30.Location = new System.Drawing.Point(61, 206);
-            this.bunifuFlatButton30.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton30.Name = "bunifuFlatButton30";
-            this.bunifuFlatButton30.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.bunifuFlatButton30.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton30.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton30.selected = false;
-            this.bunifuFlatButton30.Size = new System.Drawing.Size(366, 36);
-            this.bunifuFlatButton30.TabIndex = 4;
-            this.bunifuFlatButton30.Text = "Make Request";
-            this.bunifuFlatButton30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton30.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton30.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // listBox2
-            // 
-            this.listBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 22;
-            this.listBox2.Location = new System.Drawing.Point(556, 51);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(309, 268);
-            this.listBox2.TabIndex = 5;
-            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
-            // 
-            // checkedListBox2
-            // 
-            this.checkedListBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Location = new System.Drawing.Point(110, 57);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(547, 244);
-            this.checkedListBox2.TabIndex = 0;
-            // 
-            // bunifuFlatButton31
-            // 
-            this.bunifuFlatButton31.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton31.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.bunifuFlatButton31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.bunifuFlatButton31.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton31.BorderRadius = 0;
-            this.bunifuFlatButton31.ButtonText = "View stock";
-            this.bunifuFlatButton31.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton31.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton31.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton31.Iconimage = null;
-            this.bunifuFlatButton31.Iconimage_right = null;
-            this.bunifuFlatButton31.Iconimage_right_Selected = null;
-            this.bunifuFlatButton31.Iconimage_Selected = null;
-            this.bunifuFlatButton31.IconMarginLeft = 0;
-            this.bunifuFlatButton31.IconMarginRight = 0;
-            this.bunifuFlatButton31.IconRightVisible = false;
-            this.bunifuFlatButton31.IconRightZoom = 0D;
-            this.bunifuFlatButton31.IconVisible = false;
-            this.bunifuFlatButton31.IconZoom = 90D;
-            this.bunifuFlatButton31.IsTab = false;
-            this.bunifuFlatButton31.Location = new System.Drawing.Point(251, 326);
-            this.bunifuFlatButton31.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.bunifuFlatButton31.Name = "bunifuFlatButton31";
-            this.bunifuFlatButton31.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.bunifuFlatButton31.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.bunifuFlatButton31.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton31.selected = false;
-            this.bunifuFlatButton31.Size = new System.Drawing.Size(257, 51);
-            this.bunifuFlatButton31.TabIndex = 4;
-            this.bunifuFlatButton31.Text = "View stock";
-            this.bunifuFlatButton31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton31.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton31.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton31.Click += new System.EventHandler(this.bunifuFlatButton31_Click);
-            // 
-            // listBox3
-            // 
-            this.listBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 22;
-            this.listBox3.Location = new System.Drawing.Point(159, 53);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(450, 290);
-            this.listBox3.TabIndex = 0;
-            // 
-            // panel16
-            // 
-            this.panel16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel16.Controls.Add(this.label8);
-            this.panel16.Controls.Add(this.comboBox1);
-            this.panel16.Controls.Add(this.bunifuFlatButton30);
-            this.panel16.Controls.Add(this.label9);
-            this.panel16.Controls.Add(this.textBox1);
-            this.panel16.Location = new System.Drawing.Point(39, 51);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(485, 288);
-            this.panel16.TabIndex = 6;
+            // timerChangeMenuColor
+            // 
+            this.timerChangeMenuColor.Enabled = true;
+            this.timerChangeMenuColor.Interval = 10;
+            this.timerChangeMenuColor.Tick += new System.EventHandler(this.timerChangeMenuColor_Tick);
             // 
             // MainDepot
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1196, 528);
+            this.ClientSize = new System.Drawing.Size(897, 429);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainDepot";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainDepot";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainDepot_FormClosing);
             this.Load += new System.EventHandler(this.MainDepot_Load);
             this.tabControl1.ResumeLayout(false);
+            this.tabMakeReq.ResumeLayout(false);
+            this.tableLayoutPanel27.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.tableLayoutPanel9.ResumeLayout(false);
+            this.tableLayoutPanel9.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.tableLayoutPanel15.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel16.ResumeLayout(false);
+            this.panel16.PerformLayout();
+            this.tabIncomingStock.ResumeLayout(false);
+            this.tableLayoutPanel16.ResumeLayout(false);
+            this.tableLayoutPanel17.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.tableLayoutPanel18.ResumeLayout(false);
+            this.tableLayoutPanel18.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.tableLayoutPanel19.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.tabIncomingStockDetails.ResumeLayout(false);
+            this.tableLayoutPanel20.ResumeLayout(false);
+            this.tableLayoutPanel21.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.tableLayoutPanel22.ResumeLayout(false);
+            this.tableLayoutPanel22.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.tableLayoutPanel23.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.tabStock.ResumeLayout(false);
+            this.tableLayoutPanel24.ResumeLayout(false);
+            this.tableLayoutPanel25.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.tableLayoutPanel26.ResumeLayout(false);
+            this.tableLayoutPanel26.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.tableLayoutPanel31.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.tabInfoStock.ResumeLayout(false);
+            this.tableLayoutPanel32.ResumeLayout(false);
+            this.tableLayoutPanel33.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.tableLayoutPanel34.ResumeLayout(false);
+            this.tableLayoutPanel34.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.tableLayoutPanel35.ResumeLayout(false);
+            this.panel15.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -2678,53 +2935,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tableLayoutPanel27.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.tableLayoutPanel9.ResumeLayout(false);
-            this.tableLayoutPanel9.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.tableLayoutPanel15.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.tableLayoutPanel16.ResumeLayout(false);
-            this.tableLayoutPanel17.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.tableLayoutPanel18.ResumeLayout(false);
-            this.tableLayoutPanel18.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.tableLayoutPanel19.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.tableLayoutPanel20.ResumeLayout(false);
-            this.tableLayoutPanel21.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.tableLayoutPanel22.ResumeLayout(false);
-            this.tableLayoutPanel22.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.tableLayoutPanel23.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
-            this.tableLayoutPanel24.ResumeLayout(false);
-            this.tableLayoutPanel25.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.tableLayoutPanel26.ResumeLayout(false);
-            this.tableLayoutPanel26.PerformLayout();
-            this.panel12.ResumeLayout(false);
-            this.tableLayoutPanel31.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
-            this.tabPage5.ResumeLayout(false);
-            this.tableLayoutPanel32.ResumeLayout(false);
-            this.tableLayoutPanel33.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            this.tableLayoutPanel34.ResumeLayout(false);
-            this.tableLayoutPanel34.PerformLayout();
-            this.panel14.ResumeLayout(false);
-            this.tableLayoutPanel35.ResumeLayout(false);
-            this.panel15.ResumeLayout(false);
-            this.panel16.ResumeLayout(false);
-            this.panel16.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2732,9 +2942,9 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabMakeReq;
+        private System.Windows.Forms.TabPage tabIncomingStock;
+        private System.Windows.Forms.TabPage tabIncomingStockDetails;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel29;
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel30;
@@ -2786,10 +2996,10 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel27;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton9;
+        private Bunifu.Framework.UI.BunifuFlatButton btnMakeReqTABrequest;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton12;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton19;
+        private Bunifu.Framework.UI.BunifuFlatButton btnIncomingStockTABrequest;
+        private Bunifu.Framework.UI.BunifuFlatButton btnStockTABrequest;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
@@ -2797,10 +3007,10 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton16;
+        private Bunifu.Framework.UI.BunifuFlatButton btnMakeReqTABincomingStock;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton17;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton18;
+        private Bunifu.Framework.UI.BunifuFlatButton btnIncomingStockTABincomingStock;
+        private Bunifu.Framework.UI.BunifuFlatButton btnStockTABincomingStock;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel18;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel8;
@@ -2809,50 +3019,56 @@
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel20;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel21;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton20;
+        private Bunifu.Framework.UI.BunifuFlatButton btnMakeReqTABincomingStockDet;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton21;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton22;
+        private Bunifu.Framework.UI.BunifuFlatButton btnIncomingStockTABincomingStockDet;
+        private Bunifu.Framework.UI.BunifuFlatButton btnStockTABincomingStockDet;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel22;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel23;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tabStock;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel24;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel25;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton23;
+        private Bunifu.Framework.UI.BunifuFlatButton btnMakeReqTABstock;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton24;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton25;
+        private Bunifu.Framework.UI.BunifuFlatButton btnIncomingStockTABstock;
+        private Bunifu.Framework.UI.BunifuFlatButton btnStockTABstock;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel26;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel31;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage tabInfoStock;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel32;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel33;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton26;
+        private Bunifu.Framework.UI.BunifuFlatButton btnMakeReqTABstockInfo;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton27;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton28;
+        private Bunifu.Framework.UI.BunifuFlatButton btnIncomingStockTABstockInfo;
+        private Bunifu.Framework.UI.BunifuFlatButton btnStockTABstockInfo;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel34;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel35;
         private System.Windows.Forms.Panel panel15;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton29;
+        private Bunifu.Framework.UI.BunifuFlatButton btnCheckIncomingStock;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ListBox listBox2;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton30;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton31;
+        private Bunifu.Framework.UI.BunifuFlatButton btnMakeRequest;
+        private Bunifu.Framework.UI.BunifuFlatButton btnViewStock;
         private System.Windows.Forms.CheckedListBox checkedListBox2;
         private System.Windows.Forms.ListBox listBox3;
         private System.Windows.Forms.Panel panel16;
+        private Bunifu.Framework.UI.BunifuFlatButton btnLogOutTABrequest;
+        private Bunifu.Framework.UI.BunifuFlatButton btnLogOutTABincomingStock;
+        private Bunifu.Framework.UI.BunifuFlatButton btnLogOutTABincomingStockDet;
+        private Bunifu.Framework.UI.BunifuFlatButton btnLogOutTABstock;
+        private Bunifu.Framework.UI.BunifuFlatButton btnLogOutTABstockInfo;
+        private System.Windows.Forms.Timer timerChangeMenuColor;
     }
 }

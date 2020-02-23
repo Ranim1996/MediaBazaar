@@ -55,7 +55,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataManage.cs" />
+    <Compile Include="Classes\Administration.cs" />
+    <Compile Include="Classes\Admin.cs" />
+    <Compile Include="Classes\Calendar.cs" />
+    <Compile Include="Classes\DepotWorker.cs" />
+    <Compile Include="Classes\Employee.cs" />
+    <Compile Include="Classes\JobPosition.cs" />
+    <Compile Include="Classes\Manager.cs" />
+    <Compile Include="Classes\PasswordGenerator.cs" />
+    <Compile Include="Classes\Sequrity.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,5 +134,6 @@
   <ItemGroup>
     <None Include="Resources\Username.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
