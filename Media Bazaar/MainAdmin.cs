@@ -162,26 +162,36 @@ namespace Media_Bazaar
         private void btnAddNewProfile_Click_1(object sender, EventArgs e)
         {
 
-            string fName;
-            string lName;
-            string dateOfBirth;
-            string email;
-            int phoneNr;
-            string nationality;
+            string fName = tbFirstName.Text;
+            string lName = tbLastName.Text;
+            string dateOfBirth = tbDateOfBirth.Text;
+            string email = tbEmail.Text;
+            string phoneNr = tbPhoneNr.Text;
+            string nationality = tbNationality.Text;
+
+            string username;
+            string password;
             JobPosition pos;
+
+            DataAccess db = new DataAccess();
+            db.InsertEmployee(fName, lName, dateOfBirth, email, phoneNr, nationality, pos, username, password);
+
+
             if (tbFirstName.Text != "" && tbLastName.Text != "" && tbDateOfBirth.Text != "" && tbEmail.Text != "" && tbEmail.Text != "" && tbPhoneNr.Text != "" && tbNationality.Text != "")
             {
-                fName = tbFirstName.Text;
-                lName = tbLastName.Text;
-                dateOfBirth = tbDateOfBirth.Text;
-                email = tbEmail.Text;
-                phoneNr = Convert.ToInt32(tbPhoneNr.Text);
-                nationality = tbNationality.Text;
+                //    fName = tbFirstName.Text;
+                //    lName = tbLastName.Text;
+                //    dateOfBirth = tbDateOfBirth.Text;
+                //    email = tbEmail.Text;
+                //    phoneNr = Convert.ToInt32(tbPhoneNr.Text);
+                //    nationality = tbNationality.Text;
+
+
                 if (rbAdministrator.Checked)
                 {
                     //administrator
                     pos = JobPosition.ADMINISTRATOR;
-                    administration.AddEmployee(new Admin(fName, lName, dateOfBirth, email, phoneNr, nationality, pos));
+                    // administration.AddEmployee(new Admin(fName, lName, dateOfBirth, email, phoneNr, nationality, pos));
                     //Employee empl = administration.GetEmployeeByName(fName, lName);
 
                 }
@@ -191,13 +201,13 @@ namespace Media_Bazaar
                     {
                         //Manager
                         pos = JobPosition.MANAGER;
-                        administration.AddEmployee(new Manager(fName, lName, dateOfBirth, email, phoneNr, nationality, pos));
+                        // administration.AddEmployee(new Manager(fName, lName, dateOfBirth, email, phoneNr, nationality, pos));
                     }
                     else if (rbDepotWorker.Checked)
                     {
                         //Depot worker
                         pos = JobPosition.DEPOTWORKER;
-                        administration.AddEmployee(new DepotWorker(fName, lName, dateOfBirth, email, phoneNr, nationality, pos));
+                        //administration.AddEmployee(new DepotWorker(fName, lName, dateOfBirth, email, phoneNr, nationality, pos));
                     }
                 }
             }
