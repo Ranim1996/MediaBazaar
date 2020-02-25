@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Media_Bazaar.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,10 +14,12 @@ namespace Media_Bazaar
     public partial class MainAdmin : Form
     {
 
+        Administration administration = new Administration();
+
         //holds the calendar
         Media_Bazaar.Classes.Calendar calendar = new Classes.Calendar();
 
- 
+
 
 
         public MainAdmin()
@@ -36,7 +39,7 @@ namespace Media_Bazaar
             //evn.GetAllEvents();   //Shifts listed in calendar
             calendar.GenerateDayPanel(42, flDays);
             calendar.DisplayCurrentDate(lblMonthAndYear);
-            
+
         }
 
         //----------------------------------Start
@@ -75,7 +78,7 @@ namespace Media_Bazaar
         private void btnDepartManageTABaddProfile_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedTab = tabDepartManage;
-        }  
+        }
 
         private void btnNewProfileTABremoveProfile_Click(object sender, EventArgs e)
         {
@@ -108,7 +111,7 @@ namespace Media_Bazaar
             {
                 if (tc.SelectedTab == tabSchedule)
                 {
-                    btnScheduleTABschedule.BackColor = Color.FromArgb(32, 126, 177); 
+                    btnScheduleTABschedule.BackColor = Color.FromArgb(32, 126, 177);
                 }
                 else
                 {
@@ -150,6 +153,60 @@ namespace Media_Bazaar
             calendar.NextMonth(lblMonthAndYear);
         }
         //------------------------------------------------------------------------------------------
-        
+
+        private void btnAddNewProfile_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddNewProfile_Click_1(object sender, EventArgs e)
+        {
+
+            string fName;
+            string lName;
+            string dateOfBirth;
+            string email;
+            int phoneNr;
+            string nationality;
+            JobPosition pos;
+            if (tbFirstName.Text != "" && tbLastName.Text != "" && tbDateOfBirth.Text != "" && tbEmail.Text != "" && tbEmail.Text != "" && tbPhoneNr.Text != "" && tbNationality.Text != "")
+            {
+                fName = tbFirstName.Text;
+                lName = tbLastName.Text;
+                dateOfBirth = tbDateOfBirth.Text;
+                email = tbEmail.Text;
+                phoneNr = Convert.ToInt32(tbPhoneNr.Text);
+                nationality = tbNationality.Text;
+                if (rbAdministrator.Checked)
+                {
+                    //administrator
+                    pos = JobPosition.ADMINISTRATOR;
+                    administration.AddEmployee(new Admin(fName, lName, dateOfBirth, email, phoneNr, nationality, pos));
+                    //Employee empl = administration.GetEmployeeByName(fName, lName);
+
+                }
+                else
+                {
+                    if (rbManager.Checked)
+                    {
+                        //Manager
+                        pos = JobPosition.MANAGER;
+                        administration.AddEmployee(new Manager(fName, lName, dateOfBirth, email, phoneNr, nationality, pos));
+                    }
+                    else if (rbDepotWorker.Checked)
+                    {
+                        //Depot worker
+                        pos = JobPosition.DEPOTWORKER;
+                        administration.AddEmployee(new DepotWorker(fName, lName, dateOfBirth, email, phoneNr, nationality, pos));
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Fill in all fields correctly.");
+            }
+
+
+        }
     }
 }
