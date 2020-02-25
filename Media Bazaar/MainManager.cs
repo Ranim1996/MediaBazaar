@@ -7,15 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Media_Bazaar.Classes;
 
 namespace Media_Bazaar
 {
     public partial class MainManager : Form
     {
+        List<DBEmployee> employees = new List<DBEmployee>();
 
         public MainManager()
         {
-            InitializeComponent();           
+            InitializeComponent();
+            UpdateList();
+        }
+
+        private void UpdateList()
+        {
+            checkedListBox2.DataSource = employees;
+            checkedListBox2.DisplayMember = "FullInfo";
         }
        
         private void MainManager_Load(object sender, EventArgs e)
@@ -97,6 +106,17 @@ namespace Media_Bazaar
         private void timerSelectedMenu_Tick(object sender, EventArgs e)
         {
             ChangeBackColorOfMenus(tabControl1);
+        }
+
+        private void btnSearchForSpecificEmployee_Click(object sender, EventArgs e)
+        {
+            DataAccess db = new DataAccess();
+
+            if (comboBox1.Text=="Last name")
+            {
+                employees = db.GetDBEmployeesByLastName(textBox1.Text);
+                UpdateList();
+            }
         }
         //---------------------------------------------------finish
     }

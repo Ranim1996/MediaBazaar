@@ -21,5 +21,14 @@ namespace Media_Bazaar.Classes
         public string Password { get; set; }
         public string PreferedShiftForTheWeek { get; set; }
         public string ReasonsForRelease { get; set; }
+
+        public string FullInfo
+        {
+            get
+            {
+                return $"{EmployeeID} {FirstName} {LastName} {DateOfBirth} {Email} {PhoneNumber} {Nationality} {Position} {Departament} {PreferedShiftForTheWeek})"; 
+            }
+        }
+
     }
 }
