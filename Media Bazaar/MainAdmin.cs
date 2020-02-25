@@ -154,14 +154,10 @@ namespace Media_Bazaar
         }
         //------------------------------------------------------------------------------------------
 
-        private void btnAddNewProfile_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void btnAddNewProfile_Click_1(object sender, EventArgs e)
         {
-
             string fName="";
             string lName="";
             string dateOfBirth="";
@@ -170,9 +166,7 @@ namespace Media_Bazaar
             string nationality="";
             string username="";
             string password="";
-            JobPosition pos=JobPosition.ADMINISTRATOR;
-                       
-
+            JobPosition pos=JobPosition.ADMINISTRATOR;                       
 
             if (tbFirstName.Text != "" && tbLastName.Text != "" && tbDateOfBirth.Text != "" && tbEmail.Text != "" && tbEmail.Text != "" && tbPhoneNr.Text != "" && tbNationality.Text != "")
             {
@@ -183,16 +177,18 @@ namespace Media_Bazaar
                 phoneNr = tbPhoneNr.Text;
                 nationality = tbNationality.Text;
 
-
                 if (rbAdministrator.Checked)
                 {
                     //administrator
                     pos = JobPosition.ADMINISTRATOR;
-                    username = autoGenerateUsername(fName, lName, pos);
-                    
+                    username = autoGenerateUsername(fName, lName, pos);                 
                     password = autoGeneratePassword();
                     DataAccess db = new DataAccess();
                     db.InsertEmployee(fName, lName, dateOfBirth, email, phoneNr, nationality, pos.ToString(), username, password);
+                    //get the employee id from database
+                    int employeeID = db.GetIdOfEmployeeByName(fName, lName);
+                    //adding the info in the textboxes that cannot be edited
+                    tbEmployeeID.Text = employeeID.ToString();
                     tbUsername.Text = username;
                     tbPassword.Text = password;
                 }
@@ -206,17 +202,23 @@ namespace Media_Bazaar
                         password = autoGeneratePassword();
                         DataAccess db = new DataAccess();
                         db.InsertEmployee(fName, lName, dateOfBirth, email, phoneNr, nationality, pos.ToString(), username, password);
+                        //get the employee id from database
+                        int employeeID = db.GetIdOfEmployeeByName(fName, lName);
+                        tbEmployeeID.Text = employeeID.ToString();
                         tbUsername.Text = username;
                         tbPassword.Text = password;
                     }
                     else if (rbDepotWorker.Checked)
                     {
                         //Depot worker
-                        pos = JobPosition.DEPOTWORKER;
+                        pos = JobPosition.DEPOT;
                         username = autoGenerateUsername(fName, lName, pos);
                         password = autoGeneratePassword();
                         DataAccess db = new DataAccess();
                         db.InsertEmployee(fName, lName, dateOfBirth, email, phoneNr, nationality, pos.ToString(), username, password);
+                        //get the employee id from database
+                        int employeeID = db.GetIdOfEmployeeByName(fName, lName);
+                        tbEmployeeID.Text = employeeID.ToString();
                         tbUsername.Text = username;
                         tbPassword.Text = password;
                     }
@@ -227,9 +229,13 @@ namespace Media_Bazaar
                 MessageBox.Show("Fill in all fields correctly.");
             }
         }
+
+        //Useable methods for autogenerating username and Pass
+        //----------------------------
         public String autoGenerateUsername(string fName, string lName, JobPosition pos)
         {
-            return $"{fName}.{lName}.{pos.ToString()}@mediabazaar";
+            string position = pos.ToString();
+            return $"{fName.ToLower()}.{lName.ToLower()}.{position.ToLower()}@mediabazaar";
         }
         public String autoGeneratePassword()
         {
@@ -241,6 +247,22 @@ namespace Media_Bazaar
                 return pass;
             }
             return null;
+        }
+        //----------------------------------
+
+
+        private void btnCreateProfile_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("New employee account has been successfully created.");
+            tbFirstName.Clear();
+            tbLastName.Clear();
+            tbDateOfBirth.Clear();
+            tbEmail.Clear();
+            tbPhoneNr.Clear();
+            tbNationality.Clear();
+            tbEmployeeID.Clear();
+            tbUsername.Clear();
+            tbPassword.Clear();
         }
     }
 }

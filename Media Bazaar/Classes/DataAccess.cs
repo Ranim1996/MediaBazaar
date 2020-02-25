@@ -24,10 +24,17 @@ namespace Media_Bazaar.Classes
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                List<DBEmployee> employees = new List<DBEmployee>();
-                // employees.Add(new DBEmployee { FirstName = fName, LastName = lName, DateOfBirth = dateOfBirth, Email = email, PhoneNumber = phoneNr, Nationality = nationality, Position = pos, Username = username, Password = password });
-                connection.Execute(@"INSERT INTO Employee(FirstName,LastName,DateOfBirth,Email,PhoneNumber,Nationality,Position,Username,Password) VALUES (@fName,@lName,@dateOfBirth,@email,@phoneNr,@nationality,@pos,@username,@password)",
-                 new { FirstName = fName, LastName = lName, DateOfBirth = dateOfBirth, Email = email, PhoneNumber = phoneNr, Nationality = nationality, Position = pos, Username = username, Password = password });
+                //List<DBEmployee> employees = new List<DBEmployee>();
+                connection.Execute($"INSERT INTO Employee(FirstName, LastName, DateOfBirth, Email, PhoneNumber, Nationality, Position, Username, Password) VALUES ('{ fName }', '{lName}' , '{dateOfBirth}' , '{email}' , '{phoneNr}' , '{nationality}' , '{pos}' , '{username}' , '{password}');");
+                
+            }
+        }
+
+        public int GetIdOfEmployeeByName(string fName, string lName)
+        {
+            using(MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<int>($"SELECT EmployeeID FROM Employee WHERE FirstName = '{fName}' AND LastName = '{lName}';");
             }
         }
     }
