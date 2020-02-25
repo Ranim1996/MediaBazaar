@@ -41,6 +41,7 @@
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -58,8 +59,10 @@
     <Compile Include="Classes\Administration.cs" />
     <Compile Include="Classes\Admin.cs" />
     <Compile Include="Classes\Calendar.cs" />
+    <Compile Include="Classes\DBEmployee.cs" />
     <Compile Include="Classes\DepotWorker.cs" />
     <Compile Include="Classes\Employee.cs" />
+    <Compile Include="Classes\Helper.cs" />
     <Compile Include="Classes\JobPosition.cs" />
     <Compile Include="Classes\Manager.cs" />
     <Compile Include="Classes\PasswordGenerator.cs" />
