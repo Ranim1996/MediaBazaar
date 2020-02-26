@@ -163,22 +163,25 @@ namespace Media_Bazaar
         {
             calendar.NextMonth(lblMonthAndYear);
         }
+     
         private void tabControl1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            List<FlowLayoutPanel> list = new List<FlowLayoutPanel>();
+            List<FlowLayoutPanel> list = new List<FlowLayoutPanel>();            
             list = calendar.listFlDay;
             foreach (FlowLayoutPanel fl in list)
-            {
+            {   
                 fl.Click += new System.EventHandler(this.listFlDays_Click);
-                //fl.Click += new System.EventHandler();
                 fl.MouseHover += new System.EventHandler(this.listFlDays_MouseHover);
-
             }
         }
         private void listFlDays_Click(object sender, EventArgs e)
         {
             //Write here the actions when you click a day
             FlowLayoutPanel fl = (FlowLayoutPanel)sender;
+
+            listBox1.Items.Add(calendar.GetFirstDayOfMonth);
+            listBox1.Items.Add(calendar.GetTotalDaysOfCurrentDate());  
+
             //DateTime day;
 
         }

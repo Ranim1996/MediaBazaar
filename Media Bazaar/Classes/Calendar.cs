@@ -30,7 +30,16 @@ namespace Media_Bazaar.Classes
             DateTime firstDayOfMonth = new DateTime(currentDate.Year, currentDate.Month, 1);
             return Convert.ToInt32(firstDayOfMonth.DayOfWeek + 1);
         }
-        private int GetTotalDaysOfCurrentDate()
+        public DayOfWeek GetFirstDayOfMonth
+        {
+            get
+            {
+                DateTime firstDayOfMonth = new DateTime(currentDate.Year, currentDate.Month, 1);
+                return firstDayOfMonth.DayOfWeek;
+            }     
+        }
+
+        public int GetTotalDaysOfCurrentDate()
         {
             DateTime firstDayOfCurrentDate = new DateTime(currentDate.Year, currentDate.Month, 1);
             return firstDayOfCurrentDate.AddMonths(1).AddDays(-1).Day;
@@ -78,7 +87,7 @@ namespace Media_Bazaar.Classes
                 listFlDay.Add(fl);
             }
         }
-
+        
         // -- modified part
         public void AddLabelDayToFlDay(int startDayAtFlNumber, int totalDaysInMonth)
         {
