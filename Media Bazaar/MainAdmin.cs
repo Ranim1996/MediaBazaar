@@ -15,7 +15,12 @@ namespace Media_Bazaar
     {
 
         Administration administration = new Administration();
+        List<DBEmployee> Allemployees = new List<DBEmployee>();
+        List<DBEmployee> ReleasedEmployees = new List<DBEmployee>();
+        List<DBEmployee> NotReleasedEmployees = new List<DBEmployee>();
+        List<DBDepartament> departaments = new List<DBDepartament>();
 
+        List<int> employeesID = new List<int>();
         //holds the calendar
         Media_Bazaar.Classes.Calendar calendar = new Classes.Calendar();
 
@@ -25,7 +30,10 @@ namespace Media_Bazaar
         public MainAdmin()
         {
             InitializeComponent();
+            UpdateEmployeeInfo();
+            UpdateDepartamentInfo();
         }
+
         private void MainAdmin_Load(object sender, EventArgs e)
         {
             //GUI load
@@ -58,6 +66,7 @@ namespace Media_Bazaar
         private void btnRemoveProfTABaddProfile_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedTab = tabRemoveProfile;
+            UpdateEmployeeInfo();
         }
 
         private void btnAssignToDepTABaddProfile_Click(object sender, EventArgs e)
@@ -264,5 +273,80 @@ namespace Media_Bazaar
             tbUsername.Clear();
             tbPassword.Clear();
         }
+        private void UpdateEmployeeInfo()
+        {
+            DataAccess db = new DataAccess();
+            NotReleasedEmployees = db.GetNotFiredEmployees();
+            foreach(DBEmployee e in NotReleasedEmployees)
+            {
+                employeesID.Add(e.GetID());
+            }
+            checkedListBox2.DataSource = NotReleasedEmployees;
+            checkedListBox2.DisplayMember = "FullInfo";
+        }
+
+        private void UpdateDepartamentInfo()
+        {
+            DataAccess db = new DataAccess();
+            departaments = db.GetAllDepartaments();
+           
+            lbDepartaments.DataSource = departaments;
+            lbDepartaments.DisplayMember = "FullInfo";
+        }
+
+
+        private void btnRemoveProfile_Click(object sender, EventArgs e)
+        {
+            
+            if (checkedListBox2.CheckedItems.Count ==0 )
+            {
+                MessageBox.Show("Please select employee");
+                
+            }
+            else
+            {
+                if (String.IsNullOrEmpty(tbExtraInformationTABremoveProfile.Text))
+                {
+                    MessageBox.Show("Please enter information for release");
+                }
+                else
+                {
+                    DBEmployee temp = new DBEmployee();
+                    DataAccess db = new DataAccess();
+                    foreach (int i in employeesID)
+                    {
+                        if(checkedListBox2.SelectedItem != null)
+                        {
+                            string empl = checkedListBox2.GetItemText(checkedListBox2.SelectedItem);
+                            if(empl.Contains($"ID:{i}"))
+                            {
+                                db.FireEmployeeByID(tbExtraInformationTABremoveProfile.Text,i);
+                                MessageBox.Show("yes");
+                            }
+                            
+
+                        }
+                       
+                    }
+                    
+
+                }
+            }
+            UpdateEmployeeInfo();
+        }
+
+        private void btnRemoveProfTABremoveProfile_Click(object sender, EventArgs e)
+        {
+            UpdateEmployeeInfo();
+        }
+
+        private void btnCreateDepartment_Click(object sender, EventArgs e)
+        {
+            DataAccess db = new DataAccess();
+            db.InsertDepartament(tbDepName.Text, Convert.ToInt32(tbMinNr.Text), Convert.ToInt32(tbMaxNr.Text));
+            UpdateDepartamentInfo();
+        }
+
+
     }
 }
