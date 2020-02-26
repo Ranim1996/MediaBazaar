@@ -65,6 +65,7 @@
     <Compile Include="Classes\Admin.cs" />
     <Compile Include="Classes\Calendar.cs" />
     <Compile Include="Classes\DataAccess.cs" />
+    <Compile Include="Classes\DBDepartament.cs" />
     <Compile Include="Classes\DBEmployee.cs" />
     <Compile Include="Classes\DepotWorker.cs" />
     <Compile Include="Classes\Employee.cs" />

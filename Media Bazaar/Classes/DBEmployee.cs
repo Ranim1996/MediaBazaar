@@ -26,9 +26,13 @@ namespace Media_Bazaar.Classes
         {
             get
             {
-                return $"{EmployeeID} {FirstName} {LastName} {DateOfBirth} {Email} {PhoneNumber} {Nationality} {Position} {Departament} {PreferedShiftForTheWeek})"; 
+                return $"ID:{EmployeeID} {FirstName} {LastName} {DateOfBirth} {Email} {PhoneNumber} {Nationality} {Position} {Departament} {PreferedShiftForTheWeek})"; 
             }
         }
 
+        public int GetID()
+        {
+            return EmployeeID;
+        }
     }
 }
