@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.Mail;
 
 namespace Media_Bazaar
 {
@@ -161,6 +163,31 @@ namespace Media_Bazaar
         {
             calendar.NextMonth(lblMonthAndYear);
         }
+        private void tabControl1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            List<FlowLayoutPanel> list = new List<FlowLayoutPanel>();
+            list = calendar.listFlDay;
+            foreach (FlowLayoutPanel fl in list)
+            {
+                fl.Click += new System.EventHandler(this.listFlDays_Click);
+                //fl.Click += new System.EventHandler();
+                fl.MouseHover += new System.EventHandler(this.listFlDays_MouseHover);
+
+            }
+        }
+        private void listFlDays_Click(object sender, EventArgs e)
+        {
+            //Write here the actions when you click a day
+            FlowLayoutPanel fl = (FlowLayoutPanel)sender;
+            //DateTime day;
+
+        }
+        //hover
+        private void listFlDays_MouseHover(object sender, EventArgs e)
+        {
+            FlowLayoutPanel fl = (FlowLayoutPanel)sender;
+            fl.Cursor = (Cursor)Cursors.Hand;
+        }
         //------------------------------------------------------------------------------------------
 
 
@@ -200,6 +227,7 @@ namespace Media_Bazaar
                     tbEmployeeID.Text = employeeID.ToString();
                     tbUsername.Text = username;
                     tbPassword.Text = password;
+                    SendEmail(email, username, password);
                 }
                 else
                 {
@@ -216,6 +244,7 @@ namespace Media_Bazaar
                         tbEmployeeID.Text = employeeID.ToString();
                         tbUsername.Text = username;
                         tbPassword.Text = password;
+                        SendEmail(email, username, password);
                     }
                     else if (rbDepotWorker.Checked)
                     {
@@ -230,6 +259,7 @@ namespace Media_Bazaar
                         tbEmployeeID.Text = employeeID.ToString();
                         tbUsername.Text = username;
                         tbPassword.Text = password;
+                        SendEmail(email, username, password);
                     }
                 }
             }
@@ -347,6 +377,37 @@ namespace Media_Bazaar
             UpdateDepartamentInfo();
         }
 
+        //Email generator
+        public void SendEmail(string receiverEmail, string username, string password)
+        {
+            try
+            {
+                SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
+                MailMessage message = new MailMessage();
+                message.From = new MailAddress("media.bazaar2020@gmail.com");
+                message.To.Add(receiverEmail);
+                message.Body = $"Welcome to Media Bazaar company. \n" + "\n" + "\n" +
+                    $"Below you can find your account details which you will have to use when accessing your account. \n" +
+                    $"Username: {username} \n" +
+                    $"Password: {password} \n" + "\n" +
+                    $"You can change your password using the website.";
+                message.Subject = "Login Credentials";
+                client.UseDefaultCredentials = false;
+                client.EnableSsl = true;
 
+                client.Credentials = new System.Net.NetworkCredential("media.bazaar2020@gmail.com", "Mediabazaar2020");
+                client.Send(message);
+                message = null;
+
+            }
+
+            catch (Exception s)
+            {
+
+            }
+
+        }
+
+        
     }
 }
