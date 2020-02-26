@@ -30,13 +30,10 @@ namespace Media_Bazaar.Classes
             DateTime firstDayOfMonth = new DateTime(currentDate.Year, currentDate.Month, 1);
             return Convert.ToInt32(firstDayOfMonth.DayOfWeek + 1);
         }
-        public DayOfWeek GetFirstDayOfMonth
+        private DayOfWeek GetFirstDayOfMonth()
         {
-            get
-            {
-                DateTime firstDayOfMonth = new DateTime(currentDate.Year, currentDate.Month, 1);
-                return firstDayOfMonth.DayOfWeek;
-            }     
+            DateTime first = new DateTime(currentDate.Year, currentDate.Month, 1);
+            return first.DayOfWeek;
         }
 
         public int GetTotalDaysOfCurrentDate()
@@ -94,7 +91,9 @@ namespace Media_Bazaar.Classes
             //needs to be adjusted ---> WORK IN PROGGRESS
             //string[] date = DateTime.Now.ToString("dd/MM/yyyy").Split('/');
             string[] date = currentDate.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture).Split('/');
-           
+            int reset;
+            int nr = 0;
+            int ok = 1;
             foreach (FlowLayoutPanel fl in listFlDay)
             {
                 fl.Controls.Clear();
@@ -117,6 +116,19 @@ namespace Media_Bazaar.Classes
                 lbl.Font = new Font("Arial", 10);
                 listFlDay[(i - 1) + (startDayAtFlNumber - 1)].Tag = i;
                 listFlDay[(i - 1) + (startDayAtFlNumber - 1)].Controls.Add(lbl);
+
+
+                //HERE ADD A REFERENCE for the day 
+                //-----Add the tag for each panel to recognize the day
+                //------------using the first day of the month 
+                DayOfWeek nextDay2 = new DayOfWeek();
+                nextDay2 = GetFirstDayOfMonth();
+                reset = (int)nextDay2;
+                nextDay2 = (DayOfWeek)(((int)reset + nr) % 7);
+                nr++;
+                listFlDay[(i - 1) + (startDayAtFlNumber - 1)].Tag = nextDay2;
+                //--------------------
+
 
                 //change the color of today
                 if (new DateTime(currentDate.Year, currentDate.Month, i) == DateTime.Today)

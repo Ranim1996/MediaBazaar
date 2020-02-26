@@ -171,16 +171,21 @@ namespace Media_Bazaar
             foreach (FlowLayoutPanel fl in list)
             {   
                 fl.Click += new System.EventHandler(this.listFlDays_Click);
-                fl.MouseHover += new System.EventHandler(this.listFlDays_MouseHover);
+                fl.MouseHover += new System.EventHandler(this.listFlDays_MouseHover);               
             }
         }
         private void listFlDays_Click(object sender, EventArgs e)
         {
             //Write here the actions when you click a day
             FlowLayoutPanel fl = (FlowLayoutPanel)sender;
-
-            listBox1.Items.Add(calendar.GetFirstDayOfMonth);
-            listBox1.Items.Add(calendar.GetTotalDaysOfCurrentDate());  
+            List<FlowLayoutPanel> list = new List<FlowLayoutPanel>();
+            list = calendar.listFlDay;
+            foreach(FlowLayoutPanel flow in list)
+            {
+                listBox1.Items.Add(flow.Tag.ToString());
+            }
+            //listBox1.Items.Add(calendar.GetFirstDayOfMonth);
+            //listBox1.Items.Add(calendar.GetTotalDaysOfCurrentDate());  
 
             //DateTime day;
 
