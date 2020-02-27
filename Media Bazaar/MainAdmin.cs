@@ -537,5 +537,50 @@ namespace Media_Bazaar
             }
             UpdateRestockInfo();
         }
+
+        private void btnAssignWorkShift_Click(object sender, EventArgs e)
+        {
+            int employeeId;         
+            string date;
+            if(tbEmployeeIdAssignShift.Text != "" && dateTimePicker1.Value != null)
+            {
+                employeeId = Convert.ToInt32(tbEmployeeIdAssignShift.Text);
+                date = dateTimePicker1.Value.ToString("dd/MM/yyyy");
+            }
+            else
+            {
+                MessageBox.Show("Fill in all fields.");
+            }
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            DayOfWeek day = dateTimePicker1.Value.DayOfWeek;
+            //showing the combo box with the work shifts depending on what day is chosen
+            switch (day)
+            {
+                case DayOfWeek.Sunday:
+                    {
+                        cmbBxWorkShiftSunday.Visible = true;
+                        cmbBxWorkShiftSaturday.Visible = false;
+                        cmbBxWorkShiftWeekDay.Visible = false;
+                        break;
+                    }
+                case DayOfWeek.Saturday:
+                    {
+                        cmbBxWorkShiftSaturday.Visible = true;
+                        cmbBxWorkShiftSunday.Visible = false;
+                        cmbBxWorkShiftWeekDay.Visible = false;
+                        break;
+                    }
+                default:
+                    {
+                        cmbBxWorkShiftWeekDay.Visible = true;
+                        cmbBxWorkShiftSunday.Visible = false;
+                        cmbBxWorkShiftSaturday.Visible = false;
+                        break;
+                    }
+            }
+        }
     }
 }

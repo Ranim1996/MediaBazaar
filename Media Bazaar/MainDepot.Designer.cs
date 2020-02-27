@@ -239,20 +239,20 @@
             this.tabControl1.Controls.Add(this.tabInfoStock);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1196, 528);
+            this.tabControl1.Size = new System.Drawing.Size(897, 429);
             this.tabControl1.TabIndex = 18;
             // 
             // tabMakeReq
             // 
             this.tabMakeReq.Controls.Add(this.tableLayoutPanel27);
-            this.tabMakeReq.Location = new System.Drawing.Point(4, 25);
-            this.tabMakeReq.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabMakeReq.Location = new System.Drawing.Point(4, 22);
+            this.tabMakeReq.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabMakeReq.Name = "tabMakeReq";
-            this.tabMakeReq.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabMakeReq.Size = new System.Drawing.Size(1188, 499);
+            this.tabMakeReq.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabMakeReq.Size = new System.Drawing.Size(889, 403);
             this.tabMakeReq.TabIndex = 10;
             this.tabMakeReq.Text = "Request";
             this.tabMakeReq.UseVisualStyleBackColor = true;
@@ -266,12 +266,12 @@
             this.tableLayoutPanel27.Controls.Add(this.tableLayoutPanel1, 0, 0);
             this.tableLayoutPanel27.Controls.Add(this.tableLayoutPanel9, 1, 0);
             this.tableLayoutPanel27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel27.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel27.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel27.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel27.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel27.Name = "tableLayoutPanel27";
             this.tableLayoutPanel27.RowCount = 1;
             this.tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel27.Size = new System.Drawing.Size(1182, 495);
+            this.tableLayoutPanel27.Size = new System.Drawing.Size(885, 399);
             this.tableLayoutPanel27.TabIndex = 20;
             // 
             // tableLayoutPanel1
@@ -285,8 +285,8 @@
             this.tableLayoutPanel1.Controls.Add(this.btnIncomingStockTABrequest, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.btnStockTABrequest, 0, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -295,7 +295,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(258, 491);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(194, 395);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // btnLogOutTABrequest
@@ -320,14 +320,14 @@
             this.btnLogOutTABrequest.IconVisible = false;
             this.btnLogOutTABrequest.IconZoom = 90D;
             this.btnLogOutTABrequest.IsTab = false;
-            this.btnLogOutTABrequest.Location = new System.Drawing.Point(5, 444);
-            this.btnLogOutTABrequest.Margin = new System.Windows.Forms.Padding(5);
+            this.btnLogOutTABrequest.Location = new System.Drawing.Point(4, 358);
+            this.btnLogOutTABrequest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogOutTABrequest.Name = "btnLogOutTABrequest";
             this.btnLogOutTABrequest.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABrequest.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnLogOutTABrequest.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogOutTABrequest.selected = false;
-            this.btnLogOutTABrequest.Size = new System.Drawing.Size(248, 42);
+            this.btnLogOutTABrequest.Size = new System.Drawing.Size(186, 33);
             this.btnLogOutTABrequest.TabIndex = 10;
             this.btnLogOutTABrequest.Text = "LOG OUT";
             this.btnLogOutTABrequest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -357,14 +357,14 @@
             this.btnMakeReqTABrequest.IconVisible = false;
             this.btnMakeReqTABrequest.IconZoom = 90D;
             this.btnMakeReqTABrequest.IsTab = false;
-            this.btnMakeReqTABrequest.Location = new System.Drawing.Point(5, 152);
-            this.btnMakeReqTABrequest.Margin = new System.Windows.Forms.Padding(5);
+            this.btnMakeReqTABrequest.Location = new System.Drawing.Point(4, 122);
+            this.btnMakeReqTABrequest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMakeReqTABrequest.Name = "btnMakeReqTABrequest";
             this.btnMakeReqTABrequest.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnMakeReqTABrequest.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnMakeReqTABrequest.OnHoverTextColor = System.Drawing.Color.White;
             this.btnMakeReqTABrequest.selected = false;
-            this.btnMakeReqTABrequest.Size = new System.Drawing.Size(248, 63);
+            this.btnMakeReqTABrequest.Size = new System.Drawing.Size(186, 51);
             this.btnMakeReqTABrequest.TabIndex = 5;
             this.btnMakeReqTABrequest.Text = "Make Request";
             this.btnMakeReqTABrequest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -375,10 +375,10 @@
             // 
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(3, 2);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox3.Location = new System.Drawing.Point(2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(252, 143);
+            this.pictureBox3.Size = new System.Drawing.Size(190, 114);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
@@ -405,14 +405,14 @@
             this.btnIncomingStockTABrequest.IconVisible = false;
             this.btnIncomingStockTABrequest.IconZoom = 90D;
             this.btnIncomingStockTABrequest.IsTab = false;
-            this.btnIncomingStockTABrequest.Location = new System.Drawing.Point(5, 225);
-            this.btnIncomingStockTABrequest.Margin = new System.Windows.Forms.Padding(5);
+            this.btnIncomingStockTABrequest.Location = new System.Drawing.Point(4, 181);
+            this.btnIncomingStockTABrequest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnIncomingStockTABrequest.Name = "btnIncomingStockTABrequest";
             this.btnIncomingStockTABrequest.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnIncomingStockTABrequest.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnIncomingStockTABrequest.OnHoverTextColor = System.Drawing.Color.White;
             this.btnIncomingStockTABrequest.selected = false;
-            this.btnIncomingStockTABrequest.Size = new System.Drawing.Size(248, 63);
+            this.btnIncomingStockTABrequest.Size = new System.Drawing.Size(186, 51);
             this.btnIncomingStockTABrequest.TabIndex = 2;
             this.btnIncomingStockTABrequest.Text = "Incoming Stock";
             this.btnIncomingStockTABrequest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -442,14 +442,14 @@
             this.btnStockTABrequest.IconVisible = false;
             this.btnStockTABrequest.IconZoom = 90D;
             this.btnStockTABrequest.IsTab = false;
-            this.btnStockTABrequest.Location = new System.Drawing.Point(5, 298);
-            this.btnStockTABrequest.Margin = new System.Windows.Forms.Padding(5);
+            this.btnStockTABrequest.Location = new System.Drawing.Point(4, 240);
+            this.btnStockTABrequest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnStockTABrequest.Name = "btnStockTABrequest";
             this.btnStockTABrequest.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnStockTABrequest.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnStockTABrequest.OnHoverTextColor = System.Drawing.Color.White;
             this.btnStockTABrequest.selected = false;
-            this.btnStockTABrequest.Size = new System.Drawing.Size(248, 63);
+            this.btnStockTABrequest.Size = new System.Drawing.Size(186, 51);
             this.btnStockTABrequest.TabIndex = 6;
             this.btnStockTABrequest.Text = "Stock";
             this.btnStockTABrequest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -465,13 +465,13 @@
             this.tableLayoutPanel9.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.panel3, 0, 1);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(267, 2);
-            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(200, 2);
+            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 2;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(912, 491);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(683, 395);
             this.tableLayoutPanel9.TabIndex = 1;
             // 
             // label2
@@ -481,9 +481,10 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Location = new System.Drawing.Point(2, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(906, 73);
+            this.label2.Size = new System.Drawing.Size(679, 59);
             this.label2.TabIndex = 0;
             this.label2.Text = "Make Request";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -493,10 +494,10 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.tableLayoutPanel15);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 75);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Location = new System.Drawing.Point(2, 61);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(906, 414);
+            this.panel3.Size = new System.Drawing.Size(679, 332);
             this.panel3.TabIndex = 1;
             // 
             // tableLayoutPanel15
@@ -506,12 +507,12 @@
             this.tableLayoutPanel15.Controls.Add(this.panel7, 0, 0);
             this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel15.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
             this.tableLayoutPanel15.RowCount = 1;
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 414F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(906, 414);
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 336F));
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(679, 332);
             this.tableLayoutPanel15.TabIndex = 0;
             // 
             // panel7
@@ -520,10 +521,10 @@
             this.panel7.Controls.Add(this.listBox2);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel7.Location = new System.Drawing.Point(3, 2);
-            this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel7.Location = new System.Drawing.Point(2, 2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(900, 410);
+            this.panel7.Size = new System.Drawing.Size(675, 328);
             this.panel7.TabIndex = 1;
             // 
             // panel16
@@ -535,18 +536,19 @@
             this.panel16.Controls.Add(this.btnMakeRequest);
             this.panel16.Controls.Add(this.label9);
             this.panel16.Controls.Add(this.textBox1);
-            this.panel16.Location = new System.Drawing.Point(39, 50);
-            this.panel16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel16.Location = new System.Drawing.Point(29, 41);
+            this.panel16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(485, 232);
+            this.panel16.Size = new System.Drawing.Size(364, 183);
             this.panel16.TabIndex = 6;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(16, 17);
+            this.label8.Location = new System.Drawing.Point(12, 14);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(113, 22);
+            this.label8.Size = new System.Drawing.Size(91, 18);
             this.label8.TabIndex = 1;
             this.label8.Text = "Choose Stock";
             // 
@@ -555,10 +557,10 @@
             this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(221, 14);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox1.Location = new System.Drawing.Point(166, 11);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(189, 30);
+            this.comboBox1.Size = new System.Drawing.Size(143, 26);
             this.comboBox1.TabIndex = 0;
             // 
             // btnMakeRequest
@@ -584,14 +586,14 @@
             this.btnMakeRequest.IconVisible = false;
             this.btnMakeRequest.IconZoom = 90D;
             this.btnMakeRequest.IsTab = false;
-            this.btnMakeRequest.Location = new System.Drawing.Point(20, 166);
-            this.btnMakeRequest.Margin = new System.Windows.Forms.Padding(5);
+            this.btnMakeRequest.Location = new System.Drawing.Point(15, 135);
+            this.btnMakeRequest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMakeRequest.Name = "btnMakeRequest";
             this.btnMakeRequest.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnMakeRequest.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnMakeRequest.OnHoverTextColor = System.Drawing.Color.White;
             this.btnMakeRequest.selected = false;
-            this.btnMakeRequest.Size = new System.Drawing.Size(392, 36);
+            this.btnMakeRequest.Size = new System.Drawing.Size(294, 29);
             this.btnMakeRequest.TabIndex = 4;
             this.btnMakeRequest.Text = "Make Request";
             this.btnMakeRequest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -601,9 +603,10 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(16, 71);
+            this.label9.Location = new System.Drawing.Point(12, 58);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 22);
+            this.label9.Size = new System.Drawing.Size(62, 18);
             this.label9.TabIndex = 2;
             this.label9.Text = "Quantity";
             // 
@@ -611,10 +614,10 @@
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(221, 71);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Location = new System.Drawing.Point(166, 58);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(189, 29);
+            this.textBox1.Size = new System.Drawing.Size(143, 25);
             this.textBox1.TabIndex = 3;
             // 
             // listBox2
@@ -623,21 +626,21 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 22;
-            this.listBox2.Location = new System.Drawing.Point(556, 50);
-            this.listBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listBox2.ItemHeight = 18;
+            this.listBox2.Location = new System.Drawing.Point(417, 41);
+            this.listBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(309, 224);
+            this.listBox2.Size = new System.Drawing.Size(233, 148);
             this.listBox2.TabIndex = 5;
             // 
             // tabIncomingStock
             // 
             this.tabIncomingStock.Controls.Add(this.tableLayoutPanel16);
-            this.tabIncomingStock.Location = new System.Drawing.Point(4, 25);
-            this.tabIncomingStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabIncomingStock.Location = new System.Drawing.Point(4, 22);
+            this.tabIncomingStock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabIncomingStock.Name = "tabIncomingStock";
-            this.tabIncomingStock.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabIncomingStock.Size = new System.Drawing.Size(1188, 499);
+            this.tabIncomingStock.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabIncomingStock.Size = new System.Drawing.Size(889, 403);
             this.tabIncomingStock.TabIndex = 11;
             this.tabIncomingStock.Text = "IncomingStock";
             this.tabIncomingStock.UseVisualStyleBackColor = true;
@@ -651,12 +654,12 @@
             this.tableLayoutPanel16.Controls.Add(this.tableLayoutPanel17, 0, 0);
             this.tableLayoutPanel16.Controls.Add(this.tableLayoutPanel18, 1, 0);
             this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel16.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel16.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel16.Name = "tableLayoutPanel16";
             this.tableLayoutPanel16.RowCount = 1;
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(1182, 495);
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(885, 399);
             this.tableLayoutPanel16.TabIndex = 21;
             // 
             // tableLayoutPanel17
@@ -670,8 +673,8 @@
             this.tableLayoutPanel17.Controls.Add(this.btnIncomingStockTABincomingStock, 0, 2);
             this.tableLayoutPanel17.Controls.Add(this.btnStockTABincomingStock, 0, 3);
             this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel17.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel17.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel17.Name = "tableLayoutPanel17";
             this.tableLayoutPanel17.RowCount = 6;
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -680,7 +683,7 @@
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(258, 491);
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(194, 395);
             this.tableLayoutPanel17.TabIndex = 0;
             // 
             // btnLogOutTABincomingStock
@@ -705,14 +708,14 @@
             this.btnLogOutTABincomingStock.IconVisible = false;
             this.btnLogOutTABincomingStock.IconZoom = 90D;
             this.btnLogOutTABincomingStock.IsTab = false;
-            this.btnLogOutTABincomingStock.Location = new System.Drawing.Point(5, 444);
-            this.btnLogOutTABincomingStock.Margin = new System.Windows.Forms.Padding(5);
+            this.btnLogOutTABincomingStock.Location = new System.Drawing.Point(4, 358);
+            this.btnLogOutTABincomingStock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogOutTABincomingStock.Name = "btnLogOutTABincomingStock";
             this.btnLogOutTABincomingStock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABincomingStock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnLogOutTABincomingStock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogOutTABincomingStock.selected = false;
-            this.btnLogOutTABincomingStock.Size = new System.Drawing.Size(248, 42);
+            this.btnLogOutTABincomingStock.Size = new System.Drawing.Size(186, 33);
             this.btnLogOutTABincomingStock.TabIndex = 11;
             this.btnLogOutTABincomingStock.Text = "LOG OUT";
             this.btnLogOutTABincomingStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -742,14 +745,14 @@
             this.btnMakeReqTABincomingStock.IconVisible = false;
             this.btnMakeReqTABincomingStock.IconZoom = 90D;
             this.btnMakeReqTABincomingStock.IsTab = false;
-            this.btnMakeReqTABincomingStock.Location = new System.Drawing.Point(5, 152);
-            this.btnMakeReqTABincomingStock.Margin = new System.Windows.Forms.Padding(5);
+            this.btnMakeReqTABincomingStock.Location = new System.Drawing.Point(4, 122);
+            this.btnMakeReqTABincomingStock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMakeReqTABincomingStock.Name = "btnMakeReqTABincomingStock";
             this.btnMakeReqTABincomingStock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnMakeReqTABincomingStock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnMakeReqTABincomingStock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnMakeReqTABincomingStock.selected = false;
-            this.btnMakeReqTABincomingStock.Size = new System.Drawing.Size(248, 63);
+            this.btnMakeReqTABincomingStock.Size = new System.Drawing.Size(186, 51);
             this.btnMakeReqTABincomingStock.TabIndex = 5;
             this.btnMakeReqTABincomingStock.Text = "Make Request";
             this.btnMakeReqTABincomingStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -761,10 +764,10 @@
             // 
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(3, 2);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox4.Location = new System.Drawing.Point(2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(252, 143);
+            this.pictureBox4.Size = new System.Drawing.Size(190, 114);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
@@ -791,14 +794,14 @@
             this.btnIncomingStockTABincomingStock.IconVisible = false;
             this.btnIncomingStockTABincomingStock.IconZoom = 90D;
             this.btnIncomingStockTABincomingStock.IsTab = false;
-            this.btnIncomingStockTABincomingStock.Location = new System.Drawing.Point(5, 225);
-            this.btnIncomingStockTABincomingStock.Margin = new System.Windows.Forms.Padding(5);
+            this.btnIncomingStockTABincomingStock.Location = new System.Drawing.Point(4, 181);
+            this.btnIncomingStockTABincomingStock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnIncomingStockTABincomingStock.Name = "btnIncomingStockTABincomingStock";
             this.btnIncomingStockTABincomingStock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnIncomingStockTABincomingStock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnIncomingStockTABincomingStock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnIncomingStockTABincomingStock.selected = false;
-            this.btnIncomingStockTABincomingStock.Size = new System.Drawing.Size(248, 63);
+            this.btnIncomingStockTABincomingStock.Size = new System.Drawing.Size(186, 51);
             this.btnIncomingStockTABincomingStock.TabIndex = 2;
             this.btnIncomingStockTABincomingStock.Text = "Incoming Stock";
             this.btnIncomingStockTABincomingStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -828,14 +831,14 @@
             this.btnStockTABincomingStock.IconVisible = false;
             this.btnStockTABincomingStock.IconZoom = 90D;
             this.btnStockTABincomingStock.IsTab = false;
-            this.btnStockTABincomingStock.Location = new System.Drawing.Point(5, 298);
-            this.btnStockTABincomingStock.Margin = new System.Windows.Forms.Padding(5);
+            this.btnStockTABincomingStock.Location = new System.Drawing.Point(4, 240);
+            this.btnStockTABincomingStock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnStockTABincomingStock.Name = "btnStockTABincomingStock";
             this.btnStockTABincomingStock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnStockTABincomingStock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnStockTABincomingStock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnStockTABincomingStock.selected = false;
-            this.btnStockTABincomingStock.Size = new System.Drawing.Size(248, 63);
+            this.btnStockTABincomingStock.Size = new System.Drawing.Size(186, 51);
             this.btnStockTABincomingStock.TabIndex = 6;
             this.btnStockTABincomingStock.Text = "Stock";
             this.btnStockTABincomingStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -851,13 +854,13 @@
             this.tableLayoutPanel18.Controls.Add(this.label4, 0, 0);
             this.tableLayoutPanel18.Controls.Add(this.panel8, 0, 1);
             this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel18.Location = new System.Drawing.Point(267, 2);
-            this.tableLayoutPanel18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel18.Location = new System.Drawing.Point(200, 2);
+            this.tableLayoutPanel18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel18.Name = "tableLayoutPanel18";
             this.tableLayoutPanel18.RowCount = 2;
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel18.Size = new System.Drawing.Size(912, 491);
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(683, 395);
             this.tableLayoutPanel18.TabIndex = 1;
             // 
             // label4
@@ -867,9 +870,10 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Location = new System.Drawing.Point(2, 0);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(906, 73);
+            this.label4.Size = new System.Drawing.Size(679, 59);
             this.label4.TabIndex = 0;
             this.label4.Text = "Incoming Stock";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -879,10 +883,10 @@
             this.panel8.BackColor = System.Drawing.Color.White;
             this.panel8.Controls.Add(this.tableLayoutPanel19);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(3, 75);
-            this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel8.Location = new System.Drawing.Point(2, 61);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(906, 414);
+            this.panel8.Size = new System.Drawing.Size(679, 332);
             this.panel8.TabIndex = 1;
             // 
             // tableLayoutPanel19
@@ -892,12 +896,12 @@
             this.tableLayoutPanel19.Controls.Add(this.panel9, 0, 0);
             this.tableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel19.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel19.Name = "tableLayoutPanel19";
             this.tableLayoutPanel19.RowCount = 1;
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 414F));
-            this.tableLayoutPanel19.Size = new System.Drawing.Size(906, 414);
+            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 336F));
+            this.tableLayoutPanel19.Size = new System.Drawing.Size(679, 332);
             this.tableLayoutPanel19.TabIndex = 0;
             // 
             // panel9
@@ -906,10 +910,10 @@
             this.panel9.Controls.Add(this.checkedListBox1);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel9.Location = new System.Drawing.Point(3, 2);
-            this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel9.Location = new System.Drawing.Point(2, 2);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(900, 410);
+            this.panel9.Size = new System.Drawing.Size(675, 328);
             this.panel9.TabIndex = 1;
             // 
             // btnCheckIncomingStock
@@ -934,14 +938,14 @@
             this.btnCheckIncomingStock.IconVisible = false;
             this.btnCheckIncomingStock.IconZoom = 90D;
             this.btnCheckIncomingStock.IsTab = false;
-            this.btnCheckIncomingStock.Location = new System.Drawing.Point(316, 341);
-            this.btnCheckIncomingStock.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnCheckIncomingStock.Location = new System.Drawing.Point(237, 272);
+            this.btnCheckIncomingStock.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnCheckIncomingStock.Name = "btnCheckIncomingStock";
             this.btnCheckIncomingStock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnCheckIncomingStock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnCheckIncomingStock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnCheckIncomingStock.selected = false;
-            this.btnCheckIncomingStock.Size = new System.Drawing.Size(283, 50);
+            this.btnCheckIncomingStock.Size = new System.Drawing.Size(212, 41);
             this.btnCheckIncomingStock.TabIndex = 3;
             this.btnCheckIncomingStock.Text = "Check";
             this.btnCheckIncomingStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -955,20 +959,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(100, 50);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkedListBox1.Location = new System.Drawing.Point(75, 41);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(716, 220);
+            this.checkedListBox1.Size = new System.Drawing.Size(538, 144);
             this.checkedListBox1.TabIndex = 0;
             // 
             // tabIncomingStockDetails
             // 
             this.tabIncomingStockDetails.Controls.Add(this.tableLayoutPanel20);
-            this.tabIncomingStockDetails.Location = new System.Drawing.Point(4, 25);
-            this.tabIncomingStockDetails.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabIncomingStockDetails.Location = new System.Drawing.Point(4, 22);
+            this.tabIncomingStockDetails.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabIncomingStockDetails.Name = "tabIncomingStockDetails";
-            this.tabIncomingStockDetails.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabIncomingStockDetails.Size = new System.Drawing.Size(1188, 499);
+            this.tabIncomingStockDetails.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabIncomingStockDetails.Size = new System.Drawing.Size(889, 403);
             this.tabIncomingStockDetails.TabIndex = 12;
             this.tabIncomingStockDetails.Text = "IncomingStockDetails";
             this.tabIncomingStockDetails.UseVisualStyleBackColor = true;
@@ -982,12 +986,12 @@
             this.tableLayoutPanel20.Controls.Add(this.tableLayoutPanel21, 0, 0);
             this.tableLayoutPanel20.Controls.Add(this.tableLayoutPanel22, 1, 0);
             this.tableLayoutPanel20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel20.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel20.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel20.Name = "tableLayoutPanel20";
             this.tableLayoutPanel20.RowCount = 1;
             this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel20.Size = new System.Drawing.Size(1182, 495);
+            this.tableLayoutPanel20.Size = new System.Drawing.Size(885, 399);
             this.tableLayoutPanel20.TabIndex = 21;
             // 
             // tableLayoutPanel21
@@ -1001,8 +1005,8 @@
             this.tableLayoutPanel21.Controls.Add(this.btnIncomingStockTABincomingStockDet, 0, 2);
             this.tableLayoutPanel21.Controls.Add(this.btnStockTABincomingStockDet, 0, 3);
             this.tableLayoutPanel21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel21.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel21.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel21.Name = "tableLayoutPanel21";
             this.tableLayoutPanel21.RowCount = 6;
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -1011,7 +1015,7 @@
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel21.Size = new System.Drawing.Size(258, 491);
+            this.tableLayoutPanel21.Size = new System.Drawing.Size(194, 395);
             this.tableLayoutPanel21.TabIndex = 0;
             // 
             // btnLogOutTABincomingStockDet
@@ -1036,14 +1040,14 @@
             this.btnLogOutTABincomingStockDet.IconVisible = false;
             this.btnLogOutTABincomingStockDet.IconZoom = 90D;
             this.btnLogOutTABincomingStockDet.IsTab = false;
-            this.btnLogOutTABincomingStockDet.Location = new System.Drawing.Point(5, 444);
-            this.btnLogOutTABincomingStockDet.Margin = new System.Windows.Forms.Padding(5);
+            this.btnLogOutTABincomingStockDet.Location = new System.Drawing.Point(4, 358);
+            this.btnLogOutTABincomingStockDet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogOutTABincomingStockDet.Name = "btnLogOutTABincomingStockDet";
             this.btnLogOutTABincomingStockDet.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABincomingStockDet.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnLogOutTABincomingStockDet.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogOutTABincomingStockDet.selected = false;
-            this.btnLogOutTABincomingStockDet.Size = new System.Drawing.Size(248, 42);
+            this.btnLogOutTABincomingStockDet.Size = new System.Drawing.Size(186, 33);
             this.btnLogOutTABincomingStockDet.TabIndex = 11;
             this.btnLogOutTABincomingStockDet.Text = "LOG OUT";
             this.btnLogOutTABincomingStockDet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1073,14 +1077,14 @@
             this.btnMakeReqTABincomingStockDet.IconVisible = false;
             this.btnMakeReqTABincomingStockDet.IconZoom = 90D;
             this.btnMakeReqTABincomingStockDet.IsTab = false;
-            this.btnMakeReqTABincomingStockDet.Location = new System.Drawing.Point(5, 152);
-            this.btnMakeReqTABincomingStockDet.Margin = new System.Windows.Forms.Padding(5);
+            this.btnMakeReqTABincomingStockDet.Location = new System.Drawing.Point(4, 122);
+            this.btnMakeReqTABincomingStockDet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMakeReqTABincomingStockDet.Name = "btnMakeReqTABincomingStockDet";
             this.btnMakeReqTABincomingStockDet.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnMakeReqTABincomingStockDet.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnMakeReqTABincomingStockDet.OnHoverTextColor = System.Drawing.Color.White;
             this.btnMakeReqTABincomingStockDet.selected = false;
-            this.btnMakeReqTABincomingStockDet.Size = new System.Drawing.Size(248, 63);
+            this.btnMakeReqTABincomingStockDet.Size = new System.Drawing.Size(186, 51);
             this.btnMakeReqTABincomingStockDet.TabIndex = 5;
             this.btnMakeReqTABincomingStockDet.Text = "Make Request";
             this.btnMakeReqTABincomingStockDet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1092,10 +1096,10 @@
             // 
             this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(3, 2);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox5.Location = new System.Drawing.Point(2, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(252, 143);
+            this.pictureBox5.Size = new System.Drawing.Size(190, 114);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
@@ -1122,14 +1126,14 @@
             this.btnIncomingStockTABincomingStockDet.IconVisible = false;
             this.btnIncomingStockTABincomingStockDet.IconZoom = 90D;
             this.btnIncomingStockTABincomingStockDet.IsTab = false;
-            this.btnIncomingStockTABincomingStockDet.Location = new System.Drawing.Point(5, 225);
-            this.btnIncomingStockTABincomingStockDet.Margin = new System.Windows.Forms.Padding(5);
+            this.btnIncomingStockTABincomingStockDet.Location = new System.Drawing.Point(4, 181);
+            this.btnIncomingStockTABincomingStockDet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnIncomingStockTABincomingStockDet.Name = "btnIncomingStockTABincomingStockDet";
             this.btnIncomingStockTABincomingStockDet.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnIncomingStockTABincomingStockDet.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnIncomingStockTABincomingStockDet.OnHoverTextColor = System.Drawing.Color.White;
             this.btnIncomingStockTABincomingStockDet.selected = false;
-            this.btnIncomingStockTABincomingStockDet.Size = new System.Drawing.Size(248, 63);
+            this.btnIncomingStockTABincomingStockDet.Size = new System.Drawing.Size(186, 51);
             this.btnIncomingStockTABincomingStockDet.TabIndex = 2;
             this.btnIncomingStockTABincomingStockDet.Text = "Incoming Stock";
             this.btnIncomingStockTABincomingStockDet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1159,14 +1163,14 @@
             this.btnStockTABincomingStockDet.IconVisible = false;
             this.btnStockTABincomingStockDet.IconZoom = 90D;
             this.btnStockTABincomingStockDet.IsTab = false;
-            this.btnStockTABincomingStockDet.Location = new System.Drawing.Point(5, 298);
-            this.btnStockTABincomingStockDet.Margin = new System.Windows.Forms.Padding(5);
+            this.btnStockTABincomingStockDet.Location = new System.Drawing.Point(4, 240);
+            this.btnStockTABincomingStockDet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnStockTABincomingStockDet.Name = "btnStockTABincomingStockDet";
             this.btnStockTABincomingStockDet.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnStockTABincomingStockDet.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnStockTABincomingStockDet.OnHoverTextColor = System.Drawing.Color.White;
             this.btnStockTABincomingStockDet.selected = false;
-            this.btnStockTABincomingStockDet.Size = new System.Drawing.Size(248, 63);
+            this.btnStockTABincomingStockDet.Size = new System.Drawing.Size(186, 51);
             this.btnStockTABincomingStockDet.TabIndex = 6;
             this.btnStockTABincomingStockDet.Text = "Stock";
             this.btnStockTABincomingStockDet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1182,13 +1186,13 @@
             this.tableLayoutPanel22.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel22.Controls.Add(this.panel10, 0, 1);
             this.tableLayoutPanel22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel22.Location = new System.Drawing.Point(267, 2);
-            this.tableLayoutPanel22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel22.Location = new System.Drawing.Point(200, 2);
+            this.tableLayoutPanel22.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel22.Name = "tableLayoutPanel22";
             this.tableLayoutPanel22.RowCount = 2;
             this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel22.Size = new System.Drawing.Size(912, 491);
+            this.tableLayoutPanel22.Size = new System.Drawing.Size(683, 395);
             this.tableLayoutPanel22.TabIndex = 1;
             // 
             // label5
@@ -1198,9 +1202,10 @@
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(3, 0);
+            this.label5.Location = new System.Drawing.Point(2, 0);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(906, 73);
+            this.label5.Size = new System.Drawing.Size(679, 59);
             this.label5.TabIndex = 0;
             this.label5.Text = "Incoming Stock(Details)";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1210,10 +1215,10 @@
             this.panel10.BackColor = System.Drawing.Color.White;
             this.panel10.Controls.Add(this.tableLayoutPanel23);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(3, 75);
-            this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel10.Location = new System.Drawing.Point(2, 61);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(906, 414);
+            this.panel10.Size = new System.Drawing.Size(679, 332);
             this.panel10.TabIndex = 1;
             // 
             // tableLayoutPanel23
@@ -1223,12 +1228,12 @@
             this.tableLayoutPanel23.Controls.Add(this.panel11, 0, 0);
             this.tableLayoutPanel23.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel23.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel23.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel23.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel23.Name = "tableLayoutPanel23";
             this.tableLayoutPanel23.RowCount = 1;
             this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 414F));
-            this.tableLayoutPanel23.Size = new System.Drawing.Size(906, 414);
+            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 336F));
+            this.tableLayoutPanel23.Size = new System.Drawing.Size(679, 332);
             this.tableLayoutPanel23.TabIndex = 0;
             // 
             // panel11
@@ -1236,10 +1241,10 @@
             this.panel11.Controls.Add(this.listBox1);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel11.Location = new System.Drawing.Point(3, 2);
-            this.panel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel11.Location = new System.Drawing.Point(2, 2);
+            this.panel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(900, 410);
+            this.panel11.Size = new System.Drawing.Size(675, 328);
             this.panel11.TabIndex = 1;
             // 
             // listBox1
@@ -1248,21 +1253,21 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 22;
-            this.listBox1.Location = new System.Drawing.Point(143, 34);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listBox1.ItemHeight = 18;
+            this.listBox1.Location = new System.Drawing.Point(107, 28);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(592, 268);
+            this.listBox1.Size = new System.Drawing.Size(445, 184);
             this.listBox1.TabIndex = 0;
             // 
             // tabStock
             // 
             this.tabStock.Controls.Add(this.tableLayoutPanel24);
-            this.tabStock.Location = new System.Drawing.Point(4, 25);
-            this.tabStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabStock.Location = new System.Drawing.Point(4, 22);
+            this.tabStock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabStock.Name = "tabStock";
-            this.tabStock.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabStock.Size = new System.Drawing.Size(1188, 499);
+            this.tabStock.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabStock.Size = new System.Drawing.Size(889, 403);
             this.tabStock.TabIndex = 13;
             this.tabStock.Text = "Stock";
             this.tabStock.UseVisualStyleBackColor = true;
@@ -1276,12 +1281,12 @@
             this.tableLayoutPanel24.Controls.Add(this.tableLayoutPanel25, 0, 0);
             this.tableLayoutPanel24.Controls.Add(this.tableLayoutPanel26, 1, 0);
             this.tableLayoutPanel24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel24.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel24.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel24.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel24.Name = "tableLayoutPanel24";
             this.tableLayoutPanel24.RowCount = 1;
             this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel24.Size = new System.Drawing.Size(1182, 495);
+            this.tableLayoutPanel24.Size = new System.Drawing.Size(885, 399);
             this.tableLayoutPanel24.TabIndex = 21;
             // 
             // tableLayoutPanel25
@@ -1295,8 +1300,8 @@
             this.tableLayoutPanel25.Controls.Add(this.btnIncomingStockTABstock, 0, 2);
             this.tableLayoutPanel25.Controls.Add(this.btnStockTABstock, 0, 3);
             this.tableLayoutPanel25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel25.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel25.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel25.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel25.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel25.Name = "tableLayoutPanel25";
             this.tableLayoutPanel25.RowCount = 6;
             this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -1305,7 +1310,7 @@
             this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel25.Size = new System.Drawing.Size(258, 491);
+            this.tableLayoutPanel25.Size = new System.Drawing.Size(194, 395);
             this.tableLayoutPanel25.TabIndex = 0;
             // 
             // btnLogOutTABstock
@@ -1330,14 +1335,14 @@
             this.btnLogOutTABstock.IconVisible = false;
             this.btnLogOutTABstock.IconZoom = 90D;
             this.btnLogOutTABstock.IsTab = false;
-            this.btnLogOutTABstock.Location = new System.Drawing.Point(5, 444);
-            this.btnLogOutTABstock.Margin = new System.Windows.Forms.Padding(5);
+            this.btnLogOutTABstock.Location = new System.Drawing.Point(4, 358);
+            this.btnLogOutTABstock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogOutTABstock.Name = "btnLogOutTABstock";
             this.btnLogOutTABstock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABstock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnLogOutTABstock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogOutTABstock.selected = false;
-            this.btnLogOutTABstock.Size = new System.Drawing.Size(248, 42);
+            this.btnLogOutTABstock.Size = new System.Drawing.Size(186, 33);
             this.btnLogOutTABstock.TabIndex = 11;
             this.btnLogOutTABstock.Text = "LOG OUT";
             this.btnLogOutTABstock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1367,14 +1372,14 @@
             this.btnMakeReqTABstock.IconVisible = false;
             this.btnMakeReqTABstock.IconZoom = 90D;
             this.btnMakeReqTABstock.IsTab = false;
-            this.btnMakeReqTABstock.Location = new System.Drawing.Point(5, 152);
-            this.btnMakeReqTABstock.Margin = new System.Windows.Forms.Padding(5);
+            this.btnMakeReqTABstock.Location = new System.Drawing.Point(4, 122);
+            this.btnMakeReqTABstock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMakeReqTABstock.Name = "btnMakeReqTABstock";
             this.btnMakeReqTABstock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnMakeReqTABstock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnMakeReqTABstock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnMakeReqTABstock.selected = false;
-            this.btnMakeReqTABstock.Size = new System.Drawing.Size(248, 63);
+            this.btnMakeReqTABstock.Size = new System.Drawing.Size(186, 51);
             this.btnMakeReqTABstock.TabIndex = 5;
             this.btnMakeReqTABstock.Text = "Make Request";
             this.btnMakeReqTABstock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1386,10 +1391,10 @@
             // 
             this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(3, 2);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox6.Location = new System.Drawing.Point(2, 2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(252, 143);
+            this.pictureBox6.Size = new System.Drawing.Size(190, 114);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 0;
             this.pictureBox6.TabStop = false;
@@ -1416,14 +1421,14 @@
             this.btnIncomingStockTABstock.IconVisible = false;
             this.btnIncomingStockTABstock.IconZoom = 90D;
             this.btnIncomingStockTABstock.IsTab = false;
-            this.btnIncomingStockTABstock.Location = new System.Drawing.Point(5, 225);
-            this.btnIncomingStockTABstock.Margin = new System.Windows.Forms.Padding(5);
+            this.btnIncomingStockTABstock.Location = new System.Drawing.Point(4, 181);
+            this.btnIncomingStockTABstock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnIncomingStockTABstock.Name = "btnIncomingStockTABstock";
             this.btnIncomingStockTABstock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnIncomingStockTABstock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnIncomingStockTABstock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnIncomingStockTABstock.selected = false;
-            this.btnIncomingStockTABstock.Size = new System.Drawing.Size(248, 63);
+            this.btnIncomingStockTABstock.Size = new System.Drawing.Size(186, 51);
             this.btnIncomingStockTABstock.TabIndex = 2;
             this.btnIncomingStockTABstock.Text = "Incoming Stock";
             this.btnIncomingStockTABstock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1453,14 +1458,14 @@
             this.btnStockTABstock.IconVisible = false;
             this.btnStockTABstock.IconZoom = 90D;
             this.btnStockTABstock.IsTab = false;
-            this.btnStockTABstock.Location = new System.Drawing.Point(5, 298);
-            this.btnStockTABstock.Margin = new System.Windows.Forms.Padding(5);
+            this.btnStockTABstock.Location = new System.Drawing.Point(4, 240);
+            this.btnStockTABstock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnStockTABstock.Name = "btnStockTABstock";
             this.btnStockTABstock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnStockTABstock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnStockTABstock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnStockTABstock.selected = false;
-            this.btnStockTABstock.Size = new System.Drawing.Size(248, 63);
+            this.btnStockTABstock.Size = new System.Drawing.Size(186, 51);
             this.btnStockTABstock.TabIndex = 6;
             this.btnStockTABstock.Text = "Stock";
             this.btnStockTABstock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1475,13 +1480,13 @@
             this.tableLayoutPanel26.Controls.Add(this.label6, 0, 0);
             this.tableLayoutPanel26.Controls.Add(this.panel12, 0, 1);
             this.tableLayoutPanel26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel26.Location = new System.Drawing.Point(267, 2);
-            this.tableLayoutPanel26.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel26.Location = new System.Drawing.Point(200, 2);
+            this.tableLayoutPanel26.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel26.Name = "tableLayoutPanel26";
             this.tableLayoutPanel26.RowCount = 2;
             this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel26.Size = new System.Drawing.Size(912, 491);
+            this.tableLayoutPanel26.Size = new System.Drawing.Size(683, 395);
             this.tableLayoutPanel26.TabIndex = 1;
             // 
             // label6
@@ -1491,9 +1496,10 @@
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(3, 0);
+            this.label6.Location = new System.Drawing.Point(2, 0);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(906, 73);
+            this.label6.Size = new System.Drawing.Size(679, 59);
             this.label6.TabIndex = 0;
             this.label6.Text = "Stock";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1503,10 +1509,10 @@
             this.panel12.BackColor = System.Drawing.Color.White;
             this.panel12.Controls.Add(this.tableLayoutPanel31);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(3, 75);
-            this.panel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel12.Location = new System.Drawing.Point(2, 61);
+            this.panel12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(906, 414);
+            this.panel12.Size = new System.Drawing.Size(679, 332);
             this.panel12.TabIndex = 1;
             // 
             // tableLayoutPanel31
@@ -1516,12 +1522,12 @@
             this.tableLayoutPanel31.Controls.Add(this.panel13, 0, 0);
             this.tableLayoutPanel31.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel31.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel31.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel31.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel31.Name = "tableLayoutPanel31";
             this.tableLayoutPanel31.RowCount = 1;
             this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 414F));
-            this.tableLayoutPanel31.Size = new System.Drawing.Size(906, 414);
+            this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 336F));
+            this.tableLayoutPanel31.Size = new System.Drawing.Size(679, 332);
             this.tableLayoutPanel31.TabIndex = 0;
             // 
             // panel13
@@ -1530,10 +1536,10 @@
             this.panel13.Controls.Add(this.checkedListBox2);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel13.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel13.Location = new System.Drawing.Point(3, 2);
-            this.panel13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel13.Location = new System.Drawing.Point(2, 2);
+            this.panel13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(900, 410);
+            this.panel13.Size = new System.Drawing.Size(675, 328);
             this.panel13.TabIndex = 1;
             // 
             // btnViewStock
@@ -1558,14 +1564,14 @@
             this.btnViewStock.IconVisible = false;
             this.btnViewStock.IconZoom = 90D;
             this.btnViewStock.IsTab = false;
-            this.btnViewStock.Location = new System.Drawing.Point(317, 330);
-            this.btnViewStock.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnViewStock.Location = new System.Drawing.Point(238, 263);
+            this.btnViewStock.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnViewStock.Name = "btnViewStock";
             this.btnViewStock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnViewStock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnViewStock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnViewStock.selected = false;
-            this.btnViewStock.Size = new System.Drawing.Size(257, 50);
+            this.btnViewStock.Size = new System.Drawing.Size(193, 41);
             this.btnViewStock.TabIndex = 4;
             this.btnViewStock.Text = "View stock";
             this.btnViewStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1579,20 +1585,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Location = new System.Drawing.Point(109, 57);
-            this.checkedListBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkedListBox2.Location = new System.Drawing.Point(82, 46);
+            this.checkedListBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(680, 196);
+            this.checkedListBox2.Size = new System.Drawing.Size(511, 124);
             this.checkedListBox2.TabIndex = 0;
             // 
             // tabInfoStock
             // 
             this.tabInfoStock.Controls.Add(this.tableLayoutPanel32);
-            this.tabInfoStock.Location = new System.Drawing.Point(4, 25);
-            this.tabInfoStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabInfoStock.Location = new System.Drawing.Point(4, 22);
+            this.tabInfoStock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabInfoStock.Name = "tabInfoStock";
-            this.tabInfoStock.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabInfoStock.Size = new System.Drawing.Size(1188, 499);
+            this.tabInfoStock.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabInfoStock.Size = new System.Drawing.Size(889, 403);
             this.tabInfoStock.TabIndex = 14;
             this.tabInfoStock.Text = "InfoStock";
             this.tabInfoStock.UseVisualStyleBackColor = true;
@@ -1606,12 +1612,12 @@
             this.tableLayoutPanel32.Controls.Add(this.tableLayoutPanel33, 0, 0);
             this.tableLayoutPanel32.Controls.Add(this.tableLayoutPanel34, 1, 0);
             this.tableLayoutPanel32.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel32.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel32.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel32.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel32.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel32.Name = "tableLayoutPanel32";
             this.tableLayoutPanel32.RowCount = 1;
             this.tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel32.Size = new System.Drawing.Size(1182, 495);
+            this.tableLayoutPanel32.Size = new System.Drawing.Size(885, 399);
             this.tableLayoutPanel32.TabIndex = 21;
             // 
             // tableLayoutPanel33
@@ -1625,8 +1631,8 @@
             this.tableLayoutPanel33.Controls.Add(this.btnIncomingStockTABstockInfo, 0, 2);
             this.tableLayoutPanel33.Controls.Add(this.btnStockTABstockInfo, 0, 3);
             this.tableLayoutPanel33.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel33.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel33.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel33.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel33.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel33.Name = "tableLayoutPanel33";
             this.tableLayoutPanel33.RowCount = 6;
             this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -1635,7 +1641,7 @@
             this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel33.Size = new System.Drawing.Size(258, 491);
+            this.tableLayoutPanel33.Size = new System.Drawing.Size(194, 395);
             this.tableLayoutPanel33.TabIndex = 0;
             // 
             // btnLogOutTABstockInfo
@@ -1660,14 +1666,14 @@
             this.btnLogOutTABstockInfo.IconVisible = false;
             this.btnLogOutTABstockInfo.IconZoom = 90D;
             this.btnLogOutTABstockInfo.IsTab = false;
-            this.btnLogOutTABstockInfo.Location = new System.Drawing.Point(5, 444);
-            this.btnLogOutTABstockInfo.Margin = new System.Windows.Forms.Padding(5);
+            this.btnLogOutTABstockInfo.Location = new System.Drawing.Point(4, 358);
+            this.btnLogOutTABstockInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogOutTABstockInfo.Name = "btnLogOutTABstockInfo";
             this.btnLogOutTABstockInfo.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABstockInfo.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnLogOutTABstockInfo.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogOutTABstockInfo.selected = false;
-            this.btnLogOutTABstockInfo.Size = new System.Drawing.Size(248, 42);
+            this.btnLogOutTABstockInfo.Size = new System.Drawing.Size(186, 33);
             this.btnLogOutTABstockInfo.TabIndex = 11;
             this.btnLogOutTABstockInfo.Text = "LOG OUT";
             this.btnLogOutTABstockInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1697,14 +1703,14 @@
             this.btnMakeReqTABstockInfo.IconVisible = false;
             this.btnMakeReqTABstockInfo.IconZoom = 90D;
             this.btnMakeReqTABstockInfo.IsTab = false;
-            this.btnMakeReqTABstockInfo.Location = new System.Drawing.Point(5, 152);
-            this.btnMakeReqTABstockInfo.Margin = new System.Windows.Forms.Padding(5);
+            this.btnMakeReqTABstockInfo.Location = new System.Drawing.Point(4, 122);
+            this.btnMakeReqTABstockInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMakeReqTABstockInfo.Name = "btnMakeReqTABstockInfo";
             this.btnMakeReqTABstockInfo.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnMakeReqTABstockInfo.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnMakeReqTABstockInfo.OnHoverTextColor = System.Drawing.Color.White;
             this.btnMakeReqTABstockInfo.selected = false;
-            this.btnMakeReqTABstockInfo.Size = new System.Drawing.Size(248, 63);
+            this.btnMakeReqTABstockInfo.Size = new System.Drawing.Size(186, 51);
             this.btnMakeReqTABstockInfo.TabIndex = 5;
             this.btnMakeReqTABstockInfo.Text = "Make Request";
             this.btnMakeReqTABstockInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1716,10 +1722,10 @@
             // 
             this.pictureBox8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(3, 2);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox8.Location = new System.Drawing.Point(2, 2);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(252, 143);
+            this.pictureBox8.Size = new System.Drawing.Size(190, 114);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 0;
             this.pictureBox8.TabStop = false;
@@ -1746,14 +1752,14 @@
             this.btnIncomingStockTABstockInfo.IconVisible = false;
             this.btnIncomingStockTABstockInfo.IconZoom = 90D;
             this.btnIncomingStockTABstockInfo.IsTab = false;
-            this.btnIncomingStockTABstockInfo.Location = new System.Drawing.Point(5, 225);
-            this.btnIncomingStockTABstockInfo.Margin = new System.Windows.Forms.Padding(5);
+            this.btnIncomingStockTABstockInfo.Location = new System.Drawing.Point(4, 181);
+            this.btnIncomingStockTABstockInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnIncomingStockTABstockInfo.Name = "btnIncomingStockTABstockInfo";
             this.btnIncomingStockTABstockInfo.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnIncomingStockTABstockInfo.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnIncomingStockTABstockInfo.OnHoverTextColor = System.Drawing.Color.White;
             this.btnIncomingStockTABstockInfo.selected = false;
-            this.btnIncomingStockTABstockInfo.Size = new System.Drawing.Size(248, 63);
+            this.btnIncomingStockTABstockInfo.Size = new System.Drawing.Size(186, 51);
             this.btnIncomingStockTABstockInfo.TabIndex = 2;
             this.btnIncomingStockTABstockInfo.Text = "Incoming Stock";
             this.btnIncomingStockTABstockInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1783,14 +1789,14 @@
             this.btnStockTABstockInfo.IconVisible = false;
             this.btnStockTABstockInfo.IconZoom = 90D;
             this.btnStockTABstockInfo.IsTab = false;
-            this.btnStockTABstockInfo.Location = new System.Drawing.Point(5, 298);
-            this.btnStockTABstockInfo.Margin = new System.Windows.Forms.Padding(5);
+            this.btnStockTABstockInfo.Location = new System.Drawing.Point(4, 240);
+            this.btnStockTABstockInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnStockTABstockInfo.Name = "btnStockTABstockInfo";
             this.btnStockTABstockInfo.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnStockTABstockInfo.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnStockTABstockInfo.OnHoverTextColor = System.Drawing.Color.White;
             this.btnStockTABstockInfo.selected = false;
-            this.btnStockTABstockInfo.Size = new System.Drawing.Size(248, 63);
+            this.btnStockTABstockInfo.Size = new System.Drawing.Size(186, 51);
             this.btnStockTABstockInfo.TabIndex = 6;
             this.btnStockTABstockInfo.Text = "Stock";
             this.btnStockTABstockInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1806,13 +1812,13 @@
             this.tableLayoutPanel34.Controls.Add(this.label7, 0, 0);
             this.tableLayoutPanel34.Controls.Add(this.panel14, 0, 1);
             this.tableLayoutPanel34.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel34.Location = new System.Drawing.Point(267, 2);
-            this.tableLayoutPanel34.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel34.Location = new System.Drawing.Point(200, 2);
+            this.tableLayoutPanel34.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel34.Name = "tableLayoutPanel34";
             this.tableLayoutPanel34.RowCount = 2;
             this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel34.Size = new System.Drawing.Size(912, 491);
+            this.tableLayoutPanel34.Size = new System.Drawing.Size(683, 395);
             this.tableLayoutPanel34.TabIndex = 1;
             // 
             // label7
@@ -1822,9 +1828,10 @@
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(3, 0);
+            this.label7.Location = new System.Drawing.Point(2, 0);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(906, 73);
+            this.label7.Size = new System.Drawing.Size(679, 59);
             this.label7.TabIndex = 0;
             this.label7.Text = "Name of stock";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1834,10 +1841,10 @@
             this.panel14.BackColor = System.Drawing.Color.White;
             this.panel14.Controls.Add(this.tableLayoutPanel35);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel14.Location = new System.Drawing.Point(3, 75);
-            this.panel14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel14.Location = new System.Drawing.Point(2, 61);
+            this.panel14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(906, 414);
+            this.panel14.Size = new System.Drawing.Size(679, 332);
             this.panel14.TabIndex = 1;
             // 
             // tableLayoutPanel35
@@ -1847,12 +1854,12 @@
             this.tableLayoutPanel35.Controls.Add(this.panel15, 0, 0);
             this.tableLayoutPanel35.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel35.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel35.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel35.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel35.Name = "tableLayoutPanel35";
             this.tableLayoutPanel35.RowCount = 1;
             this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 414F));
-            this.tableLayoutPanel35.Size = new System.Drawing.Size(906, 414);
+            this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 336F));
+            this.tableLayoutPanel35.Size = new System.Drawing.Size(679, 332);
             this.tableLayoutPanel35.TabIndex = 0;
             // 
             // panel15
@@ -1860,10 +1867,10 @@
             this.panel15.Controls.Add(this.listBox3);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel15.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel15.Location = new System.Drawing.Point(3, 2);
-            this.panel15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel15.Location = new System.Drawing.Point(2, 2);
+            this.panel15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(900, 410);
+            this.panel15.Size = new System.Drawing.Size(675, 328);
             this.panel15.TabIndex = 1;
             // 
             // listBox3
@@ -1872,11 +1879,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 22;
-            this.listBox3.Location = new System.Drawing.Point(159, 53);
-            this.listBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listBox3.ItemHeight = 18;
+            this.listBox3.Location = new System.Drawing.Point(119, 43);
+            this.listBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(583, 246);
+            this.listBox3.Size = new System.Drawing.Size(438, 166);
             this.listBox3.TabIndex = 0;
             // 
             // tableLayoutPanel29
@@ -2021,7 +2028,7 @@
             this.bunifuFlatButton15.IconZoom = 90D;
             this.bunifuFlatButton15.IsTab = false;
             this.bunifuFlatButton15.Location = new System.Drawing.Point(510, 4);
-            this.bunifuFlatButton15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton15.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton15.Name = "bunifuFlatButton15";
             this.bunifuFlatButton15.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton15.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -2056,7 +2063,7 @@
             this.bunifuFlatButton14.IconZoom = 90D;
             this.bunifuFlatButton14.IsTab = false;
             this.bunifuFlatButton14.Location = new System.Drawing.Point(257, 4);
-            this.bunifuFlatButton14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton14.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton14.Name = "bunifuFlatButton14";
             this.bunifuFlatButton14.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton14.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -2091,7 +2098,7 @@
             this.bunifuFlatButton13.IconZoom = 90D;
             this.bunifuFlatButton13.IsTab = false;
             this.bunifuFlatButton13.Location = new System.Drawing.Point(4, 4);
-            this.bunifuFlatButton13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton13.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton13.Name = "bunifuFlatButton13";
             this.bunifuFlatButton13.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton13.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -2158,7 +2165,7 @@
             this.bunifuFlatButton46.IconZoom = 90D;
             this.bunifuFlatButton46.IsTab = false;
             this.bunifuFlatButton46.Location = new System.Drawing.Point(4, 223);
-            this.bunifuFlatButton46.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton46.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton46.Name = "bunifuFlatButton46";
             this.bunifuFlatButton46.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton46.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -2205,7 +2212,7 @@
             this.bunifuFlatButton45.IconZoom = 90D;
             this.bunifuFlatButton45.IsTab = false;
             this.bunifuFlatButton45.Location = new System.Drawing.Point(4, 150);
-            this.bunifuFlatButton45.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton45.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton45.Name = "bunifuFlatButton45";
             this.bunifuFlatButton45.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton45.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -2350,7 +2357,7 @@
             this.bunifuFlatButton11.IconZoom = 90D;
             this.bunifuFlatButton11.IsTab = false;
             this.bunifuFlatButton11.Location = new System.Drawing.Point(510, 4);
-            this.bunifuFlatButton11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton11.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton11.Name = "bunifuFlatButton11";
             this.bunifuFlatButton11.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton11.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -2385,7 +2392,7 @@
             this.bunifuFlatButton10.IconZoom = 90D;
             this.bunifuFlatButton10.IsTab = false;
             this.bunifuFlatButton10.Location = new System.Drawing.Point(257, 4);
-            this.bunifuFlatButton10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton10.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton10.Name = "bunifuFlatButton10";
             this.bunifuFlatButton10.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton10.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -2420,7 +2427,7 @@
             this.bunifuFlatButton8.IconZoom = 90D;
             this.bunifuFlatButton8.IsTab = false;
             this.bunifuFlatButton8.Location = new System.Drawing.Point(4, 4);
-            this.bunifuFlatButton8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton8.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton8.Name = "bunifuFlatButton8";
             this.bunifuFlatButton8.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton8.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -2487,7 +2494,7 @@
             this.bunifuFlatButton7.IconZoom = 90D;
             this.bunifuFlatButton7.IsTab = false;
             this.bunifuFlatButton7.Location = new System.Drawing.Point(4, 223);
-            this.bunifuFlatButton7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton7.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton7.Name = "bunifuFlatButton7";
             this.bunifuFlatButton7.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton7.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -2534,7 +2541,7 @@
             this.bunifuFlatButton6.IconZoom = 90D;
             this.bunifuFlatButton6.IsTab = false;
             this.bunifuFlatButton6.Location = new System.Drawing.Point(4, 150);
-            this.bunifuFlatButton6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton6.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton6.Name = "bunifuFlatButton6";
             this.bunifuFlatButton6.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton6.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -2679,7 +2686,7 @@
             this.bunifuFlatButton5.IconZoom = 90D;
             this.bunifuFlatButton5.IsTab = false;
             this.bunifuFlatButton5.Location = new System.Drawing.Point(510, 4);
-            this.bunifuFlatButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton5.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton5.Name = "bunifuFlatButton5";
             this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton5.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -2714,7 +2721,7 @@
             this.bunifuFlatButton4.IconZoom = 90D;
             this.bunifuFlatButton4.IsTab = false;
             this.bunifuFlatButton4.Location = new System.Drawing.Point(257, 4);
-            this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton4.Name = "bunifuFlatButton4";
             this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -2749,7 +2756,7 @@
             this.bunifuFlatButton3.IconZoom = 90D;
             this.bunifuFlatButton3.IsTab = false;
             this.bunifuFlatButton3.Location = new System.Drawing.Point(4, 4);
-            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -2816,7 +2823,7 @@
             this.bunifuFlatButton2.IconZoom = 90D;
             this.bunifuFlatButton2.IsTab = false;
             this.bunifuFlatButton2.Location = new System.Drawing.Point(4, 223);
-            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -2863,7 +2870,7 @@
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
             this.bunifuFlatButton1.Location = new System.Drawing.Point(4, 150);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -2883,12 +2890,11 @@
             // 
             // MainDepot
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1196, 528);
+            this.ClientSize = new System.Drawing.Size(897, 429);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainDepot";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainDepot";
