@@ -187,7 +187,14 @@
             this.tbDepName = new System.Windows.Forms.TextBox();
             this.label56 = new System.Windows.Forms.Label();
             this.timerChangingMenusColor = new System.Windows.Forms.Timer(this.components);
+            this.pnlWeekDayWorkShift = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
+            this.cmbWorkShiftWeekDay = new System.Windows.Forms.ComboBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.tbEmployeeIdWorkShift = new System.Windows.Forms.TextBox();
+            this.btnAssignShiftToEmployeeWeekDay = new Bunifu.Framework.UI.BunifuFlatButton();
             this.tabControl1.SuspendLayout();
             this.tabAddProfile.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -247,6 +254,8 @@
             this.tableLayoutPanel29.SuspendLayout();
             this.panel20.SuspendLayout();
             this.panel22.SuspendLayout();
+            this.pnlWeekDayWorkShift.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -262,7 +271,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1644, 715);
+            this.tabControl1.Size = new System.Drawing.Size(1818, 743);
             this.tabControl1.TabIndex = 16;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged_1);
             // 
@@ -273,7 +282,7 @@
             this.tabAddProfile.Margin = new System.Windows.Forms.Padding(2);
             this.tabAddProfile.Name = "tabAddProfile";
             this.tabAddProfile.Padding = new System.Windows.Forms.Padding(2);
-            this.tabAddProfile.Size = new System.Drawing.Size(1636, 689);
+            this.tabAddProfile.Size = new System.Drawing.Size(1810, 717);
             this.tabAddProfile.TabIndex = 0;
             this.tabAddProfile.Text = "AddProfile";
             this.tabAddProfile.UseVisualStyleBackColor = true;
@@ -292,7 +301,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1632, 685);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1806, 713);
             this.tableLayoutPanel3.TabIndex = 18;
             // 
             // tableLayoutPanel5
@@ -317,7 +326,7 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(361, 681);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(400, 709);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // btnLogOutTABaddProfile
@@ -342,14 +351,14 @@
             this.btnLogOutTABaddProfile.IconVisible = false;
             this.btnLogOutTABaddProfile.IconZoom = 90D;
             this.btnLogOutTABaddProfile.IsTab = false;
-            this.btnLogOutTABaddProfile.Location = new System.Drawing.Point(4, 616);
+            this.btnLogOutTABaddProfile.Location = new System.Drawing.Point(4, 640);
             this.btnLogOutTABaddProfile.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogOutTABaddProfile.Name = "btnLogOutTABaddProfile";
             this.btnLogOutTABaddProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABaddProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnLogOutTABaddProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogOutTABaddProfile.selected = false;
-            this.btnLogOutTABaddProfile.Size = new System.Drawing.Size(353, 61);
+            this.btnLogOutTABaddProfile.Size = new System.Drawing.Size(392, 65);
             this.btnLogOutTABaddProfile.TabIndex = 6;
             this.btnLogOutTABaddProfile.Text = "LOG OUT";
             this.btnLogOutTABaddProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -379,14 +388,14 @@
             this.btnEmployeeManageTABaddProfile.IconVisible = false;
             this.btnEmployeeManageTABaddProfile.IconZoom = 90D;
             this.btnEmployeeManageTABaddProfile.IsTab = false;
-            this.btnEmployeeManageTABaddProfile.Location = new System.Drawing.Point(4, 208);
+            this.btnEmployeeManageTABaddProfile.Location = new System.Drawing.Point(4, 216);
             this.btnEmployeeManageTABaddProfile.Margin = new System.Windows.Forms.Padding(4);
             this.btnEmployeeManageTABaddProfile.Name = "btnEmployeeManageTABaddProfile";
             this.btnEmployeeManageTABaddProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnEmployeeManageTABaddProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnEmployeeManageTABaddProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEmployeeManageTABaddProfile.selected = false;
-            this.btnEmployeeManageTABaddProfile.Size = new System.Drawing.Size(353, 94);
+            this.btnEmployeeManageTABaddProfile.Size = new System.Drawing.Size(392, 98);
             this.btnEmployeeManageTABaddProfile.TabIndex = 5;
             this.btnEmployeeManageTABaddProfile.Text = "Employee Management";
             this.btnEmployeeManageTABaddProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -401,7 +410,7 @@
             this.pictureBox2.Location = new System.Drawing.Point(2, 2);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(357, 200);
+            this.pictureBox2.Size = new System.Drawing.Size(396, 208);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -428,14 +437,14 @@
             this.btnScheduleTABaddProfile.IconVisible = false;
             this.btnScheduleTABaddProfile.IconZoom = 90D;
             this.btnScheduleTABaddProfile.IsTab = false;
-            this.btnScheduleTABaddProfile.Location = new System.Drawing.Point(4, 310);
+            this.btnScheduleTABaddProfile.Location = new System.Drawing.Point(4, 322);
             this.btnScheduleTABaddProfile.Margin = new System.Windows.Forms.Padding(4);
             this.btnScheduleTABaddProfile.Name = "btnScheduleTABaddProfile";
             this.btnScheduleTABaddProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnScheduleTABaddProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnScheduleTABaddProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnScheduleTABaddProfile.selected = false;
-            this.btnScheduleTABaddProfile.Size = new System.Drawing.Size(353, 94);
+            this.btnScheduleTABaddProfile.Size = new System.Drawing.Size(392, 98);
             this.btnScheduleTABaddProfile.TabIndex = 2;
             this.btnScheduleTABaddProfile.Text = "Schedule";
             this.btnScheduleTABaddProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -465,14 +474,14 @@
             this.btnRestockTABaddProfile.IconVisible = false;
             this.btnRestockTABaddProfile.IconZoom = 90D;
             this.btnRestockTABaddProfile.IsTab = false;
-            this.btnRestockTABaddProfile.Location = new System.Drawing.Point(4, 412);
+            this.btnRestockTABaddProfile.Location = new System.Drawing.Point(4, 428);
             this.btnRestockTABaddProfile.Margin = new System.Windows.Forms.Padding(4);
             this.btnRestockTABaddProfile.Name = "btnRestockTABaddProfile";
             this.btnRestockTABaddProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnRestockTABaddProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnRestockTABaddProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnRestockTABaddProfile.selected = false;
-            this.btnRestockTABaddProfile.Size = new System.Drawing.Size(353, 94);
+            this.btnRestockTABaddProfile.Size = new System.Drawing.Size(392, 98);
             this.btnRestockTABaddProfile.TabIndex = 3;
             this.btnRestockTABaddProfile.Text = "Restock Request";
             this.btnRestockTABaddProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -502,14 +511,14 @@
             this.btnDepartManageTABaddProfile.IconVisible = false;
             this.btnDepartManageTABaddProfile.IconZoom = 90D;
             this.btnDepartManageTABaddProfile.IsTab = false;
-            this.btnDepartManageTABaddProfile.Location = new System.Drawing.Point(4, 514);
+            this.btnDepartManageTABaddProfile.Location = new System.Drawing.Point(4, 534);
             this.btnDepartManageTABaddProfile.Margin = new System.Windows.Forms.Padding(4);
             this.btnDepartManageTABaddProfile.Name = "btnDepartManageTABaddProfile";
             this.btnDepartManageTABaddProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnDepartManageTABaddProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnDepartManageTABaddProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnDepartManageTABaddProfile.selected = false;
-            this.btnDepartManageTABaddProfile.Size = new System.Drawing.Size(353, 94);
+            this.btnDepartManageTABaddProfile.Size = new System.Drawing.Size(392, 98);
             this.btnDepartManageTABaddProfile.TabIndex = 4;
             this.btnDepartManageTABaddProfile.Text = "Department Management";
             this.btnDepartManageTABaddProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -525,13 +534,13 @@
             this.tableLayoutPanel6.Controls.Add(this.label12, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.panel5, 0, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(367, 2);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(406, 2);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 2;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(1263, 681);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(1398, 709);
             this.tableLayoutPanel6.TabIndex = 1;
             // 
             // label12
@@ -544,7 +553,7 @@
             this.label12.Location = new System.Drawing.Point(2, 0);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(1259, 102);
+            this.label12.Size = new System.Drawing.Size(1394, 106);
             this.label12.TabIndex = 0;
             this.label12.Text = "Employee Management (New Profile)";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -554,10 +563,10 @@
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.tableLayoutPanel7);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(2, 104);
+            this.panel5.Location = new System.Drawing.Point(2, 108);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1259, 575);
+            this.panel5.Size = new System.Drawing.Size(1394, 599);
             this.panel5.TabIndex = 1;
             // 
             // tableLayoutPanel7
@@ -573,7 +582,7 @@
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.79393F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.20607F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1259, 575);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1394, 599);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
             // tableLayoutPanel8
@@ -591,9 +600,9 @@
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(1255, 58);
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(1390, 60);
             this.tableLayoutPanel8.TabIndex = 0;
             // 
             // btnNewProfTABaddProf
@@ -625,7 +634,7 @@
             this.btnNewProfTABaddProf.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnNewProfTABaddProf.OnHoverTextColor = System.Drawing.Color.White;
             this.btnNewProfTABaddProf.selected = false;
-            this.btnNewProfTABaddProf.Size = new System.Drawing.Size(410, 50);
+            this.btnNewProfTABaddProf.Size = new System.Drawing.Size(455, 52);
             this.btnNewProfTABaddProf.TabIndex = 0;
             this.btnNewProfTABaddProf.Text = "New profile";
             this.btnNewProfTABaddProf.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -654,14 +663,14 @@
             this.btnRemoveProfTABaddProfile.IconVisible = false;
             this.btnRemoveProfTABaddProfile.IconZoom = 90D;
             this.btnRemoveProfTABaddProfile.IsTab = false;
-            this.btnRemoveProfTABaddProfile.Location = new System.Drawing.Point(422, 4);
+            this.btnRemoveProfTABaddProfile.Location = new System.Drawing.Point(467, 4);
             this.btnRemoveProfTABaddProfile.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemoveProfTABaddProfile.Name = "btnRemoveProfTABaddProfile";
             this.btnRemoveProfTABaddProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnRemoveProfTABaddProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnRemoveProfTABaddProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnRemoveProfTABaddProfile.selected = false;
-            this.btnRemoveProfTABaddProfile.Size = new System.Drawing.Size(410, 50);
+            this.btnRemoveProfTABaddProfile.Size = new System.Drawing.Size(455, 52);
             this.btnRemoveProfTABaddProfile.TabIndex = 1;
             this.btnRemoveProfTABaddProfile.Text = "Remove profile";
             this.btnRemoveProfTABaddProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -691,14 +700,14 @@
             this.btnAssignToDepTABaddProfile.IconVisible = false;
             this.btnAssignToDepTABaddProfile.IconZoom = 90D;
             this.btnAssignToDepTABaddProfile.IsTab = false;
-            this.btnAssignToDepTABaddProfile.Location = new System.Drawing.Point(840, 4);
+            this.btnAssignToDepTABaddProfile.Location = new System.Drawing.Point(930, 4);
             this.btnAssignToDepTABaddProfile.Margin = new System.Windows.Forms.Padding(4);
             this.btnAssignToDepTABaddProfile.Name = "btnAssignToDepTABaddProfile";
             this.btnAssignToDepTABaddProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnAssignToDepTABaddProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnAssignToDepTABaddProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAssignToDepTABaddProfile.selected = false;
-            this.btnAssignToDepTABaddProfile.Size = new System.Drawing.Size(411, 50);
+            this.btnAssignToDepTABaddProfile.Size = new System.Drawing.Size(456, 52);
             this.btnAssignToDepTABaddProfile.TabIndex = 2;
             this.btnAssignToDepTABaddProfile.Text = "Assign to departament";
             this.btnAssignToDepTABaddProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -712,10 +721,10 @@
             this.panel6.Controls.Add(this.panel8);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel6.Location = new System.Drawing.Point(2, 64);
+            this.panel6.Location = new System.Drawing.Point(2, 66);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1255, 509);
+            this.panel6.Size = new System.Drawing.Size(1390, 531);
             this.panel6.TabIndex = 1;
             // 
             // panel7
@@ -728,7 +737,7 @@
             this.panel7.Controls.Add(this.label13);
             this.panel7.Controls.Add(this.label14);
             this.panel7.Controls.Add(this.label15);
-            this.panel7.Location = new System.Drawing.Point(815, 16);
+            this.panel7.Location = new System.Drawing.Point(950, 16);
             this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(427, 479);
@@ -860,7 +869,7 @@
             this.panel8.Location = new System.Drawing.Point(19, 16);
             this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(766, 479);
+            this.panel8.Size = new System.Drawing.Size(901, 479);
             this.panel8.TabIndex = 0;
             // 
             // rbAdministrator
@@ -906,7 +915,7 @@
             this.btnAddNewProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnAddNewProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAddNewProfile.selected = false;
-            this.btnAddNewProfile.Size = new System.Drawing.Size(684, 34);
+            this.btnAddNewProfile.Size = new System.Drawing.Size(819, 34);
             this.btnAddNewProfile.TabIndex = 4;
             this.btnAddNewProfile.Text = "Add";
             this.btnAddNewProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -962,7 +971,7 @@
             this.tbNationality.Location = new System.Drawing.Point(218, 188);
             this.tbNationality.Margin = new System.Windows.Forms.Padding(2);
             this.tbNationality.Name = "tbNationality";
-            this.tbNationality.Size = new System.Drawing.Size(490, 25);
+            this.tbNationality.Size = new System.Drawing.Size(625, 25);
             this.tbNationality.TabIndex = 11;
             // 
             // tbPhoneNr
@@ -973,7 +982,7 @@
             this.tbPhoneNr.Location = new System.Drawing.Point(218, 150);
             this.tbPhoneNr.Margin = new System.Windows.Forms.Padding(2);
             this.tbPhoneNr.Name = "tbPhoneNr";
-            this.tbPhoneNr.Size = new System.Drawing.Size(490, 25);
+            this.tbPhoneNr.Size = new System.Drawing.Size(625, 25);
             this.tbPhoneNr.TabIndex = 10;
             // 
             // tbEmail
@@ -984,7 +993,7 @@
             this.tbEmail.Location = new System.Drawing.Point(218, 111);
             this.tbEmail.Margin = new System.Windows.Forms.Padding(2);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(490, 25);
+            this.tbEmail.Size = new System.Drawing.Size(625, 25);
             this.tbEmail.TabIndex = 9;
             // 
             // tbDateOfBirth
@@ -995,7 +1004,7 @@
             this.tbDateOfBirth.Location = new System.Drawing.Point(218, 76);
             this.tbDateOfBirth.Margin = new System.Windows.Forms.Padding(2);
             this.tbDateOfBirth.Name = "tbDateOfBirth";
-            this.tbDateOfBirth.Size = new System.Drawing.Size(490, 25);
+            this.tbDateOfBirth.Size = new System.Drawing.Size(625, 25);
             this.tbDateOfBirth.TabIndex = 8;
             // 
             // tbLastName
@@ -1006,7 +1015,7 @@
             this.tbLastName.Location = new System.Drawing.Point(218, 41);
             this.tbLastName.Margin = new System.Windows.Forms.Padding(2);
             this.tbLastName.Name = "tbLastName";
-            this.tbLastName.Size = new System.Drawing.Size(490, 25);
+            this.tbLastName.Size = new System.Drawing.Size(625, 25);
             this.tbLastName.TabIndex = 7;
             // 
             // tbFirstName
@@ -1017,7 +1026,7 @@
             this.tbFirstName.Location = new System.Drawing.Point(218, 6);
             this.tbFirstName.Margin = new System.Windows.Forms.Padding(2);
             this.tbFirstName.Name = "tbFirstName";
-            this.tbFirstName.Size = new System.Drawing.Size(490, 25);
+            this.tbFirstName.Size = new System.Drawing.Size(625, 25);
             this.tbFirstName.TabIndex = 6;
             // 
             // label17
@@ -1099,7 +1108,7 @@
             this.label22.Location = new System.Drawing.Point(21, 10);
             this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(448, 159);
+            this.label22.Size = new System.Drawing.Size(583, 159);
             this.label22.TabIndex = 0;
             this.label22.Text = "First name: ";
             // 
@@ -1110,7 +1119,7 @@
             this.tabRemoveProfile.Margin = new System.Windows.Forms.Padding(2);
             this.tabRemoveProfile.Name = "tabRemoveProfile";
             this.tabRemoveProfile.Padding = new System.Windows.Forms.Padding(2);
-            this.tabRemoveProfile.Size = new System.Drawing.Size(963, 540);
+            this.tabRemoveProfile.Size = new System.Drawing.Size(1636, 689);
             this.tabRemoveProfile.TabIndex = 1;
             this.tabRemoveProfile.Text = "RemoveProfile";
             this.tabRemoveProfile.UseVisualStyleBackColor = true;
@@ -1129,7 +1138,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(959, 536);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1632, 685);
             this.tableLayoutPanel1.TabIndex = 18;
             // 
             // tableLayoutPanel2
@@ -1154,7 +1163,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(210, 532);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(361, 681);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // bunifuFlatButton6
@@ -1179,14 +1188,14 @@
             this.bunifuFlatButton6.IconVisible = false;
             this.bunifuFlatButton6.IconZoom = 90D;
             this.bunifuFlatButton6.IsTab = false;
-            this.bunifuFlatButton6.Location = new System.Drawing.Point(4, 479);
+            this.bunifuFlatButton6.Location = new System.Drawing.Point(4, 616);
             this.bunifuFlatButton6.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton6.Name = "bunifuFlatButton6";
             this.bunifuFlatButton6.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton6.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.bunifuFlatButton6.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton6.selected = false;
-            this.bunifuFlatButton6.Size = new System.Drawing.Size(202, 49);
+            this.bunifuFlatButton6.Size = new System.Drawing.Size(353, 61);
             this.bunifuFlatButton6.TabIndex = 7;
             this.bunifuFlatButton6.Text = "LOG OUT";
             this.bunifuFlatButton6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1216,14 +1225,14 @@
             this.btnEmployeeManageTABremoveProfile.IconVisible = false;
             this.btnEmployeeManageTABremoveProfile.IconZoom = 90D;
             this.btnEmployeeManageTABremoveProfile.IsTab = false;
-            this.btnEmployeeManageTABremoveProfile.Location = new System.Drawing.Point(4, 163);
+            this.btnEmployeeManageTABremoveProfile.Location = new System.Drawing.Point(4, 208);
             this.btnEmployeeManageTABremoveProfile.Margin = new System.Windows.Forms.Padding(4);
             this.btnEmployeeManageTABremoveProfile.Name = "btnEmployeeManageTABremoveProfile";
             this.btnEmployeeManageTABremoveProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnEmployeeManageTABremoveProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnEmployeeManageTABremoveProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEmployeeManageTABremoveProfile.selected = false;
-            this.btnEmployeeManageTABremoveProfile.Size = new System.Drawing.Size(202, 71);
+            this.btnEmployeeManageTABremoveProfile.Size = new System.Drawing.Size(353, 94);
             this.btnEmployeeManageTABremoveProfile.TabIndex = 5;
             this.btnEmployeeManageTABremoveProfile.Text = "Employee Management";
             this.btnEmployeeManageTABremoveProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1237,7 +1246,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(2, 2);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(206, 155);
+            this.pictureBox1.Size = new System.Drawing.Size(357, 200);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -1264,14 +1273,14 @@
             this.btnScheduleTABremoveProfile.IconVisible = false;
             this.btnScheduleTABremoveProfile.IconZoom = 90D;
             this.btnScheduleTABremoveProfile.IsTab = false;
-            this.btnScheduleTABremoveProfile.Location = new System.Drawing.Point(4, 242);
+            this.btnScheduleTABremoveProfile.Location = new System.Drawing.Point(4, 310);
             this.btnScheduleTABremoveProfile.Margin = new System.Windows.Forms.Padding(4);
             this.btnScheduleTABremoveProfile.Name = "btnScheduleTABremoveProfile";
             this.btnScheduleTABremoveProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnScheduleTABremoveProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnScheduleTABremoveProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnScheduleTABremoveProfile.selected = false;
-            this.btnScheduleTABremoveProfile.Size = new System.Drawing.Size(202, 71);
+            this.btnScheduleTABremoveProfile.Size = new System.Drawing.Size(353, 94);
             this.btnScheduleTABremoveProfile.TabIndex = 2;
             this.btnScheduleTABremoveProfile.Text = "Schedule";
             this.btnScheduleTABremoveProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1301,14 +1310,14 @@
             this.btnRestockReqTABremoveProfile.IconVisible = false;
             this.btnRestockReqTABremoveProfile.IconZoom = 90D;
             this.btnRestockReqTABremoveProfile.IsTab = false;
-            this.btnRestockReqTABremoveProfile.Location = new System.Drawing.Point(4, 321);
+            this.btnRestockReqTABremoveProfile.Location = new System.Drawing.Point(4, 412);
             this.btnRestockReqTABremoveProfile.Margin = new System.Windows.Forms.Padding(4);
             this.btnRestockReqTABremoveProfile.Name = "btnRestockReqTABremoveProfile";
             this.btnRestockReqTABremoveProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnRestockReqTABremoveProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnRestockReqTABremoveProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnRestockReqTABremoveProfile.selected = false;
-            this.btnRestockReqTABremoveProfile.Size = new System.Drawing.Size(202, 71);
+            this.btnRestockReqTABremoveProfile.Size = new System.Drawing.Size(353, 94);
             this.btnRestockReqTABremoveProfile.TabIndex = 3;
             this.btnRestockReqTABremoveProfile.Text = "Restock Request";
             this.btnRestockReqTABremoveProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1338,14 +1347,14 @@
             this.btnDepartManageTABremoveProfile.IconVisible = false;
             this.btnDepartManageTABremoveProfile.IconZoom = 90D;
             this.btnDepartManageTABremoveProfile.IsTab = false;
-            this.btnDepartManageTABremoveProfile.Location = new System.Drawing.Point(4, 400);
+            this.btnDepartManageTABremoveProfile.Location = new System.Drawing.Point(4, 514);
             this.btnDepartManageTABremoveProfile.Margin = new System.Windows.Forms.Padding(4);
             this.btnDepartManageTABremoveProfile.Name = "btnDepartManageTABremoveProfile";
             this.btnDepartManageTABremoveProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnDepartManageTABremoveProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnDepartManageTABremoveProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnDepartManageTABremoveProfile.selected = false;
-            this.btnDepartManageTABremoveProfile.Size = new System.Drawing.Size(202, 71);
+            this.btnDepartManageTABremoveProfile.Size = new System.Drawing.Size(353, 94);
             this.btnDepartManageTABremoveProfile.TabIndex = 4;
             this.btnDepartManageTABremoveProfile.Text = "Department Management";
             this.btnDepartManageTABremoveProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1361,13 +1370,13 @@
             this.tableLayoutPanel4.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.panel1, 0, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(216, 2);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(367, 2);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(741, 532);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1263, 681);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // label1
@@ -1380,7 +1389,7 @@
             this.label1.Location = new System.Drawing.Point(2, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(737, 79);
+            this.label1.Size = new System.Drawing.Size(1259, 102);
             this.label1.TabIndex = 0;
             this.label1.Text = "Employee Managment (Remove Profile)";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1390,10 +1399,10 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.tableLayoutPanel9);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(2, 81);
+            this.panel1.Location = new System.Drawing.Point(2, 104);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(737, 449);
+            this.panel1.Size = new System.Drawing.Size(1259, 575);
             this.panel1.TabIndex = 1;
             // 
             // tableLayoutPanel9
@@ -1409,7 +1418,7 @@
             this.tableLayoutPanel9.RowCount = 2;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.79393F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.20607F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(737, 449);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(1259, 575);
             this.tableLayoutPanel9.TabIndex = 0;
             // 
             // tableLayoutPanel10
@@ -1429,7 +1438,7 @@
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(733, 44);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(1255, 58);
             this.tableLayoutPanel10.TabIndex = 0;
             // 
             // btnNewProfileTABremoveProfile
@@ -1461,7 +1470,7 @@
             this.btnNewProfileTABremoveProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnNewProfileTABremoveProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnNewProfileTABremoveProfile.selected = false;
-            this.btnNewProfileTABremoveProfile.Size = new System.Drawing.Size(236, 36);
+            this.btnNewProfileTABremoveProfile.Size = new System.Drawing.Size(410, 50);
             this.btnNewProfileTABremoveProfile.TabIndex = 0;
             this.btnNewProfileTABremoveProfile.Text = "New profile";
             this.btnNewProfileTABremoveProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1491,14 +1500,14 @@
             this.btnRemoveProfTABremoveProfile.IconVisible = false;
             this.btnRemoveProfTABremoveProfile.IconZoom = 90D;
             this.btnRemoveProfTABremoveProfile.IsTab = false;
-            this.btnRemoveProfTABremoveProfile.Location = new System.Drawing.Point(248, 4);
+            this.btnRemoveProfTABremoveProfile.Location = new System.Drawing.Point(422, 4);
             this.btnRemoveProfTABremoveProfile.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemoveProfTABremoveProfile.Name = "btnRemoveProfTABremoveProfile";
             this.btnRemoveProfTABremoveProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnRemoveProfTABremoveProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnRemoveProfTABremoveProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnRemoveProfTABremoveProfile.selected = false;
-            this.btnRemoveProfTABremoveProfile.Size = new System.Drawing.Size(236, 36);
+            this.btnRemoveProfTABremoveProfile.Size = new System.Drawing.Size(410, 50);
             this.btnRemoveProfTABremoveProfile.TabIndex = 1;
             this.btnRemoveProfTABremoveProfile.Text = "Remove profile";
             this.btnRemoveProfTABremoveProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1528,14 +1537,14 @@
             this.btnAssignToDepTABremoveProfile.IconVisible = false;
             this.btnAssignToDepTABremoveProfile.IconZoom = 90D;
             this.btnAssignToDepTABremoveProfile.IsTab = false;
-            this.btnAssignToDepTABremoveProfile.Location = new System.Drawing.Point(492, 4);
+            this.btnAssignToDepTABremoveProfile.Location = new System.Drawing.Point(840, 4);
             this.btnAssignToDepTABremoveProfile.Margin = new System.Windows.Forms.Padding(4);
             this.btnAssignToDepTABremoveProfile.Name = "btnAssignToDepTABremoveProfile";
             this.btnAssignToDepTABremoveProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnAssignToDepTABremoveProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnAssignToDepTABremoveProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAssignToDepTABremoveProfile.selected = false;
-            this.btnAssignToDepTABremoveProfile.Size = new System.Drawing.Size(237, 36);
+            this.btnAssignToDepTABremoveProfile.Size = new System.Drawing.Size(411, 50);
             this.btnAssignToDepTABremoveProfile.TabIndex = 2;
             this.btnAssignToDepTABremoveProfile.Text = "Assign to departament";
             this.btnAssignToDepTABremoveProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1550,10 +1559,10 @@
             this.panel2.Controls.Add(this.btnRemoveProfile);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(2, 50);
+            this.panel2.Location = new System.Drawing.Point(2, 64);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(733, 397);
+            this.panel2.Size = new System.Drawing.Size(1255, 509);
             this.panel2.TabIndex = 1;
             // 
             // checkedListBox2
@@ -1571,10 +1580,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel10.Controls.Add(this.tbExtraInformationTABremoveProfile);
             this.panel10.Controls.Add(this.label57);
-            this.panel10.Location = new System.Drawing.Point(442, 24);
+            this.panel10.Location = new System.Drawing.Point(964, 24);
             this.panel10.Margin = new System.Windows.Forms.Padding(2);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(226, 246);
+            this.panel10.Size = new System.Drawing.Size(226, 358);
             this.panel10.TabIndex = 6;
             // 
             // tbExtraInformationTABremoveProfile
@@ -1585,7 +1594,7 @@
             this.tbExtraInformationTABremoveProfile.Margin = new System.Windows.Forms.Padding(2);
             this.tbExtraInformationTABremoveProfile.Multiline = true;
             this.tbExtraInformationTABremoveProfile.Name = "tbExtraInformationTABremoveProfile";
-            this.tbExtraInformationTABremoveProfile.Size = new System.Drawing.Size(200, 193);
+            this.tbExtraInformationTABremoveProfile.Size = new System.Drawing.Size(200, 305);
             this.tbExtraInformationTABremoveProfile.TabIndex = 3;
             // 
             // label57
@@ -1622,7 +1631,7 @@
             this.btnRemoveProfile.IconVisible = false;
             this.btnRemoveProfile.IconZoom = 90D;
             this.btnRemoveProfile.IsTab = false;
-            this.btnRemoveProfile.Location = new System.Drawing.Point(442, 288);
+            this.btnRemoveProfile.Location = new System.Drawing.Point(964, 400);
             this.btnRemoveProfile.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnRemoveProfile.Name = "btnRemoveProfile";
             this.btnRemoveProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
@@ -1644,7 +1653,7 @@
             this.tabAssignDep.Margin = new System.Windows.Forms.Padding(2);
             this.tabAssignDep.Name = "tabAssignDep";
             this.tabAssignDep.Padding = new System.Windows.Forms.Padding(2);
-            this.tabAssignDep.Size = new System.Drawing.Size(963, 540);
+            this.tabAssignDep.Size = new System.Drawing.Size(1636, 689);
             this.tabAssignDep.TabIndex = 2;
             this.tabAssignDep.Text = "AssignToDepartment";
             this.tabAssignDep.UseVisualStyleBackColor = true;
@@ -1663,7 +1672,7 @@
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 1;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(959, 536);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(1632, 685);
             this.tableLayoutPanel11.TabIndex = 19;
             // 
             // tableLayoutPanel12
@@ -1688,7 +1697,7 @@
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(210, 532);
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(361, 681);
             this.tableLayoutPanel12.TabIndex = 0;
             // 
             // btnLogOutTABassignDep
@@ -1713,14 +1722,14 @@
             this.btnLogOutTABassignDep.IconVisible = false;
             this.btnLogOutTABassignDep.IconZoom = 90D;
             this.btnLogOutTABassignDep.IsTab = false;
-            this.btnLogOutTABassignDep.Location = new System.Drawing.Point(4, 479);
+            this.btnLogOutTABassignDep.Location = new System.Drawing.Point(4, 616);
             this.btnLogOutTABassignDep.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogOutTABassignDep.Name = "btnLogOutTABassignDep";
             this.btnLogOutTABassignDep.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABassignDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnLogOutTABassignDep.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogOutTABassignDep.selected = false;
-            this.btnLogOutTABassignDep.Size = new System.Drawing.Size(202, 49);
+            this.btnLogOutTABassignDep.Size = new System.Drawing.Size(353, 61);
             this.btnLogOutTABassignDep.TabIndex = 8;
             this.btnLogOutTABassignDep.Text = "LOG OUT";
             this.btnLogOutTABassignDep.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1750,14 +1759,14 @@
             this.btnEmployeeManageTABassignDep.IconVisible = false;
             this.btnEmployeeManageTABassignDep.IconZoom = 90D;
             this.btnEmployeeManageTABassignDep.IsTab = false;
-            this.btnEmployeeManageTABassignDep.Location = new System.Drawing.Point(4, 163);
+            this.btnEmployeeManageTABassignDep.Location = new System.Drawing.Point(4, 208);
             this.btnEmployeeManageTABassignDep.Margin = new System.Windows.Forms.Padding(4);
             this.btnEmployeeManageTABassignDep.Name = "btnEmployeeManageTABassignDep";
             this.btnEmployeeManageTABassignDep.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnEmployeeManageTABassignDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnEmployeeManageTABassignDep.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEmployeeManageTABassignDep.selected = false;
-            this.btnEmployeeManageTABassignDep.Size = new System.Drawing.Size(202, 71);
+            this.btnEmployeeManageTABassignDep.Size = new System.Drawing.Size(353, 94);
             this.btnEmployeeManageTABassignDep.TabIndex = 5;
             this.btnEmployeeManageTABassignDep.Text = "Employee Management";
             this.btnEmployeeManageTABassignDep.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1771,7 +1780,7 @@
             this.pictureBox3.Location = new System.Drawing.Point(2, 2);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(206, 155);
+            this.pictureBox3.Size = new System.Drawing.Size(357, 200);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
@@ -1798,14 +1807,14 @@
             this.btnScheduleTABassignDep.IconVisible = false;
             this.btnScheduleTABassignDep.IconZoom = 90D;
             this.btnScheduleTABassignDep.IsTab = false;
-            this.btnScheduleTABassignDep.Location = new System.Drawing.Point(4, 242);
+            this.btnScheduleTABassignDep.Location = new System.Drawing.Point(4, 310);
             this.btnScheduleTABassignDep.Margin = new System.Windows.Forms.Padding(4);
             this.btnScheduleTABassignDep.Name = "btnScheduleTABassignDep";
             this.btnScheduleTABassignDep.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnScheduleTABassignDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnScheduleTABassignDep.OnHoverTextColor = System.Drawing.Color.White;
             this.btnScheduleTABassignDep.selected = false;
-            this.btnScheduleTABassignDep.Size = new System.Drawing.Size(202, 71);
+            this.btnScheduleTABassignDep.Size = new System.Drawing.Size(353, 94);
             this.btnScheduleTABassignDep.TabIndex = 2;
             this.btnScheduleTABassignDep.Text = "Schedule";
             this.btnScheduleTABassignDep.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1835,14 +1844,14 @@
             this.btnRestockTABassignDep.IconVisible = false;
             this.btnRestockTABassignDep.IconZoom = 90D;
             this.btnRestockTABassignDep.IsTab = false;
-            this.btnRestockTABassignDep.Location = new System.Drawing.Point(4, 321);
+            this.btnRestockTABassignDep.Location = new System.Drawing.Point(4, 412);
             this.btnRestockTABassignDep.Margin = new System.Windows.Forms.Padding(4);
             this.btnRestockTABassignDep.Name = "btnRestockTABassignDep";
             this.btnRestockTABassignDep.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnRestockTABassignDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnRestockTABassignDep.OnHoverTextColor = System.Drawing.Color.White;
             this.btnRestockTABassignDep.selected = false;
-            this.btnRestockTABassignDep.Size = new System.Drawing.Size(202, 71);
+            this.btnRestockTABassignDep.Size = new System.Drawing.Size(353, 94);
             this.btnRestockTABassignDep.TabIndex = 3;
             this.btnRestockTABassignDep.Text = "Restock Request";
             this.btnRestockTABassignDep.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1872,14 +1881,14 @@
             this.btnDepartManageTABassignDep.IconVisible = false;
             this.btnDepartManageTABassignDep.IconZoom = 90D;
             this.btnDepartManageTABassignDep.IsTab = false;
-            this.btnDepartManageTABassignDep.Location = new System.Drawing.Point(4, 400);
+            this.btnDepartManageTABassignDep.Location = new System.Drawing.Point(4, 514);
             this.btnDepartManageTABassignDep.Margin = new System.Windows.Forms.Padding(4);
             this.btnDepartManageTABassignDep.Name = "btnDepartManageTABassignDep";
             this.btnDepartManageTABassignDep.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnDepartManageTABassignDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnDepartManageTABassignDep.OnHoverTextColor = System.Drawing.Color.White;
             this.btnDepartManageTABassignDep.selected = false;
-            this.btnDepartManageTABassignDep.Size = new System.Drawing.Size(202, 71);
+            this.btnDepartManageTABassignDep.Size = new System.Drawing.Size(353, 94);
             this.btnDepartManageTABassignDep.TabIndex = 4;
             this.btnDepartManageTABassignDep.Text = "Department Management";
             this.btnDepartManageTABassignDep.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1895,13 +1904,13 @@
             this.tableLayoutPanel13.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel13.Controls.Add(this.panel4, 0, 1);
             this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel13.Location = new System.Drawing.Point(216, 2);
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(367, 2);
             this.tableLayoutPanel13.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
             this.tableLayoutPanel13.RowCount = 2;
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel13.Size = new System.Drawing.Size(741, 532);
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(1263, 681);
             this.tableLayoutPanel13.TabIndex = 1;
             // 
             // label5
@@ -1914,7 +1923,7 @@
             this.label5.Location = new System.Drawing.Point(2, 0);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(737, 79);
+            this.label5.Size = new System.Drawing.Size(1259, 102);
             this.label5.TabIndex = 0;
             this.label5.Text = "Employee Managment (Assign to departament)";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1924,10 +1933,10 @@
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.tableLayoutPanel14);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(2, 81);
+            this.panel4.Location = new System.Drawing.Point(2, 104);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(737, 449);
+            this.panel4.Size = new System.Drawing.Size(1259, 575);
             this.panel4.TabIndex = 1;
             // 
             // tableLayoutPanel14
@@ -1943,7 +1952,7 @@
             this.tableLayoutPanel14.RowCount = 2;
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.79393F));
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.20607F));
-            this.tableLayoutPanel14.Size = new System.Drawing.Size(737, 449);
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(1259, 575);
             this.tableLayoutPanel14.TabIndex = 0;
             // 
             // tableLayoutPanel15
@@ -1963,7 +1972,7 @@
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(733, 44);
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(1255, 58);
             this.tableLayoutPanel15.TabIndex = 0;
             // 
             // btnNewProfileTABassignDep
@@ -1995,7 +2004,7 @@
             this.btnNewProfileTABassignDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnNewProfileTABassignDep.OnHoverTextColor = System.Drawing.Color.White;
             this.btnNewProfileTABassignDep.selected = false;
-            this.btnNewProfileTABassignDep.Size = new System.Drawing.Size(236, 36);
+            this.btnNewProfileTABassignDep.Size = new System.Drawing.Size(410, 50);
             this.btnNewProfileTABassignDep.TabIndex = 0;
             this.btnNewProfileTABassignDep.Text = "New profile";
             this.btnNewProfileTABassignDep.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2025,14 +2034,14 @@
             this.btnRemoveProfileTABassignDep.IconVisible = false;
             this.btnRemoveProfileTABassignDep.IconZoom = 90D;
             this.btnRemoveProfileTABassignDep.IsTab = false;
-            this.btnRemoveProfileTABassignDep.Location = new System.Drawing.Point(248, 4);
+            this.btnRemoveProfileTABassignDep.Location = new System.Drawing.Point(422, 4);
             this.btnRemoveProfileTABassignDep.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemoveProfileTABassignDep.Name = "btnRemoveProfileTABassignDep";
             this.btnRemoveProfileTABassignDep.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnRemoveProfileTABassignDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnRemoveProfileTABassignDep.OnHoverTextColor = System.Drawing.Color.White;
             this.btnRemoveProfileTABassignDep.selected = false;
-            this.btnRemoveProfileTABassignDep.Size = new System.Drawing.Size(236, 36);
+            this.btnRemoveProfileTABassignDep.Size = new System.Drawing.Size(410, 50);
             this.btnRemoveProfileTABassignDep.TabIndex = 1;
             this.btnRemoveProfileTABassignDep.Text = "Remove profile";
             this.btnRemoveProfileTABassignDep.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2062,14 +2071,14 @@
             this.btnAssignToDepTABassignDep.IconVisible = false;
             this.btnAssignToDepTABassignDep.IconZoom = 90D;
             this.btnAssignToDepTABassignDep.IsTab = false;
-            this.btnAssignToDepTABassignDep.Location = new System.Drawing.Point(492, 4);
+            this.btnAssignToDepTABassignDep.Location = new System.Drawing.Point(840, 4);
             this.btnAssignToDepTABassignDep.Margin = new System.Windows.Forms.Padding(4);
             this.btnAssignToDepTABassignDep.Name = "btnAssignToDepTABassignDep";
             this.btnAssignToDepTABassignDep.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnAssignToDepTABassignDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnAssignToDepTABassignDep.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAssignToDepTABassignDep.selected = false;
-            this.btnAssignToDepTABassignDep.Size = new System.Drawing.Size(237, 36);
+            this.btnAssignToDepTABassignDep.Size = new System.Drawing.Size(411, 50);
             this.btnAssignToDepTABassignDep.TabIndex = 2;
             this.btnAssignToDepTABassignDep.Text = "Assign to departament";
             this.btnAssignToDepTABassignDep.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2083,10 +2092,10 @@
             this.panel9.Controls.Add(this.lbEmployeesTABassignDep);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel9.Location = new System.Drawing.Point(2, 50);
+            this.panel9.Location = new System.Drawing.Point(2, 64);
             this.panel9.Margin = new System.Windows.Forms.Padding(2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(733, 397);
+            this.panel9.Size = new System.Drawing.Size(1255, 509);
             this.panel9.TabIndex = 1;
             // 
             // btnAssignToDepartment
@@ -2111,7 +2120,7 @@
             this.btnAssignToDepartment.IconVisible = false;
             this.btnAssignToDepartment.IconZoom = 90D;
             this.btnAssignToDepartment.IsTab = false;
-            this.btnAssignToDepartment.Location = new System.Drawing.Point(530, 201);
+            this.btnAssignToDepartment.Location = new System.Drawing.Point(1052, 257);
             this.btnAssignToDepartment.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnAssignToDepartment.Name = "btnAssignToDepartment";
             this.btnAssignToDepartment.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
@@ -2129,7 +2138,7 @@
             // 
             this.cmbDepartments.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.cmbDepartments.FormattingEnabled = true;
-            this.cmbDepartments.Location = new System.Drawing.Point(530, 59);
+            this.cmbDepartments.Location = new System.Drawing.Point(1052, 115);
             this.cmbDepartments.Margin = new System.Windows.Forms.Padding(2);
             this.cmbDepartments.Name = "cmbDepartments";
             this.cmbDepartments.Size = new System.Drawing.Size(168, 26);
@@ -2145,7 +2154,7 @@
             this.lbEmployeesTABassignDep.Location = new System.Drawing.Point(26, 46);
             this.lbEmployeesTABassignDep.Margin = new System.Windows.Forms.Padding(2);
             this.lbEmployeesTABassignDep.Name = "lbEmployeesTABassignDep";
-            this.lbEmployeesTABassignDep.Size = new System.Drawing.Size(446, 130);
+            this.lbEmployeesTABassignDep.Size = new System.Drawing.Size(968, 238);
             this.lbEmployeesTABassignDep.TabIndex = 2;
             // 
             // tabSchedule
@@ -2155,7 +2164,7 @@
             this.tabSchedule.Margin = new System.Windows.Forms.Padding(2);
             this.tabSchedule.Name = "tabSchedule";
             this.tabSchedule.Padding = new System.Windows.Forms.Padding(2);
-            this.tabSchedule.Size = new System.Drawing.Size(1636, 689);
+            this.tabSchedule.Size = new System.Drawing.Size(1810, 717);
             this.tabSchedule.TabIndex = 3;
             this.tabSchedule.Text = "Schedule";
             this.tabSchedule.UseVisualStyleBackColor = true;
@@ -2174,7 +2183,7 @@
             this.tableLayoutPanel16.Name = "tableLayoutPanel16";
             this.tableLayoutPanel16.RowCount = 1;
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(1632, 685);
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(1806, 713);
             this.tableLayoutPanel16.TabIndex = 19;
             // 
             // tableLayoutPanel17
@@ -2199,7 +2208,7 @@
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(361, 681);
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(400, 709);
             this.tableLayoutPanel17.TabIndex = 0;
             // 
             // btnLogOutTABschedule
@@ -2224,14 +2233,14 @@
             this.btnLogOutTABschedule.IconVisible = false;
             this.btnLogOutTABschedule.IconZoom = 90D;
             this.btnLogOutTABschedule.IsTab = false;
-            this.btnLogOutTABschedule.Location = new System.Drawing.Point(4, 616);
+            this.btnLogOutTABschedule.Location = new System.Drawing.Point(4, 640);
             this.btnLogOutTABschedule.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogOutTABschedule.Name = "btnLogOutTABschedule";
             this.btnLogOutTABschedule.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABschedule.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnLogOutTABschedule.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogOutTABschedule.selected = false;
-            this.btnLogOutTABschedule.Size = new System.Drawing.Size(353, 61);
+            this.btnLogOutTABschedule.Size = new System.Drawing.Size(392, 65);
             this.btnLogOutTABschedule.TabIndex = 8;
             this.btnLogOutTABschedule.Text = "LOG OUT";
             this.btnLogOutTABschedule.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2261,14 +2270,14 @@
             this.btnEmployeManageTABschedule.IconVisible = false;
             this.btnEmployeManageTABschedule.IconZoom = 90D;
             this.btnEmployeManageTABschedule.IsTab = false;
-            this.btnEmployeManageTABschedule.Location = new System.Drawing.Point(4, 208);
+            this.btnEmployeManageTABschedule.Location = new System.Drawing.Point(4, 216);
             this.btnEmployeManageTABschedule.Margin = new System.Windows.Forms.Padding(4);
             this.btnEmployeManageTABschedule.Name = "btnEmployeManageTABschedule";
             this.btnEmployeManageTABschedule.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnEmployeManageTABschedule.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnEmployeManageTABschedule.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEmployeManageTABschedule.selected = false;
-            this.btnEmployeManageTABschedule.Size = new System.Drawing.Size(353, 94);
+            this.btnEmployeManageTABschedule.Size = new System.Drawing.Size(392, 98);
             this.btnEmployeManageTABschedule.TabIndex = 5;
             this.btnEmployeManageTABschedule.Text = "Employee Management";
             this.btnEmployeManageTABschedule.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2283,7 +2292,7 @@
             this.pictureBox4.Location = new System.Drawing.Point(2, 2);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(357, 200);
+            this.pictureBox4.Size = new System.Drawing.Size(396, 208);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
@@ -2310,14 +2319,14 @@
             this.btnScheduleTABschedule.IconVisible = false;
             this.btnScheduleTABschedule.IconZoom = 90D;
             this.btnScheduleTABschedule.IsTab = false;
-            this.btnScheduleTABschedule.Location = new System.Drawing.Point(4, 310);
+            this.btnScheduleTABschedule.Location = new System.Drawing.Point(4, 322);
             this.btnScheduleTABschedule.Margin = new System.Windows.Forms.Padding(4);
             this.btnScheduleTABschedule.Name = "btnScheduleTABschedule";
             this.btnScheduleTABschedule.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnScheduleTABschedule.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnScheduleTABschedule.OnHoverTextColor = System.Drawing.Color.White;
             this.btnScheduleTABschedule.selected = false;
-            this.btnScheduleTABschedule.Size = new System.Drawing.Size(353, 94);
+            this.btnScheduleTABschedule.Size = new System.Drawing.Size(392, 98);
             this.btnScheduleTABschedule.TabIndex = 2;
             this.btnScheduleTABschedule.Text = "Schedule";
             this.btnScheduleTABschedule.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2346,14 +2355,14 @@
             this.btnRestockReqTABschedule.IconVisible = false;
             this.btnRestockReqTABschedule.IconZoom = 90D;
             this.btnRestockReqTABschedule.IsTab = false;
-            this.btnRestockReqTABschedule.Location = new System.Drawing.Point(4, 412);
+            this.btnRestockReqTABschedule.Location = new System.Drawing.Point(4, 428);
             this.btnRestockReqTABschedule.Margin = new System.Windows.Forms.Padding(4);
             this.btnRestockReqTABschedule.Name = "btnRestockReqTABschedule";
             this.btnRestockReqTABschedule.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnRestockReqTABschedule.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnRestockReqTABschedule.OnHoverTextColor = System.Drawing.Color.White;
             this.btnRestockReqTABschedule.selected = false;
-            this.btnRestockReqTABschedule.Size = new System.Drawing.Size(353, 94);
+            this.btnRestockReqTABschedule.Size = new System.Drawing.Size(392, 98);
             this.btnRestockReqTABschedule.TabIndex = 3;
             this.btnRestockReqTABschedule.Text = "Restock Request";
             this.btnRestockReqTABschedule.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2383,14 +2392,14 @@
             this.btnDepartmentManageTABschedule.IconVisible = false;
             this.btnDepartmentManageTABschedule.IconZoom = 90D;
             this.btnDepartmentManageTABschedule.IsTab = false;
-            this.btnDepartmentManageTABschedule.Location = new System.Drawing.Point(4, 514);
+            this.btnDepartmentManageTABschedule.Location = new System.Drawing.Point(4, 534);
             this.btnDepartmentManageTABschedule.Margin = new System.Windows.Forms.Padding(4);
             this.btnDepartmentManageTABschedule.Name = "btnDepartmentManageTABschedule";
             this.btnDepartmentManageTABschedule.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnDepartmentManageTABschedule.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnDepartmentManageTABschedule.OnHoverTextColor = System.Drawing.Color.White;
             this.btnDepartmentManageTABschedule.selected = false;
-            this.btnDepartmentManageTABschedule.Size = new System.Drawing.Size(353, 94);
+            this.btnDepartmentManageTABschedule.Size = new System.Drawing.Size(392, 98);
             this.btnDepartmentManageTABschedule.TabIndex = 4;
             this.btnDepartmentManageTABschedule.Text = "Department Management";
             this.btnDepartmentManageTABschedule.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2406,13 +2415,13 @@
             this.tableLayoutPanel18.Controls.Add(this.label27, 0, 0);
             this.tableLayoutPanel18.Controls.Add(this.panel12, 0, 1);
             this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel18.Location = new System.Drawing.Point(367, 2);
+            this.tableLayoutPanel18.Location = new System.Drawing.Point(406, 2);
             this.tableLayoutPanel18.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel18.Name = "tableLayoutPanel18";
             this.tableLayoutPanel18.RowCount = 2;
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel18.Size = new System.Drawing.Size(1263, 681);
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(1398, 709);
             this.tableLayoutPanel18.TabIndex = 1;
             // 
             // label27
@@ -2425,7 +2434,7 @@
             this.label27.Location = new System.Drawing.Point(2, 0);
             this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(1259, 102);
+            this.label27.Size = new System.Drawing.Size(1394, 106);
             this.label27.TabIndex = 0;
             this.label27.Text = "Schedule";
             this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2435,10 +2444,10 @@
             this.panel12.BackColor = System.Drawing.Color.White;
             this.panel12.Controls.Add(this.tableLayoutPanel19);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(2, 104);
+            this.panel12.Location = new System.Drawing.Point(2, 108);
             this.panel12.Margin = new System.Windows.Forms.Padding(2);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(1259, 575);
+            this.panel12.Size = new System.Drawing.Size(1394, 599);
             this.panel12.TabIndex = 1;
             // 
             // tableLayoutPanel19
@@ -2452,13 +2461,13 @@
             this.tableLayoutPanel19.Name = "tableLayoutPanel19";
             this.tableLayoutPanel19.RowCount = 1;
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 449F));
-            this.tableLayoutPanel19.Size = new System.Drawing.Size(1259, 575);
+            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 575F));
+            this.tableLayoutPanel19.Size = new System.Drawing.Size(1394, 599);
             this.tableLayoutPanel19.TabIndex = 0;
             // 
             // panel13
             // 
-            this.panel13.Controls.Add(this.listBox1);
+            this.panel13.Controls.Add(this.pnlWeekDayWorkShift);
             this.panel13.Controls.Add(this.panel15);
             this.panel13.Controls.Add(this.flDays);
             this.panel13.Controls.Add(this.panel11);
@@ -2467,7 +2476,7 @@
             this.panel13.Location = new System.Drawing.Point(2, 2);
             this.panel13.Margin = new System.Windows.Forms.Padding(2);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(1255, 571);
+            this.panel13.Size = new System.Drawing.Size(1390, 595);
             this.panel13.TabIndex = 1;
             // 
             // panel15
@@ -2581,7 +2590,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.flDays.Location = new System.Drawing.Point(0, 90);
             this.flDays.Name = "flDays";
-            this.flDays.Size = new System.Drawing.Size(1024, 483);
+            this.flDays.Size = new System.Drawing.Size(1024, 507);
             this.flDays.TabIndex = 14;
             // 
             // panel11
@@ -2653,7 +2662,7 @@
             this.tabRestockReq.Margin = new System.Windows.Forms.Padding(2);
             this.tabRestockReq.Name = "tabRestockReq";
             this.tabRestockReq.Padding = new System.Windows.Forms.Padding(2);
-            this.tabRestockReq.Size = new System.Drawing.Size(963, 540);
+            this.tabRestockReq.Size = new System.Drawing.Size(1636, 689);
             this.tabRestockReq.TabIndex = 4;
             this.tabRestockReq.Text = "RestockRequest";
             this.tabRestockReq.UseVisualStyleBackColor = true;
@@ -2672,7 +2681,7 @@
             this.tableLayoutPanel21.Name = "tableLayoutPanel21";
             this.tableLayoutPanel21.RowCount = 1;
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel21.Size = new System.Drawing.Size(959, 536);
+            this.tableLayoutPanel21.Size = new System.Drawing.Size(1632, 685);
             this.tableLayoutPanel21.TabIndex = 19;
             // 
             // tableLayoutPanel22
@@ -2697,7 +2706,7 @@
             this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel22.Size = new System.Drawing.Size(210, 532);
+            this.tableLayoutPanel22.Size = new System.Drawing.Size(361, 681);
             this.tableLayoutPanel22.TabIndex = 0;
             // 
             // btnLogOutTABrestock
@@ -2722,14 +2731,14 @@
             this.btnLogOutTABrestock.IconVisible = false;
             this.btnLogOutTABrestock.IconZoom = 90D;
             this.btnLogOutTABrestock.IsTab = false;
-            this.btnLogOutTABrestock.Location = new System.Drawing.Point(4, 479);
+            this.btnLogOutTABrestock.Location = new System.Drawing.Point(4, 616);
             this.btnLogOutTABrestock.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogOutTABrestock.Name = "btnLogOutTABrestock";
             this.btnLogOutTABrestock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABrestock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnLogOutTABrestock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogOutTABrestock.selected = false;
-            this.btnLogOutTABrestock.Size = new System.Drawing.Size(202, 49);
+            this.btnLogOutTABrestock.Size = new System.Drawing.Size(353, 61);
             this.btnLogOutTABrestock.TabIndex = 8;
             this.btnLogOutTABrestock.Text = "LOG OUT";
             this.btnLogOutTABrestock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2759,14 +2768,14 @@
             this.btnEmployeeManagementTABrestock.IconVisible = false;
             this.btnEmployeeManagementTABrestock.IconZoom = 90D;
             this.btnEmployeeManagementTABrestock.IsTab = false;
-            this.btnEmployeeManagementTABrestock.Location = new System.Drawing.Point(4, 163);
+            this.btnEmployeeManagementTABrestock.Location = new System.Drawing.Point(4, 208);
             this.btnEmployeeManagementTABrestock.Margin = new System.Windows.Forms.Padding(4);
             this.btnEmployeeManagementTABrestock.Name = "btnEmployeeManagementTABrestock";
             this.btnEmployeeManagementTABrestock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnEmployeeManagementTABrestock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnEmployeeManagementTABrestock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEmployeeManagementTABrestock.selected = false;
-            this.btnEmployeeManagementTABrestock.Size = new System.Drawing.Size(202, 71);
+            this.btnEmployeeManagementTABrestock.Size = new System.Drawing.Size(353, 94);
             this.btnEmployeeManagementTABrestock.TabIndex = 5;
             this.btnEmployeeManagementTABrestock.Text = "Employee Management";
             this.btnEmployeeManagementTABrestock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2781,7 +2790,7 @@
             this.pictureBox5.Location = new System.Drawing.Point(2, 2);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(206, 155);
+            this.pictureBox5.Size = new System.Drawing.Size(357, 200);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
@@ -2808,14 +2817,14 @@
             this.btnScheduleTABrestock.IconVisible = false;
             this.btnScheduleTABrestock.IconZoom = 90D;
             this.btnScheduleTABrestock.IsTab = false;
-            this.btnScheduleTABrestock.Location = new System.Drawing.Point(4, 242);
+            this.btnScheduleTABrestock.Location = new System.Drawing.Point(4, 310);
             this.btnScheduleTABrestock.Margin = new System.Windows.Forms.Padding(4);
             this.btnScheduleTABrestock.Name = "btnScheduleTABrestock";
             this.btnScheduleTABrestock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnScheduleTABrestock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnScheduleTABrestock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnScheduleTABrestock.selected = false;
-            this.btnScheduleTABrestock.Size = new System.Drawing.Size(202, 71);
+            this.btnScheduleTABrestock.Size = new System.Drawing.Size(353, 94);
             this.btnScheduleTABrestock.TabIndex = 2;
             this.btnScheduleTABrestock.Text = "Schedule";
             this.btnScheduleTABrestock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2845,14 +2854,14 @@
             this.btnRestockReqTABrestock.IconVisible = false;
             this.btnRestockReqTABrestock.IconZoom = 90D;
             this.btnRestockReqTABrestock.IsTab = false;
-            this.btnRestockReqTABrestock.Location = new System.Drawing.Point(4, 321);
+            this.btnRestockReqTABrestock.Location = new System.Drawing.Point(4, 412);
             this.btnRestockReqTABrestock.Margin = new System.Windows.Forms.Padding(4);
             this.btnRestockReqTABrestock.Name = "btnRestockReqTABrestock";
             this.btnRestockReqTABrestock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnRestockReqTABrestock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnRestockReqTABrestock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnRestockReqTABrestock.selected = false;
-            this.btnRestockReqTABrestock.Size = new System.Drawing.Size(202, 71);
+            this.btnRestockReqTABrestock.Size = new System.Drawing.Size(353, 94);
             this.btnRestockReqTABrestock.TabIndex = 3;
             this.btnRestockReqTABrestock.Text = "Restock Request";
             this.btnRestockReqTABrestock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2881,14 +2890,14 @@
             this.btnDepartManageTABrestock.IconVisible = false;
             this.btnDepartManageTABrestock.IconZoom = 90D;
             this.btnDepartManageTABrestock.IsTab = false;
-            this.btnDepartManageTABrestock.Location = new System.Drawing.Point(4, 400);
+            this.btnDepartManageTABrestock.Location = new System.Drawing.Point(4, 514);
             this.btnDepartManageTABrestock.Margin = new System.Windows.Forms.Padding(4);
             this.btnDepartManageTABrestock.Name = "btnDepartManageTABrestock";
             this.btnDepartManageTABrestock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnDepartManageTABrestock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnDepartManageTABrestock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnDepartManageTABrestock.selected = false;
-            this.btnDepartManageTABrestock.Size = new System.Drawing.Size(202, 71);
+            this.btnDepartManageTABrestock.Size = new System.Drawing.Size(353, 94);
             this.btnDepartManageTABrestock.TabIndex = 4;
             this.btnDepartManageTABrestock.Text = "Department Management";
             this.btnDepartManageTABrestock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2904,13 +2913,13 @@
             this.tableLayoutPanel23.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel23.Controls.Add(this.panel3, 0, 1);
             this.tableLayoutPanel23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel23.Location = new System.Drawing.Point(216, 2);
+            this.tableLayoutPanel23.Location = new System.Drawing.Point(367, 2);
             this.tableLayoutPanel23.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel23.Name = "tableLayoutPanel23";
             this.tableLayoutPanel23.RowCount = 2;
             this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel23.Size = new System.Drawing.Size(741, 532);
+            this.tableLayoutPanel23.Size = new System.Drawing.Size(1263, 681);
             this.tableLayoutPanel23.TabIndex = 1;
             // 
             // label2
@@ -2923,7 +2932,7 @@
             this.label2.Location = new System.Drawing.Point(2, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(737, 79);
+            this.label2.Size = new System.Drawing.Size(1259, 102);
             this.label2.TabIndex = 0;
             this.label2.Text = "Restock Requests";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2933,10 +2942,10 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.tableLayoutPanel24);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(2, 81);
+            this.panel3.Location = new System.Drawing.Point(2, 104);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(737, 449);
+            this.panel3.Size = new System.Drawing.Size(1259, 575);
             this.panel3.TabIndex = 1;
             // 
             // tableLayoutPanel24
@@ -2951,7 +2960,7 @@
             this.tableLayoutPanel24.RowCount = 1;
             this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 449F));
-            this.tableLayoutPanel24.Size = new System.Drawing.Size(737, 449);
+            this.tableLayoutPanel24.Size = new System.Drawing.Size(1259, 575);
             this.tableLayoutPanel24.TabIndex = 0;
             // 
             // panel16
@@ -2962,7 +2971,7 @@
             this.panel16.Location = new System.Drawing.Point(2, 2);
             this.panel16.Margin = new System.Windows.Forms.Padding(2);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(733, 445);
+            this.panel16.Size = new System.Drawing.Size(1255, 571);
             this.panel16.TabIndex = 1;
             // 
             // checkedListBox1
@@ -2974,7 +2983,7 @@
             this.checkedListBox1.Location = new System.Drawing.Point(68, 11);
             this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(576, 184);
+            this.checkedListBox1.Size = new System.Drawing.Size(1098, 304);
             this.checkedListBox1.TabIndex = 2;
             // 
             // tabDepartManage
@@ -2984,7 +2993,7 @@
             this.tabDepartManage.Margin = new System.Windows.Forms.Padding(2);
             this.tabDepartManage.Name = "tabDepartManage";
             this.tabDepartManage.Padding = new System.Windows.Forms.Padding(2);
-            this.tabDepartManage.Size = new System.Drawing.Size(963, 540);
+            this.tabDepartManage.Size = new System.Drawing.Size(1636, 689);
             this.tabDepartManage.TabIndex = 5;
             this.tabDepartManage.Text = "DepartmentManagement";
             this.tabDepartManage.UseVisualStyleBackColor = true;
@@ -3003,7 +3012,7 @@
             this.tableLayoutPanel26.Name = "tableLayoutPanel26";
             this.tableLayoutPanel26.RowCount = 1;
             this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel26.Size = new System.Drawing.Size(959, 536);
+            this.tableLayoutPanel26.Size = new System.Drawing.Size(1632, 685);
             this.tableLayoutPanel26.TabIndex = 19;
             // 
             // tableLayoutPanel27
@@ -3028,7 +3037,7 @@
             this.tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel27.Size = new System.Drawing.Size(210, 532);
+            this.tableLayoutPanel27.Size = new System.Drawing.Size(361, 681);
             this.tableLayoutPanel27.TabIndex = 0;
             // 
             // btnLogOutTABdepart
@@ -3053,14 +3062,14 @@
             this.btnLogOutTABdepart.IconVisible = false;
             this.btnLogOutTABdepart.IconZoom = 90D;
             this.btnLogOutTABdepart.IsTab = false;
-            this.btnLogOutTABdepart.Location = new System.Drawing.Point(4, 479);
+            this.btnLogOutTABdepart.Location = new System.Drawing.Point(4, 616);
             this.btnLogOutTABdepart.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogOutTABdepart.Name = "btnLogOutTABdepart";
             this.btnLogOutTABdepart.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABdepart.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnLogOutTABdepart.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogOutTABdepart.selected = false;
-            this.btnLogOutTABdepart.Size = new System.Drawing.Size(202, 49);
+            this.btnLogOutTABdepart.Size = new System.Drawing.Size(353, 61);
             this.btnLogOutTABdepart.TabIndex = 8;
             this.btnLogOutTABdepart.Text = "LOG OUT";
             this.btnLogOutTABdepart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3090,14 +3099,14 @@
             this.btnEmployeeManageTABdepart.IconVisible = false;
             this.btnEmployeeManageTABdepart.IconZoom = 90D;
             this.btnEmployeeManageTABdepart.IsTab = false;
-            this.btnEmployeeManageTABdepart.Location = new System.Drawing.Point(4, 163);
+            this.btnEmployeeManageTABdepart.Location = new System.Drawing.Point(4, 208);
             this.btnEmployeeManageTABdepart.Margin = new System.Windows.Forms.Padding(4);
             this.btnEmployeeManageTABdepart.Name = "btnEmployeeManageTABdepart";
             this.btnEmployeeManageTABdepart.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnEmployeeManageTABdepart.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnEmployeeManageTABdepart.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEmployeeManageTABdepart.selected = false;
-            this.btnEmployeeManageTABdepart.Size = new System.Drawing.Size(202, 71);
+            this.btnEmployeeManageTABdepart.Size = new System.Drawing.Size(353, 94);
             this.btnEmployeeManageTABdepart.TabIndex = 5;
             this.btnEmployeeManageTABdepart.Text = "Employee Management";
             this.btnEmployeeManageTABdepart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3112,7 +3121,7 @@
             this.pictureBox6.Location = new System.Drawing.Point(2, 2);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(206, 155);
+            this.pictureBox6.Size = new System.Drawing.Size(357, 200);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 0;
             this.pictureBox6.TabStop = false;
@@ -3139,14 +3148,14 @@
             this.btnScheduleTABdepart.IconVisible = false;
             this.btnScheduleTABdepart.IconZoom = 90D;
             this.btnScheduleTABdepart.IsTab = false;
-            this.btnScheduleTABdepart.Location = new System.Drawing.Point(4, 242);
+            this.btnScheduleTABdepart.Location = new System.Drawing.Point(4, 310);
             this.btnScheduleTABdepart.Margin = new System.Windows.Forms.Padding(4);
             this.btnScheduleTABdepart.Name = "btnScheduleTABdepart";
             this.btnScheduleTABdepart.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnScheduleTABdepart.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnScheduleTABdepart.OnHoverTextColor = System.Drawing.Color.White;
             this.btnScheduleTABdepart.selected = false;
-            this.btnScheduleTABdepart.Size = new System.Drawing.Size(202, 71);
+            this.btnScheduleTABdepart.Size = new System.Drawing.Size(353, 94);
             this.btnScheduleTABdepart.TabIndex = 2;
             this.btnScheduleTABdepart.Text = "Schedule";
             this.btnScheduleTABdepart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3176,14 +3185,14 @@
             this.btnRestockReqTABdepart.IconVisible = false;
             this.btnRestockReqTABdepart.IconZoom = 90D;
             this.btnRestockReqTABdepart.IsTab = false;
-            this.btnRestockReqTABdepart.Location = new System.Drawing.Point(4, 321);
+            this.btnRestockReqTABdepart.Location = new System.Drawing.Point(4, 412);
             this.btnRestockReqTABdepart.Margin = new System.Windows.Forms.Padding(4);
             this.btnRestockReqTABdepart.Name = "btnRestockReqTABdepart";
             this.btnRestockReqTABdepart.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnRestockReqTABdepart.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnRestockReqTABdepart.OnHoverTextColor = System.Drawing.Color.White;
             this.btnRestockReqTABdepart.selected = false;
-            this.btnRestockReqTABdepart.Size = new System.Drawing.Size(202, 71);
+            this.btnRestockReqTABdepart.Size = new System.Drawing.Size(353, 94);
             this.btnRestockReqTABdepart.TabIndex = 3;
             this.btnRestockReqTABdepart.Text = "Restock Request";
             this.btnRestockReqTABdepart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3213,14 +3222,14 @@
             this.btnDepartmentTABdepartManage.IconVisible = false;
             this.btnDepartmentTABdepartManage.IconZoom = 90D;
             this.btnDepartmentTABdepartManage.IsTab = false;
-            this.btnDepartmentTABdepartManage.Location = new System.Drawing.Point(4, 400);
+            this.btnDepartmentTABdepartManage.Location = new System.Drawing.Point(4, 514);
             this.btnDepartmentTABdepartManage.Margin = new System.Windows.Forms.Padding(4);
             this.btnDepartmentTABdepartManage.Name = "btnDepartmentTABdepartManage";
             this.btnDepartmentTABdepartManage.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnDepartmentTABdepartManage.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnDepartmentTABdepartManage.OnHoverTextColor = System.Drawing.Color.White;
             this.btnDepartmentTABdepartManage.selected = false;
-            this.btnDepartmentTABdepartManage.Size = new System.Drawing.Size(202, 71);
+            this.btnDepartmentTABdepartManage.Size = new System.Drawing.Size(353, 94);
             this.btnDepartmentTABdepartManage.TabIndex = 4;
             this.btnDepartmentTABdepartManage.Text = "Department Management";
             this.btnDepartmentTABdepartManage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3235,13 +3244,13 @@
             this.tableLayoutPanel28.Controls.Add(this.label46, 0, 0);
             this.tableLayoutPanel28.Controls.Add(this.panel19, 0, 1);
             this.tableLayoutPanel28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel28.Location = new System.Drawing.Point(216, 2);
+            this.tableLayoutPanel28.Location = new System.Drawing.Point(367, 2);
             this.tableLayoutPanel28.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel28.Name = "tableLayoutPanel28";
             this.tableLayoutPanel28.RowCount = 2;
             this.tableLayoutPanel28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel28.Size = new System.Drawing.Size(741, 532);
+            this.tableLayoutPanel28.Size = new System.Drawing.Size(1263, 681);
             this.tableLayoutPanel28.TabIndex = 1;
             // 
             // label46
@@ -3254,7 +3263,7 @@
             this.label46.Location = new System.Drawing.Point(2, 0);
             this.label46.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(737, 79);
+            this.label46.Size = new System.Drawing.Size(1259, 102);
             this.label46.TabIndex = 0;
             this.label46.Text = "Department Managment";
             this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3264,10 +3273,10 @@
             this.panel19.BackColor = System.Drawing.Color.White;
             this.panel19.Controls.Add(this.tableLayoutPanel29);
             this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel19.Location = new System.Drawing.Point(2, 81);
+            this.panel19.Location = new System.Drawing.Point(2, 104);
             this.panel19.Margin = new System.Windows.Forms.Padding(2);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(737, 449);
+            this.panel19.Size = new System.Drawing.Size(1259, 575);
             this.panel19.TabIndex = 1;
             // 
             // tableLayoutPanel29
@@ -3282,7 +3291,7 @@
             this.tableLayoutPanel29.RowCount = 1;
             this.tableLayoutPanel29.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel29.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel29.Size = new System.Drawing.Size(737, 449);
+            this.tableLayoutPanel29.Size = new System.Drawing.Size(1259, 575);
             this.tableLayoutPanel29.TabIndex = 0;
             // 
             // panel20
@@ -3294,7 +3303,7 @@
             this.panel20.Location = new System.Drawing.Point(2, 2);
             this.panel20.Margin = new System.Windows.Forms.Padding(2);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(733, 445);
+            this.panel20.Size = new System.Drawing.Size(1255, 571);
             this.panel20.TabIndex = 1;
             // 
             // btnCreateDepartment
@@ -3319,7 +3328,7 @@
             this.btnCreateDepartment.IconVisible = false;
             this.btnCreateDepartment.IconZoom = 90D;
             this.btnCreateDepartment.IsTab = false;
-            this.btnCreateDepartment.Location = new System.Drawing.Point(505, 53);
+            this.btnCreateDepartment.Location = new System.Drawing.Point(1027, 116);
             this.btnCreateDepartment.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnCreateDepartment.Name = "btnCreateDepartment";
             this.btnCreateDepartment.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
@@ -3349,7 +3358,7 @@
             this.panel22.Location = new System.Drawing.Point(16, 16);
             this.panel22.Margin = new System.Windows.Forms.Padding(2);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(398, 414);
+            this.panel22.Size = new System.Drawing.Size(398, 540);
             this.panel22.TabIndex = 0;
             // 
             // lbDepartaments
@@ -3422,21 +3431,135 @@
             this.timerChangingMenusColor.Interval = 10;
             this.timerChangingMenusColor.Tick += new System.EventHandler(this.timerChangingMenusColor_Tick);
             // 
+            // pnlWeekDayWorkShift
+            // 
+            this.pnlWeekDayWorkShift.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlWeekDayWorkShift.BackColor = System.Drawing.Color.Gray;
+            this.pnlWeekDayWorkShift.Controls.Add(this.groupBox1);
+            this.pnlWeekDayWorkShift.Location = new System.Drawing.Point(950, 3);
+            this.pnlWeekDayWorkShift.Name = "pnlWeekDayWorkShift";
+            this.pnlWeekDayWorkShift.Size = new System.Drawing.Size(437, 592);
+            this.pnlWeekDayWorkShift.TabIndex = 16;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(18, 92);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(94, 21);
+            this.label24.TabIndex = 0;
+            this.label24.Text = "Work Shifts:";
+            // 
+            // cmbWorkShiftWeekDay
+            // 
+            this.cmbWorkShiftWeekDay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbWorkShiftWeekDay.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbWorkShiftWeekDay.FormattingEnabled = true;
+            this.cmbWorkShiftWeekDay.Items.AddRange(new object[] {
+            "Morning -> 7:00-12:00",
+            "Afternoon -> 12:00-17:00",
+            "Evening -> 17:00-22:00"});
+            this.cmbWorkShiftWeekDay.Location = new System.Drawing.Point(158, 89);
+            this.cmbWorkShiftWeekDay.Name = "cmbWorkShiftWeekDay";
+            this.cmbWorkShiftWeekDay.Size = new System.Drawing.Size(207, 29);
+            this.cmbWorkShiftWeekDay.TabIndex = 1;
+            // 
             // listBox1
             // 
+            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 18;
-            this.listBox1.Location = new System.Drawing.Point(1066, 193);
+            this.listBox1.ItemHeight = 21;
+            this.listBox1.Location = new System.Drawing.Point(22, 135);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(174, 184);
-            this.listBox1.TabIndex = 16;
+            this.listBox1.Size = new System.Drawing.Size(343, 130);
+            this.listBox1.TabIndex = 2;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.btnAssignShiftToEmployeeWeekDay);
+            this.groupBox1.Controls.Add(this.tbEmployeeIdWorkShift);
+            this.groupBox1.Controls.Add(this.listBox1);
+            this.groupBox1.Controls.Add(this.label25);
+            this.groupBox1.Controls.Add(this.label24);
+            this.groupBox1.Controls.Add(this.cmbWorkShiftWeekDay);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(19, 11);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(394, 366);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Assign Work Shift";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(18, 47);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(100, 21);
+            this.label25.TabIndex = 2;
+            this.label25.Text = "Employee ID:";
+            // 
+            // tbEmployeeIdWorkShift
+            // 
+            this.tbEmployeeIdWorkShift.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbEmployeeIdWorkShift.Location = new System.Drawing.Point(158, 44);
+            this.tbEmployeeIdWorkShift.Name = "tbEmployeeIdWorkShift";
+            this.tbEmployeeIdWorkShift.Size = new System.Drawing.Size(207, 28);
+            this.tbEmployeeIdWorkShift.TabIndex = 3;
+            // 
+            // btnAssignShiftToEmployeeWeekDay
+            // 
+            this.btnAssignShiftToEmployeeWeekDay.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnAssignShiftToEmployeeWeekDay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAssignShiftToEmployeeWeekDay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnAssignShiftToEmployeeWeekDay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAssignShiftToEmployeeWeekDay.BorderRadius = 0;
+            this.btnAssignShiftToEmployeeWeekDay.ButtonText = "Assign";
+            this.btnAssignShiftToEmployeeWeekDay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAssignShiftToEmployeeWeekDay.DisabledColor = System.Drawing.Color.Gray;
+            this.btnAssignShiftToEmployeeWeekDay.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnAssignShiftToEmployeeWeekDay.Iconimage = null;
+            this.btnAssignShiftToEmployeeWeekDay.Iconimage_right = null;
+            this.btnAssignShiftToEmployeeWeekDay.Iconimage_right_Selected = null;
+            this.btnAssignShiftToEmployeeWeekDay.Iconimage_Selected = null;
+            this.btnAssignShiftToEmployeeWeekDay.IconMarginLeft = 0;
+            this.btnAssignShiftToEmployeeWeekDay.IconMarginRight = 0;
+            this.btnAssignShiftToEmployeeWeekDay.IconRightVisible = false;
+            this.btnAssignShiftToEmployeeWeekDay.IconRightZoom = 0D;
+            this.btnAssignShiftToEmployeeWeekDay.IconVisible = false;
+            this.btnAssignShiftToEmployeeWeekDay.IconZoom = 90D;
+            this.btnAssignShiftToEmployeeWeekDay.IsTab = false;
+            this.btnAssignShiftToEmployeeWeekDay.Location = new System.Drawing.Point(22, 293);
+            this.btnAssignShiftToEmployeeWeekDay.Margin = new System.Windows.Forms.Padding(6, 13, 6, 13);
+            this.btnAssignShiftToEmployeeWeekDay.Name = "btnAssignShiftToEmployeeWeekDay";
+            this.btnAssignShiftToEmployeeWeekDay.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnAssignShiftToEmployeeWeekDay.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnAssignShiftToEmployeeWeekDay.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnAssignShiftToEmployeeWeekDay.selected = false;
+            this.btnAssignShiftToEmployeeWeekDay.Size = new System.Drawing.Size(343, 41);
+            this.btnAssignShiftToEmployeeWeekDay.TabIndex = 5;
+            this.btnAssignShiftToEmployeeWeekDay.Text = "Assign";
+            this.btnAssignShiftToEmployeeWeekDay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAssignShiftToEmployeeWeekDay.Textcolor = System.Drawing.Color.White;
+            this.btnAssignShiftToEmployeeWeekDay.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // MainAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1644, 715);
+            this.ClientSize = new System.Drawing.Size(1818, 743);
             this.Controls.Add(this.tabControl1);
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "MainAdmin";
@@ -3514,6 +3637,9 @@
             this.panel20.ResumeLayout(false);
             this.panel22.ResumeLayout(false);
             this.panel22.PerformLayout();
+            this.pnlWeekDayWorkShift.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3677,6 +3803,13 @@
         private System.Windows.Forms.TextBox tbMinNr;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ListBox lbDepartaments;
+        private System.Windows.Forms.Panel pnlWeekDayWorkShift;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.ComboBox cmbWorkShiftWeekDay;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.TextBox tbEmployeeIdWorkShift;
+        private System.Windows.Forms.Label label25;
+        private Bunifu.Framework.UI.BunifuFlatButton btnAssignShiftToEmployeeWeekDay;
     }
 }

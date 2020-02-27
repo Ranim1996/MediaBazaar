@@ -182,7 +182,7 @@ namespace Media_Bazaar
             list = calendar.listFlDay;
             foreach(FlowLayoutPanel flow in list)
             {
-                listBox1.Items.Add(flow.Tag.ToString());
+                //listBox1.Items.Add(flow.Tag.ToString());
             }
             //listBox1.Items.Add(calendar.GetFirstDayOfMonth);
             //listBox1.Items.Add(calendar.GetTotalDaysOfCurrentDate());  
