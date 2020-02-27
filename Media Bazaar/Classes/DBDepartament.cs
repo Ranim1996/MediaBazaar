@@ -20,5 +20,10 @@ namespace Media_Bazaar.Classes
                 return $"{DepartamentName} Min: {MinNumOfEmployees}, Max: {MaxNumOfEmployees})";
             }
         }       
+
+        public string GetName()
+        {
+            return DepartamentName;
+        }
     }
 }
