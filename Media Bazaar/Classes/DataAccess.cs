@@ -51,7 +51,7 @@ namespace Media_Bazaar.Classes
 
 
 
-        public void FireEmployeeByID(string reasons,int employeeID)
+        public void FireEmployeeByID(string reasons, int employeeID)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
@@ -82,10 +82,10 @@ namespace Media_Bazaar.Classes
 
         //METHODS FOR DEPARTAMENTS
 
-        public void InsertDepartament(string departamentName,int minNumOfEmployees,int maxNumOfEmployees)
+        public void InsertDepartament(string departamentName, int minNumOfEmployees, int maxNumOfEmployees)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {               
+            {
                 connection.Execute($"INSERT INTO Departament(DepartamentName, MinNumOfEmployees, MaxNumOfEmployees) VALUES ('{ departamentName }', '{minNumOfEmployees}' , '{maxNumOfEmployees}');");
 
             }
@@ -99,5 +99,42 @@ namespace Media_Bazaar.Classes
                 return output;
             }
         }
-    }    
+
+
+        public void AssignEmployeeToDepartament(int employeeID, string departament)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                connection.Execute($"UPDATE Employee SET Departament ='{departament}' WHERE EmployeeID = '{employeeID}'; ");
+            }
+
+        }
+
+        //METHODS FOR RESTOCK
+
+        public List<DBRestockRequest> GetAllRequests()
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<DBRestockRequest>($"SELECT * FROM RestockRequest").ToList();
+                return output;
+            }
+        }
+
+        public void ConfirmRequest(int requestID)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                connection.Execute($"UPDATE RestockRequest SET AdminConfirmation ='CONFIRMED' WHERE RequestID = '{requestID}'; ");
+            }
+        }
+
+        public void RejectRequest(int requestID)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                connection.Execute($"UPDATE RestockRequest SET AdminConfirmation ='REJECTED' WHERE RequestID = '{requestID}'; ");
+            }
+        }
+    }
 }

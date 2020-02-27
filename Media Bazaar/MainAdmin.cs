@@ -21,8 +21,11 @@ namespace Media_Bazaar
         List<DBEmployee> ReleasedEmployees = new List<DBEmployee>();
         List<DBEmployee> NotReleasedEmployees = new List<DBEmployee>();
         List<DBDepartament> departaments = new List<DBDepartament>();
+        List<DBRestockRequest> restockRequests = new List<DBRestockRequest>();
+
 
         List<int> employeesID = new List<int>();
+        List<int> restockID = new List<int>();
         //holds the calendar
         Media_Bazaar.Classes.Calendar calendar = new Classes.Calendar();
 
@@ -34,6 +37,7 @@ namespace Media_Bazaar
             InitializeComponent();
             UpdateEmployeeInfo();
             UpdateDepartamentInfo();
+            UpdateRestockInfo();
         }
 
         private void MainAdmin_Load(object sender, EventArgs e)
@@ -84,6 +88,7 @@ namespace Media_Bazaar
         private void btnRestockTABaddProfile_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedTab = tabRestockReq;
+            UpdateRestockInfo();
         }
 
         private void btnDepartManageTABaddProfile_Click(object sender, EventArgs e)
@@ -163,15 +168,15 @@ namespace Media_Bazaar
         {
             calendar.NextMonth(lblMonthAndYear);
         }
-     
+
         private void tabControl1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            List<FlowLayoutPanel> list = new List<FlowLayoutPanel>();            
+            List<FlowLayoutPanel> list = new List<FlowLayoutPanel>();
             list = calendar.listFlDay;
             foreach (FlowLayoutPanel fl in list)
-            {   
+            {
                 fl.Click += new System.EventHandler(this.listFlDays_Click);
-                fl.MouseHover += new System.EventHandler(this.listFlDays_MouseHover);               
+                fl.MouseHover += new System.EventHandler(this.listFlDays_MouseHover);
             }
         }
         private void listFlDays_Click(object sender, EventArgs e)
@@ -180,7 +185,7 @@ namespace Media_Bazaar
             FlowLayoutPanel fl = (FlowLayoutPanel)sender;
             List<FlowLayoutPanel> list = new List<FlowLayoutPanel>();
             list = calendar.listFlDay;
-            foreach(FlowLayoutPanel flow in list)
+            foreach (FlowLayoutPanel flow in list)
             {
                 //listBox1.Items.Add(flow.Tag.ToString());
             }
@@ -202,15 +207,15 @@ namespace Media_Bazaar
 
         private void btnAddNewProfile_Click_1(object sender, EventArgs e)
         {
-            string fName="";
-            string lName="";
-            string dateOfBirth="";
-            string email="";
-            string phoneNr="";
-            string nationality="";
-            string username="";
-            string password="";
-            JobPosition pos=JobPosition.ADMINISTRATOR;                       
+            string fName = "";
+            string lName = "";
+            string dateOfBirth = "";
+            string email = "";
+            string phoneNr = "";
+            string nationality = "";
+            string username = "";
+            string password = "";
+            JobPosition pos = JobPosition.ADMINISTRATOR;
 
             if (tbFirstName.Text != "" && tbLastName.Text != "" && tbDateOfBirth.Text != "" && tbEmail.Text != "" && tbEmail.Text != "" && tbPhoneNr.Text != "" && tbNationality.Text != "")
             {
@@ -225,7 +230,7 @@ namespace Media_Bazaar
                 {
                     //administrator
                     pos = JobPosition.ADMINISTRATOR;
-                    username = autoGenerateUsername(fName, lName, pos);                 
+                    username = autoGenerateUsername(fName, lName, pos);
                     password = autoGeneratePassword();
                     DataAccess db = new DataAccess();
                     db.InsertEmployee(fName, lName, dateOfBirth, email, phoneNr, nationality, pos.ToString(), username, password);
@@ -315,31 +320,51 @@ namespace Media_Bazaar
         {
             DataAccess db = new DataAccess();
             NotReleasedEmployees = db.GetNotFiredEmployees();
-            foreach(DBEmployee e in NotReleasedEmployees)
+            foreach (DBEmployee e in NotReleasedEmployees)
             {
                 employeesID.Add(e.GetID());
             }
             checkedListBox2.DataSource = NotReleasedEmployees;
             checkedListBox2.DisplayMember = "FullInfo";
+
+            checkedListBox3.DataSource = NotReleasedEmployees;
+            checkedListBox3.DisplayMember = "FullInfo";
         }
 
         private void UpdateDepartamentInfo()
         {
             DataAccess db = new DataAccess();
+
             departaments = db.GetAllDepartaments();
-           
             lbDepartaments.DataSource = departaments;
             lbDepartaments.DisplayMember = "FullInfo";
+
+            foreach (DBDepartament dBD in departaments)
+            {
+                cmbDepartments.Items.Add(dBD.GetName());
+            }
+        }
+
+        private void UpdateRestockInfo()
+        {
+            DataAccess db = new DataAccess();
+            restockRequests = db.GetAllRequests();
+            foreach (DBRestockRequest rr in restockRequests)
+            {
+                restockID.Add(rr.GetID());
+            }
+            checkedListBox1.DataSource = restockRequests;
+            checkedListBox1.DisplayMember = "FullInfo";
         }
 
 
         private void btnRemoveProfile_Click(object sender, EventArgs e)
         {
-            
-            if (checkedListBox2.CheckedItems.Count ==0 )
+
+            if (checkedListBox2.CheckedItems.Count == 0)
             {
                 MessageBox.Show("Please select employee");
-                
+
             }
             else
             {
@@ -353,20 +378,19 @@ namespace Media_Bazaar
                     DataAccess db = new DataAccess();
                     foreach (int i in employeesID)
                     {
-                        if(checkedListBox2.SelectedItem != null)
+                        if (checkedListBox2.SelectedItem != null)
                         {
                             string empl = checkedListBox2.GetItemText(checkedListBox2.SelectedItem);
-                            if(empl.Contains($"ID:{i}"))
+                            if (empl.Contains($"ID:{i}"))
                             {
-                                db.FireEmployeeByID(tbExtraInformationTABremoveProfile.Text,i);
-                                MessageBox.Show("yes");
+                                db.FireEmployeeByID(tbExtraInformationTABremoveProfile.Text, i);
                             }
-                            
+
 
                         }
-                       
+
                     }
-                    
+
 
                 }
             }
@@ -416,6 +440,102 @@ namespace Media_Bazaar
 
         }
 
-        
+        private void btnAssignToDepartment_Click(object sender, EventArgs e)
+        {
+
+            if (checkedListBox3.CheckedItems.Count == 0)
+            {
+                MessageBox.Show("Please select employee");
+
+            }
+            else
+            {
+                if (cmbDepartments.SelectedItem == null)
+                {
+                    MessageBox.Show("Please select departament");
+                }
+                else
+                {
+                    DBEmployee temp = new DBEmployee();
+                    DataAccess db = new DataAccess();
+                    foreach (int i in employeesID)
+                    {
+                        if (checkedListBox3.SelectedItem != null)
+                        {
+                            string empl = checkedListBox3.GetItemText(checkedListBox3.SelectedItem);
+                            if (empl.Contains($"ID:{i}"))
+                            {
+                                db.AssignEmployeeToDepartament(i, cmbDepartments.SelectedItem.ToString());
+
+                            }
+
+
+                        }
+
+                    }
+
+
+                }
+            }
+            UpdateEmployeeInfo();
+        }
+
+        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        {
+
+            if (checkedListBox1.CheckedItems.Count == 0)
+            {
+                MessageBox.Show("Please select request");
+
+            }
+            else
+            {
+                DBRestockRequest temp = new DBRestockRequest();
+                DataAccess db = new DataAccess();
+                foreach (int i in restockID)
+                {
+                    if (checkedListBox1.SelectedItem != null)
+                    {
+                        string req = checkedListBox1.GetItemText(checkedListBox1.SelectedItem);
+                        if (req.Contains($"ID:{i}"))
+                        {
+                            db.ConfirmRequest(i);
+                        }
+                    }
+                }
+            }
+            UpdateRestockInfo();
+        }
+
+        private void btnRestockReqTABrestock_Click(object sender, EventArgs e)
+        {
+            UpdateRestockInfo();
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            if (checkedListBox1.CheckedItems.Count == 0)
+            {
+                MessageBox.Show("Please select request");
+
+            }
+            else
+            {
+                DBRestockRequest temp = new DBRestockRequest();
+                DataAccess db = new DataAccess();
+                foreach (int i in restockID)
+                {
+                    if (checkedListBox1.SelectedItem != null)
+                    {
+                        string req = checkedListBox1.GetItemText(checkedListBox1.SelectedItem);
+                        if (req.Contains($"ID:{i}"))
+                        {
+                            db.RejectRequest(i);
+                        }
+                    }
+                }
+            }
+            UpdateRestockInfo();
+        }
     }
 }
