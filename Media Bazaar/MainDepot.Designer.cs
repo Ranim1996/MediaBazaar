@@ -30,24 +30,24 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainDepot));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabMakeReq = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel27 = new System.Windows.Forms.TableLayoutPanel();
@@ -321,7 +321,7 @@
             this.btnLogOutTABrequest.IconZoom = 90D;
             this.btnLogOutTABrequest.IsTab = false;
             this.btnLogOutTABrequest.Location = new System.Drawing.Point(5, 444);
-            this.btnLogOutTABrequest.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnLogOutTABrequest.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogOutTABrequest.Name = "btnLogOutTABrequest";
             this.btnLogOutTABrequest.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABrequest.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -358,7 +358,7 @@
             this.btnMakeReqTABrequest.IconZoom = 90D;
             this.btnMakeReqTABrequest.IsTab = false;
             this.btnMakeReqTABrequest.Location = new System.Drawing.Point(5, 152);
-            this.btnMakeReqTABrequest.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnMakeReqTABrequest.Margin = new System.Windows.Forms.Padding(5);
             this.btnMakeReqTABrequest.Name = "btnMakeReqTABrequest";
             this.btnMakeReqTABrequest.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnMakeReqTABrequest.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -406,7 +406,7 @@
             this.btnIncomingStockTABrequest.IconZoom = 90D;
             this.btnIncomingStockTABrequest.IsTab = false;
             this.btnIncomingStockTABrequest.Location = new System.Drawing.Point(5, 225);
-            this.btnIncomingStockTABrequest.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnIncomingStockTABrequest.Margin = new System.Windows.Forms.Padding(5);
             this.btnIncomingStockTABrequest.Name = "btnIncomingStockTABrequest";
             this.btnIncomingStockTABrequest.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnIncomingStockTABrequest.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -443,7 +443,7 @@
             this.btnStockTABrequest.IconZoom = 90D;
             this.btnStockTABrequest.IsTab = false;
             this.btnStockTABrequest.Location = new System.Drawing.Point(5, 298);
-            this.btnStockTABrequest.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnStockTABrequest.Margin = new System.Windows.Forms.Padding(5);
             this.btnStockTABrequest.Name = "btnStockTABrequest";
             this.btnStockTABrequest.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnStockTABrequest.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -510,7 +510,7 @@
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
             this.tableLayoutPanel15.RowCount = 1;
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 409F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 414F));
             this.tableLayoutPanel15.Size = new System.Drawing.Size(906, 414);
             this.tableLayoutPanel15.TabIndex = 0;
             // 
@@ -585,7 +585,7 @@
             this.btnMakeRequest.IconZoom = 90D;
             this.btnMakeRequest.IsTab = false;
             this.btnMakeRequest.Location = new System.Drawing.Point(20, 166);
-            this.btnMakeRequest.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnMakeRequest.Margin = new System.Windows.Forms.Padding(5);
             this.btnMakeRequest.Name = "btnMakeRequest";
             this.btnMakeRequest.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnMakeRequest.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -706,7 +706,7 @@
             this.btnLogOutTABincomingStock.IconZoom = 90D;
             this.btnLogOutTABincomingStock.IsTab = false;
             this.btnLogOutTABincomingStock.Location = new System.Drawing.Point(5, 444);
-            this.btnLogOutTABincomingStock.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnLogOutTABincomingStock.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogOutTABincomingStock.Name = "btnLogOutTABincomingStock";
             this.btnLogOutTABincomingStock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABincomingStock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -743,7 +743,7 @@
             this.btnMakeReqTABincomingStock.IconZoom = 90D;
             this.btnMakeReqTABincomingStock.IsTab = false;
             this.btnMakeReqTABincomingStock.Location = new System.Drawing.Point(5, 152);
-            this.btnMakeReqTABincomingStock.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnMakeReqTABincomingStock.Margin = new System.Windows.Forms.Padding(5);
             this.btnMakeReqTABincomingStock.Name = "btnMakeReqTABincomingStock";
             this.btnMakeReqTABincomingStock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnMakeReqTABincomingStock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -792,7 +792,7 @@
             this.btnIncomingStockTABincomingStock.IconZoom = 90D;
             this.btnIncomingStockTABincomingStock.IsTab = false;
             this.btnIncomingStockTABincomingStock.Location = new System.Drawing.Point(5, 225);
-            this.btnIncomingStockTABincomingStock.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnIncomingStockTABincomingStock.Margin = new System.Windows.Forms.Padding(5);
             this.btnIncomingStockTABincomingStock.Name = "btnIncomingStockTABincomingStock";
             this.btnIncomingStockTABincomingStock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnIncomingStockTABincomingStock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -804,6 +804,7 @@
             this.btnIncomingStockTABincomingStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnIncomingStockTABincomingStock.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnIncomingStockTABincomingStock.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncomingStockTABincomingStock.Click += new System.EventHandler(this.btnIncomingStockTABincomingStock_Click);
             // 
             // btnStockTABincomingStock
             // 
@@ -828,7 +829,7 @@
             this.btnStockTABincomingStock.IconZoom = 90D;
             this.btnStockTABincomingStock.IsTab = false;
             this.btnStockTABincomingStock.Location = new System.Drawing.Point(5, 298);
-            this.btnStockTABincomingStock.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnStockTABincomingStock.Margin = new System.Windows.Forms.Padding(5);
             this.btnStockTABincomingStock.Name = "btnStockTABincomingStock";
             this.btnStockTABincomingStock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnStockTABincomingStock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -895,7 +896,7 @@
             this.tableLayoutPanel19.Name = "tableLayoutPanel19";
             this.tableLayoutPanel19.RowCount = 1;
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 409F));
+            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 414F));
             this.tableLayoutPanel19.Size = new System.Drawing.Size(906, 414);
             this.tableLayoutPanel19.TabIndex = 0;
             // 
@@ -1036,7 +1037,7 @@
             this.btnLogOutTABincomingStockDet.IconZoom = 90D;
             this.btnLogOutTABincomingStockDet.IsTab = false;
             this.btnLogOutTABincomingStockDet.Location = new System.Drawing.Point(5, 444);
-            this.btnLogOutTABincomingStockDet.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnLogOutTABincomingStockDet.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogOutTABincomingStockDet.Name = "btnLogOutTABincomingStockDet";
             this.btnLogOutTABincomingStockDet.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABincomingStockDet.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -1073,7 +1074,7 @@
             this.btnMakeReqTABincomingStockDet.IconZoom = 90D;
             this.btnMakeReqTABincomingStockDet.IsTab = false;
             this.btnMakeReqTABincomingStockDet.Location = new System.Drawing.Point(5, 152);
-            this.btnMakeReqTABincomingStockDet.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnMakeReqTABincomingStockDet.Margin = new System.Windows.Forms.Padding(5);
             this.btnMakeReqTABincomingStockDet.Name = "btnMakeReqTABincomingStockDet";
             this.btnMakeReqTABincomingStockDet.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnMakeReqTABincomingStockDet.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -1122,7 +1123,7 @@
             this.btnIncomingStockTABincomingStockDet.IconZoom = 90D;
             this.btnIncomingStockTABincomingStockDet.IsTab = false;
             this.btnIncomingStockTABincomingStockDet.Location = new System.Drawing.Point(5, 225);
-            this.btnIncomingStockTABincomingStockDet.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnIncomingStockTABincomingStockDet.Margin = new System.Windows.Forms.Padding(5);
             this.btnIncomingStockTABincomingStockDet.Name = "btnIncomingStockTABincomingStockDet";
             this.btnIncomingStockTABincomingStockDet.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnIncomingStockTABincomingStockDet.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -1159,7 +1160,7 @@
             this.btnStockTABincomingStockDet.IconZoom = 90D;
             this.btnStockTABincomingStockDet.IsTab = false;
             this.btnStockTABincomingStockDet.Location = new System.Drawing.Point(5, 298);
-            this.btnStockTABincomingStockDet.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnStockTABincomingStockDet.Margin = new System.Windows.Forms.Padding(5);
             this.btnStockTABincomingStockDet.Name = "btnStockTABincomingStockDet";
             this.btnStockTABincomingStockDet.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnStockTABincomingStockDet.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -1226,7 +1227,7 @@
             this.tableLayoutPanel23.Name = "tableLayoutPanel23";
             this.tableLayoutPanel23.RowCount = 1;
             this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 409F));
+            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 414F));
             this.tableLayoutPanel23.Size = new System.Drawing.Size(906, 414);
             this.tableLayoutPanel23.TabIndex = 0;
             // 
@@ -1330,7 +1331,7 @@
             this.btnLogOutTABstock.IconZoom = 90D;
             this.btnLogOutTABstock.IsTab = false;
             this.btnLogOutTABstock.Location = new System.Drawing.Point(5, 444);
-            this.btnLogOutTABstock.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnLogOutTABstock.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogOutTABstock.Name = "btnLogOutTABstock";
             this.btnLogOutTABstock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABstock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -1367,7 +1368,7 @@
             this.btnMakeReqTABstock.IconZoom = 90D;
             this.btnMakeReqTABstock.IsTab = false;
             this.btnMakeReqTABstock.Location = new System.Drawing.Point(5, 152);
-            this.btnMakeReqTABstock.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnMakeReqTABstock.Margin = new System.Windows.Forms.Padding(5);
             this.btnMakeReqTABstock.Name = "btnMakeReqTABstock";
             this.btnMakeReqTABstock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnMakeReqTABstock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -1416,7 +1417,7 @@
             this.btnIncomingStockTABstock.IconZoom = 90D;
             this.btnIncomingStockTABstock.IsTab = false;
             this.btnIncomingStockTABstock.Location = new System.Drawing.Point(5, 225);
-            this.btnIncomingStockTABstock.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnIncomingStockTABstock.Margin = new System.Windows.Forms.Padding(5);
             this.btnIncomingStockTABstock.Name = "btnIncomingStockTABstock";
             this.btnIncomingStockTABstock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnIncomingStockTABstock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -1453,7 +1454,7 @@
             this.btnStockTABstock.IconZoom = 90D;
             this.btnStockTABstock.IsTab = false;
             this.btnStockTABstock.Location = new System.Drawing.Point(5, 298);
-            this.btnStockTABstock.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnStockTABstock.Margin = new System.Windows.Forms.Padding(5);
             this.btnStockTABstock.Name = "btnStockTABstock";
             this.btnStockTABstock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnStockTABstock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -1519,7 +1520,7 @@
             this.tableLayoutPanel31.Name = "tableLayoutPanel31";
             this.tableLayoutPanel31.RowCount = 1;
             this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 409F));
+            this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 414F));
             this.tableLayoutPanel31.Size = new System.Drawing.Size(906, 414);
             this.tableLayoutPanel31.TabIndex = 0;
             // 
@@ -1660,7 +1661,7 @@
             this.btnLogOutTABstockInfo.IconZoom = 90D;
             this.btnLogOutTABstockInfo.IsTab = false;
             this.btnLogOutTABstockInfo.Location = new System.Drawing.Point(5, 444);
-            this.btnLogOutTABstockInfo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnLogOutTABstockInfo.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogOutTABstockInfo.Name = "btnLogOutTABstockInfo";
             this.btnLogOutTABstockInfo.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABstockInfo.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -1697,7 +1698,7 @@
             this.btnMakeReqTABstockInfo.IconZoom = 90D;
             this.btnMakeReqTABstockInfo.IsTab = false;
             this.btnMakeReqTABstockInfo.Location = new System.Drawing.Point(5, 152);
-            this.btnMakeReqTABstockInfo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnMakeReqTABstockInfo.Margin = new System.Windows.Forms.Padding(5);
             this.btnMakeReqTABstockInfo.Name = "btnMakeReqTABstockInfo";
             this.btnMakeReqTABstockInfo.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnMakeReqTABstockInfo.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -1746,7 +1747,7 @@
             this.btnIncomingStockTABstockInfo.IconZoom = 90D;
             this.btnIncomingStockTABstockInfo.IsTab = false;
             this.btnIncomingStockTABstockInfo.Location = new System.Drawing.Point(5, 225);
-            this.btnIncomingStockTABstockInfo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnIncomingStockTABstockInfo.Margin = new System.Windows.Forms.Padding(5);
             this.btnIncomingStockTABstockInfo.Name = "btnIncomingStockTABstockInfo";
             this.btnIncomingStockTABstockInfo.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnIncomingStockTABstockInfo.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -1783,7 +1784,7 @@
             this.btnStockTABstockInfo.IconZoom = 90D;
             this.btnStockTABstockInfo.IsTab = false;
             this.btnStockTABstockInfo.Location = new System.Drawing.Point(5, 298);
-            this.btnStockTABstockInfo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnStockTABstockInfo.Margin = new System.Windows.Forms.Padding(5);
             this.btnStockTABstockInfo.Name = "btnStockTABstockInfo";
             this.btnStockTABstockInfo.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnStockTABstockInfo.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -1850,7 +1851,7 @@
             this.tableLayoutPanel35.Name = "tableLayoutPanel35";
             this.tableLayoutPanel35.RowCount = 1;
             this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 409F));
+            this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 414F));
             this.tableLayoutPanel35.Size = new System.Drawing.Size(906, 414);
             this.tableLayoutPanel35.TabIndex = 0;
             // 
@@ -1951,16 +1952,16 @@
             // 
             this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            chartArea7.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.chart1.Legends.Add(legend7);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(69, 57);
             this.chart1.Name = "chart1";
-            series7.ChartArea = "ChartArea1";
-            series7.Legend = "Legend1";
-            series7.Name = "Series1";
-            this.chart1.Series.Add(series7);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(300, 241);
             this.chart1.TabIndex = 0;
             // 
@@ -1968,16 +1969,16 @@
             // 
             this.chart2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea8.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.chart2.Legends.Add(legend8);
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart2.Legends.Add(legend2);
             this.chart2.Location = new System.Drawing.Point(387, 57);
             this.chart2.Name = "chart2";
-            series8.ChartArea = "ChartArea1";
-            series8.Legend = "Legend1";
-            series8.Name = "Series1";
-            this.chart2.Series.Add(series8);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart2.Series.Add(series2);
             this.chart2.Size = new System.Drawing.Size(300, 241);
             this.chart2.TabIndex = 1;
             // 
@@ -2280,16 +2281,16 @@
             // 
             this.chart5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            chartArea9.Name = "ChartArea1";
-            this.chart5.ChartAreas.Add(chartArea9);
-            legend9.Name = "Legend1";
-            this.chart5.Legends.Add(legend9);
+            chartArea3.Name = "ChartArea1";
+            this.chart5.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart5.Legends.Add(legend3);
             this.chart5.Location = new System.Drawing.Point(86, 53);
             this.chart5.Name = "chart5";
-            series9.ChartArea = "ChartArea1";
-            series9.Legend = "Legend1";
-            series9.Name = "Series1";
-            this.chart5.Series.Add(series9);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chart5.Series.Add(series3);
             this.chart5.Size = new System.Drawing.Size(300, 300);
             this.chart5.TabIndex = 1;
             // 
@@ -2297,16 +2298,16 @@
             // 
             this.chart6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea10.Name = "ChartArea1";
-            this.chart6.ChartAreas.Add(chartArea10);
-            legend10.Name = "Legend1";
-            this.chart6.Legends.Add(legend10);
+            chartArea4.Name = "ChartArea1";
+            this.chart6.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chart6.Legends.Add(legend4);
             this.chart6.Location = new System.Drawing.Point(489, 53);
             this.chart6.Name = "chart6";
-            series10.ChartArea = "ChartArea1";
-            series10.Legend = "Legend1";
-            series10.Name = "Series1";
-            this.chart6.Series.Add(series10);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chart6.Series.Add(series4);
             this.chart6.Size = new System.Drawing.Size(300, 300);
             this.chart6.TabIndex = 2;
             // 
@@ -2609,16 +2610,16 @@
             // 
             this.chart3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            chartArea11.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea11);
-            legend11.Name = "Legend1";
-            this.chart3.Legends.Add(legend11);
+            chartArea5.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chart3.Legends.Add(legend5);
             this.chart3.Location = new System.Drawing.Point(101, 56);
             this.chart3.Name = "chart3";
-            series11.ChartArea = "ChartArea1";
-            series11.Legend = "Legend1";
-            series11.Name = "Series1";
-            this.chart3.Series.Add(series11);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chart3.Series.Add(series5);
             this.chart3.Size = new System.Drawing.Size(300, 300);
             this.chart3.TabIndex = 1;
             // 
@@ -2626,16 +2627,16 @@
             // 
             this.chart4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea12.Name = "ChartArea1";
-            this.chart4.ChartAreas.Add(chartArea12);
-            legend12.Name = "Legend1";
-            this.chart4.Legends.Add(legend12);
+            chartArea6.Name = "ChartArea1";
+            this.chart4.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chart4.Legends.Add(legend6);
             this.chart4.Location = new System.Drawing.Point(489, 56);
             this.chart4.Name = "chart4";
-            series12.ChartArea = "ChartArea1";
-            series12.Legend = "Legend1";
-            series12.Name = "Series1";
-            this.chart4.Series.Add(series12);
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chart4.Series.Add(series6);
             this.chart4.Size = new System.Drawing.Size(300, 300);
             this.chart4.TabIndex = 2;
             // 
@@ -2887,7 +2888,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1196, 528);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainDepot";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainDepot";

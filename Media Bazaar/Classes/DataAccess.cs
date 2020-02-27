@@ -121,6 +121,17 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        public List<DBRestockRequest> GetAllIncomingStockRequests(DateTime dt)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<DBRestockRequest>($"SELECT * FROM RestockRequest WHERE DateOfDelivery>='{dt}' AND AdminConfirmation ='CONFIRMED'").ToList();
+                return output;
+            }
+        }
+
+
+
         public void ConfirmRequest(int requestID)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))

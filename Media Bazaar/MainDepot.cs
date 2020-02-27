@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Media_Bazaar.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,15 +8,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.Mail;
 
 namespace Media_Bazaar
 {
     public partial class MainDepot : Form
     {
-
+        List<DBRestockRequest> incomingRestockRequests = new List<DBRestockRequest>();
         public MainDepot()
         {
-            InitializeComponent();           
+            InitializeComponent();
         }
 
         private void MainDepot_Load(object sender, EventArgs e)
@@ -24,7 +27,20 @@ namespace Media_Bazaar
             tabControl1.ItemSize = new Size(0, 1);
             tabControl1.SizeMode = TabSizeMode.Fixed;
             tabControl1.TabPages[0].BackColor = Color.FromArgb(116, 208, 252);
+            UpdateIncomingRestockInfo();
         }
+
+
+        private void UpdateIncomingRestockInfo()
+        {
+            
+            DataAccess db = new DataAccess();
+            incomingRestockRequests = db.GetAllIncomingStockRequests(DateTime.Now);
+            
+            checkedListBox1.DataSource = incomingRestockRequests;
+            checkedListBox1.DisplayMember = "FullInfo";
+        }
+
 
         //----------------------------------Start
         //All buttons connections for the AdminForm 
@@ -32,6 +48,7 @@ namespace Media_Bazaar
         private void btnIncomingStockTABrequest_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedTab = tabIncomingStock;
+            UpdateIncomingRestockInfo();
         }
 
         private void btnStockTABrequest_Click(object sender, EventArgs e)
@@ -56,6 +73,7 @@ namespace Media_Bazaar
             tabControl1.SelectedTab = tabMakeReq;
         }
 
+
         private void btnCheckIncomingStock_Click(object sender, EventArgs e)
         {
             //INFORMATION about the incoming stock MUST be parsed in this method
@@ -74,23 +92,23 @@ namespace Media_Bazaar
         //Method for changing back color of the selected menu
         public void ChangeMenuColor(TabControl tc)
         {
-            if(tc.SelectedTab == tabMakeReq)
+            if (tc.SelectedTab == tabMakeReq)
             {
                 btnMakeReqTABrequest.BackColor = Color.FromArgb(32, 126, 177);
             }
             else
             {
-                if(tc.SelectedTab == tabIncomingStock || tc.SelectedTab == tabIncomingStockDetails)
+                if (tc.SelectedTab == tabIncomingStock || tc.SelectedTab == tabIncomingStockDetails)
                 {
                     btnIncomingStockTABincomingStock.BackColor = Color.FromArgb(32, 126, 177);
                     btnIncomingStockTABincomingStockDet.BackColor = Color.FromArgb(32, 126, 177);
                 }
                 else
                 {
-                    if(tc.SelectedTab == tabStock || tc.SelectedTab == tabInfoStock)
+                    if (tc.SelectedTab == tabStock || tc.SelectedTab == tabInfoStock)
                     {
                         btnStockTABstock.BackColor = Color.FromArgb(32, 126, 177);
-                        btnStockTABstockInfo.BackColor = Color.FromArgb(32, 126, 177);  
+                        btnStockTABstockInfo.BackColor = Color.FromArgb(32, 126, 177);
                     }
                 }
             }
@@ -98,6 +116,11 @@ namespace Media_Bazaar
         private void timerChangeMenuColor_Tick(object sender, EventArgs e)
         {
             ChangeMenuColor(tabControl1);
+        }
+
+        private void btnIncomingStockTABincomingStock_Click(object sender, EventArgs e)
+        {
+            UpdateIncomingRestockInfo();
         }
         //----------------------------------------Finish
 
