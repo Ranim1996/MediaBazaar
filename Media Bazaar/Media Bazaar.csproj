@@ -68,6 +68,7 @@
     <Compile Include="Classes\DBDepartament.cs" />
     <Compile Include="Classes\DBEmployee.cs" />
     <Compile Include="Classes\DBRestockRequest.cs" />
+    <Compile Include="Classes\DBSchedule.cs" />
     <Compile Include="Classes\DepotWorker.cs" />
     <Compile Include="Classes\Employee.cs" />
     <Compile Include="Classes\Helper.cs" />

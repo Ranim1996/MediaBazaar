@@ -29,8 +29,9 @@ namespace Media_Bazaar
         //holds the calendar
         Media_Bazaar.Classes.Calendar calendar = new Classes.Calendar();
 
+        DataAccess db;
 
-
+        DBSchedule schedule = new DBSchedule();
 
         public MainAdmin()
         {
@@ -50,9 +51,10 @@ namespace Media_Bazaar
 
 
             // --- Schedule Tab ---
-            //evn.GetAllEvents();   //Shifts listed in calendar
+            //evn.GetAllEvents();   //Shifts listed in calendar            
+            schedule.GetAllSchedules();
             calendar.GenerateDayPanel(42, flDays);
-            calendar.DisplayCurrentDate(lblMonthAndYear);
+            calendar.DisplayCurrentDate(schedule.allSchedules, lblMonthAndYear);
 
         }
 
@@ -156,17 +158,17 @@ namespace Media_Bazaar
         // ----- SCHEDULE Tab ---
         private void btnPrevMonth_Click(object sender, EventArgs e)
         {
-            calendar.PrevMonth(lblMonthAndYear);
+            calendar.PrevMonth(schedule.allSchedules, lblMonthAndYear);
         }
 
         private void btnToday_Click(object sender, EventArgs e)
         {
-            calendar.Today(lblMonthAndYear);
+            calendar.Today(schedule.allSchedules, lblMonthAndYear);
         }
 
         private void btnNextMonth_Click(object sender, EventArgs e)
         {
-            calendar.NextMonth(lblMonthAndYear);
+            calendar.NextMonth(schedule.allSchedules, lblMonthAndYear);
         }
 
         private void tabControl1_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -330,7 +332,6 @@ namespace Media_Bazaar
             checkedListBox3.DataSource = NotReleasedEmployees;
             checkedListBox3.DisplayMember = "FullInfo";
         }
-
         private void UpdateDepartamentInfo()
         {
             DataAccess db = new DataAccess();
@@ -540,17 +541,66 @@ namespace Media_Bazaar
 
         private void btnAssignWorkShift_Click(object sender, EventArgs e)
         {
-            int employeeId;         
-            string date;
-            if(tbEmployeeIdAssignShift.Text != "" && dateTimePicker1.Value != null)
+            int employeeId = -1;         
+            string date = "";
+            string shift = "";
+            if(tbEmployeeIdAssignShift.Text != "" && dateTimePicker1.Value != null && (cmbBxWorkShiftSaturday.SelectedItem != null || cmbBxWorkShiftSunday.SelectedItem != null || cmbBxWorkShiftWeekDay.SelectedItem != null))
             {
                 employeeId = Convert.ToInt32(tbEmployeeIdAssignShift.Text);
                 date = dateTimePicker1.Value.ToString("dd/MM/yyyy");
+                DayOfWeek day = dateTimePicker1.Value.DayOfWeek;
+                if( day == DayOfWeek.Sunday)
+                {
+                    shift = "12:00-18:00";
+                }
+                else
+                {
+                    if(day == DayOfWeek.Saturday && cmbBxWorkShiftSaturday.SelectedItem.ToString() == "Morning -> 9:00-15:00")
+                    {
+                        shift = "9:00-15:00";
+                    }
+                    else
+                    {
+                        if(day == DayOfWeek.Saturday && cmbBxWorkShiftSaturday.SelectedItem.ToString() == "Afternoon -> 15:00-18:00")
+                        {
+                            shift = "15:00-18:00";
+                        }
+                        else
+                        {
+                            if(cmbBxWorkShiftWeekDay.SelectedItem.ToString() == "Morning -> 7:00-12:00")
+                            {
+                                shift = "7:00-12:00";
+                            }
+                            else
+                            {
+                                if(cmbBxWorkShiftWeekDay.SelectedItem.ToString() == "Afternoon -> 12:00-17:00")
+                                {
+                                    shift = "12:00-17:00";
+                                }
+                                else
+                                {
+                                    if(cmbBxWorkShiftWeekDay.SelectedItem.ToString() == "Evening-> 17:00 - 22:00")
+                                    {
+                                        shift = "17:00-22:00";
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }                
             }
             else
             {
                 MessageBox.Show("Fill in all fields.");
             }
+            DataAccess db = new DataAccess();
+            if(employeeId != -1 && date != "" && shift != "")
+            {
+                db.AddSchedule(employeeId, date, shift);
+            }
+            schedule.GetAllSchedules();
+            calendar.GenerateDayPanel(42, flDays);
+            calendar.DisplayCurrentDate(schedule.allSchedules, lblMonthAndYear);
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)

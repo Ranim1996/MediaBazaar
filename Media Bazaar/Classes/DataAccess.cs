@@ -21,6 +21,14 @@ namespace Media_Bazaar.Classes
                 return output;
             }
         }
+        public List<DBEmployee> GetEmployeeById(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<DBEmployee>($"SELECT * FROM Employee WHERE EmployeeId='{id}'").ToList();
+                return output;
+            }
+        }
 
         public void InsertEmployee(string fName, string lName, string dateOfBirth, string email, string phoneNr, string nationality, string pos, string username, string password)
         {
@@ -37,6 +45,13 @@ namespace Media_Bazaar.Classes
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
                 return connection.ExecuteScalar<int>($"SELECT EmployeeID FROM Employee WHERE FirstName = '{fName}' AND LastName = '{lName}';");
+            }
+        }
+        public string GetFirstNameOfEmployeeById(int id)
+        {
+            using(MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT FirstName FROM Employee WHERE EmployeeID = '{id}';");
             }
         }
 
@@ -147,5 +162,28 @@ namespace Media_Bazaar.Classes
                 connection.Execute($"UPDATE RestockRequest SET AdminConfirmation ='REJECTED' WHERE RequestID = '{requestID}'; ");
             }
         }
+
+
+        //METHODS FOR SCHEDULE--------------
+
+        
+        public List<DBSchedule> GetAllSchedules()
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<DBSchedule>($"SELECT * FROM Schedule").ToList();
+                return output;
+            }
+        }
+
+        //DOES NOT WORK WITH THE PROVIDED EMPLOYEE ID
+        public void AddSchedule(int employeeId, string date, string shift)
+        {            
+            using(MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                connection.Execute($"INSERT INTO Schedule (EmployeeID, Date, Shift) VALUES('{employeeId}', '{date}', '{shift}')");
+            }
+        }
+        //---------------------------
     }
 }

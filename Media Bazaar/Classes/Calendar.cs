@@ -44,27 +44,27 @@ namespace Media_Bazaar.Classes
 
         // -- methods --
         //used in the buttons
-        public void PrevMonth(Label lb)
+        public void PrevMonth(List<DBSchedule> list, Label lb)
         {
             currentDate = currentDate.AddMonths(-1);
-            DisplayCurrentDate(lb);
+            DisplayCurrentDate(list, lb);
         }
-        public void NextMonth( Label lb)
+        public void NextMonth(List<DBSchedule> list, Label lb)
         {
             currentDate = currentDate.AddMonths(1);
-            DisplayCurrentDate(lb);
+            DisplayCurrentDate(list, lb);
         }
-        public void Today( Label lb)
+        public void Today(List<DBSchedule> list, Label lb)
         {
             currentDate = DateTime.Today;
-            DisplayCurrentDate(lb);
+            DisplayCurrentDate(list, lb);
         }
-        public void DisplayCurrentDate(Label lb)
+        public void DisplayCurrentDate(List<DBSchedule> list, Label lb)
         { 
             lb.Text = currentDate.ToString("MMMM, yyyy");
             int firstDayAtFlNumber = GetFirstDayOfWeekOfCurrentDate();
             int totalDay = GetTotalDaysOfCurrentDate();
-            AddLabelDayToFlDay(firstDayAtFlNumber, totalDay);
+            AddLabelDayToFlDay(firstDayAtFlNumber, totalDay, list);
         }
 
         // -- MAIN methods --
@@ -86,7 +86,7 @@ namespace Media_Bazaar.Classes
         }
         
         // -- modified part
-        public void AddLabelDayToFlDay(int startDayAtFlNumber, int totalDaysInMonth)
+        public void AddLabelDayToFlDay(int startDayAtFlNumber, int totalDaysInMonth, List<DBSchedule> schedules)
         {
             //needs to be adjusted ---> WORK IN PROGGRESS
             //string[] date = DateTime.Now.ToString("dd/MM/yyyy").Split('/');
@@ -136,57 +136,41 @@ namespace Media_Bazaar.Classes
                     listFlDay[(i - 1) + (startDayAtFlNumber - 1)].BackColor = Color.Bisque;
                 }
 
-                // -- BETA ---> INFORMATION LAYOUT 
-                // -- modified part
-                /* List<Event> listForTheDay_RAW = new List<Event>();
-                 List<Event> listForTheDay = new List<Event>();
+                // -- BETA ---> Get the chosen work shifts 
 
-                 // -- gets only the events i need
-                 foreach (Event evnts in events)
+                 List<DBSchedule> listForTheDay= new List<DBSchedule>();
+
+                 // -- gets only the shifts i need
+                 foreach (DBSchedule sch in schedules)
                  {
-                     string[] dateEvent = evnts.Date.Split('/');
+                     string[] dateSchedule = sch.Date.Split('/');
 
-                     if ((dateEvent[2] == date[2]) && (dateEvent[1] == date[1]) && (Convert.ToInt32(dateEvent[0]) == i) && (evnts.Status == "Approved"))
+                     if ((dateSchedule[2] == date[2]) && (dateSchedule[1] == date[1]) && (Convert.ToInt32(dateSchedule[0]) == i))
                      {
-                         listForTheDay_RAW.Add(evnts);
+                         listForTheDay.Add(sch);
                      }
                  }
-                 // -- re-orders them ---> experimental
-                 for (int h = 0; h < 23; h++) // -- hours
-                 {
-                     for (int m = 0; m < 59; m++) // -- minutes
-                     {
-                         foreach (Event evnts in listForTheDay_RAW)
-                         {
-                             string[] timeStamp = evnts.Time.Split(':');
 
-                             if(Convert.ToInt32(timeStamp[0]) == h)
-                             {
-                                 if(Convert.ToInt32(timeStamp[1]) == m)
-                                 {
-                                     listForTheDay.Add(evnts);
-                                 }
-                             }
-
-                         }
-                     } 
-                 }
-                 // constructor
-                 // -- modified part ---> topic and event info
+                // constructor
+                // -- modified part ---> topic and event info
+                DataAccess db = new DataAccess();
                  int y = 0;
-                 foreach(Event eOfDay in listForTheDay)
+                 foreach(DBSchedule schOfTheDay in listForTheDay)
                  {
-                     Label lblInfo = new Label();
-                     lblInfo.Name = $"lblInfo{i}{y}";
-                     lblInfo.AutoSize = false;
-                     lblInfo.TextAlign = ContentAlignment.MiddleCenter;
-                     lblInfo.Size = new Size(120, 23);
-                     lblInfo.Text = $"{eOfDay.Time}     {eOfDay.Topic}"; // topic
-                     lblInfo.Font = new Font("Arial", 10);
-                     listFlDay[(i - 1) + (startDayAtFlNumber - 1)].Tag = i;
-                     listFlDay[(i - 1) + (startDayAtFlNumber - 1)].Controls.Add(lblInfo);
-                     y++;
-                 } */
+                    string firstNameOfEmployee;
+                    int id = schOfTheDay.EmployeeId;
+                    firstNameOfEmployee = db.GetFirstNameOfEmployeeById(id);
+                    Label lblInfo = new Label();
+                    lblInfo.Name = $"lblInfo{i}{y}";
+                    lblInfo.AutoSize = false;
+                    lblInfo.TextAlign = ContentAlignment.MiddleCenter;
+                    lblInfo.Size = new Size(120, 23);
+                    lblInfo.Text = $"{firstNameOfEmployee}({id})   {schOfTheDay.Shift}"; // chosen shift and the name+id of the employee
+                    lblInfo.Font = new Font("Arial", 9);
+                    listFlDay[(i - 1) + (startDayAtFlNumber - 1)].Tag = i;
+                    listFlDay[(i - 1) + (startDayAtFlNumber - 1)].Controls.Add(lblInfo);
+                    y++;
+                 } 
                 //-------------------------------------------------------------------------------------------
 
 
