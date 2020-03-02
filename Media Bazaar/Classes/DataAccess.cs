@@ -176,12 +176,14 @@ namespace Media_Bazaar.Classes
             }
         }
 
-        //DOES NOT WORK WITH THE PROVIDED EMPLOYEE ID
-        public void AddSchedule(int employeeId, string date, string shift)
+        //Adding the shift to the database
+        public void AddSchedule(int employeeID, string date, string shift)
         {            
             using(MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                connection.Execute($"INSERT INTO Schedule (EmployeeID, Date, Shift) VALUES('{employeeId}', '{date}', '{shift}')");
+
+                int id = connection.ExecuteScalar<int>($"SELECT e.EmployeeID FROM Employee AS e WHERE e.EmployeeID = '{employeeID}'");
+                connection.Execute($"INSERT INTO Schedule (EmployeeID, Date, Shift)  VALUES( '{id}', '{date}', '{shift}')");
             }
         }
         //---------------------------
