@@ -145,6 +145,14 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        public void InsertRequest(int idS, int idE, string name, string type, string department, int quantity, string orderDate, string orderDeliver)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                connection.Execute($"INSERT INTO RestockRequest( EmployeeID, NameOfStock, TypeOfStock, Department, Quntity, DateOfOrder, DateOfDelivery) VALUES ('{ idS }', '{idE}' , '{name}' , '{type}', '{department}', '{quantity}','{orderDate}', '{orderDeliver}');");
+            }
+        }
+
 
 
         public void ConfirmRequest(int requestID)

@@ -16,6 +16,7 @@ namespace Media_Bazaar
     public partial class MainDepot : Form
     {
         List<DBRestockRequest> incomingRestockRequests = new List<DBRestockRequest>();
+        List<int> restockID = new List<int>();
         public MainDepot()
         {
             InitializeComponent();
@@ -121,6 +122,50 @@ namespace Media_Bazaar
         private void btnIncomingStockTABincomingStock_Click(object sender, EventArgs e)
         {
             UpdateIncomingRestockInfo();
+        }
+
+        private void BtnMakeRequest_Click(object sender, EventArgs e)
+        {
+
+            string type = this.cmbType.Items.ToString();
+            int idSto = Convert.ToInt32(this.tbxStockID.Text);
+            int idEmp = Convert.ToInt32(this.tbxEmployeeID.Text);
+            string orderDate = this.dtpDateOrder.Value.ToString("dd/MM/yyyy");
+            string orderDeliver = this.dtpDateDeliver.Value.ToString("dd/MM/yyyy");
+            string name = this.tbxStockName.Text;
+            int quantity = Convert.ToInt32(this.tbxStockQuantity.Text);
+            string department = this.tbxStockDepartment.Text;
+
+            if (idSto != 0 && type != " " && name != " " && quantity != 0 && orderDate != " " && orderDeliver != " "
+                && idEmp != 0 && department != " ")
+            {
+                
+                DialogResult dialogResult = MessageBox.Show("Are you sure you want to send this request?", "Warning!", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    DataAccess db = new DataAccess();
+                    db.InsertRequest( idSto, idEmp, name, type, department, quantity, orderDate,orderDeliver );
+                    MessageBox.Show("The request is sent!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Fill all the fields first.");
+            }
+
+            UpdateRequestedStocks();
+        }
+
+        private void UpdateRequestedStocks()
+        {
+            DataAccess db = new DataAccess();
+            incomingRestockRequests = db.GetAllRequests();
+            foreach (DBRestockRequest rr in incomingRestockRequests)
+            {
+                restockID.Add(rr.GetID());
+            }
+            lbxRequestedItems.DataSource = incomingRestockRequests;
+            lbxRequestedItems.DisplayMember = "FullInfo";
         }
         //----------------------------------------Finish
 
