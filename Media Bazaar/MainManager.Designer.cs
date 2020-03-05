@@ -135,7 +135,7 @@
             this.btnViewProfile = new Bunifu.Framework.UI.BunifuFlatButton();
             this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.btnSearchForSpecificEmployee = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbxSearchID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabProfile = new System.Windows.Forms.TabPage();
@@ -148,20 +148,22 @@
             this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lblOtherInfo = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblAttendance = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblDateOfBirth = new System.Windows.Forms.Label();
+            this.lblNationality = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblPhoneNumber = new System.Windows.Forms.Label();
+            this.lblPosInCompany = new System.Windows.Forms.Label();
+            this.lblLastName = new System.Windows.Forms.Label();
+            this.lblFirstName = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.timerSelectedMenu = new System.Windows.Forms.Timer(this.components);
+            this.tbxSearchLastname = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.tabEmployeeStats.SuspendLayout();
             this.tableLayoutPanel27.SuspendLayout();
@@ -2035,10 +2037,12 @@
             // 
             // panel8
             // 
+            this.panel8.Controls.Add(this.tbxSearchLastname);
+            this.panel8.Controls.Add(this.label6);
             this.panel8.Controls.Add(this.btnViewProfile);
             this.panel8.Controls.Add(this.checkedListBox2);
             this.panel8.Controls.Add(this.btnSearchForSpecificEmployee);
-            this.panel8.Controls.Add(this.textBox1);
+            this.panel8.Controls.Add(this.tbxSearchID);
             this.panel8.Controls.Add(this.label5);
             this.panel8.Controls.Add(this.comboBox1);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -2092,7 +2096,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Location = new System.Drawing.Point(192, 84);
+            this.checkedListBox2.Location = new System.Drawing.Point(183, 122);
             this.checkedListBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkedListBox2.Name = "checkedListBox2";
             this.checkedListBox2.Size = new System.Drawing.Size(542, 276);
@@ -2135,15 +2139,15 @@
             this.btnSearchForSpecificEmployee.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchForSpecificEmployee.Click += new System.EventHandler(this.btnSearchForSpecificEmployee_Click);
             // 
-            // textBox1
+            // tbxSearchID
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tbxSearchID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(412, 22);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 22);
-            this.textBox1.TabIndex = 2;
+            this.tbxSearchID.Location = new System.Drawing.Point(374, 22);
+            this.tbxSearchID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxSearchID.Name = "tbxSearchID";
+            this.tbxSearchID.Size = new System.Drawing.Size(153, 22);
+            this.tbxSearchID.TabIndex = 2;
             // 
             // label5
             // 
@@ -2151,17 +2155,18 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F);
-            this.label5.Location = new System.Drawing.Point(289, 28);
+            this.label5.Location = new System.Drawing.Point(278, 22);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 22);
+            this.label5.Size = new System.Drawing.Size(31, 22);
             this.label5.TabIndex = 1;
-            this.label5.Text = "Available Info:";
+            this.label5.Text = "ID:";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Last name"});
+            "Last name",
+            "ID"});
             this.comboBox1.Location = new System.Drawing.Point(35, 22);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
@@ -2363,9 +2368,9 @@
             this.panel9.Controls.Add(this.panel12);
             this.panel9.Controls.Add(this.panel11);
             this.panel9.Controls.Add(this.panel10);
-            this.panel9.Controls.Add(this.label8);
-            this.panel9.Controls.Add(this.label7);
-            this.panel9.Controls.Add(this.label6);
+            this.panel9.Controls.Add(this.lblPosInCompany);
+            this.panel9.Controls.Add(this.lblLastName);
+            this.panel9.Controls.Add(this.lblFirstName);
             this.panel9.Controls.Add(this.pictureBox8);
             this.panel9.Controls.Add(this.pictureBox6);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -2381,22 +2386,22 @@
             this.panel12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(209)))), ((int)(((byte)(255)))));
-            this.panel12.Controls.Add(this.label14);
+            this.panel12.Controls.Add(this.lblOtherInfo);
             this.panel12.Location = new System.Drawing.Point(652, 254);
             this.panel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(268, 295);
             this.panel12.TabIndex = 13;
             // 
-            // label14
+            // lblOtherInfo
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F);
-            this.label14.Location = new System.Drawing.Point(47, 18);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(84, 22);
-            this.label14.TabIndex = 10;
-            this.label14.Text = "OtherInfo";
+            this.lblOtherInfo.AutoSize = true;
+            this.lblOtherInfo.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F);
+            this.lblOtherInfo.Location = new System.Drawing.Point(47, 18);
+            this.lblOtherInfo.Name = "lblOtherInfo";
+            this.lblOtherInfo.Size = new System.Drawing.Size(84, 22);
+            this.lblOtherInfo.TabIndex = 10;
+            this.lblOtherInfo.Text = "OtherInfo";
             // 
             // panel11
             // 
@@ -2404,116 +2409,116 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.panel11.Controls.Add(this.label13);
+            this.panel11.Controls.Add(this.lblAttendance);
             this.panel11.Location = new System.Drawing.Point(343, 254);
             this.panel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(268, 295);
             this.panel11.TabIndex = 12;
             // 
-            // label13
+            // lblAttendance
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F);
-            this.label13.Location = new System.Drawing.Point(45, 18);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(117, 22);
-            this.label13.TabIndex = 9;
-            this.label13.Text = "Attendance %";
+            this.lblAttendance.AutoSize = true;
+            this.lblAttendance.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F);
+            this.lblAttendance.Location = new System.Drawing.Point(45, 18);
+            this.lblAttendance.Name = "lblAttendance";
+            this.lblAttendance.Size = new System.Drawing.Size(117, 22);
+            this.lblAttendance.TabIndex = 9;
+            this.lblAttendance.Text = "Attendance %";
             // 
             // panel10
             // 
             this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.panel10.Controls.Add(this.label9);
-            this.panel10.Controls.Add(this.label12);
-            this.panel10.Controls.Add(this.label10);
-            this.panel10.Controls.Add(this.label11);
+            this.panel10.Controls.Add(this.lblDateOfBirth);
+            this.panel10.Controls.Add(this.lblNationality);
+            this.panel10.Controls.Add(this.lblEmail);
+            this.panel10.Controls.Add(this.lblPhoneNumber);
             this.panel10.Location = new System.Drawing.Point(36, 254);
             this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(268, 295);
             this.panel10.TabIndex = 11;
             // 
-            // label9
+            // lblDateOfBirth
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F);
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(27, 18);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 22);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "DateOfBirth";
+            this.lblDateOfBirth.AutoSize = true;
+            this.lblDateOfBirth.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F);
+            this.lblDateOfBirth.ForeColor = System.Drawing.Color.White;
+            this.lblDateOfBirth.Location = new System.Drawing.Point(27, 18);
+            this.lblDateOfBirth.Name = "lblDateOfBirth";
+            this.lblDateOfBirth.Size = new System.Drawing.Size(100, 22);
+            this.lblDateOfBirth.TabIndex = 5;
+            this.lblDateOfBirth.Text = "DateOfBirth";
             // 
-            // label12
+            // lblNationality
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F);
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(27, 49);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(93, 22);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "Nationality";
+            this.lblNationality.AutoSize = true;
+            this.lblNationality.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F);
+            this.lblNationality.ForeColor = System.Drawing.Color.White;
+            this.lblNationality.Location = new System.Drawing.Point(28, 57);
+            this.lblNationality.Name = "lblNationality";
+            this.lblNationality.Size = new System.Drawing.Size(93, 22);
+            this.lblNationality.TabIndex = 8;
+            this.lblNationality.Text = "Nationality";
             // 
-            // label10
+            // lblEmail
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F);
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(27, 97);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(51, 22);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "Email";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F);
+            this.lblEmail.ForeColor = System.Drawing.Color.White;
+            this.lblEmail.Location = new System.Drawing.Point(27, 97);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(51, 22);
+            this.lblEmail.TabIndex = 6;
+            this.lblEmail.Text = "Email";
             // 
-            // label11
+            // lblPhoneNumber
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F);
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(27, 146);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(122, 22);
-            this.label11.TabIndex = 7;
-            this.label11.Text = "PhoneNumber";
+            this.lblPhoneNumber.AutoSize = true;
+            this.lblPhoneNumber.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F);
+            this.lblPhoneNumber.ForeColor = System.Drawing.Color.White;
+            this.lblPhoneNumber.Location = new System.Drawing.Point(27, 146);
+            this.lblPhoneNumber.Name = "lblPhoneNumber";
+            this.lblPhoneNumber.Size = new System.Drawing.Size(122, 22);
+            this.lblPhoneNumber.TabIndex = 7;
+            this.lblPhoneNumber.Text = "PhoneNumber";
             // 
-            // label8
+            // lblPosInCompany
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(61, 185);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(257, 27);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "PossitionInTheCompany";
+            this.lblPosInCompany.AutoSize = true;
+            this.lblPosInCompany.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPosInCompany.Location = new System.Drawing.Point(20, 185);
+            this.lblPosInCompany.Name = "lblPosInCompany";
+            this.lblPosInCompany.Size = new System.Drawing.Size(257, 27);
+            this.lblPosInCompany.TabIndex = 4;
+            this.lblPosInCompany.Text = "PossitionInTheCompany";
             // 
-            // label7
+            // lblLastName
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(169, 133);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(135, 31);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "LastName";
+            this.lblLastName.AutoSize = true;
+            this.lblLastName.Location = new System.Drawing.Point(169, 133);
+            this.lblLastName.Name = "lblLastName";
+            this.lblLastName.Size = new System.Drawing.Size(135, 31);
+            this.lblLastName.TabIndex = 3;
+            this.lblLastName.Text = "LastName";
             // 
-            // label6
+            // lblFirstName
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(19, 133);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(138, 31);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "FirstName";
+            this.lblFirstName.AutoSize = true;
+            this.lblFirstName.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirstName.Location = new System.Drawing.Point(19, 133);
+            this.lblFirstName.Name = "lblFirstName";
+            this.lblFirstName.Size = new System.Drawing.Size(138, 31);
+            this.lblFirstName.TabIndex = 2;
+            this.lblFirstName.Text = "FirstName";
             // 
             // pictureBox8
             // 
             this.pictureBox8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(397, 39);
+            this.pictureBox8.Location = new System.Drawing.Point(755, 40);
             this.pictureBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(165, 172);
@@ -2537,6 +2542,28 @@
             this.timerSelectedMenu.Enabled = true;
             this.timerSelectedMenu.Interval = 10;
             this.timerSelectedMenu.Tick += new System.EventHandler(this.timerSelectedMenu_Tick);
+            // 
+            // tbxSearchLastname
+            // 
+            this.tbxSearchLastname.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbxSearchLastname.Location = new System.Drawing.Point(374, 57);
+            this.tbxSearchLastname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxSearchLastname.Name = "tbxSearchLastname";
+            this.tbxSearchLastname.Size = new System.Drawing.Size(153, 22);
+            this.tbxSearchLastname.TabIndex = 10;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F);
+            this.label6.Location = new System.Drawing.Point(278, 57);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(90, 22);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "LastName:";
             // 
             // MainManager
             // 
@@ -2699,7 +2726,7 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbxSearchID;
         private Bunifu.Framework.UI.BunifuFlatButton btnViewProfile;
         private System.Windows.Forms.CheckedListBox checkedListBox2;
         private Bunifu.Framework.UI.BunifuFlatButton btnSearchForSpecificEmployee;
@@ -2711,14 +2738,14 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnSearchTABprofile;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel21;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblDateOfBirth;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblAttendance;
+        private System.Windows.Forms.Label lblNationality;
+        private System.Windows.Forms.Label lblPhoneNumber;
+        private System.Windows.Forms.Label lblOtherInfo;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
@@ -2726,9 +2753,9 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart4;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblPosInCompany;
+        private System.Windows.Forms.Label lblLastName;
+        private System.Windows.Forms.Label lblFirstName;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart6;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart5;
         private Bunifu.Framework.UI.BunifuFlatButton btnLogOutTABdepart;
@@ -2737,5 +2764,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnLogOutTABsearch;
         private Bunifu.Framework.UI.BunifuFlatButton btnLogOutTABprofile;
         private System.Windows.Forms.Timer timerSelectedMenu;
+        private System.Windows.Forms.TextBox tbxSearchLastname;
+        private System.Windows.Forms.Label label6;
     }
 }

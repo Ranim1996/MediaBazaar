@@ -114,7 +114,13 @@ namespace Media_Bazaar
 
             if (comboBox1.Text=="Last name")
             {
-                employees = db.GetDBEmployeesByLastName(textBox1.Text);
+                employees = db.GetDBEmployeesByLastName(this.tbxSearchLastname.Text);
+                UpdateList();
+            }
+
+            else if (comboBox1.Text == "ID")
+            {
+                employees = db.GetDBEmployeeByID(Convert.ToInt32(this.tbxSearchID.Text));
                 UpdateList();
             }
         }

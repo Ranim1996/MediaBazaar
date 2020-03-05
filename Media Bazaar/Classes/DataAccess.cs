@@ -21,11 +21,12 @@ namespace Media_Bazaar.Classes
                 return output;
             }
         }
-        public List<DBEmployee> GetEmployeeById(int id)
+
+        public List<DBEmployee> GetDBEmployeeByID (int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<DBEmployee>($"SELECT * FROM Employee WHERE EmployeeId='{id}'").ToList();
+                var output = connection.Query<DBEmployee>($"SELECT * FROM Employee WHERE EmployeeID='{id}'").ToList();
                 return output;
             }
         }
@@ -47,6 +48,7 @@ namespace Media_Bazaar.Classes
                 return connection.ExecuteScalar<int>($"SELECT EmployeeID FROM Employee WHERE FirstName = '{fName}' AND LastName = '{lName}';");
             }
         }
+
         public string GetFirstNameOfEmployeeById(int id)
         {
             using(MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
