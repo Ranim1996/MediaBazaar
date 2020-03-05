@@ -48,11 +48,19 @@ namespace Media_Bazaar.Classes
             get { return ID; }
         }
 
+        public virtual string GetFirstName
+        {
+            get { return name; }
+        }
+
+
         //Methods
         public virtual String GetInfo()
         {
             return $"{this.name} {this.surname}({ID}): Date of birth- {this.dateOfBirth}; Email- {this.email}; PhoneNr- {this.phoneNr}; Nationality- {this.nationality}.";
         }
+
+       
 
     }
 }

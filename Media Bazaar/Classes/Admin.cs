@@ -12,6 +12,11 @@ namespace Media_Bazaar.Classes
 
 
         //Constructor
+        public Admin ()
+        {
+
+        }
+
         public Admin(string fName, string sName, string birth, string email, int phoneNr, string nationality, JobPosition pos)
             : base(fName, sName, birth, email, phoneNr, nationality, pos)
         {
@@ -21,6 +26,7 @@ namespace Media_Bazaar.Classes
         //Properties
         public override JobPosition GetJobPosition => base.GetJobPosition;
         public override int GetID => base.GetID;
+        public override string GetFirstName => base.GetFirstName; 
 
         //Methods
         public override string GetInfo()

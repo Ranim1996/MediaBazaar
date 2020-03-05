@@ -57,6 +57,110 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        public string GetFirstNameOfEmployeeByLastname(string lastName)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT FirstName FROM Employee WHERE LastName = '{lastName}';");
+            }
+        }
+
+        public string GetLastNameOfEmployeeById(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT LastName FROM Employee WHERE EmployeeID = '{id}';");
+            }
+        }
+
+        public string GetLastNameOfEmployeeByLastname(string lastName)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT LastName FROM Employee WHERE LastName = '{lastName}';");
+            }
+        }
+
+        public string GetPosOfEmployeeById(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT Position FROM Employee WHERE EmployeeID = '{id}';");
+            }
+        }
+
+        public string GetPosOfEmployeeByLastname(string lastName)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT Position FROM Employee WHERE LastName = '{lastName}';");
+            }
+        }
+
+        public string GetEmailOfEmployeeById(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT Email FROM Employee WHERE EmployeeID = '{id}';");
+            }
+        }
+
+        public string GetEmailOfEmployeeByLastname(string lastName)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT Email FROM Employee WHERE LastName = '{lastName}';");
+            }
+        }
+
+        public string GetPhoneNumberOfEmployeeById(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT PhoneNumber FROM Employee WHERE EmployeeID = '{id}';");
+            }
+        }
+
+        public string GetPhoneNumberOfEmployeeByLastname(string lastName)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT PhoneNumber FROM Employee WHERE LastName = '{lastName}';");
+            }
+        }
+
+        public string GetNationalityOfEmployeeById(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT Nationality FROM Employee WHERE EmployeeID = '{id}';");
+            }
+        }
+
+        public string GetNationalityOfEmployeeByLastname(string lastName)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT Nationality FROM Employee WHERE LastName = '{lastName}';");
+            }
+        }
+
+        public string GetDateOfBirthOfEmployeeById(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT DateOfBirth FROM Employee WHERE EmployeeID = '{id}';");
+            }
+        }
+
+        public string GetDateOfBirthOfEmployeeByLastname(string lastName)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT DateOfBirth FROM Employee WHERE LastName = '{lastName}';");
+            }
+        }
+
         public List<DBEmployee> GetAllEmployees()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))

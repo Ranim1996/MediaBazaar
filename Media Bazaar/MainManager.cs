@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -112,17 +114,49 @@ namespace Media_Bazaar
         {
             DataAccess db = new DataAccess();
 
-            if (comboBox1.Text=="Last name")
+            if (cmbSelectSeachMethod.Text=="Last name")
             {
                 employees = db.GetDBEmployeesByLastName(this.tbxSearchLastname.Text);
                 UpdateList();
+                UpdateInfoByLastname();
             }
 
-            else if (comboBox1.Text == "ID")
+            else if (cmbSelectSeachMethod.Text == "ID")
             {
                 employees = db.GetDBEmployeeByID(Convert.ToInt32(this.tbxSearchID.Text));
                 UpdateList();
+                UpdateInfoByID();
             }
+        }
+
+        private void UpdateInfoByID()
+        {
+            //display the data in the labels
+            DataAccess db = new DataAccess();
+
+            this.lblFirstName.Text = db.GetFirstNameOfEmployeeById(Convert.ToInt32(this.tbxSearchID.Text)).ToString();
+            this.lblLastName.Text = db.GetLastNameOfEmployeeById(Convert.ToInt32(this.tbxSearchID.Text)).ToString();
+            this.lblPosInCompany.Text = db.GetPosOfEmployeeById(Convert.ToInt32(this.tbxSearchID.Text)).ToString();
+            this.lblEmail.Text = db.GetEmailOfEmployeeById(Convert.ToInt32(this.tbxSearchID.Text)).ToString();
+            this.lblPhoneNumber.Text = db.GetPhoneNumberOfEmployeeById(Convert.ToInt32(this.tbxSearchID.Text)).ToString();
+            this.lblNationality.Text = db.GetNationalityOfEmployeeById(Convert.ToInt32(this.tbxSearchID.Text)).ToString();
+            this.lblDateOfBirth.Text = db.GetDateOfBirthOfEmployeeById(Convert.ToInt32(this.tbxSearchID.Text)).ToString();
+
+        }
+
+        private void UpdateInfoByLastname()
+        {
+            //display the data in the labels
+            DataAccess db = new DataAccess();
+
+            this.lblFirstName.Text = db.GetFirstNameOfEmployeeByLastname(this.tbxSearchLastname.Text).ToString();
+            this.lblLastName.Text = db.GetLastNameOfEmployeeByLastname(this.tbxSearchLastname.Text).ToString();
+            this.lblPosInCompany.Text = db.GetPosOfEmployeeByLastname(this.tbxSearchLastname.Text).ToString();
+            this.lblEmail.Text = db.GetEmailOfEmployeeByLastname(this.tbxSearchLastname.Text).ToString();
+            this.lblPhoneNumber.Text = db.GetPhoneNumberOfEmployeeByLastname(this.tbxSearchLastname.Text).ToString();
+            this.lblNationality.Text = db.GetNationalityOfEmployeeByLastname(this.tbxSearchLastname.Text).ToString();
+            this.lblDateOfBirth.Text = db.GetDateOfBirthOfEmployeeByLastname(this.tbxSearchLastname.Text).ToString();
+
         }
         //---------------------------------------------------finish
     }
