@@ -127,7 +127,7 @@ namespace Media_Bazaar
         private void BtnMakeRequest_Click(object sender, EventArgs e)
         {
 
-            string type = this.cmbType.Items.ToString();
+            string type = this.cmbType.Text.ToString();
             int idSto = Convert.ToInt32(this.tbxStockID.Text);
             int idEmp = Convert.ToInt32(this.tbxEmployeeID.Text);
             string orderDate = this.dtpDateOrder.Value.ToString("dd/MM/yyyy");
