@@ -149,7 +149,7 @@ namespace Media_Bazaar.Classes
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                connection.Execute($"INSERT INTO RestockRequest( EmployeeID, NameOfStock, TypeOfStock, Department, Quntity, DateOfOrder, DateOfDelivery) VALUES ('{ idS }', '{idE}' , '{name}' , '{type}', '{department}', '{quantity}','{orderDate}', '{orderDeliver}');");
+                connection.Execute($"INSERT INTO RestockRequest( RequestID, EmployeeID, NameOfStock, TypeOfStock, Departament, Quantity, DateOfOrder, DateOfDelivery) VALUES ('{ idS }', '{idE}' , '{name}' , '{type}', '{department}', '{quantity}','{orderDate}', '{orderDeliver}');");
             }
         }
 
