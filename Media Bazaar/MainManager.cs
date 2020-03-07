@@ -10,20 +10,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Media_Bazaar.Classes;
+using MySql.Data.MySqlClient;
 
 namespace Media_Bazaar
 {
     public partial class MainManager : Form
     {
         List<DBEmployee> employees = new List<DBEmployee>();
+        List<DBDepartament> departments = new List<DBDepartament>();
+        List<DBRestockRequest> restocks = new List<DBRestockRequest>();
 
         public MainManager()
         {
             InitializeComponent();
             UpdateList();
-            DisplayNotFiredEmployee();
-            DisplayFiredEmployee();
-            DisplayShifts();
+            DisplayEmployeeChart();
+            //DisplayShifts();
             DisplayDepartments();
             DisplayStockInfo();
         }
@@ -164,79 +166,77 @@ namespace Media_Bazaar
 
         }
 
-        private void DisplayNotFiredEmployee()
+        private void DisplayEmployeeChart()
         {
-            //display the data in the statistics "Current Employees"
+            //display the data in the statistics "Current Employees vs Nationality"
+
             DataAccess db = new DataAccess();
 
-            this.chartNotFiredEmployee.DataSource = db.GetNotFiredEmployees();
-
+            employees = db.GetNotFiredEmployees();    
+            this.chartEmployee.Series["CurrentEmployees"].Points.AddXY("Nationality", "EmployeeID");
+            this.chartEmployee.Series["FiredEmployees"].Points.AddXY("Nationality", "EmployeeID");
         }
 
-        private void DisplayFiredEmployee()
-        {
-            //display the data in the statistics "Fired Employees"
-            DataAccess db = new DataAccess();
+        //private void DisplayShifts()
+        //{
+        //    //display the data in the statistics "Shifts"
+        //    DataAccess db = new DataAccess();
 
-            this.chartFiredEmployees.DataSource = db.GetFiredEmployees();
+        //    this.chartShifts.DataSource = db.GetAllShifts();
 
-        }
+        //    DisplayMorningShifts();
+        //    DisplayAfterNoonShifts();
+        //    DisplayEveningShifts();
+        //}
 
-        private void DisplayShifts()
-        {
-            //display the data in the statistics "Shifts"
-            DataAccess db = new DataAccess();
+        //private void DisplayMorningShifts()
+        //{
+        //    //display the data in the statistics "Shifts"
+        //    DataAccess db = new DataAccess();
 
-            this.chartShifts.DataSource = db.GetAllShifts();
+        //    this.chartShifts.DataSource = db.GetAllMorningShifts();
 
-            DisplayMorningShifts();
-            DisplayAfterNoonShifts();
-            DisplayEveningShifts();
-        }
+        //}
 
-        private void DisplayMorningShifts()
-        {
-            //display the data in the statistics "Shifts"
-            DataAccess db = new DataAccess();
+        //private void DisplayAfterNoonShifts()
+        //{
+        //    //display the data in the statistics "Shifts"
+        //    DataAccess db = new DataAccess();
 
-            this.chartShifts.DataSource = db.GetAllMorningShifts();
+        //    this.chartShifts.DataSource = db.GetAllAfterNoonShifts();
 
-        }
+        //}
 
-        private void DisplayAfterNoonShifts()
-        {
-            //display the data in the statistics "Shifts"
-            DataAccess db = new DataAccess();
+        //private void DisplayEveningShifts()
+        //{
+        //    //display the data in the statistics "Shifts"
+        //    DataAccess db = new DataAccess();
 
-            this.chartShifts.DataSource = db.GetAllAfterNoonShifts();
+        //    this.chartShifts.DataSource = db.GetAllEveningShifts();
 
-        }
-
-        private void DisplayEveningShifts()
-        {
-            //display the data in the statistics "Shifts"
-            DataAccess db = new DataAccess();
-
-            this.chartShifts.DataSource = db.GetAllEveningShifts();
-
-        }
+        //}
 
         private void DisplayDepartments()
         {
-            //display the data in the statistics "department"
+            //display the data in the statistics "minimum and maximum employees for each department"
             DataAccess db = new DataAccess();
 
             this.chartDepartment.DataSource = db.GetAllDepartaments();
+            departments = db.GetAllDepartaments();
+            this.chartDepartment.Series["Department"].Points.AddXY("MinNumOfEmployee", "MaxNumOfEmployee");
 
         }
 
         private void DisplayStockInfo()
         {
-            //display the data in the statistics "Stock"
+            //display the data in the statistics "Stock confirmed and rejected"
             DataAccess db = new DataAccess();
 
             this.chartStock.DataSource = db.GetAllConfirmedRestock();
             this.chartStock.DataSource = db.GetAllRejectedRestock();
+
+            this.chartStock.Series["Confirmed Requests"].Points.AddXY("RequestID", "DateOfOrder");
+            this.chartStock.Series["Rejected Requests"].Points.AddXY("RequestID", "DateOfOrder");
 
         }
 

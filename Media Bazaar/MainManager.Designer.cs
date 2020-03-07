@@ -33,20 +33,18 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -79,8 +77,7 @@
             this.btnShiftsTABemplStats = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnDepartStockTABemplStats = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.chartFiredEmployees = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chartNotFiredEmployee = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartEmployee = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabShiftStats = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -180,8 +177,7 @@
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartFiredEmployees)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartNotFiredEmployee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartEmployee)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabShiftStats.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -890,8 +886,7 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.chartFiredEmployees);
-            this.panel6.Controls.Add(this.chartNotFiredEmployee);
+            this.panel6.Controls.Add(this.chartEmployee);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel6.Location = new System.Drawing.Point(3, 53);
@@ -900,43 +895,28 @@
             this.panel6.Size = new System.Drawing.Size(920, 421);
             this.panel6.TabIndex = 1;
             // 
-            // chartFiredEmployees
+            // chartEmployee
             // 
-            this.chartFiredEmployees.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chartEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             chartArea1.Name = "ChartArea1";
-            this.chartFiredEmployees.ChartAreas.Add(chartArea1);
+            this.chartEmployee.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.chartFiredEmployees.Legends.Add(legend1);
-            this.chartFiredEmployees.Location = new System.Drawing.Point(507, 57);
-            this.chartFiredEmployees.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chartFiredEmployees.Name = "chartFiredEmployees";
+            this.chartEmployee.Legends.Add(legend1);
+            this.chartEmployee.Location = new System.Drawing.Point(120, 59);
+            this.chartEmployee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chartEmployee.Name = "chartEmployee";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
-            series1.Name = "Fired Employees";
-            this.chartFiredEmployees.Series.Add(series1);
-            this.chartFiredEmployees.Size = new System.Drawing.Size(387, 305);
-            this.chartFiredEmployees.TabIndex = 1;
-            this.chartFiredEmployees.Text = "chart2";
-            // 
-            // chartNotFiredEmployee
-            // 
-            this.chartNotFiredEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            chartArea2.Name = "ChartArea1";
-            this.chartNotFiredEmployee.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartNotFiredEmployee.Legends.Add(legend2);
-            this.chartNotFiredEmployee.Location = new System.Drawing.Point(69, 57);
-            this.chartNotFiredEmployee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chartNotFiredEmployee.Name = "chartNotFiredEmployee";
+            series1.Name = "CurrentEmployees";
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
-            series2.Name = "Current Employees";
-            this.chartNotFiredEmployee.Series.Add(series2);
-            this.chartNotFiredEmployee.Size = new System.Drawing.Size(403, 305);
-            this.chartNotFiredEmployee.TabIndex = 0;
-            this.chartNotFiredEmployee.Text = "chart1";
+            series2.Name = "FiredEmployees";
+            this.chartEmployee.Series.Add(series1);
+            this.chartEmployee.Series.Add(series2);
+            this.chartEmployee.Size = new System.Drawing.Size(764, 305);
+            this.chartEmployee.TabIndex = 0;
+            this.chartEmployee.Text = "chart1";
             // 
             // tabControl1
             // 
@@ -1345,10 +1325,10 @@
             // 
             this.chartShifts.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            chartArea3.Name = "ChartArea1";
-            this.chartShifts.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartShifts.Legends.Add(legend3);
+            chartArea2.Name = "ChartArea1";
+            this.chartShifts.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartShifts.Legends.Add(legend2);
             this.chartShifts.Location = new System.Drawing.Point(105, 48);
             this.chartShifts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chartShifts.Name = "chartShifts";
@@ -1761,10 +1741,10 @@
             // 
             this.chartStock.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea4.Name = "ChartArea1";
-            this.chartStock.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chartStock.Legends.Add(legend4);
+            chartArea3.Name = "ChartArea1";
+            this.chartStock.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartStock.Legends.Add(legend3);
             this.chartStock.Location = new System.Drawing.Point(445, 53);
             this.chartStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chartStock.Name = "chartStock";
@@ -1784,10 +1764,10 @@
             // 
             this.chartDepartment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            chartArea5.Name = "ChartArea1";
-            this.chartDepartment.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chartDepartment.Legends.Add(legend5);
+            chartArea4.Name = "ChartArea1";
+            this.chartDepartment.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartDepartment.Legends.Add(legend4);
             this.chartDepartment.Location = new System.Drawing.Point(25, 53);
             this.chartDepartment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chartDepartment.Name = "chartDepartment";
@@ -2644,8 +2624,7 @@
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chartFiredEmployees)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartNotFiredEmployee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartEmployee)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabShiftStats.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -2800,8 +2779,7 @@
         private System.Windows.Forms.Label lblOtherInfo;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartFiredEmployees;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartNotFiredEmployee;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartEmployee;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartShifts;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label lblPosInCompany;
