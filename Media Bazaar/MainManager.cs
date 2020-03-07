@@ -21,6 +21,11 @@ namespace Media_Bazaar
         {
             InitializeComponent();
             UpdateList();
+            DisplayNotFiredEmployee();
+            DisplayFiredEmployee();
+            DisplayShifts();
+            DisplayDepartments();
+            DisplayStockInfo();
         }
 
         private void UpdateList()
@@ -158,6 +163,83 @@ namespace Media_Bazaar
             this.lblDateOfBirth.Text = db.GetDateOfBirthOfEmployeeByLastname(this.tbxSearchLastname.Text).ToString();
 
         }
+
+        private void DisplayNotFiredEmployee()
+        {
+            //display the data in the statistics "Current Employees"
+            DataAccess db = new DataAccess();
+
+            this.chartNotFiredEmployee.DataSource = db.GetNotFiredEmployees();
+
+        }
+
+        private void DisplayFiredEmployee()
+        {
+            //display the data in the statistics "Fired Employees"
+            DataAccess db = new DataAccess();
+
+            this.chartFiredEmployees.DataSource = db.GetFiredEmployees();
+
+        }
+
+        private void DisplayShifts()
+        {
+            //display the data in the statistics "Shifts"
+            DataAccess db = new DataAccess();
+
+            this.chartShifts.DataSource = db.GetAllShifts();
+
+            DisplayMorningShifts();
+            DisplayAfterNoonShifts();
+            DisplayEveningShifts();
+        }
+
+        private void DisplayMorningShifts()
+        {
+            //display the data in the statistics "Shifts"
+            DataAccess db = new DataAccess();
+
+            this.chartShifts.DataSource = db.GetAllMorningShifts();
+
+        }
+
+        private void DisplayAfterNoonShifts()
+        {
+            //display the data in the statistics "Shifts"
+            DataAccess db = new DataAccess();
+
+            this.chartShifts.DataSource = db.GetAllAfterNoonShifts();
+
+        }
+
+        private void DisplayEveningShifts()
+        {
+            //display the data in the statistics "Shifts"
+            DataAccess db = new DataAccess();
+
+            this.chartShifts.DataSource = db.GetAllEveningShifts();
+
+        }
+
+        private void DisplayDepartments()
+        {
+            //display the data in the statistics "department"
+            DataAccess db = new DataAccess();
+
+            this.chartDepartment.DataSource = db.GetAllDepartaments();
+
+        }
+
+        private void DisplayStockInfo()
+        {
+            //display the data in the statistics "Stock"
+            DataAccess db = new DataAccess();
+
+            this.chartStock.DataSource = db.GetAllConfirmedRestock();
+            this.chartStock.DataSource = db.GetAllRejectedRestock();
+
+        }
+
         //---------------------------------------------------finish
     }
 }

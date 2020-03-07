@@ -259,6 +259,23 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        public List<DBRestockRequest> GetAllConfirmedRestock()
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<DBRestockRequest>($"SELECT * FROM RestockRequest WHERE AdminConfirmation ='CONFIRMED'").ToList();
+                return output;
+            }
+        }
+
+        public List<DBRestockRequest> GetAllRejectedRestock()
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<DBRestockRequest>($"SELECT * FROM RestockRequest WHERE AdminConfirmation ='CONFIRMED'").ToList();
+                return output;
+            }
+        }
 
 
         public void ConfirmRequest(int requestID)
@@ -298,6 +315,42 @@ namespace Media_Bazaar.Classes
 
                 int id = connection.ExecuteScalar<int>($"SELECT e.EmployeeID FROM Employee AS e WHERE e.EmployeeID = '{employeeID}'");
                 connection.Execute($"INSERT INTO Schedule (EmployeeID, Date, Shift)  VALUES( '{id}', '{date}', '{shift}')");
+            }
+        }
+
+        public List<DBShifts> GetAllShifts()
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<DBShifts>($"SELECT * FROM Shifts").ToList();
+                return output;
+            }
+        }
+
+        public List<DBShifts> GetAllMorningShifts()
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<DBShifts>($"SELECT * FROM Shifts WHERE ShiftType = 'Morning'").ToList();
+                return output;
+            }
+        }
+
+        public List<DBShifts> GetAllAfterNoonShifts()
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<DBShifts>($"SELECT * FROM Shifts WHERE ShiftType = 'Afternoon' ").ToList();
+                return output;
+            }
+        }
+
+        public List<DBShifts> GetAllEveningShifts()
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<DBShifts>($"SELECT * FROM Shifts WHERE ShiftType = 'Evening'").ToList();
+                return output;
             }
         }
         //---------------------------

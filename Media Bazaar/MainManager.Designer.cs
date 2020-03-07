@@ -30,24 +30,24 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainManager));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel24 = new System.Windows.Forms.TableLayoutPanel();
@@ -79,8 +79,8 @@
             this.btnShiftsTABemplStats = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnDepartStockTABemplStats = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartFiredEmployees = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartNotFiredEmployee = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabShiftStats = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -99,8 +99,7 @@
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnDepartmentTABshiftStats = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartShifts = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabDepartStats = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
@@ -118,8 +117,8 @@
             this.btnShiftsTABdepartStats = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton11 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.chart6 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartStock = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartDepartment = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabSearchEmpl = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
@@ -155,6 +154,10 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.lblAttendance = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.lblDateOfBirth = new System.Windows.Forms.Label();
             this.lblNationality = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -165,10 +168,6 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.timerSelectedMenu = new System.Windows.Forms.Timer(this.components);
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.tabEmployeeStats.SuspendLayout();
             this.tableLayoutPanel27.SuspendLayout();
@@ -181,8 +180,8 @@
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartFiredEmployees)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartNotFiredEmployee)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabShiftStats.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -194,8 +193,7 @@
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartShifts)).BeginInit();
             this.tabDepartStats.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
@@ -206,8 +204,8 @@
             this.tableLayoutPanel13.SuspendLayout();
             this.tableLayoutPanel14.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartStock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDepartment)).BeginInit();
             this.tabSearchEmpl.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
             this.tableLayoutPanel16.SuspendLayout();
@@ -892,8 +890,8 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.chart2);
-            this.panel6.Controls.Add(this.chart1);
+            this.panel6.Controls.Add(this.chartFiredEmployees);
+            this.panel6.Controls.Add(this.chartNotFiredEmployee);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel6.Location = new System.Drawing.Point(3, 53);
@@ -902,43 +900,43 @@
             this.panel6.Size = new System.Drawing.Size(920, 421);
             this.panel6.TabIndex = 1;
             // 
-            // chart2
+            // chartFiredEmployees
             // 
-            this.chart2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.chartFiredEmployees.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea7.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.chart2.Legends.Add(legend7);
-            this.chart2.Location = new System.Drawing.Point(547, 57);
-            this.chart2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chart2.Name = "chart2";
-            series7.ChartArea = "ChartArea1";
-            series7.Legend = "Legend1";
-            series7.Name = "Series1";
-            this.chart2.Series.Add(series7);
-            this.chart2.Size = new System.Drawing.Size(300, 305);
-            this.chart2.TabIndex = 1;
-            this.chart2.Text = "chart2";
+            chartArea1.Name = "ChartArea1";
+            this.chartFiredEmployees.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartFiredEmployees.Legends.Add(legend1);
+            this.chartFiredEmployees.Location = new System.Drawing.Point(507, 57);
+            this.chartFiredEmployees.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chartFiredEmployees.Name = "chartFiredEmployees";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Fired Employees";
+            this.chartFiredEmployees.Series.Add(series1);
+            this.chartFiredEmployees.Size = new System.Drawing.Size(387, 305);
+            this.chartFiredEmployees.TabIndex = 1;
+            this.chartFiredEmployees.Text = "chart2";
             // 
-            // chart1
+            // chartNotFiredEmployee
             // 
-            this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.chartNotFiredEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            chartArea8.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.chart1.Legends.Add(legend8);
-            this.chart1.Location = new System.Drawing.Point(69, 57);
-            this.chart1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chart1.Name = "chart1";
-            series8.ChartArea = "ChartArea1";
-            series8.Legend = "Legend1";
-            series8.Name = "Series1";
-            this.chart1.Series.Add(series8);
-            this.chart1.Size = new System.Drawing.Size(300, 305);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
+            chartArea2.Name = "ChartArea1";
+            this.chartNotFiredEmployee.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartNotFiredEmployee.Legends.Add(legend2);
+            this.chartNotFiredEmployee.Location = new System.Drawing.Point(69, 57);
+            this.chartNotFiredEmployee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chartNotFiredEmployee.Name = "chartNotFiredEmployee";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Current Employees";
+            this.chartNotFiredEmployee.Series.Add(series2);
+            this.chartNotFiredEmployee.Size = new System.Drawing.Size(403, 305);
+            this.chartNotFiredEmployee.TabIndex = 0;
+            this.chartNotFiredEmployee.Text = "chart1";
             // 
             // tabControl1
             // 
@@ -1334,8 +1332,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.chart4);
-            this.panel2.Controls.Add(this.chart3);
+            this.panel2.Controls.Add(this.chartShifts);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(3, 53);
@@ -1344,43 +1341,32 @@
             this.panel2.Size = new System.Drawing.Size(920, 421);
             this.panel2.TabIndex = 1;
             // 
-            // chart4
+            // chartShifts
             // 
-            this.chart4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea9.Name = "ChartArea1";
-            this.chart4.ChartAreas.Add(chartArea9);
-            legend9.Name = "Legend1";
-            this.chart4.Legends.Add(legend9);
-            this.chart4.Location = new System.Drawing.Point(490, 57);
-            this.chart4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chart4.Name = "chart4";
-            series9.ChartArea = "ChartArea1";
-            series9.Legend = "Legend1";
-            series9.Name = "Series1";
-            this.chart4.Series.Add(series9);
-            this.chart4.Size = new System.Drawing.Size(300, 305);
-            this.chart4.TabIndex = 2;
-            this.chart4.Text = "chart4";
-            // 
-            // chart3
-            // 
-            this.chart3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.chartShifts.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            chartArea10.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea10);
-            legend10.Name = "Legend1";
-            this.chart3.Legends.Add(legend10);
-            this.chart3.Location = new System.Drawing.Point(101, 57);
-            this.chart3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chart3.Name = "chart3";
-            series10.ChartArea = "ChartArea1";
-            series10.Legend = "Legend1";
-            series10.Name = "Series1";
-            this.chart3.Series.Add(series10);
-            this.chart3.Size = new System.Drawing.Size(300, 305);
-            this.chart3.TabIndex = 1;
-            this.chart3.Text = "chart3";
+            chartArea3.Name = "ChartArea1";
+            this.chartShifts.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartShifts.Legends.Add(legend3);
+            this.chartShifts.Location = new System.Drawing.Point(105, 48);
+            this.chartShifts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chartShifts.Name = "chartShifts";
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Morning Shift";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Afternoon Shift";
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Evening Shift";
+            this.chartShifts.Series.Add(series3);
+            this.chartShifts.Series.Add(series4);
+            this.chartShifts.Series.Add(series5);
+            this.chartShifts.Size = new System.Drawing.Size(755, 305);
+            this.chartShifts.TabIndex = 1;
+            this.chartShifts.Text = "chart3";
             // 
             // tabDepartStats
             // 
@@ -1761,8 +1747,8 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.chart6);
-            this.panel5.Controls.Add(this.chart5);
+            this.panel5.Controls.Add(this.chartStock);
+            this.panel5.Controls.Add(this.chartDepartment);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel5.Location = new System.Drawing.Point(3, 53);
@@ -1771,43 +1757,47 @@
             this.panel5.Size = new System.Drawing.Size(920, 421);
             this.panel5.TabIndex = 1;
             // 
-            // chart6
+            // chartStock
             // 
-            this.chart6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.chartStock.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea11.Name = "ChartArea1";
-            this.chart6.ChartAreas.Add(chartArea11);
-            legend11.Name = "Legend1";
-            this.chart6.Legends.Add(legend11);
-            this.chart6.Location = new System.Drawing.Point(490, 53);
-            this.chart6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chart6.Name = "chart6";
-            series11.ChartArea = "ChartArea1";
-            series11.Legend = "Legend1";
-            series11.Name = "Series1";
-            this.chart6.Series.Add(series11);
-            this.chart6.Size = new System.Drawing.Size(300, 305);
-            this.chart6.TabIndex = 2;
-            this.chart6.Text = "chart6";
+            chartArea4.Name = "ChartArea1";
+            this.chartStock.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartStock.Legends.Add(legend4);
+            this.chartStock.Location = new System.Drawing.Point(445, 53);
+            this.chartStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chartStock.Name = "chartStock";
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Confirmed Requests";
+            series7.ChartArea = "ChartArea1";
+            series7.Legend = "Legend1";
+            series7.Name = "Rejected Requests";
+            this.chartStock.Series.Add(series6);
+            this.chartStock.Series.Add(series7);
+            this.chartStock.Size = new System.Drawing.Size(423, 305);
+            this.chartStock.TabIndex = 2;
+            this.chartStock.Text = "chart6";
             // 
-            // chart5
+            // chartDepartment
             // 
-            this.chart5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.chartDepartment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            chartArea12.Name = "ChartArea1";
-            this.chart5.ChartAreas.Add(chartArea12);
-            legend12.Name = "Legend1";
-            this.chart5.Legends.Add(legend12);
-            this.chart5.Location = new System.Drawing.Point(85, 53);
-            this.chart5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chart5.Name = "chart5";
-            series12.ChartArea = "ChartArea1";
-            series12.Legend = "Legend1";
-            series12.Name = "Series1";
-            this.chart5.Series.Add(series12);
-            this.chart5.Size = new System.Drawing.Size(300, 305);
-            this.chart5.TabIndex = 1;
-            this.chart5.Text = "chart5";
+            chartArea5.Name = "ChartArea1";
+            this.chartDepartment.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chartDepartment.Legends.Add(legend5);
+            this.chartDepartment.Location = new System.Drawing.Point(25, 53);
+            this.chartDepartment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chartDepartment.Name = "chartDepartment";
+            series8.ChartArea = "ChartArea1";
+            series8.Legend = "Legend1";
+            series8.Name = "Department";
+            this.chartDepartment.Series.Add(series8);
+            this.chartDepartment.Size = new System.Drawing.Size(349, 305);
+            this.chartDepartment.TabIndex = 1;
+            this.chartDepartment.Text = "chart5";
             // 
             // tabSearchEmpl
             // 
@@ -2482,6 +2472,50 @@
             this.panel10.Size = new System.Drawing.Size(268, 295);
             this.panel10.TabIndex = 11;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F);
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(28, 227);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(126, 22);
+            this.label11.TabIndex = 12;
+            this.label11.Text = "PhoneNumber:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(28, 164);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(55, 22);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Email:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F);
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(28, 89);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(97, 22);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Nationality:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F);
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(28, 18);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(104, 22);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "DateOfBirth:";
+            // 
             // lblDateOfBirth
             // 
             this.lblDateOfBirth.AutoSize = true;
@@ -2584,50 +2618,6 @@
             this.timerSelectedMenu.Interval = 10;
             this.timerSelectedMenu.Tick += new System.EventHandler(this.timerSelectedMenu_Tick);
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F);
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(28, 18);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(104, 22);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "DateOfBirth:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F);
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(28, 89);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(97, 22);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Nationality:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F);
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(28, 164);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 22);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "Email:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F);
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(28, 227);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(126, 22);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "PhoneNumber:";
-            // 
             // MainManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -2654,8 +2644,8 @@
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartFiredEmployees)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartNotFiredEmployee)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabShiftStats.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -2668,8 +2658,7 @@
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartShifts)).EndInit();
             this.tabDepartStats.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
@@ -2681,8 +2670,8 @@
             this.tableLayoutPanel13.ResumeLayout(false);
             this.tableLayoutPanel14.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartStock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDepartment)).EndInit();
             this.tabSearchEmpl.ResumeLayout(false);
             this.tableLayoutPanel15.ResumeLayout(false);
             this.tableLayoutPanel16.ResumeLayout(false);
@@ -2811,16 +2800,15 @@
         private System.Windows.Forms.Label lblOtherInfo;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart4;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartFiredEmployees;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartNotFiredEmployee;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartShifts;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label lblPosInCompany;
         private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.Label lblFirstName;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart6;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart5;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartStock;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartDepartment;
         private Bunifu.Framework.UI.BunifuFlatButton btnLogOutTABdepart;
         private Bunifu.Framework.UI.BunifuFlatButton btnLogOutTABshiftStats;
         private Bunifu.Framework.UI.BunifuFlatButton btnLogOutTABdepartStats;
