@@ -70,7 +70,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.tbxStockDepartment = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.tbxStockName = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -93,7 +92,7 @@
             this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.btnCheckIncomingStock = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.clbIncomingStock = new System.Windows.Forms.CheckedListBox();
             this.tabIncomingStockDetails = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
@@ -187,6 +186,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.timerChangeMenuColor = new System.Windows.Forms.Timer(this.components);
+            this.cmbDepartment = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabMakeReq.SuspendLayout();
             this.tableLayoutPanel27.SuspendLayout();
@@ -540,6 +540,7 @@
             // 
             this.panel16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel16.Controls.Add(this.cmbDepartment);
             this.panel16.Controls.Add(this.dtpDateDeliver);
             this.panel16.Controls.Add(this.dtpDateOrder);
             this.panel16.Controls.Add(this.label15);
@@ -547,7 +548,6 @@
             this.panel16.Controls.Add(this.label10);
             this.panel16.Controls.Add(this.label13);
             this.panel16.Controls.Add(this.label14);
-            this.panel16.Controls.Add(this.tbxStockDepartment);
             this.panel16.Controls.Add(this.label12);
             this.panel16.Controls.Add(this.tbxStockName);
             this.panel16.Controls.Add(this.label11);
@@ -620,16 +620,6 @@
             this.label14.Size = new System.Drawing.Size(106, 22);
             this.label14.TabIndex = 11;
             this.label14.Text = "Department:";
-            // 
-            // tbxStockDepartment
-            // 
-            this.tbxStockDepartment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbxStockDepartment.Location = new System.Drawing.Point(221, 162);
-            this.tbxStockDepartment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbxStockDepartment.Name = "tbxStockDepartment";
-            this.tbxStockDepartment.Size = new System.Drawing.Size(189, 29);
-            this.tbxStockDepartment.TabIndex = 12;
             // 
             // label12
             // 
@@ -1020,7 +1010,7 @@
             // panel9
             // 
             this.panel9.Controls.Add(this.btnCheckIncomingStock);
-            this.panel9.Controls.Add(this.checkedListBox1);
+            this.panel9.Controls.Add(this.clbIncomingStock);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel9.Location = new System.Drawing.Point(3, 2);
@@ -1066,17 +1056,17 @@
             this.btnCheckIncomingStock.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckIncomingStock.Click += new System.EventHandler(this.btnCheckIncomingStock_Click);
             // 
-            // checkedListBox1
+            // clbIncomingStock
             // 
-            this.checkedListBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.clbIncomingStock.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(100, 50);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(716, 292);
-            this.checkedListBox1.TabIndex = 0;
+            this.clbIncomingStock.FormattingEnabled = true;
+            this.clbIncomingStock.Location = new System.Drawing.Point(100, 50);
+            this.clbIncomingStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.clbIncomingStock.Name = "clbIncomingStock";
+            this.clbIncomingStock.Size = new System.Drawing.Size(716, 292);
+            this.clbIncomingStock.TabIndex = 0;
             // 
             // tabIncomingStockDetails
             // 
@@ -2998,6 +2988,14 @@
             this.timerChangeMenuColor.Interval = 10;
             this.timerChangeMenuColor.Tick += new System.EventHandler(this.timerChangeMenuColor_Tick);
             // 
+            // cmbDepartment
+            // 
+            this.cmbDepartment.FormattingEnabled = true;
+            this.cmbDepartment.Location = new System.Drawing.Point(221, 159);
+            this.cmbDepartment.Name = "cmbDepartment";
+            this.cmbDepartment.Size = new System.Drawing.Size(189, 30);
+            this.cmbDepartment.TabIndex = 21;
+            // 
             // MainDepot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -3149,7 +3147,7 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel19;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox clbIncomingStock;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel20;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel21;
         private Bunifu.Framework.UI.BunifuFlatButton btnMakeReqTABincomingStockDet;
@@ -3210,8 +3208,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox tbxStockDepartment;
         private System.Windows.Forms.DateTimePicker dtpDateDeliver;
         private System.Windows.Forms.DateTimePicker dtpDateOrder;
+        private System.Windows.Forms.ComboBox cmbDepartment;
     }
 }

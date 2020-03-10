@@ -16,7 +16,9 @@ namespace Media_Bazaar
     public partial class MainDepot : Form
     {
         List<DBRestockRequest> incomingRestockRequests = new List<DBRestockRequest>();
+        List<DBDepartament> departaments = new List<DBDepartament>();
         List<int> restockID = new List<int>();
+
         public MainDepot()
         {
             InitializeComponent();
@@ -28,18 +30,21 @@ namespace Media_Bazaar
             tabControl1.ItemSize = new Size(0, 1);
             tabControl1.SizeMode = TabSizeMode.Fixed;
             tabControl1.TabPages[0].BackColor = Color.FromArgb(116, 208, 252);
-            UpdateIncomingRestockInfo();
+            UpdateConfirmedRestockInfo();
+            UpdateDepartamentInfo();
         }
 
-
-        private void UpdateIncomingRestockInfo()
+        private void UpdateConfirmedRestockInfo()
         {
-            
+            // only confirmed requests will shown here
             DataAccess db = new DataAccess();
-            incomingRestockRequests = db.GetAllIncomingStockRequests(DateTime.Now);
-            
-            checkedListBox1.DataSource = incomingRestockRequests;
-            checkedListBox1.DisplayMember = "FullInfo";
+            incomingRestockRequests = db.GetAllConfirmedRestock();
+            foreach (DBRestockRequest rr in incomingRestockRequests)
+            {
+                restockID.Add(rr.GetID());
+            }
+            clbIncomingStock.DataSource = incomingRestockRequests;
+            clbIncomingStock.DisplayMember = "FullInfo";
         }
 
 
@@ -49,7 +54,7 @@ namespace Media_Bazaar
         private void btnIncomingStockTABrequest_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedTab = tabIncomingStock;
-            UpdateIncomingRestockInfo();
+            UpdateConfirmedRestockInfo();
         }
 
         private void btnStockTABrequest_Click(object sender, EventArgs e)
@@ -121,38 +126,27 @@ namespace Media_Bazaar
 
         private void btnIncomingStockTABincomingStock_Click(object sender, EventArgs e)
         {
-            UpdateIncomingRestockInfo();
+            UpdateConfirmedRestockInfo();
         }
 
         private void BtnMakeRequest_Click(object sender, EventArgs e)
         {
 
             string type = this.cmbType.Text.ToString();
-            
             int idEmp = Convert.ToInt32(this.tbxEmployeeID.Text);
             string orderDate = this.dtpDateOrder.Value.ToString("dd/MM/yyyy");
             string orderDeliver = this.dtpDateDeliver.Value.ToString("dd/MM/yyyy");
             string name = this.tbxStockName.Text;
             int quantity = Convert.ToInt32(this.tbxStockQuantity.Text);
-            string department = this.tbxStockDepartment.Text;
+            string department = this.cmbDepartment.Text.ToString();
 
             if (type != " " && name != " " && quantity != 0 && orderDate != " " && orderDeliver != " "
                 && idEmp != 0 && department != " ")
             {
-                
-                DialogResult dialogResult = MessageBox.Show("Are you sure you want to send this request?", "Warning!", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    DataAccess db = new DataAccess();
-                    db.InsertRequest(idEmp, name, type, department, quantity, orderDate,orderDeliver );
-                    MessageBox.Show("The request is sent!");
-                }
+             
+                 DataAccess db = new DataAccess();
+                 db.InsertRequest(idEmp, name, type, department, quantity, orderDate,orderDeliver );
             }
-            else
-            {
-                MessageBox.Show("Fill all the fields first.");
-            }
-
             UpdateRequestedStocks();
         }
 
@@ -167,6 +161,20 @@ namespace Media_Bazaar
             lbxRequestedItems.DataSource = incomingRestockRequests;
             lbxRequestedItems.DisplayMember = "FullInfo";
         }
+
+        private void UpdateDepartamentInfo()
+        {
+            DataAccess db = new DataAccess();
+
+            departaments = db.GetAllDepartaments();
+            
+
+            foreach (DBDepartament dBD in departaments)
+            {
+                cmbDepartment.Items.Add(dBD.GetName());
+            }
+        }
+
         //----------------------------------------Finish
 
 

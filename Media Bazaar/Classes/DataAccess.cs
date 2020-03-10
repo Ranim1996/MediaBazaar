@@ -405,43 +405,6 @@ namespace Media_Bazaar.Classes
                 return connection.ExecuteScalar<int>($"SELECT COUNT(*) FROM RestockRequest WHERE AdminConfirmation IS NULL;");
             }
         }
-
-
-        //public List<DBShifts> GetAllShifts()
-        //{
-        //    using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-        //    {
-        //        var output = connection.Query<DBShifts>($"SELECT * FROM Shifts").ToList();
-        //        return output;
-        //    }
-        //}
-
-        //public List<DBShifts> GetAllMorningShifts()
-        //{
-        //    using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-        //    {
-        //        var output = connection.Query<DBShifts>($"SELECT * FROM Shifts WHERE ShiftType = 'Morning'").ToList();
-        //        return output;
-        //    }
-        //}
-
-        //public List<DBShifts> GetAllAfterNoonShifts()
-        //{
-        //    using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-        //    {
-        //        var output = connection.Query<DBShifts>($"SELECT * FROM Shifts WHERE ShiftType = 'Afternoon' ").ToList();
-        //        return output;
-        //    }
-        //}
-
-        //public List<DBShifts> GetAllEveningShifts()
-        //{
-        //    using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-        //    {
-        //        var output = connection.Query<DBShifts>($"SELECT * FROM Shifts WHERE ShiftType = 'Evening'").ToList();
-        //        return output;
-        //    }
-        //}
         //---------------------------
     }
 }

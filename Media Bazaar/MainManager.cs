@@ -168,49 +168,6 @@ namespace Media_Bazaar
         }
 
 
-
-        //private void DisplayShifts()
-        //{
-        //    //display the data in the statistics "Shifts"
-        //    DataAccess db = new DataAccess();
-
-        //    this.chartShifts.DataSource = db.GetAllShifts();
-
-        //    DisplayMorningShifts();
-        //    DisplayAfterNoonShifts();
-        //    DisplayEveningShifts();
-        //}
-
-        //private void DisplayMorningShifts()
-        //{
-        //    //display the data in the statistics "Shifts"
-        //    DataAccess db = new DataAccess();
-
-        //    this.chartShifts.DataSource = db.GetAllMorningShifts();
-
-        //}
-
-        //private void DisplayAfterNoonShifts()
-        //{
-        //    //display the data in the statistics "Shifts"
-        //    DataAccess db = new DataAccess();
-
-        //    this.chartShifts.DataSource = db.GetAllAfterNoonShifts();
-
-        //}
-
-        //private void DisplayEveningShifts()
-        //{
-        //    //display the data in the statistics "Shifts"
-        //    DataAccess db = new DataAccess();
-
-        //    this.chartShifts.DataSource = db.GetAllEveningShifts();
-
-        //}
-
-
-
-
         private void chartReleasedAndNot_Click(object sender, EventArgs e)
         {
 
