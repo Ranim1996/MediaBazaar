@@ -128,7 +128,7 @@ namespace Media_Bazaar
         {
 
             string type = this.cmbType.Text.ToString();
-            int idSto = Convert.ToInt32(this.tbxStockID.Text);
+            
             int idEmp = Convert.ToInt32(this.tbxEmployeeID.Text);
             string orderDate = this.dtpDateOrder.Value.ToString("dd/MM/yyyy");
             string orderDeliver = this.dtpDateDeliver.Value.ToString("dd/MM/yyyy");
@@ -136,7 +136,7 @@ namespace Media_Bazaar
             int quantity = Convert.ToInt32(this.tbxStockQuantity.Text);
             string department = this.tbxStockDepartment.Text;
 
-            if (idSto != 0 && type != " " && name != " " && quantity != 0 && orderDate != " " && orderDeliver != " "
+            if (type != " " && name != " " && quantity != 0 && orderDate != " " && orderDeliver != " "
                 && idEmp != 0 && department != " ")
             {
                 
@@ -144,7 +144,7 @@ namespace Media_Bazaar
                 if (dialogResult == DialogResult.Yes)
                 {
                     DataAccess db = new DataAccess();
-                    db.InsertRequest( idSto, idEmp, name, type, department, quantity, orderDate,orderDeliver );
+                    db.InsertRequest(idEmp, name, type, department, quantity, orderDate,orderDeliver );
                     MessageBox.Show("The request is sent!");
                 }
             }

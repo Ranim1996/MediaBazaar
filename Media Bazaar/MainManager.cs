@@ -20,14 +20,15 @@ namespace Media_Bazaar
         List<DBDepartament> departments = new List<DBDepartament>();
         List<DBRestockRequest> restocks = new List<DBRestockRequest>();
 
+        DataAccess db;
+
         public MainManager()
         {
             InitializeComponent();
             UpdateList();
-            DisplayEmployeeChart();
-            //DisplayShifts();
-            DisplayDepartments();
-            DisplayStockInfo();
+            CheckFiredAndWorkingChart();
+            CheckAttendance();
+            CheckRequests();
         }
 
         private void UpdateList()
@@ -35,7 +36,7 @@ namespace Media_Bazaar
             checkedListBox2.DataSource = employees;
             checkedListBox2.DisplayMember = "FullInfo";
         }
-       
+
         private void MainManager_Load(object sender, EventArgs e)
         {
             tabControl1.Appearance = TabAppearance.FlatButtons;
@@ -97,7 +98,7 @@ namespace Media_Bazaar
         //Method for changing back color of the selected menu
         public void ChangeBackColorOfMenus(TabControl tc)
         {
-            if(tc.SelectedTab == tabEmployeeStats || tc.SelectedTab == tabShiftStats || tc.SelectedTab == tabDepartStats)
+            if (tc.SelectedTab == tabEmployeeStats || tc.SelectedTab == tabShiftStats || tc.SelectedTab == tabDepartStats)
             {
                 btnStatsTABdepart.BackColor = Color.FromArgb(32, 126, 177);
                 btnStatsTABemployeeStats.BackColor = Color.FromArgb(32, 126, 177);
@@ -105,9 +106,9 @@ namespace Media_Bazaar
             }
             else
             {
-                if(tc.SelectedTab == tabSearchEmpl || tc.SelectedTab == tabProfile)
+                if (tc.SelectedTab == tabSearchEmpl || tc.SelectedTab == tabProfile)
                 {
-                    btnSearchTABprofile.BackColor = Color.FromArgb(32, 126, 177); 
+                    btnSearchTABprofile.BackColor = Color.FromArgb(32, 126, 177);
                     btnSearchTABsearch.BackColor = Color.FromArgb(32, 126, 177);
                 }
             }
@@ -121,7 +122,7 @@ namespace Media_Bazaar
         {
             DataAccess db = new DataAccess();
 
-            if (cmbSelectSeachMethod.Text=="Last name")
+            if (cmbSelectSeachMethod.Text == "Last name")
             {
                 employees = db.GetDBEmployeesByLastName(this.tbxSearchLastname.Text);
                 UpdateList();
@@ -166,16 +167,7 @@ namespace Media_Bazaar
 
         }
 
-        private void DisplayEmployeeChart()
-        {
-            //display the data in the statistics "Current Employees vs Nationality"
 
-            DataAccess db = new DataAccess();
-
-            employees = db.GetNotFiredEmployees();    
-            this.chartEmployee.Series["CurrentEmployees"].Points.AddXY("Nationality", "EmployeeID");
-            this.chartEmployee.Series["FiredEmployees"].Points.AddXY("Nationality", "EmployeeID");
-        }
 
         //private void DisplayShifts()
         //{
@@ -216,30 +208,77 @@ namespace Media_Bazaar
 
         //}
 
-        private void DisplayDepartments()
-        {
-            //display the data in the statistics "minimum and maximum employees for each department"
-            DataAccess db = new DataAccess();
 
-            this.chartDepartment.DataSource = db.GetAllDepartaments();
-            departments = db.GetAllDepartaments();
-            this.chartDepartment.Series["Department"].Points.AddXY("MinNumOfEmployee", "MaxNumOfEmployee");
+
+
+        private void chartReleasedAndNot_Click(object sender, EventArgs e)
+        {
 
         }
 
-        private void DisplayStockInfo()
+        int nrFired = 0;
+        int nrNotFired = 0;
+
+        int nrOfPresent = 0;
+        int nrOfAbsent = 0;
+        int nrOfLate = 0;
+
+        int nrOfConfirmed = 0;
+        int nrOfRejected = 0;
+        int nrOfWaiting = 0;
+
+        private void CheckFiredAndWorkingChart()
         {
-            //display the data in the statistics "Stock confirmed and rejected"
             DataAccess db = new DataAccess();
+            nrFired = db.GetNumOfFired();
+            nrNotFired = db.GetNumOfnOTFired();
 
-            this.chartStock.DataSource = db.GetAllConfirmedRestock();
-            this.chartStock.DataSource = db.GetAllRejectedRestock();
-
-            this.chartStock.Series["Confirmed Requests"].Points.AddXY("RequestID", "DateOfOrder");
-            this.chartStock.Series["Rejected Requests"].Points.AddXY("RequestID", "DateOfOrder");
-
+           
+            chartReleasedAndNot.Series["s1"].Points.AddXY("Fired", nrFired);
+            chartReleasedAndNot.Series["s1"].Points.AddXY("Working", nrNotFired);
         }
 
-        //---------------------------------------------------finish
+        private void CheckAttendance()
+        {
+            DataAccess db = new DataAccess();
+
+            nrOfAbsent = db.GetNumOfAbsent();
+            nrOfPresent = db.GetNumOfPresent();
+            nrOfLate = db.GetNumOfLate();
+
+            chartAttendance.Series["s1"].Points.AddXY("Present", nrOfPresent);
+            chartAttendance.Series["s1"].Points.AddXY("Absent", nrOfAbsent);
+            chartAttendance.Series["s1"].Points.AddXY("Late", nrOfLate);
+        }
+        
+
+        private void CheckRequests()
+        {
+            DataAccess db = new DataAccess();
+
+            nrOfConfirmed = db.GetNumOfConfirmedRequests();
+            nrOfRejected = db.GetNumOfRejectedRequests();
+            nrOfWaiting = db.GetNumOfWaitingRequests();
+
+            chartRequests.Series["s1"].Points.AddXY("Confirmed", nrOfConfirmed);
+            chartRequests.Series["s1"].Points.AddXY("Rejected", nrOfRejected);
+            chartRequests.Series["s1"].Points.AddXY("Waiting", nrOfWaiting);
+        }
+
+        
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnEmployeesTABemplStats_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btnStatsTABemployeeStats_Click(object sender, EventArgs e)
+        {
+        }
     }
+
 }

@@ -78,8 +78,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.cmbType = new System.Windows.Forms.ComboBox();
             this.btnMakeRequest = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label9 = new System.Windows.Forms.Label();
-            this.tbxStockID = new System.Windows.Forms.TextBox();
             this.lbxRequestedItems = new System.Windows.Forms.ListBox();
             this.tabIncomingStock = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
@@ -557,8 +555,6 @@
             this.panel16.Controls.Add(this.label8);
             this.panel16.Controls.Add(this.cmbType);
             this.panel16.Controls.Add(this.btnMakeRequest);
-            this.panel16.Controls.Add(this.label9);
-            this.panel16.Controls.Add(this.tbxStockID);
             this.panel16.Location = new System.Drawing.Point(39, 50);
             this.panel16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel16.Name = "panel16";
@@ -737,25 +733,6 @@
             this.btnMakeRequest.Textcolor = System.Drawing.Color.White;
             this.btnMakeRequest.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMakeRequest.Click += new System.EventHandler(this.BtnMakeRequest_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(26, 28);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(77, 22);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "Stock ID:";
-            // 
-            // tbxStockID
-            // 
-            this.tbxStockID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbxStockID.Location = new System.Drawing.Point(221, 21);
-            this.tbxStockID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbxStockID.Name = "tbxStockID";
-            this.tbxStockID.Size = new System.Drawing.Size(189, 29);
-            this.tbxStockID.TabIndex = 3;
             // 
             // lbxRequestedItems
             // 
@@ -1036,7 +1013,7 @@
             this.tableLayoutPanel19.Name = "tableLayoutPanel19";
             this.tableLayoutPanel19.RowCount = 1;
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 504F));
+            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 553F));
             this.tableLayoutPanel19.Size = new System.Drawing.Size(906, 553);
             this.tableLayoutPanel19.TabIndex = 0;
             // 
@@ -1367,7 +1344,7 @@
             this.tableLayoutPanel23.Name = "tableLayoutPanel23";
             this.tableLayoutPanel23.RowCount = 1;
             this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 504F));
+            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 553F));
             this.tableLayoutPanel23.Size = new System.Drawing.Size(906, 553);
             this.tableLayoutPanel23.TabIndex = 0;
             // 
@@ -1660,7 +1637,7 @@
             this.tableLayoutPanel31.Name = "tableLayoutPanel31";
             this.tableLayoutPanel31.RowCount = 1;
             this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 504F));
+            this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 553F));
             this.tableLayoutPanel31.Size = new System.Drawing.Size(906, 553);
             this.tableLayoutPanel31.TabIndex = 0;
             // 
@@ -1991,7 +1968,7 @@
             this.tableLayoutPanel35.Name = "tableLayoutPanel35";
             this.tableLayoutPanel35.RowCount = 1;
             this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 504F));
+            this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 553F));
             this.tableLayoutPanel35.Size = new System.Drawing.Size(906, 553);
             this.tableLayoutPanel35.TabIndex = 0;
             // 
@@ -3210,8 +3187,6 @@
         private System.Windows.Forms.Panel panel15;
         private Bunifu.Framework.UI.BunifuFlatButton btnCheckIncomingStock;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.TextBox tbxStockID;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cmbType;
         private System.Windows.Forms.ListBox lbxRequestedItems;

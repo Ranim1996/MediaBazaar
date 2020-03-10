@@ -249,11 +249,11 @@ namespace Media_Bazaar.Classes
             }
         }
 
-        public void InsertRequest(int idS, int idE, string name, string type, string department, int quantity, string orderDate, string orderDeliver)
+        public void InsertRequest(int idE, string name, string type, string department, int quantity, string orderDate, string orderDeliver)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                connection.Execute($"INSERT INTO RestockRequest( RequestID, EmployeeID, NameOfStock, TypeOfStock, Departament, Quantity, DateOfOrder, DateOfDelivery) VALUES ('{ idS }', '{idE}' , '{name}' , '{type}', '{department}', '{quantity}','{orderDate}', '{orderDeliver}');");
+                connection.Execute($"INSERT INTO RestockRequest(EmployeeID, NameOfStock, TypeOfStock, Departament, Quantity, DateOfOrder, DateOfDelivery) VALUES ('{idE}' , '{name}' , '{type}', '{department}', '{quantity}','{orderDate}', '{orderDeliver}');");
             }
         }
 
@@ -339,7 +339,72 @@ namespace Media_Bazaar.Classes
                 connection.Execute($"UPDATE Schedule SET Attendance = '{attendance}' WHERE EmployeeID = '{id}' AND Shift = '{shift}' AND Date = '{date}';");
             }
         }
+        
 
+        public int GetNumOfFired()
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<int>($"SELECT COUNT(EmployeeID) FROM Employee WHERE ReasonsForRelease IS NOT NULL;");
+            }            
+        }
+
+        public int GetNumOfnOTFired()
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<int>($"SELECT COUNT(EmployeeID) FROM Employee WHERE ReasonsForRelease IS NULL;");
+            }
+        }
+
+        public int GetNumOfPresent()
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<int>($"SELECT COUNT(*) FROM Schedule WHERE Attendance='PRESENT';");
+            }
+        }
+
+        public int GetNumOfAbsent()
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<int>($"SELECT COUNT(*) FROM Schedule WHERE Attendance='ABSENT';");
+            }
+        }
+
+        public int GetNumOfLate()
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<int>($"SELECT COUNT(*) FROM Schedule WHERE Attendance='LATE';");
+            }
+        }
+
+
+        public int GetNumOfConfirmedRequests()
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<int>($"SELECT COUNT(*) FROM RestockRequest WHERE AdminConfirmation='CONFIRMED';");
+            }
+        }
+
+        public int GetNumOfRejectedRequests()
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<int>($"SELECT COUNT(*) FROM RestockRequest WHERE AdminConfirmation='REJECTED';");
+            }
+        }
+
+        public int GetNumOfWaitingRequests()
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<int>($"SELECT COUNT(*) FROM RestockRequest WHERE AdminConfirmation IS NULL;");
+            }
+        }
 
 
         //public List<DBShifts> GetAllShifts()
