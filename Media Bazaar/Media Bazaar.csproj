@@ -61,8 +61,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Administration.cs" />
-    <Compile Include="Classes\Admin.cs" />
     <Compile Include="Classes\Calendar.cs" />
     <Compile Include="Classes\DataAccess.cs" />
     <Compile Include="Classes\DBDepartament.cs" />
@@ -70,11 +68,9 @@
     <Compile Include="Classes\DBRestockRequest.cs" />
     <Compile Include="Classes\DBSchedule.cs" />
     <Compile Include="Classes\DBShifts.cs" />
-    <Compile Include="Classes\DepotWorker.cs" />
-    <Compile Include="Classes\Employee.cs" />
     <Compile Include="Classes\Helper.cs" />
     <Compile Include="Classes\JobPosition.cs" />
-    <Compile Include="Classes\Manager.cs" />
+    <Compile Include="Classes\MessageBoxManager.cs" />
     <Compile Include="Classes\PasswordGenerator.cs" />
     <Compile Include="Classes\Sequrity.cs" />
     <Compile Include="Login.cs">

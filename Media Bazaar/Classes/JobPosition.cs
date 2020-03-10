@@ -10,6 +10,7 @@ namespace Media_Bazaar.Classes
     {
         ADMINISTRATOR,
         MANAGER,
-        DEPOT
+        DEPOT,
+        EMPLOYEE
     }
 }

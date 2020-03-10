@@ -13,7 +13,7 @@ namespace Media_Bazaar.Classes
         public String Date { get; private set; }
         public String Shift { get; private set; }
         public String Attendance { get; private set; }
-
+        public int ShiftId { get; private set; }
         public List<DBSchedule> allSchedules { get; private set; }
         
 

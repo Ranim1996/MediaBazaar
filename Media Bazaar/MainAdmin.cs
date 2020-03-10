@@ -16,7 +16,6 @@ namespace Media_Bazaar
     public partial class MainAdmin : Form
     {
 
-        Administration administration = new Administration();
         List<DBEmployee> Allemployees = new List<DBEmployee>();
         List<DBEmployee> ReleasedEmployees = new List<DBEmployee>();
         List<DBEmployee> NotReleasedEmployees = new List<DBEmployee>();
@@ -32,6 +31,7 @@ namespace Media_Bazaar
         DataAccess db;
 
         DBSchedule schedule = new DBSchedule();
+        private object send;
 
         public MainAdmin()
         {
@@ -171,41 +171,84 @@ namespace Media_Bazaar
             calendar.NextMonth(schedule.allSchedules, lblMonthAndYear);
         }
 
-        private void tabControl1_SelectedIndexChanged_1(object sender, EventArgs e)
+        public void linkLabel_Click(object sender, EventArgs e)
         {
-            List<FlowLayoutPanel> list = new List<FlowLayoutPanel>();
-            list = calendar.listFlDay;
-            foreach (FlowLayoutPanel fl in list)
+            DataAccess db = new DataAccess();
+            LinkLabel link = (LinkLabel)sender;
+            //the linkLabel.Tag is the employeeID
+            sender = link.Tag;
+            
+            string shiftDetails = db.GetShiftDetailsById(Convert.ToInt32(sender));
+            string shiftDate = db.GetShiftDateById(Convert.ToInt32(sender));
+            int employeeId = Convert.ToInt32(sender);
+
+            MessageBoxManager.Yes = "On Time";
+            MessageBoxManager.No = "Late";
+            MessageBoxManager.Cancel = "Absent";
+            MessageBoxManager.Register();
+            DialogResult dialog = MessageBox.Show($"ID({employeeId}): {shiftDetails}", "Attendance!", MessageBoxButtons.YesNoCancel);
+            MessageBoxManager.Unregister();
+            if(dialog == DialogResult.Yes)
             {
-                fl.Click += new System.EventHandler(this.listFlDays_Click);
-                fl.MouseHover += new System.EventHandler(this.listFlDays_MouseHover);
+                string attendance = "PRESENT";
+                db.AddAttendanceForEmployeeByIdAndShift(employeeId, attendance, shiftDetails, shiftDate);
+                link.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                if(dialog == DialogResult.No)
+                {
+                    string attendance = "LATE";
+                    db.AddAttendanceForEmployeeByIdAndShift(employeeId, attendance, shiftDetails, shiftDate);
+                    link.BackColor = Color.Yellow;
+                }
+                else
+                {
+                    if(dialog == DialogResult.Cancel)
+                    {
+                        string attendance = "ABSENT";
+                        db.AddAttendanceForEmployeeByIdAndShift(employeeId, attendance, shiftDetails, shiftDate);
+                        link.BackColor = Color.Red;
+                    }
+                     //I DONT KNOW HOW TO FIX THIS
+                     //When you press 'X' to close the messageBox , is automatically set to DialogResult.Cancel so it is set to ABSENT and the color of the link is set to red
+                     //TRY TO FIX THIS
+                }
             }
         }
-        private void listFlDays_Click(object sender, EventArgs e)
+
+        /*public void linkLabel_DoubleClick(object sender, EventArgs e)
         {
-            //Write here the actions when you click a day
-            FlowLayoutPanel fl = (FlowLayoutPanel)sender;
-            List<FlowLayoutPanel> list = new List<FlowLayoutPanel>();
-            list = calendar.listFlDay;
-            foreach (FlowLayoutPanel flow in list)
+            DataAccess db = new DataAccess();
+            LinkLabel link = (LinkLabel)sender;
+            //the linkLabel.Tag is the employeeID
+            sender = link.Tag;
+
+            string shiftDetails = db.GetShiftDetailsById(Convert.ToInt32(sender));
+            int employeeId = Convert.ToInt32(sender);
+            DialogResult dialog = MessageBox.Show($"ID({employeeId}): {shiftDetails}", "Delete Shift", MessageBoxButtons.YesNo);
+
+            if(dialog == DialogResult.Yes)
             {
-                //listBox1.Items.Add(flow.Tag.ToString());
+
             }
-            //listBox1.Items.Add(calendar.GetFirstDayOfMonth);
-            //listBox1.Items.Add(calendar.GetTotalDaysOfCurrentDate());  
+        }*/
 
-            //DateTime day;
-
-        }
-        //hover
-        private void listFlDays_MouseHover(object sender, EventArgs e)
-        {
-            FlowLayoutPanel fl = (FlowLayoutPanel)sender;
-            fl.Cursor = (Cursor)Cursors.Hand;
-        }
         //------------------------------------------------------------------------------------------
 
-
+        private void CreateEmpl(string fName, string lName, string dateOfBirth, string email, string phoneNr, string nationality, JobPosition pos)
+        {
+            string username = autoGenerateUsername(fName, lName, pos);
+            string password = autoGeneratePassword();
+            DataAccess db = new DataAccess();
+            db.InsertEmployee(fName, lName, dateOfBirth, email, phoneNr, nationality, pos.ToString(), username, password);
+            //get the employee id from database
+            int employeeID = db.GetIdOfEmployeeByName(fName, lName);
+            tbEmployeeID.Text = employeeID.ToString();
+            tbUsername.Text = username;
+            tbPassword.Text = password;
+            SendEmail(email, username, password);
+        }
 
         private void btnAddNewProfile_Click_1(object sender, EventArgs e)
         {
@@ -230,8 +273,7 @@ namespace Media_Bazaar
 
                 if (rbAdministrator.Checked)
                 {
-                    //administrator
-                    pos = JobPosition.ADMINISTRATOR;
+                    /*//administrator                   
                     username = autoGenerateUsername(fName, lName, pos);
                     password = autoGeneratePassword();
                     DataAccess db = new DataAccess();
@@ -242,7 +284,9 @@ namespace Media_Bazaar
                     tbEmployeeID.Text = employeeID.ToString();
                     tbUsername.Text = username;
                     tbPassword.Text = password;
-                    SendEmail(email, username, password);
+                    SendEmail(email, username, password);*/
+                    pos = JobPosition.ADMINISTRATOR;
+                    CreateEmpl(fName, lName, dateOfBirth, email, phoneNr, nationality, pos);
                 }
                 else
                 {
@@ -250,31 +294,19 @@ namespace Media_Bazaar
                     {
                         //Manager
                         pos = JobPosition.MANAGER;
-                        username = autoGenerateUsername(fName, lName, pos);
-                        password = autoGeneratePassword();
-                        DataAccess db = new DataAccess();
-                        db.InsertEmployee(fName, lName, dateOfBirth, email, phoneNr, nationality, pos.ToString(), username, password);
-                        //get the employee id from database
-                        int employeeID = db.GetIdOfEmployeeByName(fName, lName);
-                        tbEmployeeID.Text = employeeID.ToString();
-                        tbUsername.Text = username;
-                        tbPassword.Text = password;
-                        SendEmail(email, username, password);
+                        CreateEmpl(fName, lName, dateOfBirth, email, phoneNr, nationality, pos);
                     }
                     else if (rbDepotWorker.Checked)
                     {
                         //Depot worker
                         pos = JobPosition.DEPOT;
-                        username = autoGenerateUsername(fName, lName, pos);
-                        password = autoGeneratePassword();
-                        DataAccess db = new DataAccess();
-                        db.InsertEmployee(fName, lName, dateOfBirth, email, phoneNr, nationality, pos.ToString(), username, password);
-                        //get the employee id from database
-                        int employeeID = db.GetIdOfEmployeeByName(fName, lName);
-                        tbEmployeeID.Text = employeeID.ToString();
-                        tbUsername.Text = username;
-                        tbPassword.Text = password;
-                        SendEmail(email, username, password);
+                        CreateEmpl(fName, lName, dateOfBirth, email, phoneNr, nationality, pos);
+                    }
+                    else if(rbEmployee.Checked)
+                    {
+                        //Employee
+                        pos = JobPosition.EMPLOYEE;
+                        CreateEmpl(fName, lName, dateOfBirth, email, phoneNr, nationality, pos);
                     }
                 }
             }
@@ -436,7 +468,7 @@ namespace Media_Bazaar
 
             catch (Exception s)
             {
-
+         
             }
 
         }
@@ -596,7 +628,16 @@ namespace Media_Bazaar
             DataAccess db = new DataAccess();
             if(employeeId != -1 && date != "" && shift != "")
             {
-                db.AddSchedule(employeeId, date, shift);
+                List<DBEmployee> empl = db.GetDBEmployeeByID(employeeId);
+                if(empl.Count != 0)
+                {
+                    db.AddSchedule(employeeId, date, shift);
+                }
+                else
+                {
+                    MessageBox.Show("No employee found with the specified ID.");
+                }
+
             }
             schedule.GetAllSchedules();
             calendar.GenerateDayPanel(42, flDays);
@@ -632,5 +673,7 @@ namespace Media_Bazaar
                     }
             }
         }
+
+
     }
 }

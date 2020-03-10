@@ -199,8 +199,6 @@ namespace Media_Bazaar.Classes
         }
 
 
-
-
         //METHODS FOR DEPARTAMENTS
 
         public void InsertDepartament(string departamentName, int minNumOfEmployees, int maxNumOfEmployees)
@@ -317,6 +315,32 @@ namespace Media_Bazaar.Classes
                 connection.Execute($"INSERT INTO Schedule (EmployeeID, Date, Shift)  VALUES( '{id}', '{date}', '{shift}')");
             }
         }
+
+
+        public string GetShiftDetailsById(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT Shift FROM Schedule WHERE EmployeeID = '{id}';");
+            }
+        }
+        public string GetShiftDateById(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT Date FROM Schedule WHERE EmployeeID = '{id}';");
+            }
+        }
+
+        public void AddAttendanceForEmployeeByIdAndShift(int id, string attendance, string shift, string date)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                connection.Execute($"UPDATE Schedule SET Attendance = '{attendance}' WHERE EmployeeID = '{id}' AND Shift = '{shift}' AND Date = '{date}';");
+            }
+        }
+
+
 
         //public List<DBShifts> GetAllShifts()
         //{

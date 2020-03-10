@@ -76,13 +76,17 @@ namespace Media_Bazaar.Classes
             {
                 FlowLayoutPanel fl = new FlowLayoutPanel();
                 fl.Name = $"flDay{i}";
-                fl.Size = new Size(130, 95);
+                fl.Size = new Size(140, 95);
                 fl.BackColor = Color.White;
                 fl.BorderStyle = BorderStyle.FixedSingle;
+                fl.FlowDirection = FlowDirection.TopDown;
+
                 fl.AutoScroll = true;
+                fl.WrapContents = false;
                 flDays.Controls.Add(fl);
                 listFlDay.Add(fl);
             }
+
         }
         
         // -- modified part
@@ -96,9 +100,10 @@ namespace Media_Bazaar.Classes
             int ok = 1;
             foreach (FlowLayoutPanel fl in listFlDay)
             {
-                fl.Controls.Clear();
+                //fl.Controls.Clear();
                 fl.Tag = 0;
                 fl.BackColor = Color.White;
+                fl.AutoScroll = true;
             }
             for (int i = 1; i <= totalDaysInMonth; i++)
             {
@@ -111,23 +116,11 @@ namespace Media_Bazaar.Classes
                 lbl.Name = $"lblDay{i}";
                 lbl.AutoSize = false;
                 lbl.TextAlign = ContentAlignment.MiddleRight;
-                lbl.Size = new Size(120, 23);
+                lbl.Size = new Size(130, 23);
                 lbl.Text = i.ToString();
-                lbl.Font = new Font("Arial", 10);
+                lbl.Font = new Font("Arial", 10, FontStyle.Bold);
                 listFlDay[(i - 1) + (startDayAtFlNumber - 1)].Tag = i;
                 listFlDay[(i - 1) + (startDayAtFlNumber - 1)].Controls.Add(lbl);
-
-
-                //HERE ADD A REFERENCE for the day 
-                //-----Add the tag for each panel to recognize the day
-                //------------using the first day of the month 
-                DayOfWeek nextDay2 = new DayOfWeek();
-                nextDay2 = GetFirstDayOfMonth();
-                reset = (int)nextDay2;
-                nextDay2 = (DayOfWeek)(((int)reset + nr) % 7);
-                nr++;
-                listFlDay[(i - 1) + (startDayAtFlNumber - 1)].Tag = nextDay2;
-                //--------------------
 
 
                 //change the color of today
@@ -153,20 +146,31 @@ namespace Media_Bazaar.Classes
 
                 // constructor
                 // -- modified part ---> topic and event info
-                DataAccess db = new DataAccess();
+                 DataAccess db = new DataAccess();
                  int y = 0;
                  foreach(DBSchedule schOfTheDay in listForTheDay)
                  {
+                    MainAdmin main = new MainAdmin();
                     string firstNameOfEmployee;
                     int id = schOfTheDay.EmployeeId;
+                    string attendance = schOfTheDay.Attendance;
+                    
                     firstNameOfEmployee = db.GetFirstNameOfEmployeeById(id);
-                    Label lblInfo = new Label();
+                    LinkLabel lblInfo = new LinkLabel();                    
                     lblInfo.Name = $"lblInfo{i}{y}";
+
+                    //adding the id for the shift to be recognized when clicked in the form  <for attendance>
+                    lblInfo.Tag = $"{id}";
+                    //db.AddShiftId(Convert.ToInt32(lblInfo.Tag));
+
                     lblInfo.AutoSize = false;
                     lblInfo.TextAlign = ContentAlignment.MiddleCenter;
                     lblInfo.Size = new Size(120, 23);
-                    lblInfo.Text = $"{firstNameOfEmployee}({id})   {schOfTheDay.Shift}"; // chosen shift and the name+id of the employee
-                    lblInfo.Font = new Font("Arial", 9);
+                    lblInfo.Text = $"ID({id}): {schOfTheDay.Shift}"; // chosen shift and the name+id of the employee
+                    lblInfo.Font = new Font("Arial", 9, FontStyle.Bold);
+
+                    lblInfo.Click += new EventHandler(main.linkLabel_Click);
+                    //lblInfo.DoubleClick += new EventHandler(main.LinkLabel_DoubleClick);
                     listFlDay[(i - 1) + (startDayAtFlNumber - 1)].Tag = i;
                     listFlDay[(i - 1) + (startDayAtFlNumber - 1)].Controls.Add(lblInfo);
                     y++;
