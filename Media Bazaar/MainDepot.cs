@@ -18,6 +18,7 @@ namespace Media_Bazaar
         List<DBRestockRequest> incomingRestockRequests = new List<DBRestockRequest>();
         List<DBDepartament> departaments = new List<DBDepartament>();
         List<int> restockID = new List<int>();
+        List<int> employeeID = new List<int>();
 
         public MainDepot()
         {
@@ -84,6 +85,41 @@ namespace Media_Bazaar
         {
             //INFORMATION about the incoming stock MUST be parsed in this method
             tabControl1.SelectedTab = tabIncomingStockDetails;
+
+            if (this.clbIncomingStock.CheckedItems.Count == 0)
+            {
+                MessageBox.Show("Please select a stock!");
+            }
+
+            else
+            {
+                UpdateStockDetails();
+            }
+        }
+
+        private void UpdateStockDetails()
+        {
+            DBRestockRequest temp = new DBRestockRequest();
+            DataAccess db = new DataAccess();
+            foreach (int i in restockID)
+            {
+                if (this.clbIncomingStock.SelectedItem != null)
+                {
+                    string stock = this.clbIncomingStock.GetItemText(this.clbIncomingStock.SelectedItem);
+                    if (stock.Contains($"ID:{i}"))
+                    {
+                        this.lblSID.Text = db.GetDBStockIDById(i);
+                        this.lblSName.Text = db.GetDBStockNameById(i);
+                        this.lblSType.Text = db.GetDBStockTypeById(i);
+                        this.lblDepartment.Text = db.GetDBDepartmentByStockId(i);
+                        this.lblQuantity.Text = db.GetDBStockQuantityById(i);
+                        this.lblOrderDate.Text = db.GetDBStockOrderDateById(i);
+                        this.lblDeliverDate.Text = db.GetDBStockDeliverDateById(i);
+                        this.lblStatus.Text = db.GetDBStockStatusById(i);
+                        this.lblEID.Text = db.GetDBEmployeeIdByStockId(i);
+                    }
+                }
+            }
         }
 
         private void btnViewStock_Click(object sender, EventArgs e)
@@ -174,6 +210,7 @@ namespace Media_Bazaar
                 cmbDepartment.Items.Add(dBD.GetName());
             }
         }
+
 
         //----------------------------------------Finish
 

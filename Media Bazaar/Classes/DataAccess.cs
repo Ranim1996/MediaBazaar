@@ -229,6 +229,80 @@ namespace Media_Bazaar.Classes
 
         }
 
+        // Add data according to stock ID
+
+        public string GetDBStockIDById(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT RequestID FROM RestockRequest WHERE RequestID = '{id}';");
+            }
+        }
+
+        public string GetDBStockNameById(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT NameOfStock FROM RestockRequest WHERE RequestID = '{id}';");
+            }
+        }
+
+        public string GetDBStockTypeById(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT TypeOfStock FROM RestockRequest WHERE RequestID = '{id}';");
+            }
+        }
+
+        public string GetDBDepartmentByStockId(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT Departament FROM RestockRequest WHERE RequestID = '{id}';");
+            }
+        }
+
+        public string GetDBStockQuantityById(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT Quantity FROM RestockRequest WHERE RequestID = '{id}';");
+            }
+        }
+
+        public string GetDBStockOrderDateById(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT DateOfOrder FROM RestockRequest WHERE RequestID = '{id}';");
+            }
+        }
+
+        public string GetDBStockDeliverDateById(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT DateOfDelivery FROM RestockRequest WHERE RequestID = '{id}';");
+            }
+        }
+
+        public string GetDBStockStatusById(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT AdminConfirmation FROM RestockRequest WHERE RequestID = '{id}';");
+            }
+        }
+
+        public string GetDBEmployeeIdByStockId(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT EmployeeID FROM RestockRequest WHERE RequestID = '{id}';");
+            }
+        }
+
         //METHODS FOR RESTOCK
 
         public List<DBRestockRequest> GetAllRequests()
