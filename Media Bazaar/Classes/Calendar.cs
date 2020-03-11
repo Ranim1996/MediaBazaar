@@ -162,7 +162,7 @@ namespace Media_Bazaar.Classes
                     //adding the id for the shift to be recognized when clicked in the form  <for attendance>
                     lblInfo.Tag = $"{id}";
                     //db.AddShiftId(Convert.ToInt32(lblInfo.Tag));
-
+                    //schOfTheDay.GetAttendance(lblInfo, id);
                     lblInfo.AutoSize = false;
                     lblInfo.TextAlign = ContentAlignment.MiddleCenter;
                     lblInfo.Size = new Size(120, 23);

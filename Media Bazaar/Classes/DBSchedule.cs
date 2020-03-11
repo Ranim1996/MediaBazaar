@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,5 +30,28 @@ namespace Media_Bazaar.Classes
                 MessageBox.Show("Connection to the server was not possible!");
             }
         }
+
+        /*public void GetAttendance(LinkLabel lbl, int emplId)
+        {
+            if(this.Attendance == "PRESENT" && this.EmployeeId == emplId)
+            {
+                lbl.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                if(this.Attendance == "LATE" && this.EmployeeId == emplId)
+                {
+                    lbl.BackColor = Color.Yellow;
+                }
+                else
+                {
+                    if(this.Attendance == "ABSENT" && this.EmployeeId == emplId)
+                    {
+                        lbl.BackColor = Color.Red;
+                    }
+                }
+
+            }
+        }*/
     }
 }

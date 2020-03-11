@@ -177,7 +177,7 @@ namespace Media_Bazaar
             LinkLabel link = (LinkLabel)sender;
             //the linkLabel.Tag is the employeeID
             sender = link.Tag;
-            
+            int ok = 1;
             string shiftDetails = db.GetShiftDetailsById(Convert.ToInt32(sender));
             string shiftDate = db.GetShiftDateById(Convert.ToInt32(sender));
             int employeeId = Convert.ToInt32(sender);
@@ -188,7 +188,11 @@ namespace Media_Bazaar
             MessageBoxManager.Register();
             DialogResult dialog = MessageBox.Show($"ID({employeeId}): {shiftDetails}", "Attendance!", MessageBoxButtons.YesNoCancel);
             MessageBoxManager.Unregister();
-            if(dialog == DialogResult.Yes)
+            if (dialog == DialogResult.None)
+            {
+                ok = 0;
+            }
+            if (dialog == DialogResult.Yes && ok == 1)
             {
                 string attendance = "PRESENT";
                 db.AddAttendanceForEmployeeByIdAndShift(employeeId, attendance, shiftDetails, shiftDate);
@@ -196,7 +200,7 @@ namespace Media_Bazaar
             }
             else
             {
-                if(dialog == DialogResult.No)
+                if(dialog == DialogResult.No && ok == 1)
                 {
                     string attendance = "LATE";
                     db.AddAttendanceForEmployeeByIdAndShift(employeeId, attendance, shiftDetails, shiftDate);
@@ -204,12 +208,12 @@ namespace Media_Bazaar
                 }
                 else
                 {
-                    if(dialog == DialogResult.Cancel)
+                    if(dialog == DialogResult.Cancel && ok == 1)
                     {
                         string attendance = "ABSENT";
                         db.AddAttendanceForEmployeeByIdAndShift(employeeId, attendance, shiftDetails, shiftDate);
                         link.BackColor = Color.Red;
-                    }
+                    }                  
                      //I DONT KNOW HOW TO FIX THIS
                      //When you press 'X' to close the messageBox , is automatically set to DialogResult.Cancel so it is set to ABSENT and the color of the link is set to red
                      //TRY TO FIX THIS
