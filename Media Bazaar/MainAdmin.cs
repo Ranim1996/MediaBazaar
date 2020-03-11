@@ -674,5 +674,9 @@ namespace Media_Bazaar
             }
         }
 
+        private void btnNewProfTABaddProf_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

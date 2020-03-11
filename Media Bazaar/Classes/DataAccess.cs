@@ -22,7 +22,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
-        public List<DBEmployee> GetDBEmployeeByID (int id)
+        public List<DBEmployee> GetDBEmployeeByID(int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
@@ -51,7 +51,7 @@ namespace Media_Bazaar.Classes
 
         public string GetFirstNameOfEmployeeById(int id)
         {
-            using(MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
                 return connection.ExecuteScalar<string>($"SELECT FirstName FROM Employee WHERE EmployeeID = '{id}';");
             }
@@ -369,7 +369,7 @@ namespace Media_Bazaar.Classes
 
         //METHODS FOR SCHEDULE--------------
 
-        
+
         public List<DBSchedule> GetAllSchedules()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -381,8 +381,8 @@ namespace Media_Bazaar.Classes
 
         //Adding the shift to the database
         public void AddSchedule(int employeeID, string date, string shift)
-        {            
-            using(MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
 
                 int id = connection.ExecuteScalar<int>($"SELECT e.EmployeeID FROM Employee AS e WHERE e.EmployeeID = '{employeeID}'");
@@ -413,14 +413,14 @@ namespace Media_Bazaar.Classes
                 connection.Execute($"UPDATE Schedule SET Attendance = '{attendance}' WHERE EmployeeID = '{id}' AND Shift = '{shift}' AND Date = '{date}';");
             }
         }
-        
+
 
         public int GetNumOfFired()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
                 return connection.ExecuteScalar<int>($"SELECT COUNT(EmployeeID) FROM Employee WHERE ReasonsForRelease IS NOT NULL;");
-            }            
+            }
         }
 
         public int GetNumOfnOTFired()
@@ -479,6 +479,31 @@ namespace Media_Bazaar.Classes
                 return connection.ExecuteScalar<int>($"SELECT COUNT(*) FROM RestockRequest WHERE AdminConfirmation IS NULL;");
             }
         }
-        //---------------------------
+
+        public string GetProfileUsername(string pass)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT Usename FROM Employee WHERE Password = '{pass}';");
+            }
+        }
+
+        public string GetProfilePassword(string user)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT Password FROM Employee WHERE Username = '{user}';");
+            }
+        }
+
+        public int GetProfileDetails(string user, string pass)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<int>($"SELECT Username,Password FROM Employee WHERE Username='{user}' AND CONVERT(Password,VARCHAR)='{pass}' ;");
+            }
+        }
+
+        // SqlCommand cm = new SqlCommand("SELECT FirstName,Password FROM TenantsInfo WHERE FirstName=  '" + tbName.Text + "' AND CONVERT(VARCHAR, Password)='" + tbPass.Text + " '", sqlcon);
     }
 }

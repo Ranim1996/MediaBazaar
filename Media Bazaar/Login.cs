@@ -9,11 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Drawing.Drawing2D;
+using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
+using Media_Bazaar.Classes;
 
 namespace Media_Bazaar
 {
     public partial class Login : Form
     {
+        DataAccess db;
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -43,9 +48,32 @@ namespace Media_Bazaar
             this.WindowState = FormWindowState.Minimized;
         }
 
-        //Login, to be modified when the database will be made
+
+
+        private int nrRows;
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            //db = new DataAccess();
+            //nrRows = db.GetProfileDetails(tbUsername.Text, tbPassword.Text);
+
+            //if (nrRows>0)
+            //{
+            //    tbUsername.Text = "Username";
+            //    tbPassword.Text = "Password";
+            //    MainAdmin MainAdmin = new MainAdmin();
+            //    MainAdmin.Show();
+            //    this.Visible = false;
+            //}
+
+            //else
+            //{
+            //    MessageBox.Show("Wrong Username/Password");
+            //    tbUsername.Text = "Username";
+            //    tbPassword.Text = "Password";
+            //}
+
+
+
             if (tbUsername.Text == "Admin" && tbPassword.Text == "1234")
             {
                 tbUsername.Text = "Username";
@@ -83,7 +111,5 @@ namespace Media_Bazaar
                 }
             }
         }
-
-        
     }
 }
