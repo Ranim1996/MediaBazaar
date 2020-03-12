@@ -9,6 +9,7 @@ namespace Media_Bazaar.Classes
 {
     public static class Helper
     {
+        //make connection with data base.
         public static string CnnVal(string name)
         {
            return ConfigurationManager.ConnectionStrings[name].ConnectionString;

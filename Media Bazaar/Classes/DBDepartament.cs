@@ -8,12 +8,13 @@ namespace Media_Bazaar.Classes
 {
     public class DBDepartament
     {
+        //properties
         public string DepartamentName { get; set; }
         public int MinNumOfEmployees { get; set; }
         public int MaxNumOfEmployees { get; set; }
         
-
-        public string FullInfo
+        //methods
+        public string FullInfo // return full info.
         {
             get
             {
@@ -21,7 +22,7 @@ namespace Media_Bazaar.Classes
             }
         }       
 
-        public string GetName()
+        public string GetName() // return department name.
         {
             return DepartamentName;
         }

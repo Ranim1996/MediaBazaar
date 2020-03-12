@@ -8,6 +8,7 @@ namespace Media_Bazaar.Classes
 {
     public class DBRestockRequest
     {
+        //fields
         public int RequestID { get; set; }
         public int EmployeeID { get; set; }
         public string NameOfStock { get; set; }
@@ -19,8 +20,8 @@ namespace Media_Bazaar.Classes
         public string AdminConfirmation { get; set; }
         public string ExtraInfo { get; set; }
        
-
-        public string FullInfo
+        //methods
+        public string FullInfo // return full info
         {
             get
             {
@@ -28,7 +29,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
-       public int GetID()
+       public int GetID() // return request id
         {
             return RequestID;
         }

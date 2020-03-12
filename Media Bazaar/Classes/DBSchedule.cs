@@ -10,6 +10,7 @@ namespace Media_Bazaar.Classes
 {
     public class DBSchedule
     {
+        //fields
         public int EmployeeId { get; private set; }
         public String Date { get; private set; }
         public String Shift { get; private set; }
@@ -17,7 +18,9 @@ namespace Media_Bazaar.Classes
         public int ShiftId { get; private set; }
         public List<DBSchedule> allSchedules { get; private set; }
         
+        //methods
 
+        // return all schedules
         public void GetAllSchedules()
         {
             DataAccess db = new DataAccess();

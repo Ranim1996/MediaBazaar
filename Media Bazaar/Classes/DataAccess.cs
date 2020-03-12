@@ -13,6 +13,8 @@ namespace Media_Bazaar.Classes
     {
 
         //METHODS FOR EMPLOYEES:
+
+        //get all info of the employee via last name.
         public List<DBEmployee> GetDBEmployeesByLastName(string lastName)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -22,6 +24,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //get all the info of the employee via employee id.
         public List<DBEmployee> GetDBEmployeeByID(int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -31,6 +34,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //insert new employee in the data base table.
         public void InsertEmployee(string fName, string lName, string dateOfBirth, string email, string phoneNr, string nationality, string pos, string username, string password)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -41,6 +45,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //get the employee id via name.
         public int GetIdOfEmployeeByName(string fName, string lName)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -49,6 +54,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //get first name of employee via employee id.
         public string GetFirstNameOfEmployeeById(int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -57,6 +63,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //get first name of employee via employee's last name.
         public string GetFirstNameOfEmployeeByLastname(string lastName)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -65,6 +72,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //get last name of employee via employee id.
         public string GetLastNameOfEmployeeById(int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -73,6 +81,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //get last name of employee via employee's last name.
         public string GetLastNameOfEmployeeByLastname(string lastName)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -81,6 +90,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //get position of employee via employee's id.
         public string GetPosOfEmployeeById(int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -89,6 +99,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //get position of employee via employee's last name.
         public string GetPosOfEmployeeByLastname(string lastName)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -97,6 +108,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //get email of employee via employee's id.
         public string GetEmailOfEmployeeById(int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -105,6 +117,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //get email of employee via employee's last name.
         public string GetEmailOfEmployeeByLastname(string lastName)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -113,6 +126,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //get phone number of employee via employee's id.
         public string GetPhoneNumberOfEmployeeById(int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -121,6 +135,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //get phone number of employee via employee's last name.
         public string GetPhoneNumberOfEmployeeByLastname(string lastName)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -129,6 +144,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //get Nationality of employee via employee's id.
         public string GetNationalityOfEmployeeById(int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -137,6 +153,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //get Nationality of employee via employee's last name.
         public string GetNationalityOfEmployeeByLastname(string lastName)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -145,6 +162,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //get date of birth of employee via employee's id.
         public string GetDateOfBirthOfEmployeeById(int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -153,6 +171,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //get date of birth of employee via employee's last name.
         public string GetDateOfBirthOfEmployeeByLastname(string lastName)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -161,17 +180,18 @@ namespace Media_Bazaar.Classes
             }
         }
 
-        public List<DBEmployee> GetAllEmployees()
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                var output = connection.Query<DBEmployee>($"SELECT * FROM Employee").ToList();
-                return output;
-            }
-        }
+        //not used till now
+        //public List<DBEmployee> GetAllEmployees()
+        //{
+        //    using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+        //    {
+        //        var output = connection.Query<DBEmployee>($"SELECT * FROM Employee").ToList();
+        //        return output;
+        //    }
+        //}
 
 
-
+        //update and set the info's table in data base where the employee is fired by id.
         public void FireEmployeeByID(string reasons, int employeeID)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -180,15 +200,17 @@ namespace Media_Bazaar.Classes
             }
         }
 
-        public List<DBEmployee> GetFiredEmployees()
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                var output = connection.Query<DBEmployee>($"SELECT * FROM Employee WHERE ReasonsForRelease IS NOT NULL;").ToList();
-                return output;
-            }
-        }
+        //not used till now
+        //public List<DBEmployee> GetFiredEmployees()
+        //{
+        //    using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+        //    {
+        //        var output = connection.Query<DBEmployee>($"SELECT * FROM Employee WHERE ReasonsForRelease IS NOT NULL;").ToList();
+        //        return output;
+        //    }
+        //}
 
+        //get all the info of not fired employees
         public List<DBEmployee> GetNotFiredEmployees()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -201,6 +223,7 @@ namespace Media_Bazaar.Classes
 
         //METHODS FOR DEPARTAMENTS
 
+        //add new department in the deartment table in data base.
         public void InsertDepartament(string departamentName, int minNumOfEmployees, int maxNumOfEmployees)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -210,6 +233,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //get all the departments that are in the data base.
         public List<DBDepartament> GetAllDepartaments()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -219,7 +243,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
-
+        //update employee table when information are added to the department column.
         public void AssignEmployeeToDepartament(int employeeID, string departament)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -231,6 +255,7 @@ namespace Media_Bazaar.Classes
 
         // Add data according to stock ID
 
+        //get stock id by the given stock id.
         public string GetDBStockIDById(int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -239,6 +264,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //get stock name by the given stock id.
         public string GetDBStockNameById(int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -247,6 +273,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //get stock type by the given stock id.
         public string GetDBStockTypeById(int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -255,6 +282,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //get department by the given stock id.
         public string GetDBDepartmentByStockId(int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -263,6 +291,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //get stock quantity id by the given stock id.
         public string GetDBStockQuantityById(int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -271,6 +300,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //get stock order date id by the given stock id.
         public string GetDBStockOrderDateById(int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -279,6 +309,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //get stock deliver date id by the given stock id.
         public string GetDBStockDeliverDateById(int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -287,6 +318,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //get stock status by the given stock id.
         public string GetDBStockStatusById(int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -295,6 +327,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //get employee id by the given stock id.
         public string GetDBEmployeeIdByStockId(int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -305,6 +338,7 @@ namespace Media_Bazaar.Classes
 
         //METHODS FOR RESTOCK
 
+        // get info about all requested stock.
         public List<DBRestockRequest> GetAllRequests()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -314,15 +348,17 @@ namespace Media_Bazaar.Classes
             }
         }
 
-        public List<DBRestockRequest> GetAllIncomingStockRequests(DateTime dt)
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                var output = connection.Query<DBRestockRequest>($"SELECT * FROM RestockRequest WHERE DateOfDelivery>='{dt}' AND AdminConfirmation ='CONFIRMED'").ToList();
-                return output;
-            }
-        }
+        //not used till now
+        //public List<DBRestockRequest> GetAllIncomingStockRequests(DateTime dt)
+        //{
+        //    using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+        //    {
+        //        var output = connection.Query<DBRestockRequest>($"SELECT * FROM RestockRequest WHERE DateOfDelivery>='{dt}' AND AdminConfirmation ='CONFIRMED'").ToList();
+        //        return output;
+        //    }
+        //}
 
+        // add request to Restock request table in data base.
         public void InsertRequest(int idE, string name, string type, string department, int quantity, string orderDate, string orderDeliver)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -331,6 +367,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        // get all confirmed requests from data base.
         public List<DBRestockRequest> GetAllConfirmedRestock()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -340,16 +377,17 @@ namespace Media_Bazaar.Classes
             }
         }
 
-        public List<DBRestockRequest> GetAllRejectedRestock()
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                var output = connection.Query<DBRestockRequest>($"SELECT * FROM RestockRequest WHERE AdminConfirmation ='CONFIRMED'").ToList();
-                return output;
-            }
-        }
+        // not used till now.
+        //public List<DBRestockRequest> GetAllRejectedRestock()
+        //{
+        //    using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+        //    {
+        //        var output = connection.Query<DBRestockRequest>($"SELECT * FROM RestockRequest WHERE AdminConfirmation ='CONFIRMED'").ToList();
+        //        return output;
+        //    }
+        //}
 
-
+        //update restock request when the AdminConfirmation column is modified "CONFIRMED".
         public void ConfirmRequest(int requestID)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -358,6 +396,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //update restock request when the AdminConfirmation column is modified "REJECTED".
         public void RejectRequest(int requestID)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -369,7 +408,7 @@ namespace Media_Bazaar.Classes
 
         //METHODS FOR SCHEDULE--------------
 
-
+        //get all the schedule from the data base.
         public List<DBSchedule> GetAllSchedules()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -390,7 +429,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
-
+        // get shift details by employee id.
         public string GetShiftDetailsById(int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -398,6 +437,8 @@ namespace Media_Bazaar.Classes
                 return connection.ExecuteScalar<string>($"SELECT Shift FROM Schedule WHERE EmployeeID = '{id}';");
             }
         }
+
+        //get shift date by employee id.
         public string GetShiftDateById(int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -406,6 +447,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //get employee attendance by employee id, shift and date.
         public void AddAttendanceForEmployeeByIdAndShift(int id, string attendance, string shift, string date)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -414,7 +456,9 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        // methods to return int in order to use it in the statistics
 
+        //return number of fired employees.
         public int GetNumOfFired()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -423,6 +467,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //return number of not fired employees.
         public int GetNumOfnOTFired()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -431,6 +476,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //return number of present employees.
         public int GetNumOfPresent()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -439,6 +485,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //return number of absent employees.
         public int GetNumOfAbsent()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -447,6 +494,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //return number of late employees.
         public int GetNumOfLate()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -455,7 +503,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
-
+        //return number of confirmed requests.
         public int GetNumOfConfirmedRequests()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -464,6 +512,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //return number of rejected requests.
         public int GetNumOfRejectedRequests()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -472,6 +521,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //return number of waiting requests.
         public int GetNumOfWaitingRequests()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -480,29 +530,32 @@ namespace Media_Bazaar.Classes
             }
         }
 
-        public string GetProfileUsername(string pass)
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                return connection.ExecuteScalar<string>($"SELECT Usename FROM Employee WHERE Password = '{pass}';");
-            }
-        }
+        //not used yet
+        //public string GetProfileUsername(string pass)
+        //{
+        //    using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+        //    {
+        //        return connection.ExecuteScalar<string>($"SELECT Usename FROM Employee WHERE Password = '{pass}';");
+        //    }
+        //}
 
-        public string GetProfilePassword(string user)
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                return connection.ExecuteScalar<string>($"SELECT Password FROM Employee WHERE Username = '{user}';");
-            }
-        }
+        //not used yet
+        //public string GetProfilePassword(string user)
+        //{
+        //    using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+        //    {
+        //        return connection.ExecuteScalar<string>($"SELECT Password FROM Employee WHERE Username = '{user}';");
+        //    }
+        //}
 
-        public int GetProfileDetails(string user, string pass)
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                return connection.ExecuteScalar<int>($"SELECT Username,Password FROM Employee WHERE Username='{user}' AND CONVERT(Password,VARCHAR)='{pass}' ;");
-            }
-        }
+        //not used yet
+        //public int GetProfileDetails(string user, string pass)
+        //{
+        //    using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+        //    {
+        //        return connection.ExecuteScalar<int>($"SELECT Username,Password FROM Employee WHERE Username='{user}' AND CONVERT(Password,VARCHAR)='{pass}' ;");
+        //    }
+        //}
 
         // SqlCommand cm = new SqlCommand("SELECT FirstName,Password FROM TenantsInfo WHERE FirstName=  '" + tbName.Text + "' AND CONVERT(VARCHAR, Password)='" + tbPass.Text + " '", sqlcon);
     }

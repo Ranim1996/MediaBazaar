@@ -8,6 +8,7 @@ namespace Media_Bazaar.Classes
 {
     public class DBEmployee
     {
+        //fields
         public int EmployeeID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -22,15 +23,16 @@ namespace Media_Bazaar.Classes
         public string PreferedShiftForTheWeek { get; set; }
         public string ReasonsForRelease { get; set; }
 
-        public string FullInfo
+        //methods
+        public string FullInfo //return full ingo
         {
             get
             {
-                return $"ID:{EmployeeID} {FirstName} {LastName} {DateOfBirth} {Email} {PhoneNumber} {Nationality} {Position} {Departament} {PreferedShiftForTheWeek})"; 
+                return $"ID:{EmployeeID} {FirstName} {LastName} {DateOfBirth} {Email} {PhoneNumber} {Nationality} {Position} {Departament} {PreferedShiftForTheWeek})";
             }
         }
 
-        public int GetID()
+        public int GetID() // return employee id
         {
             return EmployeeID;
         }

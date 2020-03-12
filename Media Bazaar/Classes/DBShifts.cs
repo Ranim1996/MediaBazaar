@@ -14,7 +14,7 @@ namespace Media_Bazaar.Classes
         public string eveningShift { get; set; }
 
         //method
-        public string FullInfo
+        public string FullInfo // return full info
         {
             get
             {
