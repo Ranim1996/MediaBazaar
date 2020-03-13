@@ -24,14 +24,8 @@ namespace Media_Bazaar.Classes
         public void GetAllSchedules()
         {
             DataAccess db = new DataAccess();
-            try
-            {
-                allSchedules = db.GetAllSchedules();
-            }
-            catch
-            {
-                MessageBox.Show("Connection to the server was not possible!");
-            }
+            allSchedules = db.GetAllSchedules();
+            
         }
 
         /*public void GetAttendance(LinkLabel lbl, int emplId)

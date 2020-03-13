@@ -24,6 +24,8 @@ namespace Media_Bazaar.Classes
 
         }
 
+        MainAdmin main;
+
         // -- functions --
         private int GetFirstDayOfWeekOfCurrentDate()
         {
@@ -88,35 +90,37 @@ namespace Media_Bazaar.Classes
             }
 
         }
-        
+
+        List<DBSchedule> listForTheDay = new List<DBSchedule>();
+
         // -- modified part
         public void AddLabelDayToFlDay(int startDayAtFlNumber, int totalDaysInMonth, List<DBSchedule> schedules)
         {
             //needs to be adjusted ---> WORK IN PROGGRESS
             //string[] date = DateTime.Now.ToString("dd/MM/yyyy").Split('/');
             string[] date = currentDate.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture).Split('/');
-            int reset;
+           /* int reset;
             int nr = 0;
-            int ok = 1;
+            int ok = 1;*/
             foreach (FlowLayoutPanel fl in listFlDay)
             {
-                //fl.Controls.Clear();
+                fl.Controls.Clear();
                 fl.Tag = 0;
                 fl.BackColor = Color.White;
                 fl.AutoScroll = true;
             }
             for (int i = 1; i <= totalDaysInMonth; i++)
             {
-                string topic = "";
+                /*string topic = "";
                 string time = "";
-                string info = "";// -- experimental ---> sub tab for calendar
+                string info = "";// -- experimental ---> sub tab for calendar*/
 
                 // -- label date
                 Label lbl = new Label();
                 lbl.Name = $"lblDay{i}";
                 lbl.AutoSize = false;
                 lbl.TextAlign = ContentAlignment.MiddleRight;
-                lbl.Size = new Size(130, 23);
+                lbl.Size = new Size(120, 23);
                 lbl.Text = i.ToString();
                 lbl.Font = new Font("Arial", 10, FontStyle.Bold);
                 listFlDay[(i - 1) + (startDayAtFlNumber - 1)].Tag = i;
@@ -131,8 +135,8 @@ namespace Media_Bazaar.Classes
 
                 // -- BETA ---> Get the chosen work shifts 
 
-                 List<DBSchedule> listForTheDay= new List<DBSchedule>();
-
+                 
+  
                  // -- gets only the shifts i need
                  foreach (DBSchedule sch in schedules)
                  {
@@ -144,45 +148,39 @@ namespace Media_Bazaar.Classes
                      }
                  }
 
-                // constructor
-                // -- modified part ---> topic and event info
+                 // constructor
+                 // -- modified part ---> topic and event info
                  DataAccess db = new DataAccess();
                  int y = 0;
                  foreach(DBSchedule schOfTheDay in listForTheDay)
                  {
-                    MainAdmin main = new MainAdmin();
-                    string firstNameOfEmployee;
-                    int id = schOfTheDay.EmployeeId;
-                    string attendance = schOfTheDay.Attendance;
+                    main = new MainAdmin();
+                    //string firstNameOfEmployee;
+                    //int id = schOfTheDay.EmployeeId;
+                    //string attendance = schOfTheDay.Attendance;
                     
-                    firstNameOfEmployee = db.GetFirstNameOfEmployeeById(id);
-                    LinkLabel lblInfo = new LinkLabel();                    
+                    //firstNameOfEmployee = db.GetFirstNameOfEmployeeById(schOfTheDay.EmployeeId);
+                    Label lblInfo = new Label();                    
                     lblInfo.Name = $"lblInfo{i}{y}";
 
                     //adding the id for the shift to be recognized when clicked in the form  <for attendance>
-                    lblInfo.Tag = $"{id}";
-                    //db.AddShiftId(Convert.ToInt32(lblInfo.Tag));
-                    //schOfTheDay.GetAttendance(lblInfo, id);
+                    lblInfo.Tag = $"{schOfTheDay.EmployeeId}";
                     lblInfo.AutoSize = false;
                     lblInfo.TextAlign = ContentAlignment.MiddleCenter;
-                    lblInfo.Size = new Size(120, 23);
-                    lblInfo.Text = $"ID({id}): {schOfTheDay.Shift}"; // chosen shift and the name+id of the employee
-                    lblInfo.Font = new Font("Arial", 9, FontStyle.Bold);
-
+                    lblInfo.Size = new Size(140, 23);
+                    lblInfo.Text = $"ID({schOfTheDay.EmployeeId}): {schOfTheDay.Shift}"; // chosen shift and the name+id of the employee
+                    lblInfo.Font = new Font("Arial", 10, FontStyle.Bold);
                     lblInfo.Click += new EventHandler(main.linkLabel_Click);
-                    //lblInfo.DoubleClick += new EventHandler(main.LinkLabel_DoubleClick);
+
                     listFlDay[(i - 1) + (startDayAtFlNumber - 1)].Tag = i;
                     listFlDay[(i - 1) + (startDayAtFlNumber - 1)].Controls.Add(lblInfo);
                     y++;
                  } 
                 //-------------------------------------------------------------------------------------------
-
-
-
-
             }
         }
         
+      
 
       
     }

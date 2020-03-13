@@ -419,13 +419,13 @@ namespace Media_Bazaar.Classes
         }
 
         //Adding the shift to the database
-        public void AddSchedule(int employeeID, string date, string shift)
+        public void AddSchedule(int employeeID, string date, string shift, string attendance)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
 
                 int id = connection.ExecuteScalar<int>($"SELECT e.EmployeeID FROM Employee AS e WHERE e.EmployeeID = '{employeeID}'");
-                connection.Execute($"INSERT INTO Schedule (EmployeeID, Date, Shift)  VALUES( '{id}', '{date}', '{shift}')");
+                connection.Execute($"INSERT INTO Schedule (EmployeeID, Date, Shift, Attendance)  VALUES( '{id}', '{date}', '{shift}', '{attendance}')");
             }
         }
 
@@ -435,6 +435,13 @@ namespace Media_Bazaar.Classes
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
                 return connection.ExecuteScalar<string>($"SELECT Shift FROM Schedule WHERE EmployeeID = '{id}';");
+            }
+        }
+        public string GetAttendanceDetailsById(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT Attendance FROM Schedule WHERE EmployeeID = '{id}';");
             }
         }
 

@@ -36,9 +36,7 @@ namespace Media_Bazaar
         public MainAdmin()
         {
             InitializeComponent();
-            UpdateEmployeeInfo();
-            UpdateDepartamentInfo();
-            UpdateRestockInfo();
+            
         }
 
         private void MainAdmin_Load(object sender, EventArgs e)
@@ -49,13 +47,17 @@ namespace Media_Bazaar
             tabControl1.SizeMode = TabSizeMode.Fixed;
             tabControl1.TabPages[0].BackColor = Color.FromArgb(116, 208, 252);
 
+            // I ADDED A NEW METHOD FOR THE CHANGING OF TABS TO REDUCE THE LOADING TIME OF THE FORM
 
-            // --- Schedule Tab ---
-            //evn.GetAllEvents();   //Shifts listed in calendar            
-            schedule.GetAllSchedules();
+            // --- Schedule Tab ---  
+
+            /*schedule.GetAllSchedules();
             calendar.GenerateDayPanel(42, flDays);
-            calendar.DisplayCurrentDate(schedule.allSchedules, lblMonthAndYear);
+            calendar.DisplayCurrentDate(schedule.allSchedules, lblMonthAndYear);*/
 
+            /*UpdateEmployeeInfo();
+            UpdateDepartamentInfo();
+            UpdateRestockInfo();*/
         }
 
         //----------------------------------Start
@@ -174,7 +176,7 @@ namespace Media_Bazaar
         public void linkLabel_Click(object sender, EventArgs e)
         {
             DataAccess db = new DataAccess();
-            LinkLabel link = (LinkLabel)sender;
+            Label link = (Label)sender;
             //the linkLabel.Tag is the employeeID
             sender = link.Tag;
             int ok = 1;
@@ -221,22 +223,7 @@ namespace Media_Bazaar
             }
         }
 
-        /*public void linkLabel_DoubleClick(object sender, EventArgs e)
-        {
-            DataAccess db = new DataAccess();
-            LinkLabel link = (LinkLabel)sender;
-            //the linkLabel.Tag is the employeeID
-            sender = link.Tag;
-
-            string shiftDetails = db.GetShiftDetailsById(Convert.ToInt32(sender));
-            int employeeId = Convert.ToInt32(sender);
-            DialogResult dialog = MessageBox.Show($"ID({employeeId}): {shiftDetails}", "Delete Shift", MessageBoxButtons.YesNo);
-
-            if(dialog == DialogResult.Yes)
-            {
-
-            }
-        }*/
+       
 
         //------------------------------------------------------------------------------------------
 
@@ -276,19 +263,7 @@ namespace Media_Bazaar
                 nationality = tbNationality.Text;
 
                 if (rbAdministrator.Checked)
-                {
-                    /*//administrator                   
-                    username = autoGenerateUsername(fName, lName, pos);
-                    password = autoGeneratePassword();
-                    DataAccess db = new DataAccess();
-                    db.InsertEmployee(fName, lName, dateOfBirth, email, phoneNr, nationality, pos.ToString(), username, password);
-                    //get the employee id from database
-                    int employeeID = db.GetIdOfEmployeeByName(fName, lName);
-                    //adding the info in the textboxes that cannot be edited
-                    tbEmployeeID.Text = employeeID.ToString();
-                    tbUsername.Text = username;
-                    tbPassword.Text = password;
-                    SendEmail(email, username, password);*/
+                {                     
                     pos = JobPosition.ADMINISTRATOR;
                     CreateEmpl(fName, lName, dateOfBirth, email, phoneNr, nationality, pos);
                 }
@@ -381,7 +356,6 @@ namespace Media_Bazaar
                 cmbDepartments.Items.Add(dBD.GetName());
             }
         }
-
         private void UpdateRestockInfo()
         {
             DataAccess db = new DataAccess();
@@ -427,8 +401,6 @@ namespace Media_Bazaar
                         }
 
                     }
-
-
                 }
             }
             UpdateEmployeeInfo();
@@ -577,45 +549,45 @@ namespace Media_Bazaar
 
         private void btnAssignWorkShift_Click(object sender, EventArgs e)
         {
-            int employeeId = -1;         
+            int employeeId = -1;
             string date = "";
             string shift = "";
-            if(tbEmployeeIdAssignShift.Text != "" && dateTimePicker1.Value != null && (cmbBxWorkShiftSaturday.SelectedItem != null || cmbBxWorkShiftSunday.SelectedItem != null || cmbBxWorkShiftWeekDay.SelectedItem != null))
+            if (tbEmployeeIdAssignShift.Text != "" && dateTimePicker1.Value != null && (cmbBxWorkShiftSaturday.SelectedItem != null || cmbBxWorkShiftSunday.SelectedItem != null || cmbBxWorkShiftWeekDay.SelectedItem != null))
             {
                 employeeId = Convert.ToInt32(tbEmployeeIdAssignShift.Text);
                 date = dateTimePicker1.Value.ToString("dd/MM/yyyy");
                 DayOfWeek day = dateTimePicker1.Value.DayOfWeek;
-                if( day == DayOfWeek.Sunday)
+                if (day == DayOfWeek.Sunday)
                 {
                     shift = "12:00-18:00";
                 }
                 else
                 {
-                    if(day == DayOfWeek.Saturday && cmbBxWorkShiftSaturday.SelectedItem.ToString() == "Morning -> 9:00-15:00")
+                    if (day == DayOfWeek.Saturday && cmbBxWorkShiftSaturday.SelectedItem.ToString() == "Morning -> 9:00-15:00")
                     {
                         shift = "9:00-15:00";
                     }
                     else
                     {
-                        if(day == DayOfWeek.Saturday && cmbBxWorkShiftSaturday.SelectedItem.ToString() == "Afternoon -> 15:00-18:00")
+                        if (day == DayOfWeek.Saturday && cmbBxWorkShiftSaturday.SelectedItem.ToString() == "Afternoon -> 15:00-18:00")
                         {
                             shift = "15:00-18:00";
                         }
                         else
                         {
-                            if(cmbBxWorkShiftWeekDay.SelectedItem.ToString() == "Morning -> 7:00-12:00")
+                            if (cmbBxWorkShiftWeekDay.SelectedItem.ToString() == "Morning -> 7:00-12:00")
                             {
                                 shift = "7:00-12:00";
                             }
                             else
                             {
-                                if(cmbBxWorkShiftWeekDay.SelectedItem.ToString() == "Afternoon -> 12:00-17:00")
+                                if (cmbBxWorkShiftWeekDay.SelectedItem.ToString() == "Afternoon -> 12:00-17:00")
                                 {
                                     shift = "12:00-17:00";
                                 }
                                 else
                                 {
-                                    if(cmbBxWorkShiftWeekDay.SelectedItem.ToString() == "Evening-> 17:00 - 22:00")
+                                    if (cmbBxWorkShiftWeekDay.SelectedItem.ToString() == "Evening-> 17:00 - 22:00")
                                     {
                                         shift = "17:00-22:00";
                                     }
@@ -623,19 +595,22 @@ namespace Media_Bazaar
                             }
                         }
                     }
-                }                
+                }
             }
             else
             {
                 MessageBox.Show("Fill in all fields.");
             }
-            DataAccess db = new DataAccess();
-            if(employeeId != -1 && date != "" && shift != "")
+            List<string> attendances = new List<string>();
+            if (employeeId != -1 && date != "" && shift != "")
             {
+                string attendance = "";
+                DataAccess db = new DataAccess();
                 List<DBEmployee> empl = db.GetDBEmployeeByID(employeeId);
-                if(empl.Count != 0)
+                if (empl.Count != 0)
                 {
-                    db.AddSchedule(employeeId, date, shift);
+                    attendance = db.GetAttendanceDetailsById(employeeId);
+                    db.AddSchedule(employeeId, date, shift, attendance);
                 }
                 else
                 {
@@ -644,8 +619,9 @@ namespace Media_Bazaar
 
             }
             schedule.GetAllSchedules();
-            calendar.GenerateDayPanel(42, flDays);
+            //calendar.GenerateDayPanel(42, flDays);
             calendar.DisplayCurrentDate(schedule.allSchedules, lblMonthAndYear);
+
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -681,6 +657,45 @@ namespace Media_Bazaar
         private void btnNewProfTABaddProf_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(tabControl1.SelectedIndex == 1)    //--Remove profile  
+            {
+                UpdateEmployeeInfo();
+            }
+            else
+            {
+                if(tabControl1.SelectedIndex == 2)     //---Assign to department
+                {
+                    UpdateDepartamentInfo();
+                    UpdateEmployeeInfo();
+                }
+                else
+                {
+                    if(tabControl1.SelectedIndex == 3)     //--- Schedule
+                    {
+                        schedule.GetAllSchedules();
+                        calendar.GenerateDayPanel(42, flDays);
+                        calendar.DisplayCurrentDate(schedule.allSchedules, lblMonthAndYear);
+                    }
+                    else
+                    {
+                        if(tabControl1.SelectedIndex == 4)     //-----Restock
+                        {
+                            UpdateRestockInfo();
+                        }
+                        else
+                        {
+                            if(tabControl1.SelectedIndex == 5)     //--Department
+                            {
+                                UpdateDepartamentInfo();
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
