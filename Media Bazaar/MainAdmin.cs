@@ -51,13 +51,13 @@ namespace Media_Bazaar
 
             // --- Schedule Tab ---  
 
-            /*schedule.GetAllSchedules();
+            schedule.GetAllSchedules();
             calendar.GenerateDayPanel(42, flDays);
-            calendar.DisplayCurrentDate(schedule.allSchedules, lblMonthAndYear);*/
+            calendar.DisplayCurrentDate(schedule.allSchedules, lblMonthAndYear);
 
-            /*UpdateEmployeeInfo();
+            UpdateEmployeeInfo();
             UpdateDepartamentInfo();
-            UpdateRestockInfo();*/
+            UpdateRestockInfo();
         }
 
         //----------------------------------Start
@@ -610,7 +610,7 @@ namespace Media_Bazaar
                 if (empl.Count != 0)
                 {
                     attendance = db.GetAttendanceDetailsById(employeeId);
-                    db.AddSchedule(employeeId, date, shift, attendance);
+                    db.AddSchedule(employeeId, date, shift);
                 }
                 else
                 {
@@ -619,7 +619,7 @@ namespace Media_Bazaar
 
             }
             schedule.GetAllSchedules();
-            //calendar.GenerateDayPanel(42, flDays);
+            calendar.GenerateDayPanel(42, flDays);
             calendar.DisplayCurrentDate(schedule.allSchedules, lblMonthAndYear);
 
         }
@@ -659,7 +659,7 @@ namespace Media_Bazaar
 
         }
 
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        /*private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(tabControl1.SelectedIndex == 1)    //--Remove profile  
             {
@@ -696,6 +696,6 @@ namespace Media_Bazaar
                     }
                 }
             }
-        }
+        }*/
     }
 }
