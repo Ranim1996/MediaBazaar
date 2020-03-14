@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssignShift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssignShift.Designer.cs">
+      <DependentUpon>AssignShift.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\Calendar.cs" />
     <Compile Include="Classes\DataAccess.cs" />
     <Compile Include="Classes\DBDepartament.cs" />
@@ -99,6 +105,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AssignShift.resx">
+      <DependentUpon>AssignShift.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

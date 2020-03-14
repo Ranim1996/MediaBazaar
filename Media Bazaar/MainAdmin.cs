@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Net;
 using System.Net.Mail;
 
+
 namespace Media_Bazaar
 {
     public partial class MainAdmin : Form
@@ -26,21 +27,22 @@ namespace Media_Bazaar
         List<int> employeesID = new List<int>();
         List<int> restockID = new List<int>();
         //holds the calendar
-        Media_Bazaar.Classes.Calendar calendar = new Classes.Calendar();
+        Media_Bazaar.Classes.Calendar calendar = new Calendar();
 
         DataAccess db;
-
         DBSchedule schedule = new DBSchedule();
         private object send;
 
         public MainAdmin()
         {
             InitializeComponent();
+            this.flDays.Click += new System.EventHandler(this.Flow_Click);
             
         }
 
         private void MainAdmin_Load(object sender, EventArgs e)
         {
+            calendar = new Classes.Calendar();
             //GUI load
             tabControl1.Appearance = TabAppearance.FlatButtons;
             tabControl1.ItemSize = new Size(0, 1);
@@ -158,71 +160,45 @@ namespace Media_Bazaar
 
 
         // ----- SCHEDULE Tab ---
-        private void btnPrevMonth_Click(object sender, EventArgs e)
+        private void btnPrevMonth_Click_1(object sender, EventArgs e)
         {
             calendar.PrevMonth(schedule.allSchedules, lblMonthAndYear);
         }
 
-        private void btnToday_Click(object sender, EventArgs e)
+        private void btnToday_Click_1(object sender, EventArgs e)
         {
             calendar.Today(schedule.allSchedules, lblMonthAndYear);
         }
 
-        private void btnNextMonth_Click(object sender, EventArgs e)
+        private void btnNextMonth_Click_1(object sender, EventArgs e)
         {
             calendar.NextMonth(schedule.allSchedules, lblMonthAndYear);
         }
 
-        public void linkLabel_Click(object sender, EventArgs e)
+        
+        DateTime newDate;
+        public void Flow_Click(object sender, EventArgs e)
         {
-            DataAccess db = new DataAccess();
-            Label link = (Label)sender;
-            //the linkLabel.Tag is the employeeID
-            sender = link.Tag;
-            int ok = 1;
-            string shiftDetails = db.GetShiftDetailsById(Convert.ToInt32(sender));
-            string shiftDate = db.GetShiftDateById(Convert.ToInt32(sender));
-            int employeeId = Convert.ToInt32(sender);
+            AssignShift shiftWindow;
+            FlowLayoutPanel pnl = (FlowLayoutPanel)sender;
+            sender = pnl.Tag;
 
-            MessageBoxManager.Yes = "On Time";
-            MessageBoxManager.No = "Late";
-            MessageBoxManager.Cancel = "Absent";
-            MessageBoxManager.Register();
-            DialogResult dialog = MessageBox.Show($"ID({employeeId}): {shiftDetails}", "Attendance!", MessageBoxButtons.YesNoCancel);
-            MessageBoxManager.Unregister();
-            if (dialog == DialogResult.None)
+            int day = Convert.ToInt32(sender);
+            newDate = new DateTime();
+            DateTime date = calendar.GetDate();
+            if (day != 0)
             {
-                ok = 0;
+                //creating the exact day of which panel is clicked
+                newDate = new DateTime(date.Year, date.Month, day);
+                
+                shiftWindow = new AssignShift(newDate, this);
+                shiftWindow.Show();
+                //shiftWindow.dateTimePicker1.Value = newDate;
+                //MessageBox.Show(newDate.ToString("dd-MM-yyyy"));
+                //shiftWindow.Show();
             }
-            if (dialog == DialogResult.Yes && ok == 1)
-            {
-                string attendance = "PRESENT";
-                db.AddAttendanceForEmployeeByIdAndShift(employeeId, attendance, shiftDetails, shiftDate);
-                link.BackColor = Color.LightGreen;
-            }
-            else
-            {
-                if(dialog == DialogResult.No && ok == 1)
-                {
-                    string attendance = "LATE";
-                    db.AddAttendanceForEmployeeByIdAndShift(employeeId, attendance, shiftDetails, shiftDate);
-                    link.BackColor = Color.Yellow;
-                }
-                else
-                {
-                    if(dialog == DialogResult.Cancel && ok == 1)
-                    {
-                        string attendance = "ABSENT";
-                        db.AddAttendanceForEmployeeByIdAndShift(employeeId, attendance, shiftDetails, shiftDate);
-                        link.BackColor = Color.Red;
-                    }                  
-                     //I DONT KNOW HOW TO FIX THIS
-                     //When you press 'X' to close the messageBox , is automatically set to DialogResult.Cancel so it is set to ABSENT and the color of the link is set to red
-                     //TRY TO FIX THIS
-                }
-            }
+            //lblDateForShift_TextChanged(sender.ToString(), e);
         }
-
        
 
         //------------------------------------------------------------------------------------------
@@ -547,155 +523,21 @@ namespace Media_Bazaar
             UpdateRestockInfo();
         }
 
-        private void btnAssignWorkShift_Click(object sender, EventArgs e)
-        {
-            int employeeId = -1;
-            string date = "";
-            string shift = "";
-            if (tbEmployeeIdAssignShift.Text != "" && dateTimePicker1.Value != null && (cmbBxWorkShiftSaturday.SelectedItem != null || cmbBxWorkShiftSunday.SelectedItem != null || cmbBxWorkShiftWeekDay.SelectedItem != null))
-            {
-                employeeId = Convert.ToInt32(tbEmployeeIdAssignShift.Text);
-                date = dateTimePicker1.Value.ToString("dd/MM/yyyy");
-                DayOfWeek day = dateTimePicker1.Value.DayOfWeek;
-                if (day == DayOfWeek.Sunday)
-                {
-                    shift = "12:00-18:00";
-                }
-                else
-                {
-                    if (day == DayOfWeek.Saturday && cmbBxWorkShiftSaturday.SelectedItem.ToString() == "Morning -> 9:00-15:00")
-                    {
-                        shift = "9:00-15:00";
-                    }
-                    else
-                    {
-                        if (day == DayOfWeek.Saturday && cmbBxWorkShiftSaturday.SelectedItem.ToString() == "Afternoon -> 15:00-18:00")
-                        {
-                            shift = "15:00-18:00";
-                        }
-                        else
-                        {
-                            if (cmbBxWorkShiftWeekDay.SelectedItem.ToString() == "Morning -> 7:00-12:00")
-                            {
-                                shift = "7:00-12:00";
-                            }
-                            else
-                            {
-                                if (cmbBxWorkShiftWeekDay.SelectedItem.ToString() == "Afternoon -> 12:00-17:00")
-                                {
-                                    shift = "12:00-17:00";
-                                }
-                                else
-                                {
-                                    if (cmbBxWorkShiftWeekDay.SelectedItem.ToString() == "Evening-> 17:00 - 22:00")
-                                    {
-                                        shift = "17:00-22:00";
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("Fill in all fields.");
-            }
-            List<string> attendances = new List<string>();
-            if (employeeId != -1 && date != "" && shift != "")
-            {
-                string attendance = "";
-                DataAccess db = new DataAccess();
-                List<DBEmployee> empl = db.GetDBEmployeeByID(employeeId);
-                if (empl.Count != 0)
-                {
-                    attendance = db.GetAttendanceDetailsById(employeeId);
-                    db.AddSchedule(employeeId, date, shift);
-                }
-                else
-                {
-                    MessageBox.Show("No employee found with the specified ID.");
-                }
 
-            }
-            schedule.GetAllSchedules();
-            calendar.GenerateDayPanel(42, flDays);
-            calendar.DisplayCurrentDate(schedule.allSchedules, lblMonthAndYear);
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-            DayOfWeek day = dateTimePicker1.Value.DayOfWeek;
-            //showing the combo box with the work shifts depending on what day is chosen
-            switch (day)
-            {
-                case DayOfWeek.Sunday:
-                    {
-                        cmbBxWorkShiftSunday.Visible = true;
-                        cmbBxWorkShiftSaturday.Visible = false;
-                        cmbBxWorkShiftWeekDay.Visible = false;
-                        break;
-                    }
-                case DayOfWeek.Saturday:
-                    {
-                        cmbBxWorkShiftSaturday.Visible = true;
-                        cmbBxWorkShiftSunday.Visible = false;
-                        cmbBxWorkShiftWeekDay.Visible = false;
-                        break;
-                    }
-                default:
-                    {
-                        cmbBxWorkShiftWeekDay.Visible = true;
-                        cmbBxWorkShiftSunday.Visible = false;
-                        cmbBxWorkShiftSaturday.Visible = false;
-                        break;
-                    }
-            }
-        }
-
+      
         private void btnNewProfTABaddProf_Click(object sender, EventArgs e)
         {
 
         }
 
-        /*private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        /*private void lblDateForShift_TextChanged(object sender, EventArgs e)
         {
-            if(tabControl1.SelectedIndex == 1)    //--Remove profile  
-            {
-                UpdateEmployeeInfo();
-            }
-            else
-            {
-                if(tabControl1.SelectedIndex == 2)     //---Assign to department
-                {
-                    UpdateDepartamentInfo();
-                    UpdateEmployeeInfo();
-                }
-                else
-                {
-                    if(tabControl1.SelectedIndex == 3)     //--- Schedule
-                    {
-                        schedule.GetAllSchedules();
-                        calendar.GenerateDayPanel(42, flDays);
-                        calendar.DisplayCurrentDate(schedule.allSchedules, lblMonthAndYear);
-                    }
-                    else
-                    {
-                        if(tabControl1.SelectedIndex == 4)     //-----Restock
-                        {
-                            UpdateRestockInfo();
-                        }
-                        else
-                        {
-                            if(tabControl1.SelectedIndex == 5)     //--Department
-                            {
-                                UpdateDepartamentInfo();
-                            }
-                        }
-                    }
-                }
-            }
+            String lbl = (String)sender;
+            lbl = newDate.ToString();
+            sender =lbl;
+
+            //lbl.Text = sender.ToString();
         }*/
+
     }
 }

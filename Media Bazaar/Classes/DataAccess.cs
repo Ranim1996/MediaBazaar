@@ -417,7 +417,6 @@ namespace Media_Bazaar.Classes
                 return output;
             }
         }
-
         //Adding the shift to the database
         public void AddSchedule(int employeeID, string date, string shift)
         {
@@ -429,31 +428,6 @@ namespace Media_Bazaar.Classes
             }
         }
 
-        // get shift details by employee id.
-        public string GetShiftDetailsById(int id)
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                return connection.ExecuteScalar<string>($"SELECT Shift FROM Schedule WHERE EmployeeID = '{id}';");
-            }
-        }
-        public string GetAttendanceDetailsById(int id)
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                return connection.ExecuteScalar<string>($"SELECT Attendance FROM Schedule WHERE EmployeeID = '{id}';");
-            }
-        }
-
-        //get shift date by employee id.
-        public string GetShiftDateById(int id)
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                return connection.ExecuteScalar<string>($"SELECT Date FROM Schedule WHERE EmployeeID = '{id}';");
-            }
-        }
-
         //get employee attendance by employee id, shift and date.
         public void AddAttendanceForEmployeeByIdAndShift(int id, string attendance, string shift, string date)
         {
@@ -462,6 +436,8 @@ namespace Media_Bazaar.Classes
                 connection.Execute($"UPDATE Schedule SET Attendance = '{attendance}' WHERE EmployeeID = '{id}' AND Shift = '{shift}' AND Date = '{date}';");
             }
         }
+
+
 
         // methods to return int in order to use it in the statistics
 

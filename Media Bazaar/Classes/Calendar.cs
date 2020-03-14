@@ -16,27 +16,36 @@ namespace Media_Bazaar.Classes
         public List<FlowLayoutPanel> listFlDay { get; private set; }
 
         //date that gets modified based on the controls of the form ---> used as a refrence in other months
-        private DateTime currentDate = DateTime.Today;
+        private static DateTime currentDate = DateTime.Today;
+        //private static DateTime date = new DateTime();
 
         public Calendar()
         {
             listFlDay = new List<FlowLayoutPanel>();
-
+            //currentDate ;
         }
 
         MainAdmin main;
 
+        /*public int GetCurrentYear
+        {
+            get { return this.currentDate.Year; }
+        }
+        public int GetCurrentMonth
+        {
+            get { return this.currentDate.Month; }
+        }*/
+        public DateTime GetDate()
+        {
+            return currentDate;
+        }
         // -- functions --
         private int GetFirstDayOfWeekOfCurrentDate()
         {
             DateTime firstDayOfMonth = new DateTime(currentDate.Year, currentDate.Month, 1);
             return Convert.ToInt32(firstDayOfMonth.DayOfWeek + 1);
         }
-        private DayOfWeek GetFirstDayOfMonth()
-        {
-            DateTime first = new DateTime(currentDate.Year, currentDate.Month, 1);
-            return first.DayOfWeek;
-        }
+        
 
         public int GetTotalDaysOfCurrentDate()
         {
@@ -50,11 +59,13 @@ namespace Media_Bazaar.Classes
         {
             currentDate = currentDate.AddMonths(-1);
             DisplayCurrentDate(list, lb);
+            //date = currentDate;
         }
         public void NextMonth(List<DBSchedule> list, Label lb)
         {
             currentDate = currentDate.AddMonths(1);
             DisplayCurrentDate(list, lb);
+            //date = currentDate;
         }
         public void Today(List<DBSchedule> list, Label lb)
         {
@@ -72,6 +83,7 @@ namespace Media_Bazaar.Classes
         // -- MAIN methods --
         public void GenerateDayPanel(int totalDays,FlowLayoutPanel flDays)
         {
+            main = new MainAdmin();
             flDays.Controls.Clear();
             listFlDay.Clear();
             for (int i = 1; i <= totalDays; i++)
@@ -82,7 +94,8 @@ namespace Media_Bazaar.Classes
                 fl.BackColor = Color.White;
                 fl.BorderStyle = BorderStyle.FixedSingle;
                 fl.FlowDirection = FlowDirection.TopDown;
-
+                fl.Cursor = Cursors.Hand;
+                fl.Click += new EventHandler(main.Flow_Click);
                 fl.AutoScroll = true;
                 fl.WrapContents = false;
                 flDays.Controls.Add(fl);
@@ -133,49 +146,7 @@ namespace Media_Bazaar.Classes
                     listFlDay[(i - 1) + (startDayAtFlNumber - 1)].BackColor = Color.Bisque;
                 }
 
-                // -- BETA ---> Get the chosen work shifts 
-
-                 
-  
-                 // -- gets only the shifts i need
-                 foreach (DBSchedule sch in schedules)
-                 {
-                     string[] dateSchedule = sch.Date.Split('/');
-
-                     if ((dateSchedule[2] == date[2]) && (dateSchedule[1] == date[1]) && (Convert.ToInt32(dateSchedule[0]) == i))
-                     {
-                         listForTheDay.Add(sch);
-                     }
-                 }
-
-                 // constructor
-                 // -- modified part ---> topic and event info
-                 DataAccess db = new DataAccess();
-                 int y = 0;
-                 foreach(DBSchedule schOfTheDay in listForTheDay)
-                 {
-                    main = new MainAdmin();
-                    //string firstNameOfEmployee;
-                    //int id = schOfTheDay.EmployeeId;
-                    //string attendance = schOfTheDay.Attendance;
-                    
-                    //firstNameOfEmployee = db.GetFirstNameOfEmployeeById(schOfTheDay.EmployeeId);
-                    Label lblInfo = new Label();                    
-                    lblInfo.Name = $"lblInfo{i}{y}";
-
-                    //adding the id for the shift to be recognized when clicked in the form  <for attendance>
-                    lblInfo.Tag = $"{schOfTheDay.EmployeeId}";
-                    lblInfo.AutoSize = false;
-                    lblInfo.TextAlign = ContentAlignment.MiddleCenter;
-                    lblInfo.Size = new Size(140, 23);
-                    lblInfo.Text = $"ID({schOfTheDay.EmployeeId}): {schOfTheDay.Shift}"; // chosen shift and the name+id of the employee
-                    lblInfo.Font = new Font("Arial", 10, FontStyle.Bold);
-                    lblInfo.Click += new EventHandler(main.linkLabel_Click);
-
-                    listFlDay[(i - 1) + (startDayAtFlNumber - 1)].Tag = i;
-                    listFlDay[(i - 1) + (startDayAtFlNumber - 1)].Controls.Add(lblInfo);
-                    y++;
-                 } 
+               
                 //-------------------------------------------------------------------------------------------
             }
         }
