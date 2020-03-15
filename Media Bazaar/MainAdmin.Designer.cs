@@ -636,7 +636,6 @@
             this.btnNewProfTABaddProf.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnNewProfTABaddProf.Textcolor = System.Drawing.Color.White;
             this.btnNewProfTABaddProf.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btnNewProfTABaddProf.Click += new System.EventHandler(this.btnNewProfTABaddProf_Click);
             // 
             // btnRemoveProfTABaddProfile
             // 
@@ -872,7 +871,6 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(528, 622);
             this.panel8.TabIndex = 0;
-            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // tbDateOfBirth
             // 
@@ -3526,7 +3524,6 @@
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(547, 693);
             this.panel22.TabIndex = 0;
-            this.panel22.Paint += new System.Windows.Forms.PaintEventHandler(this.panel22_Paint);
             // 
             // btnCreateDepartment
             // 

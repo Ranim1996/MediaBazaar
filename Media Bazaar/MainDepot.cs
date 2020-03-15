@@ -220,11 +220,11 @@ namespace Media_Bazaar
                  DataAccess db = new DataAccess();
                  db.InsertRequest(idEmp, name, type, department, quantity, orderDate,orderDeliver );
                 MessageBox.Show("The request is sent to the administration.");
-                clearBoxes();
+                clearBoxes1();
             }
         }
 
-        private void clearBoxes()
+        private void clearBoxes1()
         {
             this.cmbType.Text = " ";
             this.cmbEmployeeID.Text = " ";
@@ -271,6 +271,83 @@ namespace Media_Bazaar
             }
         }
 
+        //private void BfbtnMakeRequestForExistingStock_Click(object sender, EventArgs e)
+        //{
+        //    int idStock = Convert.ToInt32(this.cmbExistStockID.Text.ToString());
+        //    int idEmp = Convert.ToInt32(this.cmbExistEmpID.Text.ToString());
+        //    string name = this.tbxExistName.Text;
+        //    string type = this.tbxExistType.Text;
+        //    string department = this.tbxExistDepartment.Text;
+        //    string orderDate = DateTime.Now.ToShortDateString();
+        //    string orderDeliver = this.dtpDateDeliver.Value.ToString("dd/MM/yyyy");
+        //    int quantity = Convert.ToInt32(this.tbcExistQuantity.Text);
+
+        //    if (quantity != 0 && orderDate != " " && orderDeliver != " " && idEmp != 0 )
+        //    {
+        //        DataAccess db = new DataAccess();
+        //        db.InsertRequestForAnExistingstock(idStock, idEmp, name, type, department,quantity, orderDate, orderDeliver);
+        //        MessageBox.Show("The request is sent to the administration.");
+        //        clearBoxes2();
+        //    }
+        //}
+
+        //private DBRestockRequest GetNameByID (int id)
+        //{
+        //    DataAccess db = new DataAccess();
+        //    incomingRestockRequests = db.GetAllAvailableStocks();
+
+        //    for (int i = 0; i < incomingRestockRequests.Count; i++)
+        //    {
+        //        if (incomingRestockRequests[i].GetID() == id)
+        //        {
+        //            return incomingRestockRequests[i];
+        //        }
+        //    }
+        //    return null;
+        //}
+
+        //private void CmbExistStockID_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    DataAccess db = new DataAccess();
+        //    if (this.cmbExistStockID.Text.ToString() != " ")
+        //    {
+        //        int stockID = Convert.ToInt32(this.cmbExistStockID.Text);
+        //        GetNameByID(stockID);
+        //        this.tbxExistName.Text = db.GetDBStockNameById(stockID);
+        //        this.tbxExistType.Text = db.GetDBStockTypeById(stockID);
+        //        this.tbxExistDepartment.Text = db.GetDBDepartmentByStockId(stockID);
+        //    }
+        //}
+        //private void clearBoxes2 ()
+        //{
+        //    this.cmbExistStockID.Text = " ";
+        //    this.cmbExistEmpID.Text = " ";
+        //    this.tbcExistQuantity.Text = " ";
+        //}
+
+        //private void UpdateStockIDInfo()
+        //{
+        //    DataAccess db = new DataAccess();
+
+        //    incomingRestockRequests = db.GetAllAvailableStocks();
+
+        //    foreach (DBRestockRequest dBR in incomingRestockRequests)
+        //    {
+        //        cmbExistStockID.Items.Add(dBR.GetID());
+        //    }
+        //}
+
+        //private void UpdateEmployeeIDInfoForAnExistingStock()
+        //{
+        //    DataAccess db = new DataAccess();
+
+        //    employees = db.GetAllEmployees();
+
+        //    foreach (DBEmployee dBE in employees)
+        //    {
+        //        cmbExistEmpID.Items.Add(dBE.GetID());
+        //    }
+        //}
 
         //----------------------------------------Finish
 

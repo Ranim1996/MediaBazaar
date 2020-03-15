@@ -367,6 +367,15 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //add request to restock request table in data base. ((Will be used in the next block))
+        //public void InsertRequestForAnExistingstock(int idS,int idE,string name, string type, string department,int quantity, string orderDate, string orderDeliver)
+        //{
+        //    using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+        //    {
+        //        connection.Execute($"INSERT INTO RestockRequest(RequestID, EmployeeID, NameOfStock,TypeOfStock, Departament, Quantity, DateOfOrder, DateOfDelivery) VALUES ('{idS}' , '{idE}' , '{name}', '{type}', '{department}' ,'{quantity}','{orderDate}', '{orderDeliver}');");
+        //    }
+        //}
+
         // get all confirmed requests from data base.
         public List<DBRestockRequest> GetAllConfirmedRestock()
         {

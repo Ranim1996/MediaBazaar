@@ -517,23 +517,6 @@ namespace Media_Bazaar
             UpdateRestockInfo();
         }
 
-
-      
-        private void btnNewProfTABaddProf_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel8_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel22_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         /*private void lblDateForShift_TextChanged(object sender, EventArgs e)
         {
             String lbl = (String)sender;
