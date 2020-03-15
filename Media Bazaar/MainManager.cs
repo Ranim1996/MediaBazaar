@@ -236,6 +236,11 @@ namespace Media_Bazaar
         private void btnStatsTABemployeeStats_Click(object sender, EventArgs e)
         {
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

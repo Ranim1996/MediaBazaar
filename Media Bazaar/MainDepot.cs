@@ -170,7 +170,7 @@ namespace Media_Bazaar
 
             string type = this.cmbType.Text.ToString();
             int idEmp = Convert.ToInt32(this.tbxEmployeeID.Text);
-            string orderDate = this.dtpDateOrder.Value.ToString("dd/MM/yyyy");
+            string orderDate = DateTime.Now.ToShortDateString();
             string orderDeliver = this.dtpDateDeliver.Value.ToString("dd/MM/yyyy");
             string name = this.tbxStockName.Text;
             int quantity = Convert.ToInt32(this.tbxStockQuantity.Text);

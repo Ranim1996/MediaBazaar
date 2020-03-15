@@ -30,18 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainManager));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel24 = new System.Windows.Forms.TableLayoutPanel();
@@ -157,7 +157,6 @@
             this.lblPosInCompany = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.timerSelectedMenu = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -213,7 +212,6 @@
             this.panel12.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
@@ -576,7 +574,7 @@
             this.btnLogOutTABdepart.Text = "LOG OUT";
             this.btnLogOutTABdepart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLogOutTABdepart.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnLogOutTABdepart.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOutTABdepart.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnLogOutTABdepart.Click += new System.EventHandler(this.btnLogOutTABdepart_Click);
             // 
             // btnStatsTABemployeeStats
@@ -613,7 +611,7 @@
             this.btnStatsTABemployeeStats.Text = "Statisitcs";
             this.btnStatsTABemployeeStats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnStatsTABemployeeStats.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnStatsTABemployeeStats.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatsTABemployeeStats.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnStatsTABemployeeStats.Click += new System.EventHandler(this.btnStatsTABemployeeStats_Click);
             // 
             // pictureBox7
@@ -662,7 +660,7 @@
             this.btnSearchTABemplStats.Text = "Search Employee";
             this.btnSearchTABemplStats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSearchTABemplStats.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnSearchTABemplStats.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchTABemplStats.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnSearchTABemplStats.Click += new System.EventHandler(this.btnSearchTABemplStats_Click);
             // 
             // tableLayoutPanel29
@@ -687,7 +685,7 @@
             this.label46.AutoSize = true;
             this.label46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.label46.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold);
             this.label46.ForeColor = System.Drawing.Color.White;
             this.label46.Location = new System.Drawing.Point(3, 0);
             this.label46.Name = "label46";
@@ -803,7 +801,7 @@
             this.btnEmployeesTABemplStats.Text = "Employees";
             this.btnEmployeesTABemplStats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEmployeesTABemplStats.Textcolor = System.Drawing.Color.White;
-            this.btnEmployeesTABemplStats.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployeesTABemplStats.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnEmployeesTABemplStats.Click += new System.EventHandler(this.btnEmployeesTABemplStats_Click);
             // 
             // btnShiftsTABemplStats
@@ -840,7 +838,7 @@
             this.btnShiftsTABemplStats.Text = "Shifts";
             this.btnShiftsTABemplStats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnShiftsTABemplStats.Textcolor = System.Drawing.Color.White;
-            this.btnShiftsTABemplStats.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShiftsTABemplStats.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnShiftsTABemplStats.Click += new System.EventHandler(this.btnShiftsTABemplStats_Click);
             // 
             // btnDepartStockTABemplStats
@@ -877,7 +875,7 @@
             this.btnDepartStockTABemplStats.Text = "Departament and Stock";
             this.btnDepartStockTABemplStats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnDepartStockTABemplStats.Textcolor = System.Drawing.Color.White;
-            this.btnDepartStockTABemplStats.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDepartStockTABemplStats.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDepartStockTABemplStats.Click += new System.EventHandler(this.btnDepartStockTABemplStats_Click);
             // 
             // panel6
@@ -893,23 +891,30 @@
             // 
             // chartReleasedAndNot
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartReleasedAndNot.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartReleasedAndNot.Legends.Add(legend1);
-            this.chartReleasedAndNot.Location = new System.Drawing.Point(311, 33);
+            this.chartReleasedAndNot.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea4.Name = "ChartArea1";
+            this.chartReleasedAndNot.ChartAreas.Add(chartArea4);
+            legend4.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend4.IsTextAutoFit = false;
+            legend4.Name = "Legend1";
+            this.chartReleasedAndNot.Legends.Add(legend4);
+            this.chartReleasedAndNot.Location = new System.Drawing.Point(51, 46);
             this.chartReleasedAndNot.Name = "chartReleasedAndNot";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "s1";
-            this.chartReleasedAndNot.Series.Add(series1);
-            this.chartReleasedAndNot.Size = new System.Drawing.Size(300, 300);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series4.Legend = "Legend1";
+            series4.Name = "s1";
+            this.chartReleasedAndNot.Series.Add(series4);
+            this.chartReleasedAndNot.Size = new System.Drawing.Size(789, 360);
             this.chartReleasedAndNot.TabIndex = 0;
             this.chartReleasedAndNot.Text = "chart1";
-            title1.Name = "Title1";
-            title1.Text = "Ratio of workers to fired";
-            this.chartReleasedAndNot.Titles.Add(title1);
+            title4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title4.Name = "Title1";
+            title4.Text = "Ratio of workers to fired";
+            this.chartReleasedAndNot.Titles.Add(title4);
             this.chartReleasedAndNot.Click += new System.EventHandler(this.chartReleasedAndNot_Click);
             // 
             // tabControl1
@@ -1050,7 +1055,7 @@
             this.btnStatisticsTABshiftStats.Text = "Statisitcs";
             this.btnStatisticsTABshiftStats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnStatisticsTABshiftStats.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnStatisticsTABshiftStats.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatisticsTABshiftStats.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             // 
             // pictureBox1
             // 
@@ -1098,7 +1103,7 @@
             this.btnSearchEmplTABshiftStats.Text = "Search Employee";
             this.btnSearchEmplTABshiftStats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSearchEmplTABshiftStats.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnSearchEmplTABshiftStats.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchEmplTABshiftStats.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnSearchEmplTABshiftStats.Click += new System.EventHandler(this.btnSearchTABemplStats_Click);
             // 
             // tableLayoutPanel3
@@ -1123,7 +1128,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
@@ -1131,6 +1136,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Shift Statistics";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel1
             // 
@@ -1228,7 +1234,7 @@
             this.btnEmployeesTABshiftStats.Text = "Employees";
             this.btnEmployeesTABshiftStats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEmployeesTABshiftStats.Textcolor = System.Drawing.Color.White;
-            this.btnEmployeesTABshiftStats.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployeesTABshiftStats.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnEmployeesTABshiftStats.Click += new System.EventHandler(this.btnEmployeesTABshiftStats_Click);
             // 
             // bunifuFlatButton4
@@ -1265,7 +1271,7 @@
             this.bunifuFlatButton4.Text = "Shifts";
             this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton4.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             // 
             // btnDepartmentTABshiftStats
             // 
@@ -1301,7 +1307,7 @@
             this.btnDepartmentTABshiftStats.Text = "Departament and Stock";
             this.btnDepartmentTABshiftStats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnDepartmentTABshiftStats.Textcolor = System.Drawing.Color.White;
-            this.btnDepartmentTABshiftStats.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDepartmentTABshiftStats.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDepartmentTABshiftStats.Click += new System.EventHandler(this.btnDepartStockTABemplStats_Click);
             // 
             // panel2
@@ -1317,23 +1323,23 @@
             // 
             // chartAttendance
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartAttendance.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartAttendance.Legends.Add(legend2);
+            chartArea5.Name = "ChartArea1";
+            this.chartAttendance.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chartAttendance.Legends.Add(legend5);
             this.chartAttendance.Location = new System.Drawing.Point(327, 47);
             this.chartAttendance.Name = "chartAttendance";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "Legend1";
-            series2.Name = "s1";
-            this.chartAttendance.Series.Add(series2);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series5.Legend = "Legend1";
+            series5.Name = "s1";
+            this.chartAttendance.Series.Add(series5);
             this.chartAttendance.Size = new System.Drawing.Size(300, 300);
             this.chartAttendance.TabIndex = 1;
             this.chartAttendance.Text = "chart1";
-            title2.Name = "Title1";
-            title2.Text = "Attendance";
-            this.chartAttendance.Titles.Add(title2);
+            title5.Name = "Title1";
+            title5.Text = "Attendance";
+            this.chartAttendance.Titles.Add(title5);
             // 
             // tabDepartStats
             // 
@@ -1421,7 +1427,7 @@
             this.btnLogOutTABdepartStats.Text = "LOG OUT";
             this.btnLogOutTABdepartStats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLogOutTABdepartStats.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnLogOutTABdepartStats.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOutTABdepartStats.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnLogOutTABdepartStats.Click += new System.EventHandler(this.btnLogOutTABdepart_Click);
             // 
             // btnStatsTABdepart
@@ -1458,7 +1464,7 @@
             this.btnStatsTABdepart.Text = "Statisitcs";
             this.btnStatsTABdepart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnStatsTABdepart.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnStatsTABdepart.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatsTABdepart.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             // 
             // pictureBox2
             // 
@@ -1506,7 +1512,7 @@
             this.btnSearchTABdepartStats.Text = "Search Employee";
             this.btnSearchTABdepartStats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSearchTABdepartStats.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnSearchTABdepartStats.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchTABdepartStats.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnSearchTABdepartStats.Click += new System.EventHandler(this.btnSearchTABemplStats_Click);
             // 
             // tableLayoutPanel11
@@ -1636,7 +1642,7 @@
             this.btnEmployeesTABdepartStats.Text = "Employees";
             this.btnEmployeesTABdepartStats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEmployeesTABdepartStats.Textcolor = System.Drawing.Color.White;
-            this.btnEmployeesTABdepartStats.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployeesTABdepartStats.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnEmployeesTABdepartStats.Click += new System.EventHandler(this.btnEmployeesTABshiftStats_Click);
             // 
             // btnShiftsTABdepartStats
@@ -1673,7 +1679,7 @@
             this.btnShiftsTABdepartStats.Text = "Shifts";
             this.btnShiftsTABdepartStats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnShiftsTABdepartStats.Textcolor = System.Drawing.Color.White;
-            this.btnShiftsTABdepartStats.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShiftsTABdepartStats.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnShiftsTABdepartStats.Click += new System.EventHandler(this.btnShiftsTABemplStats_Click);
             // 
             // bunifuFlatButton11
@@ -1710,7 +1716,7 @@
             this.bunifuFlatButton11.Text = "Departament and Stock";
             this.bunifuFlatButton11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton11.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton11.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton11.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // panel5
             // 
@@ -1725,23 +1731,23 @@
             // 
             // chartRequests
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chartRequests.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartRequests.Legends.Add(legend3);
+            chartArea6.Name = "ChartArea1";
+            this.chartRequests.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chartRequests.Legends.Add(legend6);
             this.chartRequests.Location = new System.Drawing.Point(311, 58);
             this.chartRequests.Name = "chartRequests";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series3.Legend = "Legend1";
-            series3.Name = "s1";
-            this.chartRequests.Series.Add(series3);
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series6.Legend = "Legend1";
+            series6.Name = "s1";
+            this.chartRequests.Series.Add(series6);
             this.chartRequests.Size = new System.Drawing.Size(300, 300);
             this.chartRequests.TabIndex = 2;
             this.chartRequests.Text = "chart1";
-            title3.Name = "Title1";
-            title3.Text = "Confirmed and Not Requests";
-            this.chartRequests.Titles.Add(title3);
+            title6.Name = "Title1";
+            title6.Text = "Confirmed and Not Requests";
+            this.chartRequests.Titles.Add(title6);
             // 
             // tabSearchEmpl
             // 
@@ -1829,7 +1835,7 @@
             this.btnLogOutTABsearch.Text = "LOG OUT";
             this.btnLogOutTABsearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLogOutTABsearch.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnLogOutTABsearch.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOutTABsearch.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnLogOutTABsearch.Click += new System.EventHandler(this.btnLogOutTABdepart_Click);
             // 
             // btnStatisticsTABsearch
@@ -1866,7 +1872,7 @@
             this.btnStatisticsTABsearch.Text = "Statisitcs";
             this.btnStatisticsTABsearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnStatisticsTABsearch.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnStatisticsTABsearch.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatisticsTABsearch.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnStatisticsTABsearch.Click += new System.EventHandler(this.btnStatisticsTABsearch_Click);
             // 
             // pictureBox3
@@ -1915,7 +1921,7 @@
             this.btnSearchTABsearch.Text = "Search Employee";
             this.btnSearchTABsearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSearchTABsearch.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnSearchTABsearch.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchTABsearch.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             // 
             // tableLayoutPanel17
             // 
@@ -1939,7 +1945,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
@@ -1995,9 +2001,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.label7.Location = new System.Drawing.Point(31, 27);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 17);
+            this.label7.Size = new System.Drawing.Size(101, 23);
             this.label7.TabIndex = 11;
             this.label7.Text = "Search By:";
             // 
@@ -2005,10 +2012,11 @@
             // 
             this.tbxSearchLastname.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbxSearchLastname.Location = new System.Drawing.Point(456, 57);
+            this.tbxSearchLastname.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.tbxSearchLastname.Location = new System.Drawing.Point(472, 53);
             this.tbxSearchLastname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxSearchLastname.Name = "tbxSearchLastname";
-            this.tbxSearchLastname.Size = new System.Drawing.Size(153, 22);
+            this.tbxSearchLastname.Size = new System.Drawing.Size(153, 30);
             this.tbxSearchLastname.TabIndex = 10;
             // 
             // label6
@@ -2016,10 +2024,10 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F);
-            this.label6.Location = new System.Drawing.Point(360, 57);
+            this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(360, 60);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 22);
+            this.label6.Size = new System.Drawing.Size(102, 23);
             this.label6.TabIndex = 9;
             this.label6.Text = "LastName:";
             // 
@@ -2058,7 +2066,7 @@
             this.btnViewProfile.Text = "View Profile";
             this.btnViewProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnViewProfile.Textcolor = System.Drawing.Color.White;
-            this.btnViewProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnViewProfile.Click += new System.EventHandler(this.btnViewProfile_Click);
             // 
             // checkedListBox2
@@ -2066,11 +2074,12 @@
             this.checkedListBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkedListBox2.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.checkedListBox2.FormattingEnabled = true;
             this.checkedListBox2.Location = new System.Drawing.Point(183, 122);
             this.checkedListBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(542, 276);
+            this.checkedListBox2.Size = new System.Drawing.Size(542, 254);
             this.checkedListBox2.TabIndex = 7;
             // 
             // btnSearchForSpecificEmployee
@@ -2095,29 +2104,30 @@
             this.btnSearchForSpecificEmployee.IconVisible = false;
             this.btnSearchForSpecificEmployee.IconZoom = 90D;
             this.btnSearchForSpecificEmployee.IsTab = false;
-            this.btnSearchForSpecificEmployee.Location = new System.Drawing.Point(663, 12);
+            this.btnSearchForSpecificEmployee.Location = new System.Drawing.Point(660, 22);
             this.btnSearchForSpecificEmployee.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSearchForSpecificEmployee.Name = "btnSearchForSpecificEmployee";
             this.btnSearchForSpecificEmployee.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnSearchForSpecificEmployee.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnSearchForSpecificEmployee.OnHoverTextColor = System.Drawing.Color.White;
             this.btnSearchForSpecificEmployee.selected = false;
-            this.btnSearchForSpecificEmployee.Size = new System.Drawing.Size(249, 38);
+            this.btnSearchForSpecificEmployee.Size = new System.Drawing.Size(252, 52);
             this.btnSearchForSpecificEmployee.TabIndex = 6;
             this.btnSearchForSpecificEmployee.Text = "Search";
             this.btnSearchForSpecificEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSearchForSpecificEmployee.Textcolor = System.Drawing.Color.White;
-            this.btnSearchForSpecificEmployee.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchForSpecificEmployee.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnSearchForSpecificEmployee.Click += new System.EventHandler(this.btnSearchForSpecificEmployee_Click);
             // 
             // tbxSearchID
             // 
             this.tbxSearchID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbxSearchID.Location = new System.Drawing.Point(456, 22);
+            this.tbxSearchID.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.tbxSearchID.Location = new System.Drawing.Point(472, 18);
             this.tbxSearchID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxSearchID.Name = "tbxSearchID";
-            this.tbxSearchID.Size = new System.Drawing.Size(153, 22);
+            this.tbxSearchID.Size = new System.Drawing.Size(153, 30);
             this.tbxSearchID.TabIndex = 2;
             // 
             // label5
@@ -2125,23 +2135,24 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F);
+            this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.label5.Location = new System.Drawing.Point(360, 22);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(31, 22);
+            this.label5.Size = new System.Drawing.Size(35, 23);
             this.label5.TabIndex = 1;
             this.label5.Text = "ID:";
             // 
             // cmbSelectSeachMethod
             // 
+            this.cmbSelectSeachMethod.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.cmbSelectSeachMethod.FormattingEnabled = true;
             this.cmbSelectSeachMethod.Items.AddRange(new object[] {
             "Last name",
             "ID"});
-            this.cmbSelectSeachMethod.Location = new System.Drawing.Point(135, 22);
+            this.cmbSelectSeachMethod.Location = new System.Drawing.Point(154, 22);
             this.cmbSelectSeachMethod.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbSelectSeachMethod.Name = "cmbSelectSeachMethod";
-            this.cmbSelectSeachMethod.Size = new System.Drawing.Size(204, 24);
+            this.cmbSelectSeachMethod.Size = new System.Drawing.Size(185, 31);
             this.cmbSelectSeachMethod.TabIndex = 0;
             // 
             // tabProfile
@@ -2230,7 +2241,7 @@
             this.btnLogOutTABprofile.Text = "LOG OUT";
             this.btnLogOutTABprofile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLogOutTABprofile.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnLogOutTABprofile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOutTABprofile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnLogOutTABprofile.Click += new System.EventHandler(this.btnLogOutTABdepart_Click);
             // 
             // btnStatisticsTABprofile
@@ -2267,7 +2278,7 @@
             this.btnStatisticsTABprofile.Text = "Statisitcs";
             this.btnStatisticsTABprofile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnStatisticsTABprofile.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnStatisticsTABprofile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatisticsTABprofile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnStatisticsTABprofile.Click += new System.EventHandler(this.btnStatisticsTABsearch_Click);
             // 
             // pictureBox4
@@ -2316,7 +2327,7 @@
             this.btnSearchTABprofile.Text = "Search Employee";
             this.btnSearchTABprofile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSearchTABprofile.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnSearchTABprofile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchTABprofile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnSearchTABprofile.Click += new System.EventHandler(this.btnSearchTABemplStats_Click);
             // 
             // tableLayoutPanel21
@@ -2342,7 +2353,6 @@
             this.panel9.Controls.Add(this.lblPosInCompany);
             this.panel9.Controls.Add(this.lblLastName);
             this.panel9.Controls.Add(this.lblFirstName);
-            this.panel9.Controls.Add(this.pictureBox8);
             this.panel9.Controls.Add(this.pictureBox6);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2533,18 +2543,6 @@
             this.lblFirstName.TabIndex = 2;
             this.lblFirstName.Text = "FirstName";
             // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(755, 40);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(165, 172);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 1;
-            this.pictureBox8.TabStop = false;
-            // 
             // pictureBox6
             // 
             this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Top;
@@ -2637,7 +2635,6 @@
             this.panel11.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
@@ -2734,7 +2731,6 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblDateOfBirth;
-        private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label lblAttendance;
         private System.Windows.Forms.Label lblNationality;

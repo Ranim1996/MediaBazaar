@@ -229,11 +229,11 @@ namespace Media_Bazaar
             string password = "";
             JobPosition pos = JobPosition.ADMINISTRATOR;
 
-            if (tbFirstName.Text != "" && tbLastName.Text != "" && tbDateOfBirth.Text != "" && tbEmail.Text != "" && tbEmail.Text != "" && tbPhoneNr.Text != "" && tbNationality.Text != "")
+            if (tbFirstName.Text != "" && tbLastName.Text != "" && tbDateOfBirth.Value.ToShortDateString() != "" && tbEmail.Text != "" && tbEmail.Text != "" && tbPhoneNr.Text != "" && tbNationality.Text != "")
             {
                 fName = tbFirstName.Text;
                 lName = tbLastName.Text;
-                dateOfBirth = tbDateOfBirth.Text;
+                dateOfBirth = tbDateOfBirth.Value.ToShortDateString();
                 email = tbEmail.Text;
                 phoneNr = tbPhoneNr.Text;
                 nationality = tbNationality.Text;
@@ -297,10 +297,8 @@ namespace Media_Bazaar
             MessageBox.Show("New employee account has been successfully created.");
             tbFirstName.Clear();
             tbLastName.Clear();
-            tbDateOfBirth.Clear();
             tbEmail.Clear();
             tbPhoneNr.Clear();
-            tbNationality.Clear();
             tbEmployeeID.Clear();
             tbUsername.Clear();
             tbPassword.Clear();
@@ -526,6 +524,16 @@ namespace Media_Bazaar
 
       
         private void btnNewProfTABaddProf_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel22_Paint(object sender, PaintEventArgs e)
         {
 
         }

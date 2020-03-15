@@ -58,16 +58,16 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.tbDateOfBirth = new System.Windows.Forms.DateTimePicker();
+            this.tbNationality = new System.Windows.Forms.ComboBox();
             this.rbEmployee = new System.Windows.Forms.RadioButton();
             this.rbAdministrator = new System.Windows.Forms.RadioButton();
             this.btnAddNewProfile = new Bunifu.Framework.UI.BunifuFlatButton();
             this.rbDepotWorker = new System.Windows.Forms.RadioButton();
             this.rbManager = new System.Windows.Forms.RadioButton();
             this.label16 = new System.Windows.Forms.Label();
-            this.tbNationality = new System.Windows.Forms.TextBox();
             this.tbPhoneNr = new System.Windows.Forms.TextBox();
             this.tbEmail = new System.Windows.Forms.TextBox();
-            this.tbDateOfBirth = new System.Windows.Forms.TextBox();
             this.tbLastName = new System.Windows.Forms.TextBox();
             this.tbFirstName = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -117,9 +117,10 @@
             this.btnRemoveProfileTABassignDep = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAssignToDepTABassignDep = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.checkedListBox3 = new System.Windows.Forms.CheckedListBox();
-            this.btnAssignToDepartment = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel17 = new System.Windows.Forms.Panel();
             this.cmbDepartments = new System.Windows.Forms.ComboBox();
+            this.btnAssignToDepartment = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.checkedListBox3 = new System.Windows.Forms.CheckedListBox();
             this.tabSchedule = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
@@ -182,8 +183,8 @@
             this.panel19 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel29 = new System.Windows.Forms.TableLayoutPanel();
             this.panel20 = new System.Windows.Forms.Panel();
-            this.btnCreateDepartment = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel22 = new System.Windows.Forms.Panel();
+            this.btnCreateDepartment = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lbDepartaments = new System.Windows.Forms.ListBox();
             this.tbMaxNr = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
@@ -223,6 +224,7 @@
             this.tableLayoutPanel14.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
             this.panel9.SuspendLayout();
+            this.panel17.SuspendLayout();
             this.tabSchedule.SuspendLayout();
             this.tableLayoutPanel16.SuspendLayout();
             this.tableLayoutPanel17.SuspendLayout();
@@ -264,20 +266,20 @@
             this.tabControl1.Controls.Add(this.tabDepartManage);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1631, 925);
+            this.tabControl1.Size = new System.Drawing.Size(1511, 910);
             this.tabControl1.TabIndex = 16;
             // 
             // tabAddProfile
             // 
             this.tabAddProfile.Controls.Add(this.tableLayoutPanel3);
-            this.tabAddProfile.Location = new System.Drawing.Point(4, 22);
-            this.tabAddProfile.Margin = new System.Windows.Forms.Padding(2);
+            this.tabAddProfile.Location = new System.Drawing.Point(4, 25);
+            this.tabAddProfile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabAddProfile.Name = "tabAddProfile";
-            this.tabAddProfile.Padding = new System.Windows.Forms.Padding(2);
-            this.tabAddProfile.Size = new System.Drawing.Size(1812, 899);
+            this.tabAddProfile.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabAddProfile.Size = new System.Drawing.Size(1503, 881);
             this.tabAddProfile.TabIndex = 0;
             this.tabAddProfile.Text = "AddProfile";
             this.tabAddProfile.UseVisualStyleBackColor = true;
@@ -291,12 +293,12 @@
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel6, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1808, 895);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1497, 877);
             this.tableLayoutPanel3.TabIndex = 18;
             // 
             // tableLayoutPanel5
@@ -311,8 +313,8 @@
             this.tableLayoutPanel5.Controls.Add(this.btnRestockTABaddProfile, 0, 3);
             this.tableLayoutPanel5.Controls.Add(this.btnDepartManageTABaddProfile, 0, 4);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 6;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -321,7 +323,7 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(400, 891);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(328, 873);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // btnLogOutTABaddProfile
@@ -346,19 +348,19 @@
             this.btnLogOutTABaddProfile.IconVisible = false;
             this.btnLogOutTABaddProfile.IconZoom = 90D;
             this.btnLogOutTABaddProfile.IsTab = false;
-            this.btnLogOutTABaddProfile.Location = new System.Drawing.Point(4, 803);
-            this.btnLogOutTABaddProfile.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLogOutTABaddProfile.Location = new System.Drawing.Point(5, 786);
+            this.btnLogOutTABaddProfile.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogOutTABaddProfile.Name = "btnLogOutTABaddProfile";
             this.btnLogOutTABaddProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABaddProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnLogOutTABaddProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogOutTABaddProfile.selected = false;
-            this.btnLogOutTABaddProfile.Size = new System.Drawing.Size(392, 84);
+            this.btnLogOutTABaddProfile.Size = new System.Drawing.Size(318, 82);
             this.btnLogOutTABaddProfile.TabIndex = 6;
             this.btnLogOutTABaddProfile.Text = "LOG OUT";
             this.btnLogOutTABaddProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLogOutTABaddProfile.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnLogOutTABaddProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOutTABaddProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnLogOutTABaddProfile.Click += new System.EventHandler(this.btnLogOutTABaddProfile_Click);
             // 
             // btnEmployeeManageTABaddProfile
@@ -383,29 +385,29 @@
             this.btnEmployeeManageTABaddProfile.IconVisible = false;
             this.btnEmployeeManageTABaddProfile.IconZoom = 90D;
             this.btnEmployeeManageTABaddProfile.IsTab = false;
-            this.btnEmployeeManageTABaddProfile.Location = new System.Drawing.Point(4, 271);
-            this.btnEmployeeManageTABaddProfile.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEmployeeManageTABaddProfile.Location = new System.Drawing.Point(5, 266);
+            this.btnEmployeeManageTABaddProfile.Margin = new System.Windows.Forms.Padding(5);
             this.btnEmployeeManageTABaddProfile.Name = "btnEmployeeManageTABaddProfile";
             this.btnEmployeeManageTABaddProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnEmployeeManageTABaddProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnEmployeeManageTABaddProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEmployeeManageTABaddProfile.selected = false;
-            this.btnEmployeeManageTABaddProfile.Size = new System.Drawing.Size(392, 125);
+            this.btnEmployeeManageTABaddProfile.Size = new System.Drawing.Size(318, 120);
             this.btnEmployeeManageTABaddProfile.TabIndex = 5;
             this.btnEmployeeManageTABaddProfile.Text = "Employee Management";
             this.btnEmployeeManageTABaddProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEmployeeManageTABaddProfile.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnEmployeeManageTABaddProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployeeManageTABaddProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmployeeManageTABaddProfile.Click += new System.EventHandler(this.btnEmployeeManageTABaddProfile_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(2, 2);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(396, 263);
+            this.pictureBox2.Size = new System.Drawing.Size(322, 257);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -432,19 +434,19 @@
             this.btnScheduleTABaddProfile.IconVisible = false;
             this.btnScheduleTABaddProfile.IconZoom = 90D;
             this.btnScheduleTABaddProfile.IsTab = false;
-            this.btnScheduleTABaddProfile.Location = new System.Drawing.Point(4, 404);
-            this.btnScheduleTABaddProfile.Margin = new System.Windows.Forms.Padding(4);
+            this.btnScheduleTABaddProfile.Location = new System.Drawing.Point(5, 396);
+            this.btnScheduleTABaddProfile.Margin = new System.Windows.Forms.Padding(5);
             this.btnScheduleTABaddProfile.Name = "btnScheduleTABaddProfile";
             this.btnScheduleTABaddProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnScheduleTABaddProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnScheduleTABaddProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnScheduleTABaddProfile.selected = false;
-            this.btnScheduleTABaddProfile.Size = new System.Drawing.Size(392, 125);
+            this.btnScheduleTABaddProfile.Size = new System.Drawing.Size(318, 120);
             this.btnScheduleTABaddProfile.TabIndex = 2;
             this.btnScheduleTABaddProfile.Text = "Schedule";
             this.btnScheduleTABaddProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnScheduleTABaddProfile.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnScheduleTABaddProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnScheduleTABaddProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnScheduleTABaddProfile.Click += new System.EventHandler(this.btnScheduleTABaddProfile_Click);
             // 
             // btnRestockTABaddProfile
@@ -469,19 +471,19 @@
             this.btnRestockTABaddProfile.IconVisible = false;
             this.btnRestockTABaddProfile.IconZoom = 90D;
             this.btnRestockTABaddProfile.IsTab = false;
-            this.btnRestockTABaddProfile.Location = new System.Drawing.Point(4, 537);
-            this.btnRestockTABaddProfile.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRestockTABaddProfile.Location = new System.Drawing.Point(5, 526);
+            this.btnRestockTABaddProfile.Margin = new System.Windows.Forms.Padding(5);
             this.btnRestockTABaddProfile.Name = "btnRestockTABaddProfile";
             this.btnRestockTABaddProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnRestockTABaddProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnRestockTABaddProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnRestockTABaddProfile.selected = false;
-            this.btnRestockTABaddProfile.Size = new System.Drawing.Size(392, 125);
+            this.btnRestockTABaddProfile.Size = new System.Drawing.Size(318, 120);
             this.btnRestockTABaddProfile.TabIndex = 3;
             this.btnRestockTABaddProfile.Text = "Restock Request";
             this.btnRestockTABaddProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRestockTABaddProfile.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnRestockTABaddProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestockTABaddProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnRestockTABaddProfile.Click += new System.EventHandler(this.btnRestockTABaddProfile_Click);
             // 
             // btnDepartManageTABaddProfile
@@ -506,19 +508,19 @@
             this.btnDepartManageTABaddProfile.IconVisible = false;
             this.btnDepartManageTABaddProfile.IconZoom = 90D;
             this.btnDepartManageTABaddProfile.IsTab = false;
-            this.btnDepartManageTABaddProfile.Location = new System.Drawing.Point(4, 670);
-            this.btnDepartManageTABaddProfile.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDepartManageTABaddProfile.Location = new System.Drawing.Point(5, 656);
+            this.btnDepartManageTABaddProfile.Margin = new System.Windows.Forms.Padding(5);
             this.btnDepartManageTABaddProfile.Name = "btnDepartManageTABaddProfile";
             this.btnDepartManageTABaddProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnDepartManageTABaddProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnDepartManageTABaddProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnDepartManageTABaddProfile.selected = false;
-            this.btnDepartManageTABaddProfile.Size = new System.Drawing.Size(392, 125);
+            this.btnDepartManageTABaddProfile.Size = new System.Drawing.Size(318, 120);
             this.btnDepartManageTABaddProfile.TabIndex = 4;
             this.btnDepartManageTABaddProfile.Text = "Department Management";
             this.btnDepartManageTABaddProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnDepartManageTABaddProfile.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnDepartManageTABaddProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDepartManageTABaddProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnDepartManageTABaddProfile.Click += new System.EventHandler(this.btnDepartManageTABaddProfile_Click);
             // 
             // tableLayoutPanel6
@@ -529,13 +531,13 @@
             this.tableLayoutPanel6.Controls.Add(this.label12, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.panel5, 0, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(406, 2);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(337, 2);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 2;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(1400, 891);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(1157, 873);
             this.tableLayoutPanel6.TabIndex = 1;
             // 
             // label12
@@ -543,12 +545,11 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(2, 0);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(3, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(1396, 133);
+            this.label12.Size = new System.Drawing.Size(1151, 130);
             this.label12.TabIndex = 0;
             this.label12.Text = "Employee Management (New Profile)";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -558,10 +559,10 @@
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.tableLayoutPanel7);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(2, 135);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.panel5.Location = new System.Drawing.Point(3, 132);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1396, 754);
+            this.panel5.Size = new System.Drawing.Size(1151, 739);
             this.panel5.TabIndex = 1;
             // 
             // tableLayoutPanel7
@@ -572,12 +573,12 @@
             this.tableLayoutPanel7.Controls.Add(this.panel6, 0, 1);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.79393F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.20607F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1396, 754);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1151, 739);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
             // tableLayoutPanel8
@@ -590,14 +591,14 @@
             this.tableLayoutPanel8.Controls.Add(this.btnRemoveProfTABaddProfile, 1, 0);
             this.tableLayoutPanel8.Controls.Add(this.btnAssignToDepTABaddProfile, 2, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 77F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 77F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(1392, 77);
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(1145, 75);
             this.tableLayoutPanel8.TabIndex = 0;
             // 
             // btnNewProfTABaddProf
@@ -622,19 +623,19 @@
             this.btnNewProfTABaddProf.IconVisible = false;
             this.btnNewProfTABaddProf.IconZoom = 90D;
             this.btnNewProfTABaddProf.IsTab = false;
-            this.btnNewProfTABaddProf.Location = new System.Drawing.Point(4, 4);
-            this.btnNewProfTABaddProf.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNewProfTABaddProf.Location = new System.Drawing.Point(5, 5);
+            this.btnNewProfTABaddProf.Margin = new System.Windows.Forms.Padding(5);
             this.btnNewProfTABaddProf.Name = "btnNewProfTABaddProf";
             this.btnNewProfTABaddProf.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnNewProfTABaddProf.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnNewProfTABaddProf.OnHoverTextColor = System.Drawing.Color.White;
             this.btnNewProfTABaddProf.selected = false;
-            this.btnNewProfTABaddProf.Size = new System.Drawing.Size(456, 69);
+            this.btnNewProfTABaddProf.Size = new System.Drawing.Size(371, 65);
             this.btnNewProfTABaddProf.TabIndex = 0;
             this.btnNewProfTABaddProf.Text = "New profile";
             this.btnNewProfTABaddProf.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnNewProfTABaddProf.Textcolor = System.Drawing.Color.White;
-            this.btnNewProfTABaddProf.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewProfTABaddProf.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnNewProfTABaddProf.Click += new System.EventHandler(this.btnNewProfTABaddProf_Click);
             // 
             // btnRemoveProfTABaddProfile
@@ -659,19 +660,19 @@
             this.btnRemoveProfTABaddProfile.IconVisible = false;
             this.btnRemoveProfTABaddProfile.IconZoom = 90D;
             this.btnRemoveProfTABaddProfile.IsTab = false;
-            this.btnRemoveProfTABaddProfile.Location = new System.Drawing.Point(468, 4);
-            this.btnRemoveProfTABaddProfile.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRemoveProfTABaddProfile.Location = new System.Drawing.Point(386, 5);
+            this.btnRemoveProfTABaddProfile.Margin = new System.Windows.Forms.Padding(5);
             this.btnRemoveProfTABaddProfile.Name = "btnRemoveProfTABaddProfile";
             this.btnRemoveProfTABaddProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnRemoveProfTABaddProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnRemoveProfTABaddProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnRemoveProfTABaddProfile.selected = false;
-            this.btnRemoveProfTABaddProfile.Size = new System.Drawing.Size(456, 69);
+            this.btnRemoveProfTABaddProfile.Size = new System.Drawing.Size(371, 65);
             this.btnRemoveProfTABaddProfile.TabIndex = 1;
             this.btnRemoveProfTABaddProfile.Text = "Remove profile";
             this.btnRemoveProfTABaddProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRemoveProfTABaddProfile.Textcolor = System.Drawing.Color.White;
-            this.btnRemoveProfTABaddProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveProfTABaddProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnRemoveProfTABaddProfile.Click += new System.EventHandler(this.btnRemoveProfTABaddProfile_Click);
             // 
             // btnAssignToDepTABaddProfile
@@ -696,19 +697,19 @@
             this.btnAssignToDepTABaddProfile.IconVisible = false;
             this.btnAssignToDepTABaddProfile.IconZoom = 90D;
             this.btnAssignToDepTABaddProfile.IsTab = false;
-            this.btnAssignToDepTABaddProfile.Location = new System.Drawing.Point(932, 4);
-            this.btnAssignToDepTABaddProfile.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAssignToDepTABaddProfile.Location = new System.Drawing.Point(767, 5);
+            this.btnAssignToDepTABaddProfile.Margin = new System.Windows.Forms.Padding(5);
             this.btnAssignToDepTABaddProfile.Name = "btnAssignToDepTABaddProfile";
             this.btnAssignToDepTABaddProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnAssignToDepTABaddProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnAssignToDepTABaddProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAssignToDepTABaddProfile.selected = false;
-            this.btnAssignToDepTABaddProfile.Size = new System.Drawing.Size(456, 69);
+            this.btnAssignToDepTABaddProfile.Size = new System.Drawing.Size(373, 65);
             this.btnAssignToDepTABaddProfile.TabIndex = 2;
             this.btnAssignToDepTABaddProfile.Text = "Assign to departament";
             this.btnAssignToDepTABaddProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAssignToDepTABaddProfile.Textcolor = System.Drawing.Color.White;
-            this.btnAssignToDepTABaddProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAssignToDepTABaddProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAssignToDepTABaddProfile.Click += new System.EventHandler(this.btnAssignToDepTABaddProfile_Click);
             // 
             // panel6
@@ -717,10 +718,10 @@
             this.panel6.Controls.Add(this.panel8);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel6.Location = new System.Drawing.Point(2, 83);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2);
+            this.panel6.Location = new System.Drawing.Point(3, 81);
+            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1392, 669);
+            this.panel6.Size = new System.Drawing.Size(1145, 656);
             this.panel6.TabIndex = 1;
             // 
             // panel7
@@ -734,10 +735,10 @@
             this.panel7.Controls.Add(this.label13);
             this.panel7.Controls.Add(this.label14);
             this.panel7.Controls.Add(this.label15);
-            this.panel7.Location = new System.Drawing.Point(976, 16);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2);
+            this.panel7.Location = new System.Drawing.Point(584, 20);
+            this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(401, 601);
+            this.panel7.Size = new System.Drawing.Size(541, 573);
             this.panel7.TabIndex = 3;
             // 
             // tbPassword
@@ -745,10 +746,10 @@
             this.tbPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbPassword.Enabled = false;
-            this.tbPassword.Location = new System.Drawing.Point(98, 104);
-            this.tbPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.tbPassword.Location = new System.Drawing.Point(153, 139);
+            this.tbPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(291, 25);
+            this.tbPassword.Size = new System.Drawing.Size(371, 29);
             this.tbPassword.TabIndex = 9;
             // 
             // btnCreateProfile
@@ -762,6 +763,7 @@
             this.btnCreateProfile.ButtonText = "Create";
             this.btnCreateProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCreateProfile.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCreateProfile.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnCreateProfile.Iconcolor = System.Drawing.Color.Transparent;
             this.btnCreateProfile.Iconimage = null;
             this.btnCreateProfile.Iconimage_right = null;
@@ -774,19 +776,19 @@
             this.btnCreateProfile.IconVisible = false;
             this.btnCreateProfile.IconZoom = 90D;
             this.btnCreateProfile.IsTab = false;
-            this.btnCreateProfile.Location = new System.Drawing.Point(158, 224);
-            this.btnCreateProfile.Margin = new System.Windows.Forms.Padding(3, 8, 3, 8);
+            this.btnCreateProfile.Location = new System.Drawing.Point(18, 462);
+            this.btnCreateProfile.Margin = new System.Windows.Forms.Padding(4, 10, 4, 10);
             this.btnCreateProfile.Name = "btnCreateProfile";
             this.btnCreateProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnCreateProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnCreateProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnCreateProfile.selected = false;
-            this.btnCreateProfile.Size = new System.Drawing.Size(231, 50);
+            this.btnCreateProfile.Size = new System.Drawing.Size(506, 61);
             this.btnCreateProfile.TabIndex = 2;
             this.btnCreateProfile.Text = "Create";
             this.btnCreateProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCreateProfile.Textcolor = System.Drawing.Color.White;
-            this.btnCreateProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateProfile.Click += new System.EventHandler(this.btnCreateProfile_Click);
             // 
             // tbUsername
@@ -794,10 +796,10 @@
             this.tbUsername.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbUsername.Enabled = false;
-            this.tbUsername.Location = new System.Drawing.Point(98, 59);
-            this.tbUsername.Margin = new System.Windows.Forms.Padding(2);
+            this.tbUsername.Location = new System.Drawing.Point(153, 75);
+            this.tbUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbUsername.Name = "tbUsername";
-            this.tbUsername.Size = new System.Drawing.Size(291, 25);
+            this.tbUsername.Size = new System.Drawing.Size(371, 29);
             this.tbUsername.TabIndex = 8;
             // 
             // tbEmployeeID
@@ -805,39 +807,39 @@
             this.tbEmployeeID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbEmployeeID.Enabled = false;
-            this.tbEmployeeID.Location = new System.Drawing.Point(98, 15);
-            this.tbEmployeeID.Margin = new System.Windows.Forms.Padding(2);
+            this.tbEmployeeID.Location = new System.Drawing.Point(153, 21);
+            this.tbEmployeeID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbEmployeeID.Name = "tbEmployeeID";
-            this.tbEmployeeID.Size = new System.Drawing.Size(291, 25);
+            this.tbEmployeeID.Size = new System.Drawing.Size(371, 29);
             this.tbEmployeeID.TabIndex = 7;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(3, 111);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label13.Location = new System.Drawing.Point(4, 137);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(69, 18);
+            this.label13.Size = new System.Drawing.Size(100, 23);
             this.label13.TabIndex = 2;
             this.label13.Text = "Password:";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 66);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label14.Location = new System.Drawing.Point(4, 81);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(73, 18);
+            this.label14.Size = new System.Drawing.Size(104, 23);
             this.label14.TabIndex = 1;
             this.label14.Text = "Username:";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(3, 22);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label15.Location = new System.Drawing.Point(4, 27);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(88, 18);
+            this.label15.Size = new System.Drawing.Size(126, 23);
             this.label15.TabIndex = 0;
             this.label15.Text = "Employee ID:";
             // 
@@ -846,16 +848,16 @@
             this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel8.Controls.Add(this.tbDateOfBirth);
+            this.panel8.Controls.Add(this.tbNationality);
             this.panel8.Controls.Add(this.rbEmployee);
             this.panel8.Controls.Add(this.rbAdministrator);
             this.panel8.Controls.Add(this.btnAddNewProfile);
             this.panel8.Controls.Add(this.rbDepotWorker);
             this.panel8.Controls.Add(this.rbManager);
             this.panel8.Controls.Add(this.label16);
-            this.panel8.Controls.Add(this.tbNationality);
             this.panel8.Controls.Add(this.tbPhoneNr);
             this.panel8.Controls.Add(this.tbEmail);
-            this.panel8.Controls.Add(this.tbDateOfBirth);
             this.panel8.Controls.Add(this.tbLastName);
             this.panel8.Controls.Add(this.tbFirstName);
             this.panel8.Controls.Add(this.label17);
@@ -865,20 +867,104 @@
             this.panel8.Controls.Add(this.label21);
             this.panel8.Controls.Add(this.label22);
             this.panel8.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel8.Location = new System.Drawing.Point(19, 16);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2);
+            this.panel8.Location = new System.Drawing.Point(25, 20);
+            this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(928, 601);
+            this.panel8.Size = new System.Drawing.Size(526, 573);
             this.panel8.TabIndex = 0;
+            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
+            // 
+            // tbDateOfBirth
+            // 
+            this.tbDateOfBirth.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbDateOfBirth.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.tbDateOfBirth.Location = new System.Drawing.Point(353, 98);
+            this.tbDateOfBirth.MaxDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.tbDateOfBirth.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.tbDateOfBirth.Name = "tbDateOfBirth";
+            this.tbDateOfBirth.Size = new System.Drawing.Size(118, 30);
+            this.tbDateOfBirth.TabIndex = 18;
+            this.tbDateOfBirth.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            // 
+            // tbNationality
+            // 
+            this.tbNationality.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbNationality.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.tbNationality.FormattingEnabled = true;
+            this.tbNationality.Items.AddRange(new object[] {
+            "AT - Austria",
+            "BE - Belgium",
+            "BG - Bulgaria",
+            "CY - Cyprus",
+            "CZ - Czech Republic",
+            "DE - Germany",
+            "DK - Denmark",
+            "EE - Estonia",
+            "ES - Spain",
+            "FI - Finland",
+            "FR - France",
+            "GR - Greece ",
+            "HR - Croatia",
+            "HU - Hungary",
+            "IE - Ireland",
+            "IT - Italy",
+            "LT - Lithuania",
+            "LU - Luxembourg",
+            "LV - Latvia",
+            "MT - Malta",
+            "NL - Netherlands",
+            "PO - Poland",
+            "PT - Portugal",
+            "RO - Romania",
+            "TR- Turkey",
+            "USA",
+            "SE - Sweden",
+            "SI - Slovenia",
+            "SK - Slovakia",
+            "AT - Austria",
+            "BE - Belgium",
+            "BG - Bulgaria",
+            "CY - Cyprus",
+            "CZ - Czech Republic",
+            "DE - Germany",
+            "DK - Denmark",
+            "EE - Estonia",
+            "ES - Spain",
+            "FI - Finland",
+            "FR - France",
+            "GR - Greece ",
+            "HR - Croatia",
+            "HU - Hungary",
+            "IE - Ireland",
+            "IT - Italy",
+            "LT - Lithuania",
+            "LU - Luxembourg",
+            "LV - Latvia",
+            "MT - Malta",
+            "NL - Netherlands",
+            "PO - Poland",
+            "PT - Portugal",
+            "RO - Romania",
+            "SE - Sweden",
+            "SI - Slovenia",
+            "SY - Syria"});
+            this.tbNationality.Location = new System.Drawing.Point(349, 240);
+            this.tbNationality.Name = "tbNationality";
+            this.tbNationality.Size = new System.Drawing.Size(122, 31);
+            this.tbNationality.TabIndex = 17;
             // 
             // rbEmployee
             // 
             this.rbEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.rbEmployee.AutoSize = true;
-            this.rbEmployee.Location = new System.Drawing.Point(218, 317);
+            this.rbEmployee.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEmployee.Location = new System.Drawing.Point(353, 397);
+            this.rbEmployee.Margin = new System.Windows.Forms.Padding(4);
             this.rbEmployee.Name = "rbEmployee";
-            this.rbEmployee.Size = new System.Drawing.Size(85, 22);
+            this.rbEmployee.Size = new System.Drawing.Size(117, 27);
             this.rbEmployee.TabIndex = 16;
             this.rbEmployee.TabStop = true;
             this.rbEmployee.Text = "Employee";
@@ -889,9 +975,11 @@
             this.rbAdministrator.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.rbAdministrator.AutoSize = true;
-            this.rbAdministrator.Location = new System.Drawing.Point(218, 235);
+            this.rbAdministrator.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbAdministrator.Location = new System.Drawing.Point(353, 292);
+            this.rbAdministrator.Margin = new System.Windows.Forms.Padding(4);
             this.rbAdministrator.Name = "rbAdministrator";
-            this.rbAdministrator.Size = new System.Drawing.Size(110, 22);
+            this.rbAdministrator.Size = new System.Drawing.Size(155, 27);
             this.rbAdministrator.TabIndex = 15;
             this.rbAdministrator.TabStop = true;
             this.rbAdministrator.Text = "Administrator";
@@ -908,6 +996,7 @@
             this.btnAddNewProfile.ButtonText = "Add";
             this.btnAddNewProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddNewProfile.DisabledColor = System.Drawing.Color.Gray;
+            this.btnAddNewProfile.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddNewProfile.Iconcolor = System.Drawing.Color.Transparent;
             this.btnAddNewProfile.Iconimage = null;
             this.btnAddNewProfile.Iconimage_right = null;
@@ -920,19 +1009,19 @@
             this.btnAddNewProfile.IconVisible = false;
             this.btnAddNewProfile.IconZoom = 90D;
             this.btnAddNewProfile.IsTab = false;
-            this.btnAddNewProfile.Location = new System.Drawing.Point(24, 355);
-            this.btnAddNewProfile.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.btnAddNewProfile.Location = new System.Drawing.Point(32, 462);
+            this.btnAddNewProfile.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
             this.btnAddNewProfile.Name = "btnAddNewProfile";
             this.btnAddNewProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnAddNewProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnAddNewProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAddNewProfile.selected = false;
-            this.btnAddNewProfile.Size = new System.Drawing.Size(888, 35);
+            this.btnAddNewProfile.Size = new System.Drawing.Size(439, 61);
             this.btnAddNewProfile.TabIndex = 4;
             this.btnAddNewProfile.Text = "Add";
             this.btnAddNewProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAddNewProfile.Textcolor = System.Drawing.Color.White;
-            this.btnAddNewProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddNewProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddNewProfile.Click += new System.EventHandler(this.btnAddNewProfile_Click_1);
             // 
             // rbDepotWorker
@@ -940,9 +1029,11 @@
             this.rbDepotWorker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.rbDepotWorker.AutoSize = true;
-            this.rbDepotWorker.Location = new System.Drawing.Point(218, 289);
+            this.rbDepotWorker.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbDepotWorker.Location = new System.Drawing.Point(353, 359);
+            this.rbDepotWorker.Margin = new System.Windows.Forms.Padding(4);
             this.rbDepotWorker.Name = "rbDepotWorker";
-            this.rbDepotWorker.Size = new System.Drawing.Size(113, 22);
+            this.rbDepotWorker.Size = new System.Drawing.Size(159, 27);
             this.rbDepotWorker.TabIndex = 14;
             this.rbDepotWorker.TabStop = true;
             this.rbDepotWorker.Text = "Depot Worker";
@@ -953,9 +1044,11 @@
             this.rbManager.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.rbManager.AutoSize = true;
-            this.rbManager.Location = new System.Drawing.Point(218, 261);
+            this.rbManager.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbManager.Location = new System.Drawing.Point(353, 324);
+            this.rbManager.Margin = new System.Windows.Forms.Padding(4);
             this.rbManager.Name = "rbManager";
-            this.rbManager.Size = new System.Drawing.Size(81, 22);
+            this.rbManager.Size = new System.Drawing.Size(111, 27);
             this.rbManager.TabIndex = 13;
             this.rbManager.TabStop = true;
             this.rbManager.Text = "Manager";
@@ -967,72 +1060,55 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(21, 239);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(28, 294);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(159, 18);
+            this.label16.Size = new System.Drawing.Size(230, 23);
             this.label16.TabIndex = 12;
             this.label16.Text = "Position in the company:";
-            // 
-            // tbNationality
-            // 
-            this.tbNationality.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbNationality.Location = new System.Drawing.Point(218, 188);
-            this.tbNationality.Margin = new System.Windows.Forms.Padding(2);
-            this.tbNationality.Name = "tbNationality";
-            this.tbNationality.Size = new System.Drawing.Size(694, 25);
-            this.tbNationality.TabIndex = 11;
             // 
             // tbPhoneNr
             // 
             this.tbPhoneNr.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbPhoneNr.Location = new System.Drawing.Point(218, 150);
-            this.tbPhoneNr.Margin = new System.Windows.Forms.Padding(2);
+            this.tbPhoneNr.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.tbPhoneNr.Location = new System.Drawing.Point(353, 192);
+            this.tbPhoneNr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbPhoneNr.Name = "tbPhoneNr";
-            this.tbPhoneNr.Size = new System.Drawing.Size(694, 25);
+            this.tbPhoneNr.Size = new System.Drawing.Size(118, 30);
             this.tbPhoneNr.TabIndex = 10;
             // 
             // tbEmail
             // 
             this.tbEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbEmail.Location = new System.Drawing.Point(218, 111);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.tbEmail.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.tbEmail.Location = new System.Drawing.Point(353, 144);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(694, 25);
+            this.tbEmail.Size = new System.Drawing.Size(118, 30);
             this.tbEmail.TabIndex = 9;
-            // 
-            // tbDateOfBirth
-            // 
-            this.tbDateOfBirth.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbDateOfBirth.Location = new System.Drawing.Point(218, 76);
-            this.tbDateOfBirth.Margin = new System.Windows.Forms.Padding(2);
-            this.tbDateOfBirth.Name = "tbDateOfBirth";
-            this.tbDateOfBirth.Size = new System.Drawing.Size(694, 25);
-            this.tbDateOfBirth.TabIndex = 8;
             // 
             // tbLastName
             // 
             this.tbLastName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbLastName.Location = new System.Drawing.Point(218, 41);
-            this.tbLastName.Margin = new System.Windows.Forms.Padding(2);
+            this.tbLastName.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.tbLastName.Location = new System.Drawing.Point(353, 57);
+            this.tbLastName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbLastName.Name = "tbLastName";
-            this.tbLastName.Size = new System.Drawing.Size(694, 25);
+            this.tbLastName.Size = new System.Drawing.Size(118, 30);
             this.tbLastName.TabIndex = 7;
             // 
             // tbFirstName
             // 
             this.tbFirstName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbFirstName.Location = new System.Drawing.Point(218, 6);
-            this.tbFirstName.Margin = new System.Windows.Forms.Padding(2);
+            this.tbFirstName.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.tbFirstName.Location = new System.Drawing.Point(353, 12);
+            this.tbFirstName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbFirstName.Name = "tbFirstName";
-            this.tbFirstName.Size = new System.Drawing.Size(694, 25);
+            this.tbFirstName.Size = new System.Drawing.Size(118, 30);
             this.tbFirstName.TabIndex = 6;
             // 
             // label17
@@ -1041,11 +1117,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(21, 195);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(28, 240);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(77, 18);
+            this.label17.Size = new System.Drawing.Size(113, 23);
             this.label17.TabIndex = 5;
             this.label17.Text = "Nationality:";
             // 
@@ -1055,11 +1130,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(21, 157);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(28, 193);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(102, 18);
+            this.label18.Size = new System.Drawing.Size(148, 23);
             this.label18.TabIndex = 4;
             this.label18.Text = "Phone number:";
             // 
@@ -1069,11 +1143,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(21, 118);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(28, 145);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(43, 18);
+            this.label19.Size = new System.Drawing.Size(62, 23);
             this.label19.TabIndex = 3;
             this.label19.Text = "Email:";
             // 
@@ -1083,11 +1156,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(21, 83);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(28, 102);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(185, 18);
+            this.label20.Size = new System.Drawing.Size(271, 23);
             this.label20.TabIndex = 2;
             this.label20.Text = "Date of birth (dd/MM/YYYY):";
             // 
@@ -1097,11 +1169,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(21, 48);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(28, 59);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(74, 18);
+            this.label21.Size = new System.Drawing.Size(104, 23);
             this.label21.TabIndex = 1;
             this.label21.Text = "Last name:";
             // 
@@ -1110,22 +1181,21 @@
             this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label22.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(21, 10);
-            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label22.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(28, 12);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(771, 281);
+            this.label22.Size = new System.Drawing.Size(0, 179);
             this.label22.TabIndex = 0;
             this.label22.Text = "First name: ";
             // 
             // tabRemoveProfile
             // 
             this.tabRemoveProfile.Controls.Add(this.tableLayoutPanel1);
-            this.tabRemoveProfile.Location = new System.Drawing.Point(4, 22);
-            this.tabRemoveProfile.Margin = new System.Windows.Forms.Padding(2);
+            this.tabRemoveProfile.Location = new System.Drawing.Point(4, 25);
+            this.tabRemoveProfile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabRemoveProfile.Name = "tabRemoveProfile";
-            this.tabRemoveProfile.Padding = new System.Windows.Forms.Padding(2);
-            this.tabRemoveProfile.Size = new System.Drawing.Size(1812, 899);
+            this.tabRemoveProfile.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabRemoveProfile.Size = new System.Drawing.Size(1503, 881);
             this.tabRemoveProfile.TabIndex = 1;
             this.tabRemoveProfile.Text = "RemoveProfile";
             this.tabRemoveProfile.UseVisualStyleBackColor = true;
@@ -1139,12 +1209,12 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1808, 895);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1497, 877);
             this.tableLayoutPanel1.TabIndex = 18;
             // 
             // tableLayoutPanel2
@@ -1159,8 +1229,8 @@
             this.tableLayoutPanel2.Controls.Add(this.btnRestockReqTABremoveProfile, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.btnDepartManageTABremoveProfile, 0, 4);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 6;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -1169,7 +1239,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(400, 891);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(328, 873);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // bunifuFlatButton6
@@ -1194,19 +1264,19 @@
             this.bunifuFlatButton6.IconVisible = false;
             this.bunifuFlatButton6.IconZoom = 90D;
             this.bunifuFlatButton6.IsTab = false;
-            this.bunifuFlatButton6.Location = new System.Drawing.Point(4, 803);
-            this.bunifuFlatButton6.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton6.Location = new System.Drawing.Point(5, 786);
+            this.bunifuFlatButton6.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton6.Name = "bunifuFlatButton6";
             this.bunifuFlatButton6.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton6.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.bunifuFlatButton6.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton6.selected = false;
-            this.bunifuFlatButton6.Size = new System.Drawing.Size(392, 84);
+            this.bunifuFlatButton6.Size = new System.Drawing.Size(318, 82);
             this.bunifuFlatButton6.TabIndex = 7;
             this.bunifuFlatButton6.Text = "LOG OUT";
             this.bunifuFlatButton6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton6.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.bunifuFlatButton6.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton6.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.bunifuFlatButton6.Click += new System.EventHandler(this.btnLogOutTABaddProfile_Click);
             // 
             // btnEmployeeManageTABremoveProfile
@@ -1231,28 +1301,28 @@
             this.btnEmployeeManageTABremoveProfile.IconVisible = false;
             this.btnEmployeeManageTABremoveProfile.IconZoom = 90D;
             this.btnEmployeeManageTABremoveProfile.IsTab = false;
-            this.btnEmployeeManageTABremoveProfile.Location = new System.Drawing.Point(4, 271);
-            this.btnEmployeeManageTABremoveProfile.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEmployeeManageTABremoveProfile.Location = new System.Drawing.Point(5, 266);
+            this.btnEmployeeManageTABremoveProfile.Margin = new System.Windows.Forms.Padding(5);
             this.btnEmployeeManageTABremoveProfile.Name = "btnEmployeeManageTABremoveProfile";
             this.btnEmployeeManageTABremoveProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnEmployeeManageTABremoveProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnEmployeeManageTABremoveProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEmployeeManageTABremoveProfile.selected = false;
-            this.btnEmployeeManageTABremoveProfile.Size = new System.Drawing.Size(392, 125);
+            this.btnEmployeeManageTABremoveProfile.Size = new System.Drawing.Size(318, 120);
             this.btnEmployeeManageTABremoveProfile.TabIndex = 5;
             this.btnEmployeeManageTABremoveProfile.Text = "Employee Management";
             this.btnEmployeeManageTABremoveProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEmployeeManageTABremoveProfile.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnEmployeeManageTABremoveProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployeeManageTABremoveProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(2, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(396, 263);
+            this.pictureBox1.Size = new System.Drawing.Size(322, 257);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -1279,19 +1349,19 @@
             this.btnScheduleTABremoveProfile.IconVisible = false;
             this.btnScheduleTABremoveProfile.IconZoom = 90D;
             this.btnScheduleTABremoveProfile.IsTab = false;
-            this.btnScheduleTABremoveProfile.Location = new System.Drawing.Point(4, 404);
-            this.btnScheduleTABremoveProfile.Margin = new System.Windows.Forms.Padding(4);
+            this.btnScheduleTABremoveProfile.Location = new System.Drawing.Point(5, 396);
+            this.btnScheduleTABremoveProfile.Margin = new System.Windows.Forms.Padding(5);
             this.btnScheduleTABremoveProfile.Name = "btnScheduleTABremoveProfile";
             this.btnScheduleTABremoveProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnScheduleTABremoveProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnScheduleTABremoveProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnScheduleTABremoveProfile.selected = false;
-            this.btnScheduleTABremoveProfile.Size = new System.Drawing.Size(392, 125);
+            this.btnScheduleTABremoveProfile.Size = new System.Drawing.Size(318, 120);
             this.btnScheduleTABremoveProfile.TabIndex = 2;
             this.btnScheduleTABremoveProfile.Text = "Schedule";
             this.btnScheduleTABremoveProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnScheduleTABremoveProfile.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnScheduleTABremoveProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnScheduleTABremoveProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnScheduleTABremoveProfile.Click += new System.EventHandler(this.btnScheduleTABaddProfile_Click);
             // 
             // btnRestockReqTABremoveProfile
@@ -1316,19 +1386,19 @@
             this.btnRestockReqTABremoveProfile.IconVisible = false;
             this.btnRestockReqTABremoveProfile.IconZoom = 90D;
             this.btnRestockReqTABremoveProfile.IsTab = false;
-            this.btnRestockReqTABremoveProfile.Location = new System.Drawing.Point(4, 537);
-            this.btnRestockReqTABremoveProfile.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRestockReqTABremoveProfile.Location = new System.Drawing.Point(5, 526);
+            this.btnRestockReqTABremoveProfile.Margin = new System.Windows.Forms.Padding(5);
             this.btnRestockReqTABremoveProfile.Name = "btnRestockReqTABremoveProfile";
             this.btnRestockReqTABremoveProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnRestockReqTABremoveProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnRestockReqTABremoveProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnRestockReqTABremoveProfile.selected = false;
-            this.btnRestockReqTABremoveProfile.Size = new System.Drawing.Size(392, 125);
+            this.btnRestockReqTABremoveProfile.Size = new System.Drawing.Size(318, 120);
             this.btnRestockReqTABremoveProfile.TabIndex = 3;
             this.btnRestockReqTABremoveProfile.Text = "Restock Request";
             this.btnRestockReqTABremoveProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRestockReqTABremoveProfile.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnRestockReqTABremoveProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestockReqTABremoveProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnRestockReqTABremoveProfile.Click += new System.EventHandler(this.btnRestockTABaddProfile_Click);
             // 
             // btnDepartManageTABremoveProfile
@@ -1353,19 +1423,19 @@
             this.btnDepartManageTABremoveProfile.IconVisible = false;
             this.btnDepartManageTABremoveProfile.IconZoom = 90D;
             this.btnDepartManageTABremoveProfile.IsTab = false;
-            this.btnDepartManageTABremoveProfile.Location = new System.Drawing.Point(4, 670);
-            this.btnDepartManageTABremoveProfile.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDepartManageTABremoveProfile.Location = new System.Drawing.Point(5, 656);
+            this.btnDepartManageTABremoveProfile.Margin = new System.Windows.Forms.Padding(5);
             this.btnDepartManageTABremoveProfile.Name = "btnDepartManageTABremoveProfile";
             this.btnDepartManageTABremoveProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnDepartManageTABremoveProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnDepartManageTABremoveProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnDepartManageTABremoveProfile.selected = false;
-            this.btnDepartManageTABremoveProfile.Size = new System.Drawing.Size(392, 125);
+            this.btnDepartManageTABremoveProfile.Size = new System.Drawing.Size(318, 120);
             this.btnDepartManageTABremoveProfile.TabIndex = 4;
             this.btnDepartManageTABremoveProfile.Text = "Department Management";
             this.btnDepartManageTABremoveProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnDepartManageTABremoveProfile.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnDepartManageTABremoveProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDepartManageTABremoveProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnDepartManageTABremoveProfile.Click += new System.EventHandler(this.btnDepartManageTABaddProfile_Click);
             // 
             // tableLayoutPanel4
@@ -1376,13 +1446,13 @@
             this.tableLayoutPanel4.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.panel1, 0, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(406, 2);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(337, 2);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1400, 891);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1157, 873);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // label1
@@ -1390,12 +1460,11 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(2, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1396, 133);
+            this.label1.Size = new System.Drawing.Size(1151, 130);
             this.label1.TabIndex = 0;
             this.label1.Text = "Employee Managment (Remove Profile)";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1405,10 +1474,10 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.tableLayoutPanel9);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(2, 135);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(3, 132);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1396, 754);
+            this.panel1.Size = new System.Drawing.Size(1151, 739);
             this.panel1.TabIndex = 1;
             // 
             // tableLayoutPanel9
@@ -1419,12 +1488,12 @@
             this.tableLayoutPanel9.Controls.Add(this.panel2, 0, 1);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel9.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 2;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.79393F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.20607F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(1396, 754);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(1151, 739);
             this.tableLayoutPanel9.TabIndex = 0;
             // 
             // tableLayoutPanel10
@@ -1437,14 +1506,14 @@
             this.tableLayoutPanel10.Controls.Add(this.btnRemoveProfTABremoveProfile, 1, 0);
             this.tableLayoutPanel10.Controls.Add(this.btnAssignToDepTABremoveProfile, 2, 0);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 1;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 77F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 77F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(1392, 77);
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(1145, 75);
             this.tableLayoutPanel10.TabIndex = 0;
             // 
             // btnNewProfileTABremoveProfile
@@ -1469,19 +1538,19 @@
             this.btnNewProfileTABremoveProfile.IconVisible = false;
             this.btnNewProfileTABremoveProfile.IconZoom = 90D;
             this.btnNewProfileTABremoveProfile.IsTab = false;
-            this.btnNewProfileTABremoveProfile.Location = new System.Drawing.Point(4, 4);
-            this.btnNewProfileTABremoveProfile.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNewProfileTABremoveProfile.Location = new System.Drawing.Point(5, 5);
+            this.btnNewProfileTABremoveProfile.Margin = new System.Windows.Forms.Padding(5);
             this.btnNewProfileTABremoveProfile.Name = "btnNewProfileTABremoveProfile";
             this.btnNewProfileTABremoveProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnNewProfileTABremoveProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnNewProfileTABremoveProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnNewProfileTABremoveProfile.selected = false;
-            this.btnNewProfileTABremoveProfile.Size = new System.Drawing.Size(456, 69);
+            this.btnNewProfileTABremoveProfile.Size = new System.Drawing.Size(371, 65);
             this.btnNewProfileTABremoveProfile.TabIndex = 0;
             this.btnNewProfileTABremoveProfile.Text = "New profile";
             this.btnNewProfileTABremoveProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnNewProfileTABremoveProfile.Textcolor = System.Drawing.Color.White;
-            this.btnNewProfileTABremoveProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewProfileTABremoveProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnNewProfileTABremoveProfile.Click += new System.EventHandler(this.btnNewProfileTABremoveProfile_Click);
             // 
             // btnRemoveProfTABremoveProfile
@@ -1506,19 +1575,19 @@
             this.btnRemoveProfTABremoveProfile.IconVisible = false;
             this.btnRemoveProfTABremoveProfile.IconZoom = 90D;
             this.btnRemoveProfTABremoveProfile.IsTab = false;
-            this.btnRemoveProfTABremoveProfile.Location = new System.Drawing.Point(468, 4);
-            this.btnRemoveProfTABremoveProfile.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRemoveProfTABremoveProfile.Location = new System.Drawing.Point(386, 5);
+            this.btnRemoveProfTABremoveProfile.Margin = new System.Windows.Forms.Padding(5);
             this.btnRemoveProfTABremoveProfile.Name = "btnRemoveProfTABremoveProfile";
             this.btnRemoveProfTABremoveProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnRemoveProfTABremoveProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnRemoveProfTABremoveProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnRemoveProfTABremoveProfile.selected = false;
-            this.btnRemoveProfTABremoveProfile.Size = new System.Drawing.Size(456, 69);
+            this.btnRemoveProfTABremoveProfile.Size = new System.Drawing.Size(371, 65);
             this.btnRemoveProfTABremoveProfile.TabIndex = 1;
             this.btnRemoveProfTABremoveProfile.Text = "Remove profile";
             this.btnRemoveProfTABremoveProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRemoveProfTABremoveProfile.Textcolor = System.Drawing.Color.White;
-            this.btnRemoveProfTABremoveProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveProfTABremoveProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnRemoveProfTABremoveProfile.Click += new System.EventHandler(this.btnRemoveProfTABremoveProfile_Click);
             // 
             // btnAssignToDepTABremoveProfile
@@ -1543,41 +1612,42 @@
             this.btnAssignToDepTABremoveProfile.IconVisible = false;
             this.btnAssignToDepTABremoveProfile.IconZoom = 90D;
             this.btnAssignToDepTABremoveProfile.IsTab = false;
-            this.btnAssignToDepTABremoveProfile.Location = new System.Drawing.Point(932, 4);
-            this.btnAssignToDepTABremoveProfile.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAssignToDepTABremoveProfile.Location = new System.Drawing.Point(767, 5);
+            this.btnAssignToDepTABremoveProfile.Margin = new System.Windows.Forms.Padding(5);
             this.btnAssignToDepTABremoveProfile.Name = "btnAssignToDepTABremoveProfile";
             this.btnAssignToDepTABremoveProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnAssignToDepTABremoveProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnAssignToDepTABremoveProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAssignToDepTABremoveProfile.selected = false;
-            this.btnAssignToDepTABremoveProfile.Size = new System.Drawing.Size(456, 69);
+            this.btnAssignToDepTABremoveProfile.Size = new System.Drawing.Size(373, 65);
             this.btnAssignToDepTABremoveProfile.TabIndex = 2;
             this.btnAssignToDepTABremoveProfile.Text = "Assign to departament";
             this.btnAssignToDepTABremoveProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAssignToDepTABremoveProfile.Textcolor = System.Drawing.Color.White;
-            this.btnAssignToDepTABremoveProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAssignToDepTABremoveProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnAssignToDepTABremoveProfile.Click += new System.EventHandler(this.btnAssignToDepTABaddProfile_Click);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.checkedListBox2);
             this.panel2.Controls.Add(this.panel10);
-            this.panel2.Controls.Add(this.btnRemoveProfile);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(2, 83);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(3, 81);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1392, 669);
+            this.panel2.Size = new System.Drawing.Size(1145, 656);
             this.panel2.TabIndex = 1;
             // 
             // checkedListBox2
             // 
+            this.checkedListBox2.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Location = new System.Drawing.Point(32, 42);
-            this.checkedListBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.checkedListBox2.HorizontalScrollbar = true;
+            this.checkedListBox2.Location = new System.Drawing.Point(43, 52);
+            this.checkedListBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(356, 204);
+            this.checkedListBox2.Size = new System.Drawing.Size(629, 554);
             this.checkedListBox2.TabIndex = 7;
             // 
             // panel10
@@ -1586,21 +1656,23 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel10.Controls.Add(this.tbExtraInformationTABremoveProfile);
             this.panel10.Controls.Add(this.label57);
-            this.panel10.Location = new System.Drawing.Point(1101, 24);
-            this.panel10.Margin = new System.Windows.Forms.Padding(2);
+            this.panel10.Controls.Add(this.btnRemoveProfile);
+            this.panel10.Location = new System.Drawing.Point(703, 19);
+            this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(226, 519);
+            this.panel10.Size = new System.Drawing.Size(413, 483);
             this.panel10.TabIndex = 6;
             // 
             // tbExtraInformationTABremoveProfile
             // 
             this.tbExtraInformationTABremoveProfile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbExtraInformationTABremoveProfile.Location = new System.Drawing.Point(11, 41);
-            this.tbExtraInformationTABremoveProfile.Margin = new System.Windows.Forms.Padding(2);
+            this.tbExtraInformationTABremoveProfile.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.tbExtraInformationTABremoveProfile.Location = new System.Drawing.Point(25, 33);
+            this.tbExtraInformationTABremoveProfile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbExtraInformationTABremoveProfile.Multiline = true;
             this.tbExtraInformationTABremoveProfile.Name = "tbExtraInformationTABremoveProfile";
-            this.tbExtraInformationTABremoveProfile.Size = new System.Drawing.Size(200, 465);
+            this.tbExtraInformationTABremoveProfile.Size = new System.Drawing.Size(362, 295);
             this.tbExtraInformationTABremoveProfile.TabIndex = 3;
             // 
             // label57
@@ -1608,10 +1680,10 @@
             this.label57.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(31, 5);
-            this.label57.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label57.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label57.Location = new System.Drawing.Point(87, 8);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(168, 18);
+            this.label57.Size = new System.Drawing.Size(248, 23);
             this.label57.TabIndex = 4;
             this.label57.Text = "Reasons/Extra information";
             // 
@@ -1625,6 +1697,7 @@
             this.btnRemoveProfile.ButtonText = "Fire";
             this.btnRemoveProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoveProfile.DisabledColor = System.Drawing.Color.Gray;
+            this.btnRemoveProfile.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveProfile.Iconcolor = System.Drawing.Color.Transparent;
             this.btnRemoveProfile.Iconimage = null;
             this.btnRemoveProfile.Iconimage_right = null;
@@ -1637,29 +1710,29 @@
             this.btnRemoveProfile.IconVisible = false;
             this.btnRemoveProfile.IconZoom = 90D;
             this.btnRemoveProfile.IsTab = false;
-            this.btnRemoveProfile.Location = new System.Drawing.Point(1101, 562);
-            this.btnRemoveProfile.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnRemoveProfile.Location = new System.Drawing.Point(25, 388);
+            this.btnRemoveProfile.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnRemoveProfile.Name = "btnRemoveProfile";
             this.btnRemoveProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnRemoveProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnRemoveProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnRemoveProfile.selected = false;
-            this.btnRemoveProfile.Size = new System.Drawing.Size(226, 34);
+            this.btnRemoveProfile.Size = new System.Drawing.Size(362, 61);
             this.btnRemoveProfile.TabIndex = 5;
             this.btnRemoveProfile.Text = "Fire";
             this.btnRemoveProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRemoveProfile.Textcolor = System.Drawing.Color.White;
-            this.btnRemoveProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveProfile.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveProfile.Click += new System.EventHandler(this.btnRemoveProfile_Click);
             // 
             // tabAssignDep
             // 
             this.tabAssignDep.Controls.Add(this.tableLayoutPanel11);
-            this.tabAssignDep.Location = new System.Drawing.Point(4, 22);
-            this.tabAssignDep.Margin = new System.Windows.Forms.Padding(2);
+            this.tabAssignDep.Location = new System.Drawing.Point(4, 25);
+            this.tabAssignDep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabAssignDep.Name = "tabAssignDep";
-            this.tabAssignDep.Padding = new System.Windows.Forms.Padding(2);
-            this.tabAssignDep.Size = new System.Drawing.Size(1812, 899);
+            this.tabAssignDep.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabAssignDep.Size = new System.Drawing.Size(1503, 881);
             this.tabAssignDep.TabIndex = 2;
             this.tabAssignDep.Text = "AssignToDepartment";
             this.tabAssignDep.UseVisualStyleBackColor = true;
@@ -1673,12 +1746,12 @@
             this.tableLayoutPanel11.Controls.Add(this.tableLayoutPanel12, 0, 0);
             this.tableLayoutPanel11.Controls.Add(this.tableLayoutPanel13, 1, 0);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 1;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(1808, 895);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(1497, 877);
             this.tableLayoutPanel11.TabIndex = 19;
             // 
             // tableLayoutPanel12
@@ -1693,8 +1766,8 @@
             this.tableLayoutPanel12.Controls.Add(this.btnRestockTABassignDep, 0, 3);
             this.tableLayoutPanel12.Controls.Add(this.btnDepartManageTABassignDep, 0, 4);
             this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel12.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel12.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
             this.tableLayoutPanel12.RowCount = 6;
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -1703,7 +1776,7 @@
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(400, 891);
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(328, 873);
             this.tableLayoutPanel12.TabIndex = 0;
             // 
             // btnLogOutTABassignDep
@@ -1728,19 +1801,19 @@
             this.btnLogOutTABassignDep.IconVisible = false;
             this.btnLogOutTABassignDep.IconZoom = 90D;
             this.btnLogOutTABassignDep.IsTab = false;
-            this.btnLogOutTABassignDep.Location = new System.Drawing.Point(4, 803);
-            this.btnLogOutTABassignDep.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLogOutTABassignDep.Location = new System.Drawing.Point(5, 786);
+            this.btnLogOutTABassignDep.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogOutTABassignDep.Name = "btnLogOutTABassignDep";
             this.btnLogOutTABassignDep.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABassignDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnLogOutTABassignDep.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogOutTABassignDep.selected = false;
-            this.btnLogOutTABassignDep.Size = new System.Drawing.Size(392, 84);
+            this.btnLogOutTABassignDep.Size = new System.Drawing.Size(318, 82);
             this.btnLogOutTABassignDep.TabIndex = 8;
             this.btnLogOutTABassignDep.Text = "LOG OUT";
             this.btnLogOutTABassignDep.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLogOutTABassignDep.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnLogOutTABassignDep.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOutTABassignDep.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnLogOutTABassignDep.Click += new System.EventHandler(this.btnLogOutTABaddProfile_Click);
             // 
             // btnEmployeeManageTABassignDep
@@ -1765,28 +1838,28 @@
             this.btnEmployeeManageTABassignDep.IconVisible = false;
             this.btnEmployeeManageTABassignDep.IconZoom = 90D;
             this.btnEmployeeManageTABassignDep.IsTab = false;
-            this.btnEmployeeManageTABassignDep.Location = new System.Drawing.Point(4, 271);
-            this.btnEmployeeManageTABassignDep.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEmployeeManageTABassignDep.Location = new System.Drawing.Point(5, 266);
+            this.btnEmployeeManageTABassignDep.Margin = new System.Windows.Forms.Padding(5);
             this.btnEmployeeManageTABassignDep.Name = "btnEmployeeManageTABassignDep";
             this.btnEmployeeManageTABassignDep.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnEmployeeManageTABassignDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnEmployeeManageTABassignDep.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEmployeeManageTABassignDep.selected = false;
-            this.btnEmployeeManageTABassignDep.Size = new System.Drawing.Size(392, 125);
+            this.btnEmployeeManageTABassignDep.Size = new System.Drawing.Size(318, 120);
             this.btnEmployeeManageTABassignDep.TabIndex = 5;
             this.btnEmployeeManageTABassignDep.Text = "Employee Management";
             this.btnEmployeeManageTABassignDep.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEmployeeManageTABassignDep.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnEmployeeManageTABassignDep.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployeeManageTABassignDep.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(2, 2);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(396, 263);
+            this.pictureBox3.Size = new System.Drawing.Size(322, 257);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
@@ -1813,19 +1886,19 @@
             this.btnScheduleTABassignDep.IconVisible = false;
             this.btnScheduleTABassignDep.IconZoom = 90D;
             this.btnScheduleTABassignDep.IsTab = false;
-            this.btnScheduleTABassignDep.Location = new System.Drawing.Point(4, 404);
-            this.btnScheduleTABassignDep.Margin = new System.Windows.Forms.Padding(4);
+            this.btnScheduleTABassignDep.Location = new System.Drawing.Point(5, 396);
+            this.btnScheduleTABassignDep.Margin = new System.Windows.Forms.Padding(5);
             this.btnScheduleTABassignDep.Name = "btnScheduleTABassignDep";
             this.btnScheduleTABassignDep.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnScheduleTABassignDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnScheduleTABassignDep.OnHoverTextColor = System.Drawing.Color.White;
             this.btnScheduleTABassignDep.selected = false;
-            this.btnScheduleTABassignDep.Size = new System.Drawing.Size(392, 125);
+            this.btnScheduleTABassignDep.Size = new System.Drawing.Size(318, 120);
             this.btnScheduleTABassignDep.TabIndex = 2;
             this.btnScheduleTABassignDep.Text = "Schedule";
             this.btnScheduleTABassignDep.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnScheduleTABassignDep.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnScheduleTABassignDep.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnScheduleTABassignDep.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnScheduleTABassignDep.Click += new System.EventHandler(this.btnScheduleTABaddProfile_Click);
             // 
             // btnRestockTABassignDep
@@ -1850,19 +1923,19 @@
             this.btnRestockTABassignDep.IconVisible = false;
             this.btnRestockTABassignDep.IconZoom = 90D;
             this.btnRestockTABassignDep.IsTab = false;
-            this.btnRestockTABassignDep.Location = new System.Drawing.Point(4, 537);
-            this.btnRestockTABassignDep.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRestockTABassignDep.Location = new System.Drawing.Point(5, 526);
+            this.btnRestockTABassignDep.Margin = new System.Windows.Forms.Padding(5);
             this.btnRestockTABassignDep.Name = "btnRestockTABassignDep";
             this.btnRestockTABassignDep.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnRestockTABassignDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnRestockTABassignDep.OnHoverTextColor = System.Drawing.Color.White;
             this.btnRestockTABassignDep.selected = false;
-            this.btnRestockTABassignDep.Size = new System.Drawing.Size(392, 125);
+            this.btnRestockTABassignDep.Size = new System.Drawing.Size(318, 120);
             this.btnRestockTABassignDep.TabIndex = 3;
             this.btnRestockTABassignDep.Text = "Restock Request";
             this.btnRestockTABassignDep.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRestockTABassignDep.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnRestockTABassignDep.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestockTABassignDep.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnRestockTABassignDep.Click += new System.EventHandler(this.btnRestockTABaddProfile_Click);
             // 
             // btnDepartManageTABassignDep
@@ -1887,19 +1960,19 @@
             this.btnDepartManageTABassignDep.IconVisible = false;
             this.btnDepartManageTABassignDep.IconZoom = 90D;
             this.btnDepartManageTABassignDep.IsTab = false;
-            this.btnDepartManageTABassignDep.Location = new System.Drawing.Point(4, 670);
-            this.btnDepartManageTABassignDep.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDepartManageTABassignDep.Location = new System.Drawing.Point(5, 656);
+            this.btnDepartManageTABassignDep.Margin = new System.Windows.Forms.Padding(5);
             this.btnDepartManageTABassignDep.Name = "btnDepartManageTABassignDep";
             this.btnDepartManageTABassignDep.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnDepartManageTABassignDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnDepartManageTABassignDep.OnHoverTextColor = System.Drawing.Color.White;
             this.btnDepartManageTABassignDep.selected = false;
-            this.btnDepartManageTABassignDep.Size = new System.Drawing.Size(392, 125);
+            this.btnDepartManageTABassignDep.Size = new System.Drawing.Size(318, 120);
             this.btnDepartManageTABassignDep.TabIndex = 4;
             this.btnDepartManageTABassignDep.Text = "Department Management";
             this.btnDepartManageTABassignDep.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnDepartManageTABassignDep.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnDepartManageTABassignDep.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDepartManageTABassignDep.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnDepartManageTABassignDep.Click += new System.EventHandler(this.btnDepartManageTABaddProfile_Click);
             // 
             // tableLayoutPanel13
@@ -1910,13 +1983,13 @@
             this.tableLayoutPanel13.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel13.Controls.Add(this.panel4, 0, 1);
             this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel13.Location = new System.Drawing.Point(406, 2);
-            this.tableLayoutPanel13.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(337, 2);
+            this.tableLayoutPanel13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
             this.tableLayoutPanel13.RowCount = 2;
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel13.Size = new System.Drawing.Size(1400, 891);
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(1157, 873);
             this.tableLayoutPanel13.TabIndex = 1;
             // 
             // label5
@@ -1924,12 +1997,11 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(2, 0);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(3, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(1396, 133);
+            this.label5.Size = new System.Drawing.Size(1151, 130);
             this.label5.TabIndex = 0;
             this.label5.Text = "Employee Managment (Assign to departament)";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1939,10 +2011,10 @@
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.tableLayoutPanel14);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(2, 135);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Location = new System.Drawing.Point(3, 132);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1396, 754);
+            this.panel4.Size = new System.Drawing.Size(1151, 739);
             this.panel4.TabIndex = 1;
             // 
             // tableLayoutPanel14
@@ -1953,12 +2025,12 @@
             this.tableLayoutPanel14.Controls.Add(this.panel9, 0, 1);
             this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel14.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel14.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel14.Name = "tableLayoutPanel14";
             this.tableLayoutPanel14.RowCount = 2;
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.79393F));
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.20607F));
-            this.tableLayoutPanel14.Size = new System.Drawing.Size(1396, 754);
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(1151, 739);
             this.tableLayoutPanel14.TabIndex = 0;
             // 
             // tableLayoutPanel15
@@ -1971,14 +2043,14 @@
             this.tableLayoutPanel15.Controls.Add(this.btnRemoveProfileTABassignDep, 1, 0);
             this.tableLayoutPanel15.Controls.Add(this.btnAssignToDepTABassignDep, 2, 0);
             this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel15.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
             this.tableLayoutPanel15.RowCount = 1;
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 77F));
-            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 77F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(1392, 77);
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 89F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 89F));
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(1145, 75);
             this.tableLayoutPanel15.TabIndex = 0;
             // 
             // btnNewProfileTABassignDep
@@ -1991,6 +2063,7 @@
             this.btnNewProfileTABassignDep.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNewProfileTABassignDep.DisabledColor = System.Drawing.Color.Gray;
             this.btnNewProfileTABassignDep.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNewProfileTABassignDep.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnNewProfileTABassignDep.Iconcolor = System.Drawing.Color.Transparent;
             this.btnNewProfileTABassignDep.Iconimage = null;
             this.btnNewProfileTABassignDep.Iconimage_right = null;
@@ -2003,19 +2076,19 @@
             this.btnNewProfileTABassignDep.IconVisible = false;
             this.btnNewProfileTABassignDep.IconZoom = 90D;
             this.btnNewProfileTABassignDep.IsTab = false;
-            this.btnNewProfileTABassignDep.Location = new System.Drawing.Point(4, 4);
-            this.btnNewProfileTABassignDep.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNewProfileTABassignDep.Location = new System.Drawing.Point(5, 5);
+            this.btnNewProfileTABassignDep.Margin = new System.Windows.Forms.Padding(5);
             this.btnNewProfileTABassignDep.Name = "btnNewProfileTABassignDep";
             this.btnNewProfileTABassignDep.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnNewProfileTABassignDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnNewProfileTABassignDep.OnHoverTextColor = System.Drawing.Color.White;
             this.btnNewProfileTABassignDep.selected = false;
-            this.btnNewProfileTABassignDep.Size = new System.Drawing.Size(456, 69);
+            this.btnNewProfileTABassignDep.Size = new System.Drawing.Size(371, 65);
             this.btnNewProfileTABassignDep.TabIndex = 0;
             this.btnNewProfileTABassignDep.Text = "New profile";
             this.btnNewProfileTABassignDep.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnNewProfileTABassignDep.Textcolor = System.Drawing.Color.White;
-            this.btnNewProfileTABassignDep.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewProfileTABassignDep.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnNewProfileTABassignDep.Click += new System.EventHandler(this.btnNewProfileTABremoveProfile_Click);
             // 
             // btnRemoveProfileTABassignDep
@@ -2028,6 +2101,7 @@
             this.btnRemoveProfileTABassignDep.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoveProfileTABassignDep.DisabledColor = System.Drawing.Color.Gray;
             this.btnRemoveProfileTABassignDep.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnRemoveProfileTABassignDep.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnRemoveProfileTABassignDep.Iconcolor = System.Drawing.Color.Transparent;
             this.btnRemoveProfileTABassignDep.Iconimage = null;
             this.btnRemoveProfileTABassignDep.Iconimage_right = null;
@@ -2040,19 +2114,19 @@
             this.btnRemoveProfileTABassignDep.IconVisible = false;
             this.btnRemoveProfileTABassignDep.IconZoom = 90D;
             this.btnRemoveProfileTABassignDep.IsTab = false;
-            this.btnRemoveProfileTABassignDep.Location = new System.Drawing.Point(468, 4);
-            this.btnRemoveProfileTABassignDep.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRemoveProfileTABassignDep.Location = new System.Drawing.Point(386, 5);
+            this.btnRemoveProfileTABassignDep.Margin = new System.Windows.Forms.Padding(5);
             this.btnRemoveProfileTABassignDep.Name = "btnRemoveProfileTABassignDep";
             this.btnRemoveProfileTABassignDep.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnRemoveProfileTABassignDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnRemoveProfileTABassignDep.OnHoverTextColor = System.Drawing.Color.White;
             this.btnRemoveProfileTABassignDep.selected = false;
-            this.btnRemoveProfileTABassignDep.Size = new System.Drawing.Size(456, 69);
+            this.btnRemoveProfileTABassignDep.Size = new System.Drawing.Size(371, 65);
             this.btnRemoveProfileTABassignDep.TabIndex = 1;
             this.btnRemoveProfileTABassignDep.Text = "Remove profile";
             this.btnRemoveProfileTABassignDep.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRemoveProfileTABassignDep.Textcolor = System.Drawing.Color.White;
-            this.btnRemoveProfileTABassignDep.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveProfileTABassignDep.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnRemoveProfileTABassignDep.Click += new System.EventHandler(this.btnRemoveProfTABaddProfile_Click);
             // 
             // btnAssignToDepTABassignDep
@@ -2077,52 +2151,68 @@
             this.btnAssignToDepTABassignDep.IconVisible = false;
             this.btnAssignToDepTABassignDep.IconZoom = 90D;
             this.btnAssignToDepTABassignDep.IsTab = false;
-            this.btnAssignToDepTABassignDep.Location = new System.Drawing.Point(932, 4);
-            this.btnAssignToDepTABassignDep.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAssignToDepTABassignDep.Location = new System.Drawing.Point(767, 5);
+            this.btnAssignToDepTABassignDep.Margin = new System.Windows.Forms.Padding(5);
             this.btnAssignToDepTABassignDep.Name = "btnAssignToDepTABassignDep";
             this.btnAssignToDepTABassignDep.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnAssignToDepTABassignDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnAssignToDepTABassignDep.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAssignToDepTABassignDep.selected = false;
-            this.btnAssignToDepTABassignDep.Size = new System.Drawing.Size(456, 69);
+            this.btnAssignToDepTABassignDep.Size = new System.Drawing.Size(373, 65);
             this.btnAssignToDepTABassignDep.TabIndex = 2;
             this.btnAssignToDepTABassignDep.Text = "Assign to departament";
             this.btnAssignToDepTABassignDep.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAssignToDepTABassignDep.Textcolor = System.Drawing.Color.White;
-            this.btnAssignToDepTABassignDep.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAssignToDepTABassignDep.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             // 
             // panel9
             // 
+            this.panel9.Controls.Add(this.panel17);
             this.panel9.Controls.Add(this.checkedListBox3);
-            this.panel9.Controls.Add(this.btnAssignToDepartment);
-            this.panel9.Controls.Add(this.cmbDepartments);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel9.Location = new System.Drawing.Point(2, 83);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2);
+            this.panel9.Location = new System.Drawing.Point(3, 81);
+            this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1392, 669);
+            this.panel9.Size = new System.Drawing.Size(1145, 656);
             this.panel9.TabIndex = 1;
             // 
-            // checkedListBox3
+            // panel17
             // 
-            this.checkedListBox3.FormattingEnabled = true;
-            this.checkedListBox3.Location = new System.Drawing.Point(21, 11);
-            this.checkedListBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.checkedListBox3.Name = "checkedListBox3";
-            this.checkedListBox3.Size = new System.Drawing.Size(356, 204);
-            this.checkedListBox3.TabIndex = 8;
+            this.panel17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel17.Controls.Add(this.cmbDepartments);
+            this.panel17.Controls.Add(this.btnAssignToDepartment);
+            this.panel17.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel17.Location = new System.Drawing.Point(542, 60);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(494, 456);
+            this.panel17.TabIndex = 9;
+            // 
+            // cmbDepartments
+            // 
+            this.cmbDepartments.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbDepartments.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.cmbDepartments.FormattingEnabled = true;
+            this.cmbDepartments.Location = new System.Drawing.Point(53, 55);
+            this.cmbDepartments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbDepartments.Name = "cmbDepartments";
+            this.cmbDepartments.Size = new System.Drawing.Size(408, 31);
+            this.cmbDepartments.TabIndex = 3;
             // 
             // btnAssignToDepartment
             // 
             this.btnAssignToDepartment.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.btnAssignToDepartment.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnAssignToDepartment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAssignToDepartment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnAssignToDepartment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAssignToDepartment.BorderRadius = 0;
             this.btnAssignToDepartment.ButtonText = "Assign";
             this.btnAssignToDepartment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAssignToDepartment.DisabledColor = System.Drawing.Color.Gray;
+            this.btnAssignToDepartment.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAssignToDepartment.Iconcolor = System.Drawing.Color.Transparent;
             this.btnAssignToDepartment.Iconimage = null;
             this.btnAssignToDepartment.Iconimage_right = null;
@@ -2135,39 +2225,43 @@
             this.btnAssignToDepartment.IconVisible = false;
             this.btnAssignToDepartment.IconZoom = 90D;
             this.btnAssignToDepartment.IsTab = false;
-            this.btnAssignToDepartment.Location = new System.Drawing.Point(1189, 339);
-            this.btnAssignToDepartment.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnAssignToDepartment.Location = new System.Drawing.Point(53, 311);
+            this.btnAssignToDepartment.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnAssignToDepartment.Name = "btnAssignToDepartment";
             this.btnAssignToDepartment.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnAssignToDepartment.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnAssignToDepartment.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAssignToDepartment.selected = false;
-            this.btnAssignToDepartment.Size = new System.Drawing.Size(166, 66);
+            this.btnAssignToDepartment.Size = new System.Drawing.Size(408, 81);
             this.btnAssignToDepartment.TabIndex = 4;
             this.btnAssignToDepartment.Text = "Assign";
             this.btnAssignToDepartment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAssignToDepartment.Textcolor = System.Drawing.Color.White;
-            this.btnAssignToDepartment.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAssignToDepartment.TextFont = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnAssignToDepartment.Click += new System.EventHandler(this.btnAssignToDepartment_Click);
             // 
-            // cmbDepartments
+            // checkedListBox3
             // 
-            this.cmbDepartments.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.cmbDepartments.FormattingEnabled = true;
-            this.cmbDepartments.Location = new System.Drawing.Point(1179, 195);
-            this.cmbDepartments.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbDepartments.Name = "cmbDepartments";
-            this.cmbDepartments.Size = new System.Drawing.Size(168, 26);
-            this.cmbDepartments.TabIndex = 3;
+            this.checkedListBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkedListBox3.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.checkedListBox3.FormattingEnabled = true;
+            this.checkedListBox3.HorizontalScrollbar = true;
+            this.checkedListBox3.Location = new System.Drawing.Point(39, 60);
+            this.checkedListBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkedListBox3.Name = "checkedListBox3";
+            this.checkedListBox3.Size = new System.Drawing.Size(297, 454);
+            this.checkedListBox3.TabIndex = 8;
             // 
             // tabSchedule
             // 
             this.tabSchedule.Controls.Add(this.tableLayoutPanel16);
-            this.tabSchedule.Location = new System.Drawing.Point(4, 22);
-            this.tabSchedule.Margin = new System.Windows.Forms.Padding(2);
+            this.tabSchedule.Location = new System.Drawing.Point(4, 25);
+            this.tabSchedule.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabSchedule.Name = "tabSchedule";
-            this.tabSchedule.Padding = new System.Windows.Forms.Padding(2);
-            this.tabSchedule.Size = new System.Drawing.Size(1623, 899);
+            this.tabSchedule.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabSchedule.Size = new System.Drawing.Size(1503, 881);
             this.tabSchedule.TabIndex = 3;
             this.tabSchedule.Text = "Schedule";
             this.tabSchedule.UseVisualStyleBackColor = true;
@@ -2181,12 +2275,12 @@
             this.tableLayoutPanel16.Controls.Add(this.tableLayoutPanel17, 0, 0);
             this.tableLayoutPanel16.Controls.Add(this.tableLayoutPanel18, 1, 0);
             this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel16.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel16.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel16.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel16.Name = "tableLayoutPanel16";
             this.tableLayoutPanel16.RowCount = 1;
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(1619, 895);
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(1497, 877);
             this.tableLayoutPanel16.TabIndex = 19;
             // 
             // tableLayoutPanel17
@@ -2201,8 +2295,8 @@
             this.tableLayoutPanel17.Controls.Add(this.btnRestockReqTABschedule, 0, 3);
             this.tableLayoutPanel17.Controls.Add(this.btnDepartmentManageTABschedule, 0, 4);
             this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel17.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel17.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel17.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel17.Name = "tableLayoutPanel17";
             this.tableLayoutPanel17.RowCount = 6;
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -2211,7 +2305,7 @@
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(358, 891);
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(328, 873);
             this.tableLayoutPanel17.TabIndex = 0;
             // 
             // btnLogOutTABschedule
@@ -2236,19 +2330,19 @@
             this.btnLogOutTABschedule.IconVisible = false;
             this.btnLogOutTABschedule.IconZoom = 90D;
             this.btnLogOutTABschedule.IsTab = false;
-            this.btnLogOutTABschedule.Location = new System.Drawing.Point(4, 803);
-            this.btnLogOutTABschedule.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLogOutTABschedule.Location = new System.Drawing.Point(5, 786);
+            this.btnLogOutTABschedule.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogOutTABschedule.Name = "btnLogOutTABschedule";
             this.btnLogOutTABschedule.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABschedule.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnLogOutTABschedule.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogOutTABschedule.selected = false;
-            this.btnLogOutTABschedule.Size = new System.Drawing.Size(350, 84);
+            this.btnLogOutTABschedule.Size = new System.Drawing.Size(318, 82);
             this.btnLogOutTABschedule.TabIndex = 8;
             this.btnLogOutTABschedule.Text = "LOG OUT";
             this.btnLogOutTABschedule.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLogOutTABschedule.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnLogOutTABschedule.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOutTABschedule.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnLogOutTABschedule.Click += new System.EventHandler(this.btnLogOutTABaddProfile_Click);
             // 
             // btnEmployeManageTABschedule
@@ -2273,29 +2367,29 @@
             this.btnEmployeManageTABschedule.IconVisible = false;
             this.btnEmployeManageTABschedule.IconZoom = 90D;
             this.btnEmployeManageTABschedule.IsTab = false;
-            this.btnEmployeManageTABschedule.Location = new System.Drawing.Point(4, 271);
-            this.btnEmployeManageTABschedule.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEmployeManageTABschedule.Location = new System.Drawing.Point(5, 266);
+            this.btnEmployeManageTABschedule.Margin = new System.Windows.Forms.Padding(5);
             this.btnEmployeManageTABschedule.Name = "btnEmployeManageTABschedule";
             this.btnEmployeManageTABschedule.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnEmployeManageTABschedule.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnEmployeManageTABschedule.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEmployeManageTABschedule.selected = false;
-            this.btnEmployeManageTABschedule.Size = new System.Drawing.Size(350, 125);
+            this.btnEmployeManageTABschedule.Size = new System.Drawing.Size(318, 120);
             this.btnEmployeManageTABschedule.TabIndex = 5;
             this.btnEmployeManageTABschedule.Text = "Employee Management";
             this.btnEmployeManageTABschedule.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEmployeManageTABschedule.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnEmployeManageTABschedule.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployeManageTABschedule.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnEmployeManageTABschedule.Click += new System.EventHandler(this.btnEmployeeManageTABaddProfile_Click);
             // 
             // pictureBox4
             // 
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(2, 2);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox4.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(354, 263);
+            this.pictureBox4.Size = new System.Drawing.Size(322, 257);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
@@ -2322,19 +2416,19 @@
             this.btnScheduleTABschedule.IconVisible = false;
             this.btnScheduleTABschedule.IconZoom = 90D;
             this.btnScheduleTABschedule.IsTab = false;
-            this.btnScheduleTABschedule.Location = new System.Drawing.Point(4, 404);
-            this.btnScheduleTABschedule.Margin = new System.Windows.Forms.Padding(4);
+            this.btnScheduleTABschedule.Location = new System.Drawing.Point(5, 396);
+            this.btnScheduleTABschedule.Margin = new System.Windows.Forms.Padding(5);
             this.btnScheduleTABschedule.Name = "btnScheduleTABschedule";
             this.btnScheduleTABschedule.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnScheduleTABschedule.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnScheduleTABschedule.OnHoverTextColor = System.Drawing.Color.White;
             this.btnScheduleTABschedule.selected = false;
-            this.btnScheduleTABschedule.Size = new System.Drawing.Size(350, 125);
+            this.btnScheduleTABschedule.Size = new System.Drawing.Size(318, 120);
             this.btnScheduleTABschedule.TabIndex = 2;
             this.btnScheduleTABschedule.Text = "Schedule";
             this.btnScheduleTABschedule.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnScheduleTABschedule.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnScheduleTABschedule.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnScheduleTABschedule.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             // 
             // btnRestockReqTABschedule
             // 
@@ -2358,19 +2452,19 @@
             this.btnRestockReqTABschedule.IconVisible = false;
             this.btnRestockReqTABschedule.IconZoom = 90D;
             this.btnRestockReqTABschedule.IsTab = false;
-            this.btnRestockReqTABschedule.Location = new System.Drawing.Point(4, 537);
-            this.btnRestockReqTABschedule.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRestockReqTABschedule.Location = new System.Drawing.Point(5, 526);
+            this.btnRestockReqTABschedule.Margin = new System.Windows.Forms.Padding(5);
             this.btnRestockReqTABschedule.Name = "btnRestockReqTABschedule";
             this.btnRestockReqTABschedule.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnRestockReqTABschedule.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnRestockReqTABschedule.OnHoverTextColor = System.Drawing.Color.White;
             this.btnRestockReqTABschedule.selected = false;
-            this.btnRestockReqTABschedule.Size = new System.Drawing.Size(350, 125);
+            this.btnRestockReqTABschedule.Size = new System.Drawing.Size(318, 120);
             this.btnRestockReqTABschedule.TabIndex = 3;
             this.btnRestockReqTABschedule.Text = "Restock Request";
             this.btnRestockReqTABschedule.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRestockReqTABschedule.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnRestockReqTABschedule.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestockReqTABschedule.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnRestockReqTABschedule.Click += new System.EventHandler(this.btnRestockTABaddProfile_Click);
             // 
             // btnDepartmentManageTABschedule
@@ -2395,19 +2489,19 @@
             this.btnDepartmentManageTABschedule.IconVisible = false;
             this.btnDepartmentManageTABschedule.IconZoom = 90D;
             this.btnDepartmentManageTABschedule.IsTab = false;
-            this.btnDepartmentManageTABschedule.Location = new System.Drawing.Point(4, 670);
-            this.btnDepartmentManageTABschedule.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDepartmentManageTABschedule.Location = new System.Drawing.Point(5, 656);
+            this.btnDepartmentManageTABschedule.Margin = new System.Windows.Forms.Padding(5);
             this.btnDepartmentManageTABschedule.Name = "btnDepartmentManageTABschedule";
             this.btnDepartmentManageTABschedule.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnDepartmentManageTABschedule.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnDepartmentManageTABschedule.OnHoverTextColor = System.Drawing.Color.White;
             this.btnDepartmentManageTABschedule.selected = false;
-            this.btnDepartmentManageTABschedule.Size = new System.Drawing.Size(350, 125);
+            this.btnDepartmentManageTABschedule.Size = new System.Drawing.Size(318, 120);
             this.btnDepartmentManageTABschedule.TabIndex = 4;
             this.btnDepartmentManageTABschedule.Text = "Department Management";
             this.btnDepartmentManageTABschedule.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnDepartmentManageTABschedule.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnDepartmentManageTABschedule.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDepartmentManageTABschedule.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnDepartmentManageTABschedule.Click += new System.EventHandler(this.btnDepartManageTABaddProfile_Click);
             // 
             // tableLayoutPanel18
@@ -2418,13 +2512,13 @@
             this.tableLayoutPanel18.Controls.Add(this.label27, 0, 0);
             this.tableLayoutPanel18.Controls.Add(this.panel12, 0, 1);
             this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel18.Location = new System.Drawing.Point(364, 2);
-            this.tableLayoutPanel18.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel18.Location = new System.Drawing.Point(337, 2);
+            this.tableLayoutPanel18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel18.Name = "tableLayoutPanel18";
             this.tableLayoutPanel18.RowCount = 2;
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel18.Size = new System.Drawing.Size(1253, 891);
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(1157, 873);
             this.tableLayoutPanel18.TabIndex = 1;
             // 
             // label27
@@ -2432,12 +2526,11 @@
             this.label27.AutoSize = true;
             this.label27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.label27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold);
             this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(2, 0);
-            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label27.Location = new System.Drawing.Point(3, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(1249, 133);
+            this.label27.Size = new System.Drawing.Size(1151, 130);
             this.label27.TabIndex = 0;
             this.label27.Text = "Schedule";
             this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2447,10 +2540,10 @@
             this.panel12.BackColor = System.Drawing.Color.White;
             this.panel12.Controls.Add(this.tableLayoutPanel19);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(2, 135);
-            this.panel12.Margin = new System.Windows.Forms.Padding(2);
+            this.panel12.Location = new System.Drawing.Point(3, 132);
+            this.panel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(1249, 754);
+            this.panel12.Size = new System.Drawing.Size(1151, 739);
             this.panel12.TabIndex = 1;
             // 
             // tableLayoutPanel19
@@ -2460,12 +2553,12 @@
             this.tableLayoutPanel19.Controls.Add(this.panel13, 0, 0);
             this.tableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel19.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel19.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel19.Name = "tableLayoutPanel19";
             this.tableLayoutPanel19.RowCount = 1;
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 754F));
-            this.tableLayoutPanel19.Size = new System.Drawing.Size(1249, 754);
+            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 862F));
+            this.tableLayoutPanel19.Size = new System.Drawing.Size(1151, 739);
             this.tableLayoutPanel19.TabIndex = 0;
             // 
             // panel13
@@ -2474,10 +2567,10 @@
             this.panel13.Controls.Add(this.pnlWeekDayWorkShift);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel13.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel13.Location = new System.Drawing.Point(2, 2);
-            this.panel13.Margin = new System.Windows.Forms.Padding(2);
+            this.panel13.Location = new System.Drawing.Point(3, 2);
+            this.panel13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(1245, 750);
+            this.panel13.Size = new System.Drawing.Size(1145, 735);
             this.panel13.TabIndex = 1;
             // 
             // panelContainerSchedule
@@ -2487,9 +2580,10 @@
             this.panelContainerSchedule.Controls.Add(this.panel11);
             this.panelContainerSchedule.Controls.Add(this.panel15);
             this.panelContainerSchedule.Controls.Add(this.flDays);
-            this.panelContainerSchedule.Location = new System.Drawing.Point(-4, -2);
+            this.panelContainerSchedule.Location = new System.Drawing.Point(-5, -2);
+            this.panelContainerSchedule.Margin = new System.Windows.Forms.Padding(4);
             this.panelContainerSchedule.Name = "panelContainerSchedule";
-            this.panelContainerSchedule.Size = new System.Drawing.Size(1053, 751);
+            this.panelContainerSchedule.Size = new System.Drawing.Size(1404, 736);
             this.panelContainerSchedule.TabIndex = 17;
             // 
             // panel11
@@ -2497,18 +2591,20 @@
             this.panel11.BackColor = System.Drawing.SystemColors.Control;
             this.panel11.Controls.Add(this.lblMonthAndYear);
             this.panel11.Controls.Add(this.panel14);
-            this.panel11.Location = new System.Drawing.Point(7, 5);
+            this.panel11.Location = new System.Drawing.Point(9, 6);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1026, 56);
+            this.panel11.Size = new System.Drawing.Size(1368, 69);
             this.panel11.TabIndex = 15;
             // 
             // lblMonthAndYear
             // 
             this.lblMonthAndYear.AutoSize = true;
             this.lblMonthAndYear.Font = new System.Drawing.Font("Arial", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMonthAndYear.Location = new System.Drawing.Point(3, 7);
+            this.lblMonthAndYear.Location = new System.Drawing.Point(4, 9);
+            this.lblMonthAndYear.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMonthAndYear.Name = "lblMonthAndYear";
-            this.lblMonthAndYear.Size = new System.Drawing.Size(268, 40);
+            this.lblMonthAndYear.Size = new System.Drawing.Size(344, 50);
             this.lblMonthAndYear.TabIndex = 4;
             this.lblMonthAndYear.Text = "December, 2019";
             // 
@@ -2518,17 +2614,19 @@
             this.panel14.Controls.Add(this.btnNextMonth);
             this.panel14.Controls.Add(this.btnPrevMonth);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel14.Location = new System.Drawing.Point(812, 0);
+            this.panel14.Location = new System.Drawing.Point(1083, 0);
+            this.panel14.Margin = new System.Windows.Forms.Padding(4);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(214, 56);
+            this.panel14.Size = new System.Drawing.Size(285, 69);
             this.panel14.TabIndex = 3;
             // 
             // btnToday
             // 
             this.btnToday.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnToday.Location = new System.Drawing.Point(74, 14);
+            this.btnToday.Location = new System.Drawing.Point(99, 17);
+            this.btnToday.Margin = new System.Windows.Forms.Padding(4);
             this.btnToday.Name = "btnToday";
-            this.btnToday.Size = new System.Drawing.Size(67, 33);
+            this.btnToday.Size = new System.Drawing.Size(89, 41);
             this.btnToday.TabIndex = 7;
             this.btnToday.Text = "Today";
             this.btnToday.UseVisualStyleBackColor = true;
@@ -2537,9 +2635,10 @@
             // btnNextMonth
             // 
             this.btnNextMonth.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNextMonth.Location = new System.Drawing.Point(145, 14);
+            this.btnNextMonth.Location = new System.Drawing.Point(193, 17);
+            this.btnNextMonth.Margin = new System.Windows.Forms.Padding(4);
             this.btnNextMonth.Name = "btnNextMonth";
-            this.btnNextMonth.Size = new System.Drawing.Size(67, 33);
+            this.btnNextMonth.Size = new System.Drawing.Size(89, 41);
             this.btnNextMonth.TabIndex = 6;
             this.btnNextMonth.Text = ">";
             this.btnNextMonth.UseVisualStyleBackColor = true;
@@ -2548,9 +2647,10 @@
             // btnPrevMonth
             // 
             this.btnPrevMonth.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrevMonth.Location = new System.Drawing.Point(4, 14);
+            this.btnPrevMonth.Location = new System.Drawing.Point(5, 17);
+            this.btnPrevMonth.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrevMonth.Name = "btnPrevMonth";
-            this.btnPrevMonth.Size = new System.Drawing.Size(67, 33);
+            this.btnPrevMonth.Size = new System.Drawing.Size(89, 41);
             this.btnPrevMonth.TabIndex = 5;
             this.btnPrevMonth.Text = "<";
             this.btnPrevMonth.UseVisualStyleBackColor = true;
@@ -2565,18 +2665,20 @@
             this.panel15.Controls.Add(this.label9);
             this.panel15.Controls.Add(this.label7);
             this.panel15.Controls.Add(this.label10);
-            this.panel15.Location = new System.Drawing.Point(7, 65);
+            this.panel15.Location = new System.Drawing.Point(9, 80);
+            this.panel15.Margin = new System.Windows.Forms.Padding(4);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(1024, 25);
+            this.panel15.Size = new System.Drawing.Size(1365, 31);
             this.panel15.TabIndex = 15;
             // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Aqua;
             this.label3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(295, 0);
+            this.label3.Location = new System.Drawing.Point(393, 0);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 26);
+            this.label3.Size = new System.Drawing.Size(187, 32);
             this.label3.TabIndex = 18;
             this.label3.Text = "Tuesday";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2585,9 +2687,10 @@
             // 
             this.label6.BackColor = System.Drawing.Color.SpringGreen;
             this.label6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(441, 0);
+            this.label6.Location = new System.Drawing.Point(588, 0);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(140, 26);
+            this.label6.Size = new System.Drawing.Size(187, 32);
             this.label6.TabIndex = 19;
             this.label6.Text = "Wednesday";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2596,9 +2699,10 @@
             // 
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label8.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(587, 0);
+            this.label8.Location = new System.Drawing.Point(783, 0);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(140, 26);
+            this.label8.Size = new System.Drawing.Size(187, 32);
             this.label8.TabIndex = 20;
             this.label8.Text = "Thursday";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2607,9 +2711,10 @@
             // 
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(149, 0);
+            this.label4.Location = new System.Drawing.Point(199, 0);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(140, 26);
+            this.label4.Size = new System.Drawing.Size(187, 32);
             this.label4.TabIndex = 17;
             this.label4.Text = "Monday";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2618,9 +2723,10 @@
             // 
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label9.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(733, -1);
+            this.label9.Location = new System.Drawing.Point(977, -1);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(140, 26);
+            this.label9.Size = new System.Drawing.Size(187, 32);
             this.label9.TabIndex = 21;
             this.label9.Text = "Friday";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2629,9 +2735,10 @@
             // 
             this.label7.BackColor = System.Drawing.Color.Fuchsia;
             this.label7.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 0);
+            this.label7.Location = new System.Drawing.Point(4, 0);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(140, 26);
+            this.label7.Size = new System.Drawing.Size(187, 32);
             this.label7.TabIndex = 16;
             this.label7.Text = "Sunday";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2640,9 +2747,10 @@
             // 
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label10.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(879, -1);
+            this.label10.Location = new System.Drawing.Point(1172, -1);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(140, 26);
+            this.label10.Size = new System.Drawing.Size(187, 32);
             this.label10.TabIndex = 22;
             this.label10.Text = "Saturday";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2652,9 +2760,10 @@
             this.flDays.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flDays.Location = new System.Drawing.Point(7, 91);
+            this.flDays.Location = new System.Drawing.Point(9, 112);
+            this.flDays.Margin = new System.Windows.Forms.Padding(4);
             this.flDays.Name = "flDays";
-            this.flDays.Size = new System.Drawing.Size(1035, 662);
+            this.flDays.Size = new System.Drawing.Size(1380, 627);
             this.flDays.TabIndex = 23;
             // 
             // pnlWeekDayWorkShift
@@ -2663,19 +2772,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlWeekDayWorkShift.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.pnlWeekDayWorkShift.Location = new System.Drawing.Point(1040, 1);
+            this.pnlWeekDayWorkShift.Location = new System.Drawing.Point(1387, 1);
+            this.pnlWeekDayWorkShift.Margin = new System.Windows.Forms.Padding(4);
             this.pnlWeekDayWorkShift.Name = "pnlWeekDayWorkShift";
-            this.pnlWeekDayWorkShift.Size = new System.Drawing.Size(213, 751);
+            this.pnlWeekDayWorkShift.Size = new System.Drawing.Size(0, 736);
             this.pnlWeekDayWorkShift.TabIndex = 16;
             // 
             // tabRestockReq
             // 
             this.tabRestockReq.Controls.Add(this.tableLayoutPanel21);
-            this.tabRestockReq.Location = new System.Drawing.Point(4, 22);
-            this.tabRestockReq.Margin = new System.Windows.Forms.Padding(2);
+            this.tabRestockReq.Location = new System.Drawing.Point(4, 25);
+            this.tabRestockReq.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabRestockReq.Name = "tabRestockReq";
-            this.tabRestockReq.Padding = new System.Windows.Forms.Padding(2);
-            this.tabRestockReq.Size = new System.Drawing.Size(1812, 899);
+            this.tabRestockReq.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabRestockReq.Size = new System.Drawing.Size(1503, 881);
             this.tabRestockReq.TabIndex = 4;
             this.tabRestockReq.Text = "RestockRequest";
             this.tabRestockReq.UseVisualStyleBackColor = true;
@@ -2689,12 +2799,12 @@
             this.tableLayoutPanel21.Controls.Add(this.tableLayoutPanel22, 0, 0);
             this.tableLayoutPanel21.Controls.Add(this.tableLayoutPanel23, 1, 0);
             this.tableLayoutPanel21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel21.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel21.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel21.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel21.Name = "tableLayoutPanel21";
             this.tableLayoutPanel21.RowCount = 1;
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel21.Size = new System.Drawing.Size(1808, 895);
+            this.tableLayoutPanel21.Size = new System.Drawing.Size(1497, 877);
             this.tableLayoutPanel21.TabIndex = 19;
             // 
             // tableLayoutPanel22
@@ -2709,8 +2819,8 @@
             this.tableLayoutPanel22.Controls.Add(this.btnRestockReqTABrestock, 0, 3);
             this.tableLayoutPanel22.Controls.Add(this.btnDepartManageTABrestock, 0, 4);
             this.tableLayoutPanel22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel22.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel22.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel22.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel22.Name = "tableLayoutPanel22";
             this.tableLayoutPanel22.RowCount = 6;
             this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -2719,7 +2829,7 @@
             this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel22.Size = new System.Drawing.Size(400, 891);
+            this.tableLayoutPanel22.Size = new System.Drawing.Size(328, 873);
             this.tableLayoutPanel22.TabIndex = 0;
             // 
             // btnLogOutTABrestock
@@ -2744,19 +2854,19 @@
             this.btnLogOutTABrestock.IconVisible = false;
             this.btnLogOutTABrestock.IconZoom = 90D;
             this.btnLogOutTABrestock.IsTab = false;
-            this.btnLogOutTABrestock.Location = new System.Drawing.Point(4, 803);
-            this.btnLogOutTABrestock.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLogOutTABrestock.Location = new System.Drawing.Point(5, 786);
+            this.btnLogOutTABrestock.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogOutTABrestock.Name = "btnLogOutTABrestock";
             this.btnLogOutTABrestock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABrestock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnLogOutTABrestock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogOutTABrestock.selected = false;
-            this.btnLogOutTABrestock.Size = new System.Drawing.Size(392, 84);
+            this.btnLogOutTABrestock.Size = new System.Drawing.Size(318, 82);
             this.btnLogOutTABrestock.TabIndex = 8;
             this.btnLogOutTABrestock.Text = "LOG OUT";
             this.btnLogOutTABrestock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLogOutTABrestock.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnLogOutTABrestock.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOutTABrestock.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnLogOutTABrestock.Click += new System.EventHandler(this.btnLogOutTABaddProfile_Click);
             // 
             // btnEmployeeManagementTABrestock
@@ -2781,29 +2891,29 @@
             this.btnEmployeeManagementTABrestock.IconVisible = false;
             this.btnEmployeeManagementTABrestock.IconZoom = 90D;
             this.btnEmployeeManagementTABrestock.IsTab = false;
-            this.btnEmployeeManagementTABrestock.Location = new System.Drawing.Point(4, 271);
-            this.btnEmployeeManagementTABrestock.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEmployeeManagementTABrestock.Location = new System.Drawing.Point(5, 266);
+            this.btnEmployeeManagementTABrestock.Margin = new System.Windows.Forms.Padding(5);
             this.btnEmployeeManagementTABrestock.Name = "btnEmployeeManagementTABrestock";
             this.btnEmployeeManagementTABrestock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnEmployeeManagementTABrestock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnEmployeeManagementTABrestock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEmployeeManagementTABrestock.selected = false;
-            this.btnEmployeeManagementTABrestock.Size = new System.Drawing.Size(392, 125);
+            this.btnEmployeeManagementTABrestock.Size = new System.Drawing.Size(318, 120);
             this.btnEmployeeManagementTABrestock.TabIndex = 5;
             this.btnEmployeeManagementTABrestock.Text = "Employee Management";
             this.btnEmployeeManagementTABrestock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEmployeeManagementTABrestock.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnEmployeeManagementTABrestock.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployeeManagementTABrestock.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnEmployeeManagementTABrestock.Click += new System.EventHandler(this.btnEmployeeManageTABaddProfile_Click);
             // 
             // pictureBox5
             // 
             this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(2, 2);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(396, 263);
+            this.pictureBox5.Size = new System.Drawing.Size(322, 257);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
@@ -2830,19 +2940,19 @@
             this.btnScheduleTABrestock.IconVisible = false;
             this.btnScheduleTABrestock.IconZoom = 90D;
             this.btnScheduleTABrestock.IsTab = false;
-            this.btnScheduleTABrestock.Location = new System.Drawing.Point(4, 404);
-            this.btnScheduleTABrestock.Margin = new System.Windows.Forms.Padding(4);
+            this.btnScheduleTABrestock.Location = new System.Drawing.Point(5, 396);
+            this.btnScheduleTABrestock.Margin = new System.Windows.Forms.Padding(5);
             this.btnScheduleTABrestock.Name = "btnScheduleTABrestock";
             this.btnScheduleTABrestock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnScheduleTABrestock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnScheduleTABrestock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnScheduleTABrestock.selected = false;
-            this.btnScheduleTABrestock.Size = new System.Drawing.Size(392, 125);
+            this.btnScheduleTABrestock.Size = new System.Drawing.Size(318, 120);
             this.btnScheduleTABrestock.TabIndex = 2;
             this.btnScheduleTABrestock.Text = "Schedule";
             this.btnScheduleTABrestock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnScheduleTABrestock.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnScheduleTABrestock.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnScheduleTABrestock.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnScheduleTABrestock.Click += new System.EventHandler(this.btnScheduleTABaddProfile_Click);
             // 
             // btnRestockReqTABrestock
@@ -2867,19 +2977,19 @@
             this.btnRestockReqTABrestock.IconVisible = false;
             this.btnRestockReqTABrestock.IconZoom = 90D;
             this.btnRestockReqTABrestock.IsTab = false;
-            this.btnRestockReqTABrestock.Location = new System.Drawing.Point(4, 537);
-            this.btnRestockReqTABrestock.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRestockReqTABrestock.Location = new System.Drawing.Point(5, 526);
+            this.btnRestockReqTABrestock.Margin = new System.Windows.Forms.Padding(5);
             this.btnRestockReqTABrestock.Name = "btnRestockReqTABrestock";
             this.btnRestockReqTABrestock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnRestockReqTABrestock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnRestockReqTABrestock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnRestockReqTABrestock.selected = false;
-            this.btnRestockReqTABrestock.Size = new System.Drawing.Size(392, 125);
+            this.btnRestockReqTABrestock.Size = new System.Drawing.Size(318, 120);
             this.btnRestockReqTABrestock.TabIndex = 3;
             this.btnRestockReqTABrestock.Text = "Restock Request";
             this.btnRestockReqTABrestock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRestockReqTABrestock.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnRestockReqTABrestock.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestockReqTABrestock.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnRestockReqTABrestock.Click += new System.EventHandler(this.btnRestockReqTABrestock_Click);
             // 
             // btnDepartManageTABrestock
@@ -2904,19 +3014,19 @@
             this.btnDepartManageTABrestock.IconVisible = false;
             this.btnDepartManageTABrestock.IconZoom = 90D;
             this.btnDepartManageTABrestock.IsTab = false;
-            this.btnDepartManageTABrestock.Location = new System.Drawing.Point(4, 670);
-            this.btnDepartManageTABrestock.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDepartManageTABrestock.Location = new System.Drawing.Point(5, 656);
+            this.btnDepartManageTABrestock.Margin = new System.Windows.Forms.Padding(5);
             this.btnDepartManageTABrestock.Name = "btnDepartManageTABrestock";
             this.btnDepartManageTABrestock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnDepartManageTABrestock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnDepartManageTABrestock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnDepartManageTABrestock.selected = false;
-            this.btnDepartManageTABrestock.Size = new System.Drawing.Size(392, 125);
+            this.btnDepartManageTABrestock.Size = new System.Drawing.Size(318, 120);
             this.btnDepartManageTABrestock.TabIndex = 4;
             this.btnDepartManageTABrestock.Text = "Department Management";
             this.btnDepartManageTABrestock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnDepartManageTABrestock.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnDepartManageTABrestock.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDepartManageTABrestock.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnDepartManageTABrestock.Click += new System.EventHandler(this.btnDepartManageTABaddProfile_Click);
             // 
             // tableLayoutPanel23
@@ -2927,13 +3037,13 @@
             this.tableLayoutPanel23.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel23.Controls.Add(this.panel3, 0, 1);
             this.tableLayoutPanel23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel23.Location = new System.Drawing.Point(406, 2);
-            this.tableLayoutPanel23.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel23.Location = new System.Drawing.Point(337, 2);
+            this.tableLayoutPanel23.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel23.Name = "tableLayoutPanel23";
             this.tableLayoutPanel23.RowCount = 2;
             this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel23.Size = new System.Drawing.Size(1400, 891);
+            this.tableLayoutPanel23.Size = new System.Drawing.Size(1157, 873);
             this.tableLayoutPanel23.TabIndex = 1;
             // 
             // label2
@@ -2941,12 +3051,11 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(2, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1396, 133);
+            this.label2.Size = new System.Drawing.Size(1151, 130);
             this.label2.TabIndex = 0;
             this.label2.Text = "Restock Requests";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2956,10 +3065,10 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.tableLayoutPanel24);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(2, 135);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Location = new System.Drawing.Point(3, 132);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1396, 754);
+            this.panel3.Size = new System.Drawing.Size(1151, 739);
             this.panel3.TabIndex = 1;
             // 
             // tableLayoutPanel24
@@ -2969,12 +3078,12 @@
             this.tableLayoutPanel24.Controls.Add(this.panel16, 0, 0);
             this.tableLayoutPanel24.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel24.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel24.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel24.Name = "tableLayoutPanel24";
             this.tableLayoutPanel24.RowCount = 1;
             this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 754F));
-            this.tableLayoutPanel24.Size = new System.Drawing.Size(1396, 754);
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 862F));
+            this.tableLayoutPanel24.Size = new System.Drawing.Size(1151, 739);
             this.tableLayoutPanel24.TabIndex = 0;
             // 
             // panel16
@@ -2984,10 +3093,10 @@
             this.panel16.Controls.Add(this.checkedListBox1);
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel16.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel16.Location = new System.Drawing.Point(2, 2);
-            this.panel16.Margin = new System.Windows.Forms.Padding(2);
+            this.panel16.Location = new System.Drawing.Point(3, 2);
+            this.panel16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(1392, 750);
+            this.panel16.Size = new System.Drawing.Size(1145, 735);
             this.panel16.TabIndex = 1;
             // 
             // bunifuFlatButton3
@@ -3000,6 +3109,7 @@
             this.bunifuFlatButton3.ButtonText = "Confirm";
             this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton3.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold);
             this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton3.Iconimage = null;
             this.bunifuFlatButton3.Iconimage_right = null;
@@ -3012,19 +3122,19 @@
             this.bunifuFlatButton3.IconVisible = false;
             this.bunifuFlatButton3.IconZoom = 90D;
             this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(441, 695);
-            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(52, 611);
+            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton3.selected = false;
-            this.bunifuFlatButton3.Size = new System.Drawing.Size(213, 41);
+            this.bunifuFlatButton3.Size = new System.Drawing.Size(406, 91);
             this.bunifuFlatButton3.TabIndex = 6;
             this.bunifuFlatButton3.Text = "Confirm";
             this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton3.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.bunifuFlatButton3.Click += new System.EventHandler(this.bunifuFlatButton3_Click);
             // 
             // bunifuFlatButton1
@@ -3037,6 +3147,7 @@
             this.bunifuFlatButton1.ButtonText = "Refuse";
             this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton1.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold);
             this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton1.Iconimage = null;
             this.bunifuFlatButton1.Iconimage_right = null;
@@ -3049,19 +3160,19 @@
             this.bunifuFlatButton1.IconVisible = false;
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(717, 695);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(679, 611);
+            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.Red;
             this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(213, 41);
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(406, 91);
             this.bunifuFlatButton1.TabIndex = 5;
             this.bunifuFlatButton1.Text = "Refuse";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
             // checkedListBox1
@@ -3069,21 +3180,22 @@
             this.checkedListBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkedListBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(68, 11);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.checkedListBox1.Location = new System.Drawing.Point(91, 14);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(1235, 544);
+            this.checkedListBox1.Size = new System.Drawing.Size(934, 454);
             this.checkedListBox1.TabIndex = 2;
             // 
             // tabDepartManage
             // 
             this.tabDepartManage.Controls.Add(this.tableLayoutPanel26);
-            this.tabDepartManage.Location = new System.Drawing.Point(4, 22);
-            this.tabDepartManage.Margin = new System.Windows.Forms.Padding(2);
+            this.tabDepartManage.Location = new System.Drawing.Point(4, 25);
+            this.tabDepartManage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabDepartManage.Name = "tabDepartManage";
-            this.tabDepartManage.Padding = new System.Windows.Forms.Padding(2);
-            this.tabDepartManage.Size = new System.Drawing.Size(1812, 899);
+            this.tabDepartManage.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabDepartManage.Size = new System.Drawing.Size(1503, 881);
             this.tabDepartManage.TabIndex = 5;
             this.tabDepartManage.Text = "DepartmentManagement";
             this.tabDepartManage.UseVisualStyleBackColor = true;
@@ -3097,12 +3209,12 @@
             this.tableLayoutPanel26.Controls.Add(this.tableLayoutPanel27, 0, 0);
             this.tableLayoutPanel26.Controls.Add(this.tableLayoutPanel28, 1, 0);
             this.tableLayoutPanel26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel26.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel26.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel26.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel26.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel26.Name = "tableLayoutPanel26";
             this.tableLayoutPanel26.RowCount = 1;
             this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel26.Size = new System.Drawing.Size(1808, 895);
+            this.tableLayoutPanel26.Size = new System.Drawing.Size(1497, 877);
             this.tableLayoutPanel26.TabIndex = 19;
             // 
             // tableLayoutPanel27
@@ -3117,8 +3229,8 @@
             this.tableLayoutPanel27.Controls.Add(this.btnRestockReqTABdepart, 0, 3);
             this.tableLayoutPanel27.Controls.Add(this.btnDepartmentTABdepartManage, 0, 4);
             this.tableLayoutPanel27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel27.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel27.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel27.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel27.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel27.Name = "tableLayoutPanel27";
             this.tableLayoutPanel27.RowCount = 6;
             this.tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -3127,7 +3239,7 @@
             this.tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel27.Size = new System.Drawing.Size(400, 891);
+            this.tableLayoutPanel27.Size = new System.Drawing.Size(328, 873);
             this.tableLayoutPanel27.TabIndex = 0;
             // 
             // btnLogOutTABdepart
@@ -3152,19 +3264,19 @@
             this.btnLogOutTABdepart.IconVisible = false;
             this.btnLogOutTABdepart.IconZoom = 90D;
             this.btnLogOutTABdepart.IsTab = false;
-            this.btnLogOutTABdepart.Location = new System.Drawing.Point(4, 803);
-            this.btnLogOutTABdepart.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLogOutTABdepart.Location = new System.Drawing.Point(5, 786);
+            this.btnLogOutTABdepart.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogOutTABdepart.Name = "btnLogOutTABdepart";
             this.btnLogOutTABdepart.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABdepart.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnLogOutTABdepart.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogOutTABdepart.selected = false;
-            this.btnLogOutTABdepart.Size = new System.Drawing.Size(392, 84);
+            this.btnLogOutTABdepart.Size = new System.Drawing.Size(318, 82);
             this.btnLogOutTABdepart.TabIndex = 8;
             this.btnLogOutTABdepart.Text = "LOG OUT";
             this.btnLogOutTABdepart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLogOutTABdepart.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnLogOutTABdepart.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOutTABdepart.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnLogOutTABdepart.Click += new System.EventHandler(this.btnLogOutTABaddProfile_Click);
             // 
             // btnEmployeeManageTABdepart
@@ -3189,29 +3301,29 @@
             this.btnEmployeeManageTABdepart.IconVisible = false;
             this.btnEmployeeManageTABdepart.IconZoom = 90D;
             this.btnEmployeeManageTABdepart.IsTab = false;
-            this.btnEmployeeManageTABdepart.Location = new System.Drawing.Point(4, 271);
-            this.btnEmployeeManageTABdepart.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEmployeeManageTABdepart.Location = new System.Drawing.Point(5, 266);
+            this.btnEmployeeManageTABdepart.Margin = new System.Windows.Forms.Padding(5);
             this.btnEmployeeManageTABdepart.Name = "btnEmployeeManageTABdepart";
             this.btnEmployeeManageTABdepart.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnEmployeeManageTABdepart.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnEmployeeManageTABdepart.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEmployeeManageTABdepart.selected = false;
-            this.btnEmployeeManageTABdepart.Size = new System.Drawing.Size(392, 125);
+            this.btnEmployeeManageTABdepart.Size = new System.Drawing.Size(318, 120);
             this.btnEmployeeManageTABdepart.TabIndex = 5;
             this.btnEmployeeManageTABdepart.Text = "Employee Management";
             this.btnEmployeeManageTABdepart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEmployeeManageTABdepart.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnEmployeeManageTABdepart.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployeeManageTABdepart.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnEmployeeManageTABdepart.Click += new System.EventHandler(this.btnEmployeeManageTABaddProfile_Click);
             // 
             // pictureBox6
             // 
             this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(2, 2);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox6.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(396, 263);
+            this.pictureBox6.Size = new System.Drawing.Size(322, 257);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 0;
             this.pictureBox6.TabStop = false;
@@ -3238,19 +3350,19 @@
             this.btnScheduleTABdepart.IconVisible = false;
             this.btnScheduleTABdepart.IconZoom = 90D;
             this.btnScheduleTABdepart.IsTab = false;
-            this.btnScheduleTABdepart.Location = new System.Drawing.Point(4, 404);
-            this.btnScheduleTABdepart.Margin = new System.Windows.Forms.Padding(4);
+            this.btnScheduleTABdepart.Location = new System.Drawing.Point(5, 396);
+            this.btnScheduleTABdepart.Margin = new System.Windows.Forms.Padding(5);
             this.btnScheduleTABdepart.Name = "btnScheduleTABdepart";
             this.btnScheduleTABdepart.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnScheduleTABdepart.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnScheduleTABdepart.OnHoverTextColor = System.Drawing.Color.White;
             this.btnScheduleTABdepart.selected = false;
-            this.btnScheduleTABdepart.Size = new System.Drawing.Size(392, 125);
+            this.btnScheduleTABdepart.Size = new System.Drawing.Size(318, 120);
             this.btnScheduleTABdepart.TabIndex = 2;
             this.btnScheduleTABdepart.Text = "Schedule";
             this.btnScheduleTABdepart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnScheduleTABdepart.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnScheduleTABdepart.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnScheduleTABdepart.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnScheduleTABdepart.Click += new System.EventHandler(this.btnScheduleTABaddProfile_Click);
             // 
             // btnRestockReqTABdepart
@@ -3275,19 +3387,19 @@
             this.btnRestockReqTABdepart.IconVisible = false;
             this.btnRestockReqTABdepart.IconZoom = 90D;
             this.btnRestockReqTABdepart.IsTab = false;
-            this.btnRestockReqTABdepart.Location = new System.Drawing.Point(4, 537);
-            this.btnRestockReqTABdepart.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRestockReqTABdepart.Location = new System.Drawing.Point(5, 526);
+            this.btnRestockReqTABdepart.Margin = new System.Windows.Forms.Padding(5);
             this.btnRestockReqTABdepart.Name = "btnRestockReqTABdepart";
             this.btnRestockReqTABdepart.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnRestockReqTABdepart.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnRestockReqTABdepart.OnHoverTextColor = System.Drawing.Color.White;
             this.btnRestockReqTABdepart.selected = false;
-            this.btnRestockReqTABdepart.Size = new System.Drawing.Size(392, 125);
+            this.btnRestockReqTABdepart.Size = new System.Drawing.Size(318, 120);
             this.btnRestockReqTABdepart.TabIndex = 3;
             this.btnRestockReqTABdepart.Text = "Restock Request";
             this.btnRestockReqTABdepart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRestockReqTABdepart.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnRestockReqTABdepart.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestockReqTABdepart.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnRestockReqTABdepart.Click += new System.EventHandler(this.btnRestockTABaddProfile_Click);
             // 
             // btnDepartmentTABdepartManage
@@ -3312,19 +3424,19 @@
             this.btnDepartmentTABdepartManage.IconVisible = false;
             this.btnDepartmentTABdepartManage.IconZoom = 90D;
             this.btnDepartmentTABdepartManage.IsTab = false;
-            this.btnDepartmentTABdepartManage.Location = new System.Drawing.Point(4, 670);
-            this.btnDepartmentTABdepartManage.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDepartmentTABdepartManage.Location = new System.Drawing.Point(5, 656);
+            this.btnDepartmentTABdepartManage.Margin = new System.Windows.Forms.Padding(5);
             this.btnDepartmentTABdepartManage.Name = "btnDepartmentTABdepartManage";
             this.btnDepartmentTABdepartManage.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnDepartmentTABdepartManage.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnDepartmentTABdepartManage.OnHoverTextColor = System.Drawing.Color.White;
             this.btnDepartmentTABdepartManage.selected = false;
-            this.btnDepartmentTABdepartManage.Size = new System.Drawing.Size(392, 125);
+            this.btnDepartmentTABdepartManage.Size = new System.Drawing.Size(318, 120);
             this.btnDepartmentTABdepartManage.TabIndex = 4;
             this.btnDepartmentTABdepartManage.Text = "Department Management";
             this.btnDepartmentTABdepartManage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnDepartmentTABdepartManage.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnDepartmentTABdepartManage.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDepartmentTABdepartManage.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             // 
             // tableLayoutPanel28
             // 
@@ -3334,13 +3446,13 @@
             this.tableLayoutPanel28.Controls.Add(this.label46, 0, 0);
             this.tableLayoutPanel28.Controls.Add(this.panel19, 0, 1);
             this.tableLayoutPanel28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel28.Location = new System.Drawing.Point(406, 2);
-            this.tableLayoutPanel28.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel28.Location = new System.Drawing.Point(337, 2);
+            this.tableLayoutPanel28.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel28.Name = "tableLayoutPanel28";
             this.tableLayoutPanel28.RowCount = 2;
             this.tableLayoutPanel28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel28.Size = new System.Drawing.Size(1400, 891);
+            this.tableLayoutPanel28.Size = new System.Drawing.Size(1157, 873);
             this.tableLayoutPanel28.TabIndex = 1;
             // 
             // label46
@@ -3348,12 +3460,11 @@
             this.label46.AutoSize = true;
             this.label46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.label46.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold);
             this.label46.ForeColor = System.Drawing.Color.White;
-            this.label46.Location = new System.Drawing.Point(2, 0);
-            this.label46.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label46.Location = new System.Drawing.Point(3, 0);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(1396, 133);
+            this.label46.Size = new System.Drawing.Size(1151, 130);
             this.label46.TabIndex = 0;
             this.label46.Text = "Department Managment";
             this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3363,10 +3474,10 @@
             this.panel19.BackColor = System.Drawing.Color.White;
             this.panel19.Controls.Add(this.tableLayoutPanel29);
             this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel19.Location = new System.Drawing.Point(2, 135);
-            this.panel19.Margin = new System.Windows.Forms.Padding(2);
+            this.panel19.Location = new System.Drawing.Point(3, 132);
+            this.panel19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(1396, 754);
+            this.panel19.Size = new System.Drawing.Size(1151, 739);
             this.panel19.TabIndex = 1;
             // 
             // tableLayoutPanel29
@@ -3376,30 +3487,51 @@
             this.tableLayoutPanel29.Controls.Add(this.panel20, 0, 0);
             this.tableLayoutPanel29.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel29.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel29.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel29.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel29.Name = "tableLayoutPanel29";
             this.tableLayoutPanel29.RowCount = 1;
             this.tableLayoutPanel29.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel29.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel29.Size = new System.Drawing.Size(1396, 754);
+            this.tableLayoutPanel29.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel29.Size = new System.Drawing.Size(1151, 739);
             this.tableLayoutPanel29.TabIndex = 0;
             // 
             // panel20
             // 
-            this.panel20.Controls.Add(this.btnCreateDepartment);
             this.panel20.Controls.Add(this.panel22);
             this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel20.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel20.Location = new System.Drawing.Point(2, 2);
-            this.panel20.Margin = new System.Windows.Forms.Padding(2);
+            this.panel20.Location = new System.Drawing.Point(3, 2);
+            this.panel20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(1392, 750);
+            this.panel20.Size = new System.Drawing.Size(1145, 735);
             this.panel20.TabIndex = 1;
+            // 
+            // panel22
+            // 
+            this.panel22.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel22.Controls.Add(this.btnCreateDepartment);
+            this.panel22.Controls.Add(this.lbDepartaments);
+            this.panel22.Controls.Add(this.tbMaxNr);
+            this.panel22.Controls.Add(this.label23);
+            this.panel22.Controls.Add(this.tbMinNr);
+            this.panel22.Controls.Add(this.label11);
+            this.panel22.Controls.Add(this.tbDepName);
+            this.panel22.Controls.Add(this.label56);
+            this.panel22.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel22.Location = new System.Drawing.Point(309, 22);
+            this.panel22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(547, 693);
+            this.panel22.TabIndex = 0;
+            this.panel22.Paint += new System.Windows.Forms.PaintEventHandler(this.panel22_Paint);
             // 
             // btnCreateDepartment
             // 
             this.btnCreateDepartment.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.btnCreateDepartment.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnCreateDepartment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCreateDepartment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnCreateDepartment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCreateDepartment.BorderRadius = 0;
@@ -3418,100 +3550,91 @@
             this.btnCreateDepartment.IconVisible = false;
             this.btnCreateDepartment.IconZoom = 90D;
             this.btnCreateDepartment.IsTab = false;
-            this.btnCreateDepartment.Location = new System.Drawing.Point(1164, 207);
-            this.btnCreateDepartment.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnCreateDepartment.Location = new System.Drawing.Point(62, 571);
+            this.btnCreateDepartment.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnCreateDepartment.Name = "btnCreateDepartment";
             this.btnCreateDepartment.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnCreateDepartment.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnCreateDepartment.OnHoverTextColor = System.Drawing.Color.White;
             this.btnCreateDepartment.selected = false;
-            this.btnCreateDepartment.Size = new System.Drawing.Size(206, 72);
+            this.btnCreateDepartment.Size = new System.Drawing.Size(425, 89);
             this.btnCreateDepartment.TabIndex = 2;
             this.btnCreateDepartment.Text = "Create";
             this.btnCreateDepartment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCreateDepartment.Textcolor = System.Drawing.Color.White;
-            this.btnCreateDepartment.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateDepartment.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnCreateDepartment.Click += new System.EventHandler(this.btnCreateDepartment_Click);
-            // 
-            // panel22
-            // 
-            this.panel22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel22.Controls.Add(this.lbDepartaments);
-            this.panel22.Controls.Add(this.tbMaxNr);
-            this.panel22.Controls.Add(this.label23);
-            this.panel22.Controls.Add(this.tbMinNr);
-            this.panel22.Controls.Add(this.label11);
-            this.panel22.Controls.Add(this.tbDepName);
-            this.panel22.Controls.Add(this.label56);
-            this.panel22.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel22.Location = new System.Drawing.Point(16, 16);
-            this.panel22.Margin = new System.Windows.Forms.Padding(2);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(398, 719);
-            this.panel22.TabIndex = 0;
             // 
             // lbDepartaments
             // 
+            this.lbDepartaments.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbDepartaments.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.lbDepartaments.FormattingEnabled = true;
-            this.lbDepartaments.ItemHeight = 18;
-            this.lbDepartaments.Location = new System.Drawing.Point(32, 236);
-            this.lbDepartaments.Margin = new System.Windows.Forms.Padding(2);
+            this.lbDepartaments.ItemHeight = 23;
+            this.lbDepartaments.Location = new System.Drawing.Point(32, 242);
+            this.lbDepartaments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbDepartaments.Name = "lbDepartaments";
-            this.lbDepartaments.Size = new System.Drawing.Size(320, 112);
+            this.lbDepartaments.Size = new System.Drawing.Size(425, 165);
             this.lbDepartaments.TabIndex = 11;
             // 
             // tbMaxNr
             // 
-            this.tbMaxNr.Location = new System.Drawing.Point(243, 143);
-            this.tbMaxNr.Margin = new System.Windows.Forms.Padding(2);
+            this.tbMaxNr.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbMaxNr.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.tbMaxNr.Location = new System.Drawing.Point(324, 176);
+            this.tbMaxNr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbMaxNr.Name = "tbMaxNr";
-            this.tbMaxNr.Size = new System.Drawing.Size(95, 25);
+            this.tbMaxNr.Size = new System.Drawing.Size(125, 30);
             this.tbMaxNr.TabIndex = 10;
             // 
             // label23
             // 
-            this.label23.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(21, 145);
-            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label23.Location = new System.Drawing.Point(28, 178);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(205, 22);
+            this.label23.Size = new System.Drawing.Size(273, 27);
             this.label23.TabIndex = 9;
             this.label23.Text = "Maximum Number of employees";
             // 
             // tbMinNr
             // 
-            this.tbMinNr.Location = new System.Drawing.Point(243, 88);
-            this.tbMinNr.Margin = new System.Windows.Forms.Padding(2);
+            this.tbMinNr.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbMinNr.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.tbMinNr.Location = new System.Drawing.Point(324, 108);
+            this.tbMinNr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbMinNr.Name = "tbMinNr";
-            this.tbMinNr.Size = new System.Drawing.Size(95, 25);
+            this.tbMinNr.Size = new System.Drawing.Size(125, 30);
             this.tbMinNr.TabIndex = 8;
             // 
             // label11
             // 
-            this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(21, 89);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label11.Location = new System.Drawing.Point(28, 110);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(193, 22);
+            this.label11.Size = new System.Drawing.Size(257, 27);
             this.label11.TabIndex = 7;
             this.label11.Text = "Minimum Number of employees";
             // 
             // tbDepName
             // 
-            this.tbDepName.Location = new System.Drawing.Point(243, 30);
-            this.tbDepName.Margin = new System.Windows.Forms.Padding(2);
+            this.tbDepName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbDepName.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.tbDepName.Location = new System.Drawing.Point(324, 37);
+            this.tbDepName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbDepName.Name = "tbDepName";
-            this.tbDepName.Size = new System.Drawing.Size(95, 25);
+            this.tbDepName.Size = new System.Drawing.Size(125, 30);
             this.tbDepName.TabIndex = 6;
             // 
             // label56
             // 
-            this.label56.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label56.Location = new System.Drawing.Point(21, 30);
-            this.label56.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label56.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label56.Location = new System.Drawing.Point(28, 37);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(134, 22);
+            this.label56.Size = new System.Drawing.Size(179, 27);
             this.label56.TabIndex = 0;
             this.label56.Text = "Department name:";
             // 
@@ -3523,12 +3646,13 @@
             // 
             // MainAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1631, 925);
+            this.ClientSize = new System.Drawing.Size(1511, 910);
             this.Controls.Add(this.tabControl1);
             this.ForeColor = System.Drawing.Color.Black;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
@@ -3571,6 +3695,7 @@
             this.tableLayoutPanel14.ResumeLayout(false);
             this.tableLayoutPanel15.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
+            this.panel17.ResumeLayout(false);
             this.tabSchedule.ResumeLayout(false);
             this.tableLayoutPanel16.ResumeLayout(false);
             this.tableLayoutPanel17.ResumeLayout(false);
@@ -3712,10 +3837,8 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox tbNationality;
         private System.Windows.Forms.TextBox tbPhoneNr;
         private System.Windows.Forms.TextBox tbEmail;
-        private System.Windows.Forms.TextBox tbDateOfBirth;
         private System.Windows.Forms.TextBox tbLastName;
         private System.Windows.Forms.TextBox tbFirstName;
         private System.Windows.Forms.Label label17;
@@ -3773,5 +3896,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.FlowLayoutPanel flDays;
         private System.Windows.Forms.RadioButton rbEmployee;
+        private System.Windows.Forms.ComboBox tbNationality;
+        private System.Windows.Forms.DateTimePicker tbDateOfBirth;
+        private System.Windows.Forms.Panel panel17;
     }
 }
