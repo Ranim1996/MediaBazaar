@@ -14,22 +14,40 @@ namespace Media_Bazaar.Classes
 
         //METHODS FOR EMPLOYEES:
 
+        
+       
+        public List<DBEmployee> GetNotFiredEmployeesByLastName(string lastName)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<DBEmployee>($"SELECT * FROM Employee WHERE LastName='{lastName}' AND ReasonsForRelease IS NULL").ToList();
+                return output;
+            }
+        }
+        public List<DBEmployee> GetNotFiredEmployeesByID(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<DBEmployee>($"SELECT * FROM Employee WHERE EmployeeID='{id}' AND ReasonsForRelease IS NULL").ToList();
+                return output;
+            }
+        }
+
+        //get all the info of the employee via employee id.
+        public List<DBEmployee> GetDBNotFiredEmployeeByID(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<DBEmployee>($"SELECT * FROM Employee WHERE EmployeeID='{id}' AND ReasonsForRelease IS NULL").ToList();
+                return output;
+            }
+        }
         //get all info of the employee via last name.
         public List<DBEmployee> GetDBEmployeesByLastName(string lastName)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
                 var output = connection.Query<DBEmployee>($"SELECT * FROM Employee WHERE LastName='{lastName}'").ToList();
-                return output;
-            }
-        }
-
-        //get all the info of the employee via employee id.
-        public List<DBEmployee> GetDBEmployeeByID(int id)
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                var output = connection.Query<DBEmployee>($"SELECT * FROM Employee WHERE EmployeeID='{id}'").ToList();
                 return output;
             }
         }
@@ -53,6 +71,7 @@ namespace Media_Bazaar.Classes
                 return connection.ExecuteScalar<int>($"SELECT EmployeeID FROM Employee WHERE FirstName = '{fName}' AND LastName = '{lName}';");
             }
         }
+       
 
         //get first name of employee via employee id.
         public string GetFirstNameOfEmployeeById(int id)
@@ -62,124 +81,7 @@ namespace Media_Bazaar.Classes
                 return connection.ExecuteScalar<string>($"SELECT FirstName FROM Employee WHERE EmployeeID = '{id}';");
             }
         }
-
-        //get first name of employee via employee's last name.
-        public string GetFirstNameOfEmployeeByLastname(string lastName)
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                return connection.ExecuteScalar<string>($"SELECT FirstName FROM Employee WHERE LastName = '{lastName}';");
-            }
-        }
-
-        //get last name of employee via employee id.
-        public string GetLastNameOfEmployeeById(int id)
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                return connection.ExecuteScalar<string>($"SELECT LastName FROM Employee WHERE EmployeeID = '{id}';");
-            }
-        }
-
-        //get last name of employee via employee's last name.
-        public string GetLastNameOfEmployeeByLastname(string lastName)
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                return connection.ExecuteScalar<string>($"SELECT LastName FROM Employee WHERE LastName = '{lastName}';");
-            }
-        }
-
-        //get position of employee via employee's id.
-        public string GetPosOfEmployeeById(int id)
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                return connection.ExecuteScalar<string>($"SELECT Position FROM Employee WHERE EmployeeID = '{id}';");
-            }
-        }
-
-        //get position of employee via employee's last name.
-        public string GetPosOfEmployeeByLastname(string lastName)
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                return connection.ExecuteScalar<string>($"SELECT Position FROM Employee WHERE LastName = '{lastName}';");
-            }
-        }
-
-        //get email of employee via employee's id.
-        public string GetEmailOfEmployeeById(int id)
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                return connection.ExecuteScalar<string>($"SELECT Email FROM Employee WHERE EmployeeID = '{id}';");
-            }
-        }
-
-        //get email of employee via employee's last name.
-        public string GetEmailOfEmployeeByLastname(string lastName)
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                return connection.ExecuteScalar<string>($"SELECT Email FROM Employee WHERE LastName = '{lastName}';");
-            }
-        }
-
-        //get phone number of employee via employee's id.
-        public string GetPhoneNumberOfEmployeeById(int id)
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                return connection.ExecuteScalar<string>($"SELECT PhoneNumber FROM Employee WHERE EmployeeID = '{id}';");
-            }
-        }
-
-        //get phone number of employee via employee's last name.
-        public string GetPhoneNumberOfEmployeeByLastname(string lastName)
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                return connection.ExecuteScalar<string>($"SELECT PhoneNumber FROM Employee WHERE LastName = '{lastName}';");
-            }
-        }
-
-        //get Nationality of employee via employee's id.
-        public string GetNationalityOfEmployeeById(int id)
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                return connection.ExecuteScalar<string>($"SELECT Nationality FROM Employee WHERE EmployeeID = '{id}';");
-            }
-        }
-
-        //get Nationality of employee via employee's last name.
-        public string GetNationalityOfEmployeeByLastname(string lastName)
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                return connection.ExecuteScalar<string>($"SELECT Nationality FROM Employee WHERE LastName = '{lastName}';");
-            }
-        }
-
-        //get date of birth of employee via employee's id.
-        public string GetDateOfBirthOfEmployeeById(int id)
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                return connection.ExecuteScalar<string>($"SELECT DateOfBirth FROM Employee WHERE EmployeeID = '{id}';");
-            }
-        }
-
-        //get date of birth of employee via employee's last name.
-        public string GetDateOfBirthOfEmployeeByLastname(string lastName)
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                return connection.ExecuteScalar<string>($"SELECT DateOfBirth FROM Employee WHERE LastName = '{lastName}';");
-            }
-        }
-
+        
         //Get All employees
         public List<DBEmployee> GetAllEmployees()
         {
@@ -436,6 +338,14 @@ namespace Media_Bazaar.Classes
                 return output;
             }
         }
+        public List<DBSchedule> GetSchedulesByEmplId(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<DBSchedule>($"SELECT * FROM Schedule WHERE EmployeeID = '{id}'").ToList();
+                return output;
+            }
+        }
         //Adding the shift to the database
         public void AddSchedule(int employeeID, string date, string shift)
         {
@@ -493,13 +403,26 @@ namespace Media_Bazaar.Classes
                 return connection.ExecuteScalar<int>($"SELECT COUNT(*) FROM Schedule WHERE Attendance='PRESENT';");
             }
         }
-
+        public int GetNumOfPresentById(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<int>($"SELECT COUNT(*) FROM Schedule WHERE Attendance='PRESENT' AND EmployeeID = '{id}';");
+            }
+        }
         //return number of absent employees.
         public int GetNumOfAbsent()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
                 return connection.ExecuteScalar<int>($"SELECT COUNT(*) FROM Schedule WHERE Attendance='ABSENT';");
+            }
+        }
+        public int GetNumOfAbsentById(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<int>($"SELECT COUNT(*) FROM Schedule WHERE Attendance='ABSENT' AND EmployeeID = '{id}';");
             }
         }
 
@@ -511,7 +434,13 @@ namespace Media_Bazaar.Classes
                 return connection.ExecuteScalar<int>($"SELECT COUNT(*) FROM Schedule WHERE Attendance='LATE';");
             }
         }
-
+        public int GetNumOfLateById(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<int>($"SELECT COUNT(*) FROM Schedule WHERE Attendance='LATE' AND EmployeeID = '{id}';");
+            }
+        }
         //return number of confirmed requests.
         public int GetNumOfConfirmedRequests()
         {

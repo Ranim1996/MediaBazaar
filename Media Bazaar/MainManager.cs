@@ -5,6 +5,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +20,7 @@ namespace Media_Bazaar
         List<DBEmployee> employees = new List<DBEmployee>();
         List<DBDepartament> departments = new List<DBDepartament>();
         List<DBRestockRequest> restocks = new List<DBRestockRequest>();
-
+        List<DBSchedule> schedules;
         DataAccess db;
 
         public MainManager()
@@ -34,8 +35,8 @@ namespace Media_Bazaar
 
         private void UpdateList()
         {
-            checkedListBox2.DataSource = employees;
-            checkedListBox2.DisplayMember = "FullInfo";
+            checkLbProfile.DataSource = employees;
+            checkLbProfile.DisplayMember = "FullInfo";
         }
 
         private void MainManager_Load(object sender, EventArgs e)
@@ -53,6 +54,12 @@ namespace Media_Bazaar
         private void btnSearchTABemplStats_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedTab = tabSearchEmpl;
+            tbxSearchID.Clear();
+            tbxSearchLastname.Clear();
+            foreach (var series in chartEmplAttendance.Series)
+            {
+                series.Points.Clear();
+            }
         }
 
         private void btnLogOutTABdepart_Click(object sender, EventArgs e)
@@ -125,54 +132,143 @@ namespace Media_Bazaar
 
             if (cmbSelectSeachMethod.Text == "Last name")
             {
-                employees = db.GetDBEmployeesByLastName(this.tbxSearchLastname.Text);
-                UpdateList();
-                UpdateInfoByLastname();
+                employees = db.GetNotFiredEmployeesByLastName(this.tbxSearchLastname.Text);
+                if(employees.Count == 0)
+                {
+                    MessageBox.Show("Employee with the specified last name cannot be found. He may be fired.");
+                    tbxSearchLastname.Clear();
+                }
+                else
+                {
+                    UpdateList();
+                    UpdateInfoByLastname(this.tbxSearchLastname.Text);
+                    checkLbProfile.Visible = true;
+                    btnViewProfile.Visible = true;
+                }
+                
             }
-
             else if (cmbSelectSeachMethod.Text == "ID")
             {
-                employees = db.GetDBEmployeeByID(Convert.ToInt32(this.tbxSearchID.Text));
-                UpdateList();
-                UpdateInfoByID();
+                employees = db.GetNotFiredEmployeesByID(Convert.ToInt32(this.tbxSearchID.Text));
+                if(employees.Count == 0)
+                {
+                    MessageBox.Show("Employee with the specified ID cannot be found. He may be fired.");
+                    tbxSearchID.Clear();
+                }
+                else
+                {
+                    UpdateList();
+                    UpdateInfoByID(Convert.ToInt32(this.tbxSearchID.Text));
+                    checkLbProfile.Visible = true;
+                    btnViewProfile.Visible = true;
+                }
+                
             }
         }
 
-        private void UpdateInfoByID()
+        private void UpdateInfoByID(int id)
         {
             //display the data in the labels
-            DataAccess db = new DataAccess();
+            lbUpcomingShifts.Items.Clear();
+            db = new DataAccess();
+            DateTime dateNow = DateTime.Today;
+            string[] date = dateNow.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture).Split('/');
 
-            this.lblFirstName.Text = db.GetFirstNameOfEmployeeById(Convert.ToInt32(this.tbxSearchID.Text)).ToString();
-            this.lblLastName.Text = db.GetLastNameOfEmployeeById(Convert.ToInt32(this.tbxSearchID.Text)).ToString();
-            this.lblPosInCompany.Text = db.GetPosOfEmployeeById(Convert.ToInt32(this.tbxSearchID.Text)).ToString();
-            this.lblEmail.Text = db.GetEmailOfEmployeeById(Convert.ToInt32(this.tbxSearchID.Text)).ToString();
-            this.lblPhoneNumber.Text = db.GetPhoneNumberOfEmployeeById(Convert.ToInt32(this.tbxSearchID.Text)).ToString();
-            this.lblNationality.Text = db.GetNationalityOfEmployeeById(Convert.ToInt32(this.tbxSearchID.Text)).ToString();
-            this.lblDateOfBirth.Text = db.GetDateOfBirthOfEmployeeById(Convert.ToInt32(this.tbxSearchID.Text)).ToString();
+            employees = db.GetDBNotFiredEmployeeByID(id);
+            foreach (DBEmployee empl in employees)
+            {
+                this.lblFirstName.Text = empl.FirstName;
+                this.lblLastName.Text = empl.LastName;
+                this.lblPosInCompany.Text = empl.Position;
+                this.lblEmail.Text = empl.Email;
+                this.lblPhoneNumber.Text = empl.PhoneNumber;
+                this.lblNationality.Text = empl.Nationality;
+                this.lblDateOfBirth.Text = empl.DateOfBirth;
+            }
+            schedules = db.GetSchedulesByEmplId(id);
 
+            foreach (DBSchedule sch in schedules)
+            {
+                string[] dateShift = sch.Date.Split('/');
+                if (((dateShift[2] == date[2]) && (dateShift[1] == date[1]) && (Convert.ToInt32(dateShift[0]) >= Convert.ToInt32(date[0]))))
+                {
+                    //if is not the upcoming day
+                    lbUpcomingShifts.Items.Add($"{dateShift[0]}/{dateShift[1]}/{dateShift[2]} -> {sch.Shift}");
+                }
+                else
+                {
+                    //if the month has passed
+                    if ((Convert.ToInt32(dateShift[1]) != Convert.ToInt32(date[1])) && (Convert.ToInt32(dateShift[1]) >= Convert.ToInt32(date[1])) && (dateShift[2] == date[2]) && ((Convert.ToInt32(dateShift[0]) >= Convert.ToInt32(date[0])) || (Convert.ToInt32(dateShift[0]) < Convert.ToInt32(date[0]))))
+
+                    {
+                        lbUpcomingShifts.Items.Add($"{dateShift[0]}/{dateShift[1]}/{dateShift[2]} -> {sch.Shift}");
+                    }
+                    else
+                    {
+                        //if the year is different
+                        if ((Convert.ToInt32(dateShift[2]) != Convert.ToInt32(date[2])) && (Convert.ToInt32(dateShift[2]) >= Convert.ToInt32(date[2])) && ((Convert.ToInt32(dateShift[1]) >= Convert.ToInt32(date[1])) || (Convert.ToInt32(dateShift[1]) < Convert.ToInt32(date[1]))) && ((Convert.ToInt32(dateShift[0]) >= Convert.ToInt32(date[0])) || (Convert.ToInt32(dateShift[0]) < Convert.ToInt32(date[0]))))
+                        {
+                            lbUpcomingShifts.Items.Add($"{dateShift[0]}/{dateShift[1]}/{dateShift[2]} -> {sch.Shift}");
+                        }
+                    }
+                }
+
+            }
+            CheckEmployeeAttendance(id);
         }
 
-        private void UpdateInfoByLastname()
+        private void UpdateInfoByLastname(string lastName)
         {
             //display the data in the labels
-            DataAccess db = new DataAccess();
+            lbUpcomingShifts.Items.Clear();
+            db = new DataAccess();
+            DateTime dateNow = DateTime.Today;
+      
+            string[] date = dateNow.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture).Split('/');
+            int employeeId = -1;
+            employees = db.GetDBEmployeesByLastName(lastName);
+            foreach(DBEmployee empl in employees)
+            {
+                this.lblFirstName.Text = empl.FirstName;
+                this.lblLastName.Text = lastName;
+                this.lblPosInCompany.Text = empl.Position;
+                this.lblEmail.Text = empl.Email;
+                this.lblPhoneNumber.Text = empl.PhoneNumber;
+                this.lblNationality.Text = empl.Nationality;
+                this.lblDateOfBirth.Text = empl.DateOfBirth;
+                employeeId = empl.EmployeeID;
+            }
+            schedules = db.GetSchedulesByEmplId(employeeId);
 
-            this.lblFirstName.Text = db.GetFirstNameOfEmployeeByLastname(this.tbxSearchLastname.Text).ToString();
-            this.lblLastName.Text = db.GetLastNameOfEmployeeByLastname(this.tbxSearchLastname.Text).ToString();
-            this.lblPosInCompany.Text = db.GetPosOfEmployeeByLastname(this.tbxSearchLastname.Text).ToString();
-            this.lblEmail.Text = db.GetEmailOfEmployeeByLastname(this.tbxSearchLastname.Text).ToString();
-            this.lblPhoneNumber.Text = db.GetPhoneNumberOfEmployeeByLastname(this.tbxSearchLastname.Text).ToString();
-            this.lblNationality.Text = db.GetNationalityOfEmployeeByLastname(this.tbxSearchLastname.Text).ToString();
-            this.lblDateOfBirth.Text = db.GetDateOfBirthOfEmployeeByLastname(this.tbxSearchLastname.Text).ToString();
-
+            foreach(DBSchedule sch in schedules)
+            {
+                string[] dateShift = sch.Date.Split('/');
+                if(((dateShift[2] == date[2]) && (dateShift[1] == date[1]) && (Convert.ToInt32(dateShift[0]) >= Convert.ToInt32(date[0]) )) )
+                {
+                    //if is not the upcoming day
+                    lbUpcomingShifts.Items.Add($"{dateShift[0]}/{dateShift[1]}/{dateShift[2]} -> {sch.Shift}");
+                }
+                else
+                {
+                    //if the month has passed
+                    if((Convert.ToInt32(dateShift[1]) != Convert.ToInt32(date[1])) && (Convert.ToInt32(dateShift[1]) >= Convert.ToInt32(date[1])) && (dateShift[2] == date[2]) && ((Convert.ToInt32(dateShift[0]) >= Convert.ToInt32(date[0])) || (Convert.ToInt32(dateShift[0]) < Convert.ToInt32(date[0]))))
+                    
+                    {
+                        lbUpcomingShifts.Items.Add($"{dateShift[0]}/{dateShift[1]}/{dateShift[2]} -> {sch.Shift}");
+                    }
+                    else
+                    {
+                        //if the year is different
+                        if( (Convert.ToInt32(dateShift[2]) != Convert.ToInt32(date[2]) ) && (Convert.ToInt32(dateShift[2]) >= Convert.ToInt32(date[2])) && ((Convert.ToInt32(dateShift[1]) >= Convert.ToInt32(date[1])) || (Convert.ToInt32(dateShift[1]) < Convert.ToInt32(date[1]) )) && ((Convert.ToInt32(dateShift[0]) >= Convert.ToInt32(date[0])) || (Convert.ToInt32(dateShift[0]) < Convert.ToInt32(date[0]))))
+                        {
+                            lbUpcomingShifts.Items.Add($"{dateShift[0]}/{dateShift[1]}/{dateShift[2]} -> {sch.Shift}");
+                        }
+                    }
+                }    
+            }
+            CheckEmployeeAttendance(employeeId);
         }
 
-
-        private void chartReleasedAndNot_Click(object sender, EventArgs e)
-        {
-
-        }
 
         int nrFired = 0;
         int nrNotFired = 0;
@@ -216,7 +312,7 @@ namespace Media_Bazaar
         private void CheckAttendance()
         {
             DataAccess db = new DataAccess();
-
+            
             nrOfAbsent = db.GetNumOfAbsent();
             nrOfPresent = db.GetNumOfPresent();
             nrOfLate = db.GetNumOfLate();
@@ -226,11 +322,23 @@ namespace Media_Bazaar
             chartAttendance.Series["s1"].Points.AddXY("Late", nrOfLate);
         }
         
+        private void CheckEmployeeAttendance(int id)
+        {         
+            db = new DataAccess();
+
+            nrOfAbsent = db.GetNumOfAbsentById(id);
+            nrOfPresent = db.GetNumOfPresentById(id);
+            nrOfLate = db.GetNumOfLateById(id);
+
+            chartEmplAttendance.Series["s1"].Points.AddXY("Present", nrOfPresent);
+            chartEmplAttendance.Series["s1"].Points.AddXY("Absent", nrOfAbsent);
+            chartEmplAttendance.Series["s1"].Points.AddXY("Late", nrOfLate);
+        }
 
         private void CheckRequests()
         {
             DataAccess db = new DataAccess();
-
+            
             nrOfConfirmed = db.GetNumOfConfirmedRequests();
             nrOfRejected = db.GetNumOfRejectedRequests();
             nrOfWaiting = db.GetNumOfWaitingRequests();
@@ -238,6 +346,9 @@ namespace Media_Bazaar
             chartRequests.Series["s1"].Points.AddXY("Confirmed", nrOfConfirmed);
             chartRequests.Series["s1"].Points.AddXY("Rejected", nrOfRejected);
             chartRequests.Series["s1"].Points.AddXY("Waiting", nrOfWaiting);
+
+            /*chartEmplAttendance.Legends.Clear();
+            chartEmplAttendance.Series.Clear();*/
         }
 
         
@@ -269,6 +380,30 @@ namespace Media_Bazaar
         {
 
         }
+
+        private void btnSearchTABsearch_Click(object sender, EventArgs e)
+        {
+            checkLbProfile.Visible = false;
+            btnViewProfile.Visible = false;
+            tbxSearchLastname.Enabled = true;
+            tbxSearchID.Enabled = true;
+            
+        }
+
+        private void cmbSelectSeachMethod_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbSelectSeachMethod.Text == "Last name")
+            {
+                tbxSearchID.Enabled = false;
+                tbxSearchLastname.Enabled = true;
+            }
+            else
+            {
+                tbxSearchLastname.Enabled = false;
+                tbxSearchID.Enabled = true;
+            }
+        }
+
     }
 
 }

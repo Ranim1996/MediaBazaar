@@ -126,7 +126,7 @@ namespace Media_Bazaar
             if (employeeId != -1 && date != "" && shift != "")
             {
                 db = new DataAccess();
-                List<DBEmployee> empl = db.GetDBEmployeeByID(employeeId);
+                List<DBEmployee> empl = db.GetDBNotFiredEmployeeByID(employeeId);
                 if (empl.Count != 0)
                 {
                     //inserting in the db
@@ -135,7 +135,7 @@ namespace Media_Bazaar
                 }
                 else
                 {
-                    MessageBox.Show("No employee found with the specified ID.");
+                    MessageBox.Show("No employee found with the specified ID. He may be fired.");
                 }
 
             }
