@@ -867,10 +867,10 @@
             this.panel8.Controls.Add(this.label21);
             this.panel8.Controls.Add(this.label22);
             this.panel8.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel8.Location = new System.Drawing.Point(25, 20);
+            this.panel8.Location = new System.Drawing.Point(23, 20);
             this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(526, 573);
+            this.panel8.Size = new System.Drawing.Size(528, 622);
             this.panel8.TabIndex = 0;
             this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
@@ -883,7 +883,7 @@
             this.tbDateOfBirth.MaxDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.tbDateOfBirth.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.tbDateOfBirth.Name = "tbDateOfBirth";
-            this.tbDateOfBirth.Size = new System.Drawing.Size(118, 30);
+            this.tbDateOfBirth.Size = new System.Drawing.Size(120, 30);
             this.tbDateOfBirth.TabIndex = 18;
             this.tbDateOfBirth.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
@@ -952,7 +952,7 @@
             "SY - Syria"});
             this.tbNationality.Location = new System.Drawing.Point(349, 240);
             this.tbNationality.Name = "tbNationality";
-            this.tbNationality.Size = new System.Drawing.Size(122, 31);
+            this.tbNationality.Size = new System.Drawing.Size(124, 31);
             this.tbNationality.TabIndex = 17;
             // 
             // rbEmployee
@@ -1016,7 +1016,7 @@
             this.btnAddNewProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnAddNewProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAddNewProfile.selected = false;
-            this.btnAddNewProfile.Size = new System.Drawing.Size(439, 61);
+            this.btnAddNewProfile.Size = new System.Drawing.Size(441, 61);
             this.btnAddNewProfile.TabIndex = 4;
             this.btnAddNewProfile.Text = "Add";
             this.btnAddNewProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1075,7 +1075,7 @@
             this.tbPhoneNr.Location = new System.Drawing.Point(353, 192);
             this.tbPhoneNr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbPhoneNr.Name = "tbPhoneNr";
-            this.tbPhoneNr.Size = new System.Drawing.Size(118, 30);
+            this.tbPhoneNr.Size = new System.Drawing.Size(120, 30);
             this.tbPhoneNr.TabIndex = 10;
             // 
             // tbEmail
@@ -1086,7 +1086,7 @@
             this.tbEmail.Location = new System.Drawing.Point(353, 144);
             this.tbEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(118, 30);
+            this.tbEmail.Size = new System.Drawing.Size(120, 30);
             this.tbEmail.TabIndex = 9;
             // 
             // tbLastName
@@ -1097,7 +1097,7 @@
             this.tbLastName.Location = new System.Drawing.Point(353, 57);
             this.tbLastName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbLastName.Name = "tbLastName";
-            this.tbLastName.Size = new System.Drawing.Size(118, 30);
+            this.tbLastName.Size = new System.Drawing.Size(120, 30);
             this.tbLastName.TabIndex = 7;
             // 
             // tbFirstName
@@ -1108,7 +1108,7 @@
             this.tbFirstName.Location = new System.Drawing.Point(353, 12);
             this.tbFirstName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbFirstName.Name = "tbFirstName";
-            this.tbFirstName.Size = new System.Drawing.Size(118, 30);
+            this.tbFirstName.Size = new System.Drawing.Size(120, 30);
             this.tbFirstName.TabIndex = 6;
             // 
             // label17
@@ -1181,10 +1181,11 @@
             this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(28, 12);
+            this.label22.Location = new System.Drawing.Point(28, 21);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(0, 179);
+            this.label22.Size = new System.Drawing.Size(112, 23);
             this.label22.TabIndex = 0;
             this.label22.Text = "First name: ";
             // 
@@ -2048,8 +2049,8 @@
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
             this.tableLayoutPanel15.RowCount = 1;
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 89F));
-            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 89F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75F));
             this.tableLayoutPanel15.Size = new System.Drawing.Size(1145, 75);
             this.tableLayoutPanel15.TabIndex = 0;
             // 
@@ -2557,7 +2558,7 @@
             this.tableLayoutPanel19.Name = "tableLayoutPanel19";
             this.tableLayoutPanel19.RowCount = 1;
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 862F));
+            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 739F));
             this.tableLayoutPanel19.Size = new System.Drawing.Size(1151, 739);
             this.tableLayoutPanel19.TabIndex = 0;
             // 
@@ -3082,7 +3083,7 @@
             this.tableLayoutPanel24.Name = "tableLayoutPanel24";
             this.tableLayoutPanel24.RowCount = 1;
             this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 862F));
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 739F));
             this.tableLayoutPanel24.Size = new System.Drawing.Size(1151, 739);
             this.tableLayoutPanel24.TabIndex = 0;
             // 

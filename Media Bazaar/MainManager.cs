@@ -29,6 +29,7 @@ namespace Media_Bazaar
             CheckFiredAndWorkingChart();
             CheckAttendance();
             CheckRequests();
+            CheckPositions();
         }
 
         private void UpdateList()
@@ -184,6 +185,10 @@ namespace Media_Bazaar
         int nrOfRejected = 0;
         int nrOfWaiting = 0;
 
+        int nrAmdins = 0;
+        int nrManagers = 0;
+        int nrDepot = 0;
+
         private void CheckFiredAndWorkingChart()
         {
             DataAccess db = new DataAccess();
@@ -193,6 +198,19 @@ namespace Media_Bazaar
            
             chartReleasedAndNot.Series["s1"].Points.AddXY("Fired", nrFired);
             chartReleasedAndNot.Series["s1"].Points.AddXY("Working", nrNotFired);
+        }
+
+        private void CheckPositions()
+        {
+            DataAccess db = new DataAccess();
+
+            nrAmdins = db.GetNumAdmins();
+            nrManagers = db.GetNumManagers();
+            nrDepot = db.GetNumDepotWorkers();
+
+            chartPositions.Series["s1"].Points.AddXY("Administrators", nrAmdins);
+            chartPositions.Series["s1"].Points.AddXY("Managers", nrManagers);
+            chartPositions.Series["s1"].Points.AddXY("Depot workers", nrDepot);
         }
 
         private void CheckAttendance()
@@ -238,6 +256,16 @@ namespace Media_Bazaar
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chartPositions_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
         {
 
         }

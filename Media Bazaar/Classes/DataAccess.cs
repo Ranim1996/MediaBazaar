@@ -513,33 +513,28 @@ namespace Media_Bazaar.Classes
             }
         }
 
-        //not used yet
-        //public string GetProfileUsername(string pass)
-        //{
-        //    using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-        //    {
-        //        return connection.ExecuteScalar<string>($"SELECT Usename FROM Employee WHERE Password = '{pass}';");
-        //    }
-        //}
+        public int GetNumAdmins()
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<int>($"SELECT COUNT(EmployeeID) FROM Employee WHERE Position='ADMINISTRATOR';");
+            }
+        }
 
-        //not used yet
-        //public string GetProfilePassword(string user)
-        //{
-        //    using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-        //    {
-        //        return connection.ExecuteScalar<string>($"SELECT Password FROM Employee WHERE Username = '{user}';");
-        //    }
-        //}
+        public int GetNumManagers()
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<int>($"SELECT COUNT(EmployeeID) FROM Employee WHERE Position ='MANAGER';");
+            }
+        }
 
-        //not used yet
-        //public int GetProfileDetails(string user, string pass)
-        //{
-        //    using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-        //    {
-        //        return connection.ExecuteScalar<int>($"SELECT Username,Password FROM Employee WHERE Username='{user}' AND CONVERT(Password,VARCHAR)='{pass}' ;");
-        //    }
-        //}
-
-        // SqlCommand cm = new SqlCommand("SELECT FirstName,Password FROM TenantsInfo WHERE FirstName=  '" + tbName.Text + "' AND CONVERT(VARCHAR, Password)='" + tbPass.Text + " '", sqlcon);
+        public int GetNumDepotWorkers()
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<int>($"SELECT COUNT(EmployeeID) FROM Employee WHERE Position='DEPOT';");
+            }
+        }
     }
 }

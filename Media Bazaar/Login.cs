@@ -12,6 +12,7 @@ using System.Drawing.Drawing2D;
 using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
 using Media_Bazaar.Classes;
+using MySql.Data;
 
 namespace Media_Bazaar
 {
@@ -50,31 +51,33 @@ namespace Media_Bazaar
 
 
 
-        private int nrRows;
+        
+        private string user;
+        private string pass;
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //db = new DataAccess();
-            //nrRows = db.GetProfileDetails(tbUsername.Text, tbPassword.Text);
+            user = tbUsername.Text;
+            pass = tbPassword.Text;
+            MySqlConnection conn = new MySqlConnection("Server=studmysql01.fhict.local;Uid=dbi428501;Database=dbi428501;Pwd=1234;");
 
-            //if (nrRows>0)
-            //{
-            //    tbUsername.Text = "Username";
-            //    tbPassword.Text = "Password";
-            //    MainAdmin MainAdmin = new MainAdmin();
-            //    MainAdmin.Show();
-            //    this.Visible = false;
-            //}
+            MySqlCommand cmdAdmin = new MySqlCommand($"SELECT Username, Password FROM Employee WHERE Username = '{user}' AND Password = '{pass}' AND Position='ADMINISTRATOR';", conn);
+            MySqlCommand cmdManager = new MySqlCommand($"SELECT Username, Password FROM Employee WHERE Username = '{user}' AND Password = '{pass}' AND Position='MANAGER';", conn);
+            MySqlCommand cmdDepot = new MySqlCommand($"SELECT Username, Password FROM Employee WHERE Username = '{user}' AND Password = '{pass}' AND Position='DEPOT';", conn);
+            conn.Open();
 
-            //else
-            //{
-            //    MessageBox.Show("Wrong Username/Password");
-            //    tbUsername.Text = "Username";
-            //    tbPassword.Text = "Password";
-            //}
+            MySqlDataAdapter sdaAdmin = new MySqlDataAdapter(cmdAdmin);
+            DataTable dtAdmin = new DataTable();
+            sdaAdmin.Fill(dtAdmin);
 
+            MySqlDataAdapter sdaManager = new MySqlDataAdapter(cmdManager);
+            DataTable dtManager = new DataTable();
+            sdaManager.Fill(dtManager);
 
+            MySqlDataAdapter sdaDepot = new MySqlDataAdapter(cmdDepot);
+            DataTable dtDepot = new DataTable();
+            sdaDepot.Fill(dtDepot);
 
-            if (tbUsername.Text == "Admin" && tbPassword.Text == "1234")
+            if (dtAdmin.Rows.Count > 0)
             {
                 tbUsername.Text = "Username";
                 tbPassword.Text = "Password";
@@ -82,35 +85,35 @@ namespace Media_Bazaar
                 MainAdmin.Show();
                 this.Visible = false;
             }
+            else if (dtManager.Rows.Count > 0)
+            {
+                tbUsername.Text = "Username";
+                tbPassword.Text = "Password";
+                MainManager MainManager = new MainManager();
+                MainManager.Show();
+                this.Visible = false;
+            }
+            else if (dtDepot.Rows.Count > 0)
+            {
+                tbUsername.Text = "Username";
+                tbPassword.Text = "Password";
+                MainDepot MainDepot = new MainDepot();
+                MainDepot.Show();
+                this.Visible = false;
+            }
             else
             {
-                if (tbUsername.Text == "Manager" && tbPassword.Text == "1234")
-                {
-                    tbUsername.Text = "Username";
-                    tbPassword.Text = "Password";
-                    MainManager MainManager = new MainManager();
-                    MainManager.Show();
-                    this.Visible = false;
-                }
-                else
-                {
-                    if (tbUsername.Text == "Depot" && tbPassword.Text == "1234")
-                    {
-                        tbUsername.Text = "Username";
-                        tbPassword.Text = "Password";
-                        MainDepot MainDepot = new MainDepot();
-                        MainDepot.Show();
-                        this.Visible = false;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Wrong Username/Password");
-                        tbUsername.Text = "Username";
-                        tbPassword.Text = "Password";
-                    }
-                }
+                MessageBox.Show("Wrong Username/Password");
+                tbUsername.Text = "Username";
+                tbPassword.Text = "Password";
             }
+            conn.Close();
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
