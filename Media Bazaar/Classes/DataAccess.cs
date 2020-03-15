@@ -180,15 +180,15 @@ namespace Media_Bazaar.Classes
             }
         }
 
-        //not used till now
-        //public List<DBEmployee> GetAllEmployees()
-        //{
-        //    using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-        //    {
-        //        var output = connection.Query<DBEmployee>($"SELECT * FROM Employee").ToList();
-        //        return output;
-        //    }
-        //}
+        //Get All employees
+        public List<DBEmployee> GetAllEmployees()
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<DBEmployee>($"SELECT * FROM Employee").ToList();
+                return output;
+            }
+        }
 
 
         //update and set the info's table in data base where the employee is fired by id.
@@ -405,6 +405,16 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //get all available stocks where the quantity is not null
+        public List <DBRestockRequest> GetAllAvailableStocks ()
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<DBRestockRequest>($"SELECT * FROM RestockRequest WHERE Quantity IS NOT NULL").ToList();
+                return output;
+            }
+        }
+
 
         //METHODS FOR SCHEDULE--------------
 
@@ -520,6 +530,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //return the numbers of the admins
         public int GetNumAdmins()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -528,6 +539,8 @@ namespace Media_Bazaar.Classes
             }
         }
 
+
+        //return the numbers of the managers
         public int GetNumManagers()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -536,6 +549,7 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        //return the numbers of the depot workers
         public int GetNumDepotWorkers()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))

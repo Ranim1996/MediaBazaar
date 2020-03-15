@@ -33,5 +33,10 @@ namespace Media_Bazaar.Classes
         {
             return RequestID;
         }
+
+        public string GetInfo()
+        {
+            return $"Stock ID:{RequestID} {NameOfStock} {TypeOfStock} {Departament} {Quantity} {DateOfOrder} {DateOfDelivery} )";
+        }
     }
 }
