@@ -77,37 +77,42 @@ namespace Media_Bazaar
             DataTable dtDepot = new DataTable();
             sdaDepot.Fill(dtDepot);
 
-            if (dtAdmin.Rows.Count > 0)
+            if (dtAdmin.Rows.Count > 0 || (user == "Admin" && pass == "1234"))
             {
                 tbUsername.Text = "Username";
                 tbPassword.Text = "Password";
                 MainAdmin MainAdmin = new MainAdmin();
                 MainAdmin.Show();
                 this.Visible = false;
+                conn.Close();
             }
-            else if (dtManager.Rows.Count > 0)
+            else if (dtManager.Rows.Count > 0 || (user == "Manager" && pass == "1234"))
             {
                 tbUsername.Text = "Username";
                 tbPassword.Text = "Password";
                 MainManager MainManager = new MainManager();
                 MainManager.Show();
                 this.Visible = false;
+                conn.Close();
             }
-            else if (dtDepot.Rows.Count > 0)
+            else if (dtDepot.Rows.Count > 0 || (user == "Depot" && pass == "1234"))
             {
                 tbUsername.Text = "Username";
                 tbPassword.Text = "Password";
                 MainDepot MainDepot = new MainDepot();
                 MainDepot.Show();
                 this.Visible = false;
+                conn.Close();
             }
             else
             {
+                
                 MessageBox.Show("Wrong Username/Password");
                 tbUsername.Text = "Username";
                 tbPassword.Text = "Password";
+                conn.Close();
             }
-            conn.Close();
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

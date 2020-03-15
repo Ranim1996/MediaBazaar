@@ -437,6 +437,13 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        public void DeleteAttendanceByIdAndShift(int emplId, string shift, string date)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                connection.Execute($"DELETE FROM Schedule WHERE EmployeeID = '{emplId}' AND Shift = '{shift}' AND Date = '{date}';");
+            }
+        }
 
 
         // methods to return int in order to use it in the statistics

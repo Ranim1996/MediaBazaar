@@ -193,11 +193,7 @@ namespace Media_Bazaar
                 
                 shiftWindow = new AssignShift(newDate, this);
                 shiftWindow.Show();
-                //shiftWindow.dateTimePicker1.Value = newDate;
-                //MessageBox.Show(newDate.ToString("dd-MM-yyyy"));
-                //shiftWindow.Show();
             }
-            //lblDateForShift_TextChanged(sender.ToString(), e);
         }
        
 

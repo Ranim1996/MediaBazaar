@@ -22,10 +22,11 @@ namespace Media_Bazaar
             InitializeComponent();
             shiftDate = date;
             db = new DataAccess();
-            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            tbDate.Text = $"{date.Day}/{date.Month}/{date.Year}, {date.DayOfWeek}";
+            /*dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker1.Text = $"{date.Day}/{date.Month}/{date.Year}";
-            if(date.DayOfWeek == DayOfWeek.Sunday)
+            this.dateTimePicker1.Text = $"{date.Day}/{date.Month}/{date.Year}";*/
+            if (date.DayOfWeek == DayOfWeek.Sunday)
             {
                 cmbBxWorkShiftSunday.Visible = true;
                 cmbBxWorkShiftSaturday.Visible = false;
@@ -78,7 +79,7 @@ namespace Media_Bazaar
             int employeeId = -1;
             string date = "";
             string shift = "";
-            if (tbEmployeeIdAssignShift.Text != "" && dateTimePicker1.Value != null && (cmbBxWorkShiftSaturday.SelectedItem != null || cmbBxWorkShiftSunday.SelectedItem != null || cmbBxWorkShiftWeekDay.SelectedItem != null))
+            if (tbEmployeeIdAssignShift.Text != "" && (cmbBxWorkShiftSaturday.SelectedItem != null || cmbBxWorkShiftSunday.SelectedItem != null || cmbBxWorkShiftWeekDay.SelectedItem != null))
             {
                 employeeId = Convert.ToInt32(tbEmployeeIdAssignShift.Text);
                 date = shiftDate.ToString("dd/MM/yyyy");
@@ -178,6 +179,38 @@ namespace Media_Bazaar
         {
             string attendance = "ABSENT";
             AddAttendance(attendance);
+        }
+
+        private void lbItem_DoubleClick(object sender, EventArgs e)
+        {
+            string holder = "";
+            string date = shiftDate.ToString("dd/MM/yyyy");
+            db = new DataAccess();
+            schedule = new DBSchedule();
+            schedule.GetAllSchedules();
+            dbSchedules = schedule.allSchedules;
+            if (lbShifts.SelectedItem != null)
+            {
+                holder = lbShifts.SelectedItem.ToString();
+                foreach(DBSchedule sch in dbSchedules)
+                {
+                    if(holder.Contains(sch.EmployeeId.ToString()) && holder.Contains(sch.Shift))
+                    {
+                        DialogResult dialogResult = MessageBox.Show($"Are you sure that you want to delete this shift? ID({sch.EmployeeId}): {sch.Shift}", "Warning!", MessageBoxButtons.YesNo);
+                        if(dialogResult == DialogResult.Yes)
+                        {
+                            db.DeleteAttendanceByIdAndShift(sch.EmployeeId, sch.Shift, date);
+                            MessageBox.Show("Shift has been successfully removed!");
+                            UpdateList();
+                        }
+                        else //if(dialogResult == DialogResult.No)
+                        {
+                            //do nothing 
+                        }
+                        break;
+                    }
+                }
+            }
         }
     }
 }
