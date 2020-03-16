@@ -575,7 +575,7 @@
             this.btnLogOutTABdepart.IconZoom = 90D;
             this.btnLogOutTABdepart.IsTab = false;
             this.btnLogOutTABdepart.Location = new System.Drawing.Point(5, 630);
-            this.btnLogOutTABdepart.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnLogOutTABdepart.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogOutTABdepart.Name = "btnLogOutTABdepart";
             this.btnLogOutTABdepart.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABdepart.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -612,7 +612,7 @@
             this.btnStatsTABemployeeStats.IconZoom = 90D;
             this.btnStatsTABemployeeStats.IsTab = false;
             this.btnStatsTABemployeeStats.Location = new System.Drawing.Point(5, 214);
-            this.btnStatsTABemployeeStats.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnStatsTABemployeeStats.Margin = new System.Windows.Forms.Padding(5);
             this.btnStatsTABemployeeStats.Name = "btnStatsTABemployeeStats";
             this.btnStatsTABemployeeStats.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnStatsTABemployeeStats.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -661,7 +661,7 @@
             this.btnSearchTABemplStats.IconZoom = 90D;
             this.btnSearchTABemplStats.IsTab = false;
             this.btnSearchTABemplStats.Location = new System.Drawing.Point(5, 318);
-            this.btnSearchTABemplStats.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnSearchTABemplStats.Margin = new System.Windows.Forms.Padding(5);
             this.btnSearchTABemplStats.Name = "btnSearchTABemplStats";
             this.btnSearchTABemplStats.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnSearchTABemplStats.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -728,7 +728,7 @@
             this.tableLayoutPanel30.Name = "tableLayoutPanel30";
             this.tableLayoutPanel30.RowCount = 1;
             this.tableLayoutPanel30.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel30.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 586F));
+            this.tableLayoutPanel30.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 591F));
             this.tableLayoutPanel30.Size = new System.Drawing.Size(1055, 591);
             this.tableLayoutPanel30.TabIndex = 0;
             // 
@@ -774,8 +774,8 @@
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 59F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 59F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(1043, 59);
             this.tableLayoutPanel8.TabIndex = 0;
             // 
@@ -802,7 +802,7 @@
             this.btnEmployeesTABemplStats.IconZoom = 90D;
             this.btnEmployeesTABemplStats.IsTab = false;
             this.btnEmployeesTABemplStats.Location = new System.Drawing.Point(5, 5);
-            this.btnEmployeesTABemplStats.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnEmployeesTABemplStats.Margin = new System.Windows.Forms.Padding(5);
             this.btnEmployeesTABemplStats.Name = "btnEmployeesTABemplStats";
             this.btnEmployeesTABemplStats.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnEmployeesTABemplStats.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -839,7 +839,7 @@
             this.btnShiftsTABemplStats.IconZoom = 90D;
             this.btnShiftsTABemplStats.IsTab = false;
             this.btnShiftsTABemplStats.Location = new System.Drawing.Point(352, 5);
-            this.btnShiftsTABemplStats.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnShiftsTABemplStats.Margin = new System.Windows.Forms.Padding(5);
             this.btnShiftsTABemplStats.Name = "btnShiftsTABemplStats";
             this.btnShiftsTABemplStats.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnShiftsTABemplStats.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -876,7 +876,7 @@
             this.btnDepartStockTABemplStats.IconZoom = 90D;
             this.btnDepartStockTABemplStats.IsTab = false;
             this.btnDepartStockTABemplStats.Location = new System.Drawing.Point(699, 5);
-            this.btnDepartStockTABemplStats.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnDepartStockTABemplStats.Margin = new System.Windows.Forms.Padding(5);
             this.btnDepartStockTABemplStats.Name = "btnDepartStockTABemplStats";
             this.btnDepartStockTABemplStats.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnDepartStockTABemplStats.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -1061,7 +1061,7 @@
             this.btnLogOutTABshiftStats.IconZoom = 90D;
             this.btnLogOutTABshiftStats.IsTab = false;
             this.btnLogOutTABshiftStats.Location = new System.Drawing.Point(5, 630);
-            this.btnLogOutTABshiftStats.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnLogOutTABshiftStats.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogOutTABshiftStats.Name = "btnLogOutTABshiftStats";
             this.btnLogOutTABshiftStats.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABshiftStats.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -1098,7 +1098,7 @@
             this.btnStatisticsTABshiftStats.IconZoom = 90D;
             this.btnStatisticsTABshiftStats.IsTab = false;
             this.btnStatisticsTABshiftStats.Location = new System.Drawing.Point(5, 214);
-            this.btnStatisticsTABshiftStats.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnStatisticsTABshiftStats.Margin = new System.Windows.Forms.Padding(5);
             this.btnStatisticsTABshiftStats.Name = "btnStatisticsTABshiftStats";
             this.btnStatisticsTABshiftStats.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnStatisticsTABshiftStats.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -1146,7 +1146,7 @@
             this.btnSearchEmplTABshiftStats.IconZoom = 90D;
             this.btnSearchEmplTABshiftStats.IsTab = false;
             this.btnSearchEmplTABshiftStats.Location = new System.Drawing.Point(5, 318);
-            this.btnSearchEmplTABshiftStats.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnSearchEmplTABshiftStats.Margin = new System.Windows.Forms.Padding(5);
             this.btnSearchEmplTABshiftStats.Name = "btnSearchEmplTABshiftStats";
             this.btnSearchEmplTABshiftStats.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnSearchEmplTABshiftStats.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -1188,7 +1188,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1055, 104);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Shift Statistics";
+            this.label1.Text = "Attendance Statistics";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -1214,7 +1214,7 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 586F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 591F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(1055, 591);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
@@ -1249,8 +1249,8 @@
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 59F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 59F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(1043, 59);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
@@ -1277,7 +1277,7 @@
             this.btnEmployeesTABshiftStats.IconZoom = 90D;
             this.btnEmployeesTABshiftStats.IsTab = false;
             this.btnEmployeesTABshiftStats.Location = new System.Drawing.Point(5, 5);
-            this.btnEmployeesTABshiftStats.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnEmployeesTABshiftStats.Margin = new System.Windows.Forms.Padding(5);
             this.btnEmployeesTABshiftStats.Name = "btnEmployeesTABshiftStats";
             this.btnEmployeesTABshiftStats.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnEmployeesTABshiftStats.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -1297,7 +1297,7 @@
             this.bunifuFlatButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton4.BorderRadius = 0;
-            this.bunifuFlatButton4.ButtonText = "Shifts";
+            this.bunifuFlatButton4.ButtonText = "Attendance";
             this.bunifuFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton4.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1314,7 +1314,7 @@
             this.bunifuFlatButton4.IconZoom = 90D;
             this.bunifuFlatButton4.IsTab = false;
             this.bunifuFlatButton4.Location = new System.Drawing.Point(352, 5);
-            this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton4.Name = "bunifuFlatButton4";
             this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -1322,7 +1322,7 @@
             this.bunifuFlatButton4.selected = false;
             this.bunifuFlatButton4.Size = new System.Drawing.Size(337, 49);
             this.bunifuFlatButton4.TabIndex = 1;
-            this.bunifuFlatButton4.Text = "Shifts";
+            this.bunifuFlatButton4.Text = "Attendance";
             this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton4.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
@@ -1350,7 +1350,7 @@
             this.btnDepartmentTABshiftStats.IconZoom = 90D;
             this.btnDepartmentTABshiftStats.IsTab = false;
             this.btnDepartmentTABshiftStats.Location = new System.Drawing.Point(699, 5);
-            this.btnDepartmentTABshiftStats.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnDepartmentTABshiftStats.Margin = new System.Windows.Forms.Padding(5);
             this.btnDepartmentTABshiftStats.Name = "btnDepartmentTABshiftStats";
             this.btnDepartmentTABshiftStats.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnDepartmentTABshiftStats.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -1480,7 +1480,7 @@
             this.btnLogOutTABdepartStats.IconZoom = 90D;
             this.btnLogOutTABdepartStats.IsTab = false;
             this.btnLogOutTABdepartStats.Location = new System.Drawing.Point(5, 630);
-            this.btnLogOutTABdepartStats.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnLogOutTABdepartStats.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogOutTABdepartStats.Name = "btnLogOutTABdepartStats";
             this.btnLogOutTABdepartStats.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABdepartStats.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -1517,7 +1517,7 @@
             this.btnStatsTABdepart.IconZoom = 90D;
             this.btnStatsTABdepart.IsTab = false;
             this.btnStatsTABdepart.Location = new System.Drawing.Point(5, 214);
-            this.btnStatsTABdepart.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnStatsTABdepart.Margin = new System.Windows.Forms.Padding(5);
             this.btnStatsTABdepart.Name = "btnStatsTABdepart";
             this.btnStatsTABdepart.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnStatsTABdepart.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -1565,7 +1565,7 @@
             this.btnSearchTABdepartStats.IconZoom = 90D;
             this.btnSearchTABdepartStats.IsTab = false;
             this.btnSearchTABdepartStats.Location = new System.Drawing.Point(5, 318);
-            this.btnSearchTABdepartStats.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnSearchTABdepartStats.Margin = new System.Windows.Forms.Padding(5);
             this.btnSearchTABdepartStats.Name = "btnSearchTABdepartStats";
             this.btnSearchTABdepartStats.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnSearchTABdepartStats.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -1632,7 +1632,7 @@
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
             this.tableLayoutPanel12.RowCount = 1;
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 586F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 591F));
             this.tableLayoutPanel12.Size = new System.Drawing.Size(1055, 591);
             this.tableLayoutPanel12.TabIndex = 0;
             // 
@@ -1667,8 +1667,8 @@
             this.tableLayoutPanel14.Name = "tableLayoutPanel14";
             this.tableLayoutPanel14.RowCount = 1;
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 59F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 59F));
             this.tableLayoutPanel14.Size = new System.Drawing.Size(1043, 59);
             this.tableLayoutPanel14.TabIndex = 0;
             // 
@@ -1695,7 +1695,7 @@
             this.btnEmployeesTABdepartStats.IconZoom = 90D;
             this.btnEmployeesTABdepartStats.IsTab = false;
             this.btnEmployeesTABdepartStats.Location = new System.Drawing.Point(5, 5);
-            this.btnEmployeesTABdepartStats.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnEmployeesTABdepartStats.Margin = new System.Windows.Forms.Padding(5);
             this.btnEmployeesTABdepartStats.Name = "btnEmployeesTABdepartStats";
             this.btnEmployeesTABdepartStats.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnEmployeesTABdepartStats.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -1732,7 +1732,7 @@
             this.btnShiftsTABdepartStats.IconZoom = 90D;
             this.btnShiftsTABdepartStats.IsTab = false;
             this.btnShiftsTABdepartStats.Location = new System.Drawing.Point(352, 5);
-            this.btnShiftsTABdepartStats.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnShiftsTABdepartStats.Margin = new System.Windows.Forms.Padding(5);
             this.btnShiftsTABdepartStats.Name = "btnShiftsTABdepartStats";
             this.btnShiftsTABdepartStats.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnShiftsTABdepartStats.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -1769,7 +1769,7 @@
             this.bunifuFlatButton11.IconZoom = 90D;
             this.bunifuFlatButton11.IsTab = false;
             this.bunifuFlatButton11.Location = new System.Drawing.Point(699, 5);
-            this.bunifuFlatButton11.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton11.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton11.Name = "bunifuFlatButton11";
             this.bunifuFlatButton11.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton11.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -1896,7 +1896,7 @@
             this.btnLogOutTABsearch.IconZoom = 90D;
             this.btnLogOutTABsearch.IsTab = false;
             this.btnLogOutTABsearch.Location = new System.Drawing.Point(5, 630);
-            this.btnLogOutTABsearch.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnLogOutTABsearch.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogOutTABsearch.Name = "btnLogOutTABsearch";
             this.btnLogOutTABsearch.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABsearch.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -1933,7 +1933,7 @@
             this.btnStatisticsTABsearch.IconZoom = 90D;
             this.btnStatisticsTABsearch.IsTab = false;
             this.btnStatisticsTABsearch.Location = new System.Drawing.Point(5, 214);
-            this.btnStatisticsTABsearch.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnStatisticsTABsearch.Margin = new System.Windows.Forms.Padding(5);
             this.btnStatisticsTABsearch.Name = "btnStatisticsTABsearch";
             this.btnStatisticsTABsearch.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnStatisticsTABsearch.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -1982,7 +1982,7 @@
             this.btnSearchTABsearch.IconZoom = 90D;
             this.btnSearchTABsearch.IsTab = false;
             this.btnSearchTABsearch.Location = new System.Drawing.Point(5, 318);
-            this.btnSearchTABsearch.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnSearchTABsearch.Margin = new System.Windows.Forms.Padding(5);
             this.btnSearchTABsearch.Name = "btnSearchTABsearch";
             this.btnSearchTABsearch.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnSearchTABsearch.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -2049,7 +2049,7 @@
             this.tableLayoutPanel18.Name = "tableLayoutPanel18";
             this.tableLayoutPanel18.RowCount = 1;
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 586F));
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 591F));
             this.tableLayoutPanel18.Size = new System.Drawing.Size(1055, 591);
             this.tableLayoutPanel18.TabIndex = 0;
             // 
@@ -2309,7 +2309,7 @@
             this.btnLogOutTABprofile.IconZoom = 90D;
             this.btnLogOutTABprofile.IsTab = false;
             this.btnLogOutTABprofile.Location = new System.Drawing.Point(5, 630);
-            this.btnLogOutTABprofile.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnLogOutTABprofile.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogOutTABprofile.Name = "btnLogOutTABprofile";
             this.btnLogOutTABprofile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABprofile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -2346,7 +2346,7 @@
             this.btnStatisticsTABprofile.IconZoom = 90D;
             this.btnStatisticsTABprofile.IsTab = false;
             this.btnStatisticsTABprofile.Location = new System.Drawing.Point(5, 214);
-            this.btnStatisticsTABprofile.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnStatisticsTABprofile.Margin = new System.Windows.Forms.Padding(5);
             this.btnStatisticsTABprofile.Name = "btnStatisticsTABprofile";
             this.btnStatisticsTABprofile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnStatisticsTABprofile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -2395,7 +2395,7 @@
             this.btnSearchTABprofile.IconZoom = 90D;
             this.btnSearchTABprofile.IsTab = false;
             this.btnSearchTABprofile.Location = new System.Drawing.Point(5, 318);
-            this.btnSearchTABprofile.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnSearchTABprofile.Margin = new System.Windows.Forms.Padding(5);
             this.btnSearchTABprofile.Name = "btnSearchTABprofile";
             this.btnSearchTABprofile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnSearchTABprofile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -2512,7 +2512,7 @@
             this.lbUpcomingShifts.FormattingEnabled = true;
             this.lbUpcomingShifts.ItemHeight = 31;
             this.lbUpcomingShifts.Location = new System.Drawing.Point(25, 527);
-            this.lbUpcomingShifts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbUpcomingShifts.Margin = new System.Windows.Forms.Padding(4);
             this.lbUpcomingShifts.Name = "lbUpcomingShifts";
             this.lbUpcomingShifts.Size = new System.Drawing.Size(560, 128);
             this.lbUpcomingShifts.TabIndex = 16;
@@ -2679,7 +2679,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1388, 736);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainManager";
