@@ -1324,7 +1324,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.White;
@@ -1376,7 +1376,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.groupBox3.BackColor = System.Drawing.Color.Teal;
             this.groupBox3.Controls.Add(this.lblStatus);
             this.groupBox3.Controls.Add(this.label25);
             this.groupBox3.Controls.Add(this.lblQuantity);
@@ -1507,7 +1507,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.groupBox2.BackColor = System.Drawing.Color.Teal;
             this.groupBox2.Controls.Add(this.lblEID);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
@@ -1538,7 +1538,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.groupBox1.BackColor = System.Drawing.Color.Teal;
             this.groupBox1.Controls.Add(this.lblSName);
             this.groupBox1.Controls.Add(this.lblSID);
             this.groupBox1.Controls.Add(this.label9);
@@ -2202,7 +2202,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.groupBox4.BackColor = System.Drawing.Color.Teal;
             this.groupBox4.Controls.Add(this.lblAvailableStockQuantity);
             this.groupBox4.Controls.Add(this.label26);
             this.groupBox4.Controls.Add(this.lblAvailableStockDepartment);
@@ -2313,7 +2313,7 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.groupBox6.BackColor = System.Drawing.Color.Teal;
             this.groupBox6.Controls.Add(this.lblAvailableStockName);
             this.groupBox6.Controls.Add(this.lblAvailableStockID);
             this.groupBox6.Controls.Add(this.label39);
