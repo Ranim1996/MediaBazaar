@@ -295,15 +295,15 @@ namespace Media_Bazaar.Classes
             }
         }
 
-        // not used till now.
-        //public List<DBRestockRequest> GetAllRejectedRestock()
-        //{
-        //    using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-        //    {
-        //        var output = connection.Query<DBRestockRequest>($"SELECT * FROM RestockRequest WHERE AdminConfirmation ='CONFIRMED'").ToList();
-        //        return output;
-        //    }
-        //}
+        // Get all rejected requests.
+        public List<DBRestockRequest> GetAllRejectedRestock()
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<DBRestockRequest>($"SELECT * FROM RestockRequest WHERE AdminConfirmation ='REJECTED'").ToList();
+                return output;
+            }
+        }
 
         //update restock request when the AdminConfirmation column is modified "CONFIRMED".
         public void ConfirmRequest(int requestID)

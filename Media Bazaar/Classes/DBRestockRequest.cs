@@ -36,7 +36,7 @@ namespace Media_Bazaar.Classes
 
         public string GetInfo()
         {
-            return $"Stock ID:{RequestID} {NameOfStock} {TypeOfStock} {Departament} {Quantity} {DateOfOrder} {DateOfDelivery} )";
+            return $"Stock ID:{RequestID} {NameOfStock} {TypeOfStock} ";
         }
     }
 }

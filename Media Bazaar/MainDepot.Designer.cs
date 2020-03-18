@@ -63,6 +63,7 @@
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.tbxEmployeeID = new System.Windows.Forms.TextBox();
             this.cmbDepartment = new System.Windows.Forms.ComboBox();
             this.dtpDateDeliver = new System.Windows.Forms.DateTimePicker();
             this.label15 = new System.Windows.Forms.Label();
@@ -138,7 +139,7 @@
             this.tableLayoutPanel31 = new System.Windows.Forms.TableLayoutPanel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.btnViewStock = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.clbAvailableStocks = new System.Windows.Forms.CheckedListBox();
+            this.clbGetAllRequests = new System.Windows.Forms.CheckedListBox();
             this.tabInfoStock = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel32 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel33 = new System.Windows.Forms.TableLayoutPanel();
@@ -153,19 +154,19 @@
             this.tableLayoutPanel35 = new System.Windows.Forms.TableLayoutPanel();
             this.panel15 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.lblAvailableStockQuantity = new System.Windows.Forms.Label();
+            this.lblAllStockQuantity = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.lblAvailableStockDepartment = new System.Windows.Forms.Label();
-            this.lblAvailableStockDeliverDate = new System.Windows.Forms.Label();
-            this.lblAvailableStockOrderDate = new System.Windows.Forms.Label();
-            this.lblAvailableStockType = new System.Windows.Forms.Label();
+            this.lblAllStockDepartment = new System.Windows.Forms.Label();
+            this.lblAllStockDeliverDate = new System.Windows.Forms.Label();
+            this.lblAllStockOrderDate = new System.Windows.Forms.Label();
+            this.lblAllStockType = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.lblAvailableStockName = new System.Windows.Forms.Label();
-            this.lblAvailableStockID = new System.Windows.Forms.Label();
+            this.lblAllStockName = new System.Windows.Forms.Label();
+            this.lblAllStockID = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.tableLayoutPanel29 = new System.Windows.Forms.TableLayoutPanel();
@@ -218,7 +219,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.timerChangeMenuColor = new System.Windows.Forms.Timer(this.components);
-            this.tbxEmployeeID = new System.Windows.Forms.TextBox();
+            this.lblAllStatus = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabMakeReq.SuspendLayout();
             this.tableLayoutPanel27.SuspendLayout();
@@ -473,7 +475,7 @@
             this.btnStockTABrequest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnStockTABrequest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnStockTABrequest.BorderRadius = 0;
-            this.btnStockTABrequest.ButtonText = "Stock";
+            this.btnStockTABrequest.ButtonText = "History Stock Requests";
             this.btnStockTABrequest.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStockTABrequest.DisabledColor = System.Drawing.Color.Gray;
             this.btnStockTABrequest.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -498,7 +500,7 @@
             this.btnStockTABrequest.selected = false;
             this.btnStockTABrequest.Size = new System.Drawing.Size(403, 88);
             this.btnStockTABrequest.TabIndex = 6;
-            this.btnStockTABrequest.Text = "Stock";
+            this.btnStockTABrequest.Text = "History Stock Requests";
             this.btnStockTABrequest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnStockTABrequest.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnStockTABrequest.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -594,6 +596,17 @@
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(991, 497);
             this.panel16.TabIndex = 6;
+            // 
+            // tbxEmployeeID
+            // 
+            this.tbxEmployeeID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbxEmployeeID.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.tbxEmployeeID.Location = new System.Drawing.Point(221, 91);
+            this.tbxEmployeeID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxEmployeeID.Name = "tbxEmployeeID";
+            this.tbxEmployeeID.Size = new System.Drawing.Size(91, 30);
+            this.tbxEmployeeID.TabIndex = 22;
             // 
             // cmbDepartment
             // 
@@ -933,7 +946,7 @@
             this.btnStockTABincomingStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnStockTABincomingStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnStockTABincomingStock.BorderRadius = 0;
-            this.btnStockTABincomingStock.ButtonText = "Stock";
+            this.btnStockTABincomingStock.ButtonText = "History Stock Requests";
             this.btnStockTABincomingStock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStockTABincomingStock.DisabledColor = System.Drawing.Color.Gray;
             this.btnStockTABincomingStock.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -958,7 +971,7 @@
             this.btnStockTABincomingStock.selected = false;
             this.btnStockTABincomingStock.Size = new System.Drawing.Size(403, 88);
             this.btnStockTABincomingStock.TabIndex = 6;
-            this.btnStockTABincomingStock.Text = "Stock";
+            this.btnStockTABincomingStock.Text = "History Stock Requests";
             this.btnStockTABincomingStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnStockTABincomingStock.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnStockTABincomingStock.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1265,7 +1278,7 @@
             this.btnStockTABincomingStockDet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnStockTABincomingStockDet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnStockTABincomingStockDet.BorderRadius = 0;
-            this.btnStockTABincomingStockDet.ButtonText = "Stock";
+            this.btnStockTABincomingStockDet.ButtonText = "History Stock Requests";
             this.btnStockTABincomingStockDet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStockTABincomingStockDet.DisabledColor = System.Drawing.Color.Gray;
             this.btnStockTABincomingStockDet.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1290,7 +1303,7 @@
             this.btnStockTABincomingStockDet.selected = false;
             this.btnStockTABincomingStockDet.Size = new System.Drawing.Size(403, 88);
             this.btnStockTABincomingStockDet.TabIndex = 6;
-            this.btnStockTABincomingStockDet.Text = "Stock";
+            this.btnStockTABincomingStockDet.Text = "History Stock Requests";
             this.btnStockTABincomingStockDet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnStockTABincomingStockDet.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnStockTABincomingStockDet.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1761,7 +1774,7 @@
             this.btnStockTABstock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnStockTABstock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnStockTABstock.BorderRadius = 0;
-            this.btnStockTABstock.ButtonText = "Stock";
+            this.btnStockTABstock.ButtonText = "History Stock Requests";
             this.btnStockTABstock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStockTABstock.DisabledColor = System.Drawing.Color.Gray;
             this.btnStockTABstock.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1786,7 +1799,7 @@
             this.btnStockTABstock.selected = false;
             this.btnStockTABstock.Size = new System.Drawing.Size(403, 88);
             this.btnStockTABstock.TabIndex = 6;
-            this.btnStockTABstock.Text = "Stock";
+            this.btnStockTABstock.Text = "History Stock Requests";
             this.btnStockTABstock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnStockTABstock.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnStockTABstock.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1851,7 +1864,7 @@
             // panel13
             // 
             this.panel13.Controls.Add(this.btnViewStock);
-            this.panel13.Controls.Add(this.clbAvailableStocks);
+            this.panel13.Controls.Add(this.clbGetAllRequests);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel13.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel13.Location = new System.Drawing.Point(3, 2);
@@ -1897,18 +1910,18 @@
             this.btnViewStock.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnViewStock.Click += new System.EventHandler(this.btnViewStock_Click);
             // 
-            // clbAvailableStocks
+            // clbGetAllRequests
             // 
-            this.clbAvailableStocks.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.clbGetAllRequests.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.clbAvailableStocks.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.clbAvailableStocks.FormattingEnabled = true;
-            this.clbAvailableStocks.Location = new System.Drawing.Point(109, 57);
-            this.clbAvailableStocks.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.clbAvailableStocks.Name = "clbAvailableStocks";
-            this.clbAvailableStocks.Size = new System.Drawing.Size(1216, 254);
-            this.clbAvailableStocks.TabIndex = 0;
+            this.clbGetAllRequests.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.clbGetAllRequests.FormattingEnabled = true;
+            this.clbGetAllRequests.Location = new System.Drawing.Point(109, 57);
+            this.clbGetAllRequests.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.clbGetAllRequests.Name = "clbGetAllRequests";
+            this.clbGetAllRequests.Size = new System.Drawing.Size(1236, 329);
+            this.clbGetAllRequests.TabIndex = 0;
             // 
             // tabInfoStock
             // 
@@ -2092,7 +2105,7 @@
             this.btnStockTABstockInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnStockTABstockInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnStockTABstockInfo.BorderRadius = 0;
-            this.btnStockTABstockInfo.ButtonText = "Stock";
+            this.btnStockTABstockInfo.ButtonText = "History Stock Requests";
             this.btnStockTABstockInfo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStockTABstockInfo.DisabledColor = System.Drawing.Color.Gray;
             this.btnStockTABstockInfo.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -2117,7 +2130,7 @@
             this.btnStockTABstockInfo.selected = false;
             this.btnStockTABstockInfo.Size = new System.Drawing.Size(403, 88);
             this.btnStockTABstockInfo.TabIndex = 6;
-            this.btnStockTABstockInfo.Text = "Stock";
+            this.btnStockTABstockInfo.Text = "History Stock Requests";
             this.btnStockTABstockInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnStockTABstockInfo.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnStockTABstockInfo.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2195,12 +2208,14 @@
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.Teal;
-            this.groupBox4.Controls.Add(this.lblAvailableStockQuantity);
+            this.groupBox4.Controls.Add(this.lblAllStatus);
+            this.groupBox4.Controls.Add(this.label20);
+            this.groupBox4.Controls.Add(this.lblAllStockQuantity);
             this.groupBox4.Controls.Add(this.label26);
-            this.groupBox4.Controls.Add(this.lblAvailableStockDepartment);
-            this.groupBox4.Controls.Add(this.lblAvailableStockDeliverDate);
-            this.groupBox4.Controls.Add(this.lblAvailableStockOrderDate);
-            this.groupBox4.Controls.Add(this.lblAvailableStockType);
+            this.groupBox4.Controls.Add(this.lblAllStockDepartment);
+            this.groupBox4.Controls.Add(this.lblAllStockDeliverDate);
+            this.groupBox4.Controls.Add(this.lblAllStockOrderDate);
+            this.groupBox4.Controls.Add(this.lblAllStockType);
             this.groupBox4.Controls.Add(this.label31);
             this.groupBox4.Controls.Add(this.label32);
             this.groupBox4.Controls.Add(this.label33);
@@ -2213,14 +2228,14 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Stock Details:";
             // 
-            // lblAvailableStockQuantity
+            // lblAllStockQuantity
             // 
-            this.lblAvailableStockQuantity.AutoSize = true;
-            this.lblAvailableStockQuantity.Location = new System.Drawing.Point(175, 212);
-            this.lblAvailableStockQuantity.Name = "lblAvailableStockQuantity";
-            this.lblAvailableStockQuantity.Size = new System.Drawing.Size(47, 23);
-            this.lblAvailableStockQuantity.TabIndex = 12;
-            this.lblAvailableStockQuantity.Text = "Info";
+            this.lblAllStockQuantity.AutoSize = true;
+            this.lblAllStockQuantity.Location = new System.Drawing.Point(175, 212);
+            this.lblAllStockQuantity.Name = "lblAllStockQuantity";
+            this.lblAllStockQuantity.Size = new System.Drawing.Size(47, 23);
+            this.lblAllStockQuantity.TabIndex = 12;
+            this.lblAllStockQuantity.Text = "Info";
             // 
             // label26
             // 
@@ -2231,41 +2246,41 @@
             this.label26.TabIndex = 11;
             this.label26.Text = "Quantity:";
             // 
-            // lblAvailableStockDepartment
+            // lblAllStockDepartment
             // 
-            this.lblAvailableStockDepartment.AutoSize = true;
-            this.lblAvailableStockDepartment.Location = new System.Drawing.Point(175, 132);
-            this.lblAvailableStockDepartment.Name = "lblAvailableStockDepartment";
-            this.lblAvailableStockDepartment.Size = new System.Drawing.Size(47, 23);
-            this.lblAvailableStockDepartment.TabIndex = 10;
-            this.lblAvailableStockDepartment.Text = "Info";
+            this.lblAllStockDepartment.AutoSize = true;
+            this.lblAllStockDepartment.Location = new System.Drawing.Point(175, 132);
+            this.lblAllStockDepartment.Name = "lblAllStockDepartment";
+            this.lblAllStockDepartment.Size = new System.Drawing.Size(47, 23);
+            this.lblAllStockDepartment.TabIndex = 10;
+            this.lblAllStockDepartment.Text = "Info";
             // 
-            // lblAvailableStockDeliverDate
+            // lblAllStockDeliverDate
             // 
-            this.lblAvailableStockDeliverDate.AutoSize = true;
-            this.lblAvailableStockDeliverDate.Location = new System.Drawing.Point(897, 132);
-            this.lblAvailableStockDeliverDate.Name = "lblAvailableStockDeliverDate";
-            this.lblAvailableStockDeliverDate.Size = new System.Drawing.Size(47, 23);
-            this.lblAvailableStockDeliverDate.TabIndex = 9;
-            this.lblAvailableStockDeliverDate.Text = "Info";
+            this.lblAllStockDeliverDate.AutoSize = true;
+            this.lblAllStockDeliverDate.Location = new System.Drawing.Point(897, 132);
+            this.lblAllStockDeliverDate.Name = "lblAllStockDeliverDate";
+            this.lblAllStockDeliverDate.Size = new System.Drawing.Size(47, 23);
+            this.lblAllStockDeliverDate.TabIndex = 9;
+            this.lblAllStockDeliverDate.Text = "Info";
             // 
-            // lblAvailableStockOrderDate
+            // lblAllStockOrderDate
             // 
-            this.lblAvailableStockOrderDate.AutoSize = true;
-            this.lblAvailableStockOrderDate.Location = new System.Drawing.Point(895, 57);
-            this.lblAvailableStockOrderDate.Name = "lblAvailableStockOrderDate";
-            this.lblAvailableStockOrderDate.Size = new System.Drawing.Size(47, 23);
-            this.lblAvailableStockOrderDate.TabIndex = 7;
-            this.lblAvailableStockOrderDate.Text = "Info";
+            this.lblAllStockOrderDate.AutoSize = true;
+            this.lblAllStockOrderDate.Location = new System.Drawing.Point(895, 57);
+            this.lblAllStockOrderDate.Name = "lblAllStockOrderDate";
+            this.lblAllStockOrderDate.Size = new System.Drawing.Size(47, 23);
+            this.lblAllStockOrderDate.TabIndex = 7;
+            this.lblAllStockOrderDate.Text = "Info";
             // 
-            // lblAvailableStockType
+            // lblAllStockType
             // 
-            this.lblAvailableStockType.AutoSize = true;
-            this.lblAvailableStockType.Location = new System.Drawing.Point(173, 57);
-            this.lblAvailableStockType.Name = "lblAvailableStockType";
-            this.lblAvailableStockType.Size = new System.Drawing.Size(47, 23);
-            this.lblAvailableStockType.TabIndex = 8;
-            this.lblAvailableStockType.Text = "Info";
+            this.lblAllStockType.AutoSize = true;
+            this.lblAllStockType.Location = new System.Drawing.Point(173, 57);
+            this.lblAllStockType.Name = "lblAllStockType";
+            this.lblAllStockType.Size = new System.Drawing.Size(47, 23);
+            this.lblAllStockType.TabIndex = 8;
+            this.lblAllStockType.Text = "Info";
             // 
             // label31
             // 
@@ -2306,8 +2321,8 @@
             // groupBox6
             // 
             this.groupBox6.BackColor = System.Drawing.Color.Teal;
-            this.groupBox6.Controls.Add(this.lblAvailableStockName);
-            this.groupBox6.Controls.Add(this.lblAvailableStockID);
+            this.groupBox6.Controls.Add(this.lblAllStockName);
+            this.groupBox6.Controls.Add(this.lblAllStockID);
             this.groupBox6.Controls.Add(this.label39);
             this.groupBox6.Controls.Add(this.label40);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
@@ -2318,23 +2333,23 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Stock Info:";
             // 
-            // lblAvailableStockName
+            // lblAllStockName
             // 
-            this.lblAvailableStockName.AutoSize = true;
-            this.lblAvailableStockName.Location = new System.Drawing.Point(908, 78);
-            this.lblAvailableStockName.Name = "lblAvailableStockName";
-            this.lblAvailableStockName.Size = new System.Drawing.Size(47, 23);
-            this.lblAvailableStockName.TabIndex = 6;
-            this.lblAvailableStockName.Text = "Info";
+            this.lblAllStockName.AutoSize = true;
+            this.lblAllStockName.Location = new System.Drawing.Point(908, 78);
+            this.lblAllStockName.Name = "lblAllStockName";
+            this.lblAllStockName.Size = new System.Drawing.Size(47, 23);
+            this.lblAllStockName.TabIndex = 6;
+            this.lblAllStockName.Text = "Info";
             // 
-            // lblAvailableStockID
+            // lblAllStockID
             // 
-            this.lblAvailableStockID.AutoSize = true;
-            this.lblAvailableStockID.Location = new System.Drawing.Point(145, 78);
-            this.lblAvailableStockID.Name = "lblAvailableStockID";
-            this.lblAvailableStockID.Size = new System.Drawing.Size(47, 23);
-            this.lblAvailableStockID.TabIndex = 5;
-            this.lblAvailableStockID.Text = "Info";
+            this.lblAllStockID.AutoSize = true;
+            this.lblAllStockID.Location = new System.Drawing.Point(145, 78);
+            this.lblAllStockID.Name = "lblAllStockID";
+            this.lblAllStockID.Size = new System.Drawing.Size(47, 23);
+            this.lblAllStockID.TabIndex = 5;
+            this.lblAllStockID.Text = "Info";
             // 
             // label39
             // 
@@ -3356,16 +3371,23 @@
             this.timerChangeMenuColor.Interval = 10;
             this.timerChangeMenuColor.Tick += new System.EventHandler(this.timerChangeMenuColor_Tick);
             // 
-            // tbxEmployeeID
+            // lblAllStatus
             // 
-            this.tbxEmployeeID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbxEmployeeID.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.tbxEmployeeID.Location = new System.Drawing.Point(221, 91);
-            this.tbxEmployeeID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbxEmployeeID.Name = "tbxEmployeeID";
-            this.tbxEmployeeID.Size = new System.Drawing.Size(91, 30);
-            this.tbxEmployeeID.TabIndex = 22;
+            this.lblAllStatus.AutoSize = true;
+            this.lblAllStatus.Location = new System.Drawing.Point(897, 212);
+            this.lblAllStatus.Name = "lblAllStatus";
+            this.lblAllStatus.Size = new System.Drawing.Size(47, 23);
+            this.lblAllStatus.TabIndex = 14;
+            this.lblAllStatus.Text = "Info";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(749, 212);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(70, 23);
+            this.label20.TabIndex = 13;
+            this.label20.Text = "Status:";
             // 
             // MainDepot
             // 
@@ -3569,7 +3591,7 @@
         private System.Windows.Forms.ComboBox cmbType;
         private Bunifu.Framework.UI.BunifuFlatButton btnMakeRequest;
         private Bunifu.Framework.UI.BunifuFlatButton btnViewStock;
-        private System.Windows.Forms.CheckedListBox clbAvailableStocks;
+        private System.Windows.Forms.CheckedListBox clbGetAllRequests;
         private System.Windows.Forms.Panel panel16;
         private Bunifu.Framework.UI.BunifuFlatButton btnLogOutTABrequest;
         private Bunifu.Framework.UI.BunifuFlatButton btnLogOutTABincomingStock;
@@ -3608,21 +3630,23 @@
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label lblAvailableStockQuantity;
+        private System.Windows.Forms.Label lblAllStockQuantity;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label lblAvailableStockDepartment;
-        private System.Windows.Forms.Label lblAvailableStockDeliverDate;
-        private System.Windows.Forms.Label lblAvailableStockOrderDate;
-        private System.Windows.Forms.Label lblAvailableStockType;
+        private System.Windows.Forms.Label lblAllStockDepartment;
+        private System.Windows.Forms.Label lblAllStockDeliverDate;
+        private System.Windows.Forms.Label lblAllStockOrderDate;
+        private System.Windows.Forms.Label lblAllStockType;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Label lblAvailableStockName;
-        private System.Windows.Forms.Label lblAvailableStockID;
+        private System.Windows.Forms.Label lblAllStockName;
+        private System.Windows.Forms.Label lblAllStockID;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.TextBox tbxEmployeeID;
+        private System.Windows.Forms.Label lblAllStatus;
+        private System.Windows.Forms.Label label20;
     }
 }

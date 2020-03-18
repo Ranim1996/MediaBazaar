@@ -35,7 +35,7 @@ namespace Media_Bazaar
             UpdateConfirmedRestockInfo();
             UpdateDepartamentInfo();
             UpdateEmployeeIDInfo();
-            UpdateStockInfo();
+            UpdateAllStockInfo();
         }
 
         private void UpdateConfirmedRestockInfo()
@@ -128,12 +128,25 @@ namespace Media_Bazaar
             }
         }
 
+        private void UpdateAllStockInfo()
+        {
+            this.clbGetAllRequests.Items.Clear();
+            DataAccess db = new DataAccess();
+
+            incomingRestockRequests = db.GetAllRequests();
+
+            foreach (DBRestockRequest dBr in incomingRestockRequests)
+            {
+                this.clbGetAllRequests.Items.Add(dBr.GetInfo());
+            }
+        }
+
         private void btnViewStock_Click(object sender, EventArgs e)
         {
             //INFORMATION about stock MUST be parsed in this method
             tabControl1.SelectedTab = tabInfoStock;
 
-            if (this.clbAvailableStocks.CheckedItems.Count == 0)
+            if (this.clbGetAllRequests.CheckedItems.Count == 0)
             {
                 MessageBox.Show("Please select a stock!");
             }
@@ -141,9 +154,9 @@ namespace Media_Bazaar
             else
             {
                 UpdateAvailableStockDetails();
-                while (clbAvailableStocks.CheckedIndices.Count > 0)
+                while (clbGetAllRequests.CheckedIndices.Count > 0)
                 {
-                    clbAvailableStocks.SetItemChecked(clbAvailableStocks.CheckedIndices[0], false);
+                    clbGetAllRequests.SetItemChecked(clbGetAllRequests.CheckedIndices[0], false);
                 }
             }
         }
@@ -155,19 +168,20 @@ namespace Media_Bazaar
 
             foreach (int i in restockID)
             {
-                if (this.clbAvailableStocks.SelectedItem != null)
+                if (this.clbGetAllRequests.SelectedItem != null)
                 {
-                    string stock = this.clbAvailableStocks.GetItemText(this.clbAvailableStocks.SelectedItem);
+                    string stock = this.clbGetAllRequests.GetItemText(this.clbGetAllRequests.SelectedItem);
 
                     if (stock.Contains($"ID:{i}"))
                     {
-                        this.lblAvailableStockID.Text = db.GetDBStockIDById(i);
-                        this.lblAvailableStockName.Text = db.GetDBStockNameById(i);
-                        this.lblAvailableStockType.Text = db.GetDBStockTypeById(i);
-                        this.lblAvailableStockDepartment.Text = db.GetDBDepartmentByStockId(i);
-                        this.lblAvailableStockQuantity.Text = db.GetDBStockQuantityById(i);
-                        this.lblAvailableStockOrderDate.Text = db.GetDBStockOrderDateById(i);
-                        this.lblAvailableStockDeliverDate.Text = db.GetDBStockDeliverDateById(i);
+                        this.lblAllStockID.Text = db.GetDBStockIDById(i);
+                        this.lblAllStockName.Text = db.GetDBStockNameById(i);
+                        this.lblAllStockType.Text = db.GetDBStockTypeById(i);
+                        this.lblAllStockDepartment.Text = db.GetDBDepartmentByStockId(i);
+                        this.lblAllStockQuantity.Text = db.GetDBStockQuantityById(i);
+                        this.lblAllStockOrderDate.Text = db.GetDBStockOrderDateById(i);
+                        this.lblAllStockDeliverDate.Text = db.GetDBStockDeliverDateById(i);
+                        this.lblAllStatus.Text = db.GetDBStockStatusById(i);
                     }
                 }
             }
@@ -265,19 +279,6 @@ namespace Media_Bazaar
 
             DataAccess db = new DataAccess();
             this.tbxEmployeeID.Text = db.GetDepotID();
-        }
-
-        private void UpdateStockInfo ()
-        {
-            this.clbAvailableStocks.Items.Clear();
-            DataAccess db = new DataAccess();
-
-            incomingRestockRequests = db.GetAllAvailableStocks();
-
-            foreach (DBRestockRequest dBr in incomingRestockRequests)
-            {
-                this.clbAvailableStocks.Items.Add(dBr.GetInfo());
-            }
         }
 
         //private void BfbtnMakeRequestForExistingStock_Click(object sender, EventArgs e)
