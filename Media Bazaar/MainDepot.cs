@@ -35,7 +35,8 @@ namespace Media_Bazaar
             UpdateConfirmedRestockInfo();
             UpdateDepartamentInfo();
             UpdateEmployeeIDInfo();
-            UpdateAllStockInfo();
+            UpdateAllConfirmedStockInfo();
+            UpdateAllRejectedStockInfo();
         }
 
         private void UpdateConfirmedRestockInfo()
@@ -128,16 +129,29 @@ namespace Media_Bazaar
             }
         }
 
-        private void UpdateAllStockInfo()
+        private void UpdateAllConfirmedStockInfo()
         {
-            this.clbGetAllRequests.Items.Clear();
+            this.clbAllConfirmedRequests.Items.Clear();
             DataAccess db = new DataAccess();
 
-            incomingRestockRequests = db.GetAllRequests();
+            incomingRestockRequests = db.GetAllConfirmedRestock();
 
             foreach (DBRestockRequest dBr in incomingRestockRequests)
             {
-                this.clbGetAllRequests.Items.Add(dBr.GetInfo());
+                this.clbAllConfirmedRequests.Items.Add(dBr.GetInfo());
+            }
+        }
+
+        private void UpdateAllRejectedStockInfo()
+        {
+            this.lbxRejectedRequests.Items.Clear();
+            DataAccess db = new DataAccess();
+
+            incomingRestockRequests = db.GetAllRejectedRestock();
+
+            foreach (DBRestockRequest dBr in incomingRestockRequests)
+            {
+                this.lbxRejectedRequests.Items.Add(dBr.GetInfo());
             }
         }
 
@@ -146,7 +160,7 @@ namespace Media_Bazaar
             //INFORMATION about stock MUST be parsed in this method
             tabControl1.SelectedTab = tabInfoStock;
 
-            if (this.clbGetAllRequests.CheckedItems.Count == 0)
+            if (this.clbAllConfirmedRequests.CheckedItems.Count == 0)
             {
                 MessageBox.Show("Please select a stock!");
             }
@@ -154,9 +168,9 @@ namespace Media_Bazaar
             else
             {
                 UpdateAvailableStockDetails();
-                while (clbGetAllRequests.CheckedIndices.Count > 0)
+                while (clbAllConfirmedRequests.CheckedIndices.Count > 0)
                 {
-                    clbGetAllRequests.SetItemChecked(clbGetAllRequests.CheckedIndices[0], false);
+                    clbAllConfirmedRequests.SetItemChecked(clbAllConfirmedRequests.CheckedIndices[0], false);
                 }
             }
         }
@@ -168,9 +182,9 @@ namespace Media_Bazaar
 
             foreach (int i in restockID)
             {
-                if (this.clbGetAllRequests.SelectedItem != null)
+                if (this.clbAllConfirmedRequests.SelectedItem != null)
                 {
-                    string stock = this.clbGetAllRequests.GetItemText(this.clbGetAllRequests.SelectedItem);
+                    string stock = this.clbAllConfirmedRequests.GetItemText(this.clbAllConfirmedRequests.SelectedItem);
 
                     if (stock.Contains($"ID:{i}"))
                     {
