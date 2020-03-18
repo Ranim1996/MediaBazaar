@@ -365,6 +365,7 @@ namespace Media_Bazaar
                             if (empl.Contains($"ID:{i}"))
                             {
                                 db.FireEmployeeByID(tbExtraInformationTABremoveProfile.Text, i);
+                                tbExtraInformationTABremoveProfile.Clear();
                             }
 
 
@@ -479,6 +480,10 @@ namespace Media_Bazaar
                         if (req.Contains($"ID:{i}"))
                         {
                             db.ConfirmRequest(i);
+                            while (checkedListBox1.CheckedIndices.Count > 0)
+                            {
+                                checkedListBox1.SetItemChecked(checkedListBox1.CheckedIndices[0], false);
+                            }
                         }
                     }
                 }
@@ -510,6 +515,10 @@ namespace Media_Bazaar
                         if (req.Contains($"ID:{i}"))
                         {
                             db.RejectRequest(i);
+                            while (checkedListBox1.CheckedIndices.Count > 0)
+                            {
+                                checkedListBox1.SetItemChecked(checkedListBox1.CheckedIndices[0], false);
+                            }
                         }
                     }
                 }

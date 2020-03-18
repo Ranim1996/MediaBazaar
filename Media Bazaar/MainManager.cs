@@ -333,6 +333,8 @@ namespace Media_Bazaar
             chartEmplAttendance.Series["s1"].Points.AddXY("Present", nrOfPresent);
             chartEmplAttendance.Series["s1"].Points.AddXY("Absent", nrOfAbsent);
             chartEmplAttendance.Series["s1"].Points.AddXY("Late", nrOfLate);
+
+            chartEmplAttendance.Series["s1"]["PieLabelStyle"] = "Disabled";
         }
 
         private void CheckRequests()

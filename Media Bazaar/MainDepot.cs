@@ -97,6 +97,10 @@ namespace Media_Bazaar
             else
             {
                 UpdateStockDetails();
+                while (clbIncomingStock.CheckedIndices.Count > 0)
+                {
+                    clbIncomingStock.SetItemChecked(clbIncomingStock.CheckedIndices[0], false);
+                }
             }
         }
 
@@ -137,6 +141,10 @@ namespace Media_Bazaar
             else
             {
                 UpdateAvailableStockDetails();
+                while (clbAvailableStocks.CheckedIndices.Count > 0)
+                {
+                    clbAvailableStocks.SetItemChecked(clbAvailableStocks.CheckedIndices[0], false);
+                }
             }
         }
 
