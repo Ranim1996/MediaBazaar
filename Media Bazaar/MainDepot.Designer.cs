@@ -63,7 +63,6 @@
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.cmbEmployeeID = new System.Windows.Forms.ComboBox();
             this.cmbDepartment = new System.Windows.Forms.ComboBox();
             this.dtpDateDeliver = new System.Windows.Forms.DateTimePicker();
             this.label15 = new System.Windows.Forms.Label();
@@ -219,6 +218,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.timerChangeMenuColor = new System.Windows.Forms.Timer(this.components);
+            this.tbxEmployeeID = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabMakeReq.SuspendLayout();
             this.tableLayoutPanel27.SuspendLayout();
@@ -576,7 +576,7 @@
             // 
             this.panel16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel16.Controls.Add(this.cmbEmployeeID);
+            this.panel16.Controls.Add(this.tbxEmployeeID);
             this.panel16.Controls.Add(this.cmbDepartment);
             this.panel16.Controls.Add(this.dtpDateDeliver);
             this.panel16.Controls.Add(this.label15);
@@ -594,14 +594,6 @@
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(991, 497);
             this.panel16.TabIndex = 6;
-            // 
-            // cmbEmployeeID
-            // 
-            this.cmbEmployeeID.FormattingEnabled = true;
-            this.cmbEmployeeID.Location = new System.Drawing.Point(221, 90);
-            this.cmbEmployeeID.Name = "cmbEmployeeID";
-            this.cmbEmployeeID.Size = new System.Drawing.Size(100, 30);
-            this.cmbEmployeeID.TabIndex = 22;
             // 
             // cmbDepartment
             // 
@@ -3364,6 +3356,17 @@
             this.timerChangeMenuColor.Interval = 10;
             this.timerChangeMenuColor.Tick += new System.EventHandler(this.timerChangeMenuColor_Tick);
             // 
+            // tbxEmployeeID
+            // 
+            this.tbxEmployeeID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbxEmployeeID.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.tbxEmployeeID.Location = new System.Drawing.Point(221, 91);
+            this.tbxEmployeeID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxEmployeeID.Name = "tbxEmployeeID";
+            this.tbxEmployeeID.Size = new System.Drawing.Size(91, 30);
+            this.tbxEmployeeID.TabIndex = 22;
+            // 
             // MainDepot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -3604,7 +3607,6 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.ComboBox cmbEmployeeID;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label lblAvailableStockQuantity;
         private System.Windows.Forms.Label label26;
@@ -3621,5 +3623,6 @@
         private System.Windows.Forms.Label lblAvailableStockID;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.TextBox tbxEmployeeID;
     }
 }

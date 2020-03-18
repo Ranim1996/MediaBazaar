@@ -122,6 +122,13 @@ namespace Media_Bazaar.Classes
             }
         }
 
+        public string GetDepotID()
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT EmployeeID FROM Employee WHERE Position = 'Depot' ;");
+            }
+        }
 
         //METHODS FOR DEPARTAMENTS
 

@@ -212,9 +212,10 @@ namespace Media_Bazaar
 
         private void BtnMakeRequest_Click(object sender, EventArgs e)
         {
+            DataAccess db = new DataAccess();
 
             string type = this.cmbType.Text.ToString();
-            int idEmp = Convert.ToInt32(this.cmbEmployeeID.Text.ToString());
+            int idEmp = Convert.ToInt32(this.tbxEmployeeID.Text);
             string orderDate = DateTime.Now.ToShortDateString();
             string orderDeliver = this.dtpDateDeliver.Value.ToString("dd/MM/yyyy");
             string name = this.tbxStockName.Text;
@@ -224,8 +225,6 @@ namespace Media_Bazaar
             if (type != " " && name != " " && quantity != 0 && orderDate != " " && orderDeliver != " "
                 && idEmp != 0 && department != " ")
             {
-             
-                 DataAccess db = new DataAccess();
                  db.InsertRequest(idEmp, name, type, department, quantity, orderDate,orderDeliver );
                 MessageBox.Show("The request is sent to the administration.");
                 clearBoxes1();
@@ -235,7 +234,6 @@ namespace Media_Bazaar
         private void clearBoxes1()
         {
             this.cmbType.Text = " ";
-            this.cmbEmployeeID.Text = " ";
             this.tbxStockName.Text = " ";
             this.tbxStockQuantity.Text = " ";
             this.cmbDepartment.Text = " ";
@@ -256,14 +254,17 @@ namespace Media_Bazaar
 
         private void UpdateEmployeeIDInfo ()
         {
-            DataAccess db = new DataAccess();
+            /*DataAccess db = new DataAccess();
 
             employees = db.GetAllEmployees();
 
             foreach (DBEmployee dBE in employees)
             {
                 cmbEmployeeID.Items.Add(dBE.GetID());
-            }
+            }*/
+
+            DataAccess db = new DataAccess();
+            this.tbxEmployeeID.Text = db.GetDepotID();
         }
 
         private void UpdateStockInfo ()
