@@ -3592,16 +3592,16 @@
             this.label23.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.label23.Location = new System.Drawing.Point(28, 178);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(273, 27);
+            this.label23.Size = new System.Drawing.Size(290, 27);
             this.label23.TabIndex = 9;
-            this.label23.Text = "Maximum Number of employees";
+            this.label23.Text = "Minimum Eployee Number:";
             // 
             // tbMinNr
             // 
             this.tbMinNr.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbMinNr.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.tbMinNr.Location = new System.Drawing.Point(324, 108);
+            this.tbMinNr.Location = new System.Drawing.Point(324, 110);
             this.tbMinNr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbMinNr.Name = "tbMinNr";
             this.tbMinNr.Size = new System.Drawing.Size(125, 30);
@@ -3612,9 +3612,9 @@
             this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.label11.Location = new System.Drawing.Point(28, 110);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(257, 27);
+            this.label11.Size = new System.Drawing.Size(290, 27);
             this.label11.TabIndex = 7;
-            this.label11.Text = "Minimum Number of employees";
+            this.label11.Text = "Maximum Employee Number:";
             // 
             // tbDepName
             // 

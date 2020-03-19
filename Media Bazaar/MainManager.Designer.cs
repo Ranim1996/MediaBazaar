@@ -1402,7 +1402,7 @@
             this.chartAttendance.Text = "chart1";
             title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             title3.Name = "Title1";
-            title3.Text = "Attendance";
+            title3.Text = "Attendance For All Employees in the Company";
             this.chartAttendance.Titles.Add(title3);
             // 
             // tabDepartStats
@@ -1818,7 +1818,7 @@
             this.chartRequests.Text = "chart1";
             title4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             title4.Name = "Title1";
-            title4.Text = "Confirmed and Not Requests";
+            title4.Text = "Confirmed, Waiting and Rejected Requests";
             this.chartRequests.Titles.Add(title4);
             // 
             // tabSearchEmpl
