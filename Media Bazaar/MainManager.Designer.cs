@@ -1715,7 +1715,7 @@
             this.btnShiftsTABdepartStats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnShiftsTABdepartStats.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnShiftsTABdepartStats.BorderRadius = 0;
-            this.btnShiftsTABdepartStats.ButtonText = "Shifts";
+            this.btnShiftsTABdepartStats.ButtonText = "Attendance";
             this.btnShiftsTABdepartStats.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShiftsTABdepartStats.DisabledColor = System.Drawing.Color.Gray;
             this.btnShiftsTABdepartStats.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1740,7 +1740,7 @@
             this.btnShiftsTABdepartStats.selected = false;
             this.btnShiftsTABdepartStats.Size = new System.Drawing.Size(337, 49);
             this.btnShiftsTABdepartStats.TabIndex = 1;
-            this.btnShiftsTABdepartStats.Text = "Shifts";
+            this.btnShiftsTABdepartStats.Text = "Attendance";
             this.btnShiftsTABdepartStats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnShiftsTABdepartStats.Textcolor = System.Drawing.Color.White;
             this.btnShiftsTABdepartStats.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);

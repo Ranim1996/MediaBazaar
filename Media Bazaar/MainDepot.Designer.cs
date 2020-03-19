@@ -138,6 +138,8 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel31 = new System.Windows.Forms.TableLayoutPanel();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.lbxRejectedRequests = new System.Windows.Forms.ListBox();
             this.btnViewStock = new Bunifu.Framework.UI.BunifuFlatButton();
             this.clbAllConfirmedRequests = new System.Windows.Forms.CheckedListBox();
@@ -222,8 +224,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.timerChangeMenuColor = new System.Windows.Forms.Timer(this.components);
-            this.label10 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabMakeReq.SuspendLayout();
             this.tableLayoutPanel27.SuspendLayout();
@@ -1384,7 +1384,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.Teal;
+            this.groupBox3.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.groupBox3.Controls.Add(this.lblStatus);
             this.groupBox3.Controls.Add(this.label25);
             this.groupBox3.Controls.Add(this.lblQuantity);
@@ -1515,7 +1515,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.Teal;
+            this.groupBox2.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.groupBox2.Controls.Add(this.lblEID);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
@@ -1546,7 +1546,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Teal;
+            this.groupBox1.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.groupBox1.Controls.Add(this.lblSName);
             this.groupBox1.Controls.Add(this.lblSID);
             this.groupBox1.Controls.Add(this.label9);
@@ -1878,6 +1878,26 @@
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(1436, 549);
             this.panel13.TabIndex = 1;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label23.Location = new System.Drawing.Point(896, 69);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(229, 23);
+            this.label23.TabIndex = 7;
+            this.label23.Text = "Rejected Stock Requests:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label10.Location = new System.Drawing.Point(116, 70);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(249, 23);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "Confirmed Stock Requests:";
             // 
             // lbxRejectedRequests
             // 
@@ -2223,7 +2243,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.BackColor = System.Drawing.Color.Teal;
+            this.groupBox4.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.groupBox4.Controls.Add(this.lblAllStatus);
             this.groupBox4.Controls.Add(this.label20);
             this.groupBox4.Controls.Add(this.lblAllStockQuantity);
@@ -2354,7 +2374,7 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.BackColor = System.Drawing.Color.Teal;
+            this.groupBox6.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.groupBox6.Controls.Add(this.lblAllStockName);
             this.groupBox6.Controls.Add(this.lblAllStockID);
             this.groupBox6.Controls.Add(this.label39);
@@ -3404,26 +3424,6 @@
             this.timerChangeMenuColor.Enabled = true;
             this.timerChangeMenuColor.Interval = 10;
             this.timerChangeMenuColor.Tick += new System.EventHandler(this.timerChangeMenuColor_Tick);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(116, 70);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(249, 23);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "Confirmed Stock Requests:";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label23.Location = new System.Drawing.Point(896, 69);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(229, 23);
-            this.label23.TabIndex = 7;
-            this.label23.Text = "Rejected Stock Requests:";
             // 
             // MainDepot
             // 
