@@ -57,7 +57,7 @@ namespace Media_Bazaar
         private void btnLogin_Click(object sender, EventArgs e)
         {
             user = tbUsername.Text;
-            pass = tbPassword.Text;
+            pass = tbPassword.Text;   
             MySqlConnection conn = new MySqlConnection("Server=studmysql01.fhict.local;Uid=dbi428501;Database=dbi428501;Pwd=1234;");
 
             MySqlCommand cmdAdmin = new MySqlCommand($"SELECT Username, Password FROM Employee WHERE Username = '{user}' AND Password = '{pass}' AND Position='ADMINISTRATOR';", conn);

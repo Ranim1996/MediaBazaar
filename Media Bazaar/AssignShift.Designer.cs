@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.grpBxViewShifts = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnAbsent = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnLate = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnPresent = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -43,7 +44,6 @@
             this.label26 = new System.Windows.Forms.Label();
             this.tbEmployeeIdAssignShift = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.grpBxViewShifts.SuspendLayout();
             this.grpBxAssignShift.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +64,16 @@
             this.grpBxViewShifts.TabIndex = 12;
             this.grpBxViewShifts.TabStop = false;
             this.grpBxViewShifts.Text = "View Shifts";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(151, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(203, 15);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "(click twice on the shift to delete it.";
             // 
             // btnAbsent
             // 
@@ -177,10 +187,10 @@
             // 
             this.lbShifts.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbShifts.FormattingEnabled = true;
-            this.lbShifts.ItemHeight = 24;
+            this.lbShifts.ItemHeight = 19;
             this.lbShifts.Location = new System.Drawing.Point(10, 43);
             this.lbShifts.Name = "lbShifts";
-            this.lbShifts.Size = new System.Drawing.Size(349, 268);
+            this.lbShifts.Size = new System.Drawing.Size(349, 251);
             this.lbShifts.TabIndex = 0;
             this.lbShifts.DoubleClick += new System.EventHandler(this.lbItem_DoubleClick);
             // 
@@ -211,7 +221,7 @@
             this.tbDate.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDate.Location = new System.Drawing.Point(129, 62);
             this.tbDate.Name = "tbDate";
-            this.tbDate.Size = new System.Drawing.Size(230, 32);
+            this.tbDate.Size = new System.Drawing.Size(230, 27);
             this.tbDate.TabIndex = 11;
             // 
             // label1
@@ -220,7 +230,7 @@
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(6, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 24);
+            this.label1.Size = new System.Drawing.Size(50, 19);
             this.label1.TabIndex = 10;
             this.label1.Text = "Date:";
             // 
@@ -262,13 +272,15 @@
             // 
             // cmbBxWorkShiftSunday
             // 
+            this.cmbBxWorkShiftSunday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbBxWorkShiftSunday.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBxWorkShiftSunday.FormattingEnabled = true;
             this.cmbBxWorkShiftSunday.Items.AddRange(new object[] {
             "Afternoon -> 12:00-18:00"});
             this.cmbBxWorkShiftSunday.Location = new System.Drawing.Point(129, 148);
             this.cmbBxWorkShiftSunday.Name = "cmbBxWorkShiftSunday";
-            this.cmbBxWorkShiftSunday.Size = new System.Drawing.Size(230, 32);
+            this.cmbBxWorkShiftSunday.Size = new System.Drawing.Size(230, 27);
             this.cmbBxWorkShiftSunday.TabIndex = 7;
             this.cmbBxWorkShiftSunday.Visible = false;
             // 
@@ -281,7 +293,7 @@
             "Afternoon -> 15:00-18:00"});
             this.cmbBxWorkShiftSaturday.Location = new System.Drawing.Point(129, 148);
             this.cmbBxWorkShiftSaturday.Name = "cmbBxWorkShiftSaturday";
-            this.cmbBxWorkShiftSaturday.Size = new System.Drawing.Size(195, 32);
+            this.cmbBxWorkShiftSaturday.Size = new System.Drawing.Size(195, 27);
             this.cmbBxWorkShiftSaturday.TabIndex = 6;
             this.cmbBxWorkShiftSaturday.Visible = false;
             // 
@@ -295,7 +307,7 @@
             "Evening -> 17:00-22:00"});
             this.cmbBxWorkShiftWeekDay.Location = new System.Drawing.Point(129, 148);
             this.cmbBxWorkShiftWeekDay.Name = "cmbBxWorkShiftWeekDay";
-            this.cmbBxWorkShiftWeekDay.Size = new System.Drawing.Size(195, 32);
+            this.cmbBxWorkShiftWeekDay.Size = new System.Drawing.Size(195, 27);
             this.cmbBxWorkShiftWeekDay.TabIndex = 5;
             this.cmbBxWorkShiftWeekDay.Visible = false;
             // 
@@ -305,7 +317,7 @@
             this.label26.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.Location = new System.Drawing.Point(6, 156);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(115, 24);
+            this.label26.Size = new System.Drawing.Size(92, 19);
             this.label26.TabIndex = 4;
             this.label26.Text = "Work shift:";
             // 
@@ -314,7 +326,7 @@
             this.tbEmployeeIdAssignShift.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbEmployeeIdAssignShift.Location = new System.Drawing.Point(129, 107);
             this.tbEmployeeIdAssignShift.Name = "tbEmployeeIdAssignShift";
-            this.tbEmployeeIdAssignShift.Size = new System.Drawing.Size(230, 32);
+            this.tbEmployeeIdAssignShift.Size = new System.Drawing.Size(230, 27);
             this.tbEmployeeIdAssignShift.TabIndex = 1;
             // 
             // label24
@@ -323,23 +335,13 @@
             this.label24.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.Location = new System.Drawing.Point(6, 110);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(134, 24);
+            this.label24.Size = new System.Drawing.Size(111, 19);
             this.label24.TabIndex = 0;
             this.label24.Text = "Employee ID:";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(151, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(252, 18);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Click twice on the shift to delete it.";
-            // 
             // AssignShift
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(458, 760);

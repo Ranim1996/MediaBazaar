@@ -88,15 +88,15 @@ namespace Media_Bazaar
         private void btnCheckIncomingStock_Click(object sender, EventArgs e)
         {
             //INFORMATION about the incoming stock MUST be parsed in this method
-            tabControl1.SelectedTab = tabIncomingStockDetails;
+            
 
             if (this.clbIncomingStock.CheckedItems.Count == 0)
             {
                 MessageBox.Show("Please select a stock!");
             }
-
             else
             {
+                tabControl1.SelectedTab = tabIncomingStockDetails;
                 UpdateStockDetails();
                 while (clbIncomingStock.CheckedIndices.Count > 0)
                 {
@@ -158,15 +158,14 @@ namespace Media_Bazaar
         private void btnViewStock_Click(object sender, EventArgs e)
         {
             //INFORMATION about stock MUST be parsed in this method
-            tabControl1.SelectedTab = tabInfoStock;
-
+            
             if (this.clbAllConfirmedRequests.CheckedItems.Count == 0)
             {
-                MessageBox.Show("Please select a stock!");
+                MessageBox.Show("Please select a confirmed stock!");
             }
-
             else
             {
+                tabControl1.SelectedTab = tabInfoStock;
                 UpdateAvailableStockDetails();
                 while (clbAllConfirmedRequests.CheckedIndices.Count > 0)
                 {
@@ -242,20 +241,30 @@ namespace Media_Bazaar
         {
             DataAccess db = new DataAccess();
 
-            string type = this.cmbType.Text.ToString();
-            int idEmp = Convert.ToInt32(this.tbxEmployeeID.Text);
-            string orderDate = DateTime.Now.ToShortDateString();
-            string orderDeliver = this.dtpDateDeliver.Value.ToString("dd/MM/yyyy");
-            string name = this.tbxStockName.Text;
-            int quantity = Convert.ToInt32(this.tbxStockQuantity.Text);
-            string department = this.cmbDepartment.Text.ToString();
+            string type = "";
+            int idEmp = -1;
+            string orderDate ;
+            string orderDeliver = "";
+            string name = "";
+            int quantity = -1;
+            string department = "";
 
-            if (type != " " && name != " " && quantity != 0 && orderDate != " " && orderDeliver != " "
-                && idEmp != 0 && department != " ")
+            if (tbxEmployeeID.Text != " " && tbxStockName.Text != " " && tbxStockQuantity.Text != ""  && dtpDateDeliver.Value != null)
             {
-                 db.InsertRequest(idEmp, name, type, department, quantity, orderDate,orderDeliver );
+                idEmp = Convert.ToInt32(tbxEmployeeID.Text);
+                name = tbxStockName.Text;
+                department = this.cmbDepartment.Text.ToString();
+                quantity = Convert.ToInt32(this.tbxStockQuantity.Text);
+                orderDeliver = this.dtpDateDeliver.Value.ToString("dd/MM/yyyy");
+                type = this.cmbType.Text.ToString();
+                orderDate = DateTime.Now.ToShortDateString();
+                db.InsertRequest(idEmp, name, type, department, quantity, orderDate,orderDeliver );
                 MessageBox.Show("The request is sent to the administration.");
                 clearBoxes1();
+            }
+            else
+            {
+                MessageBox.Show("Fill in all fields correctly!");
             }
         }
 

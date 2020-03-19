@@ -260,11 +260,13 @@ namespace Media_Bazaar
                         CreateEmpl(fName, lName, dateOfBirth, email, phoneNr, nationality, pos);
                     }
                 }
+                btnCreateProfile.Visible = true;
             }
             else
             {
                 MessageBox.Show("Fill in all fields correctly.");
             }
+            
         }
 
         //Useable methods for autogenerating username and Pass
@@ -298,6 +300,7 @@ namespace Media_Bazaar
             tbEmployeeID.Clear();
             tbUsername.Clear();
             tbPassword.Clear();
+            btnCreateProfile.Visible = false;
         }
         private void UpdateEmployeeInfo()
         {
@@ -385,8 +388,16 @@ namespace Media_Bazaar
         private void btnCreateDepartment_Click(object sender, EventArgs e)
         {
             DataAccess db = new DataAccess();
-            db.InsertDepartament(tbDepName.Text, Convert.ToInt32(tbMinNr.Text), Convert.ToInt32(tbMaxNr.Text));
-            UpdateDepartamentInfo();
+            if(tbDepName.Text != "" && tbMaxNr.Text != "" && tbMinNr.Text != "")
+            {
+                db.InsertDepartament(tbDepName.Text, Convert.ToInt32(tbMinNr.Text), Convert.ToInt32(tbMaxNr.Text));
+                UpdateDepartamentInfo();
+            }
+            else
+            {
+                MessageBox.Show("Fill in all fields correctly!");
+            }
+            
         }
 
         //Email generator
