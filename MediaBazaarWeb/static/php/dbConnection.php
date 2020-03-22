@@ -12,7 +12,11 @@ try
 }
 catch(PDOException $e)
 {
-    echo "Connection failed: " .$e->getMessage();
+    $cisco_error = 'Try to connect to cisco!';
+    $err_mssg = $e->getMessage();
+    include('db_error.php');
+    exit();
+    #echo "Connection failed: " .$e->getMessage();
 }
 
 ?>

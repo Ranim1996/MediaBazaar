@@ -1,3 +1,21 @@
+<?php 
+  session_start();
+  if(!isset($_SESSION['loggedin'])){
+    header('Location: loginPage.html');
+    exit;
+  }
+  require('static/php/dbConnection.php');
+
+  $username = $_SESSION['username'];
+  $password = $_SESSION['password'];
+
+  $query_employee = "SELECT * FROM employee WHERE Username = '$username' AND Password = '$password' ";
+  $employee_statement = $conn->prepare($query_employee);
+  $employee_statement->execute();
+  $employees = $employee_statement->fetchAll();
+  $employee_statement->closeCursor();  
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,25 +58,38 @@
         <div class="row">
           <img src="static/img/wallpaper.jpg" alt="wallpaper" class="cover-picture">
         </div>
-
+        <?php foreach($employees as $employee) ?>
         <div class="wallpaper-personal-info">
           <div class="wallpaper-box-content-personal-info">
             <div class="wallpaper-title-box-inside">
               <div class="text-edit-personal-info">
-                <h1>Jason Davis</h1>
+               <!-- Name from the database -->
+                <h1><?php  
+                  echo $employee['FirstName'] . " " . $employee['LastName'];
+                ?></h1>
                 <div class="job-position">
                   <i class="ion-ios-man"></i>
-                  <h3>Manager</h3>
+                  <h3><?php echo $employee['Position']; ?></h3>   <!-- Position from the database -->
                 </div>
                 <div class="department">
                   <i class="ion-ios-locate"></i>
-                  <h3>Department Name</h3>
+                  <h3><?php 
+                  if($employee['Departament'] == NULL)
+                  {
+                    $message = "Not yet assigned to department";
+                    echo $message;
+                  }
+                  else
+                  {
+                    echo $employee['Departament'];
+                  }
+                   ?></h3>    <!-- Department from the database -->
                 </div>
+               
                 <div class="started-date">
                   <i class="ion-ios-calendar"></i>
-                  <h3>Started on May 10, 2019</h3>
+                  <h3><?php echo "Borned on: " . $employee['DateOfBirth']; ?></h3>     <!-- Born date from the database -->
                 </div>
-
               </div>
             </div>
           </div>
@@ -102,21 +133,14 @@
           <i class="ion-ios-mail"></i>
           <h3 class="header3-profilePage">Email</h3>
         </div>
-          <p id="mail-written">jason.davis@gmail.com</p>
+          <p id="mail-written"><?php echo $employee['Email']; ?></p>
 
         <div class="phone-number">
           <i class="ion-ios-call"></i>
           <h3 class="header3-profilePage">Mobile</h3>
         </div>
-          <p id="phone-nr">+345 42112442</p>
+          <p id="phone-nr"><?php echo $employee['PhoneNumber']; ?></p>
 
-        <div class="address">
-          <i class="ion-ios-home"></i>
-          <h3 class="header3-profilePage">Address</h3>
-        </div>
-        <p id="address-home">Eindhoven</p>
-        
-        
           <div class="customize-home-section">
             <i class="ion-ios-build  icon-customize icon-customize-contact-section"></i>
           </div>
@@ -137,7 +161,7 @@
           <i class="ion-ios-person"></i>
           <h3 class="header3-profilePage">Username</h3>
         </div>
-          <p>jason.depot@mediabazaar</p>
+          <p><?php echo $employee['Username']; ?></p> 
 
         <div class="password-homePage">
           <i class="ion-ios-key"></i>

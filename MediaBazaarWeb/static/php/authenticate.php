@@ -1,8 +1,9 @@
 <?php 
 
 require('dbConnection.php');
-//header('location: profilePage.php');
- session_start();
+//header('location: homePage.php');
+//include('mediaBazaar/homePage.php');
+session_start();
 
 if(isset($_POST['submit']))
 {
@@ -24,8 +25,10 @@ if(isset($_POST['submit']))
         $count = $statement->rowCount();
         if($count > 0)
         {
-            $_SESSION["username"] = $_POST["username"];
-	        header('Location: /mediaBazaar/homePage.html');
+            $_SESSION['loggedin'] = TRUE;
+		    $_SESSION['password'] = $_POST['password'];
+            $_SESSION['username'] = $_POST["username"];
+	        header('Location: /mediaBazaar/homePage.php');
             exit;
             //echo "Profile page";
         }
