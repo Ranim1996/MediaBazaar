@@ -9,7 +9,7 @@
   $username = $_SESSION['username'];
   $password = $_SESSION['password'];
 
-  $query_employee = "SELECT * FROM employee WHERE Username = '$username' AND Password = '$password' ";
+  $query_employee = "SELECT * FROM employee WHERE Username = '$username' AND Password = '$password'";
   $employee_statement = $conn->prepare($query_employee);
   $employee_statement->execute();
   $employees = $employee_statement->fetchAll();
@@ -104,17 +104,48 @@
           </div>
 
             <div class="content-below-profile-picture">
-              <h2 class="work-shift-title">Work shifts this week</h2>
+            <?php foreach($employees as $employee) ?>
+              <h2 class="work-shift-title">Upcoming work shifts</h2>
               <ul>
-                <li><h4 class="days-work-shifts">Tuesday: 9:00 - 12:00</h4></li>
-                <li><h4 class="days-work-shifts">Tuesday: 9:00 - 12:00</h4></li>
-                <li><h4 class="days-work-shifts">Tuesday: 9:00 - 12:00</h4></li>
-                <li><h4 class="days-work-shifts">Tuesday: 9:00 - 12:00</h4></li>
-                <li><h4 class="days-work-shifts">Tuesday: 9:00 - 12:00</h4></li>
-                <li><h4 class="days-work-shifts">Tuesday: 9:00 - 12:00</h4></li>
-                <li><h4 class="days-work-shifts">Tuesday: 9:00 - 12:00</h4></li>
-                <li><h4 class="days-work-shifts">Tuesday: 9:00 - 12:00</h4></li>
-                <li><h4 class="days-work-shifts">Tuesday: 9:00 - 12:00</h4></li>
+                <?php
+                    $employee_id = $employee['EmployeeID']; 
+                    #the shifts will be taken from the database using the employee id
+                    $query_shift = "SELECT * FROM schedule WHERE EmployeeID = '$employee_id' ";
+                    $shift_statement = $conn->prepare($query_shift);
+                    $shift_statement->execute();
+                    $shifts = $shift_statement->fetchAll();
+                    $shift_statement->closeCursor(); 
+                    
+                    //list only the upcoming shifts
+                    foreach($shifts as $employee_shifts)
+                    {
+                      //get date of today in the same format as the dates are stored in the db
+                      $today_date = date('d/m/Y');
+                      $today_date = explode('/', $today_date);
+                      $date_shift = explode('/', $employee_shifts['Date']);
+                      
+                      if( (($date_shift[2] == $today_date[2]) && ($date_shift[1] == $today_date[1])) && ((int)$date_shift[0] >= (int)$today_date[0]) )
+                      {
+                        echo "<li><h4 class=\"days-work-shifts\">" . $employee_shifts['Date'] . " -> " . $employee_shifts['Shift'] . "</h4></li>";
+                      }
+                      else
+                      {
+                        if( ((int)$date_shift[1] != $today_date[1]) && ((int)$date_shift[1] >= (int)$today_date[1]) && ($date_shift[2] == $today_date[2]) && ( ((int)$date_shift[0] >= (int)$today_date[0]) || ( ((int)$date_shift[0] < (int)$today_date[0]) )   ))
+                        {
+                          echo "<li><h4 class=\"days-work-shifts\">" . $employee_shifts['Date'] . " -> " . $employee_shifts['Shift'] . "</h4></li>";
+                        }
+                        else
+                        {
+                          if( ((int)$date_shift[2] != (int)$today_date[2]) &&  ((int)$date_shift[2] >= (int)$today_date[2]) &&  (  ((int)$date_shift[1] >= (int)$today_date[1]) || ((int)$date_shift[1] < (int)$today_date[1]) ) && ( ((int)$date_shift[0] >= (int)$today_date[0])  || ( (int)$date_shift[0] < (int)$today_date[0]  )   ) )
+                          {
+                            echo "<li><h4 class=\"days-work-shifts\">" . $employee_shifts['Date'] . " -> " . $employee_shifts['Shift'] . "</h4></li>";
+                          }
+                        }
+                      }
+
+                      
+                    }
+                ?>                
               </ul>
             </div>
 

@@ -14,7 +14,8 @@ if(isset($_POST['submit']))
     }
     else
     {
-        $query = "SELECT * FROM employee WHERE username = :username AND password = :password";
+        $query = "SELECT * FROM employee WHERE username = :username AND password = :password AND ReasonsForRelease is NULL";
+        //Borga has to add errors using javascript if the account credentials are incorrect
         $statement = $conn->prepare($query);
         $statement->execute(
             array(
@@ -35,6 +36,7 @@ if(isset($_POST['submit']))
         else
         {
             $message = "Wrong data inserted";
+            //or the employee is fired
             echo $message;
         }
     }
