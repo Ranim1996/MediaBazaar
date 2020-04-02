@@ -454,6 +454,34 @@ nav {
   margin: 0 auto;
 }
 
+.send-email{
+  max-width: 1140px;
+  margin: 0 auto;
+  margin-bottom: 5%;
+}
+
+.send-email textarea{
+width: 50%;
+min-height: 5rem;
+max-width: 60%;
+}
+
+.submit{
+border-radius:7px;
+padding: 1% 3%;    
+font-size: 1.5rem;
+color: white;
+font: bold;
+background-color: #207EB1;
+border: none;
+margin-left: 4%;
+}
+
+.submit:hover{
+cursor: pointer;
+background: #044263;
+}
+
 /*--------------CUSTOMIZE DETAILS ICON-------*/
 
 /*.icon-customize-contact-section{

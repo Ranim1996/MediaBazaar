@@ -111,8 +111,9 @@
 
     <aside class="send-email">
       <form action="./SendEmail.php" method="POST">
-          <h2 class="home-content">Make an inquiry</h2>                
-              <textarea cols="30" rows="10" id="emailContent" name="emailContent" required></textarea>  
+            <h2 class="home-content">Make an inquiry</h2>        
+            <input type="text" name="Subject" placeholder="Enter Subject">
+            <textarea cols="30" rows="10" id="emailContent" name="emailContent" required></textarea>  
           <input class="submit" type="Submit" value="Send">
       </form>
   </aside>
