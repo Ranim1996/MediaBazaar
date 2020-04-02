@@ -142,8 +142,6 @@
                           }
                         }
                       }
-
-                      
                     }
                 ?>                
               </ul>
@@ -159,25 +157,35 @@
     <section class="home-page-section">
       <div class="row">
         <h2 class="home-content">Contact</h2>
-
+        
+      <div class="email-section">
         <div class="email">
           <i class="ion-ios-mail"></i>
           <h3 class="header3-profilePage">Email</h3>
         </div>
+        <div class="email-update" name="email">
           <p id="mail-written"><?php echo $employee['Email']; ?></p>
-
+        </div>
+        <div class="customize-home-section">
+           <i id="custom-contact-email" class="ion-ios-build  icon-customize icon-customize-contact-section"></i>
+        </div>
+      </div>
+        
+          
+      <div class="phone-section">
         <div class="phone-number">
           <i class="ion-ios-call"></i>
           <h3 class="header3-profilePage">Mobile</h3>
         </div>
+        <div class="phone-update" name="email">
           <p id="phone-nr"><?php echo $employee['PhoneNumber']; ?></p>
+        </div>
+        <div class="customize-home-section">
+          <i id="custom-contact-phone" class="ion-ios-build  icon-customize icon-customize-contact-section"></i>
+        </div>
+      </div>
+        
 
-          <div class="customize-home-section">
-            <i class="ion-ios-build  icon-customize icon-customize-contact-section"></i>
-          </div>
-       
-        
-        
       </div>
     </section>
 
@@ -188,21 +196,29 @@
       <div class="row">
         <h2 class="home-content">Account Credentials</h2>
 
-        <div class="username-homePage">
-          <i class="ion-ios-person"></i>
-          <h3 class="header3-profilePage">Username</h3>
+        <div class="username-section">
+          <div class="username-homePage">
+            <i class="ion-ios-person"></i>
+            <h3 class="header3-profilePage">Username</h3>
+          </div>
+          <p id="username"><?php echo $employee['Username']; ?></p> 
+          <div class="customize-home-section">
+            <i id="custom-username" class="ion-ios-build  icon-customize icon-customize-contact-section"></i>
+          </div>
         </div>
-          <p><?php echo $employee['Username']; ?></p> 
-
-        <div class="password-homePage">
-          <i class="ion-ios-key"></i>
-          <h3 class="header3-profilePage">Password</h3>
-        </div>
+        
+        <div class="password-section">
+          <div class="password-homePage">
+            <i class="ion-ios-key"></i>
+            <h3 class="header3-profilePage">Password</h3>
+          </div>
           <p>***************</p>
 
           <div class="customize-home-section">
             <i class="ion-ios-build  icon-customize icon-customize-contact-section"></i>
           </div>
+        </div>
+        
       </div>
     </section>
 
@@ -212,19 +228,22 @@
     <section class="home-page-section">
       <div class="row">
         <h2 class=" home-content">About</h2>
-
-        <div class="biography">
-          <h3>Bio</h3>
-        </div>
-        <p id="personal-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        
+        <div class="bio-section">
+          <div class="biography">
+            <h3>Bio</h3>
+          </div>
+          <p id="personal-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Cras vel maximus felis. Integer malesuada lorem libero, vel ultricies ipsum
           ultrices eget. Quisque molestie lectus ut dui scelerisque aliquet. Donec vestibulum
-          e. </p>
+          e. 
+          </p>
 
-        <div class="customize-home-section">
-          <i class="ion-ios-build  icon-customize icon-customize-bio-section"></i>
+          <div class="customize-home-section">
+          <i id="custom-bio" class="ion-ios-build  icon-customize icon-customize-bio-section"></i>
+          </div>
         </div>
-        
+
       </div>
     </section>
 
@@ -255,6 +274,6 @@
         </p>
       </div>
     </footer>
-
+    <script src="static/js/updateProfile.js"></script>
 </body>
 </html>
