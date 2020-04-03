@@ -141,14 +141,14 @@ ul.list li input {
 }
 
 ul.list li input[type="submit"], 
-#formUpdate li input[type="submit"] 
+.formUpdate li input[type="submit"] 
 {
   background-color: #207eb1;
   color: #fff;
   transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
 ul.list li input[type="submit"]:hover, 
- #formUpdate li input[type="submit"]:hover
+ .formUpdate li input[type="submit"]:hover
 {
   background-color: #1a5073;
   border: 0px solid #fff;
@@ -392,9 +392,16 @@ nav {
 .customize-home-section i {
   float: right;
 }
-
+.row .update-fields{
+  padding-left: 27px;
+}
+.ion-ios-build{
+  cursor: pointer;
+}
 /*--------------CONTACT DETAILS - JAVASCRIPT-------*/
-#formUpdate li{
+/*--- design for all text fields on the profile page ---*/
+
+.formUpdate li, #list-label-current-pass{
   list-style: none;
   color: #555555;
   margin-bottom: 10px;
@@ -402,11 +409,34 @@ nav {
   border: none;
   background-color: #fff;
 }
-#formUpdate li input{
+#original-input-pass{
+  margin-bottom: 20px;
+}
+.formUpdate li input,
+ .update-password .input-pass,
+ #textArea-bio{
   border-radius: 5px;
   padding: 7px 10px;
 }
+.update-password .input-pass{
+  background-color: #fff;
+}
+#password-strength{
+  margin-left: 10px;
+}
 
+/*-- eye icon for showing password --*/
+.fa{
+  margin-left: 10px;
+  color: #999999;
+  cursor: pointer;
+}
+.fa.active{
+  color: #207eb1;
+}
+.updateBtn{
+  cursor: pointer;
+}
 
 /*--------------ACCOUNT CREDENTIALS-------*/
 .username-section {
@@ -419,6 +449,10 @@ nav {
   text-transform: uppercase;
   margin-bottom: 15px;
 }
+#check + label{
+  display: inline-block;
+}
+
 .password-homePage i,
 .password-homePage h3 {
   display: inline-block;
@@ -436,10 +470,23 @@ nav {
   margin-bottom: 5px;
 }
 #personal-bio {
-  padding-left: 0;
+  padding-left: 27px;
   color: #555555;
 }
-
+.biography i{
+  margin-right: 5px;
+}
+.biography i,
+.biography h3 {
+  display: inline-block;
+  color: #555555;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+#textArea-bio{
+  width: 100%;
+  height: 10%;
+}
 /*--------------ShiftPage-------*/
 
 .shifts i,

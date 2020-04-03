@@ -202,20 +202,26 @@
             <h3 class="header3-profilePage">Username</h3>
           </div>
           <p id="username"><?php echo $employee['Username']; ?></p> 
+          
           <div class="customize-home-section">
             <i id="custom-username" class="ion-ios-build  icon-customize icon-customize-contact-section"></i>
           </div>
         </div>
         
-        <div class="password-section">
+        <div id="password-reference" class="password-section">
           <div class="password-homePage">
             <i class="ion-ios-key"></i>
             <h3 class="header3-profilePage">Password</h3>
           </div>
-          <p>***************</p>
+          <div class="update-password update-fields">
+            <input class="input-pass" type="password" id="original-input-pass" value="<?php echo $employee['Password']; ?>" disabled>
+            <input type="checkbox" id="check" name="check-pass" value="Show password"><label id="label-show-pass" for="check">Show password</label> 
+            <div id="feedback"></div>
+          </div>
+          
 
           <div class="customize-home-section">
-            <i class="ion-ios-build  icon-customize icon-customize-contact-section"></i>
+            <i id="custom-password" class="ion-ios-build  icon-customize icon-customize-contact-section"></i>
           </div>
         </div>
         
@@ -231,6 +237,7 @@
         
         <div class="bio-section">
           <div class="biography">
+            <i class="ion-ios-book"></i>
             <h3>Bio</h3>
           </div>
           <p id="personal-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
