@@ -501,13 +501,14 @@ nav {
   margin: 0 auto;
 }
 
-.send-email{
+.send-email {
   max-width: 1140px;
   margin: 0 auto;
   margin-bottom: 5%;
 }
 
 .send-email textarea{
+padding: 1%;
 width: 50%;
 min-height: 5rem;
 max-width: 60%;

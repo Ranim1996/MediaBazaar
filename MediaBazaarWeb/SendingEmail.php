@@ -1,23 +1,28 @@
 <?php
+    $msg = "";
+	use PHPMailer\PHPMailer\PHPMailer;
+	include_once "PHPMailer/PHPMailer.php";
+	include_once "PHPMailer/Exception.php";
 
-session_start();
+	if (isset($_POST['submit'])) {
+		$subject = $_POST['subject'];
+		$email = $_POST['email'];
+		$message = $_POST['message'];
 
-require('static/php/dbConnection.php');
-
-$username = $_SESSION['username'];
-$password = $_SESSION['password'];
-
-$query_employee = "SELECT * FROM employee WHERE Username = '$username' AND Password = '$password'";
-$employee_statement = $conn->prepare($query_employee);
-$employee_statement->execute();
-$employees = $employee_statement->fetchAll();
-$employee_statement->closeCursor();  
-
-
-$emailAddress="media.bazaar2020@gmail.com";
-$subject=$_POST['Subject'];
-$emailContent=$_POST['emailContent'];
-
-mail($emailAddress,$subject, $emailContent); 
-
+		$mail = new PHPMailer();
+		$mail->addAddress('media.bazaar2020@gmail.com');
+		$mail->setFrom($email);
+		$mail->Subject = $subject;
+		$mail->isHTML(true);
+		$mail->Body = $message;
+			
+		if ($mail->send())
+		{
+			$msg = "Your email has been sent, thank you!";
+		}	
+		else
+		{
+			$msg = "Please try again!";
+		}			
+	}
 ?>

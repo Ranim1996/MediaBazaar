@@ -1,8 +1,13 @@
 <?php 
+$msg="";
   session_start();
+  
+  // use PHPMailer\PHPMailer;
+
   if(!isset($_SESSION['loggedin'])){
     header('Location: loginPage.html');
     exit;
+    
   }
   require('static/php/dbConnection.php');
 
@@ -14,6 +19,57 @@
   $employee_statement->execute();
   $employees = $employee_statement->fetchAll();
   $employee_statement->closeCursor();  
+  
+  if (isset($_POST['Submit']))
+  {
+    require 'phpmailer/PHPMailerAutoload.php';
+
+      $subject=$_POST['subject'];
+      $emailContent=$_POST['emailContent'];
+
+      $mail = new PHPMailer();
+      $mail->addAddress('media.bazaar2020@gmail.com');
+      $mail->setFrom('media.bazaar2020@gmail.com', $username);
+      $mail->Subject = $subject;
+      $mail->isHTML(true);
+      $mail->Body = $emailContent;
+
+      $msg="in the fuction";
+      if (!$mail->send())
+      {
+        $msg="Something wrong happened!";
+      }
+      else
+      {
+        $msg= "Mail sent";
+      }
+    }
+  
+
+  // include_once "PHPMailer/PHPMailer.php";
+  // include_once "PHPMailer/Exception.php";
+  
+  // $msg="";
+  // if (isset($_POST['Submit']))
+  // {
+  //     $subject=$_POST['subject'];
+  //     $emailContent=$_POST['emailContent'];
+  //     $email = "media.bazaar2020@gmail.com";
+
+  //     $mail=new PHPMailer();
+  //     $mail->addAddress('media.bazaar2020@gmail.com');
+  //     $mail->setFrom($email);
+  //     $mail->Subject=$subject; 
+  //     $mail->isHTML(true);
+  //     $mail->Body=$emailContent; 
+
+  //     if ($mail->send()){
+  //       $msg="Your message was sent";
+  //     }
+  //     else{
+  //       $msg="Please try again";
+  //     }   
+  // }
 ?>
 
 <!DOCTYPE html>
@@ -27,6 +83,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="HandheldFriendly" content="true">
   <title>Media Bazaar</title>
 </head>
@@ -253,6 +310,17 @@
 
       </div>
     </section>
+
+    <aside class="send-email">
+      
+          <h2 class="home-content">Make an inquiry</h2>  
+          <form action="./homePage.php" method="POST"> 
+              <p><?php echo "$msg"?></p>
+              <input name="subject" placeholder="Subject..."><br>         
+              <textarea cols="30" rows="10" id="emailContent" name="emailContent" required></textarea>
+          <input class="Submit" type="Submit" value="Send">
+      </form>
+  </aside>
 
 
     <footer>
