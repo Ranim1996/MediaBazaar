@@ -141,7 +141,8 @@ ul.list li input {
 }
 
 ul.list li input[type="submit"], 
-.formUpdate li input[type="submit"] 
+.formUpdate li input[type="submit"],
+input[type="button"] 
 {
   background-color: #207eb1;
   color: #fff;

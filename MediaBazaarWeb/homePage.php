@@ -260,9 +260,6 @@ $msg="";
           </div>
           <p id="username"><?php echo $employee['Username']; ?></p> 
           
-          <div class="customize-home-section">
-            <i id="custom-username" class="ion-ios-build  icon-customize icon-customize-contact-section"></i>
-          </div>
         </div>
         
         <div id="password-reference" class="password-section">
@@ -297,11 +294,7 @@ $msg="";
             <i class="ion-ios-book"></i>
             <h3>Bio</h3>
           </div>
-          <p id="personal-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Cras vel maximus felis. Integer malesuada lorem libero, vel ultricies ipsum
-          ultrices eget. Quisque molestie lectus ut dui scelerisque aliquet. Donec vestibulum
-          e. 
-          </p>
+          <p id="personal-bio"><?php echo $employee['PersonalInfo'];?></p>
 
           <div class="customize-home-section">
           <i id="custom-bio" class="ion-ios-build  icon-customize icon-customize-bio-section"></i>
