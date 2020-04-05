@@ -190,7 +190,8 @@ $msg="";
                 <?php
                     $employee_id = $employee['EmployeeID']; 
                     #the shifts will be taken from the database using the employee id
-                    $query_shift = "SELECT * FROM schedule WHERE EmployeeID = '$employee_id' ";
+                    $string = "Assigned";
+                    $query_shift = "SELECT * FROM schedule WHERE EmployeeID = '$employee_id' AND Status = '$string'";
                     $shift_statement = $conn->prepare($query_shift);
                     $shift_statement->execute();
                     $shifts = $shift_statement->fetchAll();
