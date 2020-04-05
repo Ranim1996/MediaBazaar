@@ -118,8 +118,9 @@ $msg="";
         <div class="row">
           <a href="#home"><img alt="logo" class="logo-nav" src="static/img/logo2.png"></a>
           <ul class="main-nav">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#schedule">Schedule</a></li>
+              <li><a href="homePage.php">Home</a></li>
+              <li><a href="calendar.php">Shedule</a></li>
+              <li><a href="preferredShifts.html">Send Inquiry</a></li>
           </ul>
 
           <div class="main-nav logout">
