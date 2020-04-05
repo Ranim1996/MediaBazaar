@@ -1,7 +1,7 @@
 <?php 
 $msg="";
   session_start();
-  
+  $msg="";
   // use PHPMailer\PHPMailer;
 
   if(!isset($_SESSION['loggedin'])){
@@ -19,32 +19,54 @@ $msg="";
   $employee_statement->execute();
   $employees = $employee_statement->fetchAll();
   $employee_statement->closeCursor();  
-  
+
   if (isset($_POST['Submit']))
   {
-    require 'phpmailer/PHPMailerAutoload.php';
-
-      $subject=$_POST['subject'];
-      $emailContent=$_POST['emailContent'];
-
-      $mail = new PHPMailer();
-      $mail->addAddress('media.bazaar2020@gmail.com');
-      $mail->setFrom('media.bazaar2020@gmail.com', $username);
-      $mail->Subject = $subject;
-      $mail->isHTML(true);
-      $mail->Body = $emailContent;
-
-      $msg="in the fuction";
-      if (!$mail->send())
-      {
-        $msg="Something wrong happened!";
-      }
-      else
-      {
-        $msg= "Mail sent";
-      }
-    }
+    $to = "media.bazaar2020@gmail.com";
+    $subject = "My subject";
+    $txt = "Hello world!";
+    $headers = "From: webmaster@example.com" . "\r\n" .
+    "CC: somebodyelse@example.com";
+    
+    
+   if (mail($to,$subject,$txt,$headers))
+   {
+    $msg="Send!";
+   }
+   else{
+     $msg="Sending failed";
+   }
+    
+    
+  }
   
+  // if (isset($_POST['Submit']))
+  // {
+  //   require 'phpmailer/PHPMailerAutoload.php';
+
+  //     $subject=$_POST['subject'];
+  //     $emailContent=$_POST['emailContent'];
+
+  //     $mail = new PHPMailer();
+  //     $mail->addAddress('media.bazaar2020@gmail.com');
+  //     $mail->setFrom('media.bazaar2020@gmail.com', $username);
+  //     $mail->Subject = $subject;
+  //     $mail->isHTML(true);
+  //     $mail->Body = $emailContent;
+
+  //     $msg="in the fuction";
+  //     if (!$mail->send())
+  //     {
+  //       $msg="Something wrong happened!";
+  //     }
+  //     else
+  //     {
+  //       $msg= "Mail sent";
+  //     }
+  //   }
+  
+
+    
 
   // include_once "PHPMailer/PHPMailer.php";
   // include_once "PHPMailer/Exception.php";
@@ -307,13 +329,17 @@ $msg="";
     <aside class="send-email">
       
           <h2 class="home-content">Make an inquiry</h2>  
-          <form action="./homePage.php" method="POST"> 
+          <form action="homePage.php" method="POST"> 
               <p><?php echo "$msg"?></p>
               <input name="subject" placeholder="Subject..."><br>         
               <textarea cols="30" rows="10" id="emailContent" name="emailContent" required></textarea>
-          <input class="Submit" type="Submit" value="Send">
+          <input class="Submit" type="Submit" name="Submit" value="Send">
       </form>
   </aside>
+
+
+
+
 
 
     <footer>
