@@ -40,7 +40,12 @@ function build_calendar($month, $year){
 	$dayOfWeek = $dateComponents['wday'];
 
 	//get current date
+
+	//ranim part
 	$dateToday = date('Y-m-d');
+
+	//new
+	//$dateToday = date('d/m/Y');
 
 	//creating html table
 	$calendar = "<table class = 'table table-bordered'>";
@@ -89,12 +94,23 @@ function build_calendar($month, $year){
 		}
 		# code...
 		$currentDayRel = str_pad($currentDay, 2, "0", STR_PAD_LEFT);
+
+		//ranim part
 		$date = "$year-$month-$currentDayRel";
+		
+		//new
+		//$date = "$currentDayRel/$month/$year";
 
 		$dayname = strtolower(date('l', strtotime($date)));
 
 		$evenNum = 0;
+
+		//ranim PART
 		$today = $date ==date('Y-m-d')?"today":"";
+
+		//new
+		//$today = $date ==date('d/m/Y')?"today":"";
+
 		if ($date < date('Y-m-d')) {
 			# code...
 			$calendar .= "<td><h4>$currentDay</h4> <button class='btn btn-danger btn-xs'>N/A</button>";
@@ -136,11 +152,18 @@ function build_calendar($month, $year){
 
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta name ="viewport" content = "width = device, initial-scale = 1.0">
 	<link rel="stylesheet" type="text/css" href="static/css/main.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="static/css/ionicons-master/docs/css/ionicons.min.css">
+  	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  	<meta name="HandheldFriendly" content="true">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> 
 	<title>Calendar</title>
 
 	<style>
@@ -149,29 +172,29 @@ function build_calendar($month, $year){
 		}
 
 		td {
-			width: 20;
+			width: 20;	
 		}
 
 		.today {
 			background: green;
 		}
-		
 	</style>
 </head>
-<body>
+
+<body class="body-calendar-page">
 
 	<header class="header-home" id="home">
 
       <nav>
-        <div class="row">
+        <div class="nav-calendar">
           <a href="#home"><img alt="logo" class="logo-nav" src="static/img/logo2.png"></a>
-          <ul class="main-nav">
+          <ul class="main-nav calendar-nav">
               <li><a href="homePage.php">Home</a></li>
               <li><a href="calendar.php">Shedule</a></li>
               <li><a href="preferredShifts.html">Send Inquiry</a></li>
           </ul>
 
-          <div class="main-nav logout">
+          <div class="main-nav logout logout-calendar">
             <a href="loginPage.html">Log Out</a>
           </div>
         </div>
@@ -179,7 +202,7 @@ function build_calendar($month, $year){
 
     </header>
     
-	<div class = "container">
+	<div class = "container calendar-container">
 		<div class = "row">
 			<div class = "col-md-12">
 				<?php 
@@ -200,8 +223,8 @@ function build_calendar($month, $year){
 		</div>
 	</div>
 
-	<footer>
-      <div class="row">
+	<footer class="footer-calendar">
+      <div class="row-footer">
 
         <div class="col span-1-of-2">
           <ul class="footer-nav">
@@ -220,7 +243,7 @@ function build_calendar($month, $year){
         </div>
       </div>
 
-      <div class="row">
+      <div class="row-footer">
         <p id="footer-p">
           Copyright &copy; 2020 by EasySoft. All rights reserved.
         </p>
