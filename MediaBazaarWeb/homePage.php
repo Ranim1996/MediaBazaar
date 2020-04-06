@@ -20,6 +20,11 @@ $msg="";
   $employees = $employee_statement->fetchAll();
   $employee_statement->closeCursor();  
 
+  foreach($employees as $empl)
+  {
+    $_SESSION['employeeId'] = $empl['EmployeeID'];
+  }
+
   if (isset($_POST['Submit']))
   {
     $to = "media.bazaar2020@gmail.com";
