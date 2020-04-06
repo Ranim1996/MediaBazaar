@@ -2,13 +2,12 @@
 $msg="";
   session_start();
   $msg="";
-  // use PHPMailer\PHPMailer;
-
+  
   if(!isset($_SESSION['loggedin'])){
     header('Location: loginPage.html');
-    exit;
-    
+    exit;    
   }
+
   require('static/php/dbConnection.php');
 
   $username = $_SESSION['username'];
@@ -25,78 +24,59 @@ $msg="";
     $_SESSION['employeeId'] = $empl['EmployeeID'];
   }
 
-  if (isset($_POST['Submit']))
+  // require ('static/php/dbConnection.php');
+  // if(!isset($_SESSION[$username]))
+  // {    
+  $msg="";
+  if(isset($_POST['Submit']))
   {
-    $to = "media.bazaar2020@gmail.com";
-    $subject = "My subject";
-    $txt = "Hello world!";
-    $headers = "From: webmaster@example.com" . "\r\n" .
-    "CC: somebodyelse@example.com";
-    
-    
-   if (mail($to,$subject,$txt,$headers))
-   {
-    $msg="Send!";
-   }
-   else{
-     $msg="Sending failed";
-   }
-    
-    
+    $subject = $_POST['subject'];
+    $txt = $_POST['emailContent'];
+
+    if ($subject==null || $txt==null)
+    {
+      $msg="Not all of the values are entered!";
+    }
+    else
+    {
+      require_once ('static/php/dbConnection.php');
+      $stmt = $conn->query("SELECT * FROM employee WHERE Username = '$username';");                       
+            
+      if($stmt->rowCount() > 0)
+      { 
+        foreach($employees as $employee) 
+        {
+        $employee_id = $employee['EmployeeID'];
+        }
+        $emailContent="$subject<br> $txt<br> From user:$employee_id";
+
+        require_once('static/php/dbConnection.php');
+        $query="INSERT INTO email(EmployeeID,Email) VALUES (:employee_id,:emailContent);";
+            
+        $stm=$conn->prepare($query);
+
+        $stm->bindValue(':employee_id',$employee_id);
+        $stm->bindValue(':$emailContent',$emailContent);
+                   
+        try
+        {
+          if($stm ->execute())
+          {
+            $msg="Try again";
+          }
+          else
+          {
+            $msg="Send";
+          }
+        }
+        catch(PDOException $e)
+        {
+        $msg=$e;
+        } 
+        $stm->closeCursor();
+      }
+    }
   }
-  
-  // if (isset($_POST['Submit']))
-  // {
-  //   require 'phpmailer/PHPMailerAutoload.php';
-
-  //     $subject=$_POST['subject'];
-  //     $emailContent=$_POST['emailContent'];
-
-  //     $mail = new PHPMailer();
-  //     $mail->addAddress('media.bazaar2020@gmail.com');
-  //     $mail->setFrom('media.bazaar2020@gmail.com', $username);
-  //     $mail->Subject = $subject;
-  //     $mail->isHTML(true);
-  //     $mail->Body = $emailContent;
-
-  //     $msg="in the fuction";
-  //     if (!$mail->send())
-  //     {
-  //       $msg="Something wrong happened!";
-  //     }
-  //     else
-  //     {
-  //       $msg= "Mail sent";
-  //     }
-  //   }
-  
-
-    
-
-  // include_once "PHPMailer/PHPMailer.php";
-  // include_once "PHPMailer/Exception.php";
-  
-  // $msg="";
-  // if (isset($_POST['Submit']))
-  // {
-  //     $subject=$_POST['subject'];
-  //     $emailContent=$_POST['emailContent'];
-  //     $email = "media.bazaar2020@gmail.com";
-
-  //     $mail=new PHPMailer();
-  //     $mail->addAddress('media.bazaar2020@gmail.com');
-  //     $mail->setFrom($email);
-  //     $mail->Subject=$subject; 
-  //     $mail->isHTML(true);
-  //     $mail->Body=$emailContent; 
-
-  //     if ($mail->send()){
-  //       $msg="Your message was sent";
-  //     }
-  //     else{
-  //       $msg="Please try again";
-  //     }   
-  // }
 ?>
 
 <!DOCTYPE html>
@@ -337,10 +317,10 @@ $msg="";
       
           <h2 class="home-content">Make an inquiry</h2>  
           <form action="homePage.php" method="POST"> 
-              <p><?php echo "$msg"?></p>
-              <input name="subject" placeholder="Subject..."><br>         
-              <textarea cols="30" rows="10" id="emailContent" name="emailContent" required></textarea>
-          <input class="Submit" type="Submit" name="Submit" value="Send">
+            <input name="subject" placeholder="Subject..."><br>         
+            <textarea cols="30" rows="10" id="emailContent" name="emailContent" required></textarea>
+            <input class="Submit" type="Submit" name="Submit" value="Send">
+            <?php echo "$msg"; ?>        
       </form>
   </aside>
 
