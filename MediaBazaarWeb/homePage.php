@@ -4,7 +4,7 @@ $msg="";
   $msg="";
   
   if(!isset($_SESSION['loggedin'])){
-    header('Location: loginPage.html');
+    header('Location: loginPage.php');
     exit;    
   }
 
@@ -24,57 +24,27 @@ $msg="";
     $_SESSION['employeeId'] = $empl['EmployeeID'];
   }
 
-  // require ('static/php/dbConnection.php');
-  // if(!isset($_SESSION[$username]))
-  // {    
+  //sending 'email' to the database 
   $msg="";
   if(isset($_POST['Submit']))
   {
     $subject = $_POST['subject'];
     $txt = $_POST['emailContent'];
 
-    if ($subject==null || $txt==null)
+    if ($subject == "" || $txt == "")
     {
       $msg="Not all of the values are entered!";
     }
-    else
+    else 
     {
-      require_once ('static/php/dbConnection.php');
-      $stmt = $conn->query("SELECT * FROM employee WHERE Username = '$username';");                       
-            
-      if($stmt->rowCount() > 0)
-      { 
-        foreach($employees as $employee) 
-        {
-        $employee_id = $employee['EmployeeID'];
-        }
-        $emailContent="$subject<br> $txt<br> From user:$employee_id";
+        $employee_id = $_SESSION['employeeId'];
 
-        require_once('static/php/dbConnection.php');
-        $query="INSERT INTO email(EmployeeID,Email) VALUES (:employee_id,:emailContent);";
-            
+        $emailContent="Subject: " . $subject . " Body: " .  $txt;
+
+        $query="INSERT INTO email (EmployeeID, Email) VALUES ( '$employee_id', '$emailContent')"; 
         $stm=$conn->prepare($query);
-
-        $stm->bindValue(':employee_id',$employee_id);
-        $stm->bindValue(':$emailContent',$emailContent);
-                   
-        try
-        {
-          if($stm ->execute())
-          {
-            $msg="Try again";
-          }
-          else
-          {
-            $msg="Send";
-          }
-        }
-        catch(PDOException $e)
-        {
-        $msg=$e;
-        } 
-        $stm->closeCursor();
-      }
+        $stm->execute();
+        header('Location: homePage.php');
     }
   }
 ?>
