@@ -30,7 +30,7 @@ $msg="";
   {
     $subject = $_POST['subject'];
     $txt = $_POST['emailContent'];
-
+    $date = date('d/m/Y');
     if ($subject == "" || $txt == "")
     {
       $msg="Not all of the values are entered!";
@@ -41,7 +41,7 @@ $msg="";
 
         $emailContent="Subject: " . $subject . " Body: " .  $txt;
 
-        $query="INSERT INTO email (EmployeeID, Email) VALUES ( '$employee_id', '$emailContent')"; 
+        $query="INSERT INTO email (EmployeeID, Email, Date) VALUES ( '$employee_id', '$emailContent', '$date')"; 
         $stm=$conn->prepare($query);
         $stm->execute();
         header('Location: homePage.php');
