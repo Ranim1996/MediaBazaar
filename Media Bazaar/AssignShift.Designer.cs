@@ -289,11 +289,11 @@
             this.cmbBxWorkShiftSaturday.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBxWorkShiftSaturday.FormattingEnabled = true;
             this.cmbBxWorkShiftSaturday.Items.AddRange(new object[] {
-            "Morning -> 9:00-15:00",
+            "Morning -> 09:00-15:00",
             "Afternoon -> 15:00-18:00"});
             this.cmbBxWorkShiftSaturday.Location = new System.Drawing.Point(129, 148);
             this.cmbBxWorkShiftSaturday.Name = "cmbBxWorkShiftSaturday";
-            this.cmbBxWorkShiftSaturday.Size = new System.Drawing.Size(195, 27);
+            this.cmbBxWorkShiftSaturday.Size = new System.Drawing.Size(230, 27);
             this.cmbBxWorkShiftSaturday.TabIndex = 6;
             this.cmbBxWorkShiftSaturday.Visible = false;
             // 
@@ -302,12 +302,12 @@
             this.cmbBxWorkShiftWeekDay.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBxWorkShiftWeekDay.FormattingEnabled = true;
             this.cmbBxWorkShiftWeekDay.Items.AddRange(new object[] {
-            "Morning -> 7:00-12:00",
+            "Morning -> 07:00-12:00",
             "Afternoon -> 12:00-17:00",
             "Evening -> 17:00-22:00"});
             this.cmbBxWorkShiftWeekDay.Location = new System.Drawing.Point(129, 148);
             this.cmbBxWorkShiftWeekDay.Name = "cmbBxWorkShiftWeekDay";
-            this.cmbBxWorkShiftWeekDay.Size = new System.Drawing.Size(195, 27);
+            this.cmbBxWorkShiftWeekDay.Size = new System.Drawing.Size(230, 27);
             this.cmbBxWorkShiftWeekDay.TabIndex = 5;
             this.cmbBxWorkShiftWeekDay.Visible = false;
             // 

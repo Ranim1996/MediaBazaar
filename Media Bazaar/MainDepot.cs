@@ -20,10 +20,12 @@ namespace Media_Bazaar
         List<DBEmployee> employees = new List<DBEmployee>();
         List<int> restockID = new List<int>();
         List<int> employeeID = new List<int>();
+        DataAccess db = null;
 
         public MainDepot()
         {
             InitializeComponent();
+            db = new DataAccess();
         }
 
         private void MainDepot_Load(object sender, EventArgs e)
@@ -42,7 +44,7 @@ namespace Media_Bazaar
         private void UpdateConfirmedRestockInfo()
         {
             // only confirmed requests will shown here
-            DataAccess db = new DataAccess();
+
             incomingRestockRequests = db.GetAllConfirmedRestock();
             foreach (DBRestockRequest rr in incomingRestockRequests)
             {
@@ -88,7 +90,7 @@ namespace Media_Bazaar
         private void btnCheckIncomingStock_Click(object sender, EventArgs e)
         {
             //INFORMATION about the incoming stock MUST be parsed in this method
-            
+
 
             if (this.clbIncomingStock.CheckedItems.Count == 0)
             {
@@ -107,7 +109,6 @@ namespace Media_Bazaar
 
         private void UpdateStockDetails()
         {
-            DataAccess db = new DataAccess();
             foreach (int i in restockID)
             {
                 if (this.clbIncomingStock.SelectedItem != null)
@@ -132,7 +133,6 @@ namespace Media_Bazaar
         private void UpdateAllConfirmedStockInfo()
         {
             this.clbAllConfirmedRequests.Items.Clear();
-            DataAccess db = new DataAccess();
 
             incomingRestockRequests = db.GetAllConfirmedRestock();
 
@@ -145,7 +145,6 @@ namespace Media_Bazaar
         private void UpdateAllRejectedStockInfo()
         {
             this.lbxRejectedRequests.Items.Clear();
-            DataAccess db = new DataAccess();
 
             incomingRestockRequests = db.GetAllRejectedRestock();
 
@@ -158,7 +157,7 @@ namespace Media_Bazaar
         private void btnViewStock_Click(object sender, EventArgs e)
         {
             //INFORMATION about stock MUST be parsed in this method
-            
+
             if (this.clbAllConfirmedRequests.CheckedItems.Count == 0)
             {
                 MessageBox.Show("Please select a confirmed stock!");
@@ -176,8 +175,6 @@ namespace Media_Bazaar
 
         private void UpdateAvailableStockDetails()
         {
-            DBRestockRequest temp = new DBRestockRequest();
-            DataAccess db = new DataAccess();
 
             foreach (int i in restockID)
             {
@@ -239,17 +236,16 @@ namespace Media_Bazaar
 
         private void BtnMakeRequest_Click(object sender, EventArgs e)
         {
-            DataAccess db = new DataAccess();
 
             string type = "";
             int idEmp = -1;
-            string orderDate ;
+            string orderDate;
             string orderDeliver = "";
             string name = "";
             int quantity = -1;
             string department = "";
 
-            if (tbxEmployeeID.Text != " " && tbxStockName.Text != " " && tbxStockQuantity.Text != ""  && dtpDateDeliver.Value != null)
+            if (tbxEmployeeID.Text != " " && tbxStockName.Text != " " && tbxStockQuantity.Text != "" && dtpDateDeliver.Value != null)
             {
                 idEmp = Convert.ToInt32(tbxEmployeeID.Text);
                 name = tbxStockName.Text;
@@ -258,7 +254,7 @@ namespace Media_Bazaar
                 orderDeliver = this.dtpDateDeliver.Value.ToString("dd/MM/yyyy");
                 type = this.cmbType.Text.ToString();
                 orderDate = DateTime.Now.ToShortDateString();
-                db.InsertRequest(idEmp, name, type, department, quantity, orderDate,orderDeliver );
+                db.InsertRequest(idEmp, name, type, department, quantity, orderDate, orderDeliver);
                 MessageBox.Show("The request is sent to the administration.");
                 clearBoxes1();
             }
@@ -278,10 +274,9 @@ namespace Media_Bazaar
 
         private void UpdateDepartamentInfo()
         {
-            DataAccess db = new DataAccess();
 
             departaments = db.GetAllDepartaments();
-            
+
 
             foreach (DBDepartament dBD in departaments)
             {
@@ -289,101 +284,10 @@ namespace Media_Bazaar
             }
         }
 
-        private void UpdateEmployeeIDInfo ()
+        private void UpdateEmployeeIDInfo()
         {
-            /*DataAccess db = new DataAccess();
-
-            employees = db.GetAllEmployees();
-
-            foreach (DBEmployee dBE in employees)
-            {
-                cmbEmployeeID.Items.Add(dBE.GetID());
-            }*/
-
-            DataAccess db = new DataAccess();
             this.tbxEmployeeID.Text = db.GetDepotID();
         }
-
-        //private void BfbtnMakeRequestForExistingStock_Click(object sender, EventArgs e)
-        //{
-        //    int idStock = Convert.ToInt32(this.cmbExistStockID.Text.ToString());
-        //    int idEmp = Convert.ToInt32(this.cmbExistEmpID.Text.ToString());
-        //    string name = this.tbxExistName.Text;
-        //    string type = this.tbxExistType.Text;
-        //    string department = this.tbxExistDepartment.Text;
-        //    string orderDate = DateTime.Now.ToShortDateString();
-        //    string orderDeliver = this.dtpDateDeliver.Value.ToString("dd/MM/yyyy");
-        //    int quantity = Convert.ToInt32(this.tbcExistQuantity.Text);
-
-        //    if (quantity != 0 && orderDate != " " && orderDeliver != " " && idEmp != 0 )
-        //    {
-        //        DataAccess db = new DataAccess();
-        //        db.InsertRequestForAnExistingstock(idStock, idEmp, name, type, department,quantity, orderDate, orderDeliver);
-        //        MessageBox.Show("The request is sent to the administration.");
-        //        clearBoxes2();
-        //    }
-        //}
-
-        //private DBRestockRequest GetNameByID (int id)
-        //{
-        //    DataAccess db = new DataAccess();
-        //    incomingRestockRequests = db.GetAllAvailableStocks();
-
-        //    for (int i = 0; i < incomingRestockRequests.Count; i++)
-        //    {
-        //        if (incomingRestockRequests[i].GetID() == id)
-        //        {
-        //            return incomingRestockRequests[i];
-        //        }
-        //    }
-        //    return null;
-        //}
-
-        //private void CmbExistStockID_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    DataAccess db = new DataAccess();
-        //    if (this.cmbExistStockID.Text.ToString() != " ")
-        //    {
-        //        int stockID = Convert.ToInt32(this.cmbExistStockID.Text);
-        //        GetNameByID(stockID);
-        //        this.tbxExistName.Text = db.GetDBStockNameById(stockID);
-        //        this.tbxExistType.Text = db.GetDBStockTypeById(stockID);
-        //        this.tbxExistDepartment.Text = db.GetDBDepartmentByStockId(stockID);
-        //    }
-        //}
-        //private void clearBoxes2 ()
-        //{
-        //    this.cmbExistStockID.Text = " ";
-        //    this.cmbExistEmpID.Text = " ";
-        //    this.tbcExistQuantity.Text = " ";
-        //}
-
-        //private void UpdateStockIDInfo()
-        //{
-        //    DataAccess db = new DataAccess();
-
-        //    incomingRestockRequests = db.GetAllAvailableStocks();
-
-        //    foreach (DBRestockRequest dBR in incomingRestockRequests)
-        //    {
-        //        cmbExistStockID.Items.Add(dBR.GetID());
-        //    }
-        //}
-
-        //private void UpdateEmployeeIDInfoForAnExistingStock()
-        //{
-        //    DataAccess db = new DataAccess();
-
-        //    employees = db.GetAllEmployees();
-
-        //    foreach (DBEmployee dBE in employees)
-        //    {
-        //        cmbExistEmpID.Items.Add(dBE.GetID());
-        //    }
-        //}
-
-        //----------------------------------------Finish
-
 
 
     }

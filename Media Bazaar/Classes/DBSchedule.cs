@@ -17,6 +17,7 @@ namespace Media_Bazaar.Classes
         public String Attendance { get; private set; }
         public int ShiftId { get; private set; }
         public List<DBSchedule> allSchedules { get; private set; }
+        public string Status { get; private set; }
         
         //methods
 

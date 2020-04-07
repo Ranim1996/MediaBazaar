@@ -68,7 +68,7 @@ namespace Media_Bazaar.Classes
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                return connection.ExecuteScalar<int>($"SELECT EmployeeID FROM Employee WHERE FirstName = '{fName}' AND LastName = '{lName}';");
+                return connection.ExecuteScalar<int>($"SELECT EmployeeID FROM Employee WHERE FirstName ='{fName}' AND LastName ='{lName}';");
             }
         }
        
@@ -98,7 +98,7 @@ namespace Media_Bazaar.Classes
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                connection.Execute($"UPDATE Employee SET ReasonsForRelease ='{reasons}' WHERE EmployeeID = '{employeeID}'; ");
+                connection.Execute($"UPDATE Employee SET ReasonsForRelease ='{reasons}' WHERE EmployeeID ='{employeeID}'; ");
             }
         }
 
@@ -126,7 +126,7 @@ namespace Media_Bazaar.Classes
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                return connection.ExecuteScalar<string>($"SELECT EmployeeID FROM Employee WHERE Position = 'Depot' ;");
+                return connection.ExecuteScalar<string>($"SELECT EmployeeID FROM Employee WHERE Position ='Depot' ;");
             }
         }
 
@@ -157,19 +157,23 @@ namespace Media_Bazaar.Classes
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                connection.Execute($"UPDATE Employee SET Departament ='{departament}' WHERE EmployeeID = '{employeeID}'; ");
+                connection.Execute($"UPDATE Employee SET Departament ='{departament}' WHERE EmployeeID ='{employeeID}'; ");
             }
 
         }
 
         // Add data according to stock ID
 
+
+        //Get all restocks
+
+
         //get stock id by the given stock id.
         public string GetDBStockIDById(int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                return connection.ExecuteScalar<string>($"SELECT RequestID FROM RestockRequest WHERE RequestID = '{id}';");
+                return connection.ExecuteScalar<string>($"SELECT RequestID FROM RestockRequest WHERE RequestID ='{id}';");
             }
         }
 
@@ -178,7 +182,7 @@ namespace Media_Bazaar.Classes
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                return connection.ExecuteScalar<string>($"SELECT NameOfStock FROM RestockRequest WHERE RequestID = '{id}';");
+                return connection.ExecuteScalar<string>($"SELECT NameOfStock FROM RestockRequest WHERE RequestID ='{id}';");
             }
         }
 
@@ -187,7 +191,7 @@ namespace Media_Bazaar.Classes
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                return connection.ExecuteScalar<string>($"SELECT TypeOfStock FROM RestockRequest WHERE RequestID = '{id}';");
+                return connection.ExecuteScalar<string>($"SELECT TypeOfStock FROM RestockRequest WHERE RequestID ='{id}';");
             }
         }
 
@@ -196,7 +200,7 @@ namespace Media_Bazaar.Classes
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                return connection.ExecuteScalar<string>($"SELECT Departament FROM RestockRequest WHERE RequestID = '{id}';");
+                return connection.ExecuteScalar<string>($"SELECT Departament FROM RestockRequest WHERE RequestID ='{id}';");
             }
         }
 
@@ -205,7 +209,7 @@ namespace Media_Bazaar.Classes
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                return connection.ExecuteScalar<string>($"SELECT Quantity FROM RestockRequest WHERE RequestID = '{id}';");
+                return connection.ExecuteScalar<string>($"SELECT Quantity FROM RestockRequest WHERE RequestID ='{id}';");
             }
         }
 
@@ -214,7 +218,7 @@ namespace Media_Bazaar.Classes
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                return connection.ExecuteScalar<string>($"SELECT DateOfOrder FROM RestockRequest WHERE RequestID = '{id}';");
+                return connection.ExecuteScalar<string>($"SELECT DateOfOrder FROM RestockRequest WHERE RequestID ='{id}';");
             }
         }
 
@@ -223,7 +227,7 @@ namespace Media_Bazaar.Classes
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                return connection.ExecuteScalar<string>($"SELECT DateOfDelivery FROM RestockRequest WHERE RequestID = '{id}';");
+                return connection.ExecuteScalar<string>($"SELECT DateOfDelivery FROM RestockRequest WHERE RequestID ='{id}';");
             }
         }
 
@@ -232,7 +236,7 @@ namespace Media_Bazaar.Classes
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                return connection.ExecuteScalar<string>($"SELECT AdminConfirmation FROM RestockRequest WHERE RequestID = '{id}';");
+                return connection.ExecuteScalar<string>($"SELECT AdminConfirmation FROM RestockRequest WHERE RequestID ='{id}';");
             }
         }
 
@@ -241,7 +245,7 @@ namespace Media_Bazaar.Classes
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                return connection.ExecuteScalar<string>($"SELECT EmployeeID FROM RestockRequest WHERE RequestID = '{id}';");
+                return connection.ExecuteScalar<string>($"SELECT EmployeeID FROM RestockRequest WHERE RequestID ='{id}';");
             }
         }
 
@@ -300,7 +304,7 @@ namespace Media_Bazaar.Classes
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<DBRestockRequest>($"SELECT * FROM RestockRequest WHERE AdminConfirmation ='REJECTED'").ToList();
+                var output = connection.Query<DBRestockRequest>($"SELECT * FROM RestockRequest WHERE AdminConfirmation='REJECTED'").ToList();
                 return output;
             }
         }
@@ -310,7 +314,7 @@ namespace Media_Bazaar.Classes
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                connection.Execute($"UPDATE RestockRequest SET AdminConfirmation ='CONFIRMED' WHERE RequestID = '{requestID}'; ");
+                connection.Execute($"UPDATE RestockRequest SET AdminConfirmation='CONFIRMED' WHERE RequestID='{requestID}'; ");
             }
         }
 
@@ -319,7 +323,7 @@ namespace Media_Bazaar.Classes
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                connection.Execute($"UPDATE RestockRequest SET AdminConfirmation ='REJECTED' WHERE RequestID = '{requestID}'; ");
+                connection.Execute($"UPDATE RestockRequest SET AdminConfirmation='REJECTED' WHERE RequestID ='{requestID}'; ");
             }
         }
 
@@ -349,7 +353,7 @@ namespace Media_Bazaar.Classes
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<DBSchedule>($"SELECT * FROM Schedule WHERE EmployeeID = '{id}'").ToList();
+                var output = connection.Query<DBSchedule>($"SELECT * FROM Schedule WHERE EmployeeID='{id}'").ToList();
                 return output;
             }
         }
@@ -359,7 +363,7 @@ namespace Media_Bazaar.Classes
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
 
-                int id = connection.ExecuteScalar<int>($"SELECT e.EmployeeID FROM Employee AS e WHERE e.EmployeeID = '{employeeID}'");
+                int id = connection.ExecuteScalar<int>($"SELECT e.EmployeeID FROM Employee AS e WHERE e.EmployeeID='{employeeID}'");
                 connection.Execute($"INSERT INTO Schedule (EmployeeID, Date, Shift)  VALUES( '{id}', '{date}', '{shift}')");
             }
         }
@@ -369,7 +373,7 @@ namespace Media_Bazaar.Classes
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                connection.Execute($"UPDATE Schedule SET Attendance = '{attendance}' WHERE EmployeeID = '{id}' AND Shift = '{shift}' AND Date = '{date}';");
+                connection.Execute($"UPDATE Schedule SET Attendance='{attendance}' WHERE EmployeeID='{id}' AND Shift='{shift}' AND Date='{date}';");
             }
         }
 
@@ -377,130 +381,39 @@ namespace Media_Bazaar.Classes
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                connection.Execute($"DELETE FROM Schedule WHERE EmployeeID = '{emplId}' AND Shift = '{shift}' AND Date = '{date}';");
+                connection.Execute($"DELETE FROM Schedule WHERE EmployeeID = '{emplId}' AND Shift ='{shift}' AND Date ='{date}';");
             }
         }
+
 
 
         // methods to return int in order to use it in the statistics
 
-        //return number of fired employees.
-        public int GetNumOfFired()
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                return connection.ExecuteScalar<int>($"SELECT COUNT(EmployeeID) FROM Employee WHERE ReasonsForRelease IS NOT NULL;");
-            }
-        }
-
-        //return number of not fired employees.
-        public int GetNumOfnOTFired()
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                return connection.ExecuteScalar<int>($"SELECT COUNT(EmployeeID) FROM Employee WHERE ReasonsForRelease IS NULL;");
-            }
-        }
-
         //return number of present employees.
-        public int GetNumOfPresent()
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                return connection.ExecuteScalar<int>($"SELECT COUNT(*) FROM Schedule WHERE Attendance='PRESENT';");
-            }
-        }
         public int GetNumOfPresentById(int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                return connection.ExecuteScalar<int>($"SELECT COUNT(*) FROM Schedule WHERE Attendance='PRESENT' AND EmployeeID = '{id}';");
+                return connection.ExecuteScalar<int>($"SELECT COUNT(*) FROM Schedule WHERE Attendance='PRESENT' AND EmployeeID='{id}';");
             }
         }
         //return number of absent employees.
-        public int GetNumOfAbsent()
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                return connection.ExecuteScalar<int>($"SELECT COUNT(*) FROM Schedule WHERE Attendance='ABSENT';");
-            }
-        }
         public int GetNumOfAbsentById(int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                return connection.ExecuteScalar<int>($"SELECT COUNT(*) FROM Schedule WHERE Attendance='ABSENT' AND EmployeeID = '{id}';");
+                return connection.ExecuteScalar<int>($"SELECT COUNT(*) FROM Schedule WHERE Attendance='ABSENT' AND EmployeeID ='{id}';");
             }
         }
 
         //return number of late employees.
-        public int GetNumOfLate()
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                return connection.ExecuteScalar<int>($"SELECT COUNT(*) FROM Schedule WHERE Attendance='LATE';");
-            }
-        }
         public int GetNumOfLateById(int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                return connection.ExecuteScalar<int>($"SELECT COUNT(*) FROM Schedule WHERE Attendance='LATE' AND EmployeeID = '{id}';");
-            }
-        }
-        //return number of confirmed requests.
-        public int GetNumOfConfirmedRequests()
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                return connection.ExecuteScalar<int>($"SELECT COUNT(*) FROM RestockRequest WHERE AdminConfirmation='CONFIRMED';");
+                return connection.ExecuteScalar<int>($"SELECT COUNT(*) FROM Schedule WHERE Attendance='LATE' AND EmployeeID='{id}';");
             }
         }
 
-        //return number of rejected requests.
-        public int GetNumOfRejectedRequests()
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                return connection.ExecuteScalar<int>($"SELECT COUNT(*) FROM RestockRequest WHERE AdminConfirmation='REJECTED';");
-            }
-        }
-
-        //return number of waiting requests.
-        public int GetNumOfWaitingRequests()
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                return connection.ExecuteScalar<int>($"SELECT COUNT(*) FROM RestockRequest WHERE AdminConfirmation IS NULL;");
-            }
-        }
-
-        //return the numbers of the admins
-        public int GetNumAdmins()
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                return connection.ExecuteScalar<int>($"SELECT COUNT(EmployeeID) FROM Employee WHERE Position='ADMINISTRATOR';");
-            }
-        }
-
-
-        //return the numbers of the managers
-        public int GetNumManagers()
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                return connection.ExecuteScalar<int>($"SELECT COUNT(EmployeeID) FROM Employee WHERE Position ='MANAGER';");
-            }
-        }
-
-        //return the numbers of the depot workers
-        public int GetNumDepotWorkers()
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                return connection.ExecuteScalar<int>($"SELECT COUNT(EmployeeID) FROM Employee WHERE Position='DEPOT';");
-            }
-        }
     }
 }

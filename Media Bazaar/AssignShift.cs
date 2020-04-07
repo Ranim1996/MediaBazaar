@@ -61,7 +61,7 @@ namespace Media_Bazaar
             foreach (DBSchedule sch in dbSchedules)
             {
                 string firstNameOfEmployee = db.GetFirstNameOfEmployeeById(sch.EmployeeId);
-                if(sch.Date == shiftDate.ToString("dd/MM/yyyy"))
+                if(sch.Date == shiftDate.ToString("dd/MM/yyyy") && sch.Status == "Assigned")
                 {
                     if (sch.Attendance != null)
                     {
@@ -89,9 +89,9 @@ namespace Media_Bazaar
                 }
                 else
                 {
-                    if (shiftDate.DayOfWeek == DayOfWeek.Saturday && cmbBxWorkShiftSaturday.SelectedItem.ToString() == "Morning -> 9:00-15:00")
+                    if (shiftDate.DayOfWeek == DayOfWeek.Saturday && cmbBxWorkShiftSaturday.SelectedItem.ToString() == "Morning -> 09:00-15:00")
                     {
-                        shift = "9:00-15:00";
+                        shift = "09:00-15:00";
                     }
                     else
                     {
@@ -101,9 +101,9 @@ namespace Media_Bazaar
                         }
                         else
                         {
-                            if (cmbBxWorkShiftWeekDay.SelectedItem.ToString() == "Morning -> 7:00-12:00")
+                            if (cmbBxWorkShiftWeekDay.SelectedItem.ToString() == "Morning -> 07:00-12:00")
                             {
-                                shift = "7:00-12:00";
+                                shift = "07:00-12:00";
                             }
                             else
                             {

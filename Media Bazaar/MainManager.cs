@@ -19,13 +19,19 @@ namespace Media_Bazaar
     {
         List<DBEmployee> employees = new List<DBEmployee>();
         List<DBDepartament> departments = new List<DBDepartament>();
-        List<DBRestockRequest> restocks = new List<DBRestockRequest>();
-        List<DBSchedule> schedules;
+        List<DBRestockRequest> restocks = null;
+        List<DBEmployee> allEmployees = null;
+        List<DBSchedule> schedules = null;
         DataAccess db;
-
+    
         public MainManager()
         {
+            db = new DataAccess();
+            allEmployees = db.GetAllEmployees();
+            schedules = db.GetAllSchedules();
+            restocks = db.GetAllRequests();
             InitializeComponent();
+
             UpdateList();
             CheckFiredAndWorkingChart();
             CheckAttendance();
@@ -41,6 +47,7 @@ namespace Media_Bazaar
 
         private void MainManager_Load(object sender, EventArgs e)
         {
+            
             tabControl1.Appearance = TabAppearance.FlatButtons;
             tabControl1.ItemSize = new Size(0, 1);
             tabControl1.SizeMode = TabSizeMode.Fixed;
@@ -128,8 +135,6 @@ namespace Media_Bazaar
 
         private void btnSearchForSpecificEmployee_Click(object sender, EventArgs e)
         {
-            DataAccess db = new DataAccess();
-
             if (cmbSelectSeachMethod.Text == "Last name")
             {
                 employees = db.GetNotFiredEmployeesByLastName(this.tbxSearchLastname.Text);
@@ -170,7 +175,6 @@ namespace Media_Bazaar
         {
             //display the data in the labels
             lbUpcomingShifts.Items.Clear();
-            db = new DataAccess();
             DateTime dateNow = DateTime.Today;
             string[] date = dateNow.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture).Split('/');
 
@@ -221,7 +225,6 @@ namespace Media_Bazaar
         {
             //display the data in the labels
             lbUpcomingShifts.Items.Clear();
-            db = new DataAccess();
             DateTime dateNow = DateTime.Today;
       
             string[] date = dateNow.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture).Split('/');
@@ -268,64 +271,100 @@ namespace Media_Bazaar
             }
             CheckEmployeeAttendance(employeeId);
         }
-
-
-        int nrFired = 0;
-        int nrNotFired = 0;
-
-        int nrOfPresent = 0;
-        int nrOfAbsent = 0;
-        int nrOfLate = 0;
-
-        int nrOfConfirmed = 0;
-        int nrOfRejected = 0;
-        int nrOfWaiting = 0;
-
-        int nrAmdins = 0;
-        int nrManagers = 0;
-        int nrDepot = 0;
+        
 
         private void CheckFiredAndWorkingChart()
         {
-            DataAccess db = new DataAccess();
-            nrFired = db.GetNumOfFired();
-            nrNotFired = db.GetNumOfnOTFired();
-
-           
+            //nrFired = db.GetNumOfFired();
+            //nrNotFired = db.GetNumOfnOTFired();
+            int nrFired = 0;
+            int nrNotFired = 0;
+            foreach (DBEmployee employee in allEmployees)
+            {
+                if(employee.ReasonsForRelease == null)
+                {
+                    nrNotFired++;
+                }
+                else if(employee.ReasonsForRelease != null)
+                {
+                    nrFired++;
+                }
+            }        
             chartReleasedAndNot.Series["s1"].Points.AddXY("Fired", nrFired);
             chartReleasedAndNot.Series["s1"].Points.AddXY("Working", nrNotFired);
         }
 
         private void CheckPositions()
         {
-            DataAccess db = new DataAccess();
-
-            nrAmdins = db.GetNumAdmins();
-            nrManagers = db.GetNumManagers();
-            nrDepot = db.GetNumDepotWorkers();
-
-            chartPositions.Series["s1"].Points.AddXY("Administrators", nrAmdins);
+            int nrAdmins = 0;
+            int nrManagers = 0;
+            int nrDepot = 0;
+            //nrAmdins = db.GetNumAdmins();
+            //nrManagers = db.GetNumManagers();
+            //nrDepot = db.GetNumDepotWorkers();
+            foreach(DBEmployee employee in allEmployees)
+            {
+                if(employee.Position == "ADMINISTRATOR")
+                {
+                    nrAdmins++;
+                }
+                else
+                {
+                    if(employee.Position == "MANAGER")
+                    {
+                        nrManagers++;
+                    }
+                    else
+                    {
+                        if(employee.Position == "DEPOT")
+                        {
+                            nrDepot++;
+                        }
+                    }
+                }
+            }
+            chartPositions.Series["s1"].Points.AddXY("Administrators", nrAdmins);
             chartPositions.Series["s1"].Points.AddXY("Managers", nrManagers);
             chartPositions.Series["s1"].Points.AddXY("Depot workers", nrDepot);
         }
 
+        int nrOfPresent = 0;
+        int nrOfAbsent = 0;
+        int nrOfLate = 0;
         private void CheckAttendance()
-        {
-            DataAccess db = new DataAccess();
-            
-            nrOfAbsent = db.GetNumOfAbsent();
-            nrOfPresent = db.GetNumOfPresent();
-            nrOfLate = db.GetNumOfLate();
+        {           
+            //nrOfAbsent = db.GetNumOfAbsent();
+            //nrOfPresent = db.GetNumOfPresent();
+            //nrOfLate = db.GetNumOfLate();
 
+            foreach(DBSchedule sch in schedules)
+            {
+                if(sch.Attendance == "PRESENT")
+                {
+                    nrOfPresent++;
+                }
+                else
+                {
+                    if(sch.Attendance == "LATE")
+                    {
+                        nrOfLate++;
+                    }
+                    else
+                    {
+                        if(sch.Attendance == "ABSENT")
+                        {
+                            nrOfAbsent++;
+                        }
+                    }
+                }
+            }
             chartAttendance.Series["s1"].Points.AddXY("Present", nrOfPresent);
             chartAttendance.Series["s1"].Points.AddXY("Absent", nrOfAbsent);
             chartAttendance.Series["s1"].Points.AddXY("Late", nrOfLate);
         }
         
         private void CheckEmployeeAttendance(int id)
-        {         
-            db = new DataAccess();
-
+        {
             nrOfAbsent = db.GetNumOfAbsentById(id);
             nrOfPresent = db.GetNumOfPresentById(id);
             nrOfLate = db.GetNumOfLateById(id);
@@ -339,12 +378,34 @@ namespace Media_Bazaar
 
         private void CheckRequests()
         {
-            DataAccess db = new DataAccess();
-            
-            nrOfConfirmed = db.GetNumOfConfirmedRequests();
-            nrOfRejected = db.GetNumOfRejectedRequests();
-            nrOfWaiting = db.GetNumOfWaitingRequests();
+            //nrOfConfirmed = db.GetNumOfConfirmedRequests();
+            //nrOfRejected = db.GetNumOfRejectedRequests();
+            //nrOfWaiting = db.GetNumOfWaitingRequests();
+            int nrOfConfirmed = 0;
+            int nrOfRejected = 0;
+            int nrOfWaiting = 0;
 
+            foreach (DBRestockRequest req in restocks)
+            {
+                if(req.AdminConfirmation == "CONFIRMED")
+                {
+                    nrOfConfirmed++;
+                }
+                else
+                {
+                    if(req.AdminConfirmation == "REJECTED")
+                    {
+                        nrOfRejected++;
+                    }
+                    else
+                    {
+                        if(req.AdminConfirmation == null)
+                        {
+                            nrOfWaiting++;
+                        }
+                    }
+                }
+            }
             chartRequests.Series["s1"].Points.AddXY("Confirmed", nrOfConfirmed);
             chartRequests.Series["s1"].Points.AddXY("Rejected", nrOfRejected);
             chartRequests.Series["s1"].Points.AddXY("Waiting", nrOfWaiting);
@@ -354,34 +415,6 @@ namespace Media_Bazaar
         }
 
         
-
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnEmployeesTABemplStats_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void btnStatsTABemployeeStats_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chartPositions_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void btnSearchTABsearch_Click(object sender, EventArgs e)
         {

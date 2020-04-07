@@ -30,14 +30,15 @@ namespace Media_Bazaar
         Media_Bazaar.Classes.Calendar calendar = new Calendar();
 
         DataAccess db;
-        DBSchedule schedule = new DBSchedule();
+        DBSchedule schedule; 
         private object send;
 
         public MainAdmin()
         {
             InitializeComponent();
             this.flDays.Click += new System.EventHandler(this.Flow_Click);
-            
+            db = new DataAccess();
+            schedule = new DBSchedule();
         }
 
         private void MainAdmin_Load(object sender, EventArgs e)
@@ -203,7 +204,6 @@ namespace Media_Bazaar
         {
             string username = autoGenerateUsername(fName, lName, pos);
             string password = autoGeneratePassword();
-            DataAccess db = new DataAccess();
             db.InsertEmployee(fName, lName, dateOfBirth, email, phoneNr, nationality, pos.ToString(), username, password);
             //get the employee id from database
             int employeeID = db.GetIdOfEmployeeByName(fName, lName);
@@ -221,8 +221,6 @@ namespace Media_Bazaar
             string email = "";
             string phoneNr = "";
             string nationality = "";
-            string username = "";
-            string password = "";
             JobPosition pos = JobPosition.ADMINISTRATOR;
 
             if (tbFirstName.Text != "" && tbLastName.Text != "" && tbDateOfBirth.Value.ToShortDateString() != "" && tbEmail.Text != "" && tbEmail.Text != "" && tbPhoneNr.Text != "" && tbNationality.Text != "")
@@ -304,7 +302,6 @@ namespace Media_Bazaar
         }
         private void UpdateEmployeeInfo()
         {
-            DataAccess db = new DataAccess();
             NotReleasedEmployees = db.GetNotFiredEmployees();
             foreach (DBEmployee e in NotReleasedEmployees)
             {
@@ -318,8 +315,6 @@ namespace Media_Bazaar
         }
         private void UpdateDepartamentInfo()
         {
-            DataAccess db = new DataAccess();
-
             departaments = db.GetAllDepartaments();
             lbDepartaments.DataSource = departaments;
             lbDepartaments.DisplayMember = "FullInfo";
@@ -331,7 +326,6 @@ namespace Media_Bazaar
         }
         private void UpdateRestockInfo()
         {
-            DataAccess db = new DataAccess();
             restockRequests = db.GetAllRequests();
             foreach (DBRestockRequest rr in restockRequests)
             {
@@ -359,7 +353,6 @@ namespace Media_Bazaar
                 else
                 {
                     DBEmployee temp = new DBEmployee();
-                    DataAccess db = new DataAccess();
                     foreach (int i in employeesID)
                     {
                         if (checkedListBox2.SelectedItem != null)
@@ -387,7 +380,6 @@ namespace Media_Bazaar
 
         private void btnCreateDepartment_Click(object sender, EventArgs e)
         {
-            DataAccess db = new DataAccess();
             if(tbDepName.Text != "" && tbMaxNr.Text != "" && tbMinNr.Text != "")
             {
                 db.InsertDepartament(tbDepName.Text, Convert.ToInt32(tbMinNr.Text), Convert.ToInt32(tbMaxNr.Text));
@@ -448,7 +440,6 @@ namespace Media_Bazaar
                 else
                 {
                     DBEmployee temp = new DBEmployee();
-                    DataAccess db = new DataAccess();
                     foreach (int i in employeesID)
                     {
                         if (checkedListBox3.SelectedItem != null)
@@ -482,7 +473,6 @@ namespace Media_Bazaar
             else
             {
                 DBRestockRequest temp = new DBRestockRequest();
-                DataAccess db = new DataAccess();
                 foreach (int i in restockID)
                 {
                     if (checkedListBox1.SelectedItem != null)
@@ -517,7 +507,6 @@ namespace Media_Bazaar
             else
             {
                 DBRestockRequest temp = new DBRestockRequest();
-                DataAccess db = new DataAccess();
                 foreach (int i in restockID)
                 {
                     if (checkedListBox1.SelectedItem != null)
@@ -537,14 +526,6 @@ namespace Media_Bazaar
             UpdateRestockInfo();
         }
 
-        /*private void lblDateForShift_TextChanged(object sender, EventArgs e)
-        {
-            String lbl = (String)sender;
-            lbl = newDate.ToString();
-            sender =lbl;
-
-            //lbl.Text = sender.ToString();
-        }*/
 
     }
 }
