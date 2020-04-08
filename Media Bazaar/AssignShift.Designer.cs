@@ -44,23 +44,26 @@
             this.label26 = new System.Windows.Forms.Label();
             this.tbEmployeeIdAssignShift = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbShiftPreferences = new System.Windows.Forms.ListBox();
+            this.btnAssignSelectedShift = new Bunifu.Framework.UI.BunifuFlatButton();
             this.grpBxViewShifts.SuspendLayout();
             this.grpBxAssignShift.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpBxViewShifts
             // 
-            this.grpBxViewShifts.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.grpBxViewShifts.Controls.Add(this.label2);
             this.grpBxViewShifts.Controls.Add(this.btnAbsent);
             this.grpBxViewShifts.Controls.Add(this.btnLate);
             this.grpBxViewShifts.Controls.Add(this.btnPresent);
             this.grpBxViewShifts.Controls.Add(this.lbShifts);
             this.grpBxViewShifts.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpBxViewShifts.Location = new System.Drawing.Point(43, 354);
+            this.grpBxViewShifts.Location = new System.Drawing.Point(12, 341);
             this.grpBxViewShifts.Name = "grpBxViewShifts";
-            this.grpBxViewShifts.Size = new System.Drawing.Size(403, 389);
+            this.grpBxViewShifts.Size = new System.Drawing.Size(374, 389);
             this.grpBxViewShifts.TabIndex = 12;
             this.grpBxViewShifts.TabStop = false;
             this.grpBxViewShifts.Text = "View Shifts";
@@ -71,9 +74,9 @@
             this.label2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(151, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(203, 15);
+            this.label2.Size = new System.Drawing.Size(204, 15);
             this.label2.TabIndex = 14;
-            this.label2.Text = "(click twice on the shift to delete it.";
+            this.label2.Text = "(click twice on the shift to delete it)";
             // 
             // btnAbsent
             // 
@@ -196,10 +199,6 @@
             // 
             // grpBxAssignShift
             // 
-            this.grpBxAssignShift.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.grpBxAssignShift.Controls.Add(this.tbDate);
-            this.grpBxAssignShift.Controls.Add(this.label1);
             this.grpBxAssignShift.Controls.Add(this.btnAssignWorkShift);
             this.grpBxAssignShift.Controls.Add(this.cmbBxWorkShiftSunday);
             this.grpBxAssignShift.Controls.Add(this.cmbBxWorkShiftSaturday);
@@ -208,9 +207,9 @@
             this.grpBxAssignShift.Controls.Add(this.tbEmployeeIdAssignShift);
             this.grpBxAssignShift.Controls.Add(this.label24);
             this.grpBxAssignShift.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpBxAssignShift.Location = new System.Drawing.Point(43, 24);
+            this.grpBxAssignShift.Location = new System.Drawing.Point(12, 93);
             this.grpBxAssignShift.Name = "grpBxAssignShift";
-            this.grpBxAssignShift.Size = new System.Drawing.Size(403, 304);
+            this.grpBxAssignShift.Size = new System.Drawing.Size(374, 229);
             this.grpBxAssignShift.TabIndex = 10;
             this.grpBxAssignShift.TabStop = false;
             this.grpBxAssignShift.Text = "Assign Shift";
@@ -218,17 +217,17 @@
             // tbDate
             // 
             this.tbDate.Enabled = false;
-            this.tbDate.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDate.Location = new System.Drawing.Point(129, 62);
+            this.tbDate.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDate.Location = new System.Drawing.Point(141, 20);
             this.tbDate.Name = "tbDate";
-            this.tbDate.Size = new System.Drawing.Size(230, 27);
+            this.tbDate.Size = new System.Drawing.Size(245, 35);
             this.tbDate.TabIndex = 11;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 65);
+            this.label1.Location = new System.Drawing.Point(33, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 19);
             this.label1.TabIndex = 10;
@@ -255,7 +254,7 @@
             this.btnAssignWorkShift.IconVisible = false;
             this.btnAssignWorkShift.IconZoom = 90D;
             this.btnAssignWorkShift.IsTab = false;
-            this.btnAssignWorkShift.Location = new System.Drawing.Point(24, 234);
+            this.btnAssignWorkShift.Location = new System.Drawing.Point(24, 167);
             this.btnAssignWorkShift.Margin = new System.Windows.Forms.Padding(4, 13, 4, 13);
             this.btnAssignWorkShift.Name = "btnAssignWorkShift";
             this.btnAssignWorkShift.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
@@ -272,13 +271,11 @@
             // 
             // cmbBxWorkShiftSunday
             // 
-            this.cmbBxWorkShiftSunday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbBxWorkShiftSunday.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBxWorkShiftSunday.FormattingEnabled = true;
             this.cmbBxWorkShiftSunday.Items.AddRange(new object[] {
             "Afternoon -> 12:00-18:00"});
-            this.cmbBxWorkShiftSunday.Location = new System.Drawing.Point(129, 148);
+            this.cmbBxWorkShiftSunday.Location = new System.Drawing.Point(129, 101);
             this.cmbBxWorkShiftSunday.Name = "cmbBxWorkShiftSunday";
             this.cmbBxWorkShiftSunday.Size = new System.Drawing.Size(230, 27);
             this.cmbBxWorkShiftSunday.TabIndex = 7;
@@ -291,7 +288,7 @@
             this.cmbBxWorkShiftSaturday.Items.AddRange(new object[] {
             "Morning -> 09:00-15:00",
             "Afternoon -> 15:00-18:00"});
-            this.cmbBxWorkShiftSaturday.Location = new System.Drawing.Point(129, 148);
+            this.cmbBxWorkShiftSaturday.Location = new System.Drawing.Point(129, 101);
             this.cmbBxWorkShiftSaturday.Name = "cmbBxWorkShiftSaturday";
             this.cmbBxWorkShiftSaturday.Size = new System.Drawing.Size(230, 27);
             this.cmbBxWorkShiftSaturday.TabIndex = 6;
@@ -305,7 +302,7 @@
             "Morning -> 07:00-12:00",
             "Afternoon -> 12:00-17:00",
             "Evening -> 17:00-22:00"});
-            this.cmbBxWorkShiftWeekDay.Location = new System.Drawing.Point(129, 148);
+            this.cmbBxWorkShiftWeekDay.Location = new System.Drawing.Point(129, 101);
             this.cmbBxWorkShiftWeekDay.Name = "cmbBxWorkShiftWeekDay";
             this.cmbBxWorkShiftWeekDay.Size = new System.Drawing.Size(230, 27);
             this.cmbBxWorkShiftWeekDay.TabIndex = 5;
@@ -315,7 +312,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(6, 156);
+            this.label26.Location = new System.Drawing.Point(6, 109);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(92, 19);
             this.label26.TabIndex = 4;
@@ -324,7 +321,7 @@
             // tbEmployeeIdAssignShift
             // 
             this.tbEmployeeIdAssignShift.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEmployeeIdAssignShift.Location = new System.Drawing.Point(129, 107);
+            this.tbEmployeeIdAssignShift.Location = new System.Drawing.Point(129, 60);
             this.tbEmployeeIdAssignShift.Name = "tbEmployeeIdAssignShift";
             this.tbEmployeeIdAssignShift.Size = new System.Drawing.Size(230, 27);
             this.tbEmployeeIdAssignShift.TabIndex = 1;
@@ -333,18 +330,91 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(6, 110);
+            this.label24.Location = new System.Drawing.Point(6, 63);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(111, 19);
             this.label24.TabIndex = 0;
             this.label24.Text = "Employee ID:";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnAssignSelectedShift);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.lbShiftPreferences);
+            this.groupBox1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(428, 93);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(378, 637);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Shift Preferences";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(165, 26);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(204, 15);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "(click twice on the shift to delete it)";
+            // 
+            // lbShiftPreferences
+            // 
+            this.lbShiftPreferences.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbShiftPreferences.FormattingEnabled = true;
+            this.lbShiftPreferences.ItemHeight = 19;
+            this.lbShiftPreferences.Location = new System.Drawing.Point(19, 44);
+            this.lbShiftPreferences.Name = "lbShiftPreferences";
+            this.lbShiftPreferences.Size = new System.Drawing.Size(349, 498);
+            this.lbShiftPreferences.TabIndex = 0;
+            this.lbShiftPreferences.DoubleClick += new System.EventHandler(this.lbShiftPreferences_DoubleClick);
+            // 
+            // btnAssignSelectedShift
+            // 
+            this.btnAssignSelectedShift.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnAssignSelectedShift.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnAssignSelectedShift.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAssignSelectedShift.BorderRadius = 0;
+            this.btnAssignSelectedShift.ButtonText = "Assign Selected Shift";
+            this.btnAssignSelectedShift.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAssignSelectedShift.DisabledColor = System.Drawing.Color.Gray;
+            this.btnAssignSelectedShift.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnAssignSelectedShift.Iconimage = null;
+            this.btnAssignSelectedShift.Iconimage_right = null;
+            this.btnAssignSelectedShift.Iconimage_right_Selected = null;
+            this.btnAssignSelectedShift.Iconimage_Selected = null;
+            this.btnAssignSelectedShift.IconMarginLeft = 0;
+            this.btnAssignSelectedShift.IconMarginRight = 0;
+            this.btnAssignSelectedShift.IconRightVisible = false;
+            this.btnAssignSelectedShift.IconRightZoom = 0D;
+            this.btnAssignSelectedShift.IconVisible = false;
+            this.btnAssignSelectedShift.IconZoom = 90D;
+            this.btnAssignSelectedShift.IsTab = false;
+            this.btnAssignSelectedShift.Location = new System.Drawing.Point(23, 565);
+            this.btnAssignSelectedShift.Margin = new System.Windows.Forms.Padding(20, 44, 20, 44);
+            this.btnAssignSelectedShift.Name = "btnAssignSelectedShift";
+            this.btnAssignSelectedShift.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnAssignSelectedShift.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnAssignSelectedShift.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnAssignSelectedShift.selected = false;
+            this.btnAssignSelectedShift.Size = new System.Drawing.Size(345, 59);
+            this.btnAssignSelectedShift.TabIndex = 15;
+            this.btnAssignSelectedShift.Text = "Assign Selected Shift";
+            this.btnAssignSelectedShift.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAssignSelectedShift.Textcolor = System.Drawing.Color.White;
+            this.btnAssignSelectedShift.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAssignSelectedShift.Click += new System.EventHandler(this.btnAssignSelectedShift_Click);
             // 
             // AssignShift
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.ClientSize = new System.Drawing.Size(458, 760);
+            this.ClientSize = new System.Drawing.Size(818, 749);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.tbDate);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.grpBxViewShifts);
             this.Controls.Add(this.grpBxAssignShift);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -357,7 +427,10 @@
             this.grpBxViewShifts.PerformLayout();
             this.grpBxAssignShift.ResumeLayout(false);
             this.grpBxAssignShift.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -379,5 +452,9 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnPresent;
         private System.Windows.Forms.TextBox tbDate;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ListBox lbShiftPreferences;
+        private Bunifu.Framework.UI.BunifuFlatButton btnAssignSelectedShift;
     }
 }

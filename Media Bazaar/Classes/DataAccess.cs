@@ -353,7 +353,7 @@ namespace Media_Bazaar.Classes
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<DBSchedule>($"SELECT * FROM Schedule WHERE EmployeeID='{id}'").ToList();
+                var output = connection.Query<DBSchedule>($"SELECT * FROM schedule WHERE EmployeeID='{id}'").ToList();
                 return output;
             }
         }
@@ -364,7 +364,7 @@ namespace Media_Bazaar.Classes
             {
 
                 int id = connection.ExecuteScalar<int>($"SELECT e.EmployeeID FROM Employee AS e WHERE e.EmployeeID='{employeeID}'");
-                connection.Execute($"INSERT INTO Schedule (EmployeeID, Date, Shift)  VALUES( '{id}', '{date}', '{shift}')");
+                connection.Execute($"INSERT INTO schedule (EmployeeID, Date, Shift)  VALUES( '{id}', '{date}', '{shift}')");
             }
         }
 
@@ -373,17 +373,26 @@ namespace Media_Bazaar.Classes
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                connection.Execute($"UPDATE Schedule SET Attendance='{attendance}' WHERE EmployeeID='{id}' AND Shift='{shift}' AND Date='{date}';");
+                connection.Execute($"UPDATE schedule SET Attendance='{attendance}' WHERE EmployeeID='{id}' AND Shift='{shift}' AND Date='{date}';");
             }
         }
 
-        public void DeleteAttendanceByIdAndShift(int emplId, string shift, string date)
+        public void DeleteAttendanceByIdAndShift(int emplId, string shift, string date, string status)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                connection.Execute($"DELETE FROM Schedule WHERE EmployeeID = '{emplId}' AND Shift ='{shift}' AND Date ='{date}';");
+                connection.Execute($"DELETE FROM schedule WHERE EmployeeID='{emplId}' AND Shift='{shift}' AND Date ='{date}' AND Status='{status}';");
             }
         }
+        public void AssignShift(int id, string shift, string date)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                connection.Execute($"UPDATE schedule SET Status='Assigned' WHERE EmployeeID='{id}' AND Shift='{shift}' AND Date='{date}';");
+            }
+        }
+
+
 
 
 
@@ -415,5 +424,29 @@ namespace Media_Bazaar.Classes
             }
         }
 
+
+        //EMPLOYEE EMAILS
+        public List<DBEmail> GetEmails()
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<DBEmail>($"SELECT * FROM email").ToList();
+                return output;
+            }
+        }
+        public void EmailStatusRead(int emailId)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                connection.Execute($"UPDATE email SET Status='Read' WHERE EmailID='{emailId}'; ");
+            }
+        }
+        public void DeleteEmailById(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                connection.Execute($"DELETE FROM email WHERE EmailID = '{id}';");
+            }
+        }
     }
 }

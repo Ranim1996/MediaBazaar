@@ -22,6 +22,7 @@ namespace Media_Bazaar
         List<DBEmployee> NotReleasedEmployees = new List<DBEmployee>();
         List<DBDepartament> departaments = new List<DBDepartament>();
         List<DBRestockRequest> restockRequests = new List<DBRestockRequest>();
+        List<DBEmail> emails = null;
 
 
         List<int> employeesID = new List<int>();
@@ -39,6 +40,9 @@ namespace Media_Bazaar
             this.flDays.Click += new System.EventHandler(this.Flow_Click);
             db = new DataAccess();
             schedule = new DBSchedule();
+
+            //change this if it s going to be laggy
+            
         }
 
         private void MainAdmin_Load(object sender, EventArgs e)
@@ -526,6 +530,107 @@ namespace Media_Bazaar
             UpdateRestockInfo();
         }
 
+        private void btnEmail_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabEmail;
+        }
+        string split = "";
+        string subject = "";
+        string body = "";
+        public void UpdateMailList(string split, string subject)
+        {
+            lbEmailInbox.Items.Clear();
+            emails = db.GetEmails();
+            foreach (DBEmail mail in emails)
+            {
+                int id = mail.EmployeeID;
+                string employeeName = db.GetFirstNameOfEmployeeById(id);
+                split = mail.Email.Split(new string[] { "Subject:" }, StringSplitOptions.None)[1];
+                //body = split.Split(new string[] { "Body:" }, StringSplitOptions.None)[1];
+                subject = split.Split(new string[] { "Body:" }, StringSplitOptions.None)[0];
+                //rtbEmailBody.Text = body;
+                string display = $"{employeeName}-({id}):  {subject} -> Status:{mail.Status}";
+                lbEmailInbox.Items.Add(display);
+                lbEmailInbox.Items.Add("");
+                lbEmailInbox.Items.Add("");
+            }
+        }
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            pnlHolderContentMail.Visible = false;
+            if(tabControl1.SelectedTab == tabEmail)
+            {        
+                UpdateMailList(split, subject);
+            }
+        }
+        DBEmail dbEmail = null;
+        private void lbEmailInbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string holder = "";
+            pnlHolderContentMail.Visible = true;
+            if(lbEmailInbox.SelectedItem != null)
+            {
+                holder = lbEmailInbox.SelectedItem.ToString();
+                foreach(DBEmail mail in emails)
+                {
+                   
+                    int id = mail.EmployeeID;
+                    string employeeName = db.GetFirstNameOfEmployeeById(id);
+                    split = mail.Email.Split(new string[] { "Subject:" }, StringSplitOptions.None)[1];
+                    string toBeSearched = "Body:";
+                    body = split.Substring(split.IndexOf(toBeSearched) + toBeSearched.Length);
+                    subject = split.Split(new string[] { "Body:" }, StringSplitOptions.None)[0];
 
+                    if (holder.Contains(mail.EmployeeID.ToString()) && holder.Contains(subject) && mail.Email.Contains(subject))
+                    {
+                        lblEmailFrom.Text = employeeName;
+                        lblEmailDate.Text = mail.Date;
+                        lblEmailSubject.Text = subject;
+                        rtbEmailBody.Text = body;
+                        dbEmail = mail;
+                        if (mail.Status == "Read")
+                        {
+                            btnMarkAsRead.Visible = false;
+                        }
+                        else
+                        {
+                            btnMarkAsRead.Visible = true;
+                        }
+                    }
+                }
+                
+            }
+        }
+
+        private void btnMarkAsRead_Click(object sender, EventArgs e)
+        {
+            int emailID = -1;
+            if(dbEmail != null)
+            {
+                emailID = dbEmail.EmailID;
+                db.EmailStatusRead(emailID);            
+            }
+            else
+            {
+                MessageBox.Show("The action could not be made at this time.");
+            }
+            UpdateMailList(split, subject);
+        }
+
+        private void btnDeleteMail_Click(object sender, EventArgs e)
+        {
+            int emailID = -1;
+            if(dbEmail != null)
+            {
+                emailID = dbEmail.EmailID;
+                db.DeleteEmailById(emailID);
+            }
+            else
+            {
+                MessageBox.Show("The action could not be made at this time.");
+            }
+            UpdateMailList(split, subject);
+            pnlHolderContentMail.Visible = false;
+        }
     }
 }

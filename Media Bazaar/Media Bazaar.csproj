@@ -70,6 +70,7 @@
     <Compile Include="Classes\Calendar.cs" />
     <Compile Include="Classes\DataAccess.cs" />
     <Compile Include="Classes\DBDepartament.cs" />
+    <Compile Include="Classes\DBEmail.cs" />
     <Compile Include="Classes\DBEmployee.cs" />
     <Compile Include="Classes\DBRestockRequest.cs" />
     <Compile Include="Classes\DBSchedule.cs" />

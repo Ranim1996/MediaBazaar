@@ -14,18 +14,19 @@ namespace Media_Bazaar
     public partial class AssignShift : Form
     {
         DataAccess db;
-        DBSchedule schedule;
-        List<DBSchedule> dbSchedules;
+        DBSchedule schedule = new DBSchedule();
+        List<DBSchedule> dbSchedules = null;
         DateTime shiftDate;
         public AssignShift(DateTime date, MainAdmin main)
         {
             InitializeComponent();
             shiftDate = date;
             db = new DataAccess();
+            //schedule.GetAllSchedules();
+            //dbSchedules = schedule.allSchedules;
             tbDate.Text = $"{date.Day}/{date.Month}/{date.Year}, {date.DayOfWeek}";
-            /*dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker1.Text = $"{date.Day}/{date.Month}/{date.Year}";*/
+            this.Text = $"Assign shift on date: {tbDate.Text}";
+
             if (date.DayOfWeek == DayOfWeek.Sunday)
             {
                 cmbBxWorkShiftSunday.Visible = true;
@@ -51,11 +52,11 @@ namespace Media_Bazaar
         private void AssignShift_Load(object sender, EventArgs e)
         {
             UpdateList();
+            UpdatePreferencesList();
         }
         private void UpdateList()
         {
             lbShifts.Items.Clear();
-            schedule = new DBSchedule();
             schedule.GetAllSchedules();
             dbSchedules = schedule.allSchedules;
             foreach (DBSchedule sch in dbSchedules)
@@ -72,6 +73,27 @@ namespace Media_Bazaar
                         lbShifts.Items.Add($"{firstNameOfEmployee} - ID({sch.EmployeeId}):{sch.Shift}");
                     }
                 }         
+            }
+        }
+        private void UpdatePreferencesList()
+        {
+            lbShiftPreferences.Items.Clear();
+            schedule.GetAllSchedules();
+            dbSchedules = schedule.allSchedules;
+            foreach (DBSchedule sch in dbSchedules)
+            {
+                string firstNameOfEmployee = db.GetFirstNameOfEmployeeById(sch.EmployeeId);
+                if (sch.Date == shiftDate.ToString("dd/MM/yyyy") && sch.Status == "Selected")
+                {
+                    if (sch.Attendance != null)
+                    {
+                        lbShiftPreferences.Items.Add($"{firstNameOfEmployee} - ID({sch.EmployeeId}):{sch.Shift} -> {sch.Attendance}");
+                    }
+                    else
+                    {
+                        lbShiftPreferences.Items.Add($"{firstNameOfEmployee} - ID({sch.EmployeeId}):{sch.Shift}");
+                    }
+                }
             }
         }
         private void btnAssignWorkShift_Click(object sender, EventArgs e)
@@ -184,11 +206,12 @@ namespace Media_Bazaar
         private void lbItem_DoubleClick(object sender, EventArgs e)
         {
             string holder = "";
+            string status = "Assigned";
             string date = shiftDate.ToString("dd/MM/yyyy");
-            db = new DataAccess();
-            schedule = new DBSchedule();
-            schedule.GetAllSchedules();
-            dbSchedules = schedule.allSchedules;
+
+            //schedule.GetAllSchedules();
+            //dbSchedules = schedule.allSchedules;
+
             if (lbShifts.SelectedItem != null)
             {
                 holder = lbShifts.SelectedItem.ToString();
@@ -199,8 +222,71 @@ namespace Media_Bazaar
                         DialogResult dialogResult = MessageBox.Show($"Are you sure that you want to delete this shift? ID({sch.EmployeeId}): {sch.Shift}", "Warning!", MessageBoxButtons.YesNo);
                         if(dialogResult == DialogResult.Yes)
                         {
-                            db.DeleteAttendanceByIdAndShift(sch.EmployeeId, sch.Shift, date);
+                            db.DeleteAttendanceByIdAndShift(sch.EmployeeId, sch.Shift, date, status);
                             MessageBox.Show("Shift has been successfully removed!");
+                            UpdateList();
+                        }
+                        else //if(dialogResult == DialogResult.No)
+                        {
+                            //do nothing 
+                        }
+                        break;
+                    }
+                }
+            }
+        }
+
+        private void lbShiftPreferences_DoubleClick(object sender, EventArgs e)
+        {
+            string holder = "";
+            string status = "Selected";
+            string date = shiftDate.ToString("dd/MM/yyyy");
+
+            //schedule.GetAllSchedules();
+            //dbSchedules = schedule.allSchedules;
+
+            if (lbShiftPreferences.SelectedItem != null)
+            {
+                holder = lbShiftPreferences.SelectedItem.ToString();
+                foreach (DBSchedule sch in dbSchedules)
+                {
+                    if (holder.Contains(sch.EmployeeId.ToString()) && holder.Contains(sch.Shift))
+                    {
+                        DialogResult dialogResult = MessageBox.Show($"Are you sure that you want to delete this shift? ID({sch.EmployeeId}): {sch.Shift}", "Warning!", MessageBoxButtons.YesNo);
+                        if (dialogResult == DialogResult.Yes)
+                        {
+                            db.DeleteAttendanceByIdAndShift(sch.EmployeeId, sch.Shift, date, status);
+                            MessageBox.Show("Shift has been successfully removed!");
+                            UpdatePreferencesList();
+                        }
+                        else //if(dialogResult == DialogResult.No)
+                        {
+                            //do nothing 
+                        }
+                        break;
+                    }
+                }
+            }
+        }
+
+        private void btnAssignSelectedShift_Click(object sender, EventArgs e)
+        {
+            string holder = "";
+            string date = shiftDate.ToString("dd/MM/yyyy");
+
+            if (lbShiftPreferences.SelectedItem != null)
+            {
+                holder = lbShiftPreferences.SelectedItem.ToString();
+                foreach (DBSchedule sch in dbSchedules)
+                {
+                    if (holder.Contains(sch.EmployeeId.ToString()) && holder.Contains(sch.Shift))
+                    {
+                        DialogResult dialogResult = MessageBox.Show($"Are you sure that you want to assign this shift? ID({sch.EmployeeId}): {sch.Shift}", "Warning!", MessageBoxButtons.YesNo);
+                        if (dialogResult == DialogResult.Yes)
+                        {
+                            db.AssignShift(sch.EmployeeId, sch.Shift, date);
+                            MessageBox.Show("Shift has been successfully assigned!");
+                            UpdatePreferencesList();
                             UpdateList();
                         }
                         else //if(dialogResult == DialogResult.No)
