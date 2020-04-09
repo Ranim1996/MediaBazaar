@@ -132,7 +132,8 @@ ul.list li {
   margin-bottom: 20px;
   margin-top: 20px;
 }
-ul.list li input {
+ul.list li input
+ {
   width: 90%;
   text-align: center;
   padding: 8px 0px;
@@ -146,7 +147,7 @@ ul.list li input {
 
 ul.list li input[type="submit"], 
 .formUpdate li input[type="submit"],
-input[type="button"] 
+input[type="button"]
 {
   background-color: #207eb1;
   color: #fff;
@@ -422,10 +423,13 @@ nav {
 }
 .formUpdate li input,
  .update-password .input-pass,
- #textArea-bio{
+ #textArea-bio,
+ .formInquiry #emailContent,
+ .formInquiry input{
   border-radius: 5px;
   padding: 7px 10px;
 }
+
 .update-password .input-pass{
   background-color: #fff;
 }
@@ -510,34 +514,39 @@ nav {
   margin: 0 auto;
 }
 
-.send-email {
-  max-width: 1140px;
-  margin: 0 auto;
-  margin-bottom: 5%;
-}
+/*--------------INQUIRY FORM-------*/
 
-.send-email textarea{
-padding: 1%;
-width: 50%;
-min-height: 5rem;
-max-width: 60%;
-}
-
-.submit{
-border-radius:7px;
-padding: 1% 3%;    
-font-size: 1.5rem;
+.formInquiry input[type="submit"]
+{
+border-radius:5px;
+padding: 7px 20px;    
+font-size: 110%;
 color: white;
 font: bold;
 background-color: #207EB1;
 border: none;
-margin-left: 4%;
+margin-top: 15px;
+}
+.formInquiry input[type="submit"]:hover
+{
+cursor: pointer;
+background-color: #1a5073;
+  border: 0px solid #fff;
 }
 
-.submit:hover{
-cursor: pointer;
-background: #044263;
+.formInquiry #emailContent
+{
+  margin-top: 20px;
 }
+.formInquiry
+{
+  color: #555555;
+  margin-bottom: 10px;
+  padding: 4px 0px;
+  border: none;
+  background-color: #fff;
+}
+
 
 /*--------------CUSTOMIZE DETAILS ICON-------*/
 

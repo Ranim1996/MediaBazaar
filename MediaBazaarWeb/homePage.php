@@ -1,56 +1,52 @@
-<?php 
-$msg="";
-  session_start();
-  $msg="";
-  
-  if(!isset($_SESSION['loggedin'])){
-    header('Location: loginPage.php');
-    exit;    
+<?php
+$msg = "";
+session_start();
+$msg = "";
+
+if (!isset($_SESSION['loggedin'])) {
+  header('Location: loginPage.php');
+  exit;
+}
+
+require('static/php/dbConnection.php');
+
+$username = $_SESSION['username'];
+$password = $_SESSION['password'];
+
+$query_employee = "SELECT * FROM employee WHERE Username = '$username' AND Password = '$password'";
+$employee_statement = $conn->prepare($query_employee);
+$employee_statement->execute();
+$employees = $employee_statement->fetchAll();
+$employee_statement->closeCursor();
+
+foreach ($employees as $empl) {
+  $_SESSION['employeeId'] = $empl['EmployeeID'];
+}
+
+//sending 'email' to the database 
+$msg = "";
+if (isset($_POST['Submit'])) {
+  $subject = $_POST['subject'];
+  $txt = $_POST['emailContent'];
+  $date = date('d/m/Y');
+  if ($subject == "" || $txt == "") {
+    $msg = "Not all of the values are entered!";
+  } else {
+    $employee_id = $_SESSION['employeeId'];
+
+    $emailContent = "Subject: " . $subject . " Body: " .  $txt;
+
+    $query = "INSERT INTO email (EmployeeID, Email, Date) VALUES ( '$employee_id', '$emailContent', '$date')";
+    $stm = $conn->prepare($query);
+    $stm->execute();
+    header('Location: homePage.php');
   }
-
-  require('static/php/dbConnection.php');
-
-  $username = $_SESSION['username'];
-  $password = $_SESSION['password'];
-
-  $query_employee = "SELECT * FROM employee WHERE Username = '$username' AND Password = '$password'";
-  $employee_statement = $conn->prepare($query_employee);
-  $employee_statement->execute();
-  $employees = $employee_statement->fetchAll();
-  $employee_statement->closeCursor();  
-
-  foreach($employees as $empl)
-  {
-    $_SESSION['employeeId'] = $empl['EmployeeID'];
-  }
-
-  //sending 'email' to the database 
-  $msg="";
-  if(isset($_POST['Submit']))
-  {
-    $subject = $_POST['subject'];
-    $txt = $_POST['emailContent'];
-    $date = date('d/m/Y');
-    if ($subject == "" || $txt == "")
-    {
-      $msg="Not all of the values are entered!";
-    }
-    else 
-    {
-        $employee_id = $_SESSION['employeeId'];
-
-        $emailContent="Subject: " . $subject . " Body: " .  $txt;
-
-        $query="INSERT INTO email (EmployeeID, Email, Date) VALUES ( '$employee_id', '$emailContent', '$date')"; 
-        $stm=$conn->prepare($query);
-        $stm->execute();
-        header('Location: homePage.php');
-    }
-  }
+}
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <link rel="stylesheet" type="text/css" href="static/css/main.css">
   <link rel="stylesheet" type="text/css" href="static/css/normalize.css">
@@ -67,133 +63,122 @@ $msg="";
 
 <body class="body-home-page">
 
-    <header class="header-home" id="home">
+  <header class="header-home" id="home">
 
-      <nav>
-        <div class="row">
-          <a href="#home"><img alt="logo" class="logo-nav" src="static/img/logo2.png"></a>
-          <ul class="main-nav">
-              <li><a href="homePage.php">Home</a></li>
-              <li><a href="calendar.php">Shedule</a></li>
-              <li><a href="preferredShifts.html">Send Inquiry</a></li>
-          </ul>
+    <nav>
+      <div class="row">
+        <a href="#home"><img alt="logo" class="logo-nav" src="static/img/logo2.png"></a>
+        <ul class="main-nav">
+          <li><a href="homePage.php">Home</a></li>
+          <li><a href="calendar.php">Shedule</a></li>
+          <li><a href="preferredShifts.html">Send Inquiry</a></li>
+        </ul>
 
-          <div class="main-nav logout">
-            <a href="#">Log Out</a>
-          </div>
+        <div class="main-nav logout">
+          <a href="#">Log Out</a>
         </div>
-      </nav>
+      </div>
+    </nav>
 
-    </header>
+  </header>
 
 
-    <section class="home-page-cover-wallpaper-section">
+  <section class="home-page-cover-wallpaper-section">
 
-      <div class="content-block">
-        <div class="row">
-          <img src="static/img/wallpaper.jpg" alt="wallpaper" class="cover-picture">
-        </div>
-        <?php foreach($employees as $employee) ?>
-        <div class="wallpaper-personal-info">
-          <div class="wallpaper-box-content-personal-info">
-            <div class="wallpaper-title-box-inside">
-              <div class="text-edit-personal-info">
-               <!-- Name from the database -->
-                <h1><?php  
+    <div class="content-block">
+      <div class="row">
+        <img src="static/img/wallpaper.jpg" alt="wallpaper" class="cover-picture">
+      </div>
+      <?php foreach ($employees as $employee) ?>
+      <div class="wallpaper-personal-info">
+        <div class="wallpaper-box-content-personal-info">
+          <div class="wallpaper-title-box-inside">
+            <div class="text-edit-personal-info">
+              <!-- Name from the database -->
+              <h1><?php
                   echo $employee['FirstName'] . " " . $employee['LastName'];
-                ?></h1>
-                <div class="job-position">
-                  <i class="ion-ios-man"></i>
-                  <h3><?php echo $employee['Position']; ?></h3>   <!-- Position from the database -->
-                </div>
-                <div class="department">
-                  <i class="ion-ios-locate"></i>
-                  <h3><?php 
-                  if($employee['Departament'] == NULL)
-                  {
-                    $message = "Not yet assigned to department";
-                    echo $message;
-                  }
-                  else
-                  {
-                    echo $employee['Departament'];
-                  }
-                   ?></h3>    <!-- Department from the database -->
-                </div>
-               
-                <div class="started-date">
-                  <i class="ion-ios-calendar"></i>
-                  <h3><?php echo "Borned on: " . $employee['DateOfBirth']; ?></h3>     <!-- Born date from the database -->
-                </div>
+                  ?></h1>
+              <div class="job-position">
+                <i class="ion-ios-man"></i>
+                <h3><?php echo $employee['Position']; ?></h3> <!-- Position from the database -->
+              </div>
+              <div class="department">
+                <i class="ion-ios-locate"></i>
+                <h3><?php
+                    if ($employee['Departament'] == NULL) {
+                      $message = "Not yet assigned to department";
+                      echo $message;
+                    } else {
+                      echo $employee['Departament'];
+                    }
+                    ?></h3> <!-- Department from the database -->
+              </div>
+
+              <div class="started-date">
+                <i class="ion-ios-calendar"></i>
+                <h3><?php echo "Borned on: " . $employee['DateOfBirth']; ?></h3> <!-- Born date from the database -->
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="container-personal-picture">
-          <div class="container-profile-pic">
-            <div class="profile-picture">
+      <div class="container-personal-picture">
+        <div class="container-profile-pic">
+          <div class="profile-picture">
 
-            </div>
-            <i class="ion-ios-build icon-customize customize-profile-picture"></i>
           </div>
+          <i class="ion-ios-build icon-customize customize-profile-picture"></i>
+        </div>
 
-            <div class="content-below-profile-picture">
-            <?php foreach($employees as $employee) ?>
-              <h2 class="work-shift-title">Upcoming work shifts</h2>
-              <ul>
-                <?php
-                    $employee_id = $employee['EmployeeID']; 
-                    #the shifts will be taken from the database using the employee id
-                    $string = "Assigned";
-                    $query_shift = "SELECT * FROM schedule WHERE EmployeeID = '$employee_id' AND Status = '$string'";
-                    $shift_statement = $conn->prepare($query_shift);
-                    $shift_statement->execute();
-                    $shifts = $shift_statement->fetchAll();
-                    $shift_statement->closeCursor(); 
-                    
-                    //list only the upcoming shifts
-                    foreach($shifts as $employee_shifts)
-                    {
-                      //get date of today in the same format as the dates are stored in the db
-                      $today_date = date('d/m/Y');
-                      $today_date = explode('/', $today_date);
-                      $date_shift = explode('/', $employee_shifts['Date']);
-                      
-                      if( (($date_shift[2] == $today_date[2]) && ($date_shift[1] == $today_date[1])) && ((int)$date_shift[0] >= (int)$today_date[0]) )
-                      {
-                        echo "<li><h4 class=\"days-work-shifts\">" . $employee_shifts['Date'] . " -> " . $employee_shifts['Shift'] . "</h4></li>";
-                      }
-                      else
-                      {
-                        if( ((int)$date_shift[1] != $today_date[1]) && ((int)$date_shift[1] >= (int)$today_date[1]) && ($date_shift[2] == $today_date[2]) && ( ((int)$date_shift[0] >= (int)$today_date[0]) || ( ((int)$date_shift[0] < (int)$today_date[0]) )   ))
-                        {
-                          echo "<li><h4 class=\"days-work-shifts\">" . $employee_shifts['Date'] . " -> " . $employee_shifts['Shift'] . "</h4></li>";
-                        }
-                        else
-                        {
-                          if( ((int)$date_shift[2] != (int)$today_date[2]) &&  ((int)$date_shift[2] >= (int)$today_date[2]) &&  (  ((int)$date_shift[1] >= (int)$today_date[1]) || ((int)$date_shift[1] < (int)$today_date[1]) ) && ( ((int)$date_shift[0] >= (int)$today_date[0])  || ( (int)$date_shift[0] < (int)$today_date[0]  )   ) )
-                          {
-                            echo "<li><h4 class=\"days-work-shifts\">" . $employee_shifts['Date'] . " -> " . $employee_shifts['Shift'] . "</h4></li>";
-                          }
-                        }
-                      }
-                    }
-                ?>                
-              </ul>
-            </div>
+        <div class="content-below-profile-picture">
+          <?php foreach ($employees as $employee) ?>
+          <h2 class="work-shift-title">Upcoming work shifts</h2>
+          <ul>
+            <?php
+            $employee_id = $employee['EmployeeID'];
+            #the shifts will be taken from the database using the employee id
+            $string = "Assigned";
+            $query_shift = "SELECT * FROM schedule WHERE EmployeeID = '$employee_id' AND Status = '$string'";
+            $shift_statement = $conn->prepare($query_shift);
+            $shift_statement->execute();
+            $shifts = $shift_statement->fetchAll();
+            $shift_statement->closeCursor();
 
+            //list only the upcoming shifts
+            foreach ($shifts as $employee_shifts) {
+              //get date of today in the same format as the dates are stored in the db
+              $today_date = date('d/m/Y');
+              $today_date = explode('/', $today_date);
+              $date_shift = explode('/', $employee_shifts['Date']);
+
+              if ((($date_shift[2] == $today_date[2]) && ($date_shift[1] == $today_date[1])) && ((int) $date_shift[0] >= (int) $today_date[0])) {
+                echo "<li><h4 class=\"days-work-shifts\">" . $employee_shifts['Date'] . " -> " . $employee_shifts['Shift'] . "</h4></li>";
+              } else {
+                if (((int) $date_shift[1] != $today_date[1]) && ((int) $date_shift[1] >= (int) $today_date[1]) && ($date_shift[2] == $today_date[2]) && (((int) $date_shift[0] >= (int) $today_date[0]) || (((int) $date_shift[0] < (int) $today_date[0])))) {
+                  echo "<li><h4 class=\"days-work-shifts\">" . $employee_shifts['Date'] . " -> " . $employee_shifts['Shift'] . "</h4></li>";
+                } else {
+                  if (((int) $date_shift[2] != (int) $today_date[2]) &&  ((int) $date_shift[2] >= (int) $today_date[2]) &&  (((int) $date_shift[1] >= (int) $today_date[1]) || ((int) $date_shift[1] < (int) $today_date[1])) && (((int) $date_shift[0] >= (int) $today_date[0])  || ((int) $date_shift[0] < (int) $today_date[0]))) {
+                    echo "<li><h4 class=\"days-work-shifts\">" . $employee_shifts['Date'] . " -> " . $employee_shifts['Shift'] . "</h4></li>";
+                  }
+                }
+              }
+            }
+            ?>
+          </ul>
         </div>
 
       </div>
-    </section>
+
+    </div>
+  </section>
 
 
-    <!-- CONTACT SECTION-->
-    <section class="home-page-section">
-      <div class="row">
-        <h2 class="home-content">Contact</h2>
-        
+  <!-- CONTACT SECTION-->
+  <section class="home-page-section">
+    <div class="row">
+      <h2 class="home-content">Contact</h2>
+
       <div class="email-section">
         <div class="email">
           <i class="ion-ios-mail"></i>
@@ -203,11 +188,11 @@ $msg="";
           <p id="mail-written"><?php echo $employee['Email']; ?></p>
         </div>
         <div class="customize-home-section">
-           <i id="custom-contact-email" class="ion-ios-build  icon-customize icon-customize-contact-section"></i>
+          <i id="custom-contact-email" class="ion-ios-build  icon-customize icon-customize-contact-section"></i>
         </div>
       </div>
-        
-          
+
+
       <div class="phone-section">
         <div class="phone-number">
           <i class="ion-ios-call"></i>
@@ -220,111 +205,118 @@ $msg="";
           <i id="custom-contact-phone" class="ion-ios-build  icon-customize icon-customize-contact-section"></i>
         </div>
       </div>
-        
+
+
+    </div>
+  </section>
+
+
+
+  <!-- ACCOUNT CREDENTIALS SECTION-->
+  <section class="home-page-section">
+    <div class="row">
+      <h2 class="home-content">Account Credentials</h2>
+
+      <div class="username-section">
+        <div class="username-homePage">
+          <i class="ion-ios-person"></i>
+          <h3 class="header3-profilePage">Username</h3>
+        </div>
+        <p id="username"><?php echo $employee['Username']; ?></p>
 
       </div>
-    </section>
 
-
-
-    <!-- ACCOUNT CREDENTIALS SECTION-->
-    <section class="home-page-section">
-      <div class="row">
-        <h2 class="home-content">Account Credentials</h2>
-
-        <div class="username-section">
-          <div class="username-homePage">
-            <i class="ion-ios-person"></i>
-            <h3 class="header3-profilePage">Username</h3>
-          </div>
-          <p id="username"><?php echo $employee['Username']; ?></p> 
-          
+      <div id="password-reference" class="password-section">
+        <div class="password-homePage">
+          <i class="ion-ios-key"></i>
+          <h3 class="header3-profilePage">Password</h3>
         </div>
-        
-        <div id="password-reference" class="password-section">
-          <div class="password-homePage">
-            <i class="ion-ios-key"></i>
-            <h3 class="header3-profilePage">Password</h3>
-          </div>
-          <div class="update-password update-fields">
-            <input class="input-pass" type="password" id="original-input-pass" value="<?php echo $employee['Password']; ?>" disabled>
-            <input type="checkbox" id="check" name="check-pass" value="Show password"><label id="label-show-pass" for="check">Show password</label> 
-            <div id="feedback"></div>
-          </div>
-          
-
-          <div class="customize-home-section">
-            <i id="custom-password" class="ion-ios-build  icon-customize icon-customize-contact-section"></i>
-          </div>
+        <div class="update-password update-fields">
+          <input class="input-pass" type="password" id="original-input-pass" value="<?php echo $employee['Password']; ?>" disabled>
+          <input type="checkbox" id="check" name="check-pass" value="Show password"><label id="label-show-pass" for="check">Show password</label>
+          <div id="feedback"></div>
         </div>
-        
+
+
+        <div class="customize-home-section">
+          <i id="custom-password" class="ion-ios-build  icon-customize icon-customize-contact-section"></i>
+        </div>
       </div>
-    </section>
+
+    </div>
+  </section>
 
 
 
-    <!-- ABOUT SECTION-->
-    <section class="home-page-section">
-      <div class="row">
-        <h2 class=" home-content">About</h2>
-        
-        <div class="bio-section">
-          <div class="biography">
-            <i class="ion-ios-book"></i>
-            <h3>Bio</h3>
-          </div>
-          <p id="personal-bio"><?php echo $employee['PersonalInfo'];?></p>
+  <!-- ABOUT SECTION-->
+  <section class="home-page-section">
+    <div class="row">
+      <h2 class=" home-content">About</h2>
 
-          <div class="customize-home-section">
+      <div class="bio-section">
+        <div class="biography">
+          <i class="ion-ios-book"></i>
+          <h3>Bio</h3>
+        </div>
+        <p id="personal-bio"><?php echo $employee['PersonalInfo']; ?></p>
+
+        <div class="customize-home-section">
           <i id="custom-bio" class="ion-ios-build  icon-customize icon-customize-bio-section"></i>
-          </div>
         </div>
-
       </div>
-    </section>
 
-    <aside class="send-email">
-      
-          <h2 class="home-content">Make an inquiry</h2>  
-          <form action="homePage.php" method="POST"> 
-            <input name="subject" placeholder="Subject..."><br>         
-            <textarea cols="30" rows="10" id="emailContent" name="emailContent" required></textarea>
-            <input class="Submit" type="Submit" name="Submit" value="Send">
-            <?php echo "$msg"; ?>        
+    </div>
+  </section>
+
+  <!-- <aside class="send-email"> -->
+
+  <section class="home-page-content">
+    <div class="row">
+      <h2 class="home-content">Make an inquiry</h2>
+      <form class="formInquiry" action="homePage.php" method="POST">
+        <input name="subject" placeholder="Subject..."><br>
+        <textarea cols="30" rows="10" id="emailContent" name="emailContent" required></textarea><br>
+        <input class="submit" type="submit" name="Submit" value="Send">
+        <?php echo "$msg"; ?>
       </form>
-  </aside>
+    </div>
+  </section>
+
+
+  <!-- </aside> -->
 
 
 
 
 
 
-    <footer>
-      <div class="row">
+  <footer>
+    <div class="row">
 
-        <div class="col span-1-of-2">
-          <ul class="footer-nav">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Services</a></li>
-          </ul>
-        </div>
-
-        <div class="col span-1-of-2">
-          <ul class="social-links">
-            <li><a href="#"><i class="ion-logo-facebook"></i> </a> </li>
-            <li><a href="#"><i class="ion-logo-instagram"></i> </a></li>
-            <li><a href="#"><i class="ion-logo-twitter"></i></a></li>
-          </ul>
-        </div>
+      <div class="col span-1-of-2">
+        <ul class="footer-nav">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Services</a></li>
+        </ul>
       </div>
 
-      <div class="row">
-        <p id="footer-p">
-          Copyright &copy; 2020 by EasySoft. All rights reserved.
-        </p>
+      <div class="col span-1-of-2">
+        <ul class="social-links">
+          <li><a href="#"><i class="ion-logo-facebook"></i> </a> </li>
+          <li><a href="#"><i class="ion-logo-instagram"></i> </a></li>
+          <li><a href="#"><i class="ion-logo-twitter"></i></a></li>
+        </ul>
       </div>
-    </footer>
-    <script src="static/js/updateProfile.js"></script>
+    </div>
+
+    <div class="row">
+      <p id="footer-p">
+        Copyright &copy; 2020 by EasySoft. All rights reserved.
+      </p>
+    </div>
+  </footer>
+  <script src="static/js/updateProfile.js"></script>
 </body>
+
 </html>
