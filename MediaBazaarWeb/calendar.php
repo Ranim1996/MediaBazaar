@@ -195,7 +195,7 @@ function build_calendar($month, $year){
           </ul>
 
           <div class="main-nav logout logout-calendar">
-            <a href="loginPage.html">Log Out</a>
+            <a href="logoutPage.php">Log Out</a>
           </div>
         </div>
       </nav>

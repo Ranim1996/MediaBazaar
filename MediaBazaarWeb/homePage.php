@@ -75,7 +75,7 @@ if (isset($_POST['Submit'])) {
         </ul>
 
         <div class="main-nav logout">
-          <a href="#">Log Out</a>
+          <a href="logoutPage.php">Log Out</a>
         </div>
       </div>
     </nav>

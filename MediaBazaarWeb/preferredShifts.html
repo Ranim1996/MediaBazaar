@@ -27,7 +27,7 @@
           </ul>
 
           <div class="main-nav logout">
-            <a href="loginPage.html">Log Out</a>
+            <a href="logoutPage.php">Log Out</a>
           </div>
         </div>
       </nav>
