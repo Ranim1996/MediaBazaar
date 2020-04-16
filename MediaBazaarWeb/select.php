@@ -119,6 +119,7 @@ function timeslots($day)
 	<meta name="viewport" content="width = device, initial-scale = 1.0">
 	<link rel="stylesheet" type="text/css" href="static/css/main.css">
 	<link rel="stylesheet" type="text/css" href="static/css/ionicons-master/docs/css/ionicons.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 </head>
 
@@ -132,11 +133,10 @@ function timeslots($day)
 				<ul class="main-nav calendar-nav">
 					<li><a href="homePage.php">Home</a></li>
 					<li><a href="calendar.php">Shedule</a></li>
-					<li><a href="preferredShifts.html">Send Inquiry</a></li>
 				</ul>
 
 				<div class="main-nav logout logout-calendar">
-					<a href="logoutPage.php">Log Out</a>
+					<a href="loginPage.html">Log Out</a>
 				</div>
 			</div>
 		</nav>
@@ -169,10 +169,10 @@ function timeslots($day)
 					<form action="" method="post">
 						<div class="form-group">
 							<label for=""> Timeslot</label>
-							<input required type="text" readonly name="timeslot" id="timeslot">
+							<input required type="text" readonly name="timeslot" id="timeslot" class="timeslot-select">
 						</div>
 						<div class="form-group pull-right">
-							<button class="btn-primary" type="submit" name="submit">Request</button>
+							<button class="btn btn-primary" type="submit" name="submit">Request</button>
 						</div>
 					</form>
 				</div>

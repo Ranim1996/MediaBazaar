@@ -71,7 +71,6 @@ if (isset($_POST['Submit'])) {
         <ul class="main-nav">
           <li><a href="homePage.php">Home</a></li>
           <li><a href="calendar.php">Shedule</a></li>
-          <li><a href="preferredShifts.html">Send Inquiry</a></li>
         </ul>
 
         <div class="main-nav logout">

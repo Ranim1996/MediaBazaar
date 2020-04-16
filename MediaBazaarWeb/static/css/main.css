@@ -705,3 +705,14 @@ footer #footer-p {
 .footer-calendar{
   font-size: 17px;
 }
+
+.timeslot-select{
+  width: 25%;
+  padding: 15px 12px;
+  margin-bottom: 5px;
+  border: 1px solid #e5e5e5;
+  border-bottom: 2px solid #ddd;
+  
+  color: #555;
+  border-radius: 8px;
+}

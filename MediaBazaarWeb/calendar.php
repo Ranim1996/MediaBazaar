@@ -163,7 +163,7 @@ function build_calendar($month, $year){
   	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   	<meta http-equiv="X-UA-Compatible" content="ie=edge">
   	<meta name="HandheldFriendly" content="true">
-	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> 
+	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<title>Calendar</title>
 
 	<style>
@@ -191,7 +191,6 @@ function build_calendar($month, $year){
           <ul class="main-nav calendar-nav">
               <li><a href="homePage.php">Home</a></li>
               <li><a href="calendar.php">Shedule</a></li>
-              <li><a href="preferredShifts.html">Send Inquiry</a></li>
           </ul>
 
           <div class="main-nav logout logout-calendar">
