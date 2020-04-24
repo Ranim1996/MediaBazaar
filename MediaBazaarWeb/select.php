@@ -52,7 +52,7 @@ if (isset($_POST['submit'])) {
 			$query = "INSERT INTO schedule (EmployeeID, Date, Shift, Status) VALUES ( '$EmployeeID' , '$formatDate', '$shift', '$status')";
 			$stmt = $conn->prepare($query);
 			$stmt->execute();
-			header('Location: /mediaBazaar/calendar.php');
+			header('Location: calendar.php');
 		}
 	}
 	else
