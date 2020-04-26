@@ -1,8 +1,13 @@
 <?php
 
 session_start();
+
+require('static/php/dbConnection.php');
+
+//ranim part
 $selectedDate = "";
 $weekDay = "";
+
 if (isset($_GET['date'])) {
 	# code...
 	//change the format of the selected date d/m/Y
@@ -13,90 +18,98 @@ if (isset($_GET['date'])) {
 	$weekDay = date('l/m/Y', strtotime($selectedDate));
 	$weekDay = explode('/', $weekDay);
 	$dayOfWeek = $weekDay[0];
+
 }
 
 //DOES NOT work for now
-function checkDuplicate($shift, $date){
-	require('static/php/dbConnection.php');
-	$id = $_SESSION['employeeId'];
-	$query = "SELECT Date, Shift FROM schedule WHERE EmployeeID = '$id'";
-	$info = $conn->prepare($query);
-	$info->execute();
-	$information = $info->fetchAll();
-	$info->closeCursor();
-	foreach($information as $f)
-	{
-		if($dateDB == $f['Date'] && $shiftDB == $f['Shift'])
-		{
-			return false;
-		}
-	}
-	return true;
-}
+// function checkDuplicate($shift, $date){
+// 	require('static/php/dbConnection.php');
+// 	$id = $_SESSION['employeeId'];
+// 	$query = "SELECT Date, Shift FROM schedule WHERE EmployeeID = '$id'";
+// 	$info = $conn->prepare($query);
+// 	$info->execute();
+// 	$information = $info->fetchAll();
+// 	$info->closeCursor();
+// 	foreach($information as $f)
+// 	{
+// 		if($dateDB == $f['Date'] && $shiftDB == $f['Shift'])
+// 		{
+// 			return false;
+// 		}
+// 	}
+// 	return true;
+// }
+
+// if (isset($_POST['submit'])) {
+
+// 	require('static/php/dbConnection.php');
+
+// 	$EmployeeID = $_SESSION['employeeId'];
+// 	$shift = $_POST['timeslot'];
+// 	echo $shift;
+// 	echo $formatDate;
+// 	$status = 'Selected';
+
+	//check if the preference already exists in the schedule table
+	//avoid duplicating information in the db
+
+	// if(checkDuplicate($shift, $formatDate) == true)
+	// {
+		// $query = "SELECT * FROM schedule where date=? AND timeslot =?";
+		// $stmt = $conn->prepare($query);
+		// if($stmt->execute()) {
+		// 	# code...
+		// 	// $result = $stmt->get_result();
+		// 	$result = $stmt;
+		// 	if ($result->rowCount()>0) {
+		// 		# code...
+				
+		// 	}else{
+				// if ($shift != "" && $formatDate != "") {
+					// $query = "INSERT INTO schedule (EmployeeID, Date, Shift, Status) VALUES ( '$EmployeeID' , '$formatDate', '$shift', '$status')";
+					// $stmt = $conn->prepare($query);
+					// $stmt->execute();
+					// $selection[]=$timeslot;
+					// header('Location: calendar.php');
+				//}
+			///}
+		//}
+	// }
+	// else
+	// {
+	// 	include('static/php/prefferenceError.php');
+	// }
+
+	// $conn = null;
+//}
+
 if (isset($_POST['submit'])) {
-
-	require('static/php/dbConnection.php');
-
+	//select day to work in
 	$EmployeeID = $_SESSION['employeeId'];
 	$shift = $_POST['timeslot'];
 	echo $shift;
 	echo $formatDate;
 	$status = 'Selected';
 
-	//check if the preference already exists in the schedule table
-	//avoid duplicating information in the db
-
-	if(checkDuplicate($shift, $formatDate) == true)
-	{
-		if ($shift != "" && $formatDate != "") {
-			$query = "INSERT INTO schedule (EmployeeID, Date, Shift, Status) VALUES ( '$EmployeeID' , '$formatDate', '$shift', '$status')";
-			$stmt = $conn->prepare($query);
-			$stmt->execute();
-			header('Location: calendar.php');
-		}
+	if ($shift != "" && $formatDate != "") {
+		$query = "INSERT INTO schedule (EmployeeID, Date, Shift, Status) VALUES ( '$EmployeeID' , '$formatDate', '$shift', '$status')";
+		$stmt = $conn->prepare($query);
+		$stmt->execute();
+		header('Location: calendar.php');
 	}
-	else
-	{
-		include('static/php/prefferenceError.php');
-	}
-
-	$conn = null;
 }
-
-//$duration = 300;
-//$cleanup = 0;
-//$start = "07:00";
-//$end = "22:00";
 
 function timeslots($day)
 {
-	/* $start = new DateTime($start);
-	$end = new DateTime($end);
-	$interval = new DateInterval("PT" . $duration . "M");
-	$cleanupInterval = new DateInterval("PT" . $cleanup . "M");
+	//showing shifts
 	$slots = array();
-
-	for ($intStart = $start; $intStart  < $end; $intStart->add($interval)->add($cleanupInterval)) {
-		# code...
-		$endPeriod = clone $intStart;
-		$endPeriod->add($interval);
-		if ($endPeriod > $end) {
-			# code...
-			break;
-		}
-
-		$slots[] = $intStart->format("H:iA") . "-" . $endPeriod->format("H:iA");
-	}  
-	return $slots; 
-	*/
-	$slots = array();
-	if ($day == "Sunday") {
+	if ($day == "Sunday") { //sunday shift
 		$slots[0] = "12:00-18:00";
 	} else {
-		if ($day == "Saturday") {
+		if ($day == "Saturday") { //saturday shifts
 			$slots[0] = "9:00-15:00";
 			$slots[1] = "15:00-18:00";
-		} else {
+		} else { // other days shifts
 			$slots[0] = "07:00-12:00";
 			$slots[1] = "12:00-17:00";
 			$slots[2] = "17:00-22:00";
@@ -142,8 +155,6 @@ function timeslots($day)
 		</nav>
 
 	</header>
-
-	<!-- date('d/m/Y', strtotime($selectedDate)) -->
 	<div class="container container-select-shift">
 		<h1 class="text-center">Selected Date: <?php echo  $formatDate ?> </h1>
 		<hr>
@@ -153,8 +164,7 @@ function timeslots($day)
 			?>
 				<div class="col-md-2">
 					<div>
-						<button class="btn btn-success Select" data-timeslot="<?php echo $ts; ?>"><?php echo $ts; ?>
-						</button>
+						<button class="btn btn-success Select" data-timeslot="<?php echo $ts; ?>"><?php echo $ts; ?></button>
 					</div>
 				</div>
 			<?php } ?>

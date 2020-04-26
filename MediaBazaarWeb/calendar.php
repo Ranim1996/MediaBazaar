@@ -1,25 +1,32 @@
 <?php
 
+//ranim PART
+session_start();
+
+require('static/php/dbConnection.php');
+
+function GetSelectedDate($Employee, $date){
+
+	try{
+		global $conn;
+		$query = "SELECT Status FROM schedule WHERE `Date` = '$date' AND `EmployeeID` = $Employee";
+		$stmt = $conn->prepare($query);
+
+		$stmt->execute();
+		$result = $stmt->fetch();
+
+		return $result;
+	}
+	catch(PDOException $e){
+		echo "Error";
+	}
+	
+
+}
+
 function build_calendar($month, $year){
 
-	//require('static/php/dbConnection.php');
-	/*$stmt = $mysqli->prepare("SELECT * FROM schedule WHERE Month(date)=? AND Year(date) = ?");
-	$stmt->bind_param('ss', $month, $year);
-	$selection = array();
-	if ($stmt->execute()) {
-		# code...
-		$result = $stmt->get_result();
-		if ($result->num_rows>0) {
-			# code...
-			while ($row = $result->fetch_assoc(stmt)) {
-				# code...
-				$selection[] = $row['date'];
-			}
-		}
-
-		$stmt->close();
-	}
-	*/
+	$EmployeeID = $_SESSION['employeeId'];
 
 	//names of days
 	$daysOfWeek = array ('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
@@ -44,18 +51,19 @@ function build_calendar($month, $year){
 	//ranim part
 	$dateToday = date('Y-m-d');
 
+	//ranim PART
 	//new
 	//$dateToday = date('d/m/Y');
 
 	//creating html table
 	$calendar = "<table class = 'table table-bordered'>";
-	$calendar .= "<center><h2>$monthName $year</h2></center>";
+	$calendar.= "<center><h2>$monthName $year</h2>";
 
-	$calendar .= "<a class='btn btn-xs btn-primary' href = '?month=".date('m', mktime(0,0,0, $month-1,1,$year))."&year=".date('Y', mktime(0,0,0, $month-1,1,$year))."'>Previous Month</a>";
+	$calendar.= "<a class='btn btn-xs btn-primary' href = '?month=".date('m', mktime(0,0,0, $month-1,1,$year))."&year=".date('Y', mktime(0,0,0, $month-1,1,$year))."'>Previous Month</a>";
 
-	$calendar .= "<a class='btn btn-xs btn-primary' href = '?month=".date('m')."&year=".date('Y')."'>Current Month</a>";
+	$calendar.= "<a class='btn btn-xs btn-primary' href = '?month=".date('m')."&year=".date('Y')."'>Current Month</a>";
 
-	$calendar .= "<a class='btn btn-xs btn-primary' href = '?month=".date('m', mktime(0,0,0, $month+1,1,$year))."&year=".date('Y', mktime(0,0,0, $month+1,1,$year))."'>Next Month</a>";
+	$calendar.= "<a class='btn btn-xs btn-primary' href = '?month=".date('m', mktime(0,0,0, $month+1,1,$year))."&year=".date('Y', mktime(0,0,0, $month+1,1,$year))."'>Next Month</a></center><br>";
 
 	/////
 
@@ -64,17 +72,17 @@ function build_calendar($month, $year){
 	//creating calendar headers
 	foreach ($daysOfWeek as $day) {
 		# code...
-		$calendar .= "<th class='header'>$day </th>";
+		$calendar.= "<th class='header'>$day </th>";
 	}
 
-	$calendar .= "</tr><tr>";
+	$calendar.= "</tr><tr>";
 
 	//only 7 columns
 	if ($dayOfWeek > 0) {
 		# code...
 		for ($i=0; $i < $dayOfWeek; $i++) { 
 			# code...
-			$calendar .= "<td></td>";
+			$calendar.= "<td></td>";
 		}
 	}
 
@@ -90,14 +98,14 @@ function build_calendar($month, $year){
 		if ($dayOfWeek == 7) {
 			# code...
 			$dayOfWeek = 0;
-			$calendar .= "</tr><tr>";
+			$calendar.= "</tr><tr>";
 		}
 		# code...
 		$currentDayRel = str_pad($currentDay, 2, "0", STR_PAD_LEFT);
 
-		//ranim part
 		$date = "$year-$month-$currentDayRel";
-		
+		$formatDate = date('d/m/Y', strtotime(($date)));
+
 		//new
 		//$date = "$currentDayRel/$month/$year";
 
@@ -110,20 +118,38 @@ function build_calendar($month, $year){
 
 		//new
 		//$today = $date ==date('d/m/Y')?"today":"";
+		$result = GetSelectedDate($EmployeeID, $formatDate);
+
 
 		if ($date < date('Y-m-d')) {
 			# code...
-			$calendar .= "<td><h4>$currentDay</h4> <button class='btn btn-danger btn-xs'>N/A</button>";
+			$calendar.= "<td><h4>$currentDay</h4> <button class='btn btn-danger btn-xs'>N/A</button>";
 		}
-		/*elseif (in_array($date, $selection)) {
-			# code...
-			$calendar.= "<td><h4>$currentDay</h4> <button class='btn btn-danger btn-xs'>Already Selected</button>";
-		}*/
+	
 		else {
-			$calendar .= "<td class ='$today'><h4>$currentDay</h4> <a href='select.php?date=".$date."' class='btn btn-success btn-xs'>Select</a>";
+			if ($result != null) {
+				# code...
+				if ($result[0]== 'Selected') { //show selected days
+				# code...
+					$calendar.= "<td class ='$today'><h4>$currentDay</h4> <a href='cancelDay.php?date=".$date."' class='btn btn-warning btn-xs'>Selected</a>";
+					// $calendar.= "<a href='select.php?date=".$formatDate."' class='btn btn-success btn-xs'>Select Another Shift</a>";
+				}
+				else if ($result[0]== 'Cancelled') { //show cancelled days
+				# code...
+					$calendar.= "<td><h4>$currentDay</h4> <button class='btn btn-danger btn-xs'>Cancelled</button>";
+				}
+				else if ($result[0]== 'Assigned') { //show assigned days
+				# code...
+					$calendar.= "<td class ='$today'><h4>$currentDay</h4> <a href='cancelDay.php?date=".$date."' class='btn btn-warning btn-xs'>Assigned</a>";
+				}
+			}
+			else { // show unselected/normal days
+				$calendar.= "<td class ='$today'><h4>$currentDay</h4> <a href='select.php?date=".$date."' class='btn btn-success btn-xs'>Select</a>";
+			}
+
 		}
 
-		$calendar .= "</td>";
+		$calendar.= "</td>";
 
 		//increase counters
 		$currentDay++;
@@ -136,13 +162,13 @@ function build_calendar($month, $year){
 
 		for ($i=0; $i < $remainingDays ; $i++) { 
 			# code...
-			$calendar .= "<td></td>";
+			$calendar.= "<td></td>";
 		}
 
 	}
 
-	$calendar .= "</tr>";
-	$calendar .= "</table>";
+	$calendar.= "</tr>";
+	$calendar.= "</table>";
 
 	echo $calendar;
 

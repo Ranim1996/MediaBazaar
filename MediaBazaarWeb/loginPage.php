@@ -54,7 +54,7 @@ if(isset($_POST['submit']))
         if($count > 0)
         {
             $_SESSION['loggedin'] = TRUE;
-        $_SESSION['password'] = $_POST['password'];
+            $_SESSION['password'] = $_POST['password'];
             $_SESSION['username'] = $_POST["username"];
           header('Location: homePage.php');
             exit;
