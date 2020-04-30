@@ -53,6 +53,7 @@ namespace Media_Bazaar
         {
             UpdateList();
             UpdatePreferencesList();
+            UpdateAbsenceList();
         }
         private void UpdateList()
         {
@@ -294,6 +295,28 @@ namespace Media_Bazaar
                             //do nothing 
                         }
                         break;
+                    }
+                }
+            }
+        }
+
+        private void UpdateAbsenceList()
+        {
+            this.lbxAbsenceRecods.Items.Clear();
+            schedule.GetAllSchedules();
+            dbSchedules = schedule.allSchedules;
+            foreach (DBSchedule sch in dbSchedules)
+            {
+                string firstNameOfEmployee = db.GetFirstNameOfEmployeeById(sch.EmployeeId);
+                if (sch.Date == shiftDate.ToString("dd/MM/yyyy") && sch.Status == "Cancelled")
+                {
+                    if (sch.Attendance != null)
+                    {
+                        this.lbxAbsenceRecods.Items.Add($"{firstNameOfEmployee} - ID({sch.EmployeeId}):{sch.Shift} -> {sch.Attendance}");
+                    }
+                    else
+                    {
+                        this.lbxAbsenceRecods.Items.Add($"{firstNameOfEmployee} - ID({sch.EmployeeId}):{sch.Shift}");
                     }
                 }
             }
