@@ -30,7 +30,7 @@ namespace Media_Bazaar
         Media_Bazaar.Classes.Calendar calendar = new Calendar();
 
         DataAccess db;
-        DBSchedule schedule;
+        Schedule schedule;
         private object send;
 
         public MainAdmin()
@@ -38,7 +38,7 @@ namespace Media_Bazaar
             InitializeComponent();
             this.flDays.Click += new System.EventHandler(this.Flow_Click);
             db = new DataAccess();
-            schedule = new DBSchedule();
+            schedule = new Schedule();
 
             //change this if it s going to be laggy
 
@@ -453,7 +453,7 @@ namespace Media_Bazaar
             if (lbEmailInbox.SelectedItem != null)
             {
                 holder = lbEmailInbox.SelectedItem.ToString();
-                foreach (iem mail in emails)
+                foreach (IEmails mail in emails)
                 {
 
                     int id = mail.EmployeeID;

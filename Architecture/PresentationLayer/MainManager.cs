@@ -21,7 +21,7 @@ namespace Media_Bazaar
         List<IDepartmentModel> departments = new List<IDepartmentModel>();
         List<IRestockRequest> restocks = null;
         List<IEmployeeModel> allEmployees = null;
-        List<DBSchedule> schedules = null;
+        List<Schedule> schedules = null;
         DataAccess db;
     
         public MainManager()
@@ -191,7 +191,7 @@ namespace Media_Bazaar
             }
             schedules = db.GetSchedulesByEmplId(id);
 
-            foreach (DBSchedule sch in schedules)
+            foreach (Schedule sch in schedules)
             {
                 string[] dateShift = sch.Date.Split('/');
                 if (((dateShift[2] == date[2]) && (dateShift[1] == date[1]) && (Convert.ToInt32(dateShift[0]) >= Convert.ToInt32(date[0]))))
@@ -243,7 +243,7 @@ namespace Media_Bazaar
             }
             schedules = db.GetSchedulesByEmplId(employeeId);
 
-            foreach(DBSchedule sch in schedules)
+            foreach(Schedule sch in schedules)
             {
                 string[] dateShift = sch.Date.Split('/');
                 if(((dateShift[2] == date[2]) && (dateShift[1] == date[1]) && (Convert.ToInt32(dateShift[0]) >= Convert.ToInt32(date[0]) )) )
@@ -337,7 +337,7 @@ namespace Media_Bazaar
             //nrOfPresent = db.GetNumOfPresent();
             //nrOfLate = db.GetNumOfLate();
 
-            foreach(DBSchedule sch in schedules)
+            foreach(Schedule sch in schedules)
             {
                 if(sch.Attendance == "PRESENT")
                 {

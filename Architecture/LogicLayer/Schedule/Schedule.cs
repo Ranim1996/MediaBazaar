@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Media_Bazaar.Classes
 {
-    public class DBSchedule
+    public class Schedule : ISchedule
     {
         //fields
         public int EmployeeId { get; private set; }
@@ -16,9 +16,9 @@ namespace Media_Bazaar.Classes
         public String Shift { get; private set; }
         public String Attendance { get; private set; }
         public int ShiftId { get; private set; }
-        public List<DBSchedule> allSchedules { get; private set; }
+        public List<Schedule> allSchedules { get; private set; }
         public string Status { get; private set; }
-        
+
         //methods
 
         // return all schedules
@@ -32,10 +32,10 @@ namespace Media_Bazaar.Classes
             catch
             {
                 MessageBox.Show("Connection to the server wasn't possible!");
-                allSchedules = new List<DBSchedule>();
+                allSchedules = new List<Schedule>();
             }
-            
-            
+
+
         }
 
         /*public void GetAttendance(LinkLabel lbl, int emplId)

@@ -17,7 +17,7 @@ namespace Media_Bazaar.Classes
 
         //date that gets modified based on the controls of the form ---> used as a refrence in other months
         private static DateTime currentDate = DateTime.Today;
-        //private static DateTime date = new DateTime();
+
 
         public Calendar()
         {
@@ -27,14 +27,6 @@ namespace Media_Bazaar.Classes
 
         MainAdmin main;
 
-        /*public int GetCurrentYear
-        {
-            get { return this.currentDate.Year; }
-        }
-        public int GetCurrentMonth
-        {
-            get { return this.currentDate.Month; }
-        }*/
         public DateTime GetDate()
         {
             return currentDate;
@@ -55,24 +47,24 @@ namespace Media_Bazaar.Classes
 
         // -- methods --
         //used in the buttons
-        public void PrevMonth(List<DBSchedule> list, Label lb)
+        public void PrevMonth(List<Schedule> list, Label lb)
         {
             currentDate = currentDate.AddMonths(-1);
             DisplayCurrentDate(list, lb);
             //date = currentDate;
         }
-        public void NextMonth(List<DBSchedule> list, Label lb)
+        public void NextMonth(List<Schedule> list, Label lb)
         {
             currentDate = currentDate.AddMonths(1);
             DisplayCurrentDate(list, lb);
             //date = currentDate;
         }
-        public void Today(List<DBSchedule> list, Label lb)
+        public void Today(List<Schedule> list, Label lb)
         {
             currentDate = DateTime.Today;
             DisplayCurrentDate(list, lb);
         }
-        public void DisplayCurrentDate(List<DBSchedule> list, Label lb)
+        public void DisplayCurrentDate(List<Schedule> list, Label lb)
         { 
             lb.Text = currentDate.ToString("MMMM, yyyy");
             int firstDayAtFlNumber = GetFirstDayOfWeekOfCurrentDate();
@@ -104,17 +96,13 @@ namespace Media_Bazaar.Classes
 
         }
 
-        List<DBSchedule> listForTheDay = new List<DBSchedule>();
+        List<Schedule> listForTheDay = new List<Schedule>();
 
         // -- modified part
-        public void AddLabelDayToFlDay(int startDayAtFlNumber, int totalDaysInMonth, List<DBSchedule> schedules)
+        public void AddLabelDayToFlDay(int startDayAtFlNumber, int totalDaysInMonth, List<Schedule> schedules)
         {
-            //needs to be adjusted ---> WORK IN PROGGRESS
-            //string[] date = DateTime.Now.ToString("dd/MM/yyyy").Split('/');
             string[] date = currentDate.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture).Split('/');
-           /* int reset;
-            int nr = 0;
-            int ok = 1;*/
+
             foreach (FlowLayoutPanel fl in listFlDay)
             {
                 fl.Controls.Clear();
@@ -124,10 +112,6 @@ namespace Media_Bazaar.Classes
             }
             for (int i = 1; i <= totalDaysInMonth; i++)
             {
-                /*string topic = "";
-                string time = "";
-                string info = "";// -- experimental ---> sub tab for calendar*/
-
                 // -- label date
                 Label lbl = new Label();
                 lbl.Name = $"lblDay{i}";

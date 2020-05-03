@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dapper;
+using Media_Bazaar.Classes;
 using MySql.Data.MySqlClient;
 
 namespace Media_Bazaar
@@ -335,19 +336,19 @@ namespace Media_Bazaar
         //METHODS FOR SCHEDULE--------------
 
         //get all the schedule from the data base.
-        public List<DBSchedule> GetAllSchedules()
+        public List<Schedule> GetAllSchedules()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<DBSchedule>($"SELECT * FROM Schedule").ToList();
+                var output = connection.Query<Schedule>($"SELECT * FROM Schedule").ToList();
                 return output;
             }
         }
-        public List<DBSchedule> GetSchedulesByEmplId(int id)
+        public List<Schedule> GetSchedulesByEmplId(int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<DBSchedule>($"SELECT * FROM schedule WHERE EmployeeID='{id}'").ToList();
+                var output = connection.Query<Schedule>($"SELECT * FROM schedule WHERE EmployeeID='{id}'").ToList();
                 return output;
             }
         }

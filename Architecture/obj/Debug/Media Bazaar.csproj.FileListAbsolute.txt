@@ -1,0 +1,9 @@
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Architecture\obj\Debug\Media Bazaar.csprojAssemblyReference.cache
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Architecture\obj\Debug\Media_Bazaar.AssignShift.resources
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Architecture\obj\Debug\Media_Bazaar.Login.resources
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Architecture\obj\Debug\Media_Bazaar.MainAdmin.resources
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Architecture\obj\Debug\Media_Bazaar.MainDepot.resources
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Architecture\obj\Debug\Media_Bazaar.MainManager.resources
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Architecture\obj\Debug\Media_Bazaar.Properties.Resources.resources
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Architecture\obj\Debug\Media Bazaar.csproj.GenerateResource.cache
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Architecture\obj\Debug\Media Bazaar.csproj.CoreCompileInputs.cache

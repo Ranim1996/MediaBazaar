@@ -69,15 +69,16 @@
     <Compile Include="LogicLayer\ManagerManagment.cs" />
     <Compile Include="LogicLayer\RestockRequest\IRestockRequest.cs" />
     <Compile Include="LogicLayer\RestockRequest\RestockRequest.cs" />
+    <Compile Include="LogicLayer\Schedule\ISchedule.cs" />
     <Compile Include="PresentationLayer\AssignShift.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PresentationLayer\AssignShift.Designer.cs">
       <DependentUpon>AssignShift.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Calendar.cs" />
+    <Compile Include="LogicLayer\Schedule\Calendar.cs" />
     <Compile Include="DataLayer\DataAccess.cs" />
-    <Compile Include="Classes\DBSchedule.cs" />
+    <Compile Include="LogicLayer\Schedule\Schedule.cs" />
     <Compile Include="Classes\DBShifts.cs" />
     <Compile Include="DataLayer\Helper.cs" />
     <Compile Include="Classes\MessageBoxManager.cs" />

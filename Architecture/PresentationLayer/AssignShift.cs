@@ -14,8 +14,8 @@ namespace Media_Bazaar
     public partial class AssignShift : Form
     {
         DataAccess db;
-        DBSchedule schedule = new DBSchedule();
-        List<DBSchedule> dbSchedules = null;
+        Schedule schedule = new Schedule();
+        List<Schedule> dbSchedules = null;
         DateTime shiftDate;
         public AssignShift(DateTime date, MainAdmin main)
         {
@@ -60,7 +60,7 @@ namespace Media_Bazaar
             lbShifts.Items.Clear();
             schedule.GetAllSchedules();
             dbSchedules = schedule.allSchedules;
-            foreach (DBSchedule sch in dbSchedules)
+            foreach (Schedule sch in dbSchedules)
             {
                 string firstNameOfEmployee = db.GetFirstNameOfEmployeeById(sch.EmployeeId);
                 if(sch.Date == shiftDate.ToString("dd/MM/yyyy") && sch.Status == "Assigned")
@@ -81,7 +81,7 @@ namespace Media_Bazaar
             lbShiftPreferences.Items.Clear();
             schedule.GetAllSchedules();
             dbSchedules = schedule.allSchedules;
-            foreach (DBSchedule sch in dbSchedules)
+            foreach (Schedule sch in dbSchedules)
             {
                 string firstNameOfEmployee = db.GetFirstNameOfEmployeeById(sch.EmployeeId);
                 if (sch.Date == shiftDate.ToString("dd/MM/yyyy") && sch.Status == "Selected")
@@ -149,7 +149,7 @@ namespace Media_Bazaar
             if (employeeId != -1 && date != "" && shift != "")
             {
                 db = new DataAccess();
-                List<DBEmployee> empl = db.GetDBNotFiredEmployeeByID(employeeId);
+                List<IEmployeeModel> empl = db.GetDBNotFiredEmployeeByID(employeeId);
                 if (empl.Count != 0)
                 {
                     //inserting in the db
@@ -169,13 +169,13 @@ namespace Media_Bazaar
             string holder = "";
             string date = shiftDate.ToString("dd/MM/yyyy");
             db = new DataAccess();
-            schedule = new DBSchedule();
+            schedule = new Schedule();
             schedule.GetAllSchedules();
             dbSchedules = schedule.allSchedules;
             if (lbShifts.SelectedItem != null)
             {
                 holder = lbShifts.SelectedItem.ToString();
-                foreach (DBSchedule sch in dbSchedules)
+                foreach (Schedule sch in dbSchedules)
                 {
                     if (holder.Contains(sch.EmployeeId.ToString()) && holder.Contains(sch.Shift))
                     {
@@ -216,7 +216,7 @@ namespace Media_Bazaar
             if (lbShifts.SelectedItem != null)
             {
                 holder = lbShifts.SelectedItem.ToString();
-                foreach(DBSchedule sch in dbSchedules)
+                foreach(Schedule sch in dbSchedules)
                 {
                     if(holder.Contains(sch.EmployeeId.ToString()) && holder.Contains(sch.Shift))
                     {
@@ -249,7 +249,7 @@ namespace Media_Bazaar
             if (lbShiftPreferences.SelectedItem != null)
             {
                 holder = lbShiftPreferences.SelectedItem.ToString();
-                foreach (DBSchedule sch in dbSchedules)
+                foreach (Schedule sch in dbSchedules)
                 {
                     if (holder.Contains(sch.EmployeeId.ToString()) && holder.Contains(sch.Shift))
                     {
@@ -278,7 +278,7 @@ namespace Media_Bazaar
             if (lbShiftPreferences.SelectedItem != null)
             {
                 holder = lbShiftPreferences.SelectedItem.ToString();
-                foreach (DBSchedule sch in dbSchedules)
+                foreach (Schedule sch in dbSchedules)
                 {
                     if (holder.Contains(sch.EmployeeId.ToString()) && holder.Contains(sch.Shift))
                     {
@@ -305,7 +305,7 @@ namespace Media_Bazaar
             this.lbxAbsenceRecods.Items.Clear();
             schedule.GetAllSchedules();
             dbSchedules = schedule.allSchedules;
-            foreach (DBSchedule sch in dbSchedules)
+            foreach (Schedule sch in dbSchedules)
             {
                 string firstNameOfEmployee = db.GetFirstNameOfEmployeeById(sch.EmployeeId);
                 if (sch.Date == shiftDate.ToString("dd/MM/yyyy") && sch.Status == "Cancelled")
