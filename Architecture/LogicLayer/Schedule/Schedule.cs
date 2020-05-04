@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Media_Bazaar.Classes
+namespace Media_Bazaar
 {
     public class Schedule : ISchedule
     {

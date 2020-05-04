@@ -8,7 +8,7 @@ using System.Drawing;
 using System.Globalization;
 
 
-namespace Media_Bazaar.Classes
+namespace Media_Bazaar
 {
     public class Calendar 
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Media_Bazaar.Classes
+namespace Media_Bazaar
 {
     public interface ISchedule
     {

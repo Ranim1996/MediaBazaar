@@ -64,7 +64,7 @@
     <Compile Include="LogicLayer\DepotWorkerManagment.cs" />
     <Compile Include="LogicLayer\Email\Emails.cs" />
     <Compile Include="LogicLayer\Email\IEmails.cs" />
-    <Compile Include="LogicLayer\Employee\Employees\IEmployeeModel.cs" />
+    <Compile Include="LogicLayer\Employee\IEmployeeModel.cs" />
     <Compile Include="LogicLayer\LoginManagment.cs" />
     <Compile Include="LogicLayer\ManagerManagment.cs" />
     <Compile Include="LogicLayer\RestockRequest\IRestockRequest.cs" />
@@ -87,17 +87,12 @@
     <Compile Include="LogicLayer\Departments\Department.cs" />
     <Compile Include="LogicLayer\Departments\IDepartmentModel.cs" />
     <Compile Include="LogicLayer\EmailSending\SendEmail.cs" />
-    <Compile Include="LogicLayer\Employee\Accounts\Account.cs" />
-    <Compile Include="LogicLayer\Employee\Accounts\AdministratorAccount.cs" />
-    <Compile Include="LogicLayer\Employee\Accounts\DepotWorkerAccount.cs" />
-    <Compile Include="LogicLayer\Employee\Accounts\Password\AutoGeneratePassword.cs" />
-    <Compile Include="LogicLayer\Employee\Accounts\Password\PasswordGenerator.cs" />
-    <Compile Include="LogicLayer\Employee\Employees\AdministratorModel.cs" />
-    <Compile Include="LogicLayer\Employee\Employees\EmployeeModel.cs" />
-    <Compile Include="LogicLayer\Employee\Accounts\IAccounts.cs" />
-    <Compile Include="LogicLayer\Employee\Employees\DepotWorkerModel.cs" />
-    <Compile Include="LogicLayer\Employee\Accounts\ManagerAccount.cs" />
-    <Compile Include="LogicLayer\Employee\Employees\ManagerModel.cs" />
+    <Compile Include="LogicLayer\Employee\Password\AutoGeneratePassword.cs" />
+    <Compile Include="LogicLayer\Employee\Password\PasswordGenerator.cs" />
+    <Compile Include="LogicLayer\Employee\AdministratorModel.cs" />
+    <Compile Include="LogicLayer\Employee\EmployeeModel.cs" />
+    <Compile Include="LogicLayer\Employee\DepotWorkerModel.cs" />
+    <Compile Include="LogicLayer\Employee\ManagerModel.cs" />
     <Compile Include="PresentationLayer\Login.cs">
       <SubType>Form</SubType>
     </Compile>

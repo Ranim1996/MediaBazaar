@@ -17,19 +17,13 @@ namespace Media_Bazaar
 {
     public partial class MainManager : Form
     {
+        private ManagerManagment managerManagment = new ManagerManagment();
+
+
         List<IEmployeeModel> employees = new List<IEmployeeModel>();
-        List<IDepartmentModel> departments = new List<IDepartmentModel>();
-        List<IRestockRequest> restocks = null;
-        List<IEmployeeModel> allEmployees = null;
-        List<Schedule> schedules = null;
-        DataAccess db;
     
         public MainManager()
         {
-            db = new DataAccess();
-            allEmployees = db.GetAllEmployees();
-            schedules = db.GetAllSchedules();
-            restocks = db.GetAllRequests();
             InitializeComponent();
 
             UpdateList();
@@ -137,8 +131,7 @@ namespace Media_Bazaar
         {
             if (cmbSelectSeachMethod.Text == "Last name")
             {
-                employees = db.GetNotFiredEmployeesByLastName(this.tbxSearchLastname.Text);
-                if(employees.Count == 0)
+                if(managerManagment.GetNotFiredEmployeesByLName(tbxSearchLastname.Text).Count==0)
                 {
                     MessageBox.Show("Employee with the specified last name cannot be found. He may be fired.");
                     tbxSearchLastname.Clear();
@@ -154,8 +147,7 @@ namespace Media_Bazaar
             }
             else if (cmbSelectSeachMethod.Text == "ID")
             {
-                employees = db.GetNotFiredEmployeesByID(Convert.ToInt32(this.tbxSearchID.Text));
-                if(employees.Count == 0)
+                if(managerManagment.GetNotFiredEmployeesByID(Convert.ToInt32(this.tbxSearchID.Text)).Count == 0)
                 {
                     MessageBox.Show("Employee with the specified ID cannot be found. He may be fired.");
                     tbxSearchID.Clear();
@@ -166,8 +158,7 @@ namespace Media_Bazaar
                     UpdateInfoByID(Convert.ToInt32(this.tbxSearchID.Text));
                     checkLbProfile.Visible = true;
                     btnViewProfile.Visible = true;
-                }
-                
+                }                
             }
         }
 
@@ -178,8 +169,7 @@ namespace Media_Bazaar
             DateTime dateNow = DateTime.Today;
             string[] date = dateNow.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture).Split('/');
 
-            employees = db.GetDBNotFiredEmployeeByID(id);
-            foreach (IEmployeeModel empl in employees)
+            foreach (IEmployeeModel empl in managerManagment.GetNotFiredEmployeesByID(id))
             {
                 this.lblFirstName.Text = empl.FirstName;
                 this.lblLastName.Text = empl.LastName;
@@ -189,9 +179,8 @@ namespace Media_Bazaar
                 this.lblNationality.Text = empl.Nationality;
                 this.lblDateOfBirth.Text = empl.DateOfBirth;
             }
-            schedules = db.GetSchedulesByEmplId(id);
 
-            foreach (Schedule sch in schedules)
+            foreach (Schedule sch in managerManagment.GetSchedulesByEmplId(id))
             {
                 string[] dateShift = sch.Date.Split('/');
                 if (((dateShift[2] == date[2]) && (dateShift[1] == date[1]) && (Convert.ToInt32(dateShift[0]) >= Convert.ToInt32(date[0]))))
@@ -229,8 +218,8 @@ namespace Media_Bazaar
       
             string[] date = dateNow.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture).Split('/');
             int employeeId = -1;
-            employees = db.GetDBEmployeesByLastName(lastName);
-            foreach(IEmployeeModel empl in employees)
+
+            foreach(IEmployeeModel empl in managerManagment.GetEmployeesByLName(lastName))
             {
                 this.lblFirstName.Text = empl.FirstName;
                 this.lblLastName.Text = lastName;
@@ -241,9 +230,8 @@ namespace Media_Bazaar
                 this.lblDateOfBirth.Text = empl.DateOfBirth;
                 employeeId = empl.EmployeeID;
             }
-            schedules = db.GetSchedulesByEmplId(employeeId);
-
-            foreach(Schedule sch in schedules)
+           
+            foreach(Schedule sch in managerManagment.GetSchedulesByEmplId(employeeId))
             {
                 string[] dateShift = sch.Date.Split('/');
                 if(((dateShift[2] == date[2]) && (dateShift[1] == date[1]) && (Convert.ToInt32(dateShift[0]) >= Convert.ToInt32(date[0]) )) )
@@ -279,7 +267,7 @@ namespace Media_Bazaar
             //nrNotFired = db.GetNumOfnOTFired();
             int nrFired = 0;
             int nrNotFired = 0;
-            foreach (IEmployeeModel employee in allEmployees)
+            foreach (IEmployeeModel employee in managerManagment.GetAllEmployees())
             {
                 if(employee.ReasonsForRelease == null)
                 {
@@ -302,7 +290,7 @@ namespace Media_Bazaar
             //nrAmdins = db.GetNumAdmins();
             //nrManagers = db.GetNumManagers();
             //nrDepot = db.GetNumDepotWorkers();
-            foreach(IEmployeeModel employee in allEmployees)
+            foreach(IEmployeeModel employee in managerManagment.GetAllEmployees())
             {
                 if(employee.Position == "ADMINISTRATOR")
                 {
@@ -331,13 +319,14 @@ namespace Media_Bazaar
         int nrOfPresent = 0;
         int nrOfAbsent = 0;
         int nrOfLate = 0;
+
         private void CheckAttendance()
         {           
             //nrOfAbsent = db.GetNumOfAbsent();
             //nrOfPresent = db.GetNumOfPresent();
             //nrOfLate = db.GetNumOfLate();
 
-            foreach(Schedule sch in schedules)
+            foreach(Schedule sch in managerManagment.GetAllSchedules())
             {
                 if(sch.Attendance == "PRESENT")
                 {
@@ -365,9 +354,9 @@ namespace Media_Bazaar
         
         private void CheckEmployeeAttendance(int id)
         {
-            nrOfAbsent = db.GetNumOfAbsentById(id);
-            nrOfPresent = db.GetNumOfPresentById(id);
-            nrOfLate = db.GetNumOfLateById(id);
+            nrOfAbsent = managerManagment.GetNumberOfAbsentByID(id);
+            nrOfPresent = managerManagment.GetNumberOfPresentByID(id);
+            nrOfLate = managerManagment.GetNumberOfLateByID(id);
 
             chartEmplAttendance.Series["s1"].Points.AddXY("Present", nrOfPresent);
             chartEmplAttendance.Series["s1"].Points.AddXY("Absent", nrOfAbsent);
@@ -385,7 +374,7 @@ namespace Media_Bazaar
             int nrOfRejected = 0;
             int nrOfWaiting = 0;
 
-            foreach (IRestockRequest req in restocks)
+            foreach (IRestockRequest req in managerManagment.GetAllRestockRequests())
             {
                 if(req.AdminConfirmation == "CONFIRMED")
                 {

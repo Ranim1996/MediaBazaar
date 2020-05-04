@@ -336,19 +336,19 @@ namespace Media_Bazaar
         //METHODS FOR SCHEDULE--------------
 
         //get all the schedule from the data base.
-        public List<Schedule> GetAllSchedules()
+        public List<ISchedule> GetAllSchedules()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<Schedule>($"SELECT * FROM Schedule").ToList();
+                var output = connection.Query<ISchedule>($"SELECT * FROM Schedule").ToList();
                 return output;
             }
         }
-        public List<Schedule> GetSchedulesByEmplId(int id)
+        public List<ISchedule> GetSchedulesByEmplId(int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<Schedule>($"SELECT * FROM schedule WHERE EmployeeID='{id}'").ToList();
+                var output = connection.Query<ISchedule>($"SELECT * FROM schedule WHERE EmployeeID='{id}'").ToList();
                 return output;
             }
         }

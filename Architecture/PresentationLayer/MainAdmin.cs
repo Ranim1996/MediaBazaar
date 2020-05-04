@@ -26,22 +26,20 @@ namespace Media_Bazaar
 
         List<int> employeesID = new List<int>();
         List<int> restockID = new List<int>();
-        //holds the calendar
-        Media_Bazaar.Classes.Calendar calendar = new Calendar();
+
+        Calendar calendar = new Calendar();
 
         DataAccess db;
         Schedule schedule;
-        private object send;
 
         public MainAdmin()
         {
             InitializeComponent();
-            this.flDays.Click += new System.EventHandler(this.Flow_Click);
+            this.flDays.Click += new EventHandler(this.Flow_Click);
             db = new DataAccess();
             schedule = new Schedule();
 
             //change this if it s going to be laggy
-
         }
 
         private void MainAdmin_Load(object sender, EventArgs e)
@@ -202,7 +200,7 @@ namespace Media_Bazaar
 
         private void btnAddNewProfile_Click_1(object sender, EventArgs e)
         {
-            string pos ="";
+            string pos = "";
 
             if (rbAdministrator.Checked)
             {
@@ -210,15 +208,15 @@ namespace Media_Bazaar
             }
             else if (rbManager.Checked)
             {
-                pos ="MANAGER";
+                pos = "MANAGER";
             }
             else if (rbDepotWorker.Checked)
             {
-                pos ="DEPOTWORKER";
+                pos = "DEPOTWORKER";
             }
             else if (rbEmployee.Checked)
             {
-                pos ="EMPLOYEE";
+                pos = "EMPLOYEE";
             }
 
             if (adminManagment.CreateNewProfile(tbFirstName.Text, tbLastName.Text, tbDateOfBirth.Value.ToShortDateString(), tbEmail.Text, tbPhoneNr.Text, tbNationality.Text, pos) != null)
@@ -287,7 +285,7 @@ namespace Media_Bazaar
                         {
                             string empl = checkedListBox2.GetItemText(checkedListBox2.SelectedItem);
 
-                            if(adminManagment.FireEmployee(tbExtraInformationTABremoveProfile.Text, i, empl))
+                            if (adminManagment.FireEmployee(tbExtraInformationTABremoveProfile.Text, i, empl))
                             {
                                 MessageBox.Show("Fired");
                             }
@@ -306,7 +304,7 @@ namespace Media_Bazaar
 
         private void btnCreateDepartment_Click(object sender, EventArgs e)
         {
-            if (adminManagment.CreateDepartment(tbDepName.Text, tbMinNr.Text,tbMaxNr.Text))
+            if (adminManagment.CreateDepartment(tbDepName.Text, tbMinNr.Text, tbMaxNr.Text))
             {
                 UpdateDepartamentInfo();
             }
@@ -335,7 +333,7 @@ namespace Media_Bazaar
                         if (checkedListBox3.SelectedItem != null)
                         {
                             string empl = checkedListBox3.GetItemText(checkedListBox3.SelectedItem);
-                            if(adminManagment.AssignEmployeeToDepartment(i, cmbDepartments.SelectedItem.ToString(), empl))
+                            if (adminManagment.AssignEmployeeToDepartment(i, cmbDepartments.SelectedItem.ToString(), empl))
                             {
                                 MessageBox.Show("Assigned");
                             }
@@ -362,7 +360,7 @@ namespace Media_Bazaar
                         string req = checkedListBox1.GetItemText(checkedListBox1.SelectedItem);
                         if (req.Contains($"ID:{i}"))
                         {
-                            if(adminManagment.ConfirmRequest(i, req))
+                            if (adminManagment.ConfirmRequest(i, req))
                             {
                                 MessageBox.Show("Confirmed");
                             }
