@@ -72,6 +72,7 @@
     <Compile Include="Classes\DBDepartament.cs" />
     <Compile Include="Classes\DBEmail.cs" />
     <Compile Include="Classes\DBEmployee.cs" />
+    <Compile Include="Classes\DBProduct.cs" />
     <Compile Include="Classes\DBRestockRequest.cs" />
     <Compile Include="Classes\DBSchedule.cs" />
     <Compile Include="Classes\DBShifts.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Classes\JobPosition.cs" />
     <Compile Include="Classes\MessageBoxManager.cs" />
     <Compile Include="Classes\PasswordGenerator.cs" />
+    <Compile Include="Classes\ProductBrand.cs" />
     <Compile Include="Classes\Sequrity.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>

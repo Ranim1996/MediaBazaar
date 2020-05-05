@@ -54,7 +54,6 @@ namespace Media_Bazaar
             tabControl1.TabPages[0].BackColor = Color.FromArgb(116, 208, 252);
         }
 
-
         //----------------------------------Start
         //All buttons connections for the AdminForm 
         //DO NOT Modify THIS !!!

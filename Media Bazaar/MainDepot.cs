@@ -17,6 +17,7 @@ namespace Media_Bazaar
     {
         List<DBRestockRequest> incomingRestockRequests = new List<DBRestockRequest>();
         List<DBDepartament> departaments = new List<DBDepartament>();
+        List<DBProduct> products = new List<DBProduct>();
         List<DBEmployee> employees = new List<DBEmployee>();
         List<int> restockID = new List<int>();
         List<int> employeeID = new List<int>();
@@ -39,6 +40,27 @@ namespace Media_Bazaar
             UpdateEmployeeIDInfo();
             UpdateAllConfirmedStockInfo();
             UpdateAllRejectedStockInfo();
+            UpdateProductsList();
+            Combo();
+        }
+
+        private void Combo()
+        {
+            this.cmbBrand.Items.Add(ProductBrand.Amazon);
+            this.cmbBrand.Items.Add(ProductBrand.Apple);
+            this.cmbBrand.Items.Add(ProductBrand.Asus);
+            this.cmbBrand.Items.Add(ProductBrand.HUAWEI);
+            this.cmbBrand.Items.Add(ProductBrand.Microsoft);
+            this.cmbBrand.Items.Add(ProductBrand.MSI);
+            this.cmbBrand.Items.Add(ProductBrand.Razer);
+            this.cmbBrand.Items.Add(ProductBrand.Samsung);
+        }
+
+
+        private void UpdateProductsList()
+        {
+            this.clbProducts.DataSource = products;
+            this.clbProducts.DisplayMember = "FullInfo";
         }
 
         private void UpdateConfirmedRestockInfo()
@@ -50,8 +72,6 @@ namespace Media_Bazaar
             {
                 restockID.Add(rr.GetID());
             }
-            clbIncomingStock.DataSource = incomingRestockRequests;
-            clbIncomingStock.DisplayMember = "FullInfo";
         }
 
 
@@ -84,50 +104,6 @@ namespace Media_Bazaar
         private void btnMakeReqTABincomingStock_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedTab = tabMakeReq;
-        }
-
-
-        private void btnCheckIncomingStock_Click(object sender, EventArgs e)
-        {
-            //INFORMATION about the incoming stock MUST be parsed in this method
-
-
-            if (this.clbIncomingStock.CheckedItems.Count == 0)
-            {
-                MessageBox.Show("Please select a stock!");
-            }
-            else
-            {
-                tabControl1.SelectedTab = tabIncomingStockDetails;
-                UpdateStockDetails();
-                while (clbIncomingStock.CheckedIndices.Count > 0)
-                {
-                    clbIncomingStock.SetItemChecked(clbIncomingStock.CheckedIndices[0], false);
-                }
-            }
-        }
-
-        private void UpdateStockDetails()
-        {
-            foreach (int i in restockID)
-            {
-                if (this.clbIncomingStock.SelectedItem != null)
-                {
-                    string stock = this.clbIncomingStock.GetItemText(this.clbIncomingStock.SelectedItem);
-                    if (stock.Contains($"ID:{i}"))
-                    {
-                        this.lblSID.Text = db.GetDBStockIDById(i);
-                        this.lblSName.Text = db.GetDBStockNameById(i);
-                        this.lblSType.Text = db.GetDBStockTypeById(i);
-                        this.lblDepartment.Text = db.GetDBDepartmentByStockId(i);
-                        this.lblQuantity.Text = db.GetDBStockQuantityById(i);
-                        this.lblOrderDate.Text = db.GetDBStockOrderDateById(i);
-                        this.lblDeliverDate.Text = db.GetDBStockDeliverDateById(i);
-                        this.lblStatus.Text = db.GetDBStockStatusById(i);
-                        this.lblEID.Text = db.GetDBEmployeeIdByStockId(i);
-                    }
-                }
-            }
         }
 
         private void UpdateAllConfirmedStockInfo()
@@ -289,6 +265,52 @@ namespace Media_Bazaar
             this.tbxEmployeeID.Text = db.GetDepotID();
         }
 
+        private void btnCheckIncomingStock_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void BtnSearchForProduct_Click(object sender, EventArgs e)
+        {
+            if (this.cmbBrand.Text != null)
+            {
+                products = db.GetDBProductInfo(this.cmbBrand.Text);
+                if (products.Count == 0)
+                {
+                    MessageBox.Show("We do not have such Brand in our stock.");
+                    this.cmbBrand.Text = "";
+                }
+                else
+                {
+                    UpdateProductsList();
+                    UpdateDetails(this.cmbBrand.Text);
+                    this.clbProducts.Visible = true;
+                    this.btnViewProductsDetails.Visible = true;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Type the brand first!");
+            }
+            
+        }
+
+        private void UpdateDetails(string product)
+        {
+
+            products = db.GetDBProductInfo(product);
+            foreach (DBProduct p in products)
+            {
+                this.lblProductID.Text = p.id.ToString();
+                this.lblProductBrand.Text = p.Brand;
+                this.lblProductCategory.Text = p.Category;
+                this.lblProductName.Text = p.product_name;
+            }
+        }
+
+        private void BtnViewProductsDetails_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = this.tabIncomingStockDetails;
+        }
     }
 }

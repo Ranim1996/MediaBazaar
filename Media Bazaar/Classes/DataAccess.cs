@@ -13,7 +13,6 @@ namespace Media_Bazaar.Classes
     {
 
         //METHODS FOR EMPLOYEES:
-
         
        
         public List<DBEmployee> GetNotFiredEmployeesByLastName(string lastName)
@@ -446,6 +445,16 @@ namespace Media_Bazaar.Classes
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
                 connection.Execute($"DELETE FROM email WHERE EmailID = '{id}';");
+            }
+        }
+
+        //products
+        public List<DBProduct> GetDBProductInfo(string product)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<DBProduct>($"SELECT * FROM product WHERE Brand='{product}'").ToList();
+                return output;
             }
         }
     }

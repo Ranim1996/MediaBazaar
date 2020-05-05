@@ -30,24 +30,24 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainDepot));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea13 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend13 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea14 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend14 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea15 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend15 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea16 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend16 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea17 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend17 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea18 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend18 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabMakeReq = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel27 = new System.Windows.Forms.TableLayoutPanel();
@@ -89,8 +89,12 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.label27 = new System.Windows.Forms.Label();
+            this.btnViewProductsDetails = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.clbProducts = new System.Windows.Forms.CheckedListBox();
+            this.btnSearchForProduct = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnCheckIncomingStock = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.clbIncomingStock = new System.Windows.Forms.CheckedListBox();
             this.tabIncomingStockDetails = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
@@ -105,26 +109,14 @@
             this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lblStatus = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.lblQuantity = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.lblDepartment = new System.Windows.Forms.Label();
-            this.lblDeliverDate = new System.Windows.Forms.Label();
-            this.lblOrderDate = new System.Windows.Forms.Label();
-            this.lblSType = new System.Windows.Forms.Label();
+            this.lblProductCategory = new System.Windows.Forms.Label();
+            this.lblProductBrand = new System.Windows.Forms.Label();
+            this.lblProductName = new System.Windows.Forms.Label();
+            this.lblProductID = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblEID = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblSName = new System.Windows.Forms.Label();
-            this.lblSID = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.tabStock = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel24 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel25 = new System.Windows.Forms.TableLayoutPanel();
@@ -224,6 +216,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.timerChangeMenuColor = new System.Windows.Forms.Timer(this.components);
+            this.cmbBrand = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabMakeReq.SuspendLayout();
             this.tableLayoutPanel27.SuspendLayout();
@@ -242,6 +235,7 @@
             this.panel8.SuspendLayout();
             this.tableLayoutPanel19.SuspendLayout();
             this.panel9.SuspendLayout();
+            this.panel17.SuspendLayout();
             this.tabIncomingStockDetails.SuspendLayout();
             this.tableLayoutPanel20.SuspendLayout();
             this.tableLayoutPanel21.SuspendLayout();
@@ -251,8 +245,6 @@
             this.tableLayoutPanel23.SuspendLayout();
             this.panel11.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.tabStock.SuspendLayout();
             this.tableLayoutPanel24.SuspendLayout();
             this.tableLayoutPanel25.SuspendLayout();
@@ -291,20 +283,20 @@
             this.tabControl1.Controls.Add(this.tabInfoStock);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1415, 562);
+            this.tabControl1.Size = new System.Drawing.Size(1791, 769);
             this.tabControl1.TabIndex = 18;
             // 
             // tabMakeReq
             // 
             this.tabMakeReq.Controls.Add(this.tableLayoutPanel27);
-            this.tabMakeReq.Location = new System.Drawing.Point(4, 22);
-            this.tabMakeReq.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabMakeReq.Location = new System.Drawing.Point(4, 25);
+            this.tabMakeReq.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabMakeReq.Name = "tabMakeReq";
-            this.tabMakeReq.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabMakeReq.Size = new System.Drawing.Size(1407, 536);
+            this.tabMakeReq.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabMakeReq.Size = new System.Drawing.Size(1879, 740);
             this.tabMakeReq.TabIndex = 10;
             this.tabMakeReq.Text = "Request";
             this.tabMakeReq.UseVisualStyleBackColor = true;
@@ -318,12 +310,12 @@
             this.tableLayoutPanel27.Controls.Add(this.tableLayoutPanel1, 0, 0);
             this.tableLayoutPanel27.Controls.Add(this.tableLayoutPanel9, 1, 0);
             this.tableLayoutPanel27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel27.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel27.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel27.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel27.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel27.Name = "tableLayoutPanel27";
             this.tableLayoutPanel27.RowCount = 1;
             this.tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel27.Size = new System.Drawing.Size(1403, 532);
+            this.tableLayoutPanel27.Size = new System.Drawing.Size(1873, 736);
             this.tableLayoutPanel27.TabIndex = 20;
             // 
             // tableLayoutPanel1
@@ -337,8 +329,8 @@
             this.tableLayoutPanel1.Controls.Add(this.btnIncomingStockTABrequest, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.btnStockTABrequest, 0, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -347,7 +339,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(309, 528);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(413, 732);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // btnLogOutTABrequest
@@ -372,14 +364,14 @@
             this.btnLogOutTABrequest.IconVisible = false;
             this.btnLogOutTABrequest.IconZoom = 90D;
             this.btnLogOutTABrequest.IsTab = false;
-            this.btnLogOutTABrequest.Location = new System.Drawing.Point(4, 478);
-            this.btnLogOutTABrequest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogOutTABrequest.Location = new System.Drawing.Point(5, 660);
+            this.btnLogOutTABrequest.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogOutTABrequest.Name = "btnLogOutTABrequest";
             this.btnLogOutTABrequest.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABrequest.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnLogOutTABrequest.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogOutTABrequest.selected = false;
-            this.btnLogOutTABrequest.Size = new System.Drawing.Size(301, 46);
+            this.btnLogOutTABrequest.Size = new System.Drawing.Size(403, 67);
             this.btnLogOutTABrequest.TabIndex = 10;
             this.btnLogOutTABrequest.Text = "LOG OUT";
             this.btnLogOutTABrequest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -409,14 +401,14 @@
             this.btnMakeReqTABrequest.IconVisible = false;
             this.btnMakeReqTABrequest.IconZoom = 90D;
             this.btnMakeReqTABrequest.IsTab = false;
-            this.btnMakeReqTABrequest.Location = new System.Drawing.Point(4, 162);
-            this.btnMakeReqTABrequest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMakeReqTABrequest.Location = new System.Drawing.Point(5, 224);
+            this.btnMakeReqTABrequest.Margin = new System.Windows.Forms.Padding(5);
             this.btnMakeReqTABrequest.Name = "btnMakeReqTABrequest";
             this.btnMakeReqTABrequest.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnMakeReqTABrequest.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnMakeReqTABrequest.OnHoverTextColor = System.Drawing.Color.White;
             this.btnMakeReqTABrequest.selected = false;
-            this.btnMakeReqTABrequest.Size = new System.Drawing.Size(301, 71);
+            this.btnMakeReqTABrequest.Size = new System.Drawing.Size(403, 99);
             this.btnMakeReqTABrequest.TabIndex = 5;
             this.btnMakeReqTABrequest.Text = "Make Request";
             this.btnMakeReqTABrequest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -427,10 +419,10 @@
             // 
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(2, 2);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(305, 154);
+            this.pictureBox3.Size = new System.Drawing.Size(407, 215);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
@@ -441,7 +433,7 @@
             this.btnIncomingStockTABrequest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnIncomingStockTABrequest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnIncomingStockTABrequest.BorderRadius = 0;
-            this.btnIncomingStockTABrequest.ButtonText = "Incoming Stock";
+            this.btnIncomingStockTABrequest.ButtonText = "Stock";
             this.btnIncomingStockTABrequest.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIncomingStockTABrequest.DisabledColor = System.Drawing.Color.Gray;
             this.btnIncomingStockTABrequest.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -457,16 +449,16 @@
             this.btnIncomingStockTABrequest.IconVisible = false;
             this.btnIncomingStockTABrequest.IconZoom = 90D;
             this.btnIncomingStockTABrequest.IsTab = false;
-            this.btnIncomingStockTABrequest.Location = new System.Drawing.Point(4, 241);
-            this.btnIncomingStockTABrequest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIncomingStockTABrequest.Location = new System.Drawing.Point(5, 333);
+            this.btnIncomingStockTABrequest.Margin = new System.Windows.Forms.Padding(5);
             this.btnIncomingStockTABrequest.Name = "btnIncomingStockTABrequest";
             this.btnIncomingStockTABrequest.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnIncomingStockTABrequest.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnIncomingStockTABrequest.OnHoverTextColor = System.Drawing.Color.White;
             this.btnIncomingStockTABrequest.selected = false;
-            this.btnIncomingStockTABrequest.Size = new System.Drawing.Size(301, 71);
+            this.btnIncomingStockTABrequest.Size = new System.Drawing.Size(403, 99);
             this.btnIncomingStockTABrequest.TabIndex = 2;
-            this.btnIncomingStockTABrequest.Text = "Incoming Stock";
+            this.btnIncomingStockTABrequest.Text = "Stock";
             this.btnIncomingStockTABrequest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnIncomingStockTABrequest.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnIncomingStockTABrequest.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -494,14 +486,14 @@
             this.btnStockTABrequest.IconVisible = false;
             this.btnStockTABrequest.IconZoom = 90D;
             this.btnStockTABrequest.IsTab = false;
-            this.btnStockTABrequest.Location = new System.Drawing.Point(4, 320);
-            this.btnStockTABrequest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStockTABrequest.Location = new System.Drawing.Point(5, 442);
+            this.btnStockTABrequest.Margin = new System.Windows.Forms.Padding(5);
             this.btnStockTABrequest.Name = "btnStockTABrequest";
             this.btnStockTABrequest.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnStockTABrequest.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnStockTABrequest.OnHoverTextColor = System.Drawing.Color.White;
             this.btnStockTABrequest.selected = false;
-            this.btnStockTABrequest.Size = new System.Drawing.Size(301, 71);
+            this.btnStockTABrequest.Size = new System.Drawing.Size(403, 99);
             this.btnStockTABrequest.TabIndex = 6;
             this.btnStockTABrequest.Text = "History Stock Requests";
             this.btnStockTABrequest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -517,13 +509,13 @@
             this.tableLayoutPanel9.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.panel3, 0, 1);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(315, 2);
-            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(422, 2);
+            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 2;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(1086, 528);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(1448, 732);
             this.tableLayoutPanel9.TabIndex = 1;
             // 
             // label2
@@ -533,10 +525,9 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(2, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1082, 79);
+            this.label2.Size = new System.Drawing.Size(1442, 109);
             this.label2.TabIndex = 0;
             this.label2.Text = "Make Request";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -546,10 +537,10 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.tableLayoutPanel15);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(2, 81);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Location = new System.Drawing.Point(3, 111);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1082, 445);
+            this.panel3.Size = new System.Drawing.Size(1442, 619);
             this.panel3.TabIndex = 1;
             // 
             // tableLayoutPanel15
@@ -559,12 +550,12 @@
             this.tableLayoutPanel15.Controls.Add(this.panel7, 0, 0);
             this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel15.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
             this.tableLayoutPanel15.RowCount = 1;
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 449F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(1082, 445);
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 553F));
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(1442, 619);
             this.tableLayoutPanel15.TabIndex = 0;
             // 
             // panel7
@@ -572,10 +563,10 @@
             this.panel7.Controls.Add(this.panel16);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel7.Location = new System.Drawing.Point(2, 2);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel7.Location = new System.Drawing.Point(3, 2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1078, 441);
+            this.panel7.Size = new System.Drawing.Size(1436, 615);
             this.panel7.TabIndex = 1;
             // 
             // panel16
@@ -595,10 +586,10 @@
             this.panel16.Controls.Add(this.label8);
             this.panel16.Controls.Add(this.cmbType);
             this.panel16.Controls.Add(this.btnMakeRequest);
-            this.panel16.Location = new System.Drawing.Point(158, 25);
-            this.panel16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel16.Location = new System.Drawing.Point(211, 31);
+            this.panel16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(743, 417);
+            this.panel16.Size = new System.Drawing.Size(991, 585);
             this.panel16.TabIndex = 6;
             // 
             // tbxEmployeeID
@@ -606,39 +597,38 @@
             this.tbxEmployeeID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbxEmployeeID.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.tbxEmployeeID.Location = new System.Drawing.Point(166, 74);
-            this.tbxEmployeeID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxEmployeeID.Location = new System.Drawing.Point(221, 91);
+            this.tbxEmployeeID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxEmployeeID.Name = "tbxEmployeeID";
-            this.tbxEmployeeID.Size = new System.Drawing.Size(69, 26);
+            this.tbxEmployeeID.Size = new System.Drawing.Size(91, 30);
             this.tbxEmployeeID.TabIndex = 22;
             // 
             // cmbDepartment
             // 
             this.cmbDepartment.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.cmbDepartment.FormattingEnabled = true;
-            this.cmbDepartment.Location = new System.Drawing.Point(166, 129);
-            this.cmbDepartment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbDepartment.Location = new System.Drawing.Point(221, 159);
+            this.cmbDepartment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbDepartment.Name = "cmbDepartment";
-            this.cmbDepartment.Size = new System.Drawing.Size(172, 26);
+            this.cmbDepartment.Size = new System.Drawing.Size(228, 31);
             this.cmbDepartment.TabIndex = 21;
             // 
             // dtpDateDeliver
             // 
             this.dtpDateDeliver.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.dtpDateDeliver.Location = new System.Drawing.Point(166, 187);
-            this.dtpDateDeliver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpDateDeliver.Location = new System.Drawing.Point(221, 230);
+            this.dtpDateDeliver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpDateDeliver.Name = "dtpDateDeliver";
-            this.dtpDateDeliver.Size = new System.Drawing.Size(172, 26);
+            this.dtpDateDeliver.Size = new System.Drawing.Size(228, 30);
             this.dtpDateDeliver.TabIndex = 20;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label15.Location = new System.Drawing.Point(20, 78);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Location = new System.Drawing.Point(27, 96);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(101, 19);
+            this.label15.Size = new System.Drawing.Size(126, 23);
             this.label15.TabIndex = 17;
             this.label15.Text = "Employee ID:";
             // 
@@ -646,10 +636,9 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label13.Location = new System.Drawing.Point(20, 190);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Location = new System.Drawing.Point(27, 234);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(118, 19);
+            this.label13.Size = new System.Drawing.Size(147, 23);
             this.label13.TabIndex = 13;
             this.label13.Text = "Date of Deliver:";
             // 
@@ -657,10 +646,9 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label14.Location = new System.Drawing.Point(20, 134);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Location = new System.Drawing.Point(27, 165);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(98, 19);
+            this.label14.Size = new System.Drawing.Size(122, 23);
             this.label14.TabIndex = 11;
             this.label14.Text = "Department:";
             // 
@@ -668,10 +656,9 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(20, 52);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(27, 64);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(97, 19);
+            this.label12.Size = new System.Drawing.Size(122, 23);
             this.label12.TabIndex = 9;
             this.label12.Text = "Stock Name:";
             // 
@@ -680,20 +667,19 @@
             this.tbxStockName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbxStockName.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.tbxStockName.Location = new System.Drawing.Point(166, 46);
-            this.tbxStockName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxStockName.Location = new System.Drawing.Point(221, 57);
+            this.tbxStockName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxStockName.Name = "tbxStockName";
-            this.tbxStockName.Size = new System.Drawing.Size(522, 26);
+            this.tbxStockName.Size = new System.Drawing.Size(695, 30);
             this.tbxStockName.TabIndex = 10;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(20, 161);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(27, 198);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(74, 19);
+            this.label11.Size = new System.Drawing.Size(92, 23);
             this.label11.TabIndex = 7;
             this.label11.Text = "Quantity:";
             // 
@@ -702,20 +688,19 @@
             this.tbxStockQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbxStockQuantity.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.tbxStockQuantity.Location = new System.Drawing.Point(166, 158);
-            this.tbxStockQuantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxStockQuantity.Location = new System.Drawing.Point(221, 194);
+            this.tbxStockQuantity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxStockQuantity.Name = "tbxStockQuantity";
-            this.tbxStockQuantity.Size = new System.Drawing.Size(522, 26);
+            this.tbxStockQuantity.Size = new System.Drawing.Size(695, 30);
             this.tbxStockQuantity.TabIndex = 8;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(20, 107);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(27, 132);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(107, 19);
+            this.label8.Size = new System.Drawing.Size(134, 23);
             this.label8.TabIndex = 1;
             this.label8.Text = "Type of stock:";
             // 
@@ -732,10 +717,10 @@
             "Cooker",
             "TV",
             "Others"});
-            this.cmbType.Location = new System.Drawing.Point(166, 101);
-            this.cmbType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbType.Location = new System.Drawing.Point(221, 124);
+            this.cmbType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbType.Name = "cmbType";
-            this.cmbType.Size = new System.Drawing.Size(522, 26);
+            this.cmbType.Size = new System.Drawing.Size(695, 31);
             this.cmbType.TabIndex = 0;
             // 
             // btnMakeRequest
@@ -761,14 +746,14 @@
             this.btnMakeRequest.IconVisible = false;
             this.btnMakeRequest.IconZoom = 90D;
             this.btnMakeRequest.IsTab = false;
-            this.btnMakeRequest.Location = new System.Drawing.Point(22, 292);
-            this.btnMakeRequest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMakeRequest.Location = new System.Drawing.Point(29, 359);
+            this.btnMakeRequest.Margin = new System.Windows.Forms.Padding(5);
             this.btnMakeRequest.Name = "btnMakeRequest";
             this.btnMakeRequest.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnMakeRequest.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnMakeRequest.OnHoverTextColor = System.Drawing.Color.White;
             this.btnMakeRequest.selected = false;
-            this.btnMakeRequest.Size = new System.Drawing.Size(669, 53);
+            this.btnMakeRequest.Size = new System.Drawing.Size(892, 65);
             this.btnMakeRequest.TabIndex = 4;
             this.btnMakeRequest.Text = "Make Request";
             this.btnMakeRequest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -779,13 +764,13 @@
             // tabIncomingStock
             // 
             this.tabIncomingStock.Controls.Add(this.tableLayoutPanel16);
-            this.tabIncomingStock.Location = new System.Drawing.Point(4, 22);
-            this.tabIncomingStock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabIncomingStock.Location = new System.Drawing.Point(4, 25);
+            this.tabIncomingStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabIncomingStock.Name = "tabIncomingStock";
-            this.tabIncomingStock.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabIncomingStock.Size = new System.Drawing.Size(1407, 536);
+            this.tabIncomingStock.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabIncomingStock.Size = new System.Drawing.Size(1879, 740);
             this.tabIncomingStock.TabIndex = 11;
-            this.tabIncomingStock.Text = "IncomingStock";
+            this.tabIncomingStock.Text = "Products";
             this.tabIncomingStock.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel16
@@ -797,12 +782,12 @@
             this.tableLayoutPanel16.Controls.Add(this.tableLayoutPanel17, 0, 0);
             this.tableLayoutPanel16.Controls.Add(this.tableLayoutPanel18, 1, 0);
             this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel16.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel16.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel16.Name = "tableLayoutPanel16";
             this.tableLayoutPanel16.RowCount = 1;
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(1403, 532);
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(1873, 736);
             this.tableLayoutPanel16.TabIndex = 21;
             // 
             // tableLayoutPanel17
@@ -816,8 +801,8 @@
             this.tableLayoutPanel17.Controls.Add(this.btnIncomingStockTABincomingStock, 0, 2);
             this.tableLayoutPanel17.Controls.Add(this.btnStockTABincomingStock, 0, 3);
             this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel17.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel17.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel17.Name = "tableLayoutPanel17";
             this.tableLayoutPanel17.RowCount = 6;
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -826,7 +811,7 @@
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(309, 528);
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(413, 732);
             this.tableLayoutPanel17.TabIndex = 0;
             // 
             // btnLogOutTABincomingStock
@@ -851,14 +836,14 @@
             this.btnLogOutTABincomingStock.IconVisible = false;
             this.btnLogOutTABincomingStock.IconZoom = 90D;
             this.btnLogOutTABincomingStock.IsTab = false;
-            this.btnLogOutTABincomingStock.Location = new System.Drawing.Point(4, 478);
-            this.btnLogOutTABincomingStock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogOutTABincomingStock.Location = new System.Drawing.Point(5, 660);
+            this.btnLogOutTABincomingStock.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogOutTABincomingStock.Name = "btnLogOutTABincomingStock";
             this.btnLogOutTABincomingStock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABincomingStock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnLogOutTABincomingStock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogOutTABincomingStock.selected = false;
-            this.btnLogOutTABincomingStock.Size = new System.Drawing.Size(301, 46);
+            this.btnLogOutTABincomingStock.Size = new System.Drawing.Size(403, 67);
             this.btnLogOutTABincomingStock.TabIndex = 11;
             this.btnLogOutTABincomingStock.Text = "LOG OUT";
             this.btnLogOutTABincomingStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -888,14 +873,14 @@
             this.btnMakeReqTABincomingStock.IconVisible = false;
             this.btnMakeReqTABincomingStock.IconZoom = 90D;
             this.btnMakeReqTABincomingStock.IsTab = false;
-            this.btnMakeReqTABincomingStock.Location = new System.Drawing.Point(4, 162);
-            this.btnMakeReqTABincomingStock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMakeReqTABincomingStock.Location = new System.Drawing.Point(5, 224);
+            this.btnMakeReqTABincomingStock.Margin = new System.Windows.Forms.Padding(5);
             this.btnMakeReqTABincomingStock.Name = "btnMakeReqTABincomingStock";
             this.btnMakeReqTABincomingStock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnMakeReqTABincomingStock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnMakeReqTABincomingStock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnMakeReqTABincomingStock.selected = false;
-            this.btnMakeReqTABincomingStock.Size = new System.Drawing.Size(301, 71);
+            this.btnMakeReqTABincomingStock.Size = new System.Drawing.Size(403, 99);
             this.btnMakeReqTABincomingStock.TabIndex = 5;
             this.btnMakeReqTABincomingStock.Text = "Make Request";
             this.btnMakeReqTABincomingStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -907,10 +892,10 @@
             // 
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(2, 2);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(305, 154);
+            this.pictureBox4.Size = new System.Drawing.Size(407, 215);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
@@ -921,7 +906,7 @@
             this.btnIncomingStockTABincomingStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnIncomingStockTABincomingStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnIncomingStockTABincomingStock.BorderRadius = 0;
-            this.btnIncomingStockTABincomingStock.ButtonText = "Incoming Stock";
+            this.btnIncomingStockTABincomingStock.ButtonText = "Stock";
             this.btnIncomingStockTABincomingStock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIncomingStockTABincomingStock.DisabledColor = System.Drawing.Color.Gray;
             this.btnIncomingStockTABincomingStock.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -937,16 +922,16 @@
             this.btnIncomingStockTABincomingStock.IconVisible = false;
             this.btnIncomingStockTABincomingStock.IconZoom = 90D;
             this.btnIncomingStockTABincomingStock.IsTab = false;
-            this.btnIncomingStockTABincomingStock.Location = new System.Drawing.Point(4, 241);
-            this.btnIncomingStockTABincomingStock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIncomingStockTABincomingStock.Location = new System.Drawing.Point(5, 333);
+            this.btnIncomingStockTABincomingStock.Margin = new System.Windows.Forms.Padding(5);
             this.btnIncomingStockTABincomingStock.Name = "btnIncomingStockTABincomingStock";
             this.btnIncomingStockTABincomingStock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnIncomingStockTABincomingStock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnIncomingStockTABincomingStock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnIncomingStockTABincomingStock.selected = false;
-            this.btnIncomingStockTABincomingStock.Size = new System.Drawing.Size(301, 71);
+            this.btnIncomingStockTABincomingStock.Size = new System.Drawing.Size(403, 99);
             this.btnIncomingStockTABincomingStock.TabIndex = 2;
-            this.btnIncomingStockTABincomingStock.Text = "Incoming Stock";
+            this.btnIncomingStockTABincomingStock.Text = "Stock";
             this.btnIncomingStockTABincomingStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnIncomingStockTABincomingStock.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnIncomingStockTABincomingStock.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -974,14 +959,14 @@
             this.btnStockTABincomingStock.IconVisible = false;
             this.btnStockTABincomingStock.IconZoom = 90D;
             this.btnStockTABincomingStock.IsTab = false;
-            this.btnStockTABincomingStock.Location = new System.Drawing.Point(4, 320);
-            this.btnStockTABincomingStock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStockTABincomingStock.Location = new System.Drawing.Point(5, 442);
+            this.btnStockTABincomingStock.Margin = new System.Windows.Forms.Padding(5);
             this.btnStockTABincomingStock.Name = "btnStockTABincomingStock";
             this.btnStockTABincomingStock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnStockTABincomingStock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnStockTABincomingStock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnStockTABincomingStock.selected = false;
-            this.btnStockTABincomingStock.Size = new System.Drawing.Size(301, 71);
+            this.btnStockTABincomingStock.Size = new System.Drawing.Size(403, 99);
             this.btnStockTABincomingStock.TabIndex = 6;
             this.btnStockTABincomingStock.Text = "History Stock Requests";
             this.btnStockTABincomingStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -997,13 +982,13 @@
             this.tableLayoutPanel18.Controls.Add(this.label4, 0, 0);
             this.tableLayoutPanel18.Controls.Add(this.panel8, 0, 1);
             this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel18.Location = new System.Drawing.Point(315, 2);
-            this.tableLayoutPanel18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel18.Location = new System.Drawing.Point(422, 2);
+            this.tableLayoutPanel18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel18.Name = "tableLayoutPanel18";
             this.tableLayoutPanel18.RowCount = 2;
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel18.Size = new System.Drawing.Size(1086, 528);
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(1448, 732);
             this.tableLayoutPanel18.TabIndex = 1;
             // 
             // label4
@@ -1013,10 +998,9 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(2, 0);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(1082, 79);
+            this.label4.Size = new System.Drawing.Size(1442, 109);
             this.label4.TabIndex = 0;
             this.label4.Text = "Incoming Stock";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1026,10 +1010,10 @@
             this.panel8.BackColor = System.Drawing.Color.White;
             this.panel8.Controls.Add(this.tableLayoutPanel19);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(2, 81);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel8.Location = new System.Drawing.Point(3, 111);
+            this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1082, 445);
+            this.panel8.Size = new System.Drawing.Size(1442, 619);
             this.panel8.TabIndex = 1;
             // 
             // tableLayoutPanel19
@@ -1039,25 +1023,140 @@
             this.tableLayoutPanel19.Controls.Add(this.panel9, 0, 0);
             this.tableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel19.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel19.Name = "tableLayoutPanel19";
             this.tableLayoutPanel19.RowCount = 1;
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 449F));
-            this.tableLayoutPanel19.Size = new System.Drawing.Size(1082, 445);
+            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 619F));
+            this.tableLayoutPanel19.Size = new System.Drawing.Size(1442, 619);
             this.tableLayoutPanel19.TabIndex = 0;
             // 
             // panel9
             // 
+            this.panel9.Controls.Add(this.panel17);
             this.panel9.Controls.Add(this.btnCheckIncomingStock);
-            this.panel9.Controls.Add(this.clbIncomingStock);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel9.Location = new System.Drawing.Point(2, 2);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel9.Location = new System.Drawing.Point(3, 2);
+            this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1078, 441);
+            this.panel9.Size = new System.Drawing.Size(1436, 615);
             this.panel9.TabIndex = 1;
+            // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.cmbBrand);
+            this.panel17.Controls.Add(this.label27);
+            this.panel17.Controls.Add(this.btnViewProductsDetails);
+            this.panel17.Controls.Add(this.clbProducts);
+            this.panel17.Controls.Add(this.btnSearchForProduct);
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel17.Location = new System.Drawing.Point(0, 0);
+            this.panel17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(1436, 615);
+            this.panel17.TabIndex = 4;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label27.Location = new System.Drawing.Point(359, 39);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(139, 23);
+            this.label27.TabIndex = 11;
+            this.label27.Text = "Choose Brand:";
+            // 
+            // btnViewProductsDetails
+            // 
+            this.btnViewProductsDetails.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnViewProductsDetails.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnViewProductsDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnViewProductsDetails.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnViewProductsDetails.BorderRadius = 0;
+            this.btnViewProductsDetails.ButtonText = "View Product";
+            this.btnViewProductsDetails.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnViewProductsDetails.DisabledColor = System.Drawing.Color.Gray;
+            this.btnViewProductsDetails.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnViewProductsDetails.Iconimage = null;
+            this.btnViewProductsDetails.Iconimage_right = null;
+            this.btnViewProductsDetails.Iconimage_right_Selected = null;
+            this.btnViewProductsDetails.Iconimage_Selected = null;
+            this.btnViewProductsDetails.IconMarginLeft = 0;
+            this.btnViewProductsDetails.IconMarginRight = 0;
+            this.btnViewProductsDetails.IconRightVisible = false;
+            this.btnViewProductsDetails.IconRightZoom = 0D;
+            this.btnViewProductsDetails.IconVisible = false;
+            this.btnViewProductsDetails.IconZoom = 90D;
+            this.btnViewProductsDetails.IsTab = false;
+            this.btnViewProductsDetails.Location = new System.Drawing.Point(34, 457);
+            this.btnViewProductsDetails.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnViewProductsDetails.Name = "btnViewProductsDetails";
+            this.btnViewProductsDetails.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnViewProductsDetails.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnViewProductsDetails.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnViewProductsDetails.selected = false;
+            this.btnViewProductsDetails.Size = new System.Drawing.Size(1386, 47);
+            this.btnViewProductsDetails.TabIndex = 8;
+            this.btnViewProductsDetails.Text = "View Product";
+            this.btnViewProductsDetails.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnViewProductsDetails.Textcolor = System.Drawing.Color.White;
+            this.btnViewProductsDetails.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btnViewProductsDetails.Visible = false;
+            this.btnViewProductsDetails.Click += new System.EventHandler(this.BtnViewProductsDetails_Click);
+            // 
+            // clbProducts
+            // 
+            this.clbProducts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.clbProducts.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.clbProducts.FormattingEnabled = true;
+            this.clbProducts.Location = new System.Drawing.Point(36, 262);
+            this.clbProducts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.clbProducts.Name = "clbProducts";
+            this.clbProducts.Size = new System.Drawing.Size(1384, 179);
+            this.clbProducts.TabIndex = 7;
+            this.clbProducts.Visible = false;
+            // 
+            // btnSearchForProduct
+            // 
+            this.btnSearchForProduct.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnSearchForProduct.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearchForProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnSearchForProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearchForProduct.BorderRadius = 0;
+            this.btnSearchForProduct.ButtonText = "Search";
+            this.btnSearchForProduct.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearchForProduct.DisabledColor = System.Drawing.Color.Gray;
+            this.btnSearchForProduct.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnSearchForProduct.Iconimage = null;
+            this.btnSearchForProduct.Iconimage_right = null;
+            this.btnSearchForProduct.Iconimage_right_Selected = null;
+            this.btnSearchForProduct.Iconimage_Selected = null;
+            this.btnSearchForProduct.IconMarginLeft = 0;
+            this.btnSearchForProduct.IconMarginRight = 0;
+            this.btnSearchForProduct.IconRightVisible = false;
+            this.btnSearchForProduct.IconRightZoom = 0D;
+            this.btnSearchForProduct.IconVisible = false;
+            this.btnSearchForProduct.IconZoom = 90D;
+            this.btnSearchForProduct.IsTab = false;
+            this.btnSearchForProduct.Location = new System.Drawing.Point(363, 170);
+            this.btnSearchForProduct.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSearchForProduct.Name = "btnSearchForProduct";
+            this.btnSearchForProduct.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnSearchForProduct.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnSearchForProduct.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnSearchForProduct.selected = false;
+            this.btnSearchForProduct.Size = new System.Drawing.Size(707, 44);
+            this.btnSearchForProduct.TabIndex = 6;
+            this.btnSearchForProduct.Text = "Search";
+            this.btnSearchForProduct.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSearchForProduct.Textcolor = System.Drawing.Color.White;
+            this.btnSearchForProduct.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btnSearchForProduct.Click += new System.EventHandler(this.BtnSearchForProduct_Click);
             // 
             // btnCheckIncomingStock
             // 
@@ -1081,14 +1180,14 @@
             this.btnCheckIncomingStock.IconVisible = false;
             this.btnCheckIncomingStock.IconZoom = 90D;
             this.btnCheckIncomingStock.IsTab = false;
-            this.btnCheckIncomingStock.Location = new System.Drawing.Point(349, 368);
-            this.btnCheckIncomingStock.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnCheckIncomingStock.Location = new System.Drawing.Point(523, 697);
+            this.btnCheckIncomingStock.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.btnCheckIncomingStock.Name = "btnCheckIncomingStock";
             this.btnCheckIncomingStock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnCheckIncomingStock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnCheckIncomingStock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnCheckIncomingStock.selected = false;
-            this.btnCheckIncomingStock.Size = new System.Drawing.Size(409, 41);
+            this.btnCheckIncomingStock.Size = new System.Drawing.Size(613, 69);
             this.btnCheckIncomingStock.TabIndex = 3;
             this.btnCheckIncomingStock.Text = "Check";
             this.btnCheckIncomingStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1096,29 +1195,16 @@
             this.btnCheckIncomingStock.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btnCheckIncomingStock.Click += new System.EventHandler(this.btnCheckIncomingStock_Click);
             // 
-            // clbIncomingStock
-            // 
-            this.clbIncomingStock.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.clbIncomingStock.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.clbIncomingStock.FormattingEnabled = true;
-            this.clbIncomingStock.Location = new System.Drawing.Point(75, 47);
-            this.clbIncomingStock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.clbIncomingStock.Name = "clbIncomingStock";
-            this.clbIncomingStock.Size = new System.Drawing.Size(941, 193);
-            this.clbIncomingStock.TabIndex = 0;
-            // 
             // tabIncomingStockDetails
             // 
             this.tabIncomingStockDetails.Controls.Add(this.tableLayoutPanel20);
-            this.tabIncomingStockDetails.Location = new System.Drawing.Point(4, 22);
-            this.tabIncomingStockDetails.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabIncomingStockDetails.Location = new System.Drawing.Point(4, 25);
+            this.tabIncomingStockDetails.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabIncomingStockDetails.Name = "tabIncomingStockDetails";
-            this.tabIncomingStockDetails.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabIncomingStockDetails.Size = new System.Drawing.Size(1407, 536);
+            this.tabIncomingStockDetails.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabIncomingStockDetails.Size = new System.Drawing.Size(1783, 740);
             this.tabIncomingStockDetails.TabIndex = 12;
-            this.tabIncomingStockDetails.Text = "IncomingStockDetails";
+            this.tabIncomingStockDetails.Text = "Product\'s details";
             this.tabIncomingStockDetails.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel20
@@ -1130,12 +1216,12 @@
             this.tableLayoutPanel20.Controls.Add(this.tableLayoutPanel21, 0, 0);
             this.tableLayoutPanel20.Controls.Add(this.tableLayoutPanel22, 1, 0);
             this.tableLayoutPanel20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel20.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel20.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel20.Name = "tableLayoutPanel20";
             this.tableLayoutPanel20.RowCount = 1;
             this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel20.Size = new System.Drawing.Size(1403, 532);
+            this.tableLayoutPanel20.Size = new System.Drawing.Size(1777, 736);
             this.tableLayoutPanel20.TabIndex = 21;
             // 
             // tableLayoutPanel21
@@ -1149,8 +1235,8 @@
             this.tableLayoutPanel21.Controls.Add(this.btnIncomingStockTABincomingStockDet, 0, 2);
             this.tableLayoutPanel21.Controls.Add(this.btnStockTABincomingStockDet, 0, 3);
             this.tableLayoutPanel21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel21.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel21.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel21.Name = "tableLayoutPanel21";
             this.tableLayoutPanel21.RowCount = 6;
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -1159,7 +1245,7 @@
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel21.Size = new System.Drawing.Size(309, 528);
+            this.tableLayoutPanel21.Size = new System.Drawing.Size(391, 732);
             this.tableLayoutPanel21.TabIndex = 0;
             // 
             // btnLogOutTABincomingStockDet
@@ -1184,14 +1270,14 @@
             this.btnLogOutTABincomingStockDet.IconVisible = false;
             this.btnLogOutTABincomingStockDet.IconZoom = 90D;
             this.btnLogOutTABincomingStockDet.IsTab = false;
-            this.btnLogOutTABincomingStockDet.Location = new System.Drawing.Point(4, 478);
-            this.btnLogOutTABincomingStockDet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogOutTABincomingStockDet.Location = new System.Drawing.Point(5, 660);
+            this.btnLogOutTABincomingStockDet.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogOutTABincomingStockDet.Name = "btnLogOutTABincomingStockDet";
             this.btnLogOutTABincomingStockDet.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABincomingStockDet.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnLogOutTABincomingStockDet.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogOutTABincomingStockDet.selected = false;
-            this.btnLogOutTABincomingStockDet.Size = new System.Drawing.Size(301, 46);
+            this.btnLogOutTABincomingStockDet.Size = new System.Drawing.Size(381, 67);
             this.btnLogOutTABincomingStockDet.TabIndex = 11;
             this.btnLogOutTABincomingStockDet.Text = "LOG OUT";
             this.btnLogOutTABincomingStockDet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1221,14 +1307,14 @@
             this.btnMakeReqTABincomingStockDet.IconVisible = false;
             this.btnMakeReqTABincomingStockDet.IconZoom = 90D;
             this.btnMakeReqTABincomingStockDet.IsTab = false;
-            this.btnMakeReqTABincomingStockDet.Location = new System.Drawing.Point(4, 162);
-            this.btnMakeReqTABincomingStockDet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMakeReqTABincomingStockDet.Location = new System.Drawing.Point(5, 224);
+            this.btnMakeReqTABincomingStockDet.Margin = new System.Windows.Forms.Padding(5);
             this.btnMakeReqTABincomingStockDet.Name = "btnMakeReqTABincomingStockDet";
             this.btnMakeReqTABincomingStockDet.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnMakeReqTABincomingStockDet.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnMakeReqTABincomingStockDet.OnHoverTextColor = System.Drawing.Color.White;
             this.btnMakeReqTABincomingStockDet.selected = false;
-            this.btnMakeReqTABincomingStockDet.Size = new System.Drawing.Size(301, 71);
+            this.btnMakeReqTABincomingStockDet.Size = new System.Drawing.Size(381, 99);
             this.btnMakeReqTABincomingStockDet.TabIndex = 5;
             this.btnMakeReqTABincomingStockDet.Text = "Make Request";
             this.btnMakeReqTABincomingStockDet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1240,10 +1326,10 @@
             // 
             this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(2, 2);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(305, 154);
+            this.pictureBox5.Size = new System.Drawing.Size(385, 215);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
@@ -1254,7 +1340,7 @@
             this.btnIncomingStockTABincomingStockDet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnIncomingStockTABincomingStockDet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnIncomingStockTABincomingStockDet.BorderRadius = 0;
-            this.btnIncomingStockTABincomingStockDet.ButtonText = "Incoming Stock";
+            this.btnIncomingStockTABincomingStockDet.ButtonText = "Stock";
             this.btnIncomingStockTABincomingStockDet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIncomingStockTABincomingStockDet.DisabledColor = System.Drawing.Color.Gray;
             this.btnIncomingStockTABincomingStockDet.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1270,16 +1356,16 @@
             this.btnIncomingStockTABincomingStockDet.IconVisible = false;
             this.btnIncomingStockTABincomingStockDet.IconZoom = 90D;
             this.btnIncomingStockTABincomingStockDet.IsTab = false;
-            this.btnIncomingStockTABincomingStockDet.Location = new System.Drawing.Point(4, 241);
-            this.btnIncomingStockTABincomingStockDet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIncomingStockTABincomingStockDet.Location = new System.Drawing.Point(5, 333);
+            this.btnIncomingStockTABincomingStockDet.Margin = new System.Windows.Forms.Padding(5);
             this.btnIncomingStockTABincomingStockDet.Name = "btnIncomingStockTABincomingStockDet";
             this.btnIncomingStockTABincomingStockDet.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnIncomingStockTABincomingStockDet.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnIncomingStockTABincomingStockDet.OnHoverTextColor = System.Drawing.Color.White;
             this.btnIncomingStockTABincomingStockDet.selected = false;
-            this.btnIncomingStockTABincomingStockDet.Size = new System.Drawing.Size(301, 71);
+            this.btnIncomingStockTABincomingStockDet.Size = new System.Drawing.Size(381, 99);
             this.btnIncomingStockTABincomingStockDet.TabIndex = 2;
-            this.btnIncomingStockTABincomingStockDet.Text = "Incoming Stock";
+            this.btnIncomingStockTABincomingStockDet.Text = "Stock";
             this.btnIncomingStockTABincomingStockDet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnIncomingStockTABincomingStockDet.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnIncomingStockTABincomingStockDet.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1307,14 +1393,14 @@
             this.btnStockTABincomingStockDet.IconVisible = false;
             this.btnStockTABincomingStockDet.IconZoom = 90D;
             this.btnStockTABincomingStockDet.IsTab = false;
-            this.btnStockTABincomingStockDet.Location = new System.Drawing.Point(4, 320);
-            this.btnStockTABincomingStockDet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStockTABincomingStockDet.Location = new System.Drawing.Point(5, 442);
+            this.btnStockTABincomingStockDet.Margin = new System.Windows.Forms.Padding(5);
             this.btnStockTABincomingStockDet.Name = "btnStockTABincomingStockDet";
             this.btnStockTABincomingStockDet.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnStockTABincomingStockDet.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnStockTABincomingStockDet.OnHoverTextColor = System.Drawing.Color.White;
             this.btnStockTABincomingStockDet.selected = false;
-            this.btnStockTABincomingStockDet.Size = new System.Drawing.Size(301, 71);
+            this.btnStockTABincomingStockDet.Size = new System.Drawing.Size(381, 99);
             this.btnStockTABincomingStockDet.TabIndex = 6;
             this.btnStockTABincomingStockDet.Text = "History Stock Requests";
             this.btnStockTABincomingStockDet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1330,13 +1416,13 @@
             this.tableLayoutPanel22.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel22.Controls.Add(this.panel10, 0, 1);
             this.tableLayoutPanel22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel22.Location = new System.Drawing.Point(315, 2);
-            this.tableLayoutPanel22.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel22.Location = new System.Drawing.Point(400, 2);
+            this.tableLayoutPanel22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel22.Name = "tableLayoutPanel22";
             this.tableLayoutPanel22.RowCount = 2;
             this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel22.Size = new System.Drawing.Size(1086, 528);
+            this.tableLayoutPanel22.Size = new System.Drawing.Size(1374, 732);
             this.tableLayoutPanel22.TabIndex = 1;
             // 
             // label5
@@ -1346,10 +1432,9 @@
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(2, 0);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(3, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(1082, 79);
+            this.label5.Size = new System.Drawing.Size(1368, 109);
             this.label5.TabIndex = 0;
             this.label5.Text = "Incoming Stock(Details)";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1359,10 +1444,10 @@
             this.panel10.BackColor = System.Drawing.Color.White;
             this.panel10.Controls.Add(this.tableLayoutPanel23);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(2, 81);
-            this.panel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel10.Location = new System.Drawing.Point(3, 111);
+            this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1082, 445);
+            this.panel10.Size = new System.Drawing.Size(1368, 619);
             this.panel10.TabIndex = 1;
             // 
             // tableLayoutPanel23
@@ -1372,274 +1457,128 @@
             this.tableLayoutPanel23.Controls.Add(this.panel11, 0, 0);
             this.tableLayoutPanel23.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel23.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel23.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel23.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel23.Name = "tableLayoutPanel23";
             this.tableLayoutPanel23.RowCount = 1;
             this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 449F));
-            this.tableLayoutPanel23.Size = new System.Drawing.Size(1082, 445);
+            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 553F));
+            this.tableLayoutPanel23.Size = new System.Drawing.Size(1368, 619);
             this.tableLayoutPanel23.TabIndex = 0;
             // 
             // panel11
             // 
             this.panel11.Controls.Add(this.groupBox3);
-            this.panel11.Controls.Add(this.groupBox2);
-            this.panel11.Controls.Add(this.groupBox1);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel11.Location = new System.Drawing.Point(2, 2);
-            this.panel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel11.Location = new System.Drawing.Point(3, 2);
+            this.panel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1078, 441);
+            this.panel11.Size = new System.Drawing.Size(1362, 615);
             this.panel11.TabIndex = 1;
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.groupBox3.Controls.Add(this.lblStatus);
-            this.groupBox3.Controls.Add(this.label25);
-            this.groupBox3.Controls.Add(this.lblQuantity);
-            this.groupBox3.Controls.Add(this.label24);
-            this.groupBox3.Controls.Add(this.lblDepartment);
-            this.groupBox3.Controls.Add(this.lblDeliverDate);
-            this.groupBox3.Controls.Add(this.lblOrderDate);
-            this.groupBox3.Controls.Add(this.lblSType);
+            this.groupBox3.Controls.Add(this.lblProductCategory);
+            this.groupBox3.Controls.Add(this.lblProductBrand);
+            this.groupBox3.Controls.Add(this.lblProductName);
+            this.groupBox3.Controls.Add(this.lblProductID);
             this.groupBox3.Controls.Add(this.label17);
             this.groupBox3.Controls.Add(this.label18);
             this.groupBox3.Controls.Add(this.label21);
             this.groupBox3.Controls.Add(this.label22);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.groupBox3.Location = new System.Drawing.Point(94, 229);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Location = new System.Drawing.Point(125, 49);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox3.Size = new System.Drawing.Size(895, 206);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Size = new System.Drawing.Size(1223, 487);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Stock Details:";
+            this.groupBox3.Text = "Product Details:";
             // 
-            // lblStatus
+            // lblProductCategory
             // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(671, 115);
-            this.lblStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(38, 19);
-            this.lblStatus.TabIndex = 14;
-            this.lblStatus.Text = "Info";
+            this.lblProductCategory.AutoSize = true;
+            this.lblProductCategory.Location = new System.Drawing.Point(219, 71);
+            this.lblProductCategory.Name = "lblProductCategory";
+            this.lblProductCategory.Size = new System.Drawing.Size(47, 23);
+            this.lblProductCategory.TabIndex = 10;
+            this.lblProductCategory.Text = "Info";
             // 
-            // label25
+            // lblProductBrand
             // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(560, 115);
-            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(57, 19);
-            this.label25.TabIndex = 13;
-            this.label25.Text = "Status:";
+            this.lblProductBrand.AutoSize = true;
+            this.lblProductBrand.Location = new System.Drawing.Point(188, 247);
+            this.lblProductBrand.Name = "lblProductBrand";
+            this.lblProductBrand.Size = new System.Drawing.Size(47, 23);
+            this.lblProductBrand.TabIndex = 9;
+            this.lblProductBrand.Text = "Info";
             // 
-            // lblQuantity
+            // lblProductName
             // 
-            this.lblQuantity.AutoSize = true;
-            this.lblQuantity.Location = new System.Drawing.Point(130, 115);
-            this.lblQuantity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(38, 19);
-            this.lblQuantity.TabIndex = 12;
-            this.lblQuantity.Text = "Info";
+            this.lblProductName.AutoSize = true;
+            this.lblProductName.Location = new System.Drawing.Point(845, 247);
+            this.lblProductName.Name = "lblProductName";
+            this.lblProductName.Size = new System.Drawing.Size(47, 23);
+            this.lblProductName.TabIndex = 7;
+            this.lblProductName.Text = "Info";
             // 
-            // label24
+            // lblProductID
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(20, 115);
-            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(74, 19);
-            this.label24.TabIndex = 11;
-            this.label24.Text = "Quantity:";
-            // 
-            // lblDepartment
-            // 
-            this.lblDepartment.AutoSize = true;
-            this.lblDepartment.Location = new System.Drawing.Point(130, 80);
-            this.lblDepartment.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblDepartment.Name = "lblDepartment";
-            this.lblDepartment.Size = new System.Drawing.Size(38, 19);
-            this.lblDepartment.TabIndex = 10;
-            this.lblDepartment.Text = "Info";
-            // 
-            // lblDeliverDate
-            // 
-            this.lblDeliverDate.AutoSize = true;
-            this.lblDeliverDate.Location = new System.Drawing.Point(671, 80);
-            this.lblDeliverDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblDeliverDate.Name = "lblDeliverDate";
-            this.lblDeliverDate.Size = new System.Drawing.Size(38, 19);
-            this.lblDeliverDate.TabIndex = 9;
-            this.lblDeliverDate.Text = "Info";
-            // 
-            // lblOrderDate
-            // 
-            this.lblOrderDate.AutoSize = true;
-            this.lblOrderDate.Location = new System.Drawing.Point(671, 46);
-            this.lblOrderDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblOrderDate.Name = "lblOrderDate";
-            this.lblOrderDate.Size = new System.Drawing.Size(38, 19);
-            this.lblOrderDate.TabIndex = 7;
-            this.lblOrderDate.Text = "Info";
-            // 
-            // lblSType
-            // 
-            this.lblSType.AutoSize = true;
-            this.lblSType.Location = new System.Drawing.Point(130, 46);
-            this.lblSType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblSType.Name = "lblSType";
-            this.lblSType.Size = new System.Drawing.Size(38, 19);
-            this.lblSType.TabIndex = 8;
-            this.lblSType.Text = "Info";
+            this.lblProductID.AutoSize = true;
+            this.lblProductID.Location = new System.Drawing.Point(843, 71);
+            this.lblProductID.Name = "lblProductID";
+            this.lblProductID.Size = new System.Drawing.Size(47, 23);
+            this.lblProductID.TabIndex = 8;
+            this.lblProductID.Text = "Info";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(20, 46);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Location = new System.Drawing.Point(697, 71);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(89, 19);
+            this.label17.Size = new System.Drawing.Size(112, 23);
             this.label17.TabIndex = 2;
-            this.label17.Text = "Stock Type:";
+            this.label17.Text = "Product ID:";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(20, 80);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Location = new System.Drawing.Point(40, 71);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(98, 19);
+            this.label18.Size = new System.Drawing.Size(173, 23);
             this.label18.TabIndex = 3;
-            this.label18.Text = "Department:";
+            this.label18.Text = "Product Category:";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(560, 46);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Location = new System.Drawing.Point(697, 247);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(90, 19);
+            this.label21.Size = new System.Drawing.Size(144, 23);
             this.label21.TabIndex = 6;
-            this.label21.Text = "Order Date:";
+            this.label21.Text = "Product Name:";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(560, 80);
-            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label22.Location = new System.Drawing.Point(40, 247);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(99, 19);
+            this.label22.Size = new System.Drawing.Size(146, 23);
             this.label22.TabIndex = 7;
-            this.label22.Text = "Deliver Date:";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.groupBox2.Controls.Add(this.lblEID);
-            this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.groupBox2.Location = new System.Drawing.Point(94, 110);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox2.Size = new System.Drawing.Size(472, 115);
-            this.groupBox2.TabIndex = 9;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Employee ID:";
-            // 
-            // lblEID
-            // 
-            this.lblEID.AutoSize = true;
-            this.lblEID.Location = new System.Drawing.Point(130, 36);
-            this.lblEID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblEID.Name = "lblEID";
-            this.lblEID.Size = new System.Drawing.Size(38, 19);
-            this.lblEID.TabIndex = 10;
-            this.lblEID.Text = "Info";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(22, 36);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(101, 19);
-            this.label16.TabIndex = 1;
-            this.label16.Text = "Employee ID:";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.groupBox1.Controls.Add(this.lblSName);
-            this.groupBox1.Controls.Add(this.lblSID);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label19);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.Location = new System.Drawing.Point(94, 24);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(895, 81);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Stock Info:";
-            // 
-            // lblSName
-            // 
-            this.lblSName.AutoSize = true;
-            this.lblSName.Location = new System.Drawing.Point(682, 31);
-            this.lblSName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblSName.Name = "lblSName";
-            this.lblSName.Size = new System.Drawing.Size(38, 19);
-            this.lblSName.TabIndex = 6;
-            this.lblSName.Text = "Info";
-            // 
-            // lblSID
-            // 
-            this.lblSID.AutoSize = true;
-            this.lblSID.Location = new System.Drawing.Point(110, 31);
-            this.lblSID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblSID.Name = "lblSID";
-            this.lblSID.Size = new System.Drawing.Size(38, 19);
-            this.lblSID.TabIndex = 5;
-            this.lblSID.Text = "Info";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(22, 31);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(71, 19);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Stock ID:";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(560, 33);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(97, 19);
-            this.label19.TabIndex = 4;
-            this.label19.Text = "Stock Name:";
+            this.label22.Text = "Product Brand:";
             // 
             // tabStock
             // 
             this.tabStock.Controls.Add(this.tableLayoutPanel24);
-            this.tabStock.Location = new System.Drawing.Point(4, 22);
-            this.tabStock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabStock.Location = new System.Drawing.Point(4, 25);
+            this.tabStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabStock.Name = "tabStock";
-            this.tabStock.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabStock.Size = new System.Drawing.Size(1407, 536);
+            this.tabStock.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabStock.Size = new System.Drawing.Size(1879, 740);
             this.tabStock.TabIndex = 13;
-            this.tabStock.Text = "Stock";
+            this.tabStock.Text = "History Stock Requests";
             this.tabStock.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel24
@@ -1651,12 +1590,12 @@
             this.tableLayoutPanel24.Controls.Add(this.tableLayoutPanel25, 0, 0);
             this.tableLayoutPanel24.Controls.Add(this.tableLayoutPanel26, 1, 0);
             this.tableLayoutPanel24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel24.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel24.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel24.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel24.Name = "tableLayoutPanel24";
             this.tableLayoutPanel24.RowCount = 1;
             this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel24.Size = new System.Drawing.Size(1403, 532);
+            this.tableLayoutPanel24.Size = new System.Drawing.Size(1873, 736);
             this.tableLayoutPanel24.TabIndex = 21;
             // 
             // tableLayoutPanel25
@@ -1670,8 +1609,8 @@
             this.tableLayoutPanel25.Controls.Add(this.btnIncomingStockTABstock, 0, 2);
             this.tableLayoutPanel25.Controls.Add(this.btnStockTABstock, 0, 3);
             this.tableLayoutPanel25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel25.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel25.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel25.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel25.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel25.Name = "tableLayoutPanel25";
             this.tableLayoutPanel25.RowCount = 6;
             this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -1680,7 +1619,7 @@
             this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel25.Size = new System.Drawing.Size(309, 528);
+            this.tableLayoutPanel25.Size = new System.Drawing.Size(413, 732);
             this.tableLayoutPanel25.TabIndex = 0;
             // 
             // btnLogOutTABstock
@@ -1705,14 +1644,14 @@
             this.btnLogOutTABstock.IconVisible = false;
             this.btnLogOutTABstock.IconZoom = 90D;
             this.btnLogOutTABstock.IsTab = false;
-            this.btnLogOutTABstock.Location = new System.Drawing.Point(4, 478);
-            this.btnLogOutTABstock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogOutTABstock.Location = new System.Drawing.Point(5, 660);
+            this.btnLogOutTABstock.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogOutTABstock.Name = "btnLogOutTABstock";
             this.btnLogOutTABstock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABstock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnLogOutTABstock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogOutTABstock.selected = false;
-            this.btnLogOutTABstock.Size = new System.Drawing.Size(301, 46);
+            this.btnLogOutTABstock.Size = new System.Drawing.Size(403, 67);
             this.btnLogOutTABstock.TabIndex = 11;
             this.btnLogOutTABstock.Text = "LOG OUT";
             this.btnLogOutTABstock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1742,14 +1681,14 @@
             this.btnMakeReqTABstock.IconVisible = false;
             this.btnMakeReqTABstock.IconZoom = 90D;
             this.btnMakeReqTABstock.IsTab = false;
-            this.btnMakeReqTABstock.Location = new System.Drawing.Point(4, 162);
-            this.btnMakeReqTABstock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMakeReqTABstock.Location = new System.Drawing.Point(5, 224);
+            this.btnMakeReqTABstock.Margin = new System.Windows.Forms.Padding(5);
             this.btnMakeReqTABstock.Name = "btnMakeReqTABstock";
             this.btnMakeReqTABstock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnMakeReqTABstock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnMakeReqTABstock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnMakeReqTABstock.selected = false;
-            this.btnMakeReqTABstock.Size = new System.Drawing.Size(301, 71);
+            this.btnMakeReqTABstock.Size = new System.Drawing.Size(403, 99);
             this.btnMakeReqTABstock.TabIndex = 5;
             this.btnMakeReqTABstock.Text = "Make Request";
             this.btnMakeReqTABstock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1761,10 +1700,10 @@
             // 
             this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(2, 2);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox6.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(305, 154);
+            this.pictureBox6.Size = new System.Drawing.Size(407, 215);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 0;
             this.pictureBox6.TabStop = false;
@@ -1775,7 +1714,7 @@
             this.btnIncomingStockTABstock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnIncomingStockTABstock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnIncomingStockTABstock.BorderRadius = 0;
-            this.btnIncomingStockTABstock.ButtonText = "Incoming Stock";
+            this.btnIncomingStockTABstock.ButtonText = "Stock";
             this.btnIncomingStockTABstock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIncomingStockTABstock.DisabledColor = System.Drawing.Color.Gray;
             this.btnIncomingStockTABstock.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1791,16 +1730,16 @@
             this.btnIncomingStockTABstock.IconVisible = false;
             this.btnIncomingStockTABstock.IconZoom = 90D;
             this.btnIncomingStockTABstock.IsTab = false;
-            this.btnIncomingStockTABstock.Location = new System.Drawing.Point(4, 241);
-            this.btnIncomingStockTABstock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIncomingStockTABstock.Location = new System.Drawing.Point(5, 333);
+            this.btnIncomingStockTABstock.Margin = new System.Windows.Forms.Padding(5);
             this.btnIncomingStockTABstock.Name = "btnIncomingStockTABstock";
             this.btnIncomingStockTABstock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnIncomingStockTABstock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnIncomingStockTABstock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnIncomingStockTABstock.selected = false;
-            this.btnIncomingStockTABstock.Size = new System.Drawing.Size(301, 71);
+            this.btnIncomingStockTABstock.Size = new System.Drawing.Size(403, 99);
             this.btnIncomingStockTABstock.TabIndex = 2;
-            this.btnIncomingStockTABstock.Text = "Incoming Stock";
+            this.btnIncomingStockTABstock.Text = "Stock";
             this.btnIncomingStockTABstock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnIncomingStockTABstock.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnIncomingStockTABstock.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1828,14 +1767,14 @@
             this.btnStockTABstock.IconVisible = false;
             this.btnStockTABstock.IconZoom = 90D;
             this.btnStockTABstock.IsTab = false;
-            this.btnStockTABstock.Location = new System.Drawing.Point(4, 320);
-            this.btnStockTABstock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStockTABstock.Location = new System.Drawing.Point(5, 442);
+            this.btnStockTABstock.Margin = new System.Windows.Forms.Padding(5);
             this.btnStockTABstock.Name = "btnStockTABstock";
             this.btnStockTABstock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnStockTABstock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnStockTABstock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnStockTABstock.selected = false;
-            this.btnStockTABstock.Size = new System.Drawing.Size(301, 71);
+            this.btnStockTABstock.Size = new System.Drawing.Size(403, 99);
             this.btnStockTABstock.TabIndex = 6;
             this.btnStockTABstock.Text = "History Stock Requests";
             this.btnStockTABstock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1850,13 +1789,13 @@
             this.tableLayoutPanel26.Controls.Add(this.label6, 0, 0);
             this.tableLayoutPanel26.Controls.Add(this.panel12, 0, 1);
             this.tableLayoutPanel26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel26.Location = new System.Drawing.Point(315, 2);
-            this.tableLayoutPanel26.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel26.Location = new System.Drawing.Point(422, 2);
+            this.tableLayoutPanel26.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel26.Name = "tableLayoutPanel26";
             this.tableLayoutPanel26.RowCount = 2;
             this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel26.Size = new System.Drawing.Size(1086, 528);
+            this.tableLayoutPanel26.Size = new System.Drawing.Size(1448, 732);
             this.tableLayoutPanel26.TabIndex = 1;
             // 
             // label6
@@ -1866,10 +1805,9 @@
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(2, 0);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(3, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(1082, 79);
+            this.label6.Size = new System.Drawing.Size(1442, 109);
             this.label6.TabIndex = 0;
             this.label6.Text = "Stock";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1879,10 +1817,10 @@
             this.panel12.BackColor = System.Drawing.Color.White;
             this.panel12.Controls.Add(this.tableLayoutPanel31);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(2, 81);
-            this.panel12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel12.Location = new System.Drawing.Point(3, 111);
+            this.panel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(1082, 445);
+            this.panel12.Size = new System.Drawing.Size(1442, 619);
             this.panel12.TabIndex = 1;
             // 
             // tableLayoutPanel31
@@ -1892,12 +1830,12 @@
             this.tableLayoutPanel31.Controls.Add(this.panel13, 0, 0);
             this.tableLayoutPanel31.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel31.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel31.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel31.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel31.Name = "tableLayoutPanel31";
             this.tableLayoutPanel31.RowCount = 1;
             this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 449F));
-            this.tableLayoutPanel31.Size = new System.Drawing.Size(1082, 445);
+            this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 553F));
+            this.tableLayoutPanel31.Size = new System.Drawing.Size(1442, 619);
             this.tableLayoutPanel31.TabIndex = 0;
             // 
             // panel13
@@ -1909,20 +1847,19 @@
             this.panel13.Controls.Add(this.clbAllConfirmedRequests);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel13.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel13.Location = new System.Drawing.Point(2, 2);
-            this.panel13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel13.Location = new System.Drawing.Point(3, 2);
+            this.panel13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(1078, 441);
+            this.panel13.Size = new System.Drawing.Size(1436, 615);
             this.panel13.TabIndex = 1;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label23.Location = new System.Drawing.Point(672, 56);
-            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Location = new System.Drawing.Point(896, 69);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(183, 19);
+            this.label23.Size = new System.Drawing.Size(229, 23);
             this.label23.TabIndex = 7;
             this.label23.Text = "Rejected Stock Requests:";
             // 
@@ -1930,10 +1867,9 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(87, 57);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(116, 70);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(197, 19);
+            this.label10.Size = new System.Drawing.Size(249, 23);
             this.label10.TabIndex = 6;
             this.label10.Text = "Confirmed Stock Requests:";
             // 
@@ -1941,11 +1877,11 @@
             // 
             this.lbxRejectedRequests.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.lbxRejectedRequests.FormattingEnabled = true;
-            this.lbxRejectedRequests.ItemHeight = 18;
-            this.lbxRejectedRequests.Location = new System.Drawing.Point(675, 84);
-            this.lbxRejectedRequests.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbxRejectedRequests.ItemHeight = 23;
+            this.lbxRejectedRequests.Location = new System.Drawing.Point(900, 103);
+            this.lbxRejectedRequests.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbxRejectedRequests.Name = "lbxRejectedRequests";
-            this.lbxRejectedRequests.Size = new System.Drawing.Size(235, 310);
+            this.lbxRejectedRequests.Size = new System.Drawing.Size(312, 372);
             this.lbxRejectedRequests.TabIndex = 5;
             // 
             // btnViewStock
@@ -1970,14 +1906,14 @@
             this.btnViewStock.IconVisible = false;
             this.btnViewStock.IconZoom = 90D;
             this.btnViewStock.IsTab = false;
-            this.btnViewStock.Location = new System.Drawing.Point(130, 348);
-            this.btnViewStock.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnViewStock.Location = new System.Drawing.Point(173, 500);
+            this.btnViewStock.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnViewStock.Name = "btnViewStock";
             this.btnViewStock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnViewStock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnViewStock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnViewStock.selected = false;
-            this.btnViewStock.Size = new System.Drawing.Size(341, 60);
+            this.btnViewStock.Size = new System.Drawing.Size(455, 74);
             this.btnViewStock.TabIndex = 4;
             this.btnViewStock.Text = "View stock";
             this.btnViewStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1992,22 +1928,22 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.clbAllConfirmedRequests.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.clbAllConfirmedRequests.FormattingEnabled = true;
-            this.clbAllConfirmedRequests.Location = new System.Drawing.Point(82, 87);
-            this.clbAllConfirmedRequests.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.clbAllConfirmedRequests.Location = new System.Drawing.Point(109, 107);
+            this.clbAllConfirmedRequests.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.clbAllConfirmedRequests.Name = "clbAllConfirmedRequests";
-            this.clbAllConfirmedRequests.Size = new System.Drawing.Size(446, 214);
+            this.clbAllConfirmedRequests.Size = new System.Drawing.Size(592, 304);
             this.clbAllConfirmedRequests.TabIndex = 0;
             // 
             // tabInfoStock
             // 
             this.tabInfoStock.Controls.Add(this.tableLayoutPanel32);
-            this.tabInfoStock.Location = new System.Drawing.Point(4, 22);
-            this.tabInfoStock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabInfoStock.Location = new System.Drawing.Point(4, 25);
+            this.tabInfoStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabInfoStock.Name = "tabInfoStock";
-            this.tabInfoStock.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabInfoStock.Size = new System.Drawing.Size(1407, 536);
+            this.tabInfoStock.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabInfoStock.Size = new System.Drawing.Size(1879, 740);
             this.tabInfoStock.TabIndex = 14;
-            this.tabInfoStock.Text = "InfoStock";
+            this.tabInfoStock.Text = "Stock\'s details";
             this.tabInfoStock.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel32
@@ -2019,12 +1955,12 @@
             this.tableLayoutPanel32.Controls.Add(this.tableLayoutPanel33, 0, 0);
             this.tableLayoutPanel32.Controls.Add(this.tableLayoutPanel34, 1, 0);
             this.tableLayoutPanel32.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel32.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel32.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel32.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel32.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel32.Name = "tableLayoutPanel32";
             this.tableLayoutPanel32.RowCount = 1;
             this.tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel32.Size = new System.Drawing.Size(1403, 532);
+            this.tableLayoutPanel32.Size = new System.Drawing.Size(1873, 736);
             this.tableLayoutPanel32.TabIndex = 21;
             // 
             // tableLayoutPanel33
@@ -2038,8 +1974,8 @@
             this.tableLayoutPanel33.Controls.Add(this.btnIncomingStockTABstockInfo, 0, 2);
             this.tableLayoutPanel33.Controls.Add(this.btnStockTABstockInfo, 0, 3);
             this.tableLayoutPanel33.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel33.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel33.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel33.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel33.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel33.Name = "tableLayoutPanel33";
             this.tableLayoutPanel33.RowCount = 6;
             this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -2048,7 +1984,7 @@
             this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel33.Size = new System.Drawing.Size(309, 528);
+            this.tableLayoutPanel33.Size = new System.Drawing.Size(413, 732);
             this.tableLayoutPanel33.TabIndex = 0;
             // 
             // btnLogOutTABstockInfo
@@ -2073,14 +2009,14 @@
             this.btnLogOutTABstockInfo.IconVisible = false;
             this.btnLogOutTABstockInfo.IconZoom = 90D;
             this.btnLogOutTABstockInfo.IsTab = false;
-            this.btnLogOutTABstockInfo.Location = new System.Drawing.Point(4, 478);
-            this.btnLogOutTABstockInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogOutTABstockInfo.Location = new System.Drawing.Point(5, 660);
+            this.btnLogOutTABstockInfo.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogOutTABstockInfo.Name = "btnLogOutTABstockInfo";
             this.btnLogOutTABstockInfo.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABstockInfo.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnLogOutTABstockInfo.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogOutTABstockInfo.selected = false;
-            this.btnLogOutTABstockInfo.Size = new System.Drawing.Size(301, 46);
+            this.btnLogOutTABstockInfo.Size = new System.Drawing.Size(403, 67);
             this.btnLogOutTABstockInfo.TabIndex = 11;
             this.btnLogOutTABstockInfo.Text = "LOG OUT";
             this.btnLogOutTABstockInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2110,14 +2046,14 @@
             this.btnMakeReqTABstockInfo.IconVisible = false;
             this.btnMakeReqTABstockInfo.IconZoom = 90D;
             this.btnMakeReqTABstockInfo.IsTab = false;
-            this.btnMakeReqTABstockInfo.Location = new System.Drawing.Point(4, 162);
-            this.btnMakeReqTABstockInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMakeReqTABstockInfo.Location = new System.Drawing.Point(5, 224);
+            this.btnMakeReqTABstockInfo.Margin = new System.Windows.Forms.Padding(5);
             this.btnMakeReqTABstockInfo.Name = "btnMakeReqTABstockInfo";
             this.btnMakeReqTABstockInfo.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnMakeReqTABstockInfo.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnMakeReqTABstockInfo.OnHoverTextColor = System.Drawing.Color.White;
             this.btnMakeReqTABstockInfo.selected = false;
-            this.btnMakeReqTABstockInfo.Size = new System.Drawing.Size(301, 71);
+            this.btnMakeReqTABstockInfo.Size = new System.Drawing.Size(403, 99);
             this.btnMakeReqTABstockInfo.TabIndex = 5;
             this.btnMakeReqTABstockInfo.Text = "Make Request";
             this.btnMakeReqTABstockInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2129,10 +2065,10 @@
             // 
             this.pictureBox8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(2, 2);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox8.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(305, 154);
+            this.pictureBox8.Size = new System.Drawing.Size(407, 215);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 0;
             this.pictureBox8.TabStop = false;
@@ -2143,7 +2079,7 @@
             this.btnIncomingStockTABstockInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnIncomingStockTABstockInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnIncomingStockTABstockInfo.BorderRadius = 0;
-            this.btnIncomingStockTABstockInfo.ButtonText = "Incoming Stock";
+            this.btnIncomingStockTABstockInfo.ButtonText = "Stock";
             this.btnIncomingStockTABstockInfo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIncomingStockTABstockInfo.DisabledColor = System.Drawing.Color.Gray;
             this.btnIncomingStockTABstockInfo.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -2159,16 +2095,16 @@
             this.btnIncomingStockTABstockInfo.IconVisible = false;
             this.btnIncomingStockTABstockInfo.IconZoom = 90D;
             this.btnIncomingStockTABstockInfo.IsTab = false;
-            this.btnIncomingStockTABstockInfo.Location = new System.Drawing.Point(4, 241);
-            this.btnIncomingStockTABstockInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIncomingStockTABstockInfo.Location = new System.Drawing.Point(5, 333);
+            this.btnIncomingStockTABstockInfo.Margin = new System.Windows.Forms.Padding(5);
             this.btnIncomingStockTABstockInfo.Name = "btnIncomingStockTABstockInfo";
             this.btnIncomingStockTABstockInfo.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnIncomingStockTABstockInfo.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnIncomingStockTABstockInfo.OnHoverTextColor = System.Drawing.Color.White;
             this.btnIncomingStockTABstockInfo.selected = false;
-            this.btnIncomingStockTABstockInfo.Size = new System.Drawing.Size(301, 71);
+            this.btnIncomingStockTABstockInfo.Size = new System.Drawing.Size(403, 99);
             this.btnIncomingStockTABstockInfo.TabIndex = 2;
-            this.btnIncomingStockTABstockInfo.Text = "Incoming Stock";
+            this.btnIncomingStockTABstockInfo.Text = "Stock";
             this.btnIncomingStockTABstockInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnIncomingStockTABstockInfo.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnIncomingStockTABstockInfo.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2196,14 +2132,14 @@
             this.btnStockTABstockInfo.IconVisible = false;
             this.btnStockTABstockInfo.IconZoom = 90D;
             this.btnStockTABstockInfo.IsTab = false;
-            this.btnStockTABstockInfo.Location = new System.Drawing.Point(4, 320);
-            this.btnStockTABstockInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStockTABstockInfo.Location = new System.Drawing.Point(5, 442);
+            this.btnStockTABstockInfo.Margin = new System.Windows.Forms.Padding(5);
             this.btnStockTABstockInfo.Name = "btnStockTABstockInfo";
             this.btnStockTABstockInfo.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnStockTABstockInfo.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnStockTABstockInfo.OnHoverTextColor = System.Drawing.Color.White;
             this.btnStockTABstockInfo.selected = false;
-            this.btnStockTABstockInfo.Size = new System.Drawing.Size(301, 71);
+            this.btnStockTABstockInfo.Size = new System.Drawing.Size(403, 99);
             this.btnStockTABstockInfo.TabIndex = 6;
             this.btnStockTABstockInfo.Text = "History Stock Requests";
             this.btnStockTABstockInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2219,13 +2155,13 @@
             this.tableLayoutPanel34.Controls.Add(this.label7, 0, 0);
             this.tableLayoutPanel34.Controls.Add(this.panel14, 0, 1);
             this.tableLayoutPanel34.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel34.Location = new System.Drawing.Point(315, 2);
-            this.tableLayoutPanel34.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel34.Location = new System.Drawing.Point(422, 2);
+            this.tableLayoutPanel34.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel34.Name = "tableLayoutPanel34";
             this.tableLayoutPanel34.RowCount = 2;
             this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel34.Size = new System.Drawing.Size(1086, 528);
+            this.tableLayoutPanel34.Size = new System.Drawing.Size(1448, 732);
             this.tableLayoutPanel34.TabIndex = 1;
             // 
             // label7
@@ -2235,10 +2171,9 @@
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(2, 0);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(3, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(1082, 79);
+            this.label7.Size = new System.Drawing.Size(1442, 109);
             this.label7.TabIndex = 0;
             this.label7.Text = "Name of stock";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2248,10 +2183,10 @@
             this.panel14.BackColor = System.Drawing.Color.White;
             this.panel14.Controls.Add(this.tableLayoutPanel35);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel14.Location = new System.Drawing.Point(2, 81);
-            this.panel14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel14.Location = new System.Drawing.Point(3, 111);
+            this.panel14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(1082, 445);
+            this.panel14.Size = new System.Drawing.Size(1442, 619);
             this.panel14.TabIndex = 1;
             // 
             // tableLayoutPanel35
@@ -2261,12 +2196,12 @@
             this.tableLayoutPanel35.Controls.Add(this.panel15, 0, 0);
             this.tableLayoutPanel35.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel35.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel35.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel35.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel35.Name = "tableLayoutPanel35";
             this.tableLayoutPanel35.RowCount = 1;
             this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 449F));
-            this.tableLayoutPanel35.Size = new System.Drawing.Size(1082, 445);
+            this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 553F));
+            this.tableLayoutPanel35.Size = new System.Drawing.Size(1442, 619);
             this.tableLayoutPanel35.TabIndex = 0;
             // 
             // panel15
@@ -2275,10 +2210,10 @@
             this.panel15.Controls.Add(this.groupBox6);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel15.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel15.Location = new System.Drawing.Point(2, 2);
-            this.panel15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel15.Location = new System.Drawing.Point(3, 2);
+            this.panel15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(1078, 441);
+            this.panel15.Size = new System.Drawing.Size(1436, 615);
             this.panel15.TabIndex = 1;
             // 
             // groupBox4
@@ -2297,11 +2232,11 @@
             this.groupBox4.Controls.Add(this.label33);
             this.groupBox4.Controls.Add(this.label34);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.groupBox4.Location = new System.Drawing.Point(69, 176);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Location = new System.Drawing.Point(92, 217);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox4.Size = new System.Drawing.Size(919, 252);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Size = new System.Drawing.Size(1225, 310);
             this.groupBox4.TabIndex = 13;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Stock Details:";
@@ -2309,120 +2244,108 @@
             // lblAllStatus
             // 
             this.lblAllStatus.AutoSize = true;
-            this.lblAllStatus.Location = new System.Drawing.Point(673, 172);
-            this.lblAllStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAllStatus.Location = new System.Drawing.Point(897, 212);
             this.lblAllStatus.Name = "lblAllStatus";
-            this.lblAllStatus.Size = new System.Drawing.Size(38, 19);
+            this.lblAllStatus.Size = new System.Drawing.Size(47, 23);
             this.lblAllStatus.TabIndex = 14;
             this.lblAllStatus.Text = "Info";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(562, 172);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Location = new System.Drawing.Point(749, 212);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(57, 19);
+            this.label20.Size = new System.Drawing.Size(70, 23);
             this.label20.TabIndex = 13;
             this.label20.Text = "Status:";
             // 
             // lblAllStockQuantity
             // 
             this.lblAllStockQuantity.AutoSize = true;
-            this.lblAllStockQuantity.Location = new System.Drawing.Point(131, 172);
-            this.lblAllStockQuantity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAllStockQuantity.Location = new System.Drawing.Point(175, 212);
             this.lblAllStockQuantity.Name = "lblAllStockQuantity";
-            this.lblAllStockQuantity.Size = new System.Drawing.Size(38, 19);
+            this.lblAllStockQuantity.Size = new System.Drawing.Size(47, 23);
             this.lblAllStockQuantity.TabIndex = 12;
             this.lblAllStockQuantity.Text = "Info";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(22, 172);
-            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label26.Location = new System.Drawing.Point(29, 212);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(74, 19);
+            this.label26.Size = new System.Drawing.Size(92, 23);
             this.label26.TabIndex = 11;
             this.label26.Text = "Quantity:";
             // 
             // lblAllStockDepartment
             // 
             this.lblAllStockDepartment.AutoSize = true;
-            this.lblAllStockDepartment.Location = new System.Drawing.Point(131, 107);
-            this.lblAllStockDepartment.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAllStockDepartment.Location = new System.Drawing.Point(175, 132);
             this.lblAllStockDepartment.Name = "lblAllStockDepartment";
-            this.lblAllStockDepartment.Size = new System.Drawing.Size(38, 19);
+            this.lblAllStockDepartment.Size = new System.Drawing.Size(47, 23);
             this.lblAllStockDepartment.TabIndex = 10;
             this.lblAllStockDepartment.Text = "Info";
             // 
             // lblAllStockDeliverDate
             // 
             this.lblAllStockDeliverDate.AutoSize = true;
-            this.lblAllStockDeliverDate.Location = new System.Drawing.Point(673, 107);
-            this.lblAllStockDeliverDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAllStockDeliverDate.Location = new System.Drawing.Point(897, 132);
             this.lblAllStockDeliverDate.Name = "lblAllStockDeliverDate";
-            this.lblAllStockDeliverDate.Size = new System.Drawing.Size(38, 19);
+            this.lblAllStockDeliverDate.Size = new System.Drawing.Size(47, 23);
             this.lblAllStockDeliverDate.TabIndex = 9;
             this.lblAllStockDeliverDate.Text = "Info";
             // 
             // lblAllStockOrderDate
             // 
             this.lblAllStockOrderDate.AutoSize = true;
-            this.lblAllStockOrderDate.Location = new System.Drawing.Point(671, 46);
-            this.lblAllStockOrderDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAllStockOrderDate.Location = new System.Drawing.Point(895, 57);
             this.lblAllStockOrderDate.Name = "lblAllStockOrderDate";
-            this.lblAllStockOrderDate.Size = new System.Drawing.Size(38, 19);
+            this.lblAllStockOrderDate.Size = new System.Drawing.Size(47, 23);
             this.lblAllStockOrderDate.TabIndex = 7;
             this.lblAllStockOrderDate.Text = "Info";
             // 
             // lblAllStockType
             // 
             this.lblAllStockType.AutoSize = true;
-            this.lblAllStockType.Location = new System.Drawing.Point(130, 46);
-            this.lblAllStockType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAllStockType.Location = new System.Drawing.Point(173, 57);
             this.lblAllStockType.Name = "lblAllStockType";
-            this.lblAllStockType.Size = new System.Drawing.Size(38, 19);
+            this.lblAllStockType.Size = new System.Drawing.Size(47, 23);
             this.lblAllStockType.TabIndex = 8;
             this.lblAllStockType.Text = "Info";
             // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(20, 46);
-            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label31.Location = new System.Drawing.Point(27, 57);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(89, 19);
+            this.label31.Size = new System.Drawing.Size(113, 23);
             this.label31.TabIndex = 2;
             this.label31.Text = "Stock Type:";
             // 
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(22, 107);
-            this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label32.Location = new System.Drawing.Point(29, 132);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(98, 19);
+            this.label32.Size = new System.Drawing.Size(122, 23);
             this.label32.TabIndex = 3;
             this.label32.Text = "Department:";
             // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(560, 46);
-            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label33.Location = new System.Drawing.Point(747, 57);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(90, 19);
+            this.label33.Size = new System.Drawing.Size(113, 23);
             this.label33.TabIndex = 6;
             this.label33.Text = "Order Date:";
             // 
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(562, 107);
-            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label34.Location = new System.Drawing.Point(749, 132);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(99, 19);
+            this.label34.Size = new System.Drawing.Size(123, 23);
             this.label34.TabIndex = 7;
             this.label34.Text = "Deliver Date:";
             // 
@@ -2434,11 +2357,11 @@
             this.groupBox6.Controls.Add(this.label39);
             this.groupBox6.Controls.Add(this.label40);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.groupBox6.Location = new System.Drawing.Point(69, 17);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Location = new System.Drawing.Point(92, 21);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox6.Size = new System.Drawing.Size(919, 135);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox6.Size = new System.Drawing.Size(1225, 166);
             this.groupBox6.TabIndex = 11;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Stock Info:";
@@ -2446,40 +2369,36 @@
             // lblAllStockName
             // 
             this.lblAllStockName.AutoSize = true;
-            this.lblAllStockName.Location = new System.Drawing.Point(681, 63);
-            this.lblAllStockName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAllStockName.Location = new System.Drawing.Point(908, 78);
             this.lblAllStockName.Name = "lblAllStockName";
-            this.lblAllStockName.Size = new System.Drawing.Size(38, 19);
+            this.lblAllStockName.Size = new System.Drawing.Size(47, 23);
             this.lblAllStockName.TabIndex = 6;
             this.lblAllStockName.Text = "Info";
             // 
             // lblAllStockID
             // 
             this.lblAllStockID.AutoSize = true;
-            this.lblAllStockID.Location = new System.Drawing.Point(109, 63);
-            this.lblAllStockID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAllStockID.Location = new System.Drawing.Point(145, 78);
             this.lblAllStockID.Name = "lblAllStockID";
-            this.lblAllStockID.Size = new System.Drawing.Size(38, 19);
+            this.lblAllStockID.Size = new System.Drawing.Size(47, 23);
             this.lblAllStockID.TabIndex = 5;
             this.lblAllStockID.Text = "Info";
             // 
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(22, 63);
-            this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label39.Location = new System.Drawing.Point(29, 78);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(71, 19);
+            this.label39.Size = new System.Drawing.Size(90, 23);
             this.label39.TabIndex = 0;
             this.label39.Text = "Stock ID:";
             // 
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(560, 66);
-            this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label40.Location = new System.Drawing.Point(747, 81);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(97, 19);
+            this.label40.Size = new System.Drawing.Size(122, 23);
             this.label40.TabIndex = 4;
             this.label40.Text = "Stock Name:";
             // 
@@ -2556,16 +2475,16 @@
             // 
             this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            chartArea13.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea13);
-            legend13.Name = "Legend1";
-            this.chart1.Legends.Add(legend13);
+            chartArea7.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend1";
+            this.chart1.Legends.Add(legend7);
             this.chart1.Location = new System.Drawing.Point(69, 57);
             this.chart1.Name = "chart1";
-            series13.ChartArea = "ChartArea1";
-            series13.Legend = "Legend1";
-            series13.Name = "Series1";
-            this.chart1.Series.Add(series13);
+            series7.ChartArea = "ChartArea1";
+            series7.Legend = "Legend1";
+            series7.Name = "Series1";
+            this.chart1.Series.Add(series7);
             this.chart1.Size = new System.Drawing.Size(300, 241);
             this.chart1.TabIndex = 0;
             // 
@@ -2573,16 +2492,16 @@
             // 
             this.chart2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea14.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea14);
-            legend14.Name = "Legend1";
-            this.chart2.Legends.Add(legend14);
+            chartArea8.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            this.chart2.Legends.Add(legend8);
             this.chart2.Location = new System.Drawing.Point(387, 57);
             this.chart2.Name = "chart2";
-            series14.ChartArea = "ChartArea1";
-            series14.Legend = "Legend1";
-            series14.Name = "Series1";
-            this.chart2.Series.Add(series14);
+            series8.ChartArea = "ChartArea1";
+            series8.Legend = "Legend1";
+            series8.Name = "Series1";
+            this.chart2.Series.Add(series8);
             this.chart2.Size = new System.Drawing.Size(300, 241);
             this.chart2.TabIndex = 1;
             // 
@@ -2625,7 +2544,7 @@
             this.bunifuFlatButton15.IconZoom = 90D;
             this.bunifuFlatButton15.IsTab = false;
             this.bunifuFlatButton15.Location = new System.Drawing.Point(510, 4);
-            this.bunifuFlatButton15.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton15.Name = "bunifuFlatButton15";
             this.bunifuFlatButton15.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton15.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -2660,7 +2579,7 @@
             this.bunifuFlatButton14.IconZoom = 90D;
             this.bunifuFlatButton14.IsTab = false;
             this.bunifuFlatButton14.Location = new System.Drawing.Point(257, 4);
-            this.bunifuFlatButton14.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton14.Name = "bunifuFlatButton14";
             this.bunifuFlatButton14.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton14.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -2695,7 +2614,7 @@
             this.bunifuFlatButton13.IconZoom = 90D;
             this.bunifuFlatButton13.IsTab = false;
             this.bunifuFlatButton13.Location = new System.Drawing.Point(4, 4);
-            this.bunifuFlatButton13.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton13.Name = "bunifuFlatButton13";
             this.bunifuFlatButton13.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton13.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -2762,7 +2681,7 @@
             this.bunifuFlatButton46.IconZoom = 90D;
             this.bunifuFlatButton46.IsTab = false;
             this.bunifuFlatButton46.Location = new System.Drawing.Point(4, 223);
-            this.bunifuFlatButton46.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton46.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton46.Name = "bunifuFlatButton46";
             this.bunifuFlatButton46.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton46.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -2809,7 +2728,7 @@
             this.bunifuFlatButton45.IconZoom = 90D;
             this.bunifuFlatButton45.IsTab = false;
             this.bunifuFlatButton45.Location = new System.Drawing.Point(4, 150);
-            this.bunifuFlatButton45.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton45.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton45.Name = "bunifuFlatButton45";
             this.bunifuFlatButton45.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton45.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -2885,16 +2804,16 @@
             // 
             this.chart5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            chartArea15.Name = "ChartArea1";
-            this.chart5.ChartAreas.Add(chartArea15);
-            legend15.Name = "Legend1";
-            this.chart5.Legends.Add(legend15);
+            chartArea9.Name = "ChartArea1";
+            this.chart5.ChartAreas.Add(chartArea9);
+            legend9.Name = "Legend1";
+            this.chart5.Legends.Add(legend9);
             this.chart5.Location = new System.Drawing.Point(86, 53);
             this.chart5.Name = "chart5";
-            series15.ChartArea = "ChartArea1";
-            series15.Legend = "Legend1";
-            series15.Name = "Series1";
-            this.chart5.Series.Add(series15);
+            series9.ChartArea = "ChartArea1";
+            series9.Legend = "Legend1";
+            series9.Name = "Series1";
+            this.chart5.Series.Add(series9);
             this.chart5.Size = new System.Drawing.Size(300, 300);
             this.chart5.TabIndex = 1;
             // 
@@ -2902,16 +2821,16 @@
             // 
             this.chart6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea16.Name = "ChartArea1";
-            this.chart6.ChartAreas.Add(chartArea16);
-            legend16.Name = "Legend1";
-            this.chart6.Legends.Add(legend16);
+            chartArea10.Name = "ChartArea1";
+            this.chart6.ChartAreas.Add(chartArea10);
+            legend10.Name = "Legend1";
+            this.chart6.Legends.Add(legend10);
             this.chart6.Location = new System.Drawing.Point(489, 53);
             this.chart6.Name = "chart6";
-            series16.ChartArea = "ChartArea1";
-            series16.Legend = "Legend1";
-            series16.Name = "Series1";
-            this.chart6.Series.Add(series16);
+            series10.ChartArea = "ChartArea1";
+            series10.Legend = "Legend1";
+            series10.Name = "Series1";
+            this.chart6.Series.Add(series10);
             this.chart6.Size = new System.Drawing.Size(300, 300);
             this.chart6.TabIndex = 2;
             // 
@@ -2954,7 +2873,7 @@
             this.bunifuFlatButton11.IconZoom = 90D;
             this.bunifuFlatButton11.IsTab = false;
             this.bunifuFlatButton11.Location = new System.Drawing.Point(510, 4);
-            this.bunifuFlatButton11.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton11.Name = "bunifuFlatButton11";
             this.bunifuFlatButton11.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton11.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -2989,7 +2908,7 @@
             this.bunifuFlatButton10.IconZoom = 90D;
             this.bunifuFlatButton10.IsTab = false;
             this.bunifuFlatButton10.Location = new System.Drawing.Point(257, 4);
-            this.bunifuFlatButton10.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton10.Name = "bunifuFlatButton10";
             this.bunifuFlatButton10.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton10.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -3024,7 +2943,7 @@
             this.bunifuFlatButton8.IconZoom = 90D;
             this.bunifuFlatButton8.IsTab = false;
             this.bunifuFlatButton8.Location = new System.Drawing.Point(4, 4);
-            this.bunifuFlatButton8.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton8.Name = "bunifuFlatButton8";
             this.bunifuFlatButton8.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton8.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -3091,7 +3010,7 @@
             this.bunifuFlatButton7.IconZoom = 90D;
             this.bunifuFlatButton7.IsTab = false;
             this.bunifuFlatButton7.Location = new System.Drawing.Point(4, 223);
-            this.bunifuFlatButton7.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton7.Name = "bunifuFlatButton7";
             this.bunifuFlatButton7.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton7.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -3138,7 +3057,7 @@
             this.bunifuFlatButton6.IconZoom = 90D;
             this.bunifuFlatButton6.IsTab = false;
             this.bunifuFlatButton6.Location = new System.Drawing.Point(4, 150);
-            this.bunifuFlatButton6.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton6.Name = "bunifuFlatButton6";
             this.bunifuFlatButton6.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton6.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -3214,16 +3133,16 @@
             // 
             this.chart3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            chartArea17.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea17);
-            legend17.Name = "Legend1";
-            this.chart3.Legends.Add(legend17);
+            chartArea11.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea11);
+            legend11.Name = "Legend1";
+            this.chart3.Legends.Add(legend11);
             this.chart3.Location = new System.Drawing.Point(101, 56);
             this.chart3.Name = "chart3";
-            series17.ChartArea = "ChartArea1";
-            series17.Legend = "Legend1";
-            series17.Name = "Series1";
-            this.chart3.Series.Add(series17);
+            series11.ChartArea = "ChartArea1";
+            series11.Legend = "Legend1";
+            series11.Name = "Series1";
+            this.chart3.Series.Add(series11);
             this.chart3.Size = new System.Drawing.Size(300, 300);
             this.chart3.TabIndex = 1;
             // 
@@ -3231,16 +3150,16 @@
             // 
             this.chart4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea18.Name = "ChartArea1";
-            this.chart4.ChartAreas.Add(chartArea18);
-            legend18.Name = "Legend1";
-            this.chart4.Legends.Add(legend18);
+            chartArea12.Name = "ChartArea1";
+            this.chart4.ChartAreas.Add(chartArea12);
+            legend12.Name = "Legend1";
+            this.chart4.Legends.Add(legend12);
             this.chart4.Location = new System.Drawing.Point(489, 56);
             this.chart4.Name = "chart4";
-            series18.ChartArea = "ChartArea1";
-            series18.Legend = "Legend1";
-            series18.Name = "Series1";
-            this.chart4.Series.Add(series18);
+            series12.ChartArea = "ChartArea1";
+            series12.Legend = "Legend1";
+            series12.Name = "Series1";
+            this.chart4.Series.Add(series12);
             this.chart4.Size = new System.Drawing.Size(300, 300);
             this.chart4.TabIndex = 2;
             // 
@@ -3283,7 +3202,7 @@
             this.bunifuFlatButton5.IconZoom = 90D;
             this.bunifuFlatButton5.IsTab = false;
             this.bunifuFlatButton5.Location = new System.Drawing.Point(510, 4);
-            this.bunifuFlatButton5.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton5.Name = "bunifuFlatButton5";
             this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton5.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -3318,7 +3237,7 @@
             this.bunifuFlatButton4.IconZoom = 90D;
             this.bunifuFlatButton4.IsTab = false;
             this.bunifuFlatButton4.Location = new System.Drawing.Point(257, 4);
-            this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton4.Name = "bunifuFlatButton4";
             this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -3353,7 +3272,7 @@
             this.bunifuFlatButton3.IconZoom = 90D;
             this.bunifuFlatButton3.IsTab = false;
             this.bunifuFlatButton3.Location = new System.Drawing.Point(4, 4);
-            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -3420,7 +3339,7 @@
             this.bunifuFlatButton2.IconZoom = 90D;
             this.bunifuFlatButton2.IsTab = false;
             this.bunifuFlatButton2.Location = new System.Drawing.Point(4, 223);
-            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -3467,7 +3386,7 @@
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
             this.bunifuFlatButton1.Location = new System.Drawing.Point(4, 150);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -3485,13 +3404,22 @@
             this.timerChangeMenuColor.Interval = 10;
             this.timerChangeMenuColor.Tick += new System.EventHandler(this.timerChangeMenuColor_Tick);
             // 
+            // cmbBrand
+            // 
+            this.cmbBrand.FormattingEnabled = true;
+            this.cmbBrand.Location = new System.Drawing.Point(363, 111);
+            this.cmbBrand.Name = "cmbBrand";
+            this.cmbBrand.Size = new System.Drawing.Size(390, 30);
+            this.cmbBrand.TabIndex = 12;
+            // 
             // MainDepot
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1415, 562);
+            this.ClientSize = new System.Drawing.Size(1791, 769);
             this.Controls.Add(this.tabControl1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainDepot";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainDepot";
@@ -3518,6 +3446,8 @@
             this.panel8.ResumeLayout(false);
             this.tableLayoutPanel19.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
             this.tabIncomingStockDetails.ResumeLayout(false);
             this.tableLayoutPanel20.ResumeLayout(false);
             this.tableLayoutPanel21.ResumeLayout(false);
@@ -3529,10 +3459,6 @@
             this.panel11.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.tabStock.ResumeLayout(false);
             this.tableLayoutPanel24.ResumeLayout(false);
             this.tableLayoutPanel25.ResumeLayout(false);
@@ -3646,7 +3572,6 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel19;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.CheckedListBox clbIncomingStock;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel20;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel21;
         private Bunifu.Framework.UI.BunifuFlatButton btnMakeReqTABincomingStockDet;
@@ -3682,7 +3607,6 @@
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel35;
         private System.Windows.Forms.Panel panel15;
-        private Bunifu.Framework.UI.BunifuFlatButton btnCheckIncomingStock;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cmbType;
         private Bunifu.Framework.UI.BunifuFlatButton btnMakeRequest;
@@ -3705,26 +3629,14 @@
         private System.Windows.Forms.DateTimePicker dtpDateDeliver;
         private System.Windows.Forms.ComboBox cmbDepartment;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label lblDepartment;
-        private System.Windows.Forms.Label lblDeliverDate;
-        private System.Windows.Forms.Label lblOrderDate;
-        private System.Windows.Forms.Label lblSType;
+        private System.Windows.Forms.Label lblProductCategory;
+        private System.Windows.Forms.Label lblProductBrand;
+        private System.Windows.Forms.Label lblProductName;
+        private System.Windows.Forms.Label lblProductID;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label lblEID;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lblSName;
-        private System.Windows.Forms.Label lblSID;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label lblQuantity;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label lblStatus;
-        private System.Windows.Forms.Label label25;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label lblAllStockQuantity;
         private System.Windows.Forms.Label label26;
@@ -3747,5 +3659,12 @@
         private System.Windows.Forms.ListBox lbxRejectedRequests;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label10;
+        private Bunifu.Framework.UI.BunifuFlatButton btnCheckIncomingStock;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Label label27;
+        private Bunifu.Framework.UI.BunifuFlatButton btnViewProductsDetails;
+        private System.Windows.Forms.CheckedListBox clbProducts;
+        private Bunifu.Framework.UI.BunifuFlatButton btnSearchForProduct;
+        private System.Windows.Forms.ComboBox cmbBrand;
     }
 }
