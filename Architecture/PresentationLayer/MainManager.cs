@@ -150,7 +150,7 @@ namespace Media_Bazaar
                 }
                 else
                 {
-                    UpdateList(managerManagment.GetNotFiredEmployeesByID(Convert.ToInt32(this.tbxSearchID.Text));
+                    UpdateList(managerManagment.GetNotFiredEmployeesByID(Convert.ToInt32(this.tbxSearchID.Text)));
                     UpdateInfoByID(Convert.ToInt32(this.tbxSearchID.Text));
                     checkLbProfile.Visible = true;
                     btnViewProfile.Visible = true;

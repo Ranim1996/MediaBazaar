@@ -33,3 +33,19 @@ E:\Semester2Project\a-software-solution-for-media-bazaar\Architecture\bin\Debug\
 E:\Semester2Project\a-software-solution-for-media-bazaar\Architecture\obj\Debug\Media Bazaar.csproj.CopyComplete
 E:\Semester2Project\a-software-solution-for-media-bazaar\Architecture\obj\Debug\Media Bazaar.exe
 E:\Semester2Project\a-software-solution-for-media-bazaar\Architecture\obj\Debug\Media Bazaar.pdb
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Architecture\obj\Debug\Media Bazaar.exe
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Architecture\obj\Debug\Media Bazaar.pdb
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Architecture\bin\Debug\Media Bazaar.exe.config
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Architecture\bin\Debug\Media Bazaar.exe
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Architecture\bin\Debug\Media Bazaar.pdb
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Architecture\bin\Debug\Dapper.dll
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Architecture\bin\Debug\MySql.Data.dll
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Architecture\bin\Debug\MySql.Web.dll
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Architecture\bin\Debug\Google.Protobuf.dll
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Architecture\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Architecture\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Architecture\bin\Debug\Renci.SshNet.dll
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Architecture\bin\Debug\Dapper.xml
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Architecture\bin\Debug\MySql.Data.xml
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Architecture\bin\Debug\MySql.Web.xml
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Architecture\obj\Debug\Media Bazaar.csproj.CopyComplete

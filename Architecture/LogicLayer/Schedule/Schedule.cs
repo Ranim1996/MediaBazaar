@@ -16,7 +16,7 @@ namespace Media_Bazaar
         public String Shift { get; private set; }
         public String Attendance { get; private set; }
         public int ShiftId { get; private set; }
-        public List<Schedule> allSchedules { get; private set; }
+        public List<ISchedule> allSchedules { get; private set; }
         public string Status { get; private set; }
 
         //methods
@@ -32,7 +32,7 @@ namespace Media_Bazaar
             catch
             {
                 MessageBox.Show("Connection to the server wasn't possible!");
-                allSchedules = new List<Schedule>();
+                allSchedules = new List<ISchedule>();
             }
 
 

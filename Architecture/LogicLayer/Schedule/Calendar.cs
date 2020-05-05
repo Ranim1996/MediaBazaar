@@ -47,24 +47,24 @@ namespace Media_Bazaar
 
         // -- methods --
         //used in the buttons
-        public void PrevMonth(List<Schedule> list, Label lb)
+        public void PrevMonth(List<ISchedule> list, Label lb)
         {
             currentDate = currentDate.AddMonths(-1);
             DisplayCurrentDate(list, lb);
             //date = currentDate;
         }
-        public void NextMonth(List<Schedule> list, Label lb)
+        public void NextMonth(List<ISchedule> list, Label lb)
         {
             currentDate = currentDate.AddMonths(1);
             DisplayCurrentDate(list, lb);
             //date = currentDate;
         }
-        public void Today(List<Schedule> list, Label lb)
+        public void Today(List<ISchedule> list, Label lb)
         {
             currentDate = DateTime.Today;
             DisplayCurrentDate(list, lb);
         }
-        public void DisplayCurrentDate(List<Schedule> list, Label lb)
+        public void DisplayCurrentDate(List<ISchedule> list, Label lb)
         { 
             lb.Text = currentDate.ToString("MMMM, yyyy");
             int firstDayAtFlNumber = GetFirstDayOfWeekOfCurrentDate();
@@ -99,7 +99,7 @@ namespace Media_Bazaar
         List<Schedule> listForTheDay = new List<Schedule>();
 
         // -- modified part
-        public void AddLabelDayToFlDay(int startDayAtFlNumber, int totalDaysInMonth, List<Schedule> schedules)
+        public void AddLabelDayToFlDay(int startDayAtFlNumber, int totalDaysInMonth, List<ISchedule> schedules)
         {
             string[] date = currentDate.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture).Split('/');
 

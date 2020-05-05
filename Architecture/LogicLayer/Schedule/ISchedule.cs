@@ -4,7 +4,6 @@ namespace Media_Bazaar
 {
     public interface ISchedule
     {
-        List<Schedule> allSchedules { get; }
         string Attendance { get; }
         string Date { get; }
         int EmployeeId { get; }

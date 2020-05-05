@@ -1,0 +1,25 @@
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Media Bazaar\bin\Debug\Media Bazaar.exe.config
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Media Bazaar\bin\Debug\Media Bazaar.exe
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Media Bazaar\bin\Debug\Media Bazaar.pdb
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Media Bazaar\bin\Debug\Dapper.dll
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Media Bazaar\bin\Debug\MySql.Data.dll
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Media Bazaar\bin\Debug\MySql.Web.dll
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Media Bazaar\bin\Debug\Google.Protobuf.dll
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Media Bazaar\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Media Bazaar\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Media Bazaar\bin\Debug\Renci.SshNet.dll
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Media Bazaar\bin\Debug\Dapper.xml
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Media Bazaar\bin\Debug\MySql.Data.xml
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Media Bazaar\bin\Debug\MySql.Web.xml
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Media Bazaar\obj\Debug\Media Bazaar.csprojAssemblyReference.cache
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Media Bazaar\obj\Debug\Media_Bazaar.AssignShift.resources
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Media Bazaar\obj\Debug\Media_Bazaar.Login.resources
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Media Bazaar\obj\Debug\Media_Bazaar.MainAdmin.resources
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Media Bazaar\obj\Debug\Media_Bazaar.MainDepot.resources
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Media Bazaar\obj\Debug\Media_Bazaar.MainManager.resources
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Media Bazaar\obj\Debug\Media_Bazaar.Properties.Resources.resources
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Media Bazaar\obj\Debug\Media Bazaar.csproj.GenerateResource.cache
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Media Bazaar\obj\Debug\Media Bazaar.csproj.CoreCompileInputs.cache
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Media Bazaar\obj\Debug\Media Bazaar.csproj.CopyComplete
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Media Bazaar\obj\Debug\Media Bazaar.exe
+C:\Users\Razvan\a-software-solution-for-media-bazaar\Media Bazaar\obj\Debug\Media Bazaar.pdb

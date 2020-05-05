@@ -442,7 +442,7 @@ namespace Media_Bazaar
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                connection.Execute($"DELETE FROM email WHERE EmailID = '{id}';");
+                connection.Execute($"DELETE FROM email WHERE EmailID='{id}';");
             }
         }
 
@@ -452,7 +452,7 @@ namespace Media_Bazaar
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<IEmployeeModel>($"SELECT Username, Password FROM Employee WHERE Username = '{username}' AND Password = '{password}' AND Position='ADMINISTRATOR';").ToList();
+                var output = connection.Query<IEmployeeModel>($"SELECT Username, Password FROM employee WHERE Username='{username}' AND Password='{password}' AND Position='ADMINISTRATOR';").ToList();
                 return output;
             }
         }
@@ -461,7 +461,7 @@ namespace Media_Bazaar
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<IEmployeeModel>($"SELECT Username, Password FROM Employee WHERE Username = '{username}' AND Password = '{password}' AND Position='MANAGER';").ToList();
+                var output = connection.Query<IEmployeeModel>($"SELECT Username, Password FROM Employee WHERE Username='{username}' AND Password='{password}' AND Position='MANAGER';").ToList();
                 return output;
             }
         }
@@ -470,7 +470,7 @@ namespace Media_Bazaar
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<IEmployeeModel>($"SELECT Username, Password FROM Employee WHERE Username = '{username}' AND Password = '{password}' AND Position='DEPOT';").ToList();
+                var output = connection.Query<IEmployeeModel>($"SELECT Username, Password FROM Employee WHERE Username='{username}' AND Password='{password}' AND Position='DEPOT';").ToList();
                 return output;
             }
         }

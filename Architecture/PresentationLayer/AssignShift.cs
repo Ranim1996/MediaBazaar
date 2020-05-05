@@ -13,21 +13,24 @@ namespace Media_Bazaar
 {
     public partial class AssignShift : Form
     {
-        DataAccess db;
-        Schedule schedule = new Schedule();
-        List<Schedule> dbSchedules = null;
+        //DataAccess db;
+        //Schedule schedule = new Schedule();
+        //List<ISchedule> dbSchedules = null;
         DateTime shiftDate;
+        AssignShiftManagment assignManager;
 
         public AssignShift(DateTime date, MainAdmin main)
         {
             InitializeComponent();
             shiftDate = date;
-            db = new DataAccess();
+            //db = new DataAccess();
        
             tbDate.Text = $"{date.Day}/{date.Month}/{date.Year}, {date.DayOfWeek}";
             this.Text = $"Assign shift on date: {tbDate.Text}";
 
-            if (date.DayOfWeek == DayOfWeek.Sunday)
+            assignManager.ShowComboBox(date, cmbBxWorkShiftWeekDay, cmbBxWorkShiftSaturday, cmbBxWorkShiftSunday);
+
+            /*if (date.DayOfWeek == DayOfWeek.Sunday)
             {
                 cmbBxWorkShiftSunday.Visible = true;
                 cmbBxWorkShiftSaturday.Visible = false;
@@ -47,7 +50,7 @@ namespace Media_Bazaar
                     cmbBxWorkShiftSaturday.Visible = false;
                     cmbBxWorkShiftSunday.Visible = false;
                 }
-            }
+            }*/
         }
         private void AssignShift_Load(object sender, EventArgs e)
         {
@@ -57,6 +60,8 @@ namespace Media_Bazaar
         }
         private void UpdateList()
         {
+            assignManager.UpdateList(lbShifts, shiftDate, "Assigned");
+            /*
             lbShifts.Items.Clear();
             schedule.GetAllSchedules();
             dbSchedules = schedule.allSchedules;
@@ -74,10 +79,13 @@ namespace Media_Bazaar
                         lbShifts.Items.Add($"{firstNameOfEmployee} - ID({sch.EmployeeId}):{sch.Shift}");
                     }
                 }         
-            }
+            } */
         }
         private void UpdatePreferencesList()
         {
+            assignManager.UpdateList(lbShiftPreferences, shiftDate, "Selected");
+
+            /*
             lbShiftPreferences.Items.Clear();
             schedule.GetAllSchedules();
             dbSchedules = schedule.allSchedules;
@@ -95,7 +103,30 @@ namespace Media_Bazaar
                         lbShiftPreferences.Items.Add($"{firstNameOfEmployee} - ID({sch.EmployeeId}):{sch.Shift}");
                     }
                 }
-            }
+            } */
+        }
+        private void UpdateAbsenceList()
+        {
+            assignManager.UpdateList(lbxAbsenceRecods, shiftDate, "Cancelled");
+            /*
+            this.lbxAbsenceRecods.Items.Clear();
+            schedule.GetAllSchedules();
+            dbSchedules = schedule.allSchedules;
+            foreach (Schedule sch in dbSchedules)
+            {
+                string firstNameOfEmployee = db.GetFirstNameOfEmployeeById(sch.EmployeeId);
+                if (sch.Date == shiftDate.ToString("dd/MM/yyyy") && sch.Status == "Cancelled")
+                {
+                    if (sch.Attendance != null)
+                    {
+                        this.lbxAbsenceRecods.Items.Add($"{firstNameOfEmployee} - ID({sch.EmployeeId}):{sch.Shift} -> {sch.Attendance}");
+                    }
+                    else
+                    {
+                        this.lbxAbsenceRecods.Items.Add($"{firstNameOfEmployee} - ID({sch.EmployeeId}):{sch.Shift}");
+                    }
+                }
+            } */
         }
         private void btnAssignWorkShift_Click(object sender, EventArgs e)
         {
@@ -148,7 +179,17 @@ namespace Media_Bazaar
             }
             if (employeeId != -1 && date != "" && shift != "")
             {
-                db = new DataAccess();
+                
+                if(assignManager.AssignWorkShift(employeeId, date, shift) == false)
+                {
+                    MessageBox.Show("No employee found with the specified ID. He may be fired.");
+                }
+                else
+                {
+                    UpdateList();
+                }
+                
+                /*db = new DataAccess();
                 List<IEmployeeModel> empl = db.GetDBNotFiredEmployeeByID(employeeId);
                 if (empl.Count != 0)
                 {
@@ -159,14 +200,15 @@ namespace Media_Bazaar
                 else
                 {
                     MessageBox.Show("No employee found with the specified ID. He may be fired.");
-                }
-
+                }*/
             }
         }
 
         private void AddAttendance(string attendance)
         {
-            string holder = "";
+            assignManager.AddAttendance(attendance, shiftDate, lbShifts);
+            UpdateList();
+            /*string holder = "";
             string date = shiftDate.ToString("dd/MM/yyyy");
             db = new DataAccess();
             schedule = new Schedule();
@@ -184,7 +226,7 @@ namespace Media_Bazaar
                         break;
                     }
                 }
-            }
+            }*/
         }
         private void btnPresent_Click(object sender, EventArgs e)
         {
@@ -206,10 +248,14 @@ namespace Media_Bazaar
 
         private void lbItem_DoubleClick(object sender, EventArgs e)
         {
+            if (assignManager.DeleteAttendance(lbShifts, shiftDate) == true)
+            {
+                UpdateList();
+            }
+            /*
             string holder = "";
             string status = "Assigned";
             string date = shiftDate.ToString("dd/MM/yyyy");
-
             //schedule.GetAllSchedules();
             //dbSchedules = schedule.allSchedules;
 
@@ -234,11 +280,18 @@ namespace Media_Bazaar
                         break;
                     }
                 }
-            }
+            } */
+
         }
 
         private void lbShiftPreferences_DoubleClick(object sender, EventArgs e)
         {
+
+            if(assignManager.DeleteAttendance(lbShiftPreferences, shiftDate) == true)
+            {
+                UpdatePreferencesList();
+            }
+            /*
             string holder = "";
             string status = "Selected";
             string date = shiftDate.ToString("dd/MM/yyyy");
@@ -267,11 +320,17 @@ namespace Media_Bazaar
                         break;
                     }
                 }
-            }
+            } */
         }
 
         private void btnAssignSelectedShift_Click(object sender, EventArgs e)
         {
+            if(assignManager.AssignSelectedShift(lbShiftPreferences, shiftDate) == true)
+            {
+                UpdatePreferencesList();
+                UpdateList();
+            }
+            /*
             string holder = "";
             string date = shiftDate.ToString("dd/MM/yyyy");
 
@@ -297,29 +356,9 @@ namespace Media_Bazaar
                         break;
                     }
                 }
-            }
+            } */
         }
 
-        private void UpdateAbsenceList()
-        {
-            this.lbxAbsenceRecods.Items.Clear();
-            schedule.GetAllSchedules();
-            dbSchedules = schedule.allSchedules;
-            foreach (Schedule sch in dbSchedules)
-            {
-                string firstNameOfEmployee = db.GetFirstNameOfEmployeeById(sch.EmployeeId);
-                if (sch.Date == shiftDate.ToString("dd/MM/yyyy") && sch.Status == "Cancelled")
-                {
-                    if (sch.Attendance != null)
-                    {
-                        this.lbxAbsenceRecods.Items.Add($"{firstNameOfEmployee} - ID({sch.EmployeeId}):{sch.Shift} -> {sch.Attendance}");
-                    }
-                    else
-                    {
-                        this.lbxAbsenceRecods.Items.Add($"{firstNameOfEmployee} - ID({sch.EmployeeId}):{sch.Shift}");
-                    }
-                }
-            }
-        }
+        
     }
 }

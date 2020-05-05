@@ -21,21 +21,21 @@ namespace Media_Bazaar
         List<int> employeesID = new List<int>();
         List<int> restockID = new List<int>();
 
-        Calendar calendar = new Calendar();
-        Schedule schedule;
+        //Calendar calendar = new Calendar();
+        //Schedule schedule;
 
         public MainAdmin()
         {
             InitializeComponent();
             this.flDays.Click += new EventHandler(this.Flow_Click);
-            schedule = new Schedule();
+            //schedule = new Schedule();
 
             //change this if it s going to be laggy
         }
 
         private void MainAdmin_Load(object sender, EventArgs e)
         {
-            calendar = new Calendar();
+            //calendar = new Calendar();
             //GUI load
             tabControl1.Appearance = TabAppearance.FlatButtons;
             tabControl1.ItemSize = new Size(0, 1);
@@ -46,10 +46,12 @@ namespace Media_Bazaar
 
             // --- Schedule Tab ---  
 
+            adminManagment.CreateCalendar(flDays, lblMonthAndYear);
+            /*
             schedule.GetAllSchedules();
             calendar.GenerateDayPanel(42, flDays);
             calendar.DisplayCurrentDate(schedule.allSchedules, lblMonthAndYear);
-
+            */
             UpdateEmployeeInfo();
             UpdateDepartamentInfo();
             UpdateRestockInfo();
@@ -155,17 +157,20 @@ namespace Media_Bazaar
         // ----- SCHEDULE Tab ---
         private void btnPrevMonth_Click_1(object sender, EventArgs e)
         {
-            calendar.PrevMonth(schedule.allSchedules, lblMonthAndYear);
+            //calendar.PrevMonth(schedule.allSchedules, lblMonthAndYear);
+            adminManagment.CalendarPreviousMonth(lblMonthAndYear);
         }
 
         private void btnToday_Click_1(object sender, EventArgs e)
         {
-            calendar.Today(schedule.allSchedules, lblMonthAndYear);
+            //calendar.Today(schedule.allSchedules, lblMonthAndYear);
+            adminManagment.CalendarToday(lblMonthAndYear);
         }
 
         private void btnNextMonth_Click_1(object sender, EventArgs e)
         {
-            calendar.NextMonth(schedule.allSchedules, lblMonthAndYear);
+            //calendar.NextMonth(schedule.allSchedules, lblMonthAndYear);
+            adminManagment.CalendarNextMonth(lblMonthAndYear);
         }
 
 
@@ -175,7 +180,7 @@ namespace Media_Bazaar
             AssignShift shiftWindow;
             FlowLayoutPanel pnl = (FlowLayoutPanel)sender;
             sender = pnl.Tag;
-
+            Calendar calendar = new Calendar();
             int day = Convert.ToInt32(sender);
             newDate = new DateTime();
             DateTime date = calendar.GetDate();

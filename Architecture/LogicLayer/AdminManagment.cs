@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Media_Bazaar
 {
@@ -12,6 +13,8 @@ namespace Media_Bazaar
         private DataAccess dataAccess = new DataAccess();
         private SendEmail sendEmail = new SendEmail();
         private IEmployeeModel employeeModel;
+        Calendar calendar = new Calendar();
+        Schedule schedule = new Schedule();
 
         public string CreateNewProfile(string fName, string lName, string dateOfBirth, string email, string phoneNr, string nationality, string pos)
         {
@@ -120,6 +123,30 @@ namespace Media_Bazaar
             }
         }
 
+
+        // ------ CALENDAR ---- //
+        public void CreateCalendar(FlowLayoutPanel flDays, Label label)
+        {
+            schedule.GetAllSchedules();
+            calendar.GenerateDayPanel(42, flDays);
+            calendar.DisplayCurrentDate(schedule.allSchedules, label);
+        }
+
+        public void CalendarPreviousMonth(Label label)
+        {
+            calendar.PrevMonth(schedule.allSchedules, label);
+        }
+        public void CalendarToday(Label label)
+        {
+            calendar.Today(schedule.allSchedules, label);
+        }
+        public void CalendarNextMonth(Label label)
+        {
+            calendar.NextMonth(schedule.allSchedules, label);
+        }
+        //----------------------------------------
+
+        
         public List<IEmployeeModel> GetNotFiredEmployees()
         {
             return dataAccess.GetNotFiredEmployees();
