@@ -68,6 +68,8 @@
     <Compile Include="LogicLayer\Employee\IEmployeeModel.cs" />
     <Compile Include="LogicLayer\LoginManagment.cs" />
     <Compile Include="LogicLayer\ManagerManagment.cs" />
+    <Compile Include="LogicLayer\Product\Product.cs" />
+    <Compile Include="LogicLayer\Product\ProductBrand.cs" />
     <Compile Include="LogicLayer\RestockRequest\IRestockRequest.cs" />
     <Compile Include="LogicLayer\RestockRequest\RestockRequest.cs" />
     <Compile Include="LogicLayer\Schedule\ISchedule.cs" />
@@ -168,8 +170,6 @@
   <ItemGroup>
     <None Include="Resources\Username.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="LogicLayer\Product\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

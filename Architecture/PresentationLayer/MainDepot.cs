@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.Mail;
+using Media_Bazaar.LogicLayer.Products;
+using Media_Bazaar.LogicLayer.Product;
 
 namespace Media_Bazaar
 {
@@ -18,6 +20,7 @@ namespace Media_Bazaar
         private DepotWorkerManagment depotWorkerManagment = new DepotWorkerManagment();
 
         List<int> restockID = new List<int>();
+        List<Product> products = new List<Product>();
 
         public MainDepot()
         {
@@ -35,6 +38,26 @@ namespace Media_Bazaar
             UpdateEmployeeIDInfo();
             UpdateAllConfirmedStockInfo();
             UpdateAllRejectedStockInfo();
+            UpdateProductsList();
+            Combo();
+        }
+
+        private void Combo()
+        {
+            this.cmbBrand.Items.Add(ProductBrand.Amazon);
+            this.cmbBrand.Items.Add(ProductBrand.Apple);
+            this.cmbBrand.Items.Add(ProductBrand.Asus);
+            this.cmbBrand.Items.Add(ProductBrand.HUAWEI);
+            this.cmbBrand.Items.Add(ProductBrand.Microsoft);
+            this.cmbBrand.Items.Add(ProductBrand.MSI);
+            this.cmbBrand.Items.Add(ProductBrand.Razer);
+            this.cmbBrand.Items.Add(ProductBrand.Samsung);
+        }
+
+        private void UpdateProductsList()
+        {
+            this.clbProducts.DataSource = products;
+            this.clbProducts.DisplayMember = "FullInfo";
         }
 
         private void UpdateConfirmedRestockInfo()
@@ -43,8 +66,7 @@ namespace Media_Bazaar
             {
                 restockID.Add(rr.RequestID);
             }
-            clbIncomingStock.DataSource = depotWorkerManagment.GetIncomingRestockRequests();
-            clbIncomingStock.DisplayMember = "FullInfo";
+            
         }
 
 
@@ -77,47 +99,6 @@ namespace Media_Bazaar
         private void btnMakeReqTABincomingStock_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedTab = tabMakeReq;
-        }
-
-
-        private void btnCheckIncomingStock_Click(object sender, EventArgs e)
-        {
-            if (this.clbIncomingStock.CheckedItems.Count == 0)
-            {
-                MessageBox.Show("Please select a stock!");
-            }
-            else
-            {
-                tabControl1.SelectedTab = tabIncomingStockDetails;
-                UpdateStockDetails();
-                while (clbIncomingStock.CheckedIndices.Count > 0)
-                {
-                    clbIncomingStock.SetItemChecked(clbIncomingStock.CheckedIndices[0], false);
-                }
-            }
-        }
-
-        private void UpdateStockDetails()
-        {
-            foreach (int i in restockID)
-            {
-                if (this.clbIncomingStock.SelectedItem != null)
-                {
-                    string stock = this.clbIncomingStock.GetItemText(this.clbIncomingStock.SelectedItem);
-                    if (stock.Contains($"ID:{i}"))
-                    {
-                        this.lblSID.Text = i.ToString();
-                        this.lblSName.Text = depotWorkerManagment.GetStockNameById(i);
-                        this.lblSType.Text = depotWorkerManagment.GetStockTypeById(i);
-                        this.lblDepartment.Text = depotWorkerManagment.GetDepartmentByStockId(i);
-                        this.lblQuantity.Text = depotWorkerManagment.GetStockQuantityById(i);
-                        this.lblOrderDate.Text = depotWorkerManagment.GetStockOrderDateById(i);
-                        this.lblDeliverDate.Text = depotWorkerManagment.GetStockDeliverDateById(i);
-                        this.lblStatus.Text = depotWorkerManagment.GetStockStatusById(i);
-                        this.lblEID.Text = depotWorkerManagment.GetEmployeeIdByStockId(i);
-                    }
-                }
-            }
         }
 
         private void UpdateAllConfirmedStockInfo()
@@ -264,6 +245,49 @@ namespace Media_Bazaar
         private void UpdateEmployeeIDInfo()
         {
             this.tbxEmployeeID.Text = depotWorkerManagment.GetDepotID();
+        }
+
+        private void BtnSearchForProduct_Click(object sender, EventArgs e)
+        {
+            if (this.cmbBrand.Text != null)
+            {
+                DataAccess db = new DataAccess();
+                products = db.GetDBProductInfo(this.cmbBrand.Text);
+                if (products.Count == 0)
+                {
+                    MessageBox.Show("We do not have such Brand in our stock.");
+                    this.cmbBrand.Text = "";
+                }
+                else
+                {
+                    UpdateProductsList();
+                    UpdateDetails(this.cmbBrand.Text);
+                    this.clbProducts.Visible = true;
+                    this.btnViewProductsDetails.Visible = true;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Type the brand first!");
+            }
+        }
+
+        private void UpdateDetails(string product)
+        {
+            DataAccess db = new DataAccess();
+            products = db.GetDBProductInfo(product);
+            foreach (Product p in products)
+            {
+                this.lblProductID.Text = p.id.ToString();
+                this.lblProductBrand.Text = p.Brand;
+                this.lblProductCategory.Text = p.Category;
+                this.lblProductName.Text = p.product_name;
+            }
+        }
+
+        private void BtnViewProductsDetails_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = this.tabIncomingStockDetails;
         }
     }
 }

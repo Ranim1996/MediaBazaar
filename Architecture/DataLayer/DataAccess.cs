@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Dapper;
 using Media_Bazaar.Classes;
+using Media_Bazaar.LogicLayer.Products;
 using MySql.Data.MySqlClient;
 
 namespace Media_Bazaar
@@ -471,6 +472,16 @@ namespace Media_Bazaar
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
                 var output = connection.Query<IEmployeeModel>($"SELECT Username, Password FROM Employee WHERE Username='{username}' AND Password='{password}' AND Position='DEPOT';").ToList();
+                return output;
+            }
+        }
+
+        //products
+        public List<Product> GetDBProductInfo(string product)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<Product>($"SELECT * FROM product WHERE Brand='{product}'").ToList();
                 return output;
             }
         }
