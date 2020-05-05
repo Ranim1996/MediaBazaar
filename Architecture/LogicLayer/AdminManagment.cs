@@ -119,5 +119,40 @@ namespace Media_Bazaar
                 return false;
             }
         }
+
+        public List<IEmployeeModel> GetNotFiredEmployees()
+        {
+            return dataAccess.GetNotFiredEmployees();
+        }
+
+        public List<IDepartmentModel> GetAllDepartaments()
+        {
+            return dataAccess.GetAllDepartaments();
+        }
+
+        public List<IRestockRequest> GetAllRestockRequests()
+        {
+            return dataAccess.GetAllRequests();
+        }
+
+        public List<IEmails> GetEmails()
+        {
+            return dataAccess.GetEmails();
+        }
+
+        public string GetFirstNameOfEmployeeById(int id)
+        {
+            return dataAccess.GetFirstNameOfEmployeeById(id);
+        }
+
+        public void EmailStatusRead(int emailid)
+        {
+            dataAccess.EmailStatusRead(emailid);
+        }
+
+        public void DeleteEmailById(int id)
+        {
+            dataAccess.DeleteEmailById(id);
+        }
     }
 }

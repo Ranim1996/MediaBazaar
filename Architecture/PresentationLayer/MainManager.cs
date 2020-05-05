@@ -18,30 +18,26 @@ namespace Media_Bazaar
     public partial class MainManager : Form
     {
         private ManagerManagment managerManagment = new ManagerManagment();
-
-
-        List<IEmployeeModel> employees = new List<IEmployeeModel>();
-    
+      
         public MainManager()
         {
             InitializeComponent();
 
-            UpdateList();
+            UpdateList(managerManagment.GetAllEmployees());
             CheckFiredAndWorkingChart();
             CheckAttendance();
             CheckRequests();
             CheckPositions();
         }
 
-        private void UpdateList()
+        private void UpdateList(List<IEmployeeModel> employees)
         {
             checkLbProfile.DataSource = employees;
             checkLbProfile.DisplayMember = "FullInfo";
         }
 
         private void MainManager_Load(object sender, EventArgs e)
-        {
-            
+        {            
             tabControl1.Appearance = TabAppearance.FlatButtons;
             tabControl1.ItemSize = new Size(0, 1);
             tabControl1.SizeMode = TabSizeMode.Fixed;
@@ -138,7 +134,7 @@ namespace Media_Bazaar
                 }
                 else
                 {
-                    UpdateList();
+                    UpdateList(managerManagment.GetNotFiredEmployeesByLName(tbxSearchLastname.Text));
                     UpdateInfoByLastname(this.tbxSearchLastname.Text);
                     checkLbProfile.Visible = true;
                     btnViewProfile.Visible = true;
@@ -154,7 +150,7 @@ namespace Media_Bazaar
                 }
                 else
                 {
-                    UpdateList();
+                    UpdateList(managerManagment.GetNotFiredEmployeesByID(Convert.ToInt32(this.tbxSearchID.Text));
                     UpdateInfoByID(Convert.ToInt32(this.tbxSearchID.Text));
                     checkLbProfile.Visible = true;
                     btnViewProfile.Visible = true;
@@ -263,57 +259,15 @@ namespace Media_Bazaar
 
         private void CheckFiredAndWorkingChart()
         {
-            //nrFired = db.GetNumOfFired();
-            //nrNotFired = db.GetNumOfnOTFired();
-            int nrFired = 0;
-            int nrNotFired = 0;
-            foreach (IEmployeeModel employee in managerManagment.GetAllEmployees())
-            {
-                if(employee.ReasonsForRelease == null)
-                {
-                    nrNotFired++;
-                }
-                else if(employee.ReasonsForRelease != null)
-                {
-                    nrFired++;
-                }
-            }        
-            chartReleasedAndNot.Series["s1"].Points.AddXY("Fired", nrFired);
-            chartReleasedAndNot.Series["s1"].Points.AddXY("Working", nrNotFired);
+            chartReleasedAndNot.Series["s1"].Points.AddXY("Fired", managerManagment.NumberOfFired());
+            chartReleasedAndNot.Series["s1"].Points.AddXY("Working", managerManagment.NumberrOfWorking());
         }
 
         private void CheckPositions()
         {
-            int nrAdmins = 0;
-            int nrManagers = 0;
-            int nrDepot = 0;
-            //nrAmdins = db.GetNumAdmins();
-            //nrManagers = db.GetNumManagers();
-            //nrDepot = db.GetNumDepotWorkers();
-            foreach(IEmployeeModel employee in managerManagment.GetAllEmployees())
-            {
-                if(employee.Position == "ADMINISTRATOR")
-                {
-                    nrAdmins++;
-                }
-                else
-                {
-                    if(employee.Position == "MANAGER")
-                    {
-                        nrManagers++;
-                    }
-                    else
-                    {
-                        if(employee.Position == "DEPOT")
-                        {
-                            nrDepot++;
-                        }
-                    }
-                }
-            }
-            chartPositions.Series["s1"].Points.AddXY("Administrators", nrAdmins);
-            chartPositions.Series["s1"].Points.AddXY("Managers", nrManagers);
-            chartPositions.Series["s1"].Points.AddXY("Depot workers", nrDepot);
+            chartPositions.Series["s1"].Points.AddXY("Administrators", managerManagment.NumberOfAdministrators());
+            chartPositions.Series["s1"].Points.AddXY("Managers", managerManagment.NumberOfManagers());
+            chartPositions.Series["s1"].Points.AddXY("Depot workers", managerManagment.NumberOfDepotWorkers());
         }
 
         int nrOfPresent = 0;
@@ -321,89 +275,27 @@ namespace Media_Bazaar
         int nrOfLate = 0;
 
         private void CheckAttendance()
-        {           
-            //nrOfAbsent = db.GetNumOfAbsent();
-            //nrOfPresent = db.GetNumOfPresent();
-            //nrOfLate = db.GetNumOfLate();
-
-            foreach(Schedule sch in managerManagment.GetAllSchedules())
-            {
-                if(sch.Attendance == "PRESENT")
-                {
-                    nrOfPresent++;
-                }
-                else
-                {
-                    if(sch.Attendance == "LATE")
-                    {
-                        nrOfLate++;
-                    }
-                    else
-                    {
-                        if(sch.Attendance == "ABSENT")
-                        {
-                            nrOfAbsent++;
-                        }
-                    }
-                }
-            }
-            chartAttendance.Series["s1"].Points.AddXY("Present", nrOfPresent);
-            chartAttendance.Series["s1"].Points.AddXY("Absent", nrOfAbsent);
-            chartAttendance.Series["s1"].Points.AddXY("Late", nrOfLate);
+        {  
+            chartAttendance.Series["s1"].Points.AddXY("Present", managerManagment.NumberOfPresent());
+            chartAttendance.Series["s1"].Points.AddXY("Absent", managerManagment.NumberOfAbsent());
+            chartAttendance.Series["s1"].Points.AddXY("Late", managerManagment.NumberOfLate());
         }
         
         private void CheckEmployeeAttendance(int id)
         {
-            nrOfAbsent = managerManagment.GetNumberOfAbsentByID(id);
-            nrOfPresent = managerManagment.GetNumberOfPresentByID(id);
-            nrOfLate = managerManagment.GetNumberOfLateByID(id);
-
-            chartEmplAttendance.Series["s1"].Points.AddXY("Present", nrOfPresent);
-            chartEmplAttendance.Series["s1"].Points.AddXY("Absent", nrOfAbsent);
-            chartEmplAttendance.Series["s1"].Points.AddXY("Late", nrOfLate);
+            chartEmplAttendance.Series["s1"].Points.AddXY("Present", managerManagment.GetNumberOfPresentByID(id));
+            chartEmplAttendance.Series["s1"].Points.AddXY("Absent", managerManagment.GetNumberOfAbsentByID(id));
+            chartEmplAttendance.Series["s1"].Points.AddXY("Late", managerManagment.GetNumberOfLateByID(id));
 
             chartEmplAttendance.Series["s1"]["PieLabelStyle"] = "Disabled";
         }
 
         private void CheckRequests()
-        {
-            //nrOfConfirmed = db.GetNumOfConfirmedRequests();
-            //nrOfRejected = db.GetNumOfRejectedRequests();
-            //nrOfWaiting = db.GetNumOfWaitingRequests();
-            int nrOfConfirmed = 0;
-            int nrOfRejected = 0;
-            int nrOfWaiting = 0;
-
-            foreach (IRestockRequest req in managerManagment.GetAllRestockRequests())
-            {
-                if(req.AdminConfirmation == "CONFIRMED")
-                {
-                    nrOfConfirmed++;
-                }
-                else
-                {
-                    if(req.AdminConfirmation == "REJECTED")
-                    {
-                        nrOfRejected++;
-                    }
-                    else
-                    {
-                        if(req.AdminConfirmation == null)
-                        {
-                            nrOfWaiting++;
-                        }
-                    }
-                }
-            }
-            chartRequests.Series["s1"].Points.AddXY("Confirmed", nrOfConfirmed);
-            chartRequests.Series["s1"].Points.AddXY("Rejected", nrOfRejected);
-            chartRequests.Series["s1"].Points.AddXY("Waiting", nrOfWaiting);
-
-            /*chartEmplAttendance.Legends.Clear();
-            chartEmplAttendance.Series.Clear();*/
-        }
-
-        
+        {           
+            chartRequests.Series["s1"].Points.AddXY("Confirmed", managerManagment.NumberOfConfirmedRequests());
+            chartRequests.Series["s1"].Points.AddXY("Rejected", managerManagment.NumberOfRejectedRequests());
+            chartRequests.Series["s1"].Points.AddXY("Waiting", managerManagment.NumberOfWaitingRequests());
+        }        
 
         private void btnSearchTABsearch_Click(object sender, EventArgs e)
         {

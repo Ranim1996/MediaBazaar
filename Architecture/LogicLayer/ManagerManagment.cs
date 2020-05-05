@@ -13,7 +13,7 @@ namespace Media_Bazaar
         List<IEmployeeModel> allEmployees = null;
         List<Schedule> schedules = null;
 
-        DataAccess dataAccess=new DataAccess();
+        DataAccess dataAccess = new DataAccess();
 
         public List<IEmployeeModel> GetEmployeesByLName(string lastName)
         {
@@ -33,8 +33,8 @@ namespace Media_Bazaar
         public List<ISchedule> GetSchedulesByEmplId(int id)
         {
             return dataAccess.GetSchedulesByEmplId(id);
-        }      
-        
+        }
+
         public List<IEmployeeModel> GetAllEmployees()
         {
             return dataAccess.GetAllEmployees();
@@ -64,5 +64,163 @@ namespace Media_Bazaar
         {
             return dataAccess.GetAllRequests();
         }
+
+
+
+        //FOR CHARTS
+        public int NumberrOfWorking()
+        {
+            int nrWorking = 0;
+
+            foreach (IEmployeeModel employee in GetAllEmployees())
+            {
+                if (employee.ReasonsForRelease == null)
+                {
+                    nrWorking++;
+                }
+            }
+            return nrWorking;
+        }
+
+        public int NumberOfFired()
+        {
+            int nrFired = 0;
+
+            foreach (IEmployeeModel employee in GetAllEmployees())
+            {
+                if (employee.ReasonsForRelease != null)
+                {
+                    nrFired++;
+                }
+            }
+            return nrFired;
+        }
+
+        public int NumberOfAdministrators()
+        {
+            int nrAdmins = 0;
+
+            foreach (IEmployeeModel employee in GetAllEmployees())
+            {
+                if (employee.Position == "ADMINISTRATOR")
+                {
+                    nrAdmins++;
+                }
+            }
+            return nrAdmins;
+        }
+
+        public int NumberOfManagers()
+        {
+            int nrManagers = 0;
+
+            foreach (IEmployeeModel employee in GetAllEmployees())
+            {
+                if (employee.Position == "MANAGER")
+                {
+                    nrManagers++;
+                }
+            }
+            return nrManagers;
+        }
+
+        public int NumberOfDepotWorkers()
+        {
+            int nrDepotWorkers = 0;
+
+            foreach (IEmployeeModel employee in GetAllEmployees())
+            {
+                if (employee.Position == "DEPOT")
+                {
+                    nrDepotWorkers++;
+                }
+            }
+            return nrDepotWorkers;
+        }
+
+        public int NumberOfPresent()
+        {
+            int nrOfPresent = 0;
+
+            foreach (Schedule sch in GetAllSchedules())
+            {
+                if (sch.Attendance == "PRESENT")
+                {
+                    nrOfPresent++;
+                }
+            }
+            return nrOfPresent;
+        }
+
+        public int NumberOfLate()
+        {
+            int nrOfLate = 0;
+            foreach (Schedule sch in GetAllSchedules())
+            {
+                if (sch.Attendance == "LATE")
+                {
+                    nrOfLate++;
+                }
+            }
+            return nrOfLate;
+        }
+
+        public int NumberOfAbsent()
+        {
+            int nrOfAbsent = 0;
+
+            foreach (Schedule sch in GetAllSchedules())
+            {
+                if (sch.Attendance == "ABSENT")
+                {
+                    nrOfAbsent++;
+                }
+            }
+            return nrOfAbsent;
+        }
+
+        public int NumberOfConfirmedRequests()
+        {
+            int nrOfConfirmed = 0;
+
+            foreach (IRestockRequest req in GetAllRestockRequests())
+            {
+                if (req.AdminConfirmation == "CONFIRMED")
+                {
+                    nrOfConfirmed++;
+                }
+            }
+            return nrOfConfirmed;
+        }
+
+        public int NumberOfRejectedRequests()
+        {
+            int nrOfRejected = 0;
+
+            foreach (IRestockRequest req in GetAllRestockRequests())
+            {
+                if (req.AdminConfirmation == "REJECTED")
+                {
+                    nrOfRejected++;
+                }
+            }
+            return nrOfRejected;
+        }
+
+        public int NumberOfWaitingRequests()
+        {
+            int nrOfWaiting = 0;
+
+            foreach (IRestockRequest req in GetAllRestockRequests())
+            {
+                if (req.AdminConfirmation ==null)
+                {
+                    nrOfWaiting++;
+                }
+            }
+            return nrOfWaiting;
+        }
+
+
     }
 }

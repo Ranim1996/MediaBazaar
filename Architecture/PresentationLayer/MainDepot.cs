@@ -15,17 +15,13 @@ namespace Media_Bazaar
 {
     public partial class MainDepot : Form
     {
-        List<IRestockRequest> incomingRestockRequests = new List<IRestockRequest>();
-        List<IDepartmentModel> departaments = new List<IDepartmentModel>();
-        List<IEmployeeModel> employees = new List<IEmployeeModel>();
+        private DepotWorkerManagment depotWorkerManagment = new DepotWorkerManagment();
+
         List<int> restockID = new List<int>();
-        List<int> employeeID = new List<int>();
-        DataAccess db = null;
 
         public MainDepot()
         {
             InitializeComponent();
-            db = new DataAccess();
         }
 
         private void MainDepot_Load(object sender, EventArgs e)
@@ -43,12 +39,11 @@ namespace Media_Bazaar
 
         private void UpdateConfirmedRestockInfo()
         {
-            incomingRestockRequests = db.GetAllConfirmedRestock();
-            foreach (IRestockRequest rr in incomingRestockRequests)
+            foreach (IRestockRequest rr in depotWorkerManagment.GetIncomingRestockRequests())
             {
                 restockID.Add(rr.RequestID);
             }
-            clbIncomingStock.DataSource = incomingRestockRequests;
+            clbIncomingStock.DataSource = depotWorkerManagment.GetIncomingRestockRequests();
             clbIncomingStock.DisplayMember = "FullInfo";
         }
 
@@ -87,8 +82,6 @@ namespace Media_Bazaar
 
         private void btnCheckIncomingStock_Click(object sender, EventArgs e)
         {
-            //INFORMATION about the incoming stock MUST be parsed in this method
-
             if (this.clbIncomingStock.CheckedItems.Count == 0)
             {
                 MessageBox.Show("Please select a stock!");
@@ -113,15 +106,15 @@ namespace Media_Bazaar
                     string stock = this.clbIncomingStock.GetItemText(this.clbIncomingStock.SelectedItem);
                     if (stock.Contains($"ID:{i}"))
                     {
-                        this.lblSID.Text = db.GetDBStockIDById(i);
-                        this.lblSName.Text = db.GetDBStockNameById(i);
-                        this.lblSType.Text = db.GetDBStockTypeById(i);
-                        this.lblDepartment.Text = db.GetDBDepartmentByStockId(i);
-                        this.lblQuantity.Text = db.GetDBStockQuantityById(i);
-                        this.lblOrderDate.Text = db.GetDBStockOrderDateById(i);
-                        this.lblDeliverDate.Text = db.GetDBStockDeliverDateById(i);
-                        this.lblStatus.Text = db.GetDBStockStatusById(i);
-                        this.lblEID.Text = db.GetDBEmployeeIdByStockId(i);
+                        this.lblSID.Text = i.ToString();
+                        this.lblSName.Text = depotWorkerManagment.GetStockNameById(i);
+                        this.lblSType.Text = depotWorkerManagment.GetStockTypeById(i);
+                        this.lblDepartment.Text = depotWorkerManagment.GetDepartmentByStockId(i);
+                        this.lblQuantity.Text = depotWorkerManagment.GetStockQuantityById(i);
+                        this.lblOrderDate.Text = depotWorkerManagment.GetStockOrderDateById(i);
+                        this.lblDeliverDate.Text = depotWorkerManagment.GetStockDeliverDateById(i);
+                        this.lblStatus.Text = depotWorkerManagment.GetStockStatusById(i);
+                        this.lblEID.Text = depotWorkerManagment.GetEmployeeIdByStockId(i);
                     }
                 }
             }
@@ -131,9 +124,7 @@ namespace Media_Bazaar
         {
             this.clbAllConfirmedRequests.Items.Clear();
 
-            incomingRestockRequests = db.GetAllConfirmedRestock();
-
-            foreach (IRestockRequest dBr in incomingRestockRequests)
+            foreach (IRestockRequest dBr in depotWorkerManagment.GetIncomingRestockRequests())
             {
                 this.clbAllConfirmedRequests.Items.Add(dBr.GetInfo());
             }
@@ -143,9 +134,7 @@ namespace Media_Bazaar
         {
             this.lbxRejectedRequests.Items.Clear();
 
-            incomingRestockRequests = db.GetAllRejectedRestock();
-
-            foreach (IRestockRequest dBr in incomingRestockRequests)
+            foreach (IRestockRequest dBr in depotWorkerManagment.GetRejectedRestockRequests())
             {
                 this.lbxRejectedRequests.Items.Add(dBr.GetInfo());
             }
@@ -153,8 +142,6 @@ namespace Media_Bazaar
 
         private void btnViewStock_Click(object sender, EventArgs e)
         {
-            //INFORMATION about stock MUST be parsed in this method
-
             if (this.clbAllConfirmedRequests.CheckedItems.Count == 0)
             {
                 MessageBox.Show("Please select a confirmed stock!");
@@ -172,7 +159,6 @@ namespace Media_Bazaar
 
         private void UpdateAvailableStockDetails()
         {
-
             foreach (int i in restockID)
             {
                 if (this.clbAllConfirmedRequests.SelectedItem != null)
@@ -181,14 +167,14 @@ namespace Media_Bazaar
 
                     if (stock.Contains($"ID:{i}"))
                     {
-                        this.lblAllStockID.Text = db.GetDBStockIDById(i);
-                        this.lblAllStockName.Text = db.GetDBStockNameById(i);
-                        this.lblAllStockType.Text = db.GetDBStockTypeById(i);
-                        this.lblAllStockDepartment.Text = db.GetDBDepartmentByStockId(i);
-                        this.lblAllStockQuantity.Text = db.GetDBStockQuantityById(i);
-                        this.lblAllStockOrderDate.Text = db.GetDBStockOrderDateById(i);
-                        this.lblAllStockDeliverDate.Text = db.GetDBStockDeliverDateById(i);
-                        this.lblAllStatus.Text = db.GetDBStockStatusById(i);
+                        this.lblAllStockID.Text = i.ToString();
+                        this.lblAllStockName.Text = depotWorkerManagment.GetStockNameById(i);
+                        this.lblAllStockType.Text = depotWorkerManagment.GetStockTypeById(i);
+                        this.lblAllStockDepartment.Text = depotWorkerManagment.GetDepartmentByStockId(i);
+                        this.lblAllStockQuantity.Text = depotWorkerManagment.GetStockQuantityById(i);
+                        this.lblAllStockOrderDate.Text = depotWorkerManagment.GetStockOrderDateById(i);
+                        this.lblAllStockDeliverDate.Text = depotWorkerManagment.GetStockDeliverDateById(i);
+                        this.lblAllStatus.Text = depotWorkerManagment.GetStockStatusById(i);
                     }
                 }
             }
@@ -233,25 +219,23 @@ namespace Media_Bazaar
 
         private void BtnMakeRequest_Click(object sender, EventArgs e)
         {
-
             string type = "";
-            int idEmp = -1;
+            string idEmp = "";
             string orderDate;
             string orderDeliver = "";
             string name = "";
-            int quantity = -1;
+            string quantity = "";
             string department = "";
 
-            if (tbxEmployeeID.Text != " " && tbxStockName.Text != " " && tbxStockQuantity.Text != "" && dtpDateDeliver.Value != null)
+            idEmp = tbxEmployeeID.Text;
+            name = tbxStockName.Text;
+            department = cmbDepartment.Text.ToString();
+            quantity = tbxStockQuantity.Text;
+            orderDeliver = dtpDateDeliver.Value.ToString("dd/MM/yyyy");
+            orderDate = DateTime.Now.ToShortDateString();
+
+            if (depotWorkerManagment.MakeRestockRequest(idEmp, name, type, department, quantity, orderDate, orderDeliver))
             {
-                idEmp = Convert.ToInt32(tbxEmployeeID.Text);
-                name = tbxStockName.Text;
-                department = this.cmbDepartment.Text.ToString();
-                quantity = Convert.ToInt32(this.tbxStockQuantity.Text);
-                orderDeliver = this.dtpDateDeliver.Value.ToString("dd/MM/yyyy");
-                type = this.cmbType.Text.ToString();
-                orderDate = DateTime.Now.ToShortDateString();
-                db.InsertRequest(idEmp, name, type, department, quantity, orderDate, orderDeliver);
                 MessageBox.Show("The request is sent to the administration.");
                 clearBoxes1();
             }
@@ -271,11 +255,7 @@ namespace Media_Bazaar
 
         private void UpdateDepartamentInfo()
         {
-
-            departaments = db.GetAllDepartaments();
-
-
-            foreach (IDepartmentModel dBD in departaments)
+            foreach (IDepartmentModel dBD in depotWorkerManagment.GetDepartments())
             {
                 cmbDepartment.Items.Add(dBD.DepartamentName);
             }
@@ -283,9 +263,7 @@ namespace Media_Bazaar
 
         private void UpdateEmployeeIDInfo()
         {
-            this.tbxEmployeeID.Text = db.GetDepotID();
+            this.tbxEmployeeID.Text = depotWorkerManagment.GetDepotID();
         }
-
-
     }
 }

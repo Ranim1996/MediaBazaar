@@ -17,13 +17,13 @@ namespace Media_Bazaar
         Schedule schedule = new Schedule();
         List<Schedule> dbSchedules = null;
         DateTime shiftDate;
+
         public AssignShift(DateTime date, MainAdmin main)
         {
             InitializeComponent();
             shiftDate = date;
             db = new DataAccess();
-            //schedule.GetAllSchedules();
-            //dbSchedules = schedule.allSchedules;
+       
             tbDate.Text = $"{date.Day}/{date.Month}/{date.Year}, {date.DayOfWeek}";
             this.Text = $"Assign shift on date: {tbDate.Text}";
 

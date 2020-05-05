@@ -16,27 +16,18 @@ namespace Media_Bazaar
 {
     public partial class MainAdmin : Form
     {
-        AdminManagment adminManagment = new AdminManagment();
-
-        List<IEmployeeModel> NotReleasedEmployees = new List<IEmployeeModel>();
-        List<IDepartmentModel> departaments = new List<IDepartmentModel>();
-        List<IRestockRequest> restockRequests = new List<IRestockRequest>();
-        List<IEmails> emails = null;
-
-
+        AdminManagment adminManagment = new AdminManagment();       
+        
         List<int> employeesID = new List<int>();
         List<int> restockID = new List<int>();
 
         Calendar calendar = new Calendar();
-
-        DataAccess db;
         Schedule schedule;
 
         public MainAdmin()
         {
             InitializeComponent();
             this.flDays.Click += new EventHandler(this.Flow_Click);
-            db = new DataAccess();
             schedule = new Schedule();
 
             //change this if it s going to be laggy
@@ -44,7 +35,7 @@ namespace Media_Bazaar
 
         private void MainAdmin_Load(object sender, EventArgs e)
         {
-            calendar = new Classes.Calendar();
+            calendar = new Calendar();
             //GUI load
             tabControl1.Appearance = TabAppearance.FlatButtons;
             tabControl1.ItemSize = new Size(0, 1);
@@ -231,7 +222,7 @@ namespace Media_Bazaar
 
         private void UpdateEmployeeInfo()
         {
-            NotReleasedEmployees = db.GetNotFiredEmployees();
+            List<IEmployeeModel> NotReleasedEmployees = adminManagment.GetNotFiredEmployees();
             foreach (IEmployeeModel e in NotReleasedEmployees)
             {
                 employeesID.Add(e.EmployeeID);
@@ -244,7 +235,7 @@ namespace Media_Bazaar
         }
         private void UpdateDepartamentInfo()
         {
-            departaments = db.GetAllDepartaments();
+            List<IDepartmentModel> departaments = adminManagment.GetAllDepartaments();
             lbDepartaments.DataSource = departaments;
             lbDepartaments.DisplayMember = "FullInfo";
 
@@ -255,7 +246,7 @@ namespace Media_Bazaar
         }
         private void UpdateRestockInfo()
         {
-            restockRequests = db.GetAllRequests();
+            List<IRestockRequest> restockRequests = adminManagment.GetAllRestockRequests();
             foreach (IRestockRequest rr in restockRequests)
             {
                 restockID.Add(rr.RequestID);
@@ -420,11 +411,12 @@ namespace Media_Bazaar
         public void UpdateMailList(string split, string subject)
         {
             lbEmailInbox.Items.Clear();
-            emails = db.GetEmails();
-            foreach (IEmails mail in emails)
+                        
+            foreach (IEmails mail in adminManagment.GetEmails())
             {
                 int id = mail.EmployeeID;
-                string employeeName = db.GetFirstNameOfEmployeeById(id);
+
+                string employeeName = adminManagment.GetFirstNameOfEmployeeById(id);
                 split = mail.Email.Split(new string[] { "Subject:" }, StringSplitOptions.None)[1];
                 //body = split.Split(new string[] { "Body:" }, StringSplitOptions.None)[1];
                 subject = split.Split(new string[] { "Body:" }, StringSplitOptions.None)[0];
@@ -451,11 +443,11 @@ namespace Media_Bazaar
             if (lbEmailInbox.SelectedItem != null)
             {
                 holder = lbEmailInbox.SelectedItem.ToString();
-                foreach (IEmails mail in emails)
+                foreach (IEmails mail in adminManagment.GetEmails())
                 {
 
                     int id = mail.EmployeeID;
-                    string employeeName = db.GetFirstNameOfEmployeeById(id);
+                    string employeeName = adminManagment.GetFirstNameOfEmployeeById(id);
                     split = mail.Email.Split(new string[] { "Subject:" }, StringSplitOptions.None)[1];
                     string toBeSearched = "Body:";
                     body = split.Substring(split.IndexOf(toBeSearched) + toBeSearched.Length);
@@ -488,7 +480,7 @@ namespace Media_Bazaar
             if (dbEmail != null)
             {
                 emailID = dbEmail.EmailID;
-                db.EmailStatusRead(emailID);
+                adminManagment.EmailStatusRead(emailID);
             }
             else
             {
@@ -503,7 +495,7 @@ namespace Media_Bazaar
             if (dbEmail != null)
             {
                 emailID = dbEmail.EmailID;
-                db.DeleteEmailById(emailID);
+                adminManagment.DeleteEmailById(emailID);
             }
             else
             {
