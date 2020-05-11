@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Media_Bazaar
 {
-    public class DepotWorkerModel:IEmployeeModel
+    public class DepotWorkerModel:EmployeeBase
     {
         public AutoGeneratePassword generatePassword { get; set; } = new AutoGeneratePassword();
         private string username;
@@ -33,7 +33,7 @@ namespace Media_Bazaar
         {
             get
             {
-                return $"ID:{EmployeeID} {FirstName} {LastName} {DateOfBirth} {Email} {PhoneNumber} {Nationality} {Position} {Departament} {PreferedShiftForTheWeek})";
+                return base.FullInfo;
             }
         }
 

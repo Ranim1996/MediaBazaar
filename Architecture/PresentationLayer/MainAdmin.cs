@@ -217,7 +217,7 @@ namespace Media_Bazaar
 
             if (adminManagment.CreateNewProfile(tbFirstName.Text, tbLastName.Text, tbDateOfBirth.Value.ToShortDateString(), tbEmail.Text, tbPhoneNr.Text, tbNationality.Text, pos) != null)
             {
-                label15.Text = adminManagment.CreateNewProfile(tbFirstName.Text, tbLastName.Text, tbDateOfBirth.Value.ToShortDateString(), tbEmail.Text, tbPhoneNr.Text, tbNationality.Text, pos);
+                rtbEmployeeCred.Text = adminManagment.CreateNewProfile(tbFirstName.Text, tbLastName.Text, tbDateOfBirth.Value.ToShortDateString(), tbEmail.Text, tbPhoneNr.Text, tbNationality.Text, pos);
             }
             else
             {
@@ -227,8 +227,8 @@ namespace Media_Bazaar
 
         private void UpdateEmployeeInfo()
         {
-            List<IEmployeeModel> NotReleasedEmployees = adminManagment.GetNotFiredEmployees();
-            foreach (IEmployeeModel e in NotReleasedEmployees)
+            List<EmployeeBase> NotReleasedEmployees = adminManagment.GetNotFiredEmployees();
+            foreach (EmployeeBase e in NotReleasedEmployees)
             {
                 employeesID.Add(e.EmployeeID);
             }
@@ -240,19 +240,20 @@ namespace Media_Bazaar
         }
         private void UpdateDepartamentInfo()
         {
-            List<IDepartmentModel> departaments = adminManagment.GetAllDepartaments();
+            cmbDepartments.Items.Clear();
+            List<DepartmentModel> departaments = adminManagment.GetAllDepartaments();
             lbDepartaments.DataSource = departaments;
-            lbDepartaments.DisplayMember = "FullInfo";
+            lbDepartaments.DisplayMember = "GetInfo";
 
-            foreach (IDepartmentModel dBD in departaments)
+            foreach (DepartmentModel dBD in departaments)
             {
                 cmbDepartments.Items.Add(dBD.DepartamentName);
             }
         }
         private void UpdateRestockInfo()
         {
-            List<IRestockRequest> restockRequests = adminManagment.GetAllRestockRequests();
-            foreach (IRestockRequest rr in restockRequests)
+            List<RestockRequestBase> restockRequests = adminManagment.GetAllRestockRequests();
+            foreach (RestockRequestBase rr in restockRequests)
             {
                 restockID.Add(rr.RequestID);
             }
@@ -417,7 +418,7 @@ namespace Media_Bazaar
         {
             lbEmailInbox.Items.Clear();
                         
-            foreach (IEmails mail in adminManagment.GetEmails())
+            foreach (EmailModel mail in adminManagment.GetEmails())
             {
                 int id = mail.EmployeeID;
 
@@ -440,7 +441,7 @@ namespace Media_Bazaar
                 UpdateMailList(split, subject);
             }
         }
-        IEmails dbEmail = null;
+        EmailModel dbEmail = null;
         private void lbEmailInbox_SelectedIndexChanged(object sender, EventArgs e)
         {
             string holder = "";
@@ -448,7 +449,7 @@ namespace Media_Bazaar
             if (lbEmailInbox.SelectedItem != null)
             {
                 holder = lbEmailInbox.SelectedItem.ToString();
-                foreach (IEmails mail in adminManagment.GetEmails())
+                foreach (EmailModel mail in adminManagment.GetEmails())
                 {
 
                     int id = mail.EmployeeID;

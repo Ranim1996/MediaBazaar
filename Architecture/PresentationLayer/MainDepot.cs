@@ -62,7 +62,7 @@ namespace Media_Bazaar
 
         private void UpdateConfirmedRestockInfo()
         {
-            foreach (IRestockRequest rr in depotWorkerManagment.GetIncomingRestockRequests())
+            foreach (RestockRequestBase rr in depotWorkerManagment.GetIncomingRestockRequests())
             {
                 restockID.Add(rr.RequestID);
             }
@@ -105,9 +105,9 @@ namespace Media_Bazaar
         {
             this.clbAllConfirmedRequests.Items.Clear();
 
-            foreach (IRestockRequest dBr in depotWorkerManagment.GetIncomingRestockRequests())
+            foreach (RestockRequestBase dBr in depotWorkerManagment.GetIncomingRestockRequests())
             {
-                this.clbAllConfirmedRequests.Items.Add(dBr.GetInfo());
+                this.clbAllConfirmedRequests.Items.Add(dBr.FullInfo);
             }
         }
 
@@ -115,9 +115,9 @@ namespace Media_Bazaar
         {
             this.lbxRejectedRequests.Items.Clear();
 
-            foreach (IRestockRequest dBr in depotWorkerManagment.GetRejectedRestockRequests())
+            foreach (RestockRequestBase dBr in depotWorkerManagment.GetRejectedRestockRequests())
             {
-                this.lbxRejectedRequests.Items.Add(dBr.GetInfo());
+                this.lbxRejectedRequests.Items.Add(dBr.FullInfo);
             }
         }
 
@@ -236,7 +236,7 @@ namespace Media_Bazaar
 
         private void UpdateDepartamentInfo()
         {
-            foreach (IDepartmentModel dBD in depotWorkerManagment.GetDepartments())
+            foreach (DepartmentModel dBD in depotWorkerManagment.GetDepartments())
             {
                 cmbDepartment.Items.Add(dBD.DepartamentName);
             }

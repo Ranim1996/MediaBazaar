@@ -15,38 +15,38 @@ namespace Media_Bazaar
     {
         //METHODS FOR EMPLOYEES:      
        
-        public List<IEmployeeModel> GetNotFiredEmployeesByLastName(string lastName)
+        public List<EmployeeBase> GetNotFiredEmployeesByLastName(string lastName)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<IEmployeeModel>($"SELECT * FROM Employee WHERE LastName='{lastName}' AND ReasonsForRelease IS NULL").ToList();
+                var output = connection.Query<EmployeeBase>($"SELECT * FROM Employee WHERE LastName='{lastName}' AND ReasonsForRelease IS NULL").ToList();
                 return output;
             }
         }
-        public List<IEmployeeModel> GetNotFiredEmployeesByID(int id)
+        public List<EmployeeBase> GetNotFiredEmployeesByID(int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<IEmployeeModel>($"SELECT * FROM Employee WHERE EmployeeID='{id}' AND ReasonsForRelease IS NULL").ToList();
+                var output = connection.Query<EmployeeBase>($"SELECT * FROM Employee WHERE EmployeeID='{id}' AND ReasonsForRelease IS NULL").ToList();
                 return output;
             }
         }
 
         //get all the info of the employee via employee id.
-        public List<IEmployeeModel> GetDBNotFiredEmployeeByID(int id)
+        public List<EmployeeBase> GetDBNotFiredEmployeeByID(int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<IEmployeeModel>($"SELECT * FROM Employee WHERE EmployeeID='{id}' AND ReasonsForRelease IS NULL").ToList();
+                var output = connection.Query<EmployeeBase>($"SELECT * FROM Employee WHERE EmployeeID='{id}' AND ReasonsForRelease IS NULL").ToList();
                 return output;
             }
         }
         //get all info of the employee via last name.
-        public List<IEmployeeModel> GetDBEmployeesByLastName(string lastName)
+        public List<EmployeeBase> GetDBEmployeesByLastName(string lastName)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<IEmployeeModel>($"SELECT * FROM Employee WHERE LastName='{lastName}'").ToList();
+                var output = connection.Query<EmployeeBase>($"SELECT * FROM Employee WHERE LastName='{lastName}'").ToList();
                 return output;
             }
         }
@@ -79,11 +79,11 @@ namespace Media_Bazaar
         }
         
         //Get All employees
-        public List<IEmployeeModel> GetAllEmployees()
+        public List<EmployeeBase> GetAllEmployees()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<IEmployeeModel>($"SELECT * FROM Employee").ToList();
+                var output = connection.Query<EmployeeBase>($"SELECT * FROM Employee").ToList();
                 return output;
             }
         }
@@ -109,14 +109,16 @@ namespace Media_Bazaar
         //}
 
         //get all the info of not fired employees
-        public List<IEmployeeModel> GetNotFiredEmployees()
+        
+        public List<EmployeeBase> GetNotFiredEmployees()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<IEmployeeModel>($"SELECT * FROM Employee WHERE ReasonsForRelease IS NULL;").ToList();
+                var output = connection.Query<EmployeeBase>($"SELECT * FROM Employee WHERE ReasonsForRelease IS NULL;").ToList();
+                //return connection.Query<EmployeeBase>($"SELECT * FROM Employee WHERE ReasonsForRelease IS NULL;").ToList();
                 return output;
             }
-        }
+        } 
 
         public string GetDepotID()
         {
@@ -139,11 +141,11 @@ namespace Media_Bazaar
         }
 
         //get all the departments that are in the data base.
-        public List<IDepartmentModel> GetAllDepartaments()
+        public List<DepartmentModel> GetAllDepartaments()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<IDepartmentModel>($"SELECT * FROM Departament").ToList();
+                var output = connection.Query<DepartmentModel>($"SELECT * FROM Departament").ToList();
                 return output;
             }
         }
@@ -248,11 +250,11 @@ namespace Media_Bazaar
         //METHODS FOR RESTOCK
 
         // get info about all requested stock.
-        public List<IRestockRequest> GetAllRequests()
+        public List<RestockRequestBase> GetAllRequests()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<IRestockRequest>($"SELECT * FROM RestockRequest").ToList();
+                var output = connection.Query<RestockRequestBase>($"SELECT * FROM RestockRequest").ToList();
                 return output;
             }
         }
@@ -286,21 +288,21 @@ namespace Media_Bazaar
         //}
 
         // get all confirmed requests from data base.
-        public List<IRestockRequest> GetAllConfirmedRestock()
+        public List<RestockRequestBase> GetAllConfirmedRestock()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<IRestockRequest>($"SELECT * FROM RestockRequest WHERE AdminConfirmation ='CONFIRMED'").ToList();
+                var output = connection.Query<RestockRequestBase>($"SELECT * FROM RestockRequest WHERE AdminConfirmation ='CONFIRMED'").ToList();
                 return output;
             }
         }
 
         // Get all rejected requests.
-        public List<IRestockRequest> GetAllRejectedRestock()
+        public List<RestockRequestBase> GetAllRejectedRestock()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<IRestockRequest>($"SELECT * FROM RestockRequest WHERE AdminConfirmation='REJECTED'").ToList();
+                var output = connection.Query<RestockRequestBase>($"SELECT * FROM RestockRequest WHERE AdminConfirmation='REJECTED'").ToList();
                 return output;
             }
         }
@@ -324,11 +326,11 @@ namespace Media_Bazaar
         }
 
         //get all available stocks where the quantity is not null
-        public List <IRestockRequest> GetAllAvailableStocks ()
+        public List <RestockRequestBase> GetAllAvailableStocks ()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<IRestockRequest>($"SELECT * FROM RestockRequest WHERE Quantity IS NOT NULL").ToList();
+                var output = connection.Query<RestockRequestBase>($"SELECT * FROM RestockRequest WHERE Quantity IS NOT NULL").ToList();
                 return output;
             }
         }
@@ -337,19 +339,19 @@ namespace Media_Bazaar
         //METHODS FOR SCHEDULE--------------
 
         //get all the schedule from the data base.
-        public List<ISchedule> GetAllSchedules()
+        public List<ScheduleBase> GetAllSchedules()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<ISchedule>($"SELECT * FROM Schedule").ToList();
+                var output = connection.Query<ScheduleBase>($"SELECT * FROM Schedule").ToList();
                 return output;
             }
         }
-        public List<ISchedule> GetSchedulesByEmplId(int id)
+        public List<ScheduleBase> GetSchedulesByEmplId(int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<ISchedule>($"SELECT * FROM schedule WHERE EmployeeID='{id}'").ToList();
+                var output = connection.Query<ScheduleBase>($"SELECT * FROM schedule WHERE EmployeeID='{id}'").ToList();
                 return output;
             }
         }
@@ -422,11 +424,11 @@ namespace Media_Bazaar
 
 
         //EMPLOYEE EMAILS
-        public List<IEmails> GetEmails()
+        public List<EmailModel> GetEmails()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<IEmails>($"SELECT * FROM email").ToList();
+                var output = connection.Query<EmailModel>($"SELECT * FROM email").ToList();
                 return output;
             }
         }
@@ -449,29 +451,29 @@ namespace Media_Bazaar
 
         //LOGIN METHODS
 
-        public List<IEmployeeModel> LoginAdministrator(string username,string password)
+        public List<EmployeeBase> LoginAdministrator(string username,string password)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<IEmployeeModel>($"SELECT Username, Password FROM employee WHERE Username='{username}' AND Password='{password}' AND Position='ADMINISTRATOR';").ToList();
+                var output = connection.Query<EmployeeBase>($"SELECT Username, Password FROM employee WHERE Username='{username}' AND Password='{password}' AND Position='ADMINISTRATOR';").ToList();
                 return output;
             }
         }
 
-        public List<IEmployeeModel> LoginManager(string username, string password)
+        public List<EmployeeBase> LoginManager(string username, string password)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<IEmployeeModel>($"SELECT Username, Password FROM Employee WHERE Username='{username}' AND Password='{password}' AND Position='MANAGER';").ToList();
+                var output = connection.Query<EmployeeBase>($"SELECT Username, Password FROM Employee WHERE Username='{username}' AND Password='{password}' AND Position='MANAGER';").ToList();
                 return output;
             }
         }
 
-        public List<IEmployeeModel> LoginDepotWorker(string username, string password)
+        public List<EmployeeBase> LoginDepotWorker(string username, string password)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<IEmployeeModel>($"SELECT Username, Password FROM Employee WHERE Username='{username}' AND Password='{password}' AND Position='DEPOT';").ToList();
+                var output = connection.Query<EmployeeBase>($"SELECT Username, Password FROM Employee WHERE Username='{username}' AND Password='{password}' AND Position='DEPOT';").ToList();
                 return output;
             }
         }

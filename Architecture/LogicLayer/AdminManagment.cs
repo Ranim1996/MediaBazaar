@@ -12,9 +12,9 @@ namespace Media_Bazaar
     {
         private DataAccess dataAccess = new DataAccess();
         private SendEmail sendEmail = new SendEmail();
-        private IEmployeeModel employeeModel;
+        private EmployeeBase employeeModel;
         Calendar calendar = new Calendar();
-        Schedule schedule = new Schedule();
+        ScheduleBase schedule = new ScheduleBase();
 
         public string CreateNewProfile(string fName, string lName, string dateOfBirth, string email, string phoneNr, string nationality, string pos)
         {
@@ -147,22 +147,22 @@ namespace Media_Bazaar
         //----------------------------------------
 
         
-        public List<IEmployeeModel> GetNotFiredEmployees()
+        public List<EmployeeBase> GetNotFiredEmployees()
         {
             return dataAccess.GetNotFiredEmployees();
-        }
+        } 
 
-        public List<IDepartmentModel> GetAllDepartaments()
+        public List<DepartmentModel> GetAllDepartaments()
         {
             return dataAccess.GetAllDepartaments();
         }
 
-        public List<IRestockRequest> GetAllRestockRequests()
+        public List<RestockRequestBase> GetAllRestockRequests()
         {
             return dataAccess.GetAllRequests();
         }
 
-        public List<IEmails> GetEmails()
+        public List<EmailModel> GetEmails()
         {
             return dataAccess.GetEmails();
         }

@@ -11,8 +11,8 @@ namespace Media_Bazaar
     public class AssignShiftManagment
     {
         DataAccess db = new DataAccess();
-        Schedule schedule = new Schedule();
-        List<ISchedule> dbSchedules = null;
+        ScheduleBase schedule = new ScheduleBase();
+        List<ScheduleBase> dbSchedules = null;
         public void ShowComboBox(DateTime date, ComboBox weekDay, ComboBox saturday, ComboBox sunday)
         {
             if(date.DayOfWeek == DayOfWeek.Sunday)
@@ -43,25 +43,33 @@ namespace Media_Bazaar
             lbShifts.Items.Clear();
             schedule.GetAllSchedules();
             dbSchedules = schedule.allSchedules;
-            foreach(Schedule sch in dbSchedules)
+            if(dbSchedules == null)
             {
-                string firstNameOfEmployee = db.GetFirstNameOfEmployeeById(sch.EmployeeId);
-                if (sch.Date == shiftDate.ToString("dd/MM/yyyy") && sch.Status == status)
+                MessageBox.Show("Cannot open shift for the selected day. Try again!");
+            }
+            else
+            {
+                foreach (ScheduleBase sch in dbSchedules)
                 {
-                    if (sch.Attendance != null)
+                    string firstNameOfEmployee = db.GetFirstNameOfEmployeeById(sch.EmployeeId);
+                    if (sch.Date == shiftDate.ToString("dd/MM/yyyy") && sch.Status == status)
                     {
-                        lbShifts.Items.Add($"{firstNameOfEmployee} - ID({sch.EmployeeId}):{sch.Shift} -> {sch.Attendance}");
-                    }
-                    else
-                    {
-                        lbShifts.Items.Add($"{firstNameOfEmployee} - ID({sch.EmployeeId}):{sch.Shift}");
+                        if (sch.Attendance != null)
+                        {
+                            lbShifts.Items.Add($"{firstNameOfEmployee} - ID({sch.EmployeeId}):{sch.Shift} -> {sch.Attendance}");
+                        }
+                        else
+                        {
+                            lbShifts.Items.Add($"{firstNameOfEmployee} - ID({sch.EmployeeId}):{sch.Shift}");
+                        }
                     }
                 }
             }
+            
         }
         public bool AssignWorkShift(int employeeId, string date, string shift)
         {
-            List<IEmployeeModel> empl = db.GetDBNotFiredEmployeeByID(employeeId);
+            List<EmployeeBase> empl = db.GetDBNotFiredEmployeeByID(employeeId);
             if(empl.Count != 0)
             {
                 db.AddSchedule(employeeId, date, shift);
@@ -80,7 +88,7 @@ namespace Media_Bazaar
             if(lbShifts.SelectedItem != null)
             {
                 holder = lbShifts.SelectedItem.ToString();
-                foreach (Schedule sch in dbSchedules)
+                foreach (ScheduleBase sch in dbSchedules)
                 {
                     if (holder.Contains(sch.EmployeeId.ToString()) && holder.Contains(sch.Shift))
                     {
@@ -100,7 +108,7 @@ namespace Media_Bazaar
             if (lbShifts.SelectedItem != null)
             {
                 holder = lbShifts.SelectedItem.ToString();
-                foreach (Schedule sch in dbSchedules)
+                foreach (ScheduleBase sch in dbSchedules)
                 {
                     if (holder.Contains(sch.EmployeeId.ToString()) && holder.Contains(sch.Shift))
                     {
@@ -131,7 +139,7 @@ namespace Media_Bazaar
             if (lbShiftPreferences.SelectedItem != null)
             {
                 holder = lbShiftPreferences.SelectedItem.ToString();
-                foreach (Schedule sch in dbSchedules)
+                foreach (ScheduleBase sch in dbSchedules)
                 {
                     if (holder.Contains(sch.EmployeeId.ToString()) && holder.Contains(sch.Shift))
                     {

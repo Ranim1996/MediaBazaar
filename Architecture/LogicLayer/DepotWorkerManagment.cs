@@ -10,17 +10,17 @@ namespace Media_Bazaar
     {
         DataAccess dataAccess = new DataAccess();
 
-        public List<IRestockRequest> GetIncomingRestockRequests()
+        public List<RestockRequestBase> GetIncomingRestockRequests()
         {
             return dataAccess.GetAllConfirmedRestock();
         }
 
-        public List<IRestockRequest> GetRejectedRestockRequests()
+        public List<RestockRequestBase> GetRejectedRestockRequests()
         {
             return dataAccess.GetAllRejectedRestock();
         }
 
-        public List<IDepartmentModel> GetDepartments()
+        public List<DepartmentModel> GetDepartments()
         {
             return dataAccess.GetAllDepartaments();
         }

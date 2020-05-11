@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Media_Bazaar
 {
-    public class Emails : IEmails
+    public class Emails : EmailModel
     {
         public int EmailID { get; private set; }
         public int EmployeeID { get; private set; }

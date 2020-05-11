@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Media_Bazaar
 {
-    public class AdministratorModel:IEmployeeModel
+    public class AdministratorModel: EmployeeBase
     {
         public AutoGeneratePassword generatePassword { get; set; } = new AutoGeneratePassword();
         private string username;
@@ -29,11 +29,11 @@ namespace Media_Bazaar
         public string PreferedShiftForTheWeek { get; set; }
         public string ReasonsForRelease { get; set; }
 
-        public string FullInfo
+        public override string FullInfo
         {
             get
             {
-                return $"ID:{EmployeeID} {FirstName} {LastName} {DateOfBirth} {Email} {PhoneNumber} {Nationality} {Position} {Departament} {PreferedShiftForTheWeek})";
+              return base.FullInfo;
             }
         }
 

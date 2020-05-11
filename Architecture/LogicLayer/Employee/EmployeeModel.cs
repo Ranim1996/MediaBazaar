@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace Media_Bazaar
 {
-    public class EmployeeModel : IEmployeeModel
+    public class EmployeeModel : EmployeeBase
     {
         public AutoGeneratePassword generatePassword { get; set; } = new AutoGeneratePassword();
         private string username;
@@ -32,7 +32,7 @@ namespace Media_Bazaar
         {
             get
             {
-                return $"ID:{EmployeeID} {FirstName} {LastName} {DateOfBirth} {Email} {PhoneNumber} {Nationality} {Position} {Departament} {PreferedShiftForTheWeek})";
+                return base.FullInfo;
             }
         }
 

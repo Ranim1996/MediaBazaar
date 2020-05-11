@@ -24,7 +24,7 @@ namespace Media_Bazaar
             InitializeComponent();
             shiftDate = date;
             //db = new DataAccess();
-       
+            assignManager = new AssignShiftManagment();
             tbDate.Text = $"{date.Day}/{date.Month}/{date.Year}, {date.DayOfWeek}";
             this.Text = $"Assign shift on date: {tbDate.Text}";
 

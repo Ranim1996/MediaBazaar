@@ -64,15 +64,15 @@
     <Compile Include="LogicLayer\AssignShiftManagment.cs" />
     <Compile Include="LogicLayer\DepotWorkerManagment.cs" />
     <Compile Include="LogicLayer\Email\Emails.cs" />
-    <Compile Include="LogicLayer\Email\IEmails.cs" />
-    <Compile Include="LogicLayer\Employee\IEmployeeModel.cs" />
+    <Compile Include="LogicLayer\Email\EmailModel.cs" />
+    <Compile Include="LogicLayer\Employee\EmployeeBase.cs" />
     <Compile Include="LogicLayer\LoginManagment.cs" />
     <Compile Include="LogicLayer\ManagerManagment.cs" />
     <Compile Include="LogicLayer\Product\Product.cs" />
     <Compile Include="LogicLayer\Product\ProductBrand.cs" />
-    <Compile Include="LogicLayer\RestockRequest\IRestockRequest.cs" />
+    <Compile Include="LogicLayer\RestockRequest\RestockRequestBase.cs" />
     <Compile Include="LogicLayer\RestockRequest\RestockRequest.cs" />
-    <Compile Include="LogicLayer\Schedule\ISchedule.cs" />
+    <Compile Include="LogicLayer\Schedule\ScheduleBase.cs" />
     <Compile Include="PresentationLayer\AssignShift.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,7 +88,7 @@
     <Compile Include="Classes\Sequrity.cs" />
     <Compile Include="LogicLayer\AdminManagment.cs" />
     <Compile Include="LogicLayer\Departments\Department.cs" />
-    <Compile Include="LogicLayer\Departments\IDepartmentModel.cs" />
+    <Compile Include="LogicLayer\Departments\DepartmentModel.cs" />
     <Compile Include="LogicLayer\EmailSending\SendEmail.cs" />
     <Compile Include="LogicLayer\Employee\Password\AutoGeneratePassword.cs" />
     <Compile Include="LogicLayer\Employee\Password\PasswordGenerator.cs" />

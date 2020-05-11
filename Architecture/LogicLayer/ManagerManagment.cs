@@ -8,39 +8,39 @@ namespace Media_Bazaar
 {
     public class ManagerManagment
     {
-        List<IEmployeeModel> employees = new List<IEmployeeModel>();
-        List<IRestockRequest> restocks = null;
-        List<IEmployeeModel> allEmployees = null;
+        List<EmployeeBase> employees = new List<EmployeeBase>();
+        List<RestockRequestBase> restocks = null;
+        List<EmployeeBase> allEmployees = null;
         List<Schedule> schedules = null;
 
         DataAccess dataAccess = new DataAccess();
 
-        public List<IEmployeeModel> GetEmployeesByLName(string lastName)
+        public List<EmployeeBase> GetEmployeesByLName(string lastName)
         {
             return dataAccess.GetDBEmployeesByLastName(lastName);
         }
 
-        public List<IEmployeeModel> GetNotFiredEmployeesByLName(string lastName)
+        public List<EmployeeBase> GetNotFiredEmployeesByLName(string lastName)
         {
             return dataAccess.GetNotFiredEmployeesByLastName(lastName);
         }
 
-        public List<IEmployeeModel> GetNotFiredEmployeesByID(int id)
+        public List<EmployeeBase> GetNotFiredEmployeesByID(int id)
         {
             return dataAccess.GetNotFiredEmployeesByID(id);
         }
 
-        public List<ISchedule> GetSchedulesByEmplId(int id)
+        public List<ScheduleBase> GetSchedulesByEmplId(int id)
         {
             return dataAccess.GetSchedulesByEmplId(id);
         }
 
-        public List<IEmployeeModel> GetAllEmployees()
+        public List<EmployeeBase> GetAllEmployees()
         {
             return dataAccess.GetAllEmployees();
         }
 
-        public List<ISchedule> GetAllSchedules()
+        public List<ScheduleBase> GetAllSchedules()
         {
             return dataAccess.GetAllSchedules();
         }
@@ -60,7 +60,7 @@ namespace Media_Bazaar
             return dataAccess.GetNumOfLateById(id);
         }
 
-        public List<IRestockRequest> GetAllRestockRequests()
+        public List<RestockRequestBase> GetAllRestockRequests()
         {
             return dataAccess.GetAllRequests();
         }
@@ -72,7 +72,7 @@ namespace Media_Bazaar
         {
             int nrWorking = 0;
 
-            foreach (IEmployeeModel employee in GetAllEmployees())
+            foreach (EmployeeBase employee in GetAllEmployees())
             {
                 if (employee.ReasonsForRelease == null)
                 {
@@ -86,7 +86,7 @@ namespace Media_Bazaar
         {
             int nrFired = 0;
 
-            foreach (IEmployeeModel employee in GetAllEmployees())
+            foreach (EmployeeBase employee in GetAllEmployees())
             {
                 if (employee.ReasonsForRelease != null)
                 {
@@ -100,7 +100,7 @@ namespace Media_Bazaar
         {
             int nrAdmins = 0;
 
-            foreach (IEmployeeModel employee in GetAllEmployees())
+            foreach (EmployeeBase employee in GetAllEmployees())
             {
                 if (employee.Position == "ADMINISTRATOR")
                 {
@@ -114,7 +114,7 @@ namespace Media_Bazaar
         {
             int nrManagers = 0;
 
-            foreach (IEmployeeModel employee in GetAllEmployees())
+            foreach (EmployeeBase employee in GetAllEmployees())
             {
                 if (employee.Position == "MANAGER")
                 {
@@ -128,7 +128,7 @@ namespace Media_Bazaar
         {
             int nrDepotWorkers = 0;
 
-            foreach (IEmployeeModel employee in GetAllEmployees())
+            foreach (EmployeeBase employee in GetAllEmployees())
             {
                 if (employee.Position == "DEPOT")
                 {
@@ -183,7 +183,7 @@ namespace Media_Bazaar
         {
             int nrOfConfirmed = 0;
 
-            foreach (IRestockRequest req in GetAllRestockRequests())
+            foreach (RestockRequestBase req in GetAllRestockRequests())
             {
                 if (req.AdminConfirmation == "CONFIRMED")
                 {
@@ -197,7 +197,7 @@ namespace Media_Bazaar
         {
             int nrOfRejected = 0;
 
-            foreach (IRestockRequest req in GetAllRestockRequests())
+            foreach (RestockRequestBase req in GetAllRestockRequests())
             {
                 if (req.AdminConfirmation == "REJECTED")
                 {
@@ -211,7 +211,7 @@ namespace Media_Bazaar
         {
             int nrOfWaiting = 0;
 
-            foreach (IRestockRequest req in GetAllRestockRequests())
+            foreach (RestockRequestBase req in GetAllRestockRequests())
             {
                 if (req.AdminConfirmation ==null)
                 {

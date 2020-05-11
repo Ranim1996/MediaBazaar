@@ -30,7 +30,7 @@ namespace Media_Bazaar
             CheckPositions();
         }
 
-        private void UpdateList(List<IEmployeeModel> employees)
+        private void UpdateList(List<EmployeeBase> employees)
         {
             checkLbProfile.DataSource = employees;
             checkLbProfile.DisplayMember = "FullInfo";
@@ -165,7 +165,7 @@ namespace Media_Bazaar
             DateTime dateNow = DateTime.Today;
             string[] date = dateNow.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture).Split('/');
 
-            foreach (IEmployeeModel empl in managerManagment.GetNotFiredEmployeesByID(id))
+            foreach (EmployeeBase empl in managerManagment.GetNotFiredEmployeesByID(id))
             {
                 this.lblFirstName.Text = empl.FirstName;
                 this.lblLastName.Text = empl.LastName;
@@ -215,7 +215,7 @@ namespace Media_Bazaar
             string[] date = dateNow.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture).Split('/');
             int employeeId = -1;
 
-            foreach(IEmployeeModel empl in managerManagment.GetEmployeesByLName(lastName))
+            foreach(EmployeeBase empl in managerManagment.GetEmployeesByLName(lastName))
             {
                 this.lblFirstName.Text = empl.FirstName;
                 this.lblLastName.Text = lastName;
