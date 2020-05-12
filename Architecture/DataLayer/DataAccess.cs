@@ -489,14 +489,40 @@ namespace Media_Bazaar
         }
 
         //products
-        public List<Product> GetDBProductInfo(string product)
+        public List<Product> GetFromDBProductInfo(string brand)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<Product>($"SELECT * FROM product WHERE Brand='{product}'").ToList();
+                var output = /*connection.Query<DBProduct>($"SELECT * FROM product WHERE Brand='{brand}'").ToList();*/
+                    connection.Query<Product>($"SELECT p.id, p.product_name, p.Category, p.Brand, r.Departament, r.Quantity " +
+                    $"FROM restockRequest r INNER JOIN product p ON p.id = r.product_id WHERE p.Brand = '{brand}'" +
+                    $"AND r.AdminConfirmation = 'CONFIRMED' ").ToList();
                 return output;
             }
         }
+
+        public List<RestockRequest> GetFromDBRestockInfo(string brand)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<RestockRequest>($"SELECT p.id, p.product_name, p.Category, p.Brand, " +
+                    $"r.Departament, r.Quantity " +
+                    $"FROM restockRequest r INNER JOIN product p ON p.id = r.product_id WHERE p.Brand = '{brand}'" +
+                    $"AND r.AdminConfirmation = 'CONFIRMED' ").ToList();
+                return output;
+            }
+        }
+
+        public List<Product> GetAllProducts()
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<Product>($"SELECT * FROM product").ToList();
+                return output;
+            }
+        }
+
+
 
     }
 }

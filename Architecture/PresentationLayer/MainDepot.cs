@@ -18,9 +18,11 @@ namespace Media_Bazaar
     public partial class MainDepot : Form
     {
         private DepotWorkerManagment depotWorkerManagment = new DepotWorkerManagment();
+        private DataAccess db = new DataAccess();
 
         List<int> restockID = new List<int>();
         List<Product> products = new List<Product>();
+        List<RestockRequest> stocks = new List<RestockRequest>();
 
         public MainDepot()
         {
@@ -39,19 +41,6 @@ namespace Media_Bazaar
             UpdateAllConfirmedStockInfo();
             UpdateAllRejectedStockInfo();
             UpdateProductsList();
-            Combo();
-        }
-
-        private void Combo()
-        {
-            this.cmbBrand.Items.Add(ProductBrand.Amazon);
-            this.cmbBrand.Items.Add(ProductBrand.Apple);
-            this.cmbBrand.Items.Add(ProductBrand.Asus);
-            this.cmbBrand.Items.Add(ProductBrand.HUAWEI);
-            this.cmbBrand.Items.Add(ProductBrand.Microsoft);
-            this.cmbBrand.Items.Add(ProductBrand.MSI);
-            this.cmbBrand.Items.Add(ProductBrand.Razer);
-            this.cmbBrand.Items.Add(ProductBrand.Samsung);
         }
 
         private void UpdateProductsList()
@@ -200,36 +189,49 @@ namespace Media_Bazaar
 
         private void BtnMakeRequest_Click(object sender, EventArgs e)
         {
-            string type = "";
-            string idEmp = "";
-            string orderDate;
-            string orderDeliver = "";
-            string name = "";
-            string quantity = "";
-            string department = "";
+            //need to be fixed.
 
-            idEmp = tbxEmployeeID.Text;
-            name = tbxStockName.Text;
-            department = cmbDepartment.Text.ToString();
-            quantity = tbxStockQuantity.Text;
-            orderDeliver = dtpDateDeliver.Value.ToString("dd/MM/yyyy");
-            orderDate = DateTime.Now.ToShortDateString();
 
-            if (depotWorkerManagment.MakeRestockRequest(idEmp, name, type, department, quantity, orderDate, orderDeliver))
-            {
-                MessageBox.Show("The request is sent to the administration.");
-                clearBoxes1();
-            }
-            else
-            {
-                MessageBox.Show("Fill in all fields correctly!");
-            }
+            //string type = "";
+            //string idEmp = "";
+            //string orderDate;
+            //string orderDeliver = "";
+            //string name = "";
+            //string quantity = "";
+            //string department = "";
+
+            //idEmp = this.tbxEmployeeID.Text;
+            //name = this.tbxProductName.Text;
+            //department = this.cmbDepartment.Text.ToString();
+            //quantity = this.tbxStockQuantity.Text;
+            //orderDeliver = this.dtpDateDeliver.Value.ToString("dd/MM/yyyy");
+            //orderDate = DateTime.Now.ToShortDateString();
+
+            //if (tbxEmployeeID.Text != " " && tbxProductName.Text != " " && tbxStockQuantity.Text != "" && dtpDateDeliver.Value != null)
+            //{
+            //    depotWorkerManagment.MakeRequest(idEmp, name, type, department, quantity, orderDate, orderDeliver);
+            //    MessageBox.Show("Request is sent.");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Something went wrong!");
+            //}
+
+            //if (depotWorkerManagment.MakeRestockRequest(idEmp, name, type, department, quantity, orderDate, orderDeliver))
+            //{
+            //    MessageBox.Show("The request is sent to the administration.");
+            //    clearBoxes1();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Fill in all fields correctly!");
+            //}
         }
 
         private void clearBoxes1()
         {
-            this.cmbType.Text = " ";
-            this.tbxStockName.Text = " ";
+            this.cmbProductCategory.Text = " ";
+            this.tbxProductName.Text = " ";
             this.tbxStockQuantity.Text = " ";
             this.cmbDepartment.Text = " ";
         }
@@ -249,40 +251,30 @@ namespace Media_Bazaar
 
         private void BtnSearchForProduct_Click(object sender, EventArgs e)
         {
-            if (this.cmbBrand.Text != null)
+            products = db.GetFromDBProductInfo(this.cmbBrand.Text);
+            if (products.Count == 0)
             {
-                DataAccess db = new DataAccess();
-                products = db.GetDBProductInfo(this.cmbBrand.Text);
-                if (products.Count == 0)
-                {
-                    MessageBox.Show("We do not have such Brand in our stock.");
-                    this.cmbBrand.Text = "";
-                }
-                else
-                {
-                    UpdateProductsList();
-                    UpdateDetails(this.cmbBrand.Text);
-                    this.clbProducts.Visible = true;
-                    this.btnViewProductsDetails.Visible = true;
-                }
+                MessageBox.Show("We do not have such Brand in our stock.");
+                this.cmbBrand.Text = "";
             }
             else
             {
-                MessageBox.Show("Type the brand first!");
+                UpdateProductsList();
+                UpdateDetails(this.cmbBrand.Text);
+                this.clbProducts.Visible = true;
+                this.btnViewProductsDetails.Visible = true;
             }
+
         }
 
-        private void UpdateDetails(string product)
+        private void UpdateDetails(string brand)
         {
-            DataAccess db = new DataAccess();
-            products = db.GetDBProductInfo(product);
-            foreach (Product p in products)
-            {
-                this.lblProductID.Text = p.id.ToString();
-                this.lblProductBrand.Text = p.Brand;
-                this.lblProductCategory.Text = p.Category;
-                this.lblProductName.Text = p.product_name;
-            }
+            this.lblProductID.Text = depotWorkerManagment.GetProductID(brand).ToString();
+            this.lblProductBrand.Text = depotWorkerManagment.GetProductBrand(brand);
+            this.lblProductCategory.Text = depotWorkerManagment.GetProductCategory(brand);
+            this.lblProductName.Text = depotWorkerManagment.GetProductName(brand);
+            this.lblSearchDepartment.Text = depotWorkerManagment.GetProductDepartment(brand);
+            this.lblSearchQuantity.Text = depotWorkerManagment.GetProductQuantity(brand).ToString();
         }
 
         private void BtnViewProductsDetails_Click(object sender, EventArgs e)
