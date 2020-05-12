@@ -29,84 +29,85 @@ namespace Media_Bazaar
         List<Product> products = new List<Product>();
         List<RestockRequest> stocks = new List<RestockRequest>();
 
-        public bool MakeRestockRequest(string idEmp, string name, string type, string department, string quantity, string orderDate, string orderDeliver)
-        {
-            if (!String.IsNullOrEmpty(idEmp) && !String.IsNullOrEmpty(name) && !String.IsNullOrEmpty(department) && !String.IsNullOrEmpty(quantity) && !String.IsNullOrEmpty(orderDeliver) && !String.IsNullOrEmpty(type))
-            {
-                dataAccess.InsertRequest(Convert.ToInt32(idEmp), name, type, department, Convert.ToInt32(quantity), orderDate, orderDeliver);
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+        //public bool MakeRestockRequest(string idEmp, string name, string type, string department, string quantity, string orderDate, string orderDeliver)
+        //{
+        //    if (!String.IsNullOrEmpty(idEmp) && !String.IsNullOrEmpty(name) && !String.IsNullOrEmpty(department) && !String.IsNullOrEmpty(quantity) && !String.IsNullOrEmpty(orderDeliver) && !String.IsNullOrEmpty(type))
+        //    {
+        //        dataAccess.InsertRequest(Convert.ToInt32(idEmp), name, type, department, Convert.ToInt32(quantity), orderDate, orderDeliver);
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
+        //}
 
-        public void MakeRequest(string idEmp, string name, string type, string department, string quantity, string orderDate, string orderDeliver)
+        public void MakeRequest(string idEmp, string name, string category, string brand, string department, string quantity, string orderDate, string orderDeliver)
         {
-            if (!String.IsNullOrEmpty(idEmp) && !String.IsNullOrEmpty(name) && !String.IsNullOrEmpty(department) && !String.IsNullOrEmpty(quantity) && !String.IsNullOrEmpty(orderDeliver) && !String.IsNullOrEmpty(type))
+            if (!String.IsNullOrEmpty(idEmp) && !String.IsNullOrEmpty(name) && !String.IsNullOrEmpty(department) 
+                && !String.IsNullOrEmpty(quantity) && !String.IsNullOrEmpty(orderDeliver) && !String.IsNullOrEmpty(category)
+                 && !String.IsNullOrEmpty(brand))
             {
-                dataAccess.InsertRequest(Convert.ToInt32(idEmp), name, type, department, Convert.ToInt32(quantity), orderDate, orderDeliver);
-                
+                dataAccess.InsertRequest(Convert.ToInt32(idEmp), name, category, brand, department, Convert.ToInt32(quantity), orderDate, orderDeliver);
             }
         }
 
         public int GetProductID(string brand)
         {
-            products = dataAccess.GetFromDBProductInfo(brand);
-            foreach (Product p in products)
+            stocks = dataAccess.GetProductInfo(brand);
+            foreach (RestockRequest s in stocks)
             {
-                return p.id;
+                return s.RequestID;
             }
             return -1;
         }
 
         public string GetProductBrand(string brand)
         {
-            products = dataAccess.GetFromDBProductInfo(brand);
-            foreach (Product p in products)
+            stocks = dataAccess.GetProductInfo(brand);
+            foreach (RestockRequest s in stocks)
             {
-                return p.Brand;
+                return s.Brand;
             }
             return null;
         }
 
         public string GetProductName(string brand)
         {
-            products = dataAccess.GetFromDBProductInfo(brand);
-            foreach (Product p in products)
+            stocks = dataAccess.GetProductInfo(brand);
+            foreach (RestockRequest s in stocks)
             {
-                return p.product_name;
+                return s.ProductName;
             }
             return null;
         }
 
         public string GetProductCategory(string brand)
         {
-            products = dataAccess.GetFromDBProductInfo(brand);
-            foreach (Product p in products)
+            stocks = dataAccess.GetProductInfo(brand);
+            foreach (RestockRequest s in stocks)
             {
-                return p.Category;
+                return s.Category;
             }
             return null;
         }
 
         public string GetProductDepartment(string brand)
         {
-            stocks = dataAccess.GetFromDBRestockInfo(brand);
-            foreach (RestockRequest r in stocks)
+            stocks = dataAccess.GetProductInfo(brand);
+            foreach (RestockRequest s in stocks)
             {
-                return r.Departament;
+                return s.Departament;
             }
             return null;
         }
 
         public int GetProductQuantity(string brand)
         {
-            stocks = dataAccess.GetFromDBRestockInfo(brand);
-            foreach (RestockRequest r in stocks)
+            stocks = dataAccess.GetProductInfo(brand);
+            foreach (RestockRequest s in stocks)
             {
-                return r.Quantity;
+                return s.Quantity;
             }
             return -1;
         }
@@ -124,6 +125,11 @@ namespace Media_Bazaar
         public string GetDepartmentByStockId(int id)
         {
             return dataAccess.GetDBDepartmentByStockId(id);
+        }
+
+        public string GetBrandByStockId(int id)
+        {
+            return dataAccess.GetDBBrandByStockId(id);
         }
 
         public string GetStockQuantityById(int id)

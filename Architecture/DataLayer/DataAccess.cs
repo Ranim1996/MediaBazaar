@@ -181,7 +181,7 @@ namespace Media_Bazaar
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                return connection.ExecuteScalar<string>($"SELECT NameOfStock FROM RestockRequest WHERE RequestID ='{id}';");
+                return connection.ExecuteScalar<string>($"SELECT ProductName FROM RestockRequest WHERE RequestID ='{id}';");
             }
         }
 
@@ -190,7 +190,7 @@ namespace Media_Bazaar
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                return connection.ExecuteScalar<string>($"SELECT TypeOfStock FROM RestockRequest WHERE RequestID ='{id}';");
+                return connection.ExecuteScalar<string>($"SELECT Category FROM RestockRequest WHERE RequestID ='{id}';");
             }
         }
 
@@ -200,6 +200,15 @@ namespace Media_Bazaar
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
                 return connection.ExecuteScalar<string>($"SELECT Departament FROM RestockRequest WHERE RequestID ='{id}';");
+            }
+        }
+
+        //get brand by the given stock id.
+        public string GetDBBrandByStockId(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT Brand FROM RestockRequest WHERE RequestID ='{id}';");
             }
         }
 
@@ -271,11 +280,11 @@ namespace Media_Bazaar
         //}
 
         // add request to Restock request table in data base.
-        public void InsertRequest(int idE, string name, string type, string department, int quantity, string orderDate, string orderDeliver)
+        public void InsertRequest(int idE, string name, string category, string brand, string department, int quantity, string orderDate, string orderDeliver)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                connection.Execute($"INSERT INTO RestockRequest(EmployeeID, NameOfStock, TypeOfStock, Departament, Quantity, DateOfOrder, DateOfDelivery) VALUES ('{idE}' , '{name}' , '{type}', '{department}', '{quantity}','{orderDate}', '{orderDeliver}');");
+                connection.Execute($"INSERT INTO RestockRequest(EmployeeID, ProductName, Category, Brand, Departament, Quantity, DateOfOrder, DateOfDelivery) VALUES ('{idE}' , '{name}' , '{category}', '{brand}' , '{department}', '{quantity}','{orderDate}', '{orderDeliver}');");
             }
         }
 
@@ -284,7 +293,7 @@ namespace Media_Bazaar
         //{
         //    using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
         //    {
-        //        connection.Execute($"INSERT INTO RestockRequest(RequestID, EmployeeID, NameOfStock,TypeOfStock, Departament, Quantity, DateOfOrder, DateOfDelivery) VALUES ('{idS}' , '{idE}' , '{name}', '{type}', '{department}' ,'{quantity}','{orderDate}', '{orderDeliver}');");
+        //        connection.Execute($"INSERT INTO RestockRequest(RequestID, EmployeeID, ProductName,Category, Departament, Quantity, DateOfOrder, DateOfDelivery) VALUES ('{idS}' , '{idE}' , '{name}', '{type}', '{department}' ,'{quantity}','{orderDate}', '{orderDeliver}');");
         //    }
         //}
 
@@ -489,38 +498,37 @@ namespace Media_Bazaar
         }
 
         //products
-        public List<Product> GetFromDBProductInfo(string brand)
+
+        //public List<Product> GetFromDBProductInfo(string brand)
+        //{
+        //    using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+        //    {
+        //        var output = /*connection.Query<DBProduct>($"SELECT * FROM product WHERE Brand='{brand}'").ToList();*/
+        //            connection.Query<Product>($"SELECT p.id, p.product_name, p.Category, p.Brand, r.Departament, r.Quantity " +
+        //            $"FROM restockRequest r INNER JOIN product p ON p.id = r.product_id WHERE p.Brand = '{brand}'" +
+        //            $"AND r.AdminConfirmation = 'CONFIRMED' ").ToList();
+        //        return output;
+        //    }
+        //}
+
+        public List<RestockRequest> GetProductInfo(string brand)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = /*connection.Query<DBProduct>($"SELECT * FROM product WHERE Brand='{brand}'").ToList();*/
-                    connection.Query<Product>($"SELECT p.id, p.product_name, p.Category, p.Brand, r.Departament, r.Quantity " +
-                    $"FROM restockRequest r INNER JOIN product p ON p.id = r.product_id WHERE p.Brand = '{brand}'" +
-                    $"AND r.AdminConfirmation = 'CONFIRMED' ").ToList();
+                var output = connection.Query<RestockRequest>($"SELECT * FROM restockrequest WHERE Brand = '{brand}'" +
+                    $"AND AdminConfirmation = 'CONFIRMED' ").ToList();
                 return output;
             }
         }
 
-        public List<RestockRequest> GetFromDBRestockInfo(string brand)
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                var output = connection.Query<RestockRequest>($"SELECT p.id, p.product_name, p.Category, p.Brand, " +
-                    $"r.Departament, r.Quantity " +
-                    $"FROM restockRequest r INNER JOIN product p ON p.id = r.product_id WHERE p.Brand = '{brand}'" +
-                    $"AND r.AdminConfirmation = 'CONFIRMED' ").ToList();
-                return output;
-            }
-        }
-
-        public List<Product> GetAllProducts()
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                var output = connection.Query<Product>($"SELECT * FROM product").ToList();
-                return output;
-            }
-        }
+        //public List<Product> GetAllProducts()
+        //{
+        //    using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+        //    {
+        //        var output = connection.Query<Product>($"SELECT * FROM product").ToList();
+        //        return output;
+        //    }
+        //}
 
 
 

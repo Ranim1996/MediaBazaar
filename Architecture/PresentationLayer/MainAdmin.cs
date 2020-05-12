@@ -520,5 +520,10 @@ namespace Media_Bazaar
         {
 
         }
+
+        private void CheckedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

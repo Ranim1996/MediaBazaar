@@ -9,10 +9,10 @@ namespace Media_Bazaar
     public class RestockRequest : RestockRequestBase
     {
         public int RequestID { get; set; }
-        public int product_id { get; set; }
+        public string Brand { get; set; }
         public int EmployeeID { get; set; }
-        public string NameOfStock { get; set; }
-        public string TypeOfStock { get; set; }
+        public string ProductName { get; set; }
+        public string Category { get; set; }
         public string Departament { get; set; }
         public int Quantity { get; set; }
         public string DateOfOrder { get; set; }
@@ -25,6 +25,14 @@ namespace Media_Bazaar
             get
             {
                 return base.FullInfo;
+            }
+        }
+
+        public string Info
+        {
+            get
+            {
+                return "ID:" + this.RequestID + " " + this.ProductName + " " + this.Brand ;
             }
         }
     }
