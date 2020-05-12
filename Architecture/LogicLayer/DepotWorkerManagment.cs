@@ -52,6 +52,14 @@ namespace Media_Bazaar
             }
         }
 
+        public void UpdateData(int id, string newquantity)
+        {
+            if (!String.IsNullOrEmpty(newquantity))
+            {
+                dataAccess.UpdataData(id, Convert.ToInt32(newquantity));
+            }
+        }
+
         public int GetProductID(string brand)
         {
             stocks = dataAccess.GetProductInfo(brand);

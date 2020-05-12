@@ -60,6 +60,7 @@ namespace Media_Bazaar
             }
         }
 
+
         //get the employee id via name.
         public int GetIdOfEmployeeByName(string fName, string lName)
         {
@@ -285,6 +286,14 @@ namespace Media_Bazaar
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
                 connection.Execute($"INSERT INTO RestockRequest(EmployeeID, ProductName, Category, Brand, Departament, Quantity, DateOfOrder, DateOfDelivery) VALUES ('{idE}' , '{name}' , '{category}', '{brand}' , '{department}', '{quantity}','{orderDate}', '{orderDeliver}');");
+            }
+        }
+
+        public void UpdataData(int id, int quantity)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                connection.Execute($"UPDATE RestockRequest SET Quantity='{quantity}' WHERE RequestID='{id}'; ");
             }
         }
 

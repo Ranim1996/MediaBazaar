@@ -93,10 +93,12 @@ namespace Media_Bazaar
         private void UpdateAllConfirmedStockInfo()
         {
             this.clbAllConfirmedRequests.Items.Clear();
+            this.clbData.Items.Clear();
 
             foreach (RestockRequestBase dBr in depotWorkerManagment.GetIncomingRestockRequests())
             {
                 this.clbAllConfirmedRequests.Items.Add(dBr.FullInfo);
+                this.clbData.Items.Add(dBr.FullInfo);
             }
         }
 
@@ -308,5 +310,71 @@ namespace Media_Bazaar
                 }
             }
         }
+
+        private void DataToChange()
+        {
+            foreach (int i in restockID)
+            {
+                if (this.clbData.SelectedItem != null)
+                {
+                    string stock = this.clbData.GetItemText(this.clbData.SelectedItem);
+
+                    if (stock.Contains($"ID:{i}"))
+                    {
+                        this.tbxProductName.Text = depotWorkerManagment.GetStockNameById(i);
+                        this.cmbProductCategory.Text = depotWorkerManagment.GetStockTypeById(i);
+                        this.cmbDepartment.Text = depotWorkerManagment.GetDepartmentByStockId(i);
+                        this.tbxStockQuantity.Text = depotWorkerManagment.GetStockQuantityById(i);
+                        this.cmbProductBrand.Text = depotWorkerManagment.GetBrandByStockId(i);
+                    }
+                }
+            }
+        }
+
+        private void ClbData_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.clbData.CheckedItems.Count == 0)
+            {
+                this.btnUpdateData.Visible = false;
+                this.btnMakeRequest.Visible = true;
+                this.dtpDateDeliver.Enabled = true;
+                this.tbxProductName.Enabled = true;
+                this.cmbProductCategory.Enabled = true;
+                this.cmbProductBrand.Enabled = true;
+                this.cmbDepartment.Enabled = true;
+                this.tbxEmployeeID.Enabled = true;
+            }
+            else
+            {
+                this.btnUpdateData.Visible = true;
+                this.btnMakeRequest.Visible = false;
+                this.dtpDateDeliver.Enabled = false;
+                this.tbxProductName.Enabled = false;
+                this.cmbProductCategory.Enabled = false;
+                this.cmbProductBrand.Enabled = false;
+                this.cmbDepartment.Enabled = false;
+                this.tbxEmployeeID.Enabled = false;
+                DataToChange();
+            }
+        }
+
+        private void BtnUpdateData_Click(object sender, EventArgs e)
+        {
+            foreach (int i in restockID)
+            {
+                if (this.clbData.SelectedItem != null)
+                {
+                    string stock = this.clbData.GetItemText(this.clbData.SelectedItem);
+
+                    if (stock.Contains($"ID:{i}"))
+                    {
+                        depotWorkerManagment.UpdateData(i , this.tbxStockQuantity.Text);
+                        MessageBox.Show("Data is updated.");
+                        clearBoxes1();
+                    }
+                }
+            }
+        }
+
     }
 }
