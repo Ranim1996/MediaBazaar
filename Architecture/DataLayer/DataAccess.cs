@@ -361,7 +361,7 @@ namespace Media_Bazaar
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<ScheduleBase>($"SELECT * FROM schedule WHERE EmployeeID='{id}'").ToList();
+                var output = connection.Query<ScheduleBase>($"SELECT * FROM schedule WHERE EmployeeID='{id}' AND NOT Status='Cancelled'").ToList();
                 return output;
             }
         }

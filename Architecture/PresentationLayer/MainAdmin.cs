@@ -208,7 +208,7 @@ namespace Media_Bazaar
             }
             else if (rbDepotWorker.Checked)
             {
-                pos = "DEPOTWORKER";
+                pos = "DEPOT";
             }
             else if (rbEmployee.Checked)
             {
@@ -217,7 +217,7 @@ namespace Media_Bazaar
 
             if (adminManagment.CreateNewProfile(tbFirstName.Text, tbLastName.Text, tbDateOfBirth.Value.ToShortDateString(), tbEmail.Text, tbPhoneNr.Text, tbNationality.Text, pos) != null)
             {
-                rtbEmployeeCred.Text = adminManagment.CreateNewProfile(tbFirstName.Text, tbLastName.Text, tbDateOfBirth.Value.ToShortDateString(), tbEmail.Text, tbPhoneNr.Text, tbNationality.Text, pos);
+                label13.Text = adminManagment.CreateNewProfile(tbFirstName.Text, tbLastName.Text, tbDateOfBirth.Value.ToShortDateString(), tbEmail.Text, tbPhoneNr.Text, tbNationality.Text, pos);
             }
             else
             {
@@ -524,6 +524,17 @@ namespace Media_Bazaar
         private void CheckedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCreateProf_Click(object sender, EventArgs e)
+        {
+            tbFirstName.Clear();
+            tbLastName.Clear();
+            tbEmail.Clear();
+            tbPhoneNr.Clear();
+            label13.Text = "";
+            tbNationality.Items.Clear();
+            MessageBox.Show("The account has been successfully created!");
         }
     }
 }

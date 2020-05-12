@@ -142,7 +142,7 @@ namespace Media_Bazaar
         {
             int nrOfPresent = 0;
 
-            foreach (Schedule sch in GetAllSchedules())
+            foreach (ScheduleBase sch in GetAllSchedules())
             {
                 if (sch.Attendance == "PRESENT")
                 {
@@ -155,7 +155,7 @@ namespace Media_Bazaar
         public int NumberOfLate()
         {
             int nrOfLate = 0;
-            foreach (Schedule sch in GetAllSchedules())
+            foreach (ScheduleBase sch in GetAllSchedules())
             {
                 if (sch.Attendance == "LATE")
                 {
@@ -169,7 +169,7 @@ namespace Media_Bazaar
         {
             int nrOfAbsent = 0;
 
-            foreach (Schedule sch in GetAllSchedules())
+            foreach (ScheduleBase sch in GetAllSchedules())
             {
                 if (sch.Attendance == "ABSENT")
                 {

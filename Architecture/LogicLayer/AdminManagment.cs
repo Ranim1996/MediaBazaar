@@ -32,19 +32,19 @@ namespace Media_Bazaar
         {         
             if(pos== "ADMINISTRATOR")
             {
-                employeeModel = new AdministratorModel {FirstName=fName, LastName=lName,DateOfBirth=dateOfBirth,Email=email,PhoneNumber=phoneNr,Nationality=nationality };
+                employeeModel = new EmployeeBase {FirstName=fName, LastName=lName,DateOfBirth=dateOfBirth,Email=email,PhoneNumber=phoneNr,Nationality=nationality, Position=pos };
             }
             else if(pos== "MANAGER")
             {
-                employeeModel = new ManagerModel { FirstName = fName, LastName = lName, DateOfBirth = dateOfBirth, Email = email, PhoneNumber = phoneNr, Nationality = nationality };
+                employeeModel = new EmployeeBase { FirstName = fName, LastName = lName, DateOfBirth = dateOfBirth, Email = email, PhoneNumber = phoneNr, Nationality = nationality, Position = pos };
             }
-            else if (pos == "DEPOTWORKER")
+            else if (pos == "DEPOT")
             {
-                employeeModel = new DepotWorkerModel { FirstName = fName, LastName = lName, DateOfBirth = dateOfBirth, Email = email, PhoneNumber = phoneNr, Nationality = nationality };
+                employeeModel = new EmployeeBase { FirstName = fName, LastName = lName, DateOfBirth = dateOfBirth, Email = email, PhoneNumber = phoneNr, Nationality = nationality, Position = pos };
             }
             else if (pos == "EMPLOYEE")
             {
-                employeeModel = new EmployeeModel { FirstName = fName, LastName = lName, DateOfBirth = dateOfBirth, Email = email, PhoneNumber = phoneNr, Nationality = nationality };
+                employeeModel = new EmployeeBase { FirstName = fName, LastName = lName, DateOfBirth = dateOfBirth, Email = email, PhoneNumber = phoneNr, Nationality = nationality };
             }
 
             dataAccess.InsertEmployee(fName, lName, dateOfBirth, email, phoneNr, nationality, employeeModel.Position, employeeModel.Username, employeeModel.Password);

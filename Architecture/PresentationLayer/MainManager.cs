@@ -176,7 +176,7 @@ namespace Media_Bazaar
                 this.lblDateOfBirth.Text = empl.DateOfBirth;
             }
 
-            foreach (Schedule sch in managerManagment.GetSchedulesByEmplId(id))
+            foreach (ScheduleBase sch in managerManagment.GetSchedulesByEmplId(id))
             {
                 string[] dateShift = sch.Date.Split('/');
                 if (((dateShift[2] == date[2]) && (dateShift[1] == date[1]) && (Convert.ToInt32(dateShift[0]) >= Convert.ToInt32(date[0]))))
@@ -227,7 +227,7 @@ namespace Media_Bazaar
                 employeeId = empl.EmployeeID;
             }
            
-            foreach(Schedule sch in managerManagment.GetSchedulesByEmplId(employeeId))
+            foreach(ScheduleBase sch in managerManagment.GetSchedulesByEmplId(employeeId))
             {
                 string[] dateShift = sch.Date.Split('/');
                 if(((dateShift[2] == date[2]) && (dateShift[1] == date[1]) && (Convert.ToInt32(dateShift[0]) >= Convert.ToInt32(date[0]) )) )
