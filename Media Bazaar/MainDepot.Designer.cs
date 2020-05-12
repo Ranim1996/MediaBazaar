@@ -30,24 +30,24 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainDepot));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabMakeReq = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel27 = new System.Windows.Forms.TableLayoutPanel();
@@ -90,6 +90,7 @@
             this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.cmbBrand = new System.Windows.Forms.ComboBox();
             this.label27 = new System.Windows.Forms.Label();
             this.btnViewProductsDetails = new Bunifu.Framework.UI.BunifuFlatButton();
             this.clbProducts = new System.Windows.Forms.CheckedListBox();
@@ -109,6 +110,8 @@
             this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblQuantity = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.lblProductCategory = new System.Windows.Forms.Label();
             this.lblProductBrand = new System.Windows.Forms.Label();
             this.lblProductName = new System.Windows.Forms.Label();
@@ -216,7 +219,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.timerChangeMenuColor = new System.Windows.Forms.Timer(this.components);
-            this.cmbBrand = new System.Windows.Forms.ComboBox();
+            this.lblProductDepartment = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabMakeReq.SuspendLayout();
             this.tableLayoutPanel27.SuspendLayout();
@@ -296,7 +300,7 @@
             this.tabMakeReq.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabMakeReq.Name = "tabMakeReq";
             this.tabMakeReq.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabMakeReq.Size = new System.Drawing.Size(1879, 740);
+            this.tabMakeReq.Size = new System.Drawing.Size(1783, 740);
             this.tabMakeReq.TabIndex = 10;
             this.tabMakeReq.Text = "Request";
             this.tabMakeReq.UseVisualStyleBackColor = true;
@@ -315,7 +319,7 @@
             this.tableLayoutPanel27.Name = "tableLayoutPanel27";
             this.tableLayoutPanel27.RowCount = 1;
             this.tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel27.Size = new System.Drawing.Size(1873, 736);
+            this.tableLayoutPanel27.Size = new System.Drawing.Size(1777, 736);
             this.tableLayoutPanel27.TabIndex = 20;
             // 
             // tableLayoutPanel1
@@ -339,7 +343,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(413, 732);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(391, 732);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // btnLogOutTABrequest
@@ -371,7 +375,7 @@
             this.btnLogOutTABrequest.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnLogOutTABrequest.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogOutTABrequest.selected = false;
-            this.btnLogOutTABrequest.Size = new System.Drawing.Size(403, 67);
+            this.btnLogOutTABrequest.Size = new System.Drawing.Size(381, 67);
             this.btnLogOutTABrequest.TabIndex = 10;
             this.btnLogOutTABrequest.Text = "LOG OUT";
             this.btnLogOutTABrequest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -408,7 +412,7 @@
             this.btnMakeReqTABrequest.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnMakeReqTABrequest.OnHoverTextColor = System.Drawing.Color.White;
             this.btnMakeReqTABrequest.selected = false;
-            this.btnMakeReqTABrequest.Size = new System.Drawing.Size(403, 99);
+            this.btnMakeReqTABrequest.Size = new System.Drawing.Size(381, 99);
             this.btnMakeReqTABrequest.TabIndex = 5;
             this.btnMakeReqTABrequest.Text = "Make Request";
             this.btnMakeReqTABrequest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -422,7 +426,7 @@
             this.pictureBox3.Location = new System.Drawing.Point(3, 2);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(407, 215);
+            this.pictureBox3.Size = new System.Drawing.Size(385, 215);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
@@ -456,7 +460,7 @@
             this.btnIncomingStockTABrequest.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnIncomingStockTABrequest.OnHoverTextColor = System.Drawing.Color.White;
             this.btnIncomingStockTABrequest.selected = false;
-            this.btnIncomingStockTABrequest.Size = new System.Drawing.Size(403, 99);
+            this.btnIncomingStockTABrequest.Size = new System.Drawing.Size(381, 99);
             this.btnIncomingStockTABrequest.TabIndex = 2;
             this.btnIncomingStockTABrequest.Text = "Stock";
             this.btnIncomingStockTABrequest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -493,7 +497,7 @@
             this.btnStockTABrequest.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnStockTABrequest.OnHoverTextColor = System.Drawing.Color.White;
             this.btnStockTABrequest.selected = false;
-            this.btnStockTABrequest.Size = new System.Drawing.Size(403, 99);
+            this.btnStockTABrequest.Size = new System.Drawing.Size(381, 99);
             this.btnStockTABrequest.TabIndex = 6;
             this.btnStockTABrequest.Text = "History Stock Requests";
             this.btnStockTABrequest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -509,13 +513,13 @@
             this.tableLayoutPanel9.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.panel3, 0, 1);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(422, 2);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(400, 2);
             this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 2;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(1448, 732);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(1374, 732);
             this.tableLayoutPanel9.TabIndex = 1;
             // 
             // label2
@@ -527,7 +531,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1442, 109);
+            this.label2.Size = new System.Drawing.Size(1368, 109);
             this.label2.TabIndex = 0;
             this.label2.Text = "Make Request";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -540,7 +544,7 @@
             this.panel3.Location = new System.Drawing.Point(3, 111);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1442, 619);
+            this.panel3.Size = new System.Drawing.Size(1368, 619);
             this.panel3.TabIndex = 1;
             // 
             // tableLayoutPanel15
@@ -554,8 +558,8 @@
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
             this.tableLayoutPanel15.RowCount = 1;
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 553F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(1442, 619);
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 619F));
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(1368, 619);
             this.tableLayoutPanel15.TabIndex = 0;
             // 
             // panel7
@@ -566,7 +570,7 @@
             this.panel7.Location = new System.Drawing.Point(3, 2);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1436, 615);
+            this.panel7.Size = new System.Drawing.Size(1362, 615);
             this.panel7.TabIndex = 1;
             // 
             // panel16
@@ -768,7 +772,7 @@
             this.tabIncomingStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabIncomingStock.Name = "tabIncomingStock";
             this.tabIncomingStock.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabIncomingStock.Size = new System.Drawing.Size(1879, 740);
+            this.tabIncomingStock.Size = new System.Drawing.Size(1783, 740);
             this.tabIncomingStock.TabIndex = 11;
             this.tabIncomingStock.Text = "Products";
             this.tabIncomingStock.UseVisualStyleBackColor = true;
@@ -787,7 +791,7 @@
             this.tableLayoutPanel16.Name = "tableLayoutPanel16";
             this.tableLayoutPanel16.RowCount = 1;
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(1873, 736);
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(1777, 736);
             this.tableLayoutPanel16.TabIndex = 21;
             // 
             // tableLayoutPanel17
@@ -811,7 +815,7 @@
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(413, 732);
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(391, 732);
             this.tableLayoutPanel17.TabIndex = 0;
             // 
             // btnLogOutTABincomingStock
@@ -843,7 +847,7 @@
             this.btnLogOutTABincomingStock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnLogOutTABincomingStock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogOutTABincomingStock.selected = false;
-            this.btnLogOutTABincomingStock.Size = new System.Drawing.Size(403, 67);
+            this.btnLogOutTABincomingStock.Size = new System.Drawing.Size(381, 67);
             this.btnLogOutTABincomingStock.TabIndex = 11;
             this.btnLogOutTABincomingStock.Text = "LOG OUT";
             this.btnLogOutTABincomingStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -880,7 +884,7 @@
             this.btnMakeReqTABincomingStock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnMakeReqTABincomingStock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnMakeReqTABincomingStock.selected = false;
-            this.btnMakeReqTABincomingStock.Size = new System.Drawing.Size(403, 99);
+            this.btnMakeReqTABincomingStock.Size = new System.Drawing.Size(381, 99);
             this.btnMakeReqTABincomingStock.TabIndex = 5;
             this.btnMakeReqTABincomingStock.Text = "Make Request";
             this.btnMakeReqTABincomingStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -895,7 +899,7 @@
             this.pictureBox4.Location = new System.Drawing.Point(3, 2);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(407, 215);
+            this.pictureBox4.Size = new System.Drawing.Size(385, 215);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
@@ -929,7 +933,7 @@
             this.btnIncomingStockTABincomingStock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnIncomingStockTABincomingStock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnIncomingStockTABincomingStock.selected = false;
-            this.btnIncomingStockTABincomingStock.Size = new System.Drawing.Size(403, 99);
+            this.btnIncomingStockTABincomingStock.Size = new System.Drawing.Size(381, 99);
             this.btnIncomingStockTABincomingStock.TabIndex = 2;
             this.btnIncomingStockTABincomingStock.Text = "Stock";
             this.btnIncomingStockTABincomingStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -966,7 +970,7 @@
             this.btnStockTABincomingStock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnStockTABincomingStock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnStockTABincomingStock.selected = false;
-            this.btnStockTABincomingStock.Size = new System.Drawing.Size(403, 99);
+            this.btnStockTABincomingStock.Size = new System.Drawing.Size(381, 99);
             this.btnStockTABincomingStock.TabIndex = 6;
             this.btnStockTABincomingStock.Text = "History Stock Requests";
             this.btnStockTABincomingStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -982,13 +986,13 @@
             this.tableLayoutPanel18.Controls.Add(this.label4, 0, 0);
             this.tableLayoutPanel18.Controls.Add(this.panel8, 0, 1);
             this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel18.Location = new System.Drawing.Point(422, 2);
+            this.tableLayoutPanel18.Location = new System.Drawing.Point(400, 2);
             this.tableLayoutPanel18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel18.Name = "tableLayoutPanel18";
             this.tableLayoutPanel18.RowCount = 2;
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel18.Size = new System.Drawing.Size(1448, 732);
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(1374, 732);
             this.tableLayoutPanel18.TabIndex = 1;
             // 
             // label4
@@ -1000,7 +1004,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(1442, 109);
+            this.label4.Size = new System.Drawing.Size(1368, 109);
             this.label4.TabIndex = 0;
             this.label4.Text = "Incoming Stock";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1013,7 +1017,7 @@
             this.panel8.Location = new System.Drawing.Point(3, 111);
             this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1442, 619);
+            this.panel8.Size = new System.Drawing.Size(1368, 619);
             this.panel8.TabIndex = 1;
             // 
             // tableLayoutPanel19
@@ -1028,7 +1032,7 @@
             this.tableLayoutPanel19.RowCount = 1;
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 619F));
-            this.tableLayoutPanel19.Size = new System.Drawing.Size(1442, 619);
+            this.tableLayoutPanel19.Size = new System.Drawing.Size(1368, 619);
             this.tableLayoutPanel19.TabIndex = 0;
             // 
             // panel9
@@ -1040,7 +1044,7 @@
             this.panel9.Location = new System.Drawing.Point(3, 2);
             this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1436, 615);
+            this.panel9.Size = new System.Drawing.Size(1362, 615);
             this.panel9.TabIndex = 1;
             // 
             // panel17
@@ -1054,8 +1058,16 @@
             this.panel17.Location = new System.Drawing.Point(0, 0);
             this.panel17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(1436, 615);
+            this.panel17.Size = new System.Drawing.Size(1362, 615);
             this.panel17.TabIndex = 4;
+            // 
+            // cmbBrand
+            // 
+            this.cmbBrand.FormattingEnabled = true;
+            this.cmbBrand.Location = new System.Drawing.Point(363, 111);
+            this.cmbBrand.Name = "cmbBrand";
+            this.cmbBrand.Size = new System.Drawing.Size(390, 30);
+            this.cmbBrand.TabIndex = 12;
             // 
             // label27
             // 
@@ -1097,7 +1109,7 @@
             this.btnViewProductsDetails.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnViewProductsDetails.OnHoverTextColor = System.Drawing.Color.White;
             this.btnViewProductsDetails.selected = false;
-            this.btnViewProductsDetails.Size = new System.Drawing.Size(1386, 47);
+            this.btnViewProductsDetails.Size = new System.Drawing.Size(1312, 47);
             this.btnViewProductsDetails.TabIndex = 8;
             this.btnViewProductsDetails.Text = "View Product";
             this.btnViewProductsDetails.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1116,7 +1128,7 @@
             this.clbProducts.Location = new System.Drawing.Point(36, 262);
             this.clbProducts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.clbProducts.Name = "clbProducts";
-            this.clbProducts.Size = new System.Drawing.Size(1384, 179);
+            this.clbProducts.Size = new System.Drawing.Size(1310, 179);
             this.clbProducts.TabIndex = 7;
             this.clbProducts.Visible = false;
             // 
@@ -1150,7 +1162,7 @@
             this.btnSearchForProduct.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnSearchForProduct.OnHoverTextColor = System.Drawing.Color.White;
             this.btnSearchForProduct.selected = false;
-            this.btnSearchForProduct.Size = new System.Drawing.Size(707, 44);
+            this.btnSearchForProduct.Size = new System.Drawing.Size(633, 44);
             this.btnSearchForProduct.TabIndex = 6;
             this.btnSearchForProduct.Text = "Search";
             this.btnSearchForProduct.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1180,7 +1192,7 @@
             this.btnCheckIncomingStock.IconVisible = false;
             this.btnCheckIncomingStock.IconZoom = 90D;
             this.btnCheckIncomingStock.IsTab = false;
-            this.btnCheckIncomingStock.Location = new System.Drawing.Point(523, 697);
+            this.btnCheckIncomingStock.Location = new System.Drawing.Point(486, 697);
             this.btnCheckIncomingStock.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.btnCheckIncomingStock.Name = "btnCheckIncomingStock";
             this.btnCheckIncomingStock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
@@ -1461,7 +1473,7 @@
             this.tableLayoutPanel23.Name = "tableLayoutPanel23";
             this.tableLayoutPanel23.RowCount = 1;
             this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 553F));
+            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 619F));
             this.tableLayoutPanel23.Size = new System.Drawing.Size(1368, 619);
             this.tableLayoutPanel23.TabIndex = 0;
             // 
@@ -1479,6 +1491,10 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.groupBox3.Controls.Add(this.lblProductDepartment);
+            this.groupBox3.Controls.Add(this.label19);
+            this.groupBox3.Controls.Add(this.lblQuantity);
+            this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.lblProductCategory);
             this.groupBox3.Controls.Add(this.lblProductBrand);
             this.groupBox3.Controls.Add(this.lblProductName);
@@ -1496,6 +1512,24 @@
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Product Details:";
+            // 
+            // lblQuantity
+            // 
+            this.lblQuantity.AutoSize = true;
+            this.lblQuantity.Location = new System.Drawing.Point(139, 369);
+            this.lblQuantity.Name = "lblQuantity";
+            this.lblQuantity.Size = new System.Drawing.Size(47, 23);
+            this.lblQuantity.TabIndex = 12;
+            this.lblQuantity.Text = "Info";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(40, 369);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(92, 23);
+            this.label16.TabIndex = 11;
+            this.label16.Text = "Quantity:";
             // 
             // lblProductCategory
             // 
@@ -1576,7 +1610,7 @@
             this.tabStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabStock.Name = "tabStock";
             this.tabStock.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabStock.Size = new System.Drawing.Size(1879, 740);
+            this.tabStock.Size = new System.Drawing.Size(1783, 740);
             this.tabStock.TabIndex = 13;
             this.tabStock.Text = "History Stock Requests";
             this.tabStock.UseVisualStyleBackColor = true;
@@ -1595,7 +1629,7 @@
             this.tableLayoutPanel24.Name = "tableLayoutPanel24";
             this.tableLayoutPanel24.RowCount = 1;
             this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel24.Size = new System.Drawing.Size(1873, 736);
+            this.tableLayoutPanel24.Size = new System.Drawing.Size(1777, 736);
             this.tableLayoutPanel24.TabIndex = 21;
             // 
             // tableLayoutPanel25
@@ -1619,7 +1653,7 @@
             this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel25.Size = new System.Drawing.Size(413, 732);
+            this.tableLayoutPanel25.Size = new System.Drawing.Size(391, 732);
             this.tableLayoutPanel25.TabIndex = 0;
             // 
             // btnLogOutTABstock
@@ -1651,7 +1685,7 @@
             this.btnLogOutTABstock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnLogOutTABstock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogOutTABstock.selected = false;
-            this.btnLogOutTABstock.Size = new System.Drawing.Size(403, 67);
+            this.btnLogOutTABstock.Size = new System.Drawing.Size(381, 67);
             this.btnLogOutTABstock.TabIndex = 11;
             this.btnLogOutTABstock.Text = "LOG OUT";
             this.btnLogOutTABstock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1688,7 +1722,7 @@
             this.btnMakeReqTABstock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnMakeReqTABstock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnMakeReqTABstock.selected = false;
-            this.btnMakeReqTABstock.Size = new System.Drawing.Size(403, 99);
+            this.btnMakeReqTABstock.Size = new System.Drawing.Size(381, 99);
             this.btnMakeReqTABstock.TabIndex = 5;
             this.btnMakeReqTABstock.Text = "Make Request";
             this.btnMakeReqTABstock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1703,7 +1737,7 @@
             this.pictureBox6.Location = new System.Drawing.Point(3, 2);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(407, 215);
+            this.pictureBox6.Size = new System.Drawing.Size(385, 215);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 0;
             this.pictureBox6.TabStop = false;
@@ -1737,7 +1771,7 @@
             this.btnIncomingStockTABstock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnIncomingStockTABstock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnIncomingStockTABstock.selected = false;
-            this.btnIncomingStockTABstock.Size = new System.Drawing.Size(403, 99);
+            this.btnIncomingStockTABstock.Size = new System.Drawing.Size(381, 99);
             this.btnIncomingStockTABstock.TabIndex = 2;
             this.btnIncomingStockTABstock.Text = "Stock";
             this.btnIncomingStockTABstock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1774,7 +1808,7 @@
             this.btnStockTABstock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnStockTABstock.OnHoverTextColor = System.Drawing.Color.White;
             this.btnStockTABstock.selected = false;
-            this.btnStockTABstock.Size = new System.Drawing.Size(403, 99);
+            this.btnStockTABstock.Size = new System.Drawing.Size(381, 99);
             this.btnStockTABstock.TabIndex = 6;
             this.btnStockTABstock.Text = "History Stock Requests";
             this.btnStockTABstock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1789,13 +1823,13 @@
             this.tableLayoutPanel26.Controls.Add(this.label6, 0, 0);
             this.tableLayoutPanel26.Controls.Add(this.panel12, 0, 1);
             this.tableLayoutPanel26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel26.Location = new System.Drawing.Point(422, 2);
+            this.tableLayoutPanel26.Location = new System.Drawing.Point(400, 2);
             this.tableLayoutPanel26.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel26.Name = "tableLayoutPanel26";
             this.tableLayoutPanel26.RowCount = 2;
             this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel26.Size = new System.Drawing.Size(1448, 732);
+            this.tableLayoutPanel26.Size = new System.Drawing.Size(1374, 732);
             this.tableLayoutPanel26.TabIndex = 1;
             // 
             // label6
@@ -1807,7 +1841,7 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(3, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(1442, 109);
+            this.label6.Size = new System.Drawing.Size(1368, 109);
             this.label6.TabIndex = 0;
             this.label6.Text = "Stock";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1820,7 +1854,7 @@
             this.panel12.Location = new System.Drawing.Point(3, 111);
             this.panel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(1442, 619);
+            this.panel12.Size = new System.Drawing.Size(1368, 619);
             this.panel12.TabIndex = 1;
             // 
             // tableLayoutPanel31
@@ -1834,8 +1868,8 @@
             this.tableLayoutPanel31.Name = "tableLayoutPanel31";
             this.tableLayoutPanel31.RowCount = 1;
             this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 553F));
-            this.tableLayoutPanel31.Size = new System.Drawing.Size(1442, 619);
+            this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 619F));
+            this.tableLayoutPanel31.Size = new System.Drawing.Size(1368, 619);
             this.tableLayoutPanel31.TabIndex = 0;
             // 
             // panel13
@@ -1850,7 +1884,7 @@
             this.panel13.Location = new System.Drawing.Point(3, 2);
             this.panel13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(1436, 615);
+            this.panel13.Size = new System.Drawing.Size(1362, 615);
             this.panel13.TabIndex = 1;
             // 
             // label23
@@ -1906,7 +1940,7 @@
             this.btnViewStock.IconVisible = false;
             this.btnViewStock.IconZoom = 90D;
             this.btnViewStock.IsTab = false;
-            this.btnViewStock.Location = new System.Drawing.Point(173, 500);
+            this.btnViewStock.Location = new System.Drawing.Point(136, 500);
             this.btnViewStock.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnViewStock.Name = "btnViewStock";
             this.btnViewStock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
@@ -1931,7 +1965,7 @@
             this.clbAllConfirmedRequests.Location = new System.Drawing.Point(109, 107);
             this.clbAllConfirmedRequests.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.clbAllConfirmedRequests.Name = "clbAllConfirmedRequests";
-            this.clbAllConfirmedRequests.Size = new System.Drawing.Size(592, 304);
+            this.clbAllConfirmedRequests.Size = new System.Drawing.Size(518, 304);
             this.clbAllConfirmedRequests.TabIndex = 0;
             // 
             // tabInfoStock
@@ -1941,7 +1975,7 @@
             this.tabInfoStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabInfoStock.Name = "tabInfoStock";
             this.tabInfoStock.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabInfoStock.Size = new System.Drawing.Size(1879, 740);
+            this.tabInfoStock.Size = new System.Drawing.Size(1783, 740);
             this.tabInfoStock.TabIndex = 14;
             this.tabInfoStock.Text = "Stock\'s details";
             this.tabInfoStock.UseVisualStyleBackColor = true;
@@ -1960,7 +1994,7 @@
             this.tableLayoutPanel32.Name = "tableLayoutPanel32";
             this.tableLayoutPanel32.RowCount = 1;
             this.tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel32.Size = new System.Drawing.Size(1873, 736);
+            this.tableLayoutPanel32.Size = new System.Drawing.Size(1777, 736);
             this.tableLayoutPanel32.TabIndex = 21;
             // 
             // tableLayoutPanel33
@@ -1984,7 +2018,7 @@
             this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel33.Size = new System.Drawing.Size(413, 732);
+            this.tableLayoutPanel33.Size = new System.Drawing.Size(391, 732);
             this.tableLayoutPanel33.TabIndex = 0;
             // 
             // btnLogOutTABstockInfo
@@ -2016,7 +2050,7 @@
             this.btnLogOutTABstockInfo.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnLogOutTABstockInfo.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogOutTABstockInfo.selected = false;
-            this.btnLogOutTABstockInfo.Size = new System.Drawing.Size(403, 67);
+            this.btnLogOutTABstockInfo.Size = new System.Drawing.Size(381, 67);
             this.btnLogOutTABstockInfo.TabIndex = 11;
             this.btnLogOutTABstockInfo.Text = "LOG OUT";
             this.btnLogOutTABstockInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2053,7 +2087,7 @@
             this.btnMakeReqTABstockInfo.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnMakeReqTABstockInfo.OnHoverTextColor = System.Drawing.Color.White;
             this.btnMakeReqTABstockInfo.selected = false;
-            this.btnMakeReqTABstockInfo.Size = new System.Drawing.Size(403, 99);
+            this.btnMakeReqTABstockInfo.Size = new System.Drawing.Size(381, 99);
             this.btnMakeReqTABstockInfo.TabIndex = 5;
             this.btnMakeReqTABstockInfo.Text = "Make Request";
             this.btnMakeReqTABstockInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2068,7 +2102,7 @@
             this.pictureBox8.Location = new System.Drawing.Point(3, 2);
             this.pictureBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(407, 215);
+            this.pictureBox8.Size = new System.Drawing.Size(385, 215);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 0;
             this.pictureBox8.TabStop = false;
@@ -2102,7 +2136,7 @@
             this.btnIncomingStockTABstockInfo.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnIncomingStockTABstockInfo.OnHoverTextColor = System.Drawing.Color.White;
             this.btnIncomingStockTABstockInfo.selected = false;
-            this.btnIncomingStockTABstockInfo.Size = new System.Drawing.Size(403, 99);
+            this.btnIncomingStockTABstockInfo.Size = new System.Drawing.Size(381, 99);
             this.btnIncomingStockTABstockInfo.TabIndex = 2;
             this.btnIncomingStockTABstockInfo.Text = "Stock";
             this.btnIncomingStockTABstockInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2139,7 +2173,7 @@
             this.btnStockTABstockInfo.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnStockTABstockInfo.OnHoverTextColor = System.Drawing.Color.White;
             this.btnStockTABstockInfo.selected = false;
-            this.btnStockTABstockInfo.Size = new System.Drawing.Size(403, 99);
+            this.btnStockTABstockInfo.Size = new System.Drawing.Size(381, 99);
             this.btnStockTABstockInfo.TabIndex = 6;
             this.btnStockTABstockInfo.Text = "History Stock Requests";
             this.btnStockTABstockInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2155,13 +2189,13 @@
             this.tableLayoutPanel34.Controls.Add(this.label7, 0, 0);
             this.tableLayoutPanel34.Controls.Add(this.panel14, 0, 1);
             this.tableLayoutPanel34.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel34.Location = new System.Drawing.Point(422, 2);
+            this.tableLayoutPanel34.Location = new System.Drawing.Point(400, 2);
             this.tableLayoutPanel34.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel34.Name = "tableLayoutPanel34";
             this.tableLayoutPanel34.RowCount = 2;
             this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel34.Size = new System.Drawing.Size(1448, 732);
+            this.tableLayoutPanel34.Size = new System.Drawing.Size(1374, 732);
             this.tableLayoutPanel34.TabIndex = 1;
             // 
             // label7
@@ -2173,7 +2207,7 @@
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(3, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(1442, 109);
+            this.label7.Size = new System.Drawing.Size(1368, 109);
             this.label7.TabIndex = 0;
             this.label7.Text = "Name of stock";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2186,7 +2220,7 @@
             this.panel14.Location = new System.Drawing.Point(3, 111);
             this.panel14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(1442, 619);
+            this.panel14.Size = new System.Drawing.Size(1368, 619);
             this.panel14.TabIndex = 1;
             // 
             // tableLayoutPanel35
@@ -2200,8 +2234,8 @@
             this.tableLayoutPanel35.Name = "tableLayoutPanel35";
             this.tableLayoutPanel35.RowCount = 1;
             this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 553F));
-            this.tableLayoutPanel35.Size = new System.Drawing.Size(1442, 619);
+            this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 619F));
+            this.tableLayoutPanel35.Size = new System.Drawing.Size(1368, 619);
             this.tableLayoutPanel35.TabIndex = 0;
             // 
             // panel15
@@ -2213,7 +2247,7 @@
             this.panel15.Location = new System.Drawing.Point(3, 2);
             this.panel15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(1436, 615);
+            this.panel15.Size = new System.Drawing.Size(1362, 615);
             this.panel15.TabIndex = 1;
             // 
             // groupBox4
@@ -2475,16 +2509,16 @@
             // 
             this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            chartArea7.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.chart1.Legends.Add(legend7);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(69, 57);
             this.chart1.Name = "chart1";
-            series7.ChartArea = "ChartArea1";
-            series7.Legend = "Legend1";
-            series7.Name = "Series1";
-            this.chart1.Series.Add(series7);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(300, 241);
             this.chart1.TabIndex = 0;
             // 
@@ -2492,16 +2526,16 @@
             // 
             this.chart2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea8.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.chart2.Legends.Add(legend8);
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart2.Legends.Add(legend2);
             this.chart2.Location = new System.Drawing.Point(387, 57);
             this.chart2.Name = "chart2";
-            series8.ChartArea = "ChartArea1";
-            series8.Legend = "Legend1";
-            series8.Name = "Series1";
-            this.chart2.Series.Add(series8);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart2.Series.Add(series2);
             this.chart2.Size = new System.Drawing.Size(300, 241);
             this.chart2.TabIndex = 1;
             // 
@@ -2804,16 +2838,16 @@
             // 
             this.chart5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            chartArea9.Name = "ChartArea1";
-            this.chart5.ChartAreas.Add(chartArea9);
-            legend9.Name = "Legend1";
-            this.chart5.Legends.Add(legend9);
+            chartArea3.Name = "ChartArea1";
+            this.chart5.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart5.Legends.Add(legend3);
             this.chart5.Location = new System.Drawing.Point(86, 53);
             this.chart5.Name = "chart5";
-            series9.ChartArea = "ChartArea1";
-            series9.Legend = "Legend1";
-            series9.Name = "Series1";
-            this.chart5.Series.Add(series9);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chart5.Series.Add(series3);
             this.chart5.Size = new System.Drawing.Size(300, 300);
             this.chart5.TabIndex = 1;
             // 
@@ -2821,16 +2855,16 @@
             // 
             this.chart6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea10.Name = "ChartArea1";
-            this.chart6.ChartAreas.Add(chartArea10);
-            legend10.Name = "Legend1";
-            this.chart6.Legends.Add(legend10);
+            chartArea4.Name = "ChartArea1";
+            this.chart6.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chart6.Legends.Add(legend4);
             this.chart6.Location = new System.Drawing.Point(489, 53);
             this.chart6.Name = "chart6";
-            series10.ChartArea = "ChartArea1";
-            series10.Legend = "Legend1";
-            series10.Name = "Series1";
-            this.chart6.Series.Add(series10);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chart6.Series.Add(series4);
             this.chart6.Size = new System.Drawing.Size(300, 300);
             this.chart6.TabIndex = 2;
             // 
@@ -3133,16 +3167,16 @@
             // 
             this.chart3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            chartArea11.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea11);
-            legend11.Name = "Legend1";
-            this.chart3.Legends.Add(legend11);
+            chartArea5.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chart3.Legends.Add(legend5);
             this.chart3.Location = new System.Drawing.Point(101, 56);
             this.chart3.Name = "chart3";
-            series11.ChartArea = "ChartArea1";
-            series11.Legend = "Legend1";
-            series11.Name = "Series1";
-            this.chart3.Series.Add(series11);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chart3.Series.Add(series5);
             this.chart3.Size = new System.Drawing.Size(300, 300);
             this.chart3.TabIndex = 1;
             // 
@@ -3150,16 +3184,16 @@
             // 
             this.chart4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea12.Name = "ChartArea1";
-            this.chart4.ChartAreas.Add(chartArea12);
-            legend12.Name = "Legend1";
-            this.chart4.Legends.Add(legend12);
+            chartArea6.Name = "ChartArea1";
+            this.chart4.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chart4.Legends.Add(legend6);
             this.chart4.Location = new System.Drawing.Point(489, 56);
             this.chart4.Name = "chart4";
-            series12.ChartArea = "ChartArea1";
-            series12.Legend = "Legend1";
-            series12.Name = "Series1";
-            this.chart4.Series.Add(series12);
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chart4.Series.Add(series6);
             this.chart4.Size = new System.Drawing.Size(300, 300);
             this.chart4.TabIndex = 2;
             // 
@@ -3404,13 +3438,23 @@
             this.timerChangeMenuColor.Interval = 10;
             this.timerChangeMenuColor.Tick += new System.EventHandler(this.timerChangeMenuColor_Tick);
             // 
-            // cmbBrand
+            // lblProductDepartment
             // 
-            this.cmbBrand.FormattingEnabled = true;
-            this.cmbBrand.Location = new System.Drawing.Point(363, 111);
-            this.cmbBrand.Name = "cmbBrand";
-            this.cmbBrand.Size = new System.Drawing.Size(390, 30);
-            this.cmbBrand.TabIndex = 12;
+            this.lblProductDepartment.AutoSize = true;
+            this.lblProductDepartment.Location = new System.Drawing.Point(855, 356);
+            this.lblProductDepartment.Name = "lblProductDepartment";
+            this.lblProductDepartment.Size = new System.Drawing.Size(47, 23);
+            this.lblProductDepartment.TabIndex = 14;
+            this.lblProductDepartment.Text = "Info";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(707, 356);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(122, 23);
+            this.label19.TabIndex = 13;
+            this.label19.Text = "Department:";
             // 
             // MainDepot
             // 
@@ -3666,5 +3710,9 @@
         private System.Windows.Forms.CheckedListBox clbProducts;
         private Bunifu.Framework.UI.BunifuFlatButton btnSearchForProduct;
         private System.Windows.Forms.ComboBox cmbBrand;
+        private System.Windows.Forms.Label lblQuantity;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblProductDepartment;
+        private System.Windows.Forms.Label label19;
     }
 }

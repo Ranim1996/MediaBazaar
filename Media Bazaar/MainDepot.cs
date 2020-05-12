@@ -16,6 +16,7 @@ namespace Media_Bazaar
     public partial class MainDepot : Form
     {
         List<DBRestockRequest> incomingRestockRequests = new List<DBRestockRequest>();
+        List<DBRestockRequest> stocks = new List<DBRestockRequest>();
         List<DBDepartament> departaments = new List<DBDepartament>();
         List<DBProduct> products = new List<DBProduct>();
         List<DBEmployee> employees = new List<DBEmployee>();
@@ -54,13 +55,6 @@ namespace Media_Bazaar
             this.cmbBrand.Items.Add(ProductBrand.MSI);
             this.cmbBrand.Items.Add(ProductBrand.Razer);
             this.cmbBrand.Items.Add(ProductBrand.Samsung);
-        }
-
-
-        private void UpdateProductsList()
-        {
-            this.clbProducts.DataSource = products;
-            this.clbProducts.DisplayMember = "FullInfo";
         }
 
         private void UpdateConfirmedRestockInfo()
@@ -287,25 +281,56 @@ namespace Media_Bazaar
                     this.clbProducts.Visible = true;
                     this.btnViewProductsDetails.Visible = true;
                 }
-            }
-            else
-            {
-                MessageBox.Show("Type the brand first!");
-            }
-            
+            }            
+        }
+
+        private void UpdateProductsList()
+        {
+            this.clbProducts.DataSource = products;
+            this.clbProducts.DisplayMember = "FullInfo";
         }
 
         private void UpdateDetails(string product)
         {
 
             products = db.GetDBProductInfo(product);
+            stocks = db.GetDBPInfo(product);
             foreach (DBProduct p in products)
             {
                 this.lblProductID.Text = p.id.ToString();
                 this.lblProductBrand.Text = p.Brand;
                 this.lblProductCategory.Text = p.Category;
-                this.lblProductName.Text = p.product_name;
+                this.lblProductName.Text = p.product_name;  
             }
+            foreach (DBRestockRequest r in stocks)
+            {
+                this.lblProductDepartment.Text = r.Departament;
+                this.lblQuantity.Text = r.Quantity.ToString();
+            }
+            //incomingRestockRequests = db.GetDBProductInfo(product);
+            //foreach (DBRestockRequest p in incomingRestockRequests)
+            //{
+            //    this.lblProductID.Text = p.product_id.ToString();
+            //    this.lblProductBrand.Text = p.NameOfStock;
+            //    this.lblProductCategory.Text = p.TypeOfStock;
+            //    this.lblProductName.Text = p.NameOfStock.ToString();
+            //    this.lblQuantity.Text = p.Quantity.ToString();
+            //}
+            //products = db.GetDBProductInfo(product);
+            //for (int i = 0; i < products.Count; i++)
+            //{
+            //    for (int j = 0; j < stocks.Count; i++)
+            //    {
+            //        if (products[i].id == stocks[j].product_id)
+            //        {
+            //            this.lblProductID.Text = stocks[j].product_id.ToString();
+            //            this.lblProductBrand.Text = products[i].Brand;
+            //            this.lblProductCategory.Text = products[i].Category;
+            //            this.lblProductName.Text = products[i].product_name;
+            //            this.lblQuantity.Text = stocks[j].Quantity.ToString();
+            //        }
+            //    }
+            //}
         }
 
         private void BtnViewProductsDetails_Click(object sender, EventArgs e)

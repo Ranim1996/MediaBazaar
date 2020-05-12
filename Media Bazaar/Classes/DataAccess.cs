@@ -449,11 +449,26 @@ namespace Media_Bazaar.Classes
         }
 
         //products
-        public List<DBProduct> GetDBProductInfo(string product)
+        public List<DBProduct> GetDBProductInfo(string brand)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<DBProduct>($"SELECT * FROM product WHERE Brand='{product}'").ToList();
+                var output = /*connection.Query<DBProduct>($"SELECT * FROM product WHERE Brand='{brand}'").ToList();*/
+                    connection.Query<DBProduct>($"SELECT p.id, p.product_name, p.Category, p.Brand, r.Departament, r.Quantity " +
+                    $"FROM restockRequest r INNER JOIN product p ON p.id = r.product_id WHERE p.Brand = '{brand}'" +
+                    $"AND r.AdminConfirmation = 'CONFIRMED' ").ToList();
+                return output;
+            }
+        }
+
+        public List<DBRestockRequest> GetDBPInfo(string brand)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = /*connection.Query<DBProduct>($"SELECT * FROM product WHERE Brand='{brand}'").ToList();*/
+                    connection.Query<DBRestockRequest>($"SELECT p.id, p.product_name, p.Category, p.Brand, r.Departament, r.Quantity " +
+                    $"FROM restockRequest r INNER JOIN product p ON p.id = r.product_id WHERE p.Brand = '{brand}'" +
+                    $"AND r.AdminConfirmation = 'CONFIRMED' ").ToList();
                 return output;
             }
         }

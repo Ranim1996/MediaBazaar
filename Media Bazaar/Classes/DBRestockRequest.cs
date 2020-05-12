@@ -10,6 +10,7 @@ namespace Media_Bazaar.Classes
     {
         //fields
         public int RequestID { get; set; }
+        public int product_id { get; set; }
         public int EmployeeID { get; set; }
         public string NameOfStock { get; set; }
         public string TypeOfStock { get; set; }
@@ -29,7 +30,15 @@ namespace Media_Bazaar.Classes
             }
         }
 
-       public int GetID() // return request id
+        public string Indo // return full info
+        {
+            get
+            {
+                return $"Stock ID:{product_id} {NameOfStock} {TypeOfStock} {Departament} {Quantity})";
+            }
+        }
+
+        public int GetID() // return request id
         {
             return RequestID;
         }
