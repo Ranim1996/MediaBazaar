@@ -46,7 +46,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(63, 351);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(239, 1);
             this.panel1.TabIndex = 7;
@@ -55,7 +55,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(63, 292);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(239, 1);
             this.panel2.TabIndex = 8;
@@ -95,7 +95,7 @@
             this.btnLoginMinimize.IconZoom = 90D;
             this.btnLoginMinimize.IsTab = false;
             this.btnLoginMinimize.Location = new System.Drawing.Point(311, 14);
-            this.btnLoginMinimize.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnLoginMinimize.Margin = new System.Windows.Forms.Padding(5);
             this.btnLoginMinimize.Name = "btnLoginMinimize";
             this.btnLoginMinimize.Normalcolor = System.Drawing.Color.White;
             this.btnLoginMinimize.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -131,7 +131,7 @@
             this.btnLoginExit.IconZoom = 90D;
             this.btnLoginExit.IsTab = false;
             this.btnLoginExit.Location = new System.Drawing.Point(348, 14);
-            this.btnLoginExit.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnLoginExit.Margin = new System.Windows.Forms.Padding(5);
             this.btnLoginExit.Name = "btnLoginExit";
             this.btnLoginExit.Normalcolor = System.Drawing.Color.White;
             this.btnLoginExit.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -167,7 +167,7 @@
             this.btnLogin.IconZoom = 90D;
             this.btnLogin.IsTab = false;
             this.btnLogin.Location = new System.Drawing.Point(63, 420);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnLogin.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
@@ -200,11 +200,10 @@
             this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.tbPassword.Location = new System.Drawing.Point(63, 360);
-            this.tbPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbPassword.Multiline = true;
+            this.tbPassword.Margin = new System.Windows.Forms.Padding(4);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '*';
-            this.tbPassword.Size = new System.Drawing.Size(275, 37);
+            this.tbPassword.Size = new System.Drawing.Size(275, 31);
             this.tbPassword.TabIndex = 3;
             this.tbPassword.Text = "Password:";
             // 
@@ -215,7 +214,7 @@
             this.tbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.tbUsername.Location = new System.Drawing.Point(63, 301);
-            this.tbUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbUsername.Margin = new System.Windows.Forms.Padding(4);
             this.tbUsername.Multiline = true;
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(275, 37);
@@ -239,7 +238,7 @@
             this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

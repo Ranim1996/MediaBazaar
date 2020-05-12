@@ -57,7 +57,7 @@ namespace Media_Bazaar
         {
             user = tbUsername.Text;
             pass = tbPassword.Text;
-
+        
             if (loginManagment.Login(user, pass) == "Administrator")
             {
                 MainAdmin MainAdmin = new MainAdmin();

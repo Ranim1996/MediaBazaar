@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -451,30 +452,39 @@ namespace Media_Bazaar
 
         //LOGIN METHODS
 
-        public List<EmployeeBase> LoginAdministrator(string username,string password)
+        public DataTable LoginAdministrator(string username,string password)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<EmployeeBase>($"SELECT Username, Password FROM employee WHERE Username='{username}' AND Password='{password}' AND Position='ADMINISTRATOR';").ToList();
-                return output;
+                MySqlCommand cm = new MySqlCommand($"SELECT Username, Password FROM employee WHERE Username='{username}' AND Password='{password}' AND Position='ADMINISTRATOR';", connection);
+                MySqlDataAdapter sda = new MySqlDataAdapter(cm);                 
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                return dt;
             }
         }
 
-        public List<EmployeeBase> LoginManager(string username, string password)
+        public DataTable LoginManager(string username, string password)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<EmployeeBase>($"SELECT Username, Password FROM Employee WHERE Username='{username}' AND Password='{password}' AND Position='MANAGER';").ToList();
-                return output;
+                MySqlCommand cm = new MySqlCommand($"SELECT Username, Password FROM employee WHERE Username='{username}' AND Password='{password}' AND Position='MANAGER';", connection);
+                MySqlDataAdapter sda = new MySqlDataAdapter(cm);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                return dt;
             }
         }
 
-        public List<EmployeeBase> LoginDepotWorker(string username, string password)
+        public DataTable LoginDepotWorker(string username, string password)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<EmployeeBase>($"SELECT Username, Password FROM Employee WHERE Username='{username}' AND Password='{password}' AND Position='DEPOT';").ToList();
-                return output;
+                MySqlCommand cm = new MySqlCommand($"SELECT Username, Password FROM employee WHERE Username='{username}' AND Password='{password}' AND Position='DEPOT';", connection);
+                MySqlDataAdapter sda = new MySqlDataAdapter(cm);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                return dt;
             }
         }
 

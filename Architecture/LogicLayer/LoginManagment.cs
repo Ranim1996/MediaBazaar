@@ -14,15 +14,15 @@ namespace Media_Bazaar
 
         public string Login(string username, string password)
         {
-            if (dataAccess.LoginAdministrator(username, password) != null || (username == "Admin" && password == "1234"))
+            if ((dataAccess.LoginAdministrator(username, password).Rows.Count > 0) || (username == "Admin" && password == "1234"))
             {
                 return "Administrator";
             }
-            else if (dataAccess.LoginManager(username, password) != null || (username == "Manager" && password == "1234"))
+            else if ((dataAccess.LoginManager(username, password).Rows.Count > 0) || (username == "Manager" && password == "1234"))
             {
                 return "Manager";
             }
-            else if (dataAccess.LoginDepotWorker(username, password) != null || (username == "Depot" && password == "1234"))
+            else if ((dataAccess.LoginDepotWorker(username, password).Rows.Count > 0) || (username == "Depot" && password == "1234"))
             {
                 return "Depot Worker";
             }
