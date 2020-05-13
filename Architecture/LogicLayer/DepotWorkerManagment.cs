@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Media_Bazaar
 {
@@ -44,12 +45,32 @@ namespace Media_Bazaar
 
         public void MakeRequest(string idEmp, string name, string category, string brand, string department, string quantity, string orderDate, string orderDeliver)
         {
-            if (!String.IsNullOrEmpty(idEmp) && !String.IsNullOrEmpty(name) && !String.IsNullOrEmpty(department) 
-                && !String.IsNullOrEmpty(quantity) && !String.IsNullOrEmpty(orderDeliver) && !String.IsNullOrEmpty(category)
-                 && !String.IsNullOrEmpty(brand))
+            if (this.DoesProductExist(name) != null )
             {
-                dataAccess.InsertRequest(Convert.ToInt32(idEmp), name, category, brand, department, Convert.ToInt32(quantity), orderDate, orderDeliver);
+                MessageBox.Show("Product is already exists.");
             }
+            else 
+            {
+                if (!String.IsNullOrEmpty(idEmp) && !String.IsNullOrEmpty(name) && !String.IsNullOrEmpty(department)
+                    && !String.IsNullOrEmpty(quantity) && !String.IsNullOrEmpty(orderDeliver) && !String.IsNullOrEmpty(category)
+                     && !String.IsNullOrEmpty(brand))
+                {
+                    dataAccess.InsertRequest(Convert.ToInt32(idEmp), name, category, brand, department, Convert.ToInt32(quantity), orderDate, orderDeliver);
+                    MessageBox.Show("Request is sent to the Administration.");
+                }
+            }
+        }
+
+        public string DoesProductExist(string name)
+        {
+            foreach (RestockRequestBase r in GetIncomingRestockRequests())
+            {
+                if (r.ProductName == name)
+                {
+                    return r.ProductName;
+                }
+            }
+            return null;
         }
 
         public void UpdateData(int id, string newquantity)
