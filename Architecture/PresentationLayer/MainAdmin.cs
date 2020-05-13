@@ -215,14 +215,12 @@ namespace Media_Bazaar
                 pos = "EMPLOYEE";
             }
 
-            if (adminManagment.CreateNewProfile(tbFirstName.Text, tbLastName.Text, tbDateOfBirth.Value.ToShortDateString(), tbEmail.Text, tbPhoneNr.Text, tbNationality.Text, pos) != null)
+            if (adminManagment.CreateNewProfile(tbFirstName.Text, tbLastName.Text, tbDateOfBirth.Value.ToShortDateString(), tbEmail.Text, tbPhoneNr.Text, tbNationality.Text, pos) == null)
             {
-                label13.Text = adminManagment.CreateNewProfile(tbFirstName.Text, tbLastName.Text, tbDateOfBirth.Value.ToShortDateString(), tbEmail.Text, tbPhoneNr.Text, tbNationality.Text, pos);
+                 MessageBox.Show("Fill in all fields correctly.");                
             }
-            else
-            {
-                MessageBox.Show("Fill in all fields correctly.");
-            }
+            label13.Text =adminManagment.GetCredentials();
+
         }
 
         private void UpdateEmployeeInfo()

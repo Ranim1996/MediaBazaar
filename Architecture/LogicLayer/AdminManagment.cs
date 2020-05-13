@@ -16,11 +16,37 @@ namespace Media_Bazaar
         Calendar calendar = new Calendar();
         ScheduleBase schedule = new ScheduleBase();
 
+        private string employeeCredentials = "";
+
         public string CreateNewProfile(string fName, string lName, string dateOfBirth, string email, string phoneNr, string nationality, string pos)
         {
             if (!String.IsNullOrEmpty(fName) && !String.IsNullOrEmpty(lName) && !String.IsNullOrEmpty(dateOfBirth) && !String.IsNullOrEmpty(email) && !String.IsNullOrEmpty(phoneNr) && !String.IsNullOrEmpty(nationality))
             {
-                return AddEmpl(fName, lName, dateOfBirth, email, phoneNr, nationality, pos);
+                if (pos == "ADMINISTRATOR")
+                {
+                    employeeModel = new EmployeeBase { FirstName = fName, LastName = lName, DateOfBirth = dateOfBirth, Email = email, PhoneNumber = phoneNr, Nationality = nationality, Position = pos };
+                }
+                else if (pos == "MANAGER")
+                {
+                    employeeModel = new EmployeeBase { FirstName = fName, LastName = lName, DateOfBirth = dateOfBirth, Email = email, PhoneNumber = phoneNr, Nationality = nationality, Position = pos };
+                }
+                else if (pos == "DEPOT")
+                {
+                    employeeModel = new EmployeeBase { FirstName = fName, LastName = lName, DateOfBirth = dateOfBirth, Email = email, PhoneNumber = phoneNr, Nationality = nationality, Position = pos };
+                }
+                else if (pos == "EMPLOYEE")
+                {
+                    employeeModel = new EmployeeBase { FirstName = fName, LastName = lName, DateOfBirth = dateOfBirth, Email = email, PhoneNumber = phoneNr, Nationality = nationality };
+                }
+
+                dataAccess.InsertEmployee(fName, lName, dateOfBirth, email, phoneNr, nationality, employeeModel.Position, employeeModel.Username, employeeModel.Password);
+
+                int employeeID = dataAccess.GetIdOfEmployeeByName(fName, lName);
+                
+                employeeCredentials = $"{employeeID.ToString()} \r\n {employeeModel.Username} \r\n {employeeModel.Password}";
+
+                sendEmail.Send(email, employeeModel.Username, employeeModel.Password);
+                return employeeCredentials;
             }
             else
             {
@@ -28,32 +54,8 @@ namespace Media_Bazaar
             }
         }
 
-        public string AddEmpl(string fName, string lName, string dateOfBirth, string email, string phoneNr, string nationality, string pos)
-        {         
-            if(pos== "ADMINISTRATOR")
-            {
-                employeeModel = new EmployeeBase {FirstName=fName, LastName=lName,DateOfBirth=dateOfBirth,Email=email,PhoneNumber=phoneNr,Nationality=nationality, Position=pos };
-            }
-            else if(pos== "MANAGER")
-            {
-                employeeModel = new EmployeeBase { FirstName = fName, LastName = lName, DateOfBirth = dateOfBirth, Email = email, PhoneNumber = phoneNr, Nationality = nationality, Position = pos };
-            }
-            else if (pos == "DEPOT")
-            {
-                employeeModel = new EmployeeBase { FirstName = fName, LastName = lName, DateOfBirth = dateOfBirth, Email = email, PhoneNumber = phoneNr, Nationality = nationality, Position = pos };
-            }
-            else if (pos == "EMPLOYEE")
-            {
-                employeeModel = new EmployeeBase { FirstName = fName, LastName = lName, DateOfBirth = dateOfBirth, Email = email, PhoneNumber = phoneNr, Nationality = nationality };
-            }
-
-            dataAccess.InsertEmployee(fName, lName, dateOfBirth, email, phoneNr, nationality, employeeModel.Position, employeeModel.Username, employeeModel.Password);
-
-            int employeeID = dataAccess.GetIdOfEmployeeByName(fName, lName);
-            string employeeCredentials = "";
-            employeeCredentials = $"{employeeID.ToString()} \r\n {employeeModel.Username} \r\n {employeeModel.Password}";
-
-            sendEmail.Send(email, employeeModel.Username, employeeModel.Password);
+        public string GetCredentials()
+        {
             return employeeCredentials;
         }    
 
