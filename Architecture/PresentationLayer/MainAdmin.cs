@@ -298,15 +298,26 @@ namespace Media_Bazaar
             UpdateEmployeeInfo();
         }
 
+        private void Clear()
+        {
+            this.tbDepName.Text = " ";
+            this.tbMaxNr.Text = " ";
+            this.tbMinNr.Text = " ";
+        }
+
         private void btnCreateDepartment_Click(object sender, EventArgs e)
         {
             if (adminManagment.CreateDepartment(tbDepName.Text, tbMinNr.Text, tbMaxNr.Text))
             {
+                MessageBox.Show("New department is created.");
                 UpdateDepartamentInfo();
+                Clear();
+
             }
             else
             {
                 MessageBox.Show("Fill in all fields correctly!");
+                Clear();
             }
         }
 
