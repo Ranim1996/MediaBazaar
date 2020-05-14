@@ -283,6 +283,7 @@ namespace Media_Bazaar
                             if (adminManagment.FireEmployee(tbExtraInformationTABremoveProfile.Text, i, empl))
                             {
                                 MessageBox.Show("Fired");
+                                break;
                             }
                             tbExtraInformationTABremoveProfile.Clear();
                         }
@@ -331,6 +332,7 @@ namespace Media_Bazaar
                             if (adminManagment.AssignEmployeeToDepartment(i, cmbDepartments.SelectedItem.ToString(), empl))
                             {
                                 MessageBox.Show("Assigned");
+                                break;
                             }
                         }
                     }

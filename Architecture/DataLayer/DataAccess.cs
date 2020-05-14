@@ -96,7 +96,7 @@ namespace Media_Bazaar
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                connection.Execute($"UPDATE Employee SET ReasonsForRelease ='{reasons}' WHERE EmployeeID ='{employeeID}'; ");
+                connection.Execute($"UPDATE Employee SET ReasonsForRelease='{reasons}' WHERE EmployeeID='{employeeID}'; ");
             }
         }
 

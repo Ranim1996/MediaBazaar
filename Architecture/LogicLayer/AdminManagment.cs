@@ -36,7 +36,7 @@ namespace Media_Bazaar
                 }
                 else if (pos == "EMPLOYEE")
                 {
-                    employeeModel = new EmployeeBase { FirstName = fName, LastName = lName, DateOfBirth = dateOfBirth, Email = email, PhoneNumber = phoneNr, Nationality = nationality };
+                    employeeModel = new EmployeeBase { FirstName = fName, LastName = lName, DateOfBirth = dateOfBirth, Email = email, PhoneNumber = phoneNr, Nationality = nationality, Position = pos };
                 }
 
                 dataAccess.InsertEmployee(fName, lName, dateOfBirth, email, phoneNr, nationality, employeeModel.Position, employeeModel.Username, employeeModel.Password);
@@ -61,19 +61,19 @@ namespace Media_Bazaar
 
         public bool FireEmployee(string ExtraInformationForFire, int id, string emplID)
         {
-            if (String.IsNullOrEmpty(ExtraInformationForFire))
-            {
-                return false;
-            }
-            else
-            {
+            //if (String.IsNullOrEmpty(ExtraInformationForFire))
+            //{
+               /// return false;
+           // }
+           // else
+           // {
                 if (emplID.Contains($"ID:{id}"))
                 {
                     dataAccess.FireEmployeeByID(ExtraInformationForFire, id);
                     return true;
                 }
                 return false;
-            }
+           // }
         }
 
         public bool AssignEmployeeToDepartment(int id, string departament, string emplID)
