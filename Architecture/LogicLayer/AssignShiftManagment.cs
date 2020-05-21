@@ -13,9 +13,16 @@ namespace Media_Bazaar
         DataAccess db = new DataAccess();
         ScheduleBase schedule = new ScheduleBase();
         List<ScheduleBase> dbSchedules = null;
+        DateTime shiftDate;
+
+        public AssignShiftManagment(DateTime shiftDate)
+        {
+            this.shiftDate = shiftDate;
+            dbSchedules = db.GetSchedulesByDate(this.shiftDate);
+        }
         public void ShowComboBox(DateTime date, ComboBox weekDay, ComboBox saturday, ComboBox sunday)
         {
-            if(date.DayOfWeek == DayOfWeek.Sunday)
+            if (date.DayOfWeek == DayOfWeek.Sunday)
             {
                 sunday.Visible = true;
                 saturday.Visible = false;
@@ -23,7 +30,7 @@ namespace Media_Bazaar
             }
             else
             {
-                if(date.DayOfWeek == DayOfWeek.Saturday)
+                if (date.DayOfWeek == DayOfWeek.Saturday)
                 {
                     saturday.Visible = true;
                     sunday.Visible = false;
@@ -38,21 +45,21 @@ namespace Media_Bazaar
             }
         }
 
-        public void UpdateList(ListBox lbShifts, DateTime shiftDate, string status)
+        public void UpdateList(ListBox lbShifts, string status)
         {
             lbShifts.Items.Clear();
-            schedule.GetAllSchedules();
-            dbSchedules = schedule.allSchedules;
-            if(dbSchedules == null)
+
+            if (dbSchedules == null)
             {
-                MessageBox.Show("Cannot open shift for the selected day. Try again!");
+                MessageBox.Show("No existing shifts for the selected day");
             }
             else
             {
                 foreach (ScheduleBase sch in dbSchedules)
                 {
                     string firstNameOfEmployee = db.GetFirstNameOfEmployeeById(sch.EmployeeId);
-                    if (sch.Date == shiftDate.ToString("dd/MM/yyyy") && sch.Status == status)
+
+                    if (sch.Status == status)
                     {
                         if (sch.Attendance != null)
                         {
@@ -65,12 +72,12 @@ namespace Media_Bazaar
                     }
                 }
             }
-            
         }
+
         public bool AssignWorkShift(int employeeId, string date, string shift)
         {
             List<EmployeeBase> empl = db.GetDBNotFiredEmployeeByID(employeeId);
-            if(empl.Count != 0)
+            if (empl.Count != 0)
             {
                 db.AddSchedule(employeeId, date, shift);
                 return true;
@@ -78,14 +85,12 @@ namespace Media_Bazaar
             return false;
         }
 
-        public void AddAttendance(string attendance, DateTime shiftDate, ListBox lbShifts)
+        public void AddAttendance(string attendance, ListBox lbShifts)
         {
             string holder = "";
             string date = shiftDate.ToString("dd/MM/yyyy");
-            schedule.GetAllSchedules();
-            dbSchedules = schedule.allSchedules;
 
-            if(lbShifts.SelectedItem != null)
+            if (lbShifts.SelectedItem != null)
             {
                 holder = lbShifts.SelectedItem.ToString();
                 foreach (ScheduleBase sch in dbSchedules)
@@ -99,10 +104,9 @@ namespace Media_Bazaar
             }
         }
 
-        public bool DeleteAttendance(ListBox lbShifts, DateTime shiftDate)
+        public bool DeleteAttendance(ListBox lbShifts, string status)
         {
             string holder = "";
-            string status = "Assigned";
             string date = shiftDate.ToString("dd/MM/yyyy");
 
             if (lbShifts.SelectedItem != null)
@@ -117,7 +121,6 @@ namespace Media_Bazaar
                         {
                             db.DeleteAttendanceByIdAndShift(sch.EmployeeId, sch.Shift, date, status);
                             MessageBox.Show("Shift has been successfully removed!");
-                            //UpdateList();
                             return true;
                         }
                         else //if(dialogResult == DialogResult.No)
@@ -131,7 +134,7 @@ namespace Media_Bazaar
             return false;
         }
 
-        public bool AssignSelectedShift(ListBox lbShiftPreferences, DateTime shiftDate)
+        public bool AssignSelectedShift(ListBox lbShiftPreferences)
         {
             string holder = "";
             string date = shiftDate.ToString("dd/MM/yyyy");
@@ -160,6 +163,6 @@ namespace Media_Bazaar
             }
             return false;
         }
-       
+
     }
 }

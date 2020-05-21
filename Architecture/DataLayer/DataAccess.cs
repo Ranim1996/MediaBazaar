@@ -366,6 +366,16 @@ namespace Media_Bazaar
                 return output;
             }
         }
+        public List<ScheduleBase> GetSchedulesByDate(DateTime shiftDate)
+        {
+            string date = shiftDate.ToString("dd/MM/yyyy");
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<ScheduleBase>($"SELECT * FROM Schedule WHERE Date='{date}'").ToList();
+                return output;
+            }
+        }
+        
         public List<ScheduleBase> GetSchedulesByEmplId(int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
