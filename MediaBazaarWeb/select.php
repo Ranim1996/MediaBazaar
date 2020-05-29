@@ -107,7 +107,7 @@ function timeslots($day)
 		$slots[0] = "12:00-18:00";
 	} else {
 		if ($day == "Saturday") { //saturday shifts
-			$slots[0] = "9:00-15:00";
+			$slots[0] = "09:00-15:00";
 			$slots[1] = "15:00-18:00";
 		} else { // other days shifts
 			$slots[0] = "07:00-12:00";
