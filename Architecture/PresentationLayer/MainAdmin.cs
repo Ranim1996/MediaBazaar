@@ -16,8 +16,8 @@ namespace Media_Bazaar
 {
     public partial class MainAdmin : Form
     {
-        AdminManagment adminManagment = new AdminManagment();       
-        
+        AdminManagment adminManagment = new AdminManagment();
+
         List<int> employeesID = new List<int>();
         List<int> restockID = new List<int>();
 
@@ -215,11 +215,11 @@ namespace Media_Bazaar
                 pos = "EMPLOYEE";
             }
 
-            if (adminManagment.CreateNewProfile(tbFirstName.Text, tbLastName.Text, tbDateOfBirth.Value.ToShortDateString(), tbEmail.Text, tbPhoneNr.Text, tbNationality.Text, pos) == null)
+            if (adminManagment.CreateNewProfile(tbFirstName.Text, tbLastName.Text, tbDateOfBirth.Value.ToShortDateString(), tbEmail.Text, tbPhoneNr.Text, tbNationality.Text, pos, tbMinHrs.Text, tbMaxHrs.Text, tbWage.Text) == null)
             {
-                 MessageBox.Show("Fill in all fields correctly.");                
+                MessageBox.Show("Fill in all fields correctly.");
             }
-            label13.Text =adminManagment.GetCredentials();
+            label13.Text = adminManagment.GetCredentials();
 
         }
 
@@ -428,7 +428,7 @@ namespace Media_Bazaar
         public void UpdateMailList(string split, string subject)
         {
             lbEmailInbox.Items.Clear();
-                        
+
             foreach (EmailModel mail in adminManagment.GetEmails())
             {
                 int id = mail.EmployeeID;
@@ -543,9 +543,24 @@ namespace Media_Bazaar
             tbLastName.Clear();
             tbEmail.Clear();
             tbPhoneNr.Clear();
+            tbMinHrs.Clear();
+            tbMaxHrs.Clear();
+            tbWage.Clear();
             label13.Text = "";
             tbNationality.Items.Clear();
             MessageBox.Show("The account has been successfully created!");
+        }
+
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage1;
+        }
+
+        private void btnGenerateSchedule_Click(object sender, EventArgs e)
+        {
+            adminManagment.GenerateSchedule(tbDepartment.Text, Convert.ToInt32(tbNrAdmins.Text), Convert.ToInt32(tbNrManagers.Text), Convert.ToInt32(tbNrDepotWorkers.Text), Convert.ToInt32(tbNrEmployees.Text));                             
         }
     }
 }

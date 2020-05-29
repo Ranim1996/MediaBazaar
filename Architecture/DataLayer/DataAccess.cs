@@ -15,7 +15,7 @@ namespace Media_Bazaar
     public class DataAccess
     {
         //METHODS FOR EMPLOYEES:      
-       
+
         public List<EmployeeBase> GetNotFiredEmployeesByLastName(string lastName)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -51,12 +51,12 @@ namespace Media_Bazaar
                 return output;
             }
         }
-       
-        public void InsertEmployee(string fName, string lName, string dateOfBirth, string email, string phoneNr, string nationality, string pos, string username, string password)
+
+        public void InsertEmployee(string fName, string lName, string dateOfBirth, string email, string phoneNr, string nationality, string pos, int minHours, int maxHours, double wage, string username, string password)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                connection.Execute($"INSERT INTO Employee(FirstName, LastName, DateOfBirth, Email, PhoneNumber, Nationality, Position, Username, Password) VALUES ('{ fName }', '{lName}' , '{dateOfBirth}' , '{email}' , '{phoneNr}' , '{nationality}' , '{pos}' , '{username}' , '{password}');");
+                connection.Execute($"INSERT INTO Employee(FirstName, LastName, DateOfBirth, Email, PhoneNumber, Nationality, Position,MinHrsPerWeek,MaxHrsPerWeek,WagePerHour, Username, Password) VALUES ('{ fName }', '{lName}' , '{dateOfBirth}' , '{email}' , '{phoneNr}' , '{nationality}','{pos}' , '{minHours}' ,'{maxHours}','{wage}', '{username}' , '{password}');");
             }
         }
 
@@ -69,7 +69,7 @@ namespace Media_Bazaar
                 return connection.ExecuteScalar<int>($"SELECT EmployeeID FROM Employee WHERE FirstName ='{fName}' AND LastName ='{lName}';");
             }
         }
-       
+
 
         //get first name of employee via employee id.
         public string GetFirstNameOfEmployeeById(int id)
@@ -79,7 +79,7 @@ namespace Media_Bazaar
                 return connection.ExecuteScalar<string>($"SELECT FirstName FROM Employee WHERE EmployeeID = '{id}';");
             }
         }
-        
+
         //Get All employees
         public List<EmployeeBase> GetAllEmployees()
         {
@@ -111,7 +111,7 @@ namespace Media_Bazaar
         //}
 
         //get all the info of not fired employees
-        
+
         public List<EmployeeBase> GetNotFiredEmployees()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -120,7 +120,7 @@ namespace Media_Bazaar
                 //return connection.Query<EmployeeBase>($"SELECT * FROM Employee WHERE ReasonsForRelease IS NULL;").ToList();
                 return output;
             }
-        } 
+        }
 
         public string GetDepotID()
         {
@@ -345,7 +345,7 @@ namespace Media_Bazaar
         }
 
         //get all available stocks where the quantity is not null
-        public List <RestockRequestBase> GetAllAvailableStocks ()
+        public List<RestockRequestBase> GetAllAvailableStocks()
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
@@ -375,7 +375,7 @@ namespace Media_Bazaar
                 return output;
             }
         }
-        
+
         public List<ScheduleBase> GetSchedulesByEmplId(int id)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -480,12 +480,12 @@ namespace Media_Bazaar
 
         //LOGIN METHODS
 
-        public DataTable LoginAdministrator(string username,string password)
+        public DataTable LoginAdministrator(string username, string password)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
                 MySqlCommand cm = new MySqlCommand($"SELECT Username, Password FROM employee WHERE Username='{username}' AND Password='{password}' AND Position='ADMINISTRATOR';", connection);
-                MySqlDataAdapter sda = new MySqlDataAdapter(cm);                 
+                MySqlDataAdapter sda = new MySqlDataAdapter(cm);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 return dt;
@@ -540,16 +540,95 @@ namespace Media_Bazaar
             }
         }
 
-        //public List<Product> GetAllProducts()
-        //{
-        //    using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-        //    {
-        //        var output = connection.Query<Product>($"SELECT * FROM product").ToList();
-        //        return output;
-        //    }
-        //}
 
 
 
+        //ALGORITHM METHODS
+
+
+        //Return all preferences for a certain date
+        public List<EmployeeBase> GetEmployeesPreferencesForDayByDepartment(string date,string department)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<EmployeeBase>($"SELECT * FROM schedule WHERE EmployeeID IN (SELECT EmployeeID FROM employee WHERE Departament='{department}') AND Date='{date}' AND Status='Selected';").ToList();
+                return output;
+            }
+        }
+
+
+        public int GetMaxHoursByID(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<int>($"SELECT MaxHrsPerWeek FROM Employee WHERE EmployeeID='{id}'");
+            }
+        }
+
+        public int GetMinHoursByID(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<int>($"SELECT MinHrsPerWeek FROM Employee WHERE EmployeeID='{id}'");
+            }
+        }
+
+        public int GetCurrentHoursByID(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<int>($"SELECT CurrentHoursForWeek FROM Employee WHERE EmployeeID='{id}'");
+            }
+        }
+
+        public string GetShiftPreferences(string date,int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT Shift FROM schedule WHERE Date='{date}' AND Status='Selected' AND EmployeeID='{id}';");
+            }
+        }
+
+        public void AddWorkingHoursToEmployee(int id,int hours)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                connection.Execute($"UPDATE Employee SET CurrentHoursForWeek=CurrentHoursForWeek+{hours} WHERE EmployeeID='{id}';");
+            }
+        }
+
+        public void AssignEmployeeWithPreferencesToShift(int id, string date)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                connection.Execute($"UPDATE schedule SET Status='Assigned' WHERE EmployeeID='{id}' AND Date='{date}';");
+            }
+        }
+
+        public void AssignEmployeeToShift(int id,string date,string shift)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                connection.Execute($"INSERT INTO schedule (EmployeeID, Date, Shift, Status)  VALUES( '{id}', '{date}', '{shift}','Assigned')");
+            }
+        }
+
+        public List<EmployeeBase> GetAdministratorsOrderedByWorkedHours()
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<EmployeeBase>($"SELECT * FROM employee WHERE Position='ADMINISTRATOR' AND ReasonsForRelease IS NULL ORDER BY CurrentHoursForWeek;").ToList();
+                return output;
+            }
+        }
+
+        public List<EmployeeBase> GetEmployeesByPossitionsOrderedByWorkedHours(string possition)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<EmployeeBase>($"SELECT * FROM employee WHERE Position='{possition}' AND ReasonsForRelease IS NULL ORDER BY CurrentHoursForWeek;").ToList();
+                return output;
+            }
+        }
     }
 }

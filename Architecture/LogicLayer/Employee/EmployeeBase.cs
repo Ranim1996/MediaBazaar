@@ -15,6 +15,11 @@
         public string Nationality { get; set; }
         public string Departament { get; set; }
 
+        public int MinHoursPerWeek { get; set; }
+        public int MaxHoursPerWeek { get; set; }
+        public int CurrentHours { get; set; }
+        public double WagePerHour { get; set; }
+
         public virtual string Username { get { return username = $"{FirstName.ToLower()}.{LastName}@mediabazaar"; }  }
         public virtual string Password { get { return password = generatePassword.autoGeneratePassword(); }  }
 

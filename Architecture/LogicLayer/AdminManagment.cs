@@ -13,36 +13,37 @@ namespace Media_Bazaar
         private DataAccess dataAccess = new DataAccess();
         private SendEmail sendEmail = new SendEmail();
         private EmployeeBase employeeModel;
+        private ScheduleGenerator scheduleGenerator = new ScheduleGenerator();
         Calendar calendar = new Calendar();
         ScheduleBase schedule = new ScheduleBase();
 
         private string employeeCredentials = "";
 
-        public string CreateNewProfile(string fName, string lName, string dateOfBirth, string email, string phoneNr, string nationality, string pos)
+        public string CreateNewProfile(string fName, string lName, string dateOfBirth, string email, string phoneNr, string nationality, string pos, string minHours, string maxHours, string wage)
         {
-            if (!String.IsNullOrEmpty(fName) && !String.IsNullOrEmpty(lName) && !String.IsNullOrEmpty(dateOfBirth) && !String.IsNullOrEmpty(email) && !String.IsNullOrEmpty(phoneNr) && !String.IsNullOrEmpty(nationality))
+            if (!String.IsNullOrEmpty(fName) && !String.IsNullOrEmpty(lName) && !String.IsNullOrEmpty(dateOfBirth) && !String.IsNullOrEmpty(email) && !String.IsNullOrEmpty(phoneNr) && !String.IsNullOrEmpty(nationality) && !String.IsNullOrEmpty(minHours) && !String.IsNullOrEmpty(maxHours) && !String.IsNullOrEmpty(wage))
             {
                 if (pos == "ADMINISTRATOR")
                 {
-                    employeeModel = new EmployeeBase { FirstName = fName, LastName = lName, DateOfBirth = dateOfBirth, Email = email, PhoneNumber = phoneNr, Nationality = nationality, Position = pos };
+                    employeeModel = new EmployeeBase { FirstName = fName, LastName = lName, DateOfBirth = dateOfBirth, Email = email, PhoneNumber = phoneNr, Nationality = nationality, Position = pos, MinHoursPerWeek = Convert.ToInt32(minHours), MaxHoursPerWeek = Convert.ToInt32(maxHours), WagePerHour = Convert.ToDouble(wage), CurrentHours = 0 };
                 }
                 else if (pos == "MANAGER")
                 {
-                    employeeModel = new EmployeeBase { FirstName = fName, LastName = lName, DateOfBirth = dateOfBirth, Email = email, PhoneNumber = phoneNr, Nationality = nationality, Position = pos };
+                    employeeModel = new EmployeeBase { FirstName = fName, LastName = lName, DateOfBirth = dateOfBirth, Email = email, PhoneNumber = phoneNr, Nationality = nationality, Position = pos, MinHoursPerWeek = Convert.ToInt32(minHours), MaxHoursPerWeek = Convert.ToInt32(maxHours), WagePerHour = Convert.ToDouble(wage), CurrentHours = 0 };
                 }
                 else if (pos == "DEPOT")
                 {
-                    employeeModel = new EmployeeBase { FirstName = fName, LastName = lName, DateOfBirth = dateOfBirth, Email = email, PhoneNumber = phoneNr, Nationality = nationality, Position = pos };
+                    employeeModel = new EmployeeBase { FirstName = fName, LastName = lName, DateOfBirth = dateOfBirth, Email = email, PhoneNumber = phoneNr, Nationality = nationality, Position = pos, MinHoursPerWeek = Convert.ToInt32(minHours), MaxHoursPerWeek = Convert.ToInt32(maxHours), WagePerHour = Convert.ToDouble(wage), CurrentHours = 0 };
                 }
                 else if (pos == "EMPLOYEE")
                 {
-                    employeeModel = new EmployeeBase { FirstName = fName, LastName = lName, DateOfBirth = dateOfBirth, Email = email, PhoneNumber = phoneNr, Nationality = nationality, Position = pos };
+                    employeeModel = new EmployeeBase { FirstName = fName, LastName = lName, DateOfBirth = dateOfBirth, Email = email, PhoneNumber = phoneNr, Nationality = nationality, Position = pos, MinHoursPerWeek = Convert.ToInt32(minHours), MaxHoursPerWeek = Convert.ToInt32(maxHours), WagePerHour = Convert.ToDouble(wage), CurrentHours = 0 };
                 }
 
-                dataAccess.InsertEmployee(fName, lName, dateOfBirth, email, phoneNr, nationality, employeeModel.Position, employeeModel.Username, employeeModel.Password);
+                dataAccess.InsertEmployee(fName, lName, dateOfBirth, email, phoneNr, nationality, employeeModel.Position, Convert.ToInt32(minHours), Convert.ToInt32(maxHours), Convert.ToDouble(wage), employeeModel.Username, employeeModel.Password);
 
                 int employeeID = dataAccess.GetIdOfEmployeeByName(fName, lName);
-                
+
                 employeeCredentials = $"{employeeID.ToString()} \r\n {employeeModel.Username} \r\n {employeeModel.Password}";
 
                 sendEmail.Send(email, employeeModel.Username, employeeModel.Password);
@@ -57,23 +58,23 @@ namespace Media_Bazaar
         public string GetCredentials()
         {
             return employeeCredentials;
-        }    
+        }
 
         public bool FireEmployee(string ExtraInformationForFire, int id, string emplID)
         {
             //if (String.IsNullOrEmpty(ExtraInformationForFire))
             //{
-               /// return false;
-           // }
-           // else
-           // {
-                if (emplID.Contains($"ID:{id}"))
-                {
-                    dataAccess.FireEmployeeByID(ExtraInformationForFire, id);
-                    return true;
-                }
-                return false;
-           // }
+            /// return false;
+            // }
+            // else
+            // {
+            if (emplID.Contains($"ID:{id}"))
+            {
+                dataAccess.FireEmployeeByID(ExtraInformationForFire, id);
+                return true;
+            }
+            return false;
+            // }
         }
 
         public bool AssignEmployeeToDepartment(int id, string departament, string emplID)
@@ -86,7 +87,7 @@ namespace Media_Bazaar
             return false;
         }
 
-        public bool ConfirmRequest(int id,string req)
+        public bool ConfirmRequest(int id, string req)
         {
             if (req.Contains($"ID:{id}"))
             {
@@ -112,7 +113,7 @@ namespace Media_Bazaar
             }
         }
 
-        public bool CreateDepartment(string DepartmentName,string minNr, string MaxNr)
+        public bool CreateDepartment(string DepartmentName, string minNr, string MaxNr)
         {
             if (!String.IsNullOrEmpty(DepartmentName) && !String.IsNullOrEmpty(minNr) && !String.IsNullOrEmpty(MaxNr))
             {
@@ -123,6 +124,11 @@ namespace Media_Bazaar
             {
                 return false;
             }
+        }
+
+        public void GenerateSchedule(string department, int nrAdminsPerShift, int nrManagersPerShift, int nrDepotWorkersPerShift, int nrEmployeesPerShift)
+        {
+            scheduleGenerator.GenerateScheduleForWeek(department, nrAdminsPerShift, nrManagersPerShift, nrDepotWorkersPerShift, nrEmployeesPerShift);
         }
 
 
@@ -148,11 +154,11 @@ namespace Media_Bazaar
         }
         //----------------------------------------
 
-        
+
         public List<EmployeeBase> GetNotFiredEmployees()
         {
             return dataAccess.GetNotFiredEmployees();
-        } 
+        }
 
         public List<DepartmentModel> GetAllDepartaments()
         {
