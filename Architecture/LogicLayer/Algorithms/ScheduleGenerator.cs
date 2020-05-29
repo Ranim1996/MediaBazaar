@@ -13,9 +13,9 @@ namespace Media_Bazaar
 
         List<EmployeeBase> employeesWithPreferencesForAssigning = new List<EmployeeBase>();
 
-        List<EmployeeBase> firstShift = new List<EmployeeBase>();
-        List<EmployeeBase> secondShift = new List<EmployeeBase>();
-        List<EmployeeBase> thirdShift = new List<EmployeeBase>();
+        List<EmployeeBase> firstShift; 
+        List<EmployeeBase> secondShift; 
+        List<EmployeeBase> thirdShift; 
 
         string firstShiftPeriod = "";
         string secondShiftPeriod = "";
@@ -31,7 +31,7 @@ namespace Media_Bazaar
         {
             foreach (EmployeeBase employee in dataAccess.GetEmployeesPreferencesForDayByDepartment(date.ToString("dd/MM/yyyy"),department))
             {
-                if (dataAccess.GetMaxHoursByID(employee.EmployeeID) < dataAccess.GetCurrentHoursByID(employee.EmployeeID))
+                if (dataAccess.GetMaxHoursByID(employee.EmployeeID) > dataAccess.GetCurrentHoursByID(employee.EmployeeID))
                 {
                     employeesWithPreferencesForAssigning.Add(employee);
                 }
@@ -40,9 +40,12 @@ namespace Media_Bazaar
 
         private void SeparateTheShiftPerDay(DateTime date)
         {
+            firstShift = new List<EmployeeBase>();
+            secondShift = new List<EmployeeBase>();
+            thirdShift = new List<EmployeeBase>();
             if (date.DayOfWeek.ToString() == "Saturday")
             {
-                firstShiftPeriod = "9:00-15:00";
+                firstShiftPeriod = "09:00-15:00";
                 secondShiftPeriod = "15:00-18:00";
 
                 nrWorkingHoursFirstShift = 6;
