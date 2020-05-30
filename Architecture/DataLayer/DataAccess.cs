@@ -555,7 +555,13 @@ namespace Media_Bazaar
                 return output;
             }
         }
-
+        public string GetPositionByID(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT Position FROM Employee WHERE EmployeeID='{id}'");
+            }
+        }
 
         public int GetMaxHoursByID(int id)
         {
@@ -601,7 +607,7 @@ namespace Media_Bazaar
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                connection.Execute($"UPDATE schedule SET Status='Assigned' WHERE EmployeeID='{id}' AND Date='{date}';");
+                connection.Execute($"UPDATE schedule SET Status='Assigned' WHERE EmployeeID='{id}' AND Date='{date}' ;");
             }
         }
 
@@ -613,20 +619,11 @@ namespace Media_Bazaar
             }
         }
 
-        public List<EmployeeBase> GetAdministratorsOrderedByWorkedHours()
+        public List<EmployeeBase> GetEmployeesByPossitionsOrderedByWorkedHours(string possition, string department)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<EmployeeBase>($"SELECT * FROM employee WHERE Position='ADMINISTRATOR' AND ReasonsForRelease IS NULL ORDER BY CurrentHoursForWeek;").ToList();
-                return output;
-            }
-        }
-
-        public List<EmployeeBase> GetEmployeesByPossitionsOrderedByWorkedHours(string possition)
-        {
-            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
-            {
-                var output = connection.Query<EmployeeBase>($"SELECT * FROM employee WHERE Position='{possition}' AND ReasonsForRelease IS NULL ORDER BY CurrentHoursForWeek;").ToList();
+                var output = connection.Query<EmployeeBase>($"SELECT * FROM employee WHERE Position='{possition}' AND Departament='{department}' AND ReasonsForRelease IS NULL ORDER BY CurrentHoursForWeek;").ToList();
                 return output;
             }
         }
