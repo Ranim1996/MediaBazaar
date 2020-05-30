@@ -547,11 +547,21 @@ namespace Media_Bazaar
 
 
         //Return all preferences for a certain date
+        public List<EmployeeBase> GetEmployeesByDepartment(string department)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                //var output = connection.Query<EmployeeBase>($"SELECT * FROM schedule WHERE EmployeeID IN (SELECT EmployeeID FROM employee WHERE Departament='{department}') AND Date='{date}' AND Status='Selected';").ToList();
+                var output = connection.Query<EmployeeBase>($"SELECT * FROM employee WHERE Departament='{department}';").ToList();
+                return output;
+            }
+        }
         public List<EmployeeBase> GetEmployeesPreferencesForDayByDepartment(string date,string department)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<EmployeeBase>($"SELECT * FROM schedule WHERE EmployeeID IN (SELECT EmployeeID FROM employee WHERE Departament='{department}') AND Date='{date}' AND Status='Selected';").ToList();
+                //var output = connection.Query<EmployeeBase>($"SELECT * FROM schedule WHERE EmployeeID IN (SELECT EmployeeID FROM employee WHERE Departament='{department}') AND Date='{date}' AND Status='Selected';").ToList();
+                var output = connection.Query<EmployeeBase>($"SELECT * FROM employee e INNER JOIN schedule s ON e.EmployeeID = s.EmployeeID WHERE e.Departament='{department}' AND s.Date='{date}' AND s.Status='Selected';").ToList();
                 return output;
             }
         }

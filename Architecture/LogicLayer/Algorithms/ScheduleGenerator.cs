@@ -13,6 +13,8 @@ namespace Media_Bazaar
 
         List<EmployeeBase> employeesWithPreferencesForAssigning = new List<EmployeeBase>();
 
+
+        //all employees with preferences are assigned to these 3 lists
         List<EmployeeBase> firstShift = new List<EmployeeBase>(); 
         List<EmployeeBase> secondShift = new List<EmployeeBase>(); 
         List<EmployeeBase> thirdShift = new List<EmployeeBase>(); 
@@ -21,9 +23,9 @@ namespace Media_Bazaar
         string secondShiftPeriod = "";
         string thirdShiftPeriod = "";
 
-        int nrWorkingHoursFirstShift;
-        int nrWorkingHoursSecondShift;
-        int nrWorkingHoursThirdShift;
+        int nrWorkingHoursFirstShift = 0;
+        int nrWorkingHoursSecondShift = 0;
+        int nrWorkingHoursThirdShift = 0;
 
 
         //checks which employees can still work (didn't exceed their hours) for a certain day (by department)
@@ -38,7 +40,7 @@ namespace Media_Bazaar
             }
         }
 
-        private void SeparateTheShiftPerDay(DateTime date)
+        private void SeparateThePreferredShiftPerDay(DateTime date)
         {
             if (date.DayOfWeek.ToString() == "Saturday")
             {
@@ -191,7 +193,7 @@ namespace Media_Bazaar
         public void GenerateScheduleForDay(DateTime date,string department, int nrAdminsPerShift, int nrManagersPerShift, int nrDepotWorkersPerShift, int nrEmployeesPerShift)
         {
             CheckEmployeesWhichCanWork(date, department);
-            SeparateTheShiftPerDay(date);
+            SeparateThePreferredShiftPerDay(date);
 
             //generate fisrt shifts
             GenerateScheduleForShiftByPosition(date, firstShift, nrAdmins, "ADMINISTRATOR", nrAdminsPerShift,nrWorkingHoursFirstShift, department);
