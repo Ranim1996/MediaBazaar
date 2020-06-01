@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataLayer\SeparateByPosition.cs" />
     <Compile Include="LogicLayer\Algorithms\NewGenerator.cs" />
     <Compile Include="LogicLayer\Algorithms\ScheduleGenerator.cs" />
     <Compile Include="LogicLayer\AssignShiftManagment.cs" />

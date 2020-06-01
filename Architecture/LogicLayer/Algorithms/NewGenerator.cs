@@ -63,11 +63,11 @@ namespace Media_Bazaar.LogicLayer.Algorithms
         {
             //get all employees from department
             List<EmployeeBase> employeesWithoutPref = new List<EmployeeBase>();
-            List<EmployeeBase> allEmployees = dataAccess.GetEmployeesByDepartment(department);
+           // List<EmployeeBase> allEmployees = dataAccess.GetEmployeesByDepartment(department);
 
             //get all employees which have not expressed preference
-            var employeesWithoutPref2 = allEmployees.Where(e => employees.All(e2 => e2.EmployeeID != e.EmployeeID));
-            employeesWithoutPref = employeesWithoutPref2.ToList();
+            //var employeesWithoutPref2 = allEmployees.Where(e => employees.All(e2 => e2.EmployeeID != e.EmployeeID));
+          //  employeesWithoutPref = employeesWithoutPref2.ToList();
             foreach(EmployeeBase employee in employeesWithoutPref)
             {
                 if (employee.Position == "ADMINISTRATOR")

@@ -9,29 +9,27 @@ namespace Media_Bazaar
     public class ScheduleGenerator
     {
         DataAccess dataAccess = new DataAccess();
-
+        private SeparateByPosition separate;
 
         List<EmployeeBase> employeesWithPreferencesForAssigning = new List<EmployeeBase>();
 
-
-        //all employees with preferences are assigned to these 3 lists
-        List<EmployeeBase> firstShift = new List<EmployeeBase>(); 
-        List<EmployeeBase> secondShift = new List<EmployeeBase>(); 
-        List<EmployeeBase> thirdShift = new List<EmployeeBase>(); 
+        List<EmployeeBase> firstShift = new List<EmployeeBase>();
+        List<EmployeeBase> secondShift = new List<EmployeeBase>();
+        List<EmployeeBase> thirdShift = new List<EmployeeBase>();
 
         string firstShiftPeriod = "";
         string secondShiftPeriod = "";
         string thirdShiftPeriod = "";
 
-        int nrWorkingHoursFirstShift = 0;
-        int nrWorkingHoursSecondShift = 0;
-        int nrWorkingHoursThirdShift = 0;
+        int nrWorkingHoursFirstShift;
+        int nrWorkingHoursSecondShift;
+        int nrWorkingHoursThirdShift;
 
 
         //checks which employees can still work (didn't exceed their hours) for a certain day (by department)
-        private void CheckEmployeesWhichCanWork(DateTime date,string department)
+        private void CheckEmployeesWhichCanWork(DateTime date, string department)
         {
-            foreach (EmployeeBase employee in dataAccess.GetEmployeesPreferencesForDayByDepartment(date.ToString("dd/MM/yyyy"),department))
+            foreach (EmployeeBase employee in dataAccess.GetEmployeesPreferencesForDayByDepartment(date.ToString("dd/MM/yyyy"), department))
             {
                 if (dataAccess.GetMaxHoursByID(employee.EmployeeID) > dataAccess.GetCurrentHoursByID(employee.EmployeeID))
                 {
@@ -40,7 +38,7 @@ namespace Media_Bazaar
             }
         }
 
-        private void SeparateThePreferredShiftPerDay(DateTime date)
+        private void SeparateTheShiftPerDay(DateTime date)
         {
             if (date.DayOfWeek.ToString() == "Saturday")
             {
@@ -108,52 +106,52 @@ namespace Media_Bazaar
 
         //separate the employees in lists for shifts depending on their position (for first shift)
 
-        List<EmployeeBase> nrAdmins = new List<EmployeeBase>();
-        List<EmployeeBase> nrManagers = new List<EmployeeBase>();
-        List<EmployeeBase> nrDepotWorkers = new List<EmployeeBase>();
-        List<EmployeeBase> nrEmployees = new List<EmployeeBase>();
+        //List<EmployeeBase> nrAdmins = new List<EmployeeBase>();
+        //List<EmployeeBase> nrManagers = new List<EmployeeBase>();
+        //List<EmployeeBase> nrDepotWorkers = new List<EmployeeBase>();
+        //List<EmployeeBase> nrEmployees = new List<EmployeeBase>();
 
-        private void SeparateEmployeesByPosition(List<EmployeeBase> employeesForShift)
-        {         
-            foreach (EmployeeBase employee in employeesForShift)
-            {
-                if (dataAccess.GetPositionByID(employee.EmployeeID) == "ADMINISTRATOR")
-                {
-                    nrAdmins.Add(employee);
-                }
-                else if (dataAccess.GetPositionByID(employee.EmployeeID) == "MANAGER")
-                {
-                    nrManagers.Add(employee);
-                }
-                else if (dataAccess.GetPositionByID(employee.EmployeeID) == "DEPOT")
-                {
-                    nrDepotWorkers.Add(employee);
-                }
-                else if (dataAccess.GetPositionByID(employee.EmployeeID) == "EMPLOYEE")
-                {
-                    nrEmployees.Add(employee);
-                }
-            }
-        }
 
-        private void GenerateScheduleForShiftByPosition(DateTime date, List<EmployeeBase> employeesForShift, List<EmployeeBase> Employees, string possition, int nrNeededEmployees, int nrWorkingHours, string department)
+
+        //private void SeparateEmployeesByPosition(List<EmployeeBase> employeesForShift)
+        //{
+        //    foreach (EmployeeBase employee in employeesForShift)
+        //    {
+        //        if (dataAccess.GetPositionByID(employee.EmployeeID) == "ADMINISTRATOR" && !nrAdmins.Contains(employee))
+        //        {
+        //            nrAdmins.Add(employee);
+        //        }
+        //        else if (dataAccess.GetPositionByID(employee.EmployeeID) == "MANAGER" && !nrManagers.Contains(employee))
+        //        {
+        //            nrManagers.Add(employee);
+        //        }
+        //        else if (dataAccess.GetPositionByID(employee.EmployeeID) == "DEPOT" && !nrDepotWorkers.Contains(employee))
+        //        {
+        //            nrDepotWorkers.Add(employee);
+        //        }
+        //        else if (dataAccess.GetPositionByID(employee.EmployeeID) == "EMPLOYEE" && !nrEmployees.Contains(employee))
+        //        {
+        //            nrEmployees.Add(employee);
+        //        }
+        //    }
+        //}
+
+        private void GenerateScheduleForShiftByPosition(DateTime date, List<EmployeeBase> employeesForShift, List<EmployeeBase> Employees, string possition, int nrNeededEmployees, int nrWorkingHours, string department, string shift)
         {
-            SeparateEmployeesByPosition(employeesForShift);
 
             //checks the number of employees with preferences and the number of needed employees for the shift
-            string shift = "";
+
             if (Employees.Count == nrNeededEmployees)
             {
                 foreach (EmployeeBase employee in Employees)
                 {
-
                     dataAccess.AssignEmployeeWithPreferencesToShift(employee.EmployeeID, date.ToString("dd/MM/yyyy"));
                     dataAccess.AddWorkingHoursToEmployee(employee.EmployeeID, nrWorkingHours);
                 }
             }
             else if (Employees.Count > nrNeededEmployees)
             {
-                for (int i = 0; i <= nrNeededEmployees; i++)
+                for (int i = 0; i < nrNeededEmployees; i++)
                 {
                     Random random = new Random();
                     int index = random.Next(Employees.Count);
@@ -168,6 +166,7 @@ namespace Media_Bazaar
                 shifts.Add(firstShiftPeriod);
                 shifts.Add(secondShiftPeriod);
                 shifts.Add(thirdShiftPeriod);
+
                 foreach (EmployeeBase employee in Employees)
                 {
                     dataAccess.AssignEmployeeWithPreferencesToShift(employee.EmployeeID, date.ToString("dd/MM/yyyy"));
@@ -175,46 +174,60 @@ namespace Media_Bazaar
                 }
 
                 List<EmployeeBase> allEmployees = dataAccess.GetEmployeesByPossitionsOrderedByWorkedHours(possition, department);
-                for (int j = 0; j < shifts.Count; j++)
-                {
-                    for (int i = 0; i < nrNeededEmployees - Employees.Count; i++)
-                    {
-                        Random random = new Random();
-                        int index = random.Next(allEmployees.Count);
 
-                        dataAccess.AssignEmployeeToShift(allEmployees[index].EmployeeID, date.ToString("dd/MM/yyyy"), shifts[j]);
-                        dataAccess.AddWorkingHoursToEmployee(allEmployees[index].EmployeeID, nrWorkingHours);
+                for (int i = 0; i < nrNeededEmployees - Employees.Count; i++)
+                {
+                    //Random random = new Random();
+                    //int index = random.Next(allEmployees.Count);
+                    if(dataAccess.GetCurrentHoursByID(allEmployees[i].EmployeeID)< dataAccess.GetCurrentHoursByID(allEmployees[i+1].EmployeeID))
+                    {
+                        dataAccess.AssignEmployeeToShift(allEmployees[i].EmployeeID, date.ToString("dd/MM/yyyy"), shift);
+                        dataAccess.AddWorkingHoursToEmployee(allEmployees[i].EmployeeID, nrWorkingHours);
                     }
-                }
+                    else
+                    {
+                        dataAccess.AssignEmployeeToShift(allEmployees[i+1].EmployeeID, date.ToString("dd/MM/yyyy"), shift);
+                        dataAccess.AddWorkingHoursToEmployee(allEmployees[i+1].EmployeeID, nrWorkingHours);
+                    }
                     
+                }
             }
         }
 
-        public void GenerateScheduleForDay(DateTime date,string department, int nrAdminsPerShift, int nrManagersPerShift, int nrDepotWorkersPerShift, int nrEmployeesPerShift)
+        public void GenerateScheduleForDay(DateTime date, string department, int nrAdminsPerShift, int nrManagersPerShift, int nrDepotWorkersPerShift, int nrEmployeesPerShift)
         {
             CheckEmployeesWhichCanWork(date, department);
-            SeparateThePreferredShiftPerDay(date);
+            SeparateTheShiftPerDay(date);
+
+            SeparateByPosition separate1 = new SeparateByPosition();
+            separate1.SeparateEmployeesByPosition(firstShift);
+            SeparateByPosition separate2 = new SeparateByPosition();
+            separate2.SeparateEmployeesByPosition(secondShift);
+            SeparateByPosition separate3 = new SeparateByPosition();
+            separate3.SeparateEmployeesByPosition(thirdShift);
+
+
 
             //generate fisrt shifts
-            GenerateScheduleForShiftByPosition(date, firstShift, nrAdmins, "ADMINISTRATOR", nrAdminsPerShift,nrWorkingHoursFirstShift, department);
-            GenerateScheduleForShiftByPosition(date, firstShift, nrManagers, "MANAGER", nrManagersPerShift, nrWorkingHoursFirstShift, department);
-            GenerateScheduleForShiftByPosition(date, firstShift, nrDepotWorkers, "DEPOT", nrDepotWorkersPerShift, nrWorkingHoursFirstShift, department);
-            GenerateScheduleForShiftByPosition(date, firstShift, nrEmployees, "EMPLOYEE", nrEmployeesPerShift, nrWorkingHoursFirstShift, department);
+            GenerateScheduleForShiftByPosition(date, firstShift, separate1.GetAdmins(), "ADMINISTRATOR", nrAdminsPerShift, nrWorkingHoursFirstShift, department, firstShiftPeriod);
+            GenerateScheduleForShiftByPosition(date, firstShift, separate1.GetManagers(), "MANAGER", nrManagersPerShift, nrWorkingHoursFirstShift, department, firstShiftPeriod);
+            GenerateScheduleForShiftByPosition(date, firstShift, separate1.GetDepotWorkers(), "DEPOT", nrDepotWorkersPerShift, nrWorkingHoursFirstShift, department, firstShiftPeriod);
+            GenerateScheduleForShiftByPosition(date, firstShift, separate1.GetEmployees(), "EMPLOYEE", nrEmployeesPerShift, nrWorkingHoursFirstShift, department, firstShiftPeriod);
 
             //generate second shifts
-            GenerateScheduleForShiftByPosition(date, secondShift, nrAdmins, "ADMINISTRATOR", nrAdminsPerShift,nrWorkingHoursSecondShift, department);
-            GenerateScheduleForShiftByPosition(date, secondShift, nrManagers, "MANAGER", nrManagersPerShift, nrWorkingHoursSecondShift, department);
-            GenerateScheduleForShiftByPosition(date, secondShift, nrDepotWorkers, "DEPOT", nrDepotWorkersPerShift, nrWorkingHoursSecondShift, department);
-            GenerateScheduleForShiftByPosition(date, secondShift, nrEmployees, "EMPLOYEE", nrEmployeesPerShift, nrWorkingHoursSecondShift, department);
+            GenerateScheduleForShiftByPosition(date, secondShift, separate2.GetAdmins(), "ADMINISTRATOR", nrAdminsPerShift, nrWorkingHoursSecondShift, department, secondShiftPeriod);
+            GenerateScheduleForShiftByPosition(date, secondShift, separate2.GetManagers(), "MANAGER", nrManagersPerShift, nrWorkingHoursSecondShift, department, secondShiftPeriod);
+            GenerateScheduleForShiftByPosition(date, secondShift, separate2.GetDepotWorkers(), "DEPOT", nrDepotWorkersPerShift, nrWorkingHoursSecondShift, department, secondShiftPeriod);
+            GenerateScheduleForShiftByPosition(date, secondShift, separate2.GetEmployees(), "EMPLOYEE", nrEmployeesPerShift, nrWorkingHoursSecondShift, department, secondShiftPeriod);
 
             //generate third shifts
-            GenerateScheduleForShiftByPosition(date, thirdShift, nrAdmins, "ADMINISTRATOR", nrAdminsPerShift,nrWorkingHoursThirdShift, department);
-            GenerateScheduleForShiftByPosition(date, thirdShift, nrManagers, "MANAGER", nrManagersPerShift, nrWorkingHoursThirdShift, department);
-            GenerateScheduleForShiftByPosition(date, thirdShift, nrDepotWorkers, "DEPOT", nrDepotWorkersPerShift, nrWorkingHoursThirdShift, department);
-            GenerateScheduleForShiftByPosition(date, thirdShift, nrEmployees, "EMPLOYEE", nrEmployeesPerShift, nrWorkingHoursThirdShift, department);
+            GenerateScheduleForShiftByPosition(date, thirdShift, separate3.GetAdmins(), "ADMINISTRATOR", nrAdminsPerShift, nrWorkingHoursThirdShift, department, thirdShiftPeriod);
+            GenerateScheduleForShiftByPosition(date, thirdShift, separate3.GetManagers(), "MANAGER", nrManagersPerShift, nrWorkingHoursThirdShift, department, thirdShiftPeriod);
+            GenerateScheduleForShiftByPosition(date, thirdShift, separate3.GetDepotWorkers(), "DEPOT", nrDepotWorkersPerShift, nrWorkingHoursThirdShift, department, thirdShiftPeriod);
+            GenerateScheduleForShiftByPosition(date, thirdShift, separate3.GetEmployees(), "EMPLOYEE", nrEmployeesPerShift, nrWorkingHoursThirdShift, department, thirdShiftPeriod);
         }
 
-        public void GenerateScheduleForWeek(string department,int nrAdminsPerShift, int nrManagersPerShift, int nrDepotWorkersPerShift, int nrEmployeesPerShift)
+        public void GenerateScheduleForWeek(string department, int nrAdminsPerShift, int nrManagersPerShift, int nrDepotWorkersPerShift, int nrEmployeesPerShift)
         {
             DateTime today = DateTime.Today;
             if (today.DayOfWeek == DayOfWeek.Monday)
