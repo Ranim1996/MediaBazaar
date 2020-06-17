@@ -69,6 +69,29 @@
             this.panel19 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel29 = new System.Windows.Forms.TableLayoutPanel();
             this.panel20 = new System.Windows.Forms.Panel();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panelAddDepartment = new System.Windows.Forms.Panel();
+            this.btnCreateDepartment = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.lbDepartaments = new System.Windows.Forms.ListBox();
+            this.tbMaxNr = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.tbMinNr = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tbDepName = new System.Windows.Forms.TextBox();
+            this.label56 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.panelSearchDep = new System.Windows.Forms.Panel();
+            this.btnSearchDep = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.lbxFoundDepartaments = new System.Windows.Forms.ListBox();
+            this.tbxDepName = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.panelRemoveDepartment = new System.Windows.Forms.Panel();
+            this.btnRemoveDep = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.clbDepartments = new System.Windows.Forms.CheckedListBox();
+            this.btnRemove = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.label38 = new System.Windows.Forms.Label();
             this.tabRestockReq = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
@@ -249,29 +272,6 @@
             this.panel29 = new System.Windows.Forms.Panel();
             this.panel30 = new System.Windows.Forms.Panel();
             this.bunifuFlatButton10 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.panelAddDepartment = new System.Windows.Forms.Panel();
-            this.btnCreateDepartment = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.lbDepartaments = new System.Windows.Forms.ListBox();
-            this.tbMaxNr = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.tbMinNr = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.tbDepName = new System.Windows.Forms.TextBox();
-            this.label56 = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.panelSearchDep = new System.Windows.Forms.Panel();
-            this.btnSearchDep = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.lbxFoundDepartaments = new System.Windows.Forms.ListBox();
-            this.tbxDepName = new System.Windows.Forms.TextBox();
-            this.label41 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.panelRemoveDepartment = new System.Windows.Forms.Panel();
-            this.btnRemoveDep = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.clbDepartments = new System.Windows.Forms.CheckedListBox();
-            this.btnRemove = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label38 = new System.Windows.Forms.Label();
             this.tabEmail.SuspendLayout();
             this.tableLayoutPanel20.SuspendLayout();
             this.tableLayoutPanel25.SuspendLayout();
@@ -290,6 +290,13 @@
             this.panel19.SuspendLayout();
             this.tableLayoutPanel29.SuspendLayout();
             this.panel20.SuspendLayout();
+            this.tabControl2.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.panelAddDepartment.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.panelSearchDep.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.panelRemoveDepartment.SuspendLayout();
             this.tabRestockReq.SuspendLayout();
             this.tableLayoutPanel21.SuspendLayout();
             this.tableLayoutPanel22.SuspendLayout();
@@ -357,13 +364,6 @@
             this.groupBox1.SuspendLayout();
             this.panel29.SuspendLayout();
             this.panel30.SuspendLayout();
-            this.tabControl2.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.panelAddDepartment.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.panelSearchDep.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.panelRemoveDepartment.SuspendLayout();
             this.SuspendLayout();
             // 
             // timerChangingMenusColor
@@ -1176,6 +1176,380 @@
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(1228, 740);
             this.panel20.TabIndex = 1;
+            // 
+            // tabControl2
+            // 
+            this.tabControl2.Controls.Add(this.tabPage2);
+            this.tabControl2.Controls.Add(this.tabPage3);
+            this.tabControl2.Controls.Add(this.tabPage4);
+            this.tabControl2.Location = new System.Drawing.Point(4, 17);
+            this.tabControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(1227, 721);
+            this.tabControl2.TabIndex = 14;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.panelAddDepartment);
+            this.tabPage2.Location = new System.Drawing.Point(4, 31);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage2.Size = new System.Drawing.Size(1219, 686);
+            this.tabPage2.TabIndex = 0;
+            this.tabPage2.Text = "Create New Department";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // panelAddDepartment
+            // 
+            this.panelAddDepartment.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelAddDepartment.Controls.Add(this.btnCreateDepartment);
+            this.panelAddDepartment.Controls.Add(this.lbDepartaments);
+            this.panelAddDepartment.Controls.Add(this.tbMaxNr);
+            this.panelAddDepartment.Controls.Add(this.label23);
+            this.panelAddDepartment.Controls.Add(this.tbMinNr);
+            this.panelAddDepartment.Controls.Add(this.label11);
+            this.panelAddDepartment.Controls.Add(this.tbDepName);
+            this.panelAddDepartment.Controls.Add(this.label56);
+            this.panelAddDepartment.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelAddDepartment.Location = new System.Drawing.Point(5, 5);
+            this.panelAddDepartment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelAddDepartment.Name = "panelAddDepartment";
+            this.panelAddDepartment.Size = new System.Drawing.Size(1335, 678);
+            this.panelAddDepartment.TabIndex = 0;
+            // 
+            // btnCreateDepartment
+            // 
+            this.btnCreateDepartment.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnCreateDepartment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCreateDepartment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnCreateDepartment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCreateDepartment.BorderRadius = 0;
+            this.btnCreateDepartment.ButtonText = "Create";
+            this.btnCreateDepartment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCreateDepartment.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCreateDepartment.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnCreateDepartment.Iconimage = null;
+            this.btnCreateDepartment.Iconimage_right = null;
+            this.btnCreateDepartment.Iconimage_right_Selected = null;
+            this.btnCreateDepartment.Iconimage_Selected = null;
+            this.btnCreateDepartment.IconMarginLeft = 0;
+            this.btnCreateDepartment.IconMarginRight = 0;
+            this.btnCreateDepartment.IconRightVisible = false;
+            this.btnCreateDepartment.IconRightZoom = 0D;
+            this.btnCreateDepartment.IconVisible = false;
+            this.btnCreateDepartment.IconZoom = 90D;
+            this.btnCreateDepartment.IsTab = false;
+            this.btnCreateDepartment.Location = new System.Drawing.Point(61, 560);
+            this.btnCreateDepartment.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnCreateDepartment.Name = "btnCreateDepartment";
+            this.btnCreateDepartment.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnCreateDepartment.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnCreateDepartment.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnCreateDepartment.selected = false;
+            this.btnCreateDepartment.Size = new System.Drawing.Size(1213, 89);
+            this.btnCreateDepartment.TabIndex = 2;
+            this.btnCreateDepartment.Text = "Create";
+            this.btnCreateDepartment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCreateDepartment.Textcolor = System.Drawing.Color.White;
+            this.btnCreateDepartment.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btnCreateDepartment.Click += new System.EventHandler(this.BtnCreateDepartment_Click_1);
+            // 
+            // lbDepartaments
+            // 
+            this.lbDepartaments.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbDepartaments.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.lbDepartaments.FormattingEnabled = true;
+            this.lbDepartaments.ItemHeight = 23;
+            this.lbDepartaments.Location = new System.Drawing.Point(32, 242);
+            this.lbDepartaments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lbDepartaments.Name = "lbDepartaments";
+            this.lbDepartaments.Size = new System.Drawing.Size(1213, 234);
+            this.lbDepartaments.TabIndex = 11;
+            // 
+            // tbMaxNr
+            // 
+            this.tbMaxNr.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbMaxNr.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.tbMaxNr.Location = new System.Drawing.Point(324, 176);
+            this.tbMaxNr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbMaxNr.Name = "tbMaxNr";
+            this.tbMaxNr.Size = new System.Drawing.Size(921, 30);
+            this.tbMaxNr.TabIndex = 10;
+            // 
+            // label23
+            // 
+            this.label23.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label23.Location = new System.Drawing.Point(28, 110);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(291, 27);
+            this.label23.TabIndex = 9;
+            this.label23.Text = "Minimum Employee Number:";
+            // 
+            // tbMinNr
+            // 
+            this.tbMinNr.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbMinNr.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.tbMinNr.Location = new System.Drawing.Point(324, 110);
+            this.tbMinNr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbMinNr.Name = "tbMinNr";
+            this.tbMinNr.Size = new System.Drawing.Size(921, 30);
+            this.tbMinNr.TabIndex = 8;
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label11.Location = new System.Drawing.Point(27, 176);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(291, 27);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "Maximum Employee Number:";
+            // 
+            // tbDepName
+            // 
+            this.tbDepName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbDepName.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.tbDepName.Location = new System.Drawing.Point(324, 37);
+            this.tbDepName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbDepName.Name = "tbDepName";
+            this.tbDepName.Size = new System.Drawing.Size(921, 30);
+            this.tbDepName.TabIndex = 6;
+            // 
+            // label56
+            // 
+            this.label56.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label56.Location = new System.Drawing.Point(28, 37);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(179, 27);
+            this.label56.TabIndex = 0;
+            this.label56.Text = "Department name:";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.panelSearchDep);
+            this.tabPage3.Location = new System.Drawing.Point(4, 31);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage3.Size = new System.Drawing.Size(1219, 686);
+            this.tabPage3.TabIndex = 1;
+            this.tabPage3.Text = "Search For Department";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // panelSearchDep
+            // 
+            this.panelSearchDep.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelSearchDep.Controls.Add(this.btnSearchDep);
+            this.panelSearchDep.Controls.Add(this.lbxFoundDepartaments);
+            this.panelSearchDep.Controls.Add(this.tbxDepName);
+            this.panelSearchDep.Controls.Add(this.label41);
+            this.panelSearchDep.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelSearchDep.Location = new System.Drawing.Point(3, 5);
+            this.panelSearchDep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelSearchDep.Name = "panelSearchDep";
+            this.panelSearchDep.Size = new System.Drawing.Size(1076, 841);
+            this.panelSearchDep.TabIndex = 12;
+            // 
+            // btnSearchDep
+            // 
+            this.btnSearchDep.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnSearchDep.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearchDep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnSearchDep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearchDep.BorderRadius = 0;
+            this.btnSearchDep.ButtonText = "Search";
+            this.btnSearchDep.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearchDep.DisabledColor = System.Drawing.Color.Gray;
+            this.btnSearchDep.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnSearchDep.Iconimage = null;
+            this.btnSearchDep.Iconimage_right = null;
+            this.btnSearchDep.Iconimage_right_Selected = null;
+            this.btnSearchDep.Iconimage_Selected = null;
+            this.btnSearchDep.IconMarginLeft = 0;
+            this.btnSearchDep.IconMarginRight = 0;
+            this.btnSearchDep.IconRightVisible = false;
+            this.btnSearchDep.IconRightZoom = 0D;
+            this.btnSearchDep.IconVisible = false;
+            this.btnSearchDep.IconZoom = 90D;
+            this.btnSearchDep.IsTab = false;
+            this.btnSearchDep.Location = new System.Drawing.Point(75, 133);
+            this.btnSearchDep.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSearchDep.Name = "btnSearchDep";
+            this.btnSearchDep.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnSearchDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnSearchDep.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnSearchDep.selected = false;
+            this.btnSearchDep.Size = new System.Drawing.Size(955, 41);
+            this.btnSearchDep.TabIndex = 2;
+            this.btnSearchDep.Text = "Search";
+            this.btnSearchDep.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSearchDep.Textcolor = System.Drawing.Color.White;
+            this.btnSearchDep.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btnSearchDep.Click += new System.EventHandler(this.BtnSearchDep_Click);
+            // 
+            // lbxFoundDepartaments
+            // 
+            this.lbxFoundDepartaments.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbxFoundDepartaments.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.lbxFoundDepartaments.FormattingEnabled = true;
+            this.lbxFoundDepartaments.ItemHeight = 23;
+            this.lbxFoundDepartaments.Location = new System.Drawing.Point(32, 242);
+            this.lbxFoundDepartaments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lbxFoundDepartaments.Name = "lbxFoundDepartaments";
+            this.lbxFoundDepartaments.Size = new System.Drawing.Size(953, 395);
+            this.lbxFoundDepartaments.TabIndex = 11;
+            // 
+            // tbxDepName
+            // 
+            this.tbxDepName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbxDepName.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.tbxDepName.Location = new System.Drawing.Point(365, 34);
+            this.tbxDepName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxDepName.Name = "tbxDepName";
+            this.tbxDepName.Size = new System.Drawing.Size(663, 30);
+            this.tbxDepName.TabIndex = 6;
+            // 
+            // label41
+            // 
+            this.label41.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label41.Location = new System.Drawing.Point(28, 37);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(251, 27);
+            this.label41.TabIndex = 0;
+            this.label41.Text = "Departament Name:";
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.panelRemoveDepartment);
+            this.tabPage4.Location = new System.Drawing.Point(4, 31);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1219, 686);
+            this.tabPage4.TabIndex = 2;
+            this.tabPage4.Text = "Remove Department";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // panelRemoveDepartment
+            // 
+            this.panelRemoveDepartment.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelRemoveDepartment.Controls.Add(this.btnRemoveDep);
+            this.panelRemoveDepartment.Controls.Add(this.clbDepartments);
+            this.panelRemoveDepartment.Controls.Add(this.btnRemove);
+            this.panelRemoveDepartment.Controls.Add(this.label38);
+            this.panelRemoveDepartment.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelRemoveDepartment.Location = new System.Drawing.Point(13, 14);
+            this.panelRemoveDepartment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelRemoveDepartment.Name = "panelRemoveDepartment";
+            this.panelRemoveDepartment.Size = new System.Drawing.Size(1068, 670);
+            this.panelRemoveDepartment.TabIndex = 12;
+            // 
+            // btnRemoveDep
+            // 
+            this.btnRemoveDep.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnRemoveDep.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRemoveDep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnRemoveDep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRemoveDep.BorderRadius = 0;
+            this.btnRemoveDep.ButtonText = "Remove";
+            this.btnRemoveDep.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRemoveDep.DisabledColor = System.Drawing.Color.Gray;
+            this.btnRemoveDep.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnRemoveDep.Iconimage = null;
+            this.btnRemoveDep.Iconimage_right = null;
+            this.btnRemoveDep.Iconimage_right_Selected = null;
+            this.btnRemoveDep.Iconimage_Selected = null;
+            this.btnRemoveDep.IconMarginLeft = 0;
+            this.btnRemoveDep.IconMarginRight = 0;
+            this.btnRemoveDep.IconRightVisible = false;
+            this.btnRemoveDep.IconRightZoom = 0D;
+            this.btnRemoveDep.IconVisible = false;
+            this.btnRemoveDep.IconZoom = 90D;
+            this.btnRemoveDep.IsTab = false;
+            this.btnRemoveDep.Location = new System.Drawing.Point(52, 482);
+            this.btnRemoveDep.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.btnRemoveDep.Name = "btnRemoveDep";
+            this.btnRemoveDep.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnRemoveDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnRemoveDep.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnRemoveDep.selected = false;
+            this.btnRemoveDep.Size = new System.Drawing.Size(984, 71);
+            this.btnRemoveDep.TabIndex = 9;
+            this.btnRemoveDep.Text = "Remove";
+            this.btnRemoveDep.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnRemoveDep.Textcolor = System.Drawing.Color.White;
+            this.btnRemoveDep.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btnRemoveDep.Click += new System.EventHandler(this.BtnRemoveDep_Click);
+            // 
+            // clbDepartments
+            // 
+            this.clbDepartments.FormattingEnabled = true;
+            this.clbDepartments.Location = new System.Drawing.Point(21, 73);
+            this.clbDepartments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.clbDepartments.Name = "clbDepartments";
+            this.clbDepartments.Size = new System.Drawing.Size(384, 340);
+            this.clbDepartments.TabIndex = 8;
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnRemove.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnRemove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRemove.BorderRadius = 0;
+            this.btnRemove.ButtonText = "Remove Department";
+            this.btnRemove.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRemove.DisabledColor = System.Drawing.Color.Gray;
+            this.btnRemove.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnRemove.Iconimage = null;
+            this.btnRemove.Iconimage_right = null;
+            this.btnRemove.Iconimage_right_Selected = null;
+            this.btnRemove.Iconimage_Selected = null;
+            this.btnRemove.IconMarginLeft = 0;
+            this.btnRemove.IconMarginRight = 0;
+            this.btnRemove.IconRightVisible = false;
+            this.btnRemove.IconRightZoom = 0D;
+            this.btnRemove.IconVisible = false;
+            this.btnRemove.IconZoom = 90D;
+            this.btnRemove.IsTab = false;
+            this.btnRemove.Location = new System.Drawing.Point(69, 770);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnRemove.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnRemove.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnRemove.selected = false;
+            this.btnRemove.Size = new System.Drawing.Size(984, 122);
+            this.btnRemove.TabIndex = 2;
+            this.btnRemove.Text = "Remove Department";
+            this.btnRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnRemove.Textcolor = System.Drawing.Color.White;
+            this.btnRemove.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
+            // 
+            // label38
+            // 
+            this.label38.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label38.Location = new System.Drawing.Point(17, 18);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(291, 27);
+            this.label38.TabIndex = 7;
+            this.label38.Text = "Existing departments:";
             // 
             // tabRestockReq
             // 
@@ -4865,379 +5239,6 @@
             this.bunifuFlatButton10.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton10.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             // 
-            // tabControl2
-            // 
-            this.tabControl2.Controls.Add(this.tabPage2);
-            this.tabControl2.Controls.Add(this.tabPage3);
-            this.tabControl2.Controls.Add(this.tabPage4);
-            this.tabControl2.Location = new System.Drawing.Point(4, 17);
-            this.tabControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1227, 721);
-            this.tabControl2.TabIndex = 14;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.panelAddDepartment);
-            this.tabPage2.Location = new System.Drawing.Point(4, 31);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(1219, 686);
-            this.tabPage2.TabIndex = 0;
-            this.tabPage2.Text = "Create New Department";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // panelAddDepartment
-            // 
-            this.panelAddDepartment.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelAddDepartment.Controls.Add(this.btnCreateDepartment);
-            this.panelAddDepartment.Controls.Add(this.lbDepartaments);
-            this.panelAddDepartment.Controls.Add(this.tbMaxNr);
-            this.panelAddDepartment.Controls.Add(this.label23);
-            this.panelAddDepartment.Controls.Add(this.tbMinNr);
-            this.panelAddDepartment.Controls.Add(this.label11);
-            this.panelAddDepartment.Controls.Add(this.tbDepName);
-            this.panelAddDepartment.Controls.Add(this.label56);
-            this.panelAddDepartment.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelAddDepartment.Location = new System.Drawing.Point(5, 5);
-            this.panelAddDepartment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelAddDepartment.Name = "panelAddDepartment";
-            this.panelAddDepartment.Size = new System.Drawing.Size(1335, 678);
-            this.panelAddDepartment.TabIndex = 0;
-            // 
-            // btnCreateDepartment
-            // 
-            this.btnCreateDepartment.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.btnCreateDepartment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCreateDepartment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnCreateDepartment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCreateDepartment.BorderRadius = 0;
-            this.btnCreateDepartment.ButtonText = "Create";
-            this.btnCreateDepartment.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCreateDepartment.DisabledColor = System.Drawing.Color.Gray;
-            this.btnCreateDepartment.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnCreateDepartment.Iconimage = null;
-            this.btnCreateDepartment.Iconimage_right = null;
-            this.btnCreateDepartment.Iconimage_right_Selected = null;
-            this.btnCreateDepartment.Iconimage_Selected = null;
-            this.btnCreateDepartment.IconMarginLeft = 0;
-            this.btnCreateDepartment.IconMarginRight = 0;
-            this.btnCreateDepartment.IconRightVisible = false;
-            this.btnCreateDepartment.IconRightZoom = 0D;
-            this.btnCreateDepartment.IconVisible = false;
-            this.btnCreateDepartment.IconZoom = 90D;
-            this.btnCreateDepartment.IsTab = false;
-            this.btnCreateDepartment.Location = new System.Drawing.Point(61, 560);
-            this.btnCreateDepartment.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnCreateDepartment.Name = "btnCreateDepartment";
-            this.btnCreateDepartment.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnCreateDepartment.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.btnCreateDepartment.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnCreateDepartment.selected = false;
-            this.btnCreateDepartment.Size = new System.Drawing.Size(1213, 89);
-            this.btnCreateDepartment.TabIndex = 2;
-            this.btnCreateDepartment.Text = "Create";
-            this.btnCreateDepartment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCreateDepartment.Textcolor = System.Drawing.Color.White;
-            this.btnCreateDepartment.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btnCreateDepartment.Click += new System.EventHandler(this.BtnCreateDepartment_Click_1);
-            // 
-            // lbDepartaments
-            // 
-            this.lbDepartaments.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbDepartaments.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.lbDepartaments.FormattingEnabled = true;
-            this.lbDepartaments.ItemHeight = 23;
-            this.lbDepartaments.Location = new System.Drawing.Point(32, 242);
-            this.lbDepartaments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.lbDepartaments.Name = "lbDepartaments";
-            this.lbDepartaments.Size = new System.Drawing.Size(1213, 234);
-            this.lbDepartaments.TabIndex = 11;
-            // 
-            // tbMaxNr
-            // 
-            this.tbMaxNr.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbMaxNr.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.tbMaxNr.Location = new System.Drawing.Point(324, 176);
-            this.tbMaxNr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbMaxNr.Name = "tbMaxNr";
-            this.tbMaxNr.Size = new System.Drawing.Size(921, 30);
-            this.tbMaxNr.TabIndex = 10;
-            // 
-            // label23
-            // 
-            this.label23.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label23.Location = new System.Drawing.Point(28, 110);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(291, 27);
-            this.label23.TabIndex = 9;
-            this.label23.Text = "Minimum Employee Number:";
-            // 
-            // tbMinNr
-            // 
-            this.tbMinNr.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbMinNr.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.tbMinNr.Location = new System.Drawing.Point(324, 110);
-            this.tbMinNr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbMinNr.Name = "tbMinNr";
-            this.tbMinNr.Size = new System.Drawing.Size(921, 30);
-            this.tbMinNr.TabIndex = 8;
-            // 
-            // label11
-            // 
-            this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(27, 176);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(291, 27);
-            this.label11.TabIndex = 7;
-            this.label11.Text = "Maximum Employee Number:";
-            // 
-            // tbDepName
-            // 
-            this.tbDepName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbDepName.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.tbDepName.Location = new System.Drawing.Point(324, 37);
-            this.tbDepName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbDepName.Name = "tbDepName";
-            this.tbDepName.Size = new System.Drawing.Size(921, 30);
-            this.tbDepName.TabIndex = 6;
-            // 
-            // label56
-            // 
-            this.label56.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label56.Location = new System.Drawing.Point(28, 37);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(179, 27);
-            this.label56.TabIndex = 0;
-            this.label56.Text = "Department name:";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.panelSearchDep);
-            this.tabPage3.Location = new System.Drawing.Point(4, 31);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage3.Size = new System.Drawing.Size(1219, 686);
-            this.tabPage3.TabIndex = 1;
-            this.tabPage3.Text = "Search For Department";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // panelSearchDep
-            // 
-            this.panelSearchDep.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelSearchDep.Controls.Add(this.btnSearchDep);
-            this.panelSearchDep.Controls.Add(this.lbxFoundDepartaments);
-            this.panelSearchDep.Controls.Add(this.tbxDepName);
-            this.panelSearchDep.Controls.Add(this.label41);
-            this.panelSearchDep.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelSearchDep.Location = new System.Drawing.Point(3, 5);
-            this.panelSearchDep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelSearchDep.Name = "panelSearchDep";
-            this.panelSearchDep.Size = new System.Drawing.Size(1076, 841);
-            this.panelSearchDep.TabIndex = 12;
-            // 
-            // btnSearchDep
-            // 
-            this.btnSearchDep.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.btnSearchDep.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearchDep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnSearchDep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSearchDep.BorderRadius = 0;
-            this.btnSearchDep.ButtonText = "Search";
-            this.btnSearchDep.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearchDep.DisabledColor = System.Drawing.Color.Gray;
-            this.btnSearchDep.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnSearchDep.Iconimage = null;
-            this.btnSearchDep.Iconimage_right = null;
-            this.btnSearchDep.Iconimage_right_Selected = null;
-            this.btnSearchDep.Iconimage_Selected = null;
-            this.btnSearchDep.IconMarginLeft = 0;
-            this.btnSearchDep.IconMarginRight = 0;
-            this.btnSearchDep.IconRightVisible = false;
-            this.btnSearchDep.IconRightZoom = 0D;
-            this.btnSearchDep.IconVisible = false;
-            this.btnSearchDep.IconZoom = 90D;
-            this.btnSearchDep.IsTab = false;
-            this.btnSearchDep.Location = new System.Drawing.Point(75, 133);
-            this.btnSearchDep.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnSearchDep.Name = "btnSearchDep";
-            this.btnSearchDep.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnSearchDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.btnSearchDep.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnSearchDep.selected = false;
-            this.btnSearchDep.Size = new System.Drawing.Size(955, 41);
-            this.btnSearchDep.TabIndex = 2;
-            this.btnSearchDep.Text = "Search";
-            this.btnSearchDep.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSearchDep.Textcolor = System.Drawing.Color.White;
-            this.btnSearchDep.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btnSearchDep.Click += new System.EventHandler(this.BtnSearchDep_Click);
-            // 
-            // lbxFoundDepartaments
-            // 
-            this.lbxFoundDepartaments.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbxFoundDepartaments.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.lbxFoundDepartaments.FormattingEnabled = true;
-            this.lbxFoundDepartaments.ItemHeight = 23;
-            this.lbxFoundDepartaments.Location = new System.Drawing.Point(32, 242);
-            this.lbxFoundDepartaments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.lbxFoundDepartaments.Name = "lbxFoundDepartaments";
-            this.lbxFoundDepartaments.Size = new System.Drawing.Size(953, 395);
-            this.lbxFoundDepartaments.TabIndex = 11;
-            // 
-            // tbxDepName
-            // 
-            this.tbxDepName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbxDepName.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.tbxDepName.Location = new System.Drawing.Point(365, 34);
-            this.tbxDepName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbxDepName.Name = "tbxDepName";
-            this.tbxDepName.Size = new System.Drawing.Size(663, 30);
-            this.tbxDepName.TabIndex = 6;
-            // 
-            // label41
-            // 
-            this.label41.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label41.Location = new System.Drawing.Point(28, 37);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(251, 27);
-            this.label41.TabIndex = 0;
-            this.label41.Text = "Departament Name:";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.panelRemoveDepartment);
-            this.tabPage4.Location = new System.Drawing.Point(4, 31);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1219, 686);
-            this.tabPage4.TabIndex = 2;
-            this.tabPage4.Text = "Remove Department";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // panelRemoveDepartment
-            // 
-            this.panelRemoveDepartment.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelRemoveDepartment.Controls.Add(this.btnRemoveDep);
-            this.panelRemoveDepartment.Controls.Add(this.clbDepartments);
-            this.panelRemoveDepartment.Controls.Add(this.btnRemove);
-            this.panelRemoveDepartment.Controls.Add(this.label38);
-            this.panelRemoveDepartment.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelRemoveDepartment.Location = new System.Drawing.Point(13, 14);
-            this.panelRemoveDepartment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelRemoveDepartment.Name = "panelRemoveDepartment";
-            this.panelRemoveDepartment.Size = new System.Drawing.Size(1068, 670);
-            this.panelRemoveDepartment.TabIndex = 12;
-            // 
-            // btnRemoveDep
-            // 
-            this.btnRemoveDep.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.btnRemoveDep.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRemoveDep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnRemoveDep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRemoveDep.BorderRadius = 0;
-            this.btnRemoveDep.ButtonText = "Remove";
-            this.btnRemoveDep.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRemoveDep.DisabledColor = System.Drawing.Color.Gray;
-            this.btnRemoveDep.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnRemoveDep.Iconimage = null;
-            this.btnRemoveDep.Iconimage_right = null;
-            this.btnRemoveDep.Iconimage_right_Selected = null;
-            this.btnRemoveDep.Iconimage_Selected = null;
-            this.btnRemoveDep.IconMarginLeft = 0;
-            this.btnRemoveDep.IconMarginRight = 0;
-            this.btnRemoveDep.IconRightVisible = false;
-            this.btnRemoveDep.IconRightZoom = 0D;
-            this.btnRemoveDep.IconVisible = false;
-            this.btnRemoveDep.IconZoom = 90D;
-            this.btnRemoveDep.IsTab = false;
-            this.btnRemoveDep.Location = new System.Drawing.Point(52, 482);
-            this.btnRemoveDep.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.btnRemoveDep.Name = "btnRemoveDep";
-            this.btnRemoveDep.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnRemoveDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.btnRemoveDep.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnRemoveDep.selected = false;
-            this.btnRemoveDep.Size = new System.Drawing.Size(984, 71);
-            this.btnRemoveDep.TabIndex = 9;
-            this.btnRemoveDep.Text = "Remove";
-            this.btnRemoveDep.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnRemoveDep.Textcolor = System.Drawing.Color.White;
-            this.btnRemoveDep.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
-            // 
-            // clbDepartments
-            // 
-            this.clbDepartments.FormattingEnabled = true;
-            this.clbDepartments.Location = new System.Drawing.Point(21, 73);
-            this.clbDepartments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.clbDepartments.Name = "clbDepartments";
-            this.clbDepartments.Size = new System.Drawing.Size(384, 340);
-            this.clbDepartments.TabIndex = 8;
-            // 
-            // btnRemove
-            // 
-            this.btnRemove.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.btnRemove.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnRemove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRemove.BorderRadius = 0;
-            this.btnRemove.ButtonText = "Remove Department";
-            this.btnRemove.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRemove.DisabledColor = System.Drawing.Color.Gray;
-            this.btnRemove.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnRemove.Iconimage = null;
-            this.btnRemove.Iconimage_right = null;
-            this.btnRemove.Iconimage_right_Selected = null;
-            this.btnRemove.Iconimage_Selected = null;
-            this.btnRemove.IconMarginLeft = 0;
-            this.btnRemove.IconMarginRight = 0;
-            this.btnRemove.IconRightVisible = false;
-            this.btnRemove.IconRightZoom = 0D;
-            this.btnRemove.IconVisible = false;
-            this.btnRemove.IconZoom = 90D;
-            this.btnRemove.IsTab = false;
-            this.btnRemove.Location = new System.Drawing.Point(69, 770);
-            this.btnRemove.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnRemove.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.btnRemove.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnRemove.selected = false;
-            this.btnRemove.Size = new System.Drawing.Size(984, 122);
-            this.btnRemove.TabIndex = 2;
-            this.btnRemove.Text = "Remove Department";
-            this.btnRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnRemove.Textcolor = System.Drawing.Color.White;
-            this.btnRemove.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
-            // 
-            // label38
-            // 
-            this.label38.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label38.Location = new System.Drawing.Point(17, 18);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(291, 27);
-            this.label38.TabIndex = 7;
-            this.label38.Text = "Existing departments:";
-            // 
             // MainAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -5273,6 +5274,15 @@
             this.panel19.ResumeLayout(false);
             this.tableLayoutPanel29.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
+            this.tabControl2.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.panelAddDepartment.ResumeLayout(false);
+            this.panelAddDepartment.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.panelSearchDep.ResumeLayout(false);
+            this.panelSearchDep.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.panelRemoveDepartment.ResumeLayout(false);
             this.tabRestockReq.ResumeLayout(false);
             this.tableLayoutPanel21.ResumeLayout(false);
             this.tableLayoutPanel22.ResumeLayout(false);
@@ -5351,15 +5361,6 @@
             this.groupBox1.ResumeLayout(false);
             this.panel29.ResumeLayout(false);
             this.panel30.ResumeLayout(false);
-            this.tabControl2.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.panelAddDepartment.ResumeLayout(false);
-            this.panelAddDepartment.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.panelSearchDep.ResumeLayout(false);
-            this.panelSearchDep.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.panelRemoveDepartment.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

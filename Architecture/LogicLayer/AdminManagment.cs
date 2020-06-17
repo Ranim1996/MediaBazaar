@@ -19,6 +19,12 @@ namespace Media_Bazaar
 
         private string employeeCredentials = "";
 
+        public bool RemoveFDepartment(string name) //remove department
+        {
+            dataAccess.RemoveDepartment(name);
+            return true;
+        }
+
         public string CreateNewProfile(string fName, string lName, string dateOfBirth, string email, string phoneNr, string nationality, string pos, string minHours, string maxHours, string wage)
         {
             if (!String.IsNullOrEmpty(fName) && !String.IsNullOrEmpty(lName) && !String.IsNullOrEmpty(dateOfBirth) && !String.IsNullOrEmpty(email) && !String.IsNullOrEmpty(phoneNr) && !String.IsNullOrEmpty(nationality) && !String.IsNullOrEmpty(minHours) && !String.IsNullOrEmpty(maxHours) && !String.IsNullOrEmpty(wage))

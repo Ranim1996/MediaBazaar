@@ -246,12 +246,16 @@ namespace Media_Bazaar
         {
             cmbDepartments.Items.Clear();
             List<DepartmentModel> departaments = adminManagment.GetAllDepartaments();
+
+            this.clbDepartments.DataSource = departaments;
+            this.clbDepartments.DisplayMember = "DepartamentName";
+
             lbDepartaments.DataSource = departaments;
             lbDepartaments.DisplayMember = "GetInfo";
 
             foreach (DepartmentModel dBD in departaments)
             {
-                cmbDepartments.Items.Add(dBD.DepartamentName);
+                this.cmbDepartments.Items.Add(dBD.DepartamentName);
             }
         }
         private void UpdateRestockInfo()
@@ -633,6 +637,32 @@ namespace Media_Bazaar
                     lbxFoundDepartaments.DisplayMember = "GetInfo";
                     this.lbxFoundDepartaments.Visible = true;
                 }
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.ToString());
+            }
+        }
+
+        private void BtnRemoveDep_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (this.clbDepartments.CheckedItems.Count == 0)
+                {
+                    MessageBox.Show("Please select department first!");
+                }
+                else
+                {
+                    string dep = this.clbDepartments.GetItemText(this.clbDepartments.SelectedItem);
+
+                    if (adminManagment.RemoveFDepartment(dep) == true)
+                    {
+                        MessageBox.Show("Department is removed.");
+                    }
+                }
+                UpdateDepartamentInfo();
+                UpdateEmployeeInfo();
             }
             catch (Exception ee)
             {

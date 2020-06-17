@@ -147,7 +147,7 @@ namespace Media_Bazaar
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<DepartmentModel>($"SELECT * FROM Departament").ToList();
+                var output = connection.Query<DepartmentModel>($"SELECT * FROM Departament WHERE status IS NULL").ToList();
                 return output;
             }
         }
@@ -609,6 +609,18 @@ namespace Media_Bazaar
                 var output = connection.Query<DepartmentModel>($"SELECT * FROM departament WHERE DepartamentName = '{name}'" +
                     $"AND status IS NULL ").ToList();
                 return output;
+            }
+        }
+
+        //remove department by name
+        public void RemoveDepartment(string name)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                connection.Execute($"Update departament SET status='Removed' WHERE DepartamentName='{name}'; ");
+                connection.Execute($"Update employee SET ReasonsForRelease='DepartmentIsRemoved' WHERE Departament='{name}' " +
+                    $"AND ReasonsForRelease IS NULL; ");
+                //connection.Execute($"DELETE FROM departament WHERE DepartamentName='{name}'; ");
             }
         }
 
