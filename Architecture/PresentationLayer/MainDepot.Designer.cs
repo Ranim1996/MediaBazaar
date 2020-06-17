@@ -91,6 +91,7 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.btnExportDataToCSV = new System.Windows.Forms.Button();
             this.btnExportToExcel = new System.Windows.Forms.Button();
             this.cmbShowProducts = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -229,7 +230,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.timerChangeMenuColor = new System.Windows.Forms.Timer(this.components);
-            this.btnExportDataToCSV = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabMakeReq.SuspendLayout();
             this.tableLayoutPanel27.SuspendLayout();
@@ -1094,6 +1094,16 @@
             this.panel17.Size = new System.Drawing.Size(1436, 549);
             this.panel17.TabIndex = 5;
             // 
+            // btnExportDataToCSV
+            // 
+            this.btnExportDataToCSV.Location = new System.Drawing.Point(55, 109);
+            this.btnExportDataToCSV.Name = "btnExportDataToCSV";
+            this.btnExportDataToCSV.Size = new System.Drawing.Size(234, 41);
+            this.btnExportDataToCSV.TabIndex = 22;
+            this.btnExportDataToCSV.Text = "Export Product Data To CSV";
+            this.btnExportDataToCSV.UseVisualStyleBackColor = true;
+            this.btnExportDataToCSV.Click += new System.EventHandler(this.BtnExportDataToCSV_Click);
+            // 
             // btnExportToExcel
             // 
             this.btnExportToExcel.Location = new System.Drawing.Point(55, 51);
@@ -1570,7 +1580,7 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(1223, 544);
+            this.groupBox3.Size = new System.Drawing.Size(1338, 544);
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Product Details:";
@@ -1585,9 +1595,9 @@
             // 
             // btnSaveData
             // 
-            this.btnSaveData.Location = new System.Drawing.Point(795, 460);
+            this.btnSaveData.Location = new System.Drawing.Point(955, 460);
             this.btnSaveData.Name = "btnSaveData";
-            this.btnSaveData.Size = new System.Drawing.Size(224, 46);
+            this.btnSaveData.Size = new System.Drawing.Size(171, 46);
             this.btnSaveData.TabIndex = 24;
             this.btnSaveData.Text = "Save Data";
             this.btnSaveData.UseVisualStyleBackColor = true;
@@ -1595,9 +1605,9 @@
             // 
             // btnDeleteData
             // 
-            this.btnDeleteData.Location = new System.Drawing.Point(565, 460);
+            this.btnDeleteData.Location = new System.Drawing.Point(778, 460);
             this.btnDeleteData.Name = "btnDeleteData";
-            this.btnDeleteData.Size = new System.Drawing.Size(224, 46);
+            this.btnDeleteData.Size = new System.Drawing.Size(171, 46);
             this.btnDeleteData.TabIndex = 23;
             this.btnDeleteData.Text = "Delete Data";
             this.btnDeleteData.UseVisualStyleBackColor = true;
@@ -1605,9 +1615,9 @@
             // 
             // btnEditData
             // 
-            this.btnEditData.Location = new System.Drawing.Point(1025, 460);
+            this.btnEditData.Location = new System.Drawing.Point(1132, 460);
             this.btnEditData.Name = "btnEditData";
-            this.btnEditData.Size = new System.Drawing.Size(192, 46);
+            this.btnEditData.Size = new System.Drawing.Size(171, 46);
             this.btnEditData.TabIndex = 22;
             this.btnEditData.Text = "Edit Data";
             this.btnEditData.UseVisualStyleBackColor = true;
@@ -3539,16 +3549,6 @@
             this.timerChangeMenuColor.Enabled = true;
             this.timerChangeMenuColor.Interval = 10;
             this.timerChangeMenuColor.Tick += new System.EventHandler(this.timerChangeMenuColor_Tick);
-            // 
-            // btnExportDataToCSV
-            // 
-            this.btnExportDataToCSV.Location = new System.Drawing.Point(55, 109);
-            this.btnExportDataToCSV.Name = "btnExportDataToCSV";
-            this.btnExportDataToCSV.Size = new System.Drawing.Size(234, 41);
-            this.btnExportDataToCSV.TabIndex = 22;
-            this.btnExportDataToCSV.Text = "Export Product Data To CSV";
-            this.btnExportDataToCSV.UseVisualStyleBackColor = true;
-            this.btnExportDataToCSV.Click += new System.EventHandler(this.BtnExportDataToCSV_Click);
             // 
             // MainDepot
             // 

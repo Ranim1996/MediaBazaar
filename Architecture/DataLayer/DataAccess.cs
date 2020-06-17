@@ -561,7 +561,7 @@ namespace Media_Bazaar
             }
         }
 
-        //searching for products by deoartment
+        //searching for products by department
         public List<RestockRequest> GetProductInfoByDepartment(string dep)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
@@ -588,6 +588,16 @@ namespace Media_Bazaar
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
                 connection.Execute($"DELETE FROM restockrequest WHERE RequestID='{id}';");
+            }
+        }
+
+        // update employee info
+        public void UpdateEmployee(int id, string dateOfBirth, string nationality, string email, string phoneNumber, string password)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                connection.Execute($"Update employee SET DateOfBirth='{dateOfBirth}', Email='{email}'," +
+                    $"PhoneNumber='{phoneNumber}', Nationality='{nationality}', Password='{password}' WHERE EmployeeID='{id}'; ");
             }
         }
 

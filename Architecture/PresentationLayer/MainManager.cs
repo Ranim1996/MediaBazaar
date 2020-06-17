@@ -23,11 +23,22 @@ namespace Media_Bazaar
         {
             InitializeComponent();
 
+            Enabled();
+
             UpdateList(managerManagment.GetAllEmployees());
             CheckFiredAndWorkingChart();
             CheckAttendance();
             CheckRequests();
             CheckPositions();
+        }
+
+        private void Enabled()
+        {
+            this.tbxDateOfBirth.Enabled = false;
+            this.tbxEmail.Enabled = false;
+            this.tbxNationality.Enabled = false;
+            this.tbxPhoneNumber.Enabled = false;
+            this.tbxPassword.Enabled = false;
         }
 
         private void UpdateList(List<EmployeeBase> employees)
@@ -160,7 +171,7 @@ namespace Media_Bazaar
 
         private void UpdateInfoByID(int id)
         {
-            //display the data in the labels
+            //display the data in the labels and in the text boxes
             lbUpcomingShifts.Items.Clear();
             DateTime dateNow = DateTime.Today;
             string[] date = dateNow.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture).Split('/');
@@ -170,10 +181,13 @@ namespace Media_Bazaar
                 this.lblFirstName.Text = empl.FirstName;
                 this.lblLastName.Text = empl.LastName;
                 this.lblPosInCompany.Text = empl.Position;
-                this.lblEmail.Text = empl.Email;
-                this.lblPhoneNumber.Text = empl.PhoneNumber;
-                this.lblNationality.Text = empl.Nationality;
-                this.lblDateOfBirth.Text = empl.DateOfBirth;
+                this.lblID.Text = empl.EmployeeID.ToString();
+                this.tbxEmail.Text = empl.Email;
+                this.tbxPhoneNumber.Text = empl.PhoneNumber;
+                this.tbxNationality.Text = empl.Nationality;
+                this.tbxDateOfBirth.Text = empl.DateOfBirth;
+                this.tbxPassword.Text = empl.PassWord;
+                Enabled();
             }
 
             foreach (ScheduleBase sch in managerManagment.GetSchedulesByEmplId(id))
@@ -220,10 +234,12 @@ namespace Media_Bazaar
                 this.lblFirstName.Text = empl.FirstName;
                 this.lblLastName.Text = lastName;
                 this.lblPosInCompany.Text = empl.Position;
-                this.lblEmail.Text = empl.Email;
-                this.lblPhoneNumber.Text = empl.PhoneNumber;
-                this.lblNationality.Text = empl.Nationality;
-                this.lblDateOfBirth.Text = empl.DateOfBirth;
+                this.tbxEmail.Text = empl.Email;
+                this.tbxPhoneNumber.Text = empl.PhoneNumber;
+                this.tbxNationality.Text = empl.Nationality;
+                this.tbxDateOfBirth.Text = empl.DateOfBirth;
+                this.tbxPassword.Text = empl.PassWord;
+                Enabled();
                 employeeId = empl.EmployeeID;
             }
            
@@ -323,6 +339,36 @@ namespace Media_Bazaar
         private void btnEmployeesTABemplStats_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnEditData_Click(object sender, EventArgs e)
+        {
+            this.tbxDateOfBirth.Enabled = true;
+            this.tbxEmail.Enabled = true;
+            this.tbxNationality.Enabled = true;
+            this.tbxPhoneNumber.Enabled = true;
+            this.tbxPassword.Enabled = true;
+        }
+
+        private void BtnSaveData_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                managerManagment.UpdateData(Convert.ToInt32(this.lblID.Text), this.tbxDateOfBirth.Text, this.tbxNationality.Text,
+                this.tbxEmail.Text, this.tbxPhoneNumber.Text, this.tbxPassword.Text);
+
+                MessageBox.Show("Employee Data is Updated.");
+
+                this.tbxDateOfBirth.Enabled = false;
+                this.tbxEmail.Enabled = false;
+                this.tbxPhoneNumber.Enabled = false;
+                this.tbxPassword.Enabled = false;
+                this.tbxNationality.Enabled = false;
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.ToString());
+            }
         }
     }
 

@@ -15,6 +15,11 @@ namespace Media_Bazaar
 
         DataAccess dataAccess = new DataAccess();
 
+        public void UpdateData(int id, string dateOfBirth, string nationality, string email, string phoneNumber, string password)
+        {
+            dataAccess.UpdateEmployee(id, dateOfBirth, nationality, email, phoneNumber, password);
+        }
+
         public List<EmployeeBase> GetEmployeesByLName(string lastName)
         {
             return dataAccess.GetDBEmployeesByLastName(lastName);

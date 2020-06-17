@@ -6,6 +6,9 @@
         protected string username;
         protected string password;
         private string position;
+
+        public string PassWord { get; set; }
+
         public int EmployeeID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
