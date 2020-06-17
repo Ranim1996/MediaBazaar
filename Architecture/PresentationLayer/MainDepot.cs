@@ -12,6 +12,9 @@ using System.Net;
 using System.Net.Mail;
 using Media_Bazaar.LogicLayer.Products;
 using Media_Bazaar.LogicLayer.Product;
+using System.IO;
+using GemBox.Spreadsheet;
+using GemBox.Spreadsheet.ConditionalFormatting;
 
 namespace Media_Bazaar
 {
@@ -417,6 +420,59 @@ namespace Media_Bazaar
             else
             {
                 MessageBox.Show("Select type to show products!!");
+            }
+        }
+
+        private void ExportDataToExcel(List<RestockRequest> rr)// export products data to excel file
+        {
+            DataTable dt = new DataTable();
+
+            SpreadsheetInfo.SetLicense("FREE-LIMITED-KEY");
+
+            var workbook = new ExcelFile();
+            var worksheet = workbook.Worksheets.Add("Exported from messages");
+
+            dt.Columns.Add("RequestID", typeof(int));
+            dt.Columns.Add("ProductName", typeof(string));
+            dt.Columns.Add("Brand", typeof(string));
+            dt.Columns.Add("Category", typeof(string));
+            dt.Columns.Add("Departament", typeof(string));
+            dt.Columns.Add("Quantity", typeof(int));
+            dt.Columns.Add("Date Of Order", typeof(string));
+            dt.Columns.Add("Date Of Deliver", typeof(string));
+
+
+            foreach (var table in rr)
+            {
+                dt.Rows.Add(table.RequestID, table.ProductName, table.Brand, table.Category, table.Departament,
+                    table.Quantity, table.DateOfOrder, table.DateOfDelivery);
+            }
+
+            // Insert DataTable to an Excel worksheet.
+            worksheet.InsertDataTable(dt,
+                new InsertDataTableOptions()
+                {
+                    ColumnHeaders = true,
+                    StartRow = 0
+                });
+
+            workbook.Save("ProductData.xlsx");
+
+        }
+
+        private void BtnExportToExcel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                List<RestockRequest> r = db.GetProductData();
+
+                ExportDataToExcel(r);
+
+                MessageBox.Show("Product Data Downloaded");
+            }
+            catch (Exception excep)
+            {
+                MessageBox.Show(excep.ToString());
             }
         }
 

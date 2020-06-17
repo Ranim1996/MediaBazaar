@@ -540,6 +540,16 @@ namespace Media_Bazaar
             }
         }
 
+        //GetProduct data to export them
+        public List<RestockRequest> GetProductData()
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<RestockRequest>($"SELECT * FROM restockrequest").ToList();
+                return output;
+            }
+        }
+
         //searching for products by Brand
         public List<RestockRequest> GetProductInfoByBrand(string brand)
         {
