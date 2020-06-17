@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.Mail;
+using System.IO;
+using GemBox.Spreadsheet;
+using GemBox.Spreadsheet.ConditionalFormatting;
 
 
 namespace Media_Bazaar
@@ -663,6 +666,56 @@ namespace Media_Bazaar
                 }
                 UpdateDepartamentInfo();
                 UpdateEmployeeInfo();
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.ToString());
+            }
+        }
+
+        private void ExportData(List<EmployeeBase> emp)//export employee data
+        {
+            DataTable dt = new DataTable();
+
+            SpreadsheetInfo.SetLicense("FREE-LIMITED-KEY");
+
+            var workbook = new ExcelFile();
+            var worksheet = workbook.Worksheets.Add("Exported from messages");
+
+            dt.Columns.Add("EmployeeID", typeof(int));
+            dt.Columns.Add("FirstName", typeof(string));
+            dt.Columns.Add("LastName", typeof(string));
+            dt.Columns.Add("DateOfBirth", typeof(string));
+            dt.Columns.Add("Email", typeof(string));
+            dt.Columns.Add("Nationality", typeof(string));
+            dt.Columns.Add("Departament", typeof(string));
+
+            foreach (var table in emp)
+            {
+                dt.Rows.Add(table.EmployeeID, table.FirstName, table.LastName, table.DateOfBirth, table.Email,
+                   /* table.PhoneNumber,*/ table.Nationality, table.Departament);
+            }
+
+            //// Insert DataTable to an Excel worksheet.
+            worksheet.InsertDataTable(dt,
+                new InsertDataTableOptions()
+                {
+                    ColumnHeaders = true,
+                    StartRow = 0
+                });
+
+            workbook.Save("EmployeeData.xlsx");
+
+        }
+        private void BtnExportToExcel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                List<EmployeeBase> emp = db.GetNotFiredEmployees(); ;
+
+                ExportData(emp);
+
+                MessageBox.Show("Employee Data Downloaded");
             }
             catch (Exception ee)
             {

@@ -272,6 +272,7 @@
             this.panel29 = new System.Windows.Forms.Panel();
             this.panel30 = new System.Windows.Forms.Panel();
             this.bunifuFlatButton10 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnExportToExcel = new System.Windows.Forms.Button();
             this.tabEmail.SuspendLayout();
             this.tableLayoutPanel20.SuspendLayout();
             this.tableLayoutPanel25.SuspendLayout();
@@ -3016,6 +3017,7 @@
             // 
             // panel9
             // 
+            this.panel9.Controls.Add(this.btnExportToExcel);
             this.panel9.Controls.Add(this.panel17);
             this.panel9.Controls.Add(this.checkedListBox3);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -3098,7 +3100,7 @@
             this.checkedListBox3.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.checkedListBox3.FormattingEnabled = true;
             this.checkedListBox3.HorizontalScrollbar = true;
-            this.checkedListBox3.Location = new System.Drawing.Point(39, 60);
+            this.checkedListBox3.Location = new System.Drawing.Point(37, 133);
             this.checkedListBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkedListBox3.Name = "checkedListBox3";
             this.checkedListBox3.Size = new System.Drawing.Size(380, 154);
@@ -5239,6 +5241,16 @@
             this.bunifuFlatButton10.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton10.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             // 
+            // btnExportToExcel
+            // 
+            this.btnExportToExcel.Location = new System.Drawing.Point(53, 44);
+            this.btnExportToExcel.Name = "btnExportToExcel";
+            this.btnExportToExcel.Size = new System.Drawing.Size(298, 32);
+            this.btnExportToExcel.TabIndex = 10;
+            this.btnExportToExcel.Text = "Export Employee Data to Excel";
+            this.btnExportToExcel.UseVisualStyleBackColor = true;
+            this.btnExportToExcel.Click += new System.EventHandler(this.BtnExportToExcel_Click);
+            // 
             // MainAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -5608,5 +5620,6 @@
         private System.Windows.Forms.CheckedListBox clbDepartments;
         private Bunifu.Framework.UI.BunifuFlatButton btnRemove;
         private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Button btnExportToExcel;
     }
 }
