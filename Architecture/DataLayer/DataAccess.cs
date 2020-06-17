@@ -540,6 +540,18 @@ namespace Media_Bazaar
             }
         }
 
+        //searching for products by Brand
+        public List<RestockRequest> GetProductInfoByBrand(string brand)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<RestockRequest>($"SELECT * FROM restockrequest WHERE Brand = '{brand}'" +
+                    $"AND AdminConfirmation = 'CONFIRMED' ").ToList();
+                return output;
+            }
+        }
+
+        //searching for products by deoartment
         public List<RestockRequest> GetProductInfoByDepartment(string dep)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))

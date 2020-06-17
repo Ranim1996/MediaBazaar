@@ -275,7 +275,19 @@ namespace Media_Bazaar
             {
                 if (this.cmbShowProducts.Text == "Brand")
                 {
-                    
+                    stocks = db.GetProductInfoByBrand(this.cmbBrand.Text);
+                    if (stocks.Count == 0)
+                    {
+                        MessageBox.Show("We do not have such Brand in our stock.");
+                        this.cmbBrand.Text = "";
+                    }
+                    else
+                    {
+                        UpdateProductsList();
+                        UpdateDetails();
+                        this.clbProducts.Visible = true;
+                        this.btnViewProductsDetails.Visible = true;
+                    }
                 }
 
                 if (this.cmbShowProducts.Text == "Department")
