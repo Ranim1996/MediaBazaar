@@ -355,6 +355,22 @@ namespace Media_Bazaar
             }
         }
 
+        private void BtnDeleteData_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                depotWorkerManagment.DeleteProduct(Convert.ToInt32(this.tbxProductID.Text));
+
+                UpdateProductsList();
+
+                MessageBox.Show("Product is Deleted.");
+            }
+            catch (Exception excep)
+            {
+                MessageBox.Show(excep.ToString());
+            }
+        }
+
         //private void DataToChange()
         //{
         //    foreach (int i in restockID)

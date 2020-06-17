@@ -550,6 +550,15 @@ namespace Media_Bazaar
             }
         }
 
+        // delete product from stock
+        public void DeleteProduct(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                connection.Execute($"DELETE FROM restockrequest WHERE RequestID='{id}';");
+            }
+        }
+
 
         //ALGORITHM METHODS
 

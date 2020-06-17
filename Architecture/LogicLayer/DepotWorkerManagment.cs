@@ -12,6 +12,11 @@ namespace Media_Bazaar
     {
         DataAccess dataAccess = new DataAccess();
 
+        public void DeleteProduct(int id)
+        {
+            dataAccess.DeleteProduct(id);
+        }
+
         public void UpdateData(int id, string name, string brand, string department, string category, int quantity)
         {
             dataAccess.UpdateProduct(id, name, brand, department, category, quantity);
