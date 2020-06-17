@@ -647,7 +647,7 @@ namespace Media_Bazaar
             }
         }
 
-        private void BtnRemoveDep_Click(object sender, EventArgs e)
+        private void BtnRemoveDep_Click(object sender, EventArgs e) // remove deopartment buttong
         {
             try
             {
@@ -675,39 +675,47 @@ namespace Media_Bazaar
 
         private void ExportData(List<EmployeeBase> emp)//export employee data
         {
-            DataTable dt = new DataTable();
-
-            SpreadsheetInfo.SetLicense("FREE-LIMITED-KEY");
-
-            var workbook = new ExcelFile();
-            var worksheet = workbook.Worksheets.Add("Exported from messages");
-
-            dt.Columns.Add("EmployeeID", typeof(int));
-            dt.Columns.Add("FirstName", typeof(string));
-            dt.Columns.Add("LastName", typeof(string));
-            dt.Columns.Add("DateOfBirth", typeof(string));
-            dt.Columns.Add("Email", typeof(string));
-            dt.Columns.Add("Nationality", typeof(string));
-            dt.Columns.Add("Departament", typeof(string));
-
-            foreach (var table in emp)
+            try
             {
-                dt.Rows.Add(table.EmployeeID, table.FirstName, table.LastName, table.DateOfBirth, table.Email,
-                   /* table.PhoneNumber,*/ table.Nationality, table.Departament);
-            }
+                DataTable dt = new DataTable();
 
-            //// Insert DataTable to an Excel worksheet.
-            worksheet.InsertDataTable(dt,
-                new InsertDataTableOptions()
+                SpreadsheetInfo.SetLicense("FREE-LIMITED-KEY");
+
+                var workbook = new ExcelFile();
+                var worksheet = workbook.Worksheets.Add("Exported from messages");
+
+                dt.Columns.Add("EmployeeID", typeof(int));
+                dt.Columns.Add("FirstName", typeof(string));
+                dt.Columns.Add("LastName", typeof(string));
+                dt.Columns.Add("DateOfBirth", typeof(string));
+                dt.Columns.Add("Email", typeof(string));
+                dt.Columns.Add("Nationality", typeof(string));
+                dt.Columns.Add("Departament", typeof(string));
+
+                foreach (var table in emp)
                 {
-                    ColumnHeaders = true,
-                    StartRow = 0
-                });
+                    dt.Rows.Add(table.EmployeeID, table.FirstName, table.LastName, table.DateOfBirth, table.Email,
+                       /* table.PhoneNumber,*/ table.Nationality, table.Departament);
+                }
 
-            workbook.Save("EmployeeData.xlsx");
+                //// Insert DataTable to an Excel worksheet.
+                worksheet.InsertDataTable(dt,
+                    new InsertDataTableOptions()
+                    {
+                        ColumnHeaders = true,
+                        StartRow = 0
+                    });
+
+                workbook.Save("EmployeeData.xlsx");
+            }
+            catch
+            {
+                MessageBox.Show("Something wnt wrong!!!");
+            }
+            
 
         }
-        private void BtnExportToExcel_Click(object sender, EventArgs e)
+        private void BtnExportToExcel_Click(object sender, EventArgs e) // export to excel button
         {
             try
             {
@@ -788,7 +796,7 @@ namespace Media_Bazaar
 
         }
 
-        private void BtnExportToCSV_Click(object sender, EventArgs e)
+        private void BtnExportToCSV_Click(object sender, EventArgs e) // export to csv button
         {
             try
             {
