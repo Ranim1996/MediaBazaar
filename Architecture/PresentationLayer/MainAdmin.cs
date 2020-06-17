@@ -722,5 +722,86 @@ namespace Media_Bazaar
                 MessageBox.Show(ee.ToString());
             }
         }
+
+        private void ExportDataToCSV(List<EmployeeBase> emp, string path) //exporting employee data to csv
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+
+                dt.Columns.Add("EmployeeID", typeof(int));
+                dt.Columns.Add("FirstName", typeof(string));
+                dt.Columns.Add("LastName", typeof(string));
+                dt.Columns.Add("DateOfBirth", typeof(string));
+                dt.Columns.Add("Email", typeof(string));
+                dt.Columns.Add("Nationality", typeof(string));
+                dt.Columns.Add("Departament", typeof(string));
+
+                foreach (var table in emp)
+                {
+                    dt.Rows.Add(table.EmployeeID, table.FirstName, table.LastName, table.DateOfBirth, table.Email,
+                        table.Nationality, table.Departament);
+                }
+
+                StreamWriter sw = new StreamWriter(path, false);
+                //headers  
+                for (int i = 0; i < dt.Columns.Count; i++)
+                {
+                    sw.Write(dt.Columns[i]);
+                    if (i < dt.Columns.Count - 1)
+                    {
+                        sw.Write(",");
+                    }
+                }
+                sw.Write(sw.NewLine);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    for (int i = 0; i < dt.Columns.Count; i++)
+                    {
+                        if (!Convert.IsDBNull(dr[i]))
+                        {
+                            string value = dr[i].ToString();
+                            if (value.Contains(','))
+                            {
+                                value = String.Format("\"{0}\"", value);
+                                sw.Write(value);
+                            }
+                            else
+                            {
+                                sw.Write(dr[i].ToString());
+                            }
+                        }
+                        if (i < dt.Columns.Count - 1)
+                        {
+                            sw.Write(",");
+                        }
+                    }
+                    sw.Write(sw.NewLine);
+                }
+                sw.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
+
+        private void BtnExportToCSV_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                List<EmployeeBase> emp = db.GetNotFiredEmployees(); ;
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                ExportDataToCSV(emp, path + "\\EmployeeData.CSV");
+
+                MessageBox.Show("Emplyee Data Downloaded");
+            }
+            catch (Exception excep)
+            {
+                MessageBox.Show(excep.ToString());
+            }
+        }
     }
 }

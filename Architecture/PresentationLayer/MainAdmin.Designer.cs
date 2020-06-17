@@ -161,6 +161,7 @@
             this.btnRemoveProfileTABassignDep = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAssignToDepTABassignDep = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.btnExportToExcel = new System.Windows.Forms.Button();
             this.panel17 = new System.Windows.Forms.Panel();
             this.cmbDepartments = new System.Windows.Forms.ComboBox();
             this.btnAssignToDepartment = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -272,7 +273,7 @@
             this.panel29 = new System.Windows.Forms.Panel();
             this.panel30 = new System.Windows.Forms.Panel();
             this.bunifuFlatButton10 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnExportToExcel = new System.Windows.Forms.Button();
+            this.btnExportToCSV = new System.Windows.Forms.Button();
             this.tabEmail.SuspendLayout();
             this.tableLayoutPanel20.SuspendLayout();
             this.tableLayoutPanel25.SuspendLayout();
@@ -1959,7 +1960,7 @@
             this.checkedListBox1.Location = new System.Drawing.Point(91, 14);
             this.checkedListBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(1018, 179);
+            this.checkedListBox1.Size = new System.Drawing.Size(1018, 379);
             this.checkedListBox1.TabIndex = 2;
             this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.CheckedListBox1_SelectedIndexChanged);
             // 
@@ -3017,6 +3018,7 @@
             // 
             // panel9
             // 
+            this.panel9.Controls.Add(this.btnExportToCSV);
             this.panel9.Controls.Add(this.btnExportToExcel);
             this.panel9.Controls.Add(this.panel17);
             this.panel9.Controls.Add(this.checkedListBox3);
@@ -3027,6 +3029,16 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(1228, 660);
             this.panel9.TabIndex = 1;
+            // 
+            // btnExportToExcel
+            // 
+            this.btnExportToExcel.Location = new System.Drawing.Point(53, 44);
+            this.btnExportToExcel.Name = "btnExportToExcel";
+            this.btnExportToExcel.Size = new System.Drawing.Size(298, 32);
+            this.btnExportToExcel.TabIndex = 10;
+            this.btnExportToExcel.Text = "Export Employee Data to Excel";
+            this.btnExportToExcel.UseVisualStyleBackColor = true;
+            this.btnExportToExcel.Click += new System.EventHandler(this.BtnExportToExcel_Click);
             // 
             // panel17
             // 
@@ -3103,7 +3115,7 @@
             this.checkedListBox3.Location = new System.Drawing.Point(37, 133);
             this.checkedListBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkedListBox3.Name = "checkedListBox3";
-            this.checkedListBox3.Size = new System.Drawing.Size(380, 154);
+            this.checkedListBox3.Size = new System.Drawing.Size(469, 354);
             this.checkedListBox3.TabIndex = 8;
             // 
             // tabRemoveProfile
@@ -5241,15 +5253,15 @@
             this.bunifuFlatButton10.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton10.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             // 
-            // btnExportToExcel
+            // btnExportToCSV
             // 
-            this.btnExportToExcel.Location = new System.Drawing.Point(53, 44);
-            this.btnExportToExcel.Name = "btnExportToExcel";
-            this.btnExportToExcel.Size = new System.Drawing.Size(298, 32);
-            this.btnExportToExcel.TabIndex = 10;
-            this.btnExportToExcel.Text = "Export Employee Data to Excel";
-            this.btnExportToExcel.UseVisualStyleBackColor = true;
-            this.btnExportToExcel.Click += new System.EventHandler(this.BtnExportToExcel_Click);
+            this.btnExportToCSV.Location = new System.Drawing.Point(53, 82);
+            this.btnExportToCSV.Name = "btnExportToCSV";
+            this.btnExportToCSV.Size = new System.Drawing.Size(298, 32);
+            this.btnExportToCSV.TabIndex = 11;
+            this.btnExportToCSV.Text = "Export Employee Data to CSV";
+            this.btnExportToCSV.UseVisualStyleBackColor = true;
+            this.btnExportToCSV.Click += new System.EventHandler(this.BtnExportToCSV_Click);
             // 
             // MainAdmin
             // 
@@ -5621,5 +5633,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnRemove;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Button btnExportToExcel;
+        private System.Windows.Forms.Button btnExportToCSV;
     }
 }
