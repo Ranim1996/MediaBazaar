@@ -12,6 +12,11 @@ namespace Media_Bazaar
     {
         DataAccess dataAccess = new DataAccess();
 
+        public void UpdateData(int id, string name, string brand, string department, string category, int quantity)
+        {
+            dataAccess.UpdateProduct(id, name, brand, department, category, quantity);
+        }
+
         public List<RestockRequestBase> GetIncomingRestockRequests()
         {
             return dataAccess.GetAllConfirmedRestock();

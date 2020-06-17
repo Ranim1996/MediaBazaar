@@ -540,7 +540,15 @@ namespace Media_Bazaar
             }
         }
 
-
+        // Update product Data
+        public void UpdateProduct(int id, string name, string brand, string department, string category, int quantity)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                connection.Execute($"Update restockrequest SET ProductName='{name}', Brand='{brand}'," +
+                    $"Quantity='{quantity}', Departament='{department}', Category='{category}' WHERE RequestID='{id}'; ");
+            }
+        }
 
 
         //ALGORITHM METHODS

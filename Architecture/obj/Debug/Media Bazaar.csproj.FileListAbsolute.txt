@@ -72,3 +72,26 @@ C:\Users\ranim\a-software-solution-for-media-bazaar\Architecture\obj\Debug\Media
 C:\Users\ranim\a-software-solution-for-media-bazaar\Architecture\obj\Debug\Media Bazaar.csproj.CopyComplete
 C:\Users\ranim\a-software-solution-for-media-bazaar\Architecture\obj\Debug\Media Bazaar.exe
 C:\Users\ranim\a-software-solution-for-media-bazaar\Architecture\obj\Debug\Media Bazaar.pdb
+C:\Users\ranim\OneDrive\Desktop\a-software-solution-for-media-bazaar\Architecture\obj\Debug\Media Bazaar.csprojAssemblyReference.cache
+C:\Users\ranim\OneDrive\Desktop\a-software-solution-for-media-bazaar\Architecture\obj\Debug\Media_Bazaar.AssignShift.resources
+C:\Users\ranim\OneDrive\Desktop\a-software-solution-for-media-bazaar\Architecture\obj\Debug\Media_Bazaar.Login.resources
+C:\Users\ranim\OneDrive\Desktop\a-software-solution-for-media-bazaar\Architecture\obj\Debug\Media_Bazaar.MainAdmin.resources
+C:\Users\ranim\OneDrive\Desktop\a-software-solution-for-media-bazaar\Architecture\obj\Debug\Media_Bazaar.MainDepot.resources
+C:\Users\ranim\OneDrive\Desktop\a-software-solution-for-media-bazaar\Architecture\obj\Debug\Media_Bazaar.MainManager.resources
+C:\Users\ranim\OneDrive\Desktop\a-software-solution-for-media-bazaar\Architecture\obj\Debug\Media_Bazaar.Properties.Resources.resources
+C:\Users\ranim\OneDrive\Desktop\a-software-solution-for-media-bazaar\Architecture\obj\Debug\Media Bazaar.csproj.GenerateResource.cache
+C:\Users\ranim\OneDrive\Desktop\a-software-solution-for-media-bazaar\Architecture\obj\Debug\Media Bazaar.csproj.CoreCompileInputs.cache
+C:\Users\ranim\OneDrive\Desktop\a-software-solution-for-media-bazaar\Architecture\obj\Debug\Media Bazaar.exe
+C:\Users\ranim\OneDrive\Desktop\a-software-solution-for-media-bazaar\Architecture\obj\Debug\Media Bazaar.pdb
+C:\Users\ranim\OneDrive\Desktop\a-software-solution-for-media-bazaar\Architecture\bin\Debug\Media Bazaar.exe.config
+C:\Users\ranim\OneDrive\Desktop\a-software-solution-for-media-bazaar\Architecture\bin\Debug\Media Bazaar.exe
+C:\Users\ranim\OneDrive\Desktop\a-software-solution-for-media-bazaar\Architecture\bin\Debug\Media Bazaar.pdb
+C:\Users\ranim\OneDrive\Desktop\a-software-solution-for-media-bazaar\Architecture\bin\Debug\Dapper.dll
+C:\Users\ranim\OneDrive\Desktop\a-software-solution-for-media-bazaar\Architecture\bin\Debug\Google.Protobuf.dll
+C:\Users\ranim\OneDrive\Desktop\a-software-solution-for-media-bazaar\Architecture\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\ranim\OneDrive\Desktop\a-software-solution-for-media-bazaar\Architecture\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\ranim\OneDrive\Desktop\a-software-solution-for-media-bazaar\Architecture\bin\Debug\Renci.SshNet.dll
+C:\Users\ranim\OneDrive\Desktop\a-software-solution-for-media-bazaar\Architecture\bin\Debug\Dapper.xml
+C:\Users\ranim\OneDrive\Desktop\a-software-solution-for-media-bazaar\Architecture\bin\Debug\MySql.Data.xml
+C:\Users\ranim\OneDrive\Desktop\a-software-solution-for-media-bazaar\Architecture\bin\Debug\MySql.Web.xml
+C:\Users\ranim\OneDrive\Desktop\a-software-solution-for-media-bazaar\Architecture\obj\Debug\Media Bazaar.csproj.CopyComplete

@@ -35,6 +35,14 @@ namespace Media_Bazaar
             tabControl1.ItemSize = new Size(0, 1);
             tabControl1.SizeMode = TabSizeMode.Fixed;
             tabControl1.TabPages[0].BackColor = Color.FromArgb(116, 208, 252);
+
+            this.tbxPProductName.Enabled = false;
+            this.tbxProductBrand.Enabled = false;
+            this.tbxProductCategory.Enabled = false;
+            this.cmbProductDepartment.Enabled = false;
+            this.tbxProductID.Enabled = false;
+            this.tbxProductQuantity.Enabled = false;
+
             UpdateConfirmedRestockInfo();
             UpdateDepartamentInfo();
             UpdateEmployeeIDInfo();
@@ -248,6 +256,7 @@ namespace Media_Bazaar
             foreach (DepartmentModel dBD in depotWorkerManagment.GetDepartments())
             {
                 cmbDepartment.Items.Add(dBD.DepartamentName);
+                this.cmbProductDepartment.Items.Add(dBD.DepartamentName);
             }
         }
 
@@ -284,12 +293,12 @@ namespace Media_Bazaar
 
                     if (stock.Contains($"ID:{i}"))
                     {
-                        this.lblProductID.Text = i.ToString();
-                        this.lblProductName.Text = depotWorkerManagment.GetStockNameById(i);
-                        this.lblProductCategory.Text = depotWorkerManagment.GetStockTypeById(i);
-                        this.lblSearchDepartment.Text = depotWorkerManagment.GetDepartmentByStockId(i);
-                        this.lblSearchQuantity.Text = depotWorkerManagment.GetStockQuantityById(i);
-                        this.lblProductBrand.Text = depotWorkerManagment.GetBrandByStockId(i);
+                        this.tbxProductID.Text = i.ToString();
+                        this.tbxPProductName.Text = depotWorkerManagment.GetStockNameById(i);
+                        this.tbxProductCategory.Text = depotWorkerManagment.GetStockTypeById(i);
+                        this.cmbProductDepartment.Text = depotWorkerManagment.GetDepartmentByStockId(i);
+                        this.tbxProductQuantity.Text = depotWorkerManagment.GetStockQuantityById(i);
+                        this.tbxProductBrand.Text = depotWorkerManagment.GetBrandByStockId(i);
                     }
                 }
             }
@@ -310,6 +319,39 @@ namespace Media_Bazaar
                 {
                     clbProducts.SetItemChecked(clbProducts.CheckedIndices[0], false);
                 }
+            }
+        }
+
+        private void BtnEditData_Click(object sender, EventArgs e)
+        {
+            this.tbxPProductName.Enabled = true;
+            this.tbxProductBrand.Enabled = true;
+            this.tbxProductCategory.Enabled = true;
+            this.cmbProductDepartment.Enabled = true;
+            this.tbxProductID.Enabled = true;
+            this.tbxProductQuantity.Enabled = true;
+        }
+
+        private void BtnSaveData_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                depotWorkerManagment.UpdateData(Convert.ToInt32(this.tbxProductID.Text), this.tbxPProductName.Text, this.tbxProductBrand.Text,
+                this.cmbProductDepartment.Text, this.tbxProductCategory.Text, Convert.ToInt32(this.tbxProductQuantity.Text));
+
+                UpdateProductsList();
+
+                MessageBox.Show("Product Data is Updated.");
+
+                this.tbxProductBrand.Enabled = false;
+                this.tbxProductQuantity.Enabled = false;
+                this.tbxPProductName.Enabled = false;
+                this.tbxProductCategory.Enabled = false;
+                this.cmbProductDepartment.Enabled = false;
+            }
+            catch (Exception exce)
+            {
+                MessageBox.Show(exce.ToString());
             }
         }
 
