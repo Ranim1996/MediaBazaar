@@ -189,5 +189,15 @@ namespace Media_Bazaar
         {
             dataAccess.DeleteEmailById(id);
         }
+
+        public List<ScheduleBase> GetCancelledShifts()
+        {
+            return dataAccess.GetCancelledShifts();
+        }
+
+        public void Reasign()
+        {
+            scheduleGenerator.ReassigningCancelledShifts();
+        }
     }
 }

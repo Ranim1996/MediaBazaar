@@ -20,6 +20,9 @@ namespace Media_Bazaar
 
         List<int> employeesID = new List<int>();
         List<int> restockID = new List<int>();
+        List<ScheduleBase> cancelledShiftsEmployeeID = new List<ScheduleBase>();
+
+
 
         //Calendar calendar = new Calendar();
         //Schedule schedule;
@@ -55,6 +58,7 @@ namespace Media_Bazaar
             UpdateEmployeeInfo();
             UpdateDepartamentInfo();
             UpdateRestockInfo();
+            UpdateCancelledShiftsListBox();
         }
 
         //----------------------------------Start
@@ -257,6 +261,18 @@ namespace Media_Bazaar
             }
             checkedListBox1.DataSource = restockRequests;
             checkedListBox1.DisplayMember = "FullInfo";
+        }
+
+        private void UpdateCancelledShiftsListBox()
+        {
+            List<ScheduleBase> cancelledShifts = adminManagment.GetCancelledShifts();
+            foreach (ScheduleBase sb in cancelledShifts)
+            {
+                cancelledShiftsEmployeeID.Add(sb);
+            }
+            lbxCancelledShifts.Items.Clear();
+            lbxCancelledShifts.DataSource = cancelledShiftsEmployeeID;
+            lbxCancelledShifts.DisplayMember = "FullInfo";
         }
 
 
@@ -555,12 +571,24 @@ namespace Media_Bazaar
 
         private void button1_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedTab = tabPage1;
+            tabControl1.SelectedTab = SheduleGenerating;
         }
 
-        private void btnGenerateSchedule_Click(object sender, EventArgs e)
+        private void btnScheduleGenerator_Click(object sender, EventArgs e)
         {
-            adminManagment.GenerateSchedule(tbDepartment.Text, Convert.ToInt32(tbNrAdmins.Text), Convert.ToInt32(tbNrManagers.Text), Convert.ToInt32(tbNrDepotWorkers.Text), Convert.ToInt32(tbNrEmployees.Text));                             
+            tabControl1.SelectedTab = SheduleGenerating;
+        }
+
+        private void btnGenerateScheduleForTheWeek_Click(object sender, EventArgs e)
+        {
+            adminManagment.GenerateSchedule(tbDepartment.Text, Convert.ToInt32(tbNrAdmins.Text), Convert.ToInt32(tbNrManagers.Text), Convert.ToInt32(tbNrDepotWorkers.Text), Convert.ToInt32(tbNrEmployees.Text));
+            MessageBox.Show("Generated!");
+        }
+
+        private void btnReassign_Click(object sender, EventArgs e)
+        {
+            adminManagment.Reasign();
+            MessageBox.Show("Reassigned");
         }
     }
 }

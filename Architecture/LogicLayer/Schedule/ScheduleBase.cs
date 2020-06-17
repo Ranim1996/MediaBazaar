@@ -26,5 +26,7 @@ namespace Media_Bazaar
                 allSchedules = new List<ScheduleBase>();
             }
         }
+
+        public virtual string FullInfo { get { return $"{Date}-- {Shift}-- EmployeeID: {EmployeeId}--{Status}"; } }
     }
 }

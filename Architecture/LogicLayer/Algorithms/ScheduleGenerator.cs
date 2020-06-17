@@ -179,17 +179,17 @@ namespace Media_Bazaar
                 {
                     //Random random = new Random();
                     //int index = random.Next(allEmployees.Count);
-                    if(dataAccess.GetCurrentHoursByID(allEmployees[i].EmployeeID)< dataAccess.GetCurrentHoursByID(allEmployees[i+1].EmployeeID))
+                    if (dataAccess.GetCurrentHoursByID(allEmployees[i].EmployeeID) < dataAccess.GetCurrentHoursByID(allEmployees[i + 1].EmployeeID))
                     {
                         dataAccess.AssignEmployeeToShift(allEmployees[i].EmployeeID, date.ToString("dd/MM/yyyy"), shift);
                         dataAccess.AddWorkingHoursToEmployee(allEmployees[i].EmployeeID, nrWorkingHours);
                     }
                     else
                     {
-                        dataAccess.AssignEmployeeToShift(allEmployees[i+1].EmployeeID, date.ToString("dd/MM/yyyy"), shift);
-                        dataAccess.AddWorkingHoursToEmployee(allEmployees[i+1].EmployeeID, nrWorkingHours);
+                        dataAccess.AssignEmployeeToShift(allEmployees[i + 1].EmployeeID, date.ToString("dd/MM/yyyy"), shift);
+                        dataAccess.AddWorkingHoursToEmployee(allEmployees[i + 1].EmployeeID, nrWorkingHours);
                     }
-                    
+
                 }
             }
         }
@@ -250,6 +250,29 @@ namespace Media_Bazaar
                     GenerateScheduleForDay(nextMonday.AddDays(i).Date, department, nrAdminsPerShift, nrManagersPerShift, nrDepotWorkersPerShift, nrEmployeesPerShift);
                 }
             }
+        }
+
+        private List<ScheduleBase> cancelledShiftsEmployeeID = new List<ScheduleBase>();
+        private List<EmployeeBase> employeeWithLessHours;
+
+        public void ReassigningCancelledShifts()
+        {
+            List<ScheduleBase> cancelledShifts = dataAccess.GetCancelledShifts();
+            foreach (ScheduleBase sb in cancelledShifts)
+            {
+                cancelledShiftsEmployeeID.Add(sb);
+            }
+
+            foreach (ScheduleBase scheduleBase in cancelledShifts)
+            {
+                employeeWithLessHours = dataAccess.GetEmployeesForReassigning(dataAccess.GetPositionByID(scheduleBase.EmployeeId), dataAccess.GetEmployeeDepartamentByID(scheduleBase.EmployeeId));
+
+                dataAccess.ReassignShift(employeeWithLessHours[0].EmployeeID, scheduleBase.Date, scheduleBase.Shift);
+
+            }
+
+
+
         }
     }
 }

@@ -638,5 +638,43 @@ namespace Media_Bazaar
             }
         }
 
+
+        public List<ScheduleBase> GetCancelledShifts()
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<ScheduleBase>($"SELECT * FROM schedule WHERE Status='Cancelled';").ToList();
+                return output;
+            }
+        }
+
+        public string GetEmployeeDepartamentByID(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT Departament FROM `employee` WHERE EmployeeID='{id}'");
+            }
+        }
+
+        public void ReassignShift(int id,string date,string shift)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                connection.Execute($"UPDATE schedule SET Status='Assigned', EmployeeID='{id}' WHERE Date='{date}' AND Shift='{shift}';");
+            }
+        }
+
+
+        public List<EmployeeBase> GetEmployeesForReassigning(string possition, string department)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<EmployeeBase>($" SELECT `EmployeeID` FROM `employee` WHERE Departament = '{department}' AND Position = '{possition}' ORDER BY CurrentHoursForWeek").ToList();
+                return output;
+            }
+        }
+
+
+       
     }
 }
