@@ -18,6 +18,8 @@ namespace Media_Bazaar
     {
         AdminManagment adminManagment = new AdminManagment();
 
+        DataAccess db = new DataAccess();
+
         List<int> employeesID = new List<int>();
         List<int> restockID = new List<int>();
         List<ScheduleBase> cancelledShiftsEmployeeID = new List<ScheduleBase>();
@@ -589,6 +591,53 @@ namespace Media_Bazaar
         {
             adminManagment.Reasign();
             MessageBox.Show("Reassigned");
+        }
+
+        private void BtnCreateDepartment_Click_1(object sender, EventArgs e) // create new departments
+        {
+            try
+            {
+                if (adminManagment.CreateDepartment(tbDepName.Text, tbMinNr.Text, tbMaxNr.Text))
+                {
+                    MessageBox.Show("New department is created.");
+                    UpdateDepartamentInfo();
+                    Clear();
+
+                }
+                else
+                {
+                    MessageBox.Show("Fill in all fields correctly!");
+                    Clear();
+                }
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.ToString());
+            }
+        }
+
+        private void BtnSearchDep_Click(object sender, EventArgs e) // search for department by name
+        {
+            try
+            {
+                List<DepartmentModel> deps = adminManagment.GetAllDepartaments();
+                deps = db.GetDepInfo(this.tbxDepName.Text);
+                if (deps.Count == 0)
+                {
+                    MessageBox.Show("We do not have such a department in our company.");
+                    this.tbxDepName.Text = "";
+                }
+                else
+                {
+                    lbxFoundDepartaments.DataSource = deps;
+                    lbxFoundDepartaments.DisplayMember = "GetInfo";
+                    this.lbxFoundDepartaments.Visible = true;
+                }
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.ToString());
+            }
         }
     }
 }

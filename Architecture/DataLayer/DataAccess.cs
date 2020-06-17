@@ -601,6 +601,16 @@ namespace Media_Bazaar
             }
         }
 
+        //for departaments searching
+        public List<DepartmentModel> GetDepInfo(string name)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<DepartmentModel>($"SELECT * FROM departament WHERE DepartamentName = '{name}'" +
+                    $"AND status IS NULL ").ToList();
+                return output;
+            }
+        }
 
         //ALGORITHM METHODS
 

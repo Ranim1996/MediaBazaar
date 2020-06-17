@@ -69,15 +69,6 @@
             this.panel19 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel29 = new System.Windows.Forms.TableLayoutPanel();
             this.panel20 = new System.Windows.Forms.Panel();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.btnCreateDepartment = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.lbDepartaments = new System.Windows.Forms.ListBox();
-            this.tbMaxNr = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.tbMinNr = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.tbDepName = new System.Windows.Forms.TextBox();
-            this.label56 = new System.Windows.Forms.Label();
             this.tabRestockReq = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
@@ -111,6 +102,7 @@
             this.panel13 = new System.Windows.Forms.Panel();
             this.panelContainerSchedule = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.btnScheduleGenerator = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lblMonthAndYear = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.btnToday = new System.Windows.Forms.Button();
@@ -225,17 +217,6 @@
             this.label22 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.SheduleGenerating = new System.Windows.Forms.TabPage();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.tbDepartment = new System.Windows.Forms.TextBox();
-            this.tbNrEmployees = new System.Windows.Forms.TextBox();
-            this.tbNrDepotWorkers = new System.Windows.Forms.TextBox();
-            this.tbNrManagers = new System.Windows.Forms.TextBox();
-            this.tbNrAdmins = new System.Windows.Forms.TextBox();
-            this.btnScheduleGenerator = new Bunifu.Framework.UI.BunifuFlatButton();
             this.tableLayoutPanel32 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel33 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -250,14 +231,47 @@
             this.tableLayoutPanel35 = new System.Windows.Forms.TableLayoutPanel();
             this.panel24 = new System.Windows.Forms.Panel();
             this.panel25 = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnGenerateScheduleForTheWeek = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.tbDepartment = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.tbNrEmployees = new System.Windows.Forms.TextBox();
+            this.tbNrAdmins = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.tbNrDepotWorkers = new System.Windows.Forms.TextBox();
+            this.tbNrManagers = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnReassign = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.lbxCancelledShifts = new System.Windows.Forms.CheckedListBox();
             this.panel29 = new System.Windows.Forms.Panel();
             this.panel30 = new System.Windows.Forms.Panel();
             this.bunifuFlatButton10 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lbxCancelledShifts = new System.Windows.Forms.CheckedListBox();
-            this.btnReassign = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnGenerateScheduleForTheWeek = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panelAddDepartment = new System.Windows.Forms.Panel();
+            this.btnCreateDepartment = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.lbDepartaments = new System.Windows.Forms.ListBox();
+            this.tbMaxNr = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.tbMinNr = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tbDepName = new System.Windows.Forms.TextBox();
+            this.label56 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.panelSearchDep = new System.Windows.Forms.Panel();
+            this.btnSearchDep = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.lbxFoundDepartaments = new System.Windows.Forms.ListBox();
+            this.tbxDepName = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.panelRemoveDepartment = new System.Windows.Forms.Panel();
+            this.btnRemoveDep = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.clbDepartments = new System.Windows.Forms.CheckedListBox();
+            this.btnRemove = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.label38 = new System.Windows.Forms.Label();
             this.tabEmail.SuspendLayout();
             this.tableLayoutPanel20.SuspendLayout();
             this.tableLayoutPanel25.SuspendLayout();
@@ -276,7 +290,6 @@
             this.panel19.SuspendLayout();
             this.tableLayoutPanel29.SuspendLayout();
             this.panel20.SuspendLayout();
-            this.panel22.SuspendLayout();
             this.tabRestockReq.SuspendLayout();
             this.tableLayoutPanel21.SuspendLayout();
             this.tableLayoutPanel22.SuspendLayout();
@@ -340,10 +353,17 @@
             this.tableLayoutPanel35.SuspendLayout();
             this.panel24.SuspendLayout();
             this.panel25.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.panel29.SuspendLayout();
             this.panel30.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.tabControl2.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.panelAddDepartment.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.panelSearchDep.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.panelRemoveDepartment.SuspendLayout();
             this.SuspendLayout();
             // 
             // timerChangingMenusColor
@@ -1148,7 +1168,7 @@
             // 
             // panel20
             // 
-            this.panel20.Controls.Add(this.panel22);
+            this.panel20.Controls.Add(this.tabControl2);
             this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel20.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel20.Location = new System.Drawing.Point(3, 2);
@@ -1156,137 +1176,6 @@
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(1228, 740);
             this.panel20.TabIndex = 1;
-            // 
-            // panel22
-            // 
-            this.panel22.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel22.Controls.Add(this.btnCreateDepartment);
-            this.panel22.Controls.Add(this.lbDepartaments);
-            this.panel22.Controls.Add(this.tbMaxNr);
-            this.panel22.Controls.Add(this.label23);
-            this.panel22.Controls.Add(this.tbMinNr);
-            this.panel22.Controls.Add(this.label11);
-            this.panel22.Controls.Add(this.tbDepName);
-            this.panel22.Controls.Add(this.label56);
-            this.panel22.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel22.Location = new System.Drawing.Point(309, 22);
-            this.panel22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(630, 698);
-            this.panel22.TabIndex = 0;
-            // 
-            // btnCreateDepartment
-            // 
-            this.btnCreateDepartment.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.btnCreateDepartment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCreateDepartment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnCreateDepartment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCreateDepartment.BorderRadius = 0;
-            this.btnCreateDepartment.ButtonText = "Create";
-            this.btnCreateDepartment.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCreateDepartment.DisabledColor = System.Drawing.Color.Gray;
-            this.btnCreateDepartment.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnCreateDepartment.Iconimage = null;
-            this.btnCreateDepartment.Iconimage_right = null;
-            this.btnCreateDepartment.Iconimage_right_Selected = null;
-            this.btnCreateDepartment.Iconimage_Selected = null;
-            this.btnCreateDepartment.IconMarginLeft = 0;
-            this.btnCreateDepartment.IconMarginRight = 0;
-            this.btnCreateDepartment.IconRightVisible = false;
-            this.btnCreateDepartment.IconRightZoom = 0D;
-            this.btnCreateDepartment.IconVisible = false;
-            this.btnCreateDepartment.IconZoom = 90D;
-            this.btnCreateDepartment.IsTab = false;
-            this.btnCreateDepartment.Location = new System.Drawing.Point(61, 580);
-            this.btnCreateDepartment.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnCreateDepartment.Name = "btnCreateDepartment";
-            this.btnCreateDepartment.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnCreateDepartment.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.btnCreateDepartment.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnCreateDepartment.selected = false;
-            this.btnCreateDepartment.Size = new System.Drawing.Size(508, 89);
-            this.btnCreateDepartment.TabIndex = 2;
-            this.btnCreateDepartment.Text = "Create";
-            this.btnCreateDepartment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCreateDepartment.Textcolor = System.Drawing.Color.White;
-            this.btnCreateDepartment.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btnCreateDepartment.Click += new System.EventHandler(this.btnCreateDepartment_Click);
-            // 
-            // lbDepartaments
-            // 
-            this.lbDepartaments.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbDepartaments.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.lbDepartaments.FormattingEnabled = true;
-            this.lbDepartaments.ItemHeight = 23;
-            this.lbDepartaments.Location = new System.Drawing.Point(32, 242);
-            this.lbDepartaments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.lbDepartaments.Name = "lbDepartaments";
-            this.lbDepartaments.Size = new System.Drawing.Size(508, 257);
-            this.lbDepartaments.TabIndex = 11;
-            // 
-            // tbMaxNr
-            // 
-            this.tbMaxNr.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbMaxNr.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.tbMaxNr.Location = new System.Drawing.Point(324, 176);
-            this.tbMaxNr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbMaxNr.Name = "tbMaxNr";
-            this.tbMaxNr.Size = new System.Drawing.Size(368, 30);
-            this.tbMaxNr.TabIndex = 10;
-            // 
-            // label23
-            // 
-            this.label23.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label23.Location = new System.Drawing.Point(28, 110);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(291, 27);
-            this.label23.TabIndex = 9;
-            this.label23.Text = "Minimum Employee Number:";
-            // 
-            // tbMinNr
-            // 
-            this.tbMinNr.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbMinNr.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.tbMinNr.Location = new System.Drawing.Point(324, 110);
-            this.tbMinNr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbMinNr.Name = "tbMinNr";
-            this.tbMinNr.Size = new System.Drawing.Size(368, 30);
-            this.tbMinNr.TabIndex = 8;
-            // 
-            // label11
-            // 
-            this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(27, 176);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(291, 27);
-            this.label11.TabIndex = 7;
-            this.label11.Text = "Maximum Employee Number:";
-            // 
-            // tbDepName
-            // 
-            this.tbDepName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbDepName.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.tbDepName.Location = new System.Drawing.Point(324, 37);
-            this.tbDepName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbDepName.Name = "tbDepName";
-            this.tbDepName.Size = new System.Drawing.Size(368, 30);
-            this.tbDepName.TabIndex = 6;
-            // 
-            // label56
-            // 
-            this.label56.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label56.Location = new System.Drawing.Point(28, 37);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(179, 27);
-            this.label56.TabIndex = 0;
-            this.label56.Text = "Department name:";
             // 
             // tabRestockReq
             // 
@@ -2043,6 +1932,42 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(1368, 69);
             this.panel11.TabIndex = 15;
+            // 
+            // btnScheduleGenerator
+            // 
+            this.btnScheduleGenerator.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnScheduleGenerator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnScheduleGenerator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnScheduleGenerator.BorderRadius = 0;
+            this.btnScheduleGenerator.ButtonText = "Schedule Generator";
+            this.btnScheduleGenerator.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnScheduleGenerator.DisabledColor = System.Drawing.Color.Gray;
+            this.btnScheduleGenerator.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnScheduleGenerator.Iconimage = null;
+            this.btnScheduleGenerator.Iconimage_right = null;
+            this.btnScheduleGenerator.Iconimage_right_Selected = null;
+            this.btnScheduleGenerator.Iconimage_Selected = null;
+            this.btnScheduleGenerator.IconMarginLeft = 0;
+            this.btnScheduleGenerator.IconMarginRight = 0;
+            this.btnScheduleGenerator.IconRightVisible = false;
+            this.btnScheduleGenerator.IconRightZoom = 0D;
+            this.btnScheduleGenerator.IconVisible = false;
+            this.btnScheduleGenerator.IconZoom = 90D;
+            this.btnScheduleGenerator.IsTab = false;
+            this.btnScheduleGenerator.Location = new System.Drawing.Point(388, 11);
+            this.btnScheduleGenerator.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.btnScheduleGenerator.Name = "btnScheduleGenerator";
+            this.btnScheduleGenerator.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnScheduleGenerator.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnScheduleGenerator.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnScheduleGenerator.selected = false;
+            this.btnScheduleGenerator.Size = new System.Drawing.Size(319, 51);
+            this.btnScheduleGenerator.TabIndex = 5;
+            this.btnScheduleGenerator.Text = "Schedule Generator";
+            this.btnScheduleGenerator.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnScheduleGenerator.Textcolor = System.Drawing.Color.White;
+            this.btnScheduleGenerator.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btnScheduleGenerator.Click += new System.EventHandler(this.btnScheduleGenerator_Click);
             // 
             // lblMonthAndYear
             // 
@@ -3667,8 +3592,8 @@
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 89F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 89F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 76F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 76F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(1228, 76);
             this.tableLayoutPanel8.TabIndex = 0;
             // 
@@ -4354,132 +4279,6 @@
             this.SheduleGenerating.Text = "SheduleGeneratorTab";
             this.SheduleGenerating.UseVisualStyleBackColor = true;
             // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label35.Location = new System.Drawing.Point(33, 267);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(183, 23);
-            this.label35.TabIndex = 15;
-            this.label35.Text = "Number Employees";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label34.Location = new System.Drawing.Point(33, 211);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(225, 23);
-            this.label34.TabIndex = 14;
-            this.label34.Text = "Number Depot Workers";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label33.Location = new System.Drawing.Point(33, 154);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(177, 23);
-            this.label33.TabIndex = 13;
-            this.label33.Text = "Number Managers";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label32.Location = new System.Drawing.Point(33, 104);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(156, 23);
-            this.label32.TabIndex = 12;
-            this.label32.Text = "Number Admins";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label31.Location = new System.Drawing.Point(33, 51);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(117, 23);
-            this.label31.TabIndex = 11;
-            this.label31.Text = "Department";
-            // 
-            // tbDepartment
-            // 
-            this.tbDepartment.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.tbDepartment.Location = new System.Drawing.Point(271, 48);
-            this.tbDepartment.Name = "tbDepartment";
-            this.tbDepartment.Size = new System.Drawing.Size(202, 30);
-            this.tbDepartment.TabIndex = 10;
-            // 
-            // tbNrEmployees
-            // 
-            this.tbNrEmployees.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.tbNrEmployees.Location = new System.Drawing.Point(271, 260);
-            this.tbNrEmployees.Name = "tbNrEmployees";
-            this.tbNrEmployees.Size = new System.Drawing.Size(202, 30);
-            this.tbNrEmployees.TabIndex = 9;
-            // 
-            // tbNrDepotWorkers
-            // 
-            this.tbNrDepotWorkers.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.tbNrDepotWorkers.Location = new System.Drawing.Point(271, 208);
-            this.tbNrDepotWorkers.Name = "tbNrDepotWorkers";
-            this.tbNrDepotWorkers.Size = new System.Drawing.Size(202, 30);
-            this.tbNrDepotWorkers.TabIndex = 8;
-            // 
-            // tbNrManagers
-            // 
-            this.tbNrManagers.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.tbNrManagers.Location = new System.Drawing.Point(271, 151);
-            this.tbNrManagers.Name = "tbNrManagers";
-            this.tbNrManagers.Size = new System.Drawing.Size(202, 30);
-            this.tbNrManagers.TabIndex = 7;
-            // 
-            // tbNrAdmins
-            // 
-            this.tbNrAdmins.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.tbNrAdmins.Location = new System.Drawing.Point(271, 101);
-            this.tbNrAdmins.Name = "tbNrAdmins";
-            this.tbNrAdmins.Size = new System.Drawing.Size(202, 30);
-            this.tbNrAdmins.TabIndex = 6;
-            // 
-            // btnScheduleGenerator
-            // 
-            this.btnScheduleGenerator.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.btnScheduleGenerator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnScheduleGenerator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnScheduleGenerator.BorderRadius = 0;
-            this.btnScheduleGenerator.ButtonText = "Schedule Generator";
-            this.btnScheduleGenerator.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnScheduleGenerator.DisabledColor = System.Drawing.Color.Gray;
-            this.btnScheduleGenerator.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnScheduleGenerator.Iconimage = null;
-            this.btnScheduleGenerator.Iconimage_right = null;
-            this.btnScheduleGenerator.Iconimage_right_Selected = null;
-            this.btnScheduleGenerator.Iconimage_Selected = null;
-            this.btnScheduleGenerator.IconMarginLeft = 0;
-            this.btnScheduleGenerator.IconMarginRight = 0;
-            this.btnScheduleGenerator.IconRightVisible = false;
-            this.btnScheduleGenerator.IconRightZoom = 0D;
-            this.btnScheduleGenerator.IconVisible = false;
-            this.btnScheduleGenerator.IconZoom = 90D;
-            this.btnScheduleGenerator.IsTab = false;
-            this.btnScheduleGenerator.Location = new System.Drawing.Point(388, 11);
-            this.btnScheduleGenerator.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.btnScheduleGenerator.Name = "btnScheduleGenerator";
-            this.btnScheduleGenerator.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnScheduleGenerator.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.btnScheduleGenerator.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnScheduleGenerator.selected = false;
-            this.btnScheduleGenerator.Size = new System.Drawing.Size(319, 51);
-            this.btnScheduleGenerator.TabIndex = 5;
-            this.btnScheduleGenerator.Text = "Schedule Generator";
-            this.btnScheduleGenerator.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnScheduleGenerator.Textcolor = System.Drawing.Color.White;
-            this.btnScheduleGenerator.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btnScheduleGenerator.Click += new System.EventHandler(this.btnScheduleGenerator_Click);
-            // 
             // tableLayoutPanel32
             // 
             this.tableLayoutPanel32.BackColor = System.Drawing.Color.White;
@@ -4796,6 +4595,215 @@
             this.panel25.Size = new System.Drawing.Size(1404, 744);
             this.panel25.TabIndex = 17;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnGenerateScheduleForTheWeek);
+            this.groupBox2.Controls.Add(this.tbDepartment);
+            this.groupBox2.Controls.Add(this.label31);
+            this.groupBox2.Controls.Add(this.label35);
+            this.groupBox2.Controls.Add(this.tbNrEmployees);
+            this.groupBox2.Controls.Add(this.tbNrAdmins);
+            this.groupBox2.Controls.Add(this.label32);
+            this.groupBox2.Controls.Add(this.label34);
+            this.groupBox2.Controls.Add(this.tbNrDepotWorkers);
+            this.groupBox2.Controls.Add(this.tbNrManagers);
+            this.groupBox2.Controls.Add(this.label33);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.groupBox2.Location = new System.Drawing.Point(558, 45);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(525, 519);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Next Week";
+            // 
+            // btnGenerateScheduleForTheWeek
+            // 
+            this.btnGenerateScheduleForTheWeek.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnGenerateScheduleForTheWeek.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGenerateScheduleForTheWeek.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnGenerateScheduleForTheWeek.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGenerateScheduleForTheWeek.BorderRadius = 0;
+            this.btnGenerateScheduleForTheWeek.ButtonText = "Generate Schedule";
+            this.btnGenerateScheduleForTheWeek.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGenerateScheduleForTheWeek.DisabledColor = System.Drawing.Color.Gray;
+            this.btnGenerateScheduleForTheWeek.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerateScheduleForTheWeek.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnGenerateScheduleForTheWeek.Iconimage = null;
+            this.btnGenerateScheduleForTheWeek.Iconimage_right = null;
+            this.btnGenerateScheduleForTheWeek.Iconimage_right_Selected = null;
+            this.btnGenerateScheduleForTheWeek.Iconimage_Selected = null;
+            this.btnGenerateScheduleForTheWeek.IconMarginLeft = 0;
+            this.btnGenerateScheduleForTheWeek.IconMarginRight = 0;
+            this.btnGenerateScheduleForTheWeek.IconRightVisible = false;
+            this.btnGenerateScheduleForTheWeek.IconRightZoom = 0D;
+            this.btnGenerateScheduleForTheWeek.IconVisible = false;
+            this.btnGenerateScheduleForTheWeek.IconZoom = 90D;
+            this.btnGenerateScheduleForTheWeek.IsTab = false;
+            this.btnGenerateScheduleForTheWeek.Location = new System.Drawing.Point(51, 424);
+            this.btnGenerateScheduleForTheWeek.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
+            this.btnGenerateScheduleForTheWeek.Name = "btnGenerateScheduleForTheWeek";
+            this.btnGenerateScheduleForTheWeek.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnGenerateScheduleForTheWeek.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnGenerateScheduleForTheWeek.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnGenerateScheduleForTheWeek.selected = false;
+            this.btnGenerateScheduleForTheWeek.Size = new System.Drawing.Size(444, 62);
+            this.btnGenerateScheduleForTheWeek.TabIndex = 16;
+            this.btnGenerateScheduleForTheWeek.Text = "Generate Schedule";
+            this.btnGenerateScheduleForTheWeek.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnGenerateScheduleForTheWeek.Textcolor = System.Drawing.Color.White;
+            this.btnGenerateScheduleForTheWeek.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerateScheduleForTheWeek.Click += new System.EventHandler(this.btnGenerateScheduleForTheWeek_Click);
+            // 
+            // tbDepartment
+            // 
+            this.tbDepartment.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.tbDepartment.Location = new System.Drawing.Point(271, 48);
+            this.tbDepartment.Name = "tbDepartment";
+            this.tbDepartment.Size = new System.Drawing.Size(202, 30);
+            this.tbDepartment.TabIndex = 10;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label31.Location = new System.Drawing.Point(33, 51);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(117, 23);
+            this.label31.TabIndex = 11;
+            this.label31.Text = "Department";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label35.Location = new System.Drawing.Point(33, 267);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(183, 23);
+            this.label35.TabIndex = 15;
+            this.label35.Text = "Number Employees";
+            // 
+            // tbNrEmployees
+            // 
+            this.tbNrEmployees.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.tbNrEmployees.Location = new System.Drawing.Point(271, 260);
+            this.tbNrEmployees.Name = "tbNrEmployees";
+            this.tbNrEmployees.Size = new System.Drawing.Size(202, 30);
+            this.tbNrEmployees.TabIndex = 9;
+            // 
+            // tbNrAdmins
+            // 
+            this.tbNrAdmins.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.tbNrAdmins.Location = new System.Drawing.Point(271, 101);
+            this.tbNrAdmins.Name = "tbNrAdmins";
+            this.tbNrAdmins.Size = new System.Drawing.Size(202, 30);
+            this.tbNrAdmins.TabIndex = 6;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label32.Location = new System.Drawing.Point(33, 104);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(156, 23);
+            this.label32.TabIndex = 12;
+            this.label32.Text = "Number Admins";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label34.Location = new System.Drawing.Point(33, 211);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(225, 23);
+            this.label34.TabIndex = 14;
+            this.label34.Text = "Number Depot Workers";
+            // 
+            // tbNrDepotWorkers
+            // 
+            this.tbNrDepotWorkers.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.tbNrDepotWorkers.Location = new System.Drawing.Point(271, 208);
+            this.tbNrDepotWorkers.Name = "tbNrDepotWorkers";
+            this.tbNrDepotWorkers.Size = new System.Drawing.Size(202, 30);
+            this.tbNrDepotWorkers.TabIndex = 8;
+            // 
+            // tbNrManagers
+            // 
+            this.tbNrManagers.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.tbNrManagers.Location = new System.Drawing.Point(271, 151);
+            this.tbNrManagers.Name = "tbNrManagers";
+            this.tbNrManagers.Size = new System.Drawing.Size(202, 30);
+            this.tbNrManagers.TabIndex = 7;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label33.Location = new System.Drawing.Point(33, 154);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(177, 23);
+            this.label33.TabIndex = 13;
+            this.label33.Text = "Number Managers";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnReassign);
+            this.groupBox1.Controls.Add(this.lbxCancelledShifts);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.Location = new System.Drawing.Point(31, 45);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(492, 643);
+            this.groupBox1.TabIndex = 16;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Current Week";
+            // 
+            // btnReassign
+            // 
+            this.btnReassign.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnReassign.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReassign.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnReassign.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnReassign.BorderRadius = 0;
+            this.btnReassign.ButtonText = "Reassign Cancelled Shifts";
+            this.btnReassign.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReassign.DisabledColor = System.Drawing.Color.Gray;
+            this.btnReassign.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReassign.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnReassign.Iconimage = null;
+            this.btnReassign.Iconimage_right = null;
+            this.btnReassign.Iconimage_right_Selected = null;
+            this.btnReassign.Iconimage_Selected = null;
+            this.btnReassign.IconMarginLeft = 0;
+            this.btnReassign.IconMarginRight = 0;
+            this.btnReassign.IconRightVisible = false;
+            this.btnReassign.IconRightZoom = 0D;
+            this.btnReassign.IconVisible = false;
+            this.btnReassign.IconZoom = 90D;
+            this.btnReassign.IsTab = false;
+            this.btnReassign.Location = new System.Drawing.Point(20, 523);
+            this.btnReassign.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
+            this.btnReassign.Name = "btnReassign";
+            this.btnReassign.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnReassign.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnReassign.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnReassign.selected = false;
+            this.btnReassign.Size = new System.Drawing.Size(444, 62);
+            this.btnReassign.TabIndex = 5;
+            this.btnReassign.Text = "Reassign Cancelled Shifts";
+            this.btnReassign.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnReassign.Textcolor = System.Drawing.Color.White;
+            this.btnReassign.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReassign.Click += new System.EventHandler(this.btnReassign_Click);
+            // 
+            // lbxCancelledShifts
+            // 
+            this.lbxCancelledShifts.FormattingEnabled = true;
+            this.lbxCancelledShifts.Location = new System.Drawing.Point(20, 64);
+            this.lbxCancelledShifts.Name = "lbxCancelledShifts";
+            this.lbxCancelledShifts.Size = new System.Drawing.Size(444, 329);
+            this.lbxCancelledShifts.TabIndex = 0;
+            // 
             // panel29
             // 
             this.panel29.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -4857,124 +4865,378 @@
             this.bunifuFlatButton10.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton10.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             // 
-            // groupBox1
+            // tabControl2
             // 
-            this.groupBox1.Controls.Add(this.btnReassign);
-            this.groupBox1.Controls.Add(this.lbxCancelledShifts);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.Location = new System.Drawing.Point(31, 45);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(492, 643);
-            this.groupBox1.TabIndex = 16;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Current Week";
+            this.tabControl2.Controls.Add(this.tabPage2);
+            this.tabControl2.Controls.Add(this.tabPage3);
+            this.tabControl2.Controls.Add(this.tabPage4);
+            this.tabControl2.Location = new System.Drawing.Point(4, 17);
+            this.tabControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(1227, 721);
+            this.tabControl2.TabIndex = 14;
             // 
-            // lbxCancelledShifts
+            // tabPage2
             // 
-            this.lbxCancelledShifts.FormattingEnabled = true;
-            this.lbxCancelledShifts.Location = new System.Drawing.Point(20, 64);
-            this.lbxCancelledShifts.Name = "lbxCancelledShifts";
-            this.lbxCancelledShifts.Size = new System.Drawing.Size(444, 329);
-            this.lbxCancelledShifts.TabIndex = 0;
+            this.tabPage2.Controls.Add(this.panelAddDepartment);
+            this.tabPage2.Location = new System.Drawing.Point(4, 31);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage2.Size = new System.Drawing.Size(1219, 686);
+            this.tabPage2.TabIndex = 0;
+            this.tabPage2.Text = "Create New Department";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // btnReassign
+            // panelAddDepartment
             // 
-            this.btnReassign.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.btnReassign.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelAddDepartment.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReassign.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnReassign.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnReassign.BorderRadius = 0;
-            this.btnReassign.ButtonText = "Reassign Cancelled Shifts";
-            this.btnReassign.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReassign.DisabledColor = System.Drawing.Color.Gray;
-            this.btnReassign.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReassign.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnReassign.Iconimage = null;
-            this.btnReassign.Iconimage_right = null;
-            this.btnReassign.Iconimage_right_Selected = null;
-            this.btnReassign.Iconimage_Selected = null;
-            this.btnReassign.IconMarginLeft = 0;
-            this.btnReassign.IconMarginRight = 0;
-            this.btnReassign.IconRightVisible = false;
-            this.btnReassign.IconRightZoom = 0D;
-            this.btnReassign.IconVisible = false;
-            this.btnReassign.IconZoom = 90D;
-            this.btnReassign.IsTab = false;
-            this.btnReassign.Location = new System.Drawing.Point(20, 523);
-            this.btnReassign.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
-            this.btnReassign.Name = "btnReassign";
-            this.btnReassign.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnReassign.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.btnReassign.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnReassign.selected = false;
-            this.btnReassign.Size = new System.Drawing.Size(444, 62);
-            this.btnReassign.TabIndex = 5;
-            this.btnReassign.Text = "Reassign Cancelled Shifts";
-            this.btnReassign.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnReassign.Textcolor = System.Drawing.Color.White;
-            this.btnReassign.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReassign.Click += new System.EventHandler(this.btnReassign_Click);
+            this.panelAddDepartment.Controls.Add(this.btnCreateDepartment);
+            this.panelAddDepartment.Controls.Add(this.lbDepartaments);
+            this.panelAddDepartment.Controls.Add(this.tbMaxNr);
+            this.panelAddDepartment.Controls.Add(this.label23);
+            this.panelAddDepartment.Controls.Add(this.tbMinNr);
+            this.panelAddDepartment.Controls.Add(this.label11);
+            this.panelAddDepartment.Controls.Add(this.tbDepName);
+            this.panelAddDepartment.Controls.Add(this.label56);
+            this.panelAddDepartment.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelAddDepartment.Location = new System.Drawing.Point(5, 5);
+            this.panelAddDepartment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelAddDepartment.Name = "panelAddDepartment";
+            this.panelAddDepartment.Size = new System.Drawing.Size(1335, 678);
+            this.panelAddDepartment.TabIndex = 0;
             // 
-            // groupBox2
+            // btnCreateDepartment
             // 
-            this.groupBox2.Controls.Add(this.btnGenerateScheduleForTheWeek);
-            this.groupBox2.Controls.Add(this.tbDepartment);
-            this.groupBox2.Controls.Add(this.label31);
-            this.groupBox2.Controls.Add(this.label35);
-            this.groupBox2.Controls.Add(this.tbNrEmployees);
-            this.groupBox2.Controls.Add(this.tbNrAdmins);
-            this.groupBox2.Controls.Add(this.label32);
-            this.groupBox2.Controls.Add(this.label34);
-            this.groupBox2.Controls.Add(this.tbNrDepotWorkers);
-            this.groupBox2.Controls.Add(this.tbNrManagers);
-            this.groupBox2.Controls.Add(this.label33);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.groupBox2.Location = new System.Drawing.Point(558, 45);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(525, 519);
-            this.groupBox2.TabIndex = 17;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Next Week";
-            // 
-            // btnGenerateScheduleForTheWeek
-            // 
-            this.btnGenerateScheduleForTheWeek.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.btnGenerateScheduleForTheWeek.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnCreateDepartment.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnCreateDepartment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGenerateScheduleForTheWeek.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnGenerateScheduleForTheWeek.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGenerateScheduleForTheWeek.BorderRadius = 0;
-            this.btnGenerateScheduleForTheWeek.ButtonText = "Generate Schedule";
-            this.btnGenerateScheduleForTheWeek.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGenerateScheduleForTheWeek.DisabledColor = System.Drawing.Color.Gray;
-            this.btnGenerateScheduleForTheWeek.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerateScheduleForTheWeek.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnGenerateScheduleForTheWeek.Iconimage = null;
-            this.btnGenerateScheduleForTheWeek.Iconimage_right = null;
-            this.btnGenerateScheduleForTheWeek.Iconimage_right_Selected = null;
-            this.btnGenerateScheduleForTheWeek.Iconimage_Selected = null;
-            this.btnGenerateScheduleForTheWeek.IconMarginLeft = 0;
-            this.btnGenerateScheduleForTheWeek.IconMarginRight = 0;
-            this.btnGenerateScheduleForTheWeek.IconRightVisible = false;
-            this.btnGenerateScheduleForTheWeek.IconRightZoom = 0D;
-            this.btnGenerateScheduleForTheWeek.IconVisible = false;
-            this.btnGenerateScheduleForTheWeek.IconZoom = 90D;
-            this.btnGenerateScheduleForTheWeek.IsTab = false;
-            this.btnGenerateScheduleForTheWeek.Location = new System.Drawing.Point(51, 424);
-            this.btnGenerateScheduleForTheWeek.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
-            this.btnGenerateScheduleForTheWeek.Name = "btnGenerateScheduleForTheWeek";
-            this.btnGenerateScheduleForTheWeek.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnGenerateScheduleForTheWeek.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.btnGenerateScheduleForTheWeek.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnGenerateScheduleForTheWeek.selected = false;
-            this.btnGenerateScheduleForTheWeek.Size = new System.Drawing.Size(444, 62);
-            this.btnGenerateScheduleForTheWeek.TabIndex = 16;
-            this.btnGenerateScheduleForTheWeek.Text = "Generate Schedule";
-            this.btnGenerateScheduleForTheWeek.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnGenerateScheduleForTheWeek.Textcolor = System.Drawing.Color.White;
-            this.btnGenerateScheduleForTheWeek.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerateScheduleForTheWeek.Click += new System.EventHandler(this.btnGenerateScheduleForTheWeek_Click);
+            this.btnCreateDepartment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnCreateDepartment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCreateDepartment.BorderRadius = 0;
+            this.btnCreateDepartment.ButtonText = "Create";
+            this.btnCreateDepartment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCreateDepartment.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCreateDepartment.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnCreateDepartment.Iconimage = null;
+            this.btnCreateDepartment.Iconimage_right = null;
+            this.btnCreateDepartment.Iconimage_right_Selected = null;
+            this.btnCreateDepartment.Iconimage_Selected = null;
+            this.btnCreateDepartment.IconMarginLeft = 0;
+            this.btnCreateDepartment.IconMarginRight = 0;
+            this.btnCreateDepartment.IconRightVisible = false;
+            this.btnCreateDepartment.IconRightZoom = 0D;
+            this.btnCreateDepartment.IconVisible = false;
+            this.btnCreateDepartment.IconZoom = 90D;
+            this.btnCreateDepartment.IsTab = false;
+            this.btnCreateDepartment.Location = new System.Drawing.Point(61, 560);
+            this.btnCreateDepartment.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnCreateDepartment.Name = "btnCreateDepartment";
+            this.btnCreateDepartment.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnCreateDepartment.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnCreateDepartment.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnCreateDepartment.selected = false;
+            this.btnCreateDepartment.Size = new System.Drawing.Size(1213, 89);
+            this.btnCreateDepartment.TabIndex = 2;
+            this.btnCreateDepartment.Text = "Create";
+            this.btnCreateDepartment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCreateDepartment.Textcolor = System.Drawing.Color.White;
+            this.btnCreateDepartment.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btnCreateDepartment.Click += new System.EventHandler(this.BtnCreateDepartment_Click_1);
+            // 
+            // lbDepartaments
+            // 
+            this.lbDepartaments.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbDepartaments.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.lbDepartaments.FormattingEnabled = true;
+            this.lbDepartaments.ItemHeight = 23;
+            this.lbDepartaments.Location = new System.Drawing.Point(32, 242);
+            this.lbDepartaments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lbDepartaments.Name = "lbDepartaments";
+            this.lbDepartaments.Size = new System.Drawing.Size(1213, 234);
+            this.lbDepartaments.TabIndex = 11;
+            // 
+            // tbMaxNr
+            // 
+            this.tbMaxNr.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbMaxNr.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.tbMaxNr.Location = new System.Drawing.Point(324, 176);
+            this.tbMaxNr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbMaxNr.Name = "tbMaxNr";
+            this.tbMaxNr.Size = new System.Drawing.Size(921, 30);
+            this.tbMaxNr.TabIndex = 10;
+            // 
+            // label23
+            // 
+            this.label23.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label23.Location = new System.Drawing.Point(28, 110);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(291, 27);
+            this.label23.TabIndex = 9;
+            this.label23.Text = "Minimum Employee Number:";
+            // 
+            // tbMinNr
+            // 
+            this.tbMinNr.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbMinNr.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.tbMinNr.Location = new System.Drawing.Point(324, 110);
+            this.tbMinNr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbMinNr.Name = "tbMinNr";
+            this.tbMinNr.Size = new System.Drawing.Size(921, 30);
+            this.tbMinNr.TabIndex = 8;
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label11.Location = new System.Drawing.Point(27, 176);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(291, 27);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "Maximum Employee Number:";
+            // 
+            // tbDepName
+            // 
+            this.tbDepName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbDepName.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.tbDepName.Location = new System.Drawing.Point(324, 37);
+            this.tbDepName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbDepName.Name = "tbDepName";
+            this.tbDepName.Size = new System.Drawing.Size(921, 30);
+            this.tbDepName.TabIndex = 6;
+            // 
+            // label56
+            // 
+            this.label56.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label56.Location = new System.Drawing.Point(28, 37);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(179, 27);
+            this.label56.TabIndex = 0;
+            this.label56.Text = "Department name:";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.panelSearchDep);
+            this.tabPage3.Location = new System.Drawing.Point(4, 31);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage3.Size = new System.Drawing.Size(1219, 686);
+            this.tabPage3.TabIndex = 1;
+            this.tabPage3.Text = "Search For Department";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // panelSearchDep
+            // 
+            this.panelSearchDep.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelSearchDep.Controls.Add(this.btnSearchDep);
+            this.panelSearchDep.Controls.Add(this.lbxFoundDepartaments);
+            this.panelSearchDep.Controls.Add(this.tbxDepName);
+            this.panelSearchDep.Controls.Add(this.label41);
+            this.panelSearchDep.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelSearchDep.Location = new System.Drawing.Point(3, 5);
+            this.panelSearchDep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelSearchDep.Name = "panelSearchDep";
+            this.panelSearchDep.Size = new System.Drawing.Size(1076, 841);
+            this.panelSearchDep.TabIndex = 12;
+            // 
+            // btnSearchDep
+            // 
+            this.btnSearchDep.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnSearchDep.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearchDep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnSearchDep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearchDep.BorderRadius = 0;
+            this.btnSearchDep.ButtonText = "Search";
+            this.btnSearchDep.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearchDep.DisabledColor = System.Drawing.Color.Gray;
+            this.btnSearchDep.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnSearchDep.Iconimage = null;
+            this.btnSearchDep.Iconimage_right = null;
+            this.btnSearchDep.Iconimage_right_Selected = null;
+            this.btnSearchDep.Iconimage_Selected = null;
+            this.btnSearchDep.IconMarginLeft = 0;
+            this.btnSearchDep.IconMarginRight = 0;
+            this.btnSearchDep.IconRightVisible = false;
+            this.btnSearchDep.IconRightZoom = 0D;
+            this.btnSearchDep.IconVisible = false;
+            this.btnSearchDep.IconZoom = 90D;
+            this.btnSearchDep.IsTab = false;
+            this.btnSearchDep.Location = new System.Drawing.Point(75, 133);
+            this.btnSearchDep.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSearchDep.Name = "btnSearchDep";
+            this.btnSearchDep.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnSearchDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnSearchDep.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnSearchDep.selected = false;
+            this.btnSearchDep.Size = new System.Drawing.Size(955, 41);
+            this.btnSearchDep.TabIndex = 2;
+            this.btnSearchDep.Text = "Search";
+            this.btnSearchDep.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSearchDep.Textcolor = System.Drawing.Color.White;
+            this.btnSearchDep.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btnSearchDep.Click += new System.EventHandler(this.BtnSearchDep_Click);
+            // 
+            // lbxFoundDepartaments
+            // 
+            this.lbxFoundDepartaments.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbxFoundDepartaments.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.lbxFoundDepartaments.FormattingEnabled = true;
+            this.lbxFoundDepartaments.ItemHeight = 23;
+            this.lbxFoundDepartaments.Location = new System.Drawing.Point(32, 242);
+            this.lbxFoundDepartaments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lbxFoundDepartaments.Name = "lbxFoundDepartaments";
+            this.lbxFoundDepartaments.Size = new System.Drawing.Size(953, 395);
+            this.lbxFoundDepartaments.TabIndex = 11;
+            // 
+            // tbxDepName
+            // 
+            this.tbxDepName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbxDepName.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.tbxDepName.Location = new System.Drawing.Point(365, 34);
+            this.tbxDepName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxDepName.Name = "tbxDepName";
+            this.tbxDepName.Size = new System.Drawing.Size(663, 30);
+            this.tbxDepName.TabIndex = 6;
+            // 
+            // label41
+            // 
+            this.label41.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label41.Location = new System.Drawing.Point(28, 37);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(251, 27);
+            this.label41.TabIndex = 0;
+            this.label41.Text = "Departament Name:";
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.panelRemoveDepartment);
+            this.tabPage4.Location = new System.Drawing.Point(4, 31);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1219, 686);
+            this.tabPage4.TabIndex = 2;
+            this.tabPage4.Text = "Remove Department";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // panelRemoveDepartment
+            // 
+            this.panelRemoveDepartment.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelRemoveDepartment.Controls.Add(this.btnRemoveDep);
+            this.panelRemoveDepartment.Controls.Add(this.clbDepartments);
+            this.panelRemoveDepartment.Controls.Add(this.btnRemove);
+            this.panelRemoveDepartment.Controls.Add(this.label38);
+            this.panelRemoveDepartment.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelRemoveDepartment.Location = new System.Drawing.Point(13, 14);
+            this.panelRemoveDepartment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelRemoveDepartment.Name = "panelRemoveDepartment";
+            this.panelRemoveDepartment.Size = new System.Drawing.Size(1068, 670);
+            this.panelRemoveDepartment.TabIndex = 12;
+            // 
+            // btnRemoveDep
+            // 
+            this.btnRemoveDep.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnRemoveDep.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRemoveDep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnRemoveDep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRemoveDep.BorderRadius = 0;
+            this.btnRemoveDep.ButtonText = "Remove";
+            this.btnRemoveDep.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRemoveDep.DisabledColor = System.Drawing.Color.Gray;
+            this.btnRemoveDep.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnRemoveDep.Iconimage = null;
+            this.btnRemoveDep.Iconimage_right = null;
+            this.btnRemoveDep.Iconimage_right_Selected = null;
+            this.btnRemoveDep.Iconimage_Selected = null;
+            this.btnRemoveDep.IconMarginLeft = 0;
+            this.btnRemoveDep.IconMarginRight = 0;
+            this.btnRemoveDep.IconRightVisible = false;
+            this.btnRemoveDep.IconRightZoom = 0D;
+            this.btnRemoveDep.IconVisible = false;
+            this.btnRemoveDep.IconZoom = 90D;
+            this.btnRemoveDep.IsTab = false;
+            this.btnRemoveDep.Location = new System.Drawing.Point(52, 482);
+            this.btnRemoveDep.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.btnRemoveDep.Name = "btnRemoveDep";
+            this.btnRemoveDep.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnRemoveDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnRemoveDep.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnRemoveDep.selected = false;
+            this.btnRemoveDep.Size = new System.Drawing.Size(984, 71);
+            this.btnRemoveDep.TabIndex = 9;
+            this.btnRemoveDep.Text = "Remove";
+            this.btnRemoveDep.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnRemoveDep.Textcolor = System.Drawing.Color.White;
+            this.btnRemoveDep.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
+            // 
+            // clbDepartments
+            // 
+            this.clbDepartments.FormattingEnabled = true;
+            this.clbDepartments.Location = new System.Drawing.Point(21, 73);
+            this.clbDepartments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.clbDepartments.Name = "clbDepartments";
+            this.clbDepartments.Size = new System.Drawing.Size(384, 340);
+            this.clbDepartments.TabIndex = 8;
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnRemove.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnRemove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRemove.BorderRadius = 0;
+            this.btnRemove.ButtonText = "Remove Department";
+            this.btnRemove.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRemove.DisabledColor = System.Drawing.Color.Gray;
+            this.btnRemove.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnRemove.Iconimage = null;
+            this.btnRemove.Iconimage_right = null;
+            this.btnRemove.Iconimage_right_Selected = null;
+            this.btnRemove.Iconimage_Selected = null;
+            this.btnRemove.IconMarginLeft = 0;
+            this.btnRemove.IconMarginRight = 0;
+            this.btnRemove.IconRightVisible = false;
+            this.btnRemove.IconRightZoom = 0D;
+            this.btnRemove.IconVisible = false;
+            this.btnRemove.IconZoom = 90D;
+            this.btnRemove.IsTab = false;
+            this.btnRemove.Location = new System.Drawing.Point(69, 770);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnRemove.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnRemove.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnRemove.selected = false;
+            this.btnRemove.Size = new System.Drawing.Size(984, 122);
+            this.btnRemove.TabIndex = 2;
+            this.btnRemove.Text = "Remove Department";
+            this.btnRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnRemove.Textcolor = System.Drawing.Color.White;
+            this.btnRemove.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
+            // 
+            // label38
+            // 
+            this.label38.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label38.Location = new System.Drawing.Point(17, 18);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(291, 27);
+            this.label38.TabIndex = 7;
+            this.label38.Text = "Existing departments:";
             // 
             // MainAdmin
             // 
@@ -5011,8 +5273,6 @@
             this.panel19.ResumeLayout(false);
             this.tableLayoutPanel29.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
-            this.panel22.ResumeLayout(false);
-            this.panel22.PerformLayout();
             this.tabRestockReq.ResumeLayout(false);
             this.tableLayoutPanel21.ResumeLayout(false);
             this.tableLayoutPanel22.ResumeLayout(false);
@@ -5086,11 +5346,20 @@
             this.tableLayoutPanel35.ResumeLayout(false);
             this.panel24.ResumeLayout(false);
             this.panel25.ResumeLayout(false);
-            this.panel29.ResumeLayout(false);
-            this.panel30.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.panel29.ResumeLayout(false);
+            this.panel30.ResumeLayout(false);
+            this.tabControl2.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.panelAddDepartment.ResumeLayout(false);
+            this.panelAddDepartment.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.panelSearchDep.ResumeLayout(false);
+            this.panelSearchDep.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.panelRemoveDepartment.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -5135,15 +5404,6 @@
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel29;
         private System.Windows.Forms.Panel panel20;
-        private System.Windows.Forms.Panel panel22;
-        private Bunifu.Framework.UI.BunifuFlatButton btnCreateDepartment;
-        private System.Windows.Forms.ListBox lbDepartaments;
-        private System.Windows.Forms.TextBox tbMaxNr;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox tbMinNr;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox tbDepName;
-        private System.Windows.Forms.Label label56;
         private System.Windows.Forms.TabPage tabRestockReq;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel21;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel22;
@@ -5324,5 +5584,28 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnReassign;
         private System.Windows.Forms.GroupBox groupBox2;
         private Bunifu.Framework.UI.BunifuFlatButton btnGenerateScheduleForTheWeek;
+        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Panel panelAddDepartment;
+        private Bunifu.Framework.UI.BunifuFlatButton btnCreateDepartment;
+        private System.Windows.Forms.ListBox lbDepartaments;
+        private System.Windows.Forms.TextBox tbMaxNr;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox tbMinNr;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox tbDepName;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Panel panelSearchDep;
+        private Bunifu.Framework.UI.BunifuFlatButton btnSearchDep;
+        private System.Windows.Forms.ListBox lbxFoundDepartaments;
+        private System.Windows.Forms.TextBox tbxDepName;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Panel panelRemoveDepartment;
+        private Bunifu.Framework.UI.BunifuFlatButton btnRemoveDep;
+        private System.Windows.Forms.CheckedListBox clbDepartments;
+        private Bunifu.Framework.UI.BunifuFlatButton btnRemove;
+        private System.Windows.Forms.Label label38;
     }
 }
