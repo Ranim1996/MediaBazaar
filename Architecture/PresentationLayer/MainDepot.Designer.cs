@@ -91,8 +91,6 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
             this.panel17 = new System.Windows.Forms.Panel();
-            this.cmbBrand = new System.Windows.Forms.ComboBox();
-            this.label27 = new System.Windows.Forms.Label();
             this.btnViewProductsDetails = new Bunifu.Framework.UI.BunifuFlatButton();
             this.clbProducts = new System.Windows.Forms.CheckedListBox();
             this.btnSearchForProduct = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -224,6 +222,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.timerChangeMenuColor = new System.Windows.Forms.Timer(this.components);
+            this.cmbDep = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.cmbBrand = new System.Windows.Forms.ComboBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.cmbShowProducts = new System.Windows.Forms.ComboBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabMakeReq.SuspendLayout();
             this.tableLayoutPanel27.SuspendLayout();
@@ -1070,6 +1074,10 @@
             // 
             // panel17
             // 
+            this.panel17.Controls.Add(this.cmbShowProducts);
+            this.panel17.Controls.Add(this.label25);
+            this.panel17.Controls.Add(this.cmbDep);
+            this.panel17.Controls.Add(this.label16);
             this.panel17.Controls.Add(this.cmbBrand);
             this.panel17.Controls.Add(this.label27);
             this.panel17.Controls.Add(this.btnViewProductsDetails);
@@ -1081,34 +1089,6 @@
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(1436, 549);
             this.panel17.TabIndex = 5;
-            // 
-            // cmbBrand
-            // 
-            this.cmbBrand.FormattingEnabled = true;
-            this.cmbBrand.Items.AddRange(new object[] {
-            "Apple",
-            "Amazon",
-            "Asus",
-            "Microsoft",
-            "MSI",
-            "Razer",
-            "Samsung",
-            "HUAWEI"});
-            this.cmbBrand.Location = new System.Drawing.Point(363, 111);
-            this.cmbBrand.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbBrand.Name = "cmbBrand";
-            this.cmbBrand.Size = new System.Drawing.Size(425, 24);
-            this.cmbBrand.TabIndex = 12;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label27.Location = new System.Drawing.Point(359, 39);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(139, 23);
-            this.label27.TabIndex = 11;
-            this.label27.Text = "Choose Brand:";
             // 
             // btnViewProductsDetails
             // 
@@ -1133,7 +1113,7 @@
             this.btnViewProductsDetails.IconVisible = false;
             this.btnViewProductsDetails.IconZoom = 90D;
             this.btnViewProductsDetails.IsTab = false;
-            this.btnViewProductsDetails.Location = new System.Drawing.Point(35, 391);
+            this.btnViewProductsDetails.Location = new System.Drawing.Point(45, 448);
             this.btnViewProductsDetails.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnViewProductsDetails.Name = "btnViewProductsDetails";
             this.btnViewProductsDetails.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
@@ -1157,10 +1137,10 @@
             this.clbProducts.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.clbProducts.FormattingEnabled = true;
             this.clbProducts.HorizontalScrollbar = true;
-            this.clbProducts.Location = new System.Drawing.Point(36, 262);
+            this.clbProducts.Location = new System.Drawing.Point(45, 292);
             this.clbProducts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.clbProducts.Name = "clbProducts";
-            this.clbProducts.Size = new System.Drawing.Size(1384, 54);
+            this.clbProducts.Size = new System.Drawing.Size(1384, 129);
             this.clbProducts.TabIndex = 7;
             this.clbProducts.Visible = false;
             // 
@@ -1187,7 +1167,7 @@
             this.btnSearchForProduct.IconVisible = false;
             this.btnSearchForProduct.IconZoom = 90D;
             this.btnSearchForProduct.IsTab = false;
-            this.btnSearchForProduct.Location = new System.Drawing.Point(363, 170);
+            this.btnSearchForProduct.Location = new System.Drawing.Point(363, 222);
             this.btnSearchForProduct.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSearchForProduct.Name = "btnSearchForProduct";
             this.btnSearchForProduct.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
@@ -3476,6 +3456,76 @@
             this.timerChangeMenuColor.Interval = 10;
             this.timerChangeMenuColor.Tick += new System.EventHandler(this.timerChangeMenuColor_Tick);
             // 
+            // cmbDep
+            // 
+            this.cmbDep.FormattingEnabled = true;
+            this.cmbDep.Location = new System.Drawing.Point(612, 99);
+            this.cmbDep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbDep.Name = "cmbDep";
+            this.cmbDep.Size = new System.Drawing.Size(425, 24);
+            this.cmbDep.TabIndex = 18;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label16.Location = new System.Drawing.Point(371, 100);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(192, 23);
+            this.label16.TabIndex = 17;
+            this.label16.Text = "Choose Department:";
+            // 
+            // cmbBrand
+            // 
+            this.cmbBrand.FormattingEnabled = true;
+            this.cmbBrand.Items.AddRange(new object[] {
+            "Apple",
+            "Amazon",
+            "Asus",
+            "Microsoft",
+            "MSI",
+            "Razer",
+            "Samsung",
+            "HUAWEI"});
+            this.cmbBrand.Location = new System.Drawing.Point(612, 149);
+            this.cmbBrand.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbBrand.Name = "cmbBrand";
+            this.cmbBrand.Size = new System.Drawing.Size(425, 24);
+            this.cmbBrand.TabIndex = 16;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label27.Location = new System.Drawing.Point(371, 150);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(139, 23);
+            this.label27.TabIndex = 15;
+            this.label27.Text = "Choose Brand:";
+            // 
+            // cmbShowProducts
+            // 
+            this.cmbShowProducts.FormattingEnabled = true;
+            this.cmbShowProducts.Items.AddRange(new object[] {
+            "Department",
+            "Brand"});
+            this.cmbShowProducts.Location = new System.Drawing.Point(612, 49);
+            this.cmbShowProducts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbShowProducts.Name = "cmbShowProducts";
+            this.cmbShowProducts.Size = new System.Drawing.Size(425, 24);
+            this.cmbShowProducts.TabIndex = 20;
+            this.cmbShowProducts.SelectedIndexChanged += new System.EventHandler(this.CmbShowProducts_SelectedIndexChanged);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label25.Location = new System.Drawing.Point(371, 50);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(213, 23);
+            this.label25.TabIndex = 19;
+            this.label25.Text = "Search For Product By:";
+            // 
             // MainDepot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -3713,8 +3763,6 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.ComboBox cmbBrand;
-        private System.Windows.Forms.Label label27;
         private Bunifu.Framework.UI.BunifuFlatButton btnViewProductsDetails;
         private System.Windows.Forms.CheckedListBox clbProducts;
         private Bunifu.Framework.UI.BunifuFlatButton btnSearchForProduct;
@@ -3736,5 +3784,11 @@
         private System.Windows.Forms.Button btnDeleteData;
         private System.Windows.Forms.Button btnEditData;
         private System.Windows.Forms.ComboBox cmbProductDepartment;
+        private System.Windows.Forms.ComboBox cmbShowProducts;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.ComboBox cmbDep;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox cmbBrand;
+        private System.Windows.Forms.Label label27;
     }
 }

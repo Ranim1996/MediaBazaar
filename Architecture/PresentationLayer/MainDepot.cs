@@ -36,6 +36,9 @@ namespace Media_Bazaar
             tabControl1.SizeMode = TabSizeMode.Fixed;
             tabControl1.TabPages[0].BackColor = Color.FromArgb(116, 208, 252);
 
+            this.cmbDep.Enabled = false;
+            this.cmbBrand.Enabled = false;
+
             this.tbxPProductName.Enabled = false;
             this.tbxProductBrand.Enabled = false;
             this.tbxProductCategory.Enabled = false;
@@ -255,7 +258,8 @@ namespace Media_Bazaar
         {
             foreach (DepartmentModel dBD in depotWorkerManagment.GetDepartments())
             {
-                cmbDepartment.Items.Add(dBD.DepartamentName);
+                this.cmbDepartment.Items.Add(dBD.DepartamentName);
+                this.cmbDep.Items.Add(dBD.DepartamentName);
                 this.cmbProductDepartment.Items.Add(dBD.DepartamentName);
             }
         }
@@ -267,18 +271,33 @@ namespace Media_Bazaar
 
         private void BtnSearchForProduct_Click(object sender, EventArgs e)
         {
-            stocks = db.GetProductInfo(this.cmbBrand.Text);
-            if (stocks.Count == 0)
+            try
             {
-                MessageBox.Show("We do not have such Brand in our stock.");
-                this.cmbBrand.Text = "";
+                if (this.cmbShowProducts.Text == "Brand")
+                {
+                    
+                }
+
+                if (this.cmbShowProducts.Text == "Department")
+                {
+                    stocks = db.GetProductInfoByDepartment(this.cmbDep.Text);
+                    if (stocks.Count == 0)
+                    {
+                        MessageBox.Show("We do not have product un this department.");
+                        this.cmbDep.Text = "";
+                    }
+                    else
+                    {
+                        UpdateProductsList();
+                        UpdateDetails();
+                        this.clbProducts.Visible = true;
+                        this.btnViewProductsDetails.Visible = true;
+                    }
+                }
             }
-            else
+            catch (Exception exp)
             {
-                UpdateProductsList();
-                UpdateDetails();
-                this.clbProducts.Visible = true;
-                this.btnViewProductsDetails.Visible = true;
+                MessageBox.Show(exp.ToString());
             }
 
         }
@@ -368,6 +387,24 @@ namespace Media_Bazaar
             catch (Exception excep)
             {
                 MessageBox.Show(excep.ToString());
+            }
+        }
+
+        private void CmbShowProducts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.cmbShowProducts.Text == "Department")
+            {
+                this.cmbDep.Enabled = true;
+                this.cmbBrand.Enabled = false;
+            }
+            else if (this.cmbShowProducts.Text == "Brand")
+            {
+                this.cmbDep.Enabled = false;
+                this.cmbBrand.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Select type to show products!!");
             }
         }
 

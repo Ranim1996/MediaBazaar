@@ -540,6 +540,16 @@ namespace Media_Bazaar
             }
         }
 
+        public List<RestockRequest> GetProductInfoByDepartment(string dep)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<RestockRequest>($"SELECT * FROM restockrequest WHERE Departament = '{dep}'" +
+                    $"AND AdminConfirmation = 'CONFIRMED' ").ToList();
+                return output;
+            }
+        }
+
         // Update product Data
         public void UpdateProduct(int id, string name, string brand, string department, string category, int quantity)
         {
