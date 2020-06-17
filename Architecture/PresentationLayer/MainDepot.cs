@@ -476,6 +476,90 @@ namespace Media_Bazaar
             }
         }
 
+        private void ExportDataToCSV(List<RestockRequest> rr, string path) //exporting product data to csv
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+
+                dt.Columns.Add("RequestID", typeof(int));
+                dt.Columns.Add("ProductName", typeof(string));
+                dt.Columns.Add("Brand", typeof(string));
+                dt.Columns.Add("Category", typeof(string));
+                dt.Columns.Add("Departament", typeof(string));
+                dt.Columns.Add("Quantity", typeof(int));
+                dt.Columns.Add("Date Of Order", typeof(string));
+                dt.Columns.Add("Date Of Deliver", typeof(string));
+
+
+                foreach (var table in rr)
+                {
+                    dt.Rows.Add(table.RequestID, table.ProductName, table.Brand, table.Category, table.Departament,
+                        table.Quantity, table.DateOfOrder, table.DateOfDelivery);
+                }
+
+                StreamWriter sw = new StreamWriter(path, false);
+                //headers  
+                for (int i = 0; i < dt.Columns.Count; i++)
+                {
+                    sw.Write(dt.Columns[i]);
+                    if (i < dt.Columns.Count - 1)
+                    {
+                        sw.Write(",");
+                    }
+                }
+                sw.Write(sw.NewLine);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    for (int i = 0; i < dt.Columns.Count; i++)
+                    {
+                        if (!Convert.IsDBNull(dr[i]))
+                        {
+                            string value = dr[i].ToString();
+                            if (value.Contains(','))
+                            {
+                                value = String.Format("\"{0}\"", value);
+                                sw.Write(value);
+                            }
+                            else
+                            {
+                                sw.Write(dr[i].ToString());
+                            }
+                        }
+                        if (i < dt.Columns.Count - 1)
+                        {
+                            sw.Write(",");
+                        }
+                    }
+                    sw.Write(sw.NewLine);
+                }
+                sw.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
+
+        private void BtnExportDataToCSV_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                List<RestockRequest> r = db.GetProductData();
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+                ExportDataToCSV(r, path + "\\ProductData.CSV");
+
+                MessageBox.Show("Product Data Downloaded");
+            }
+            catch (Exception excep)
+            {
+                MessageBox.Show(excep.ToString());
+            }
+        }
+
         //private void DataToChange()
         //{
         //    foreach (int i in restockID)

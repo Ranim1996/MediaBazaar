@@ -91,6 +91,7 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.btnExportToExcel = new System.Windows.Forms.Button();
             this.cmbShowProducts = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
             this.cmbDep = new System.Windows.Forms.ComboBox();
@@ -228,7 +229,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.timerChangeMenuColor = new System.Windows.Forms.Timer(this.components);
-            this.btnExportToExcel = new System.Windows.Forms.Button();
+            this.btnExportDataToCSV = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabMakeReq.SuspendLayout();
             this.tableLayoutPanel27.SuspendLayout();
@@ -1075,6 +1076,7 @@
             // 
             // panel17
             // 
+            this.panel17.Controls.Add(this.btnExportDataToCSV);
             this.panel17.Controls.Add(this.btnExportToExcel);
             this.panel17.Controls.Add(this.cmbShowProducts);
             this.panel17.Controls.Add(this.label25);
@@ -1091,6 +1093,16 @@
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(1436, 549);
             this.panel17.TabIndex = 5;
+            // 
+            // btnExportToExcel
+            // 
+            this.btnExportToExcel.Location = new System.Drawing.Point(55, 51);
+            this.btnExportToExcel.Name = "btnExportToExcel";
+            this.btnExportToExcel.Size = new System.Drawing.Size(234, 41);
+            this.btnExportToExcel.TabIndex = 21;
+            this.btnExportToExcel.Text = "Export Product Data To Excel";
+            this.btnExportToExcel.UseVisualStyleBackColor = true;
+            this.btnExportToExcel.Click += new System.EventHandler(this.BtnExportToExcel_Click);
             // 
             // cmbShowProducts
             // 
@@ -3528,15 +3540,15 @@
             this.timerChangeMenuColor.Interval = 10;
             this.timerChangeMenuColor.Tick += new System.EventHandler(this.timerChangeMenuColor_Tick);
             // 
-            // btnExportToExcel
+            // btnExportDataToCSV
             // 
-            this.btnExportToExcel.Location = new System.Drawing.Point(55, 51);
-            this.btnExportToExcel.Name = "btnExportToExcel";
-            this.btnExportToExcel.Size = new System.Drawing.Size(234, 41);
-            this.btnExportToExcel.TabIndex = 21;
-            this.btnExportToExcel.Text = "Export Product Data To Excel";
-            this.btnExportToExcel.UseVisualStyleBackColor = true;
-            this.btnExportToExcel.Click += new System.EventHandler(this.BtnExportToExcel_Click);
+            this.btnExportDataToCSV.Location = new System.Drawing.Point(55, 109);
+            this.btnExportDataToCSV.Name = "btnExportDataToCSV";
+            this.btnExportDataToCSV.Size = new System.Drawing.Size(234, 41);
+            this.btnExportDataToCSV.TabIndex = 22;
+            this.btnExportDataToCSV.Text = "Export Product Data To CSV";
+            this.btnExportDataToCSV.UseVisualStyleBackColor = true;
+            this.btnExportDataToCSV.Click += new System.EventHandler(this.BtnExportDataToCSV_Click);
             // 
             // MainDepot
             // 
@@ -3803,5 +3815,6 @@
         private System.Windows.Forms.ComboBox cmbBrand;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Button btnExportToExcel;
+        private System.Windows.Forms.Button btnExportDataToCSV;
     }
 }
