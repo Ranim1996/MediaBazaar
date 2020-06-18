@@ -85,6 +85,105 @@ namespace Media_Bazaar
             return false;
         }
 
+        public void AddCheckIn(string time, ListBox lbShifts)
+        {
+            string holder = "";
+            string date = shiftDate.ToString("dd/MM/yyyy");
+            string attendance = "";
+
+            if (lbShifts.SelectedItem != null)
+            {
+                holder = lbShifts.SelectedItem.ToString();
+                foreach (ScheduleBase sch in dbSchedules)
+                {
+                    if (holder.Contains(sch.EmployeeId.ToString()) && holder.Contains(sch.Shift))
+                    {
+                        db.AddCheckInForEmployeeByIdAndShift(sch.EmployeeId, time, sch.Shift, date);
+                        holder = sch.Shift;
+                        break;
+                    }
+                }
+            }
+
+            holder = holder.Substring(0, 5);
+
+            DateTime time1 = DateTime.Parse(time);
+            DateTime time2 = DateTime.Parse(holder);
+
+            if (time1.TimeOfDay > time2.TimeOfDay)
+            {
+                attendance = "LATE";
+
+                if (lbShifts.SelectedItem != null)
+                {
+                    holder = lbShifts.SelectedItem.ToString();
+                    foreach (ScheduleBase sch in dbSchedules)
+                    {
+                        if (holder.Contains(sch.EmployeeId.ToString()) && holder.Contains(sch.Shift))
+                        {
+                            db.AddAttendanceForEmployeeByIdAndShift(sch.EmployeeId, attendance, sch.Shift, date);
+                            break;
+                        }
+                    }
+                }
+            }
+
+            else if (time1.TimeOfDay == time2.TimeOfDay)
+            {
+                attendance = "PRESENT";
+
+                if (lbShifts.SelectedItem != null)
+                {
+                    holder = lbShifts.SelectedItem.ToString();
+                    foreach (ScheduleBase sch in dbSchedules)
+                    {
+                        if (holder.Contains(sch.EmployeeId.ToString()) && holder.Contains(sch.Shift))
+                        {
+                            db.AddAttendanceForEmployeeByIdAndShift(sch.EmployeeId, attendance, sch.Shift, date);
+                            break;
+                        }
+                    }
+                }
+            }
+
+            else if (time1.TimeOfDay < time2.TimeOfDay)
+            {
+                attendance = "PRESENT";
+
+                if (lbShifts.SelectedItem != null)
+                {
+                    holder = lbShifts.SelectedItem.ToString();
+                    foreach (ScheduleBase sch in dbSchedules)
+                    {
+                        if (holder.Contains(sch.EmployeeId.ToString()) && holder.Contains(sch.Shift))
+                        {
+                            db.AddAttendanceForEmployeeByIdAndShift(sch.EmployeeId, attendance, sch.Shift, date);
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        public void AddCheckOut(string time, ListBox lbShifts)
+        {
+            string holder = "";
+            string date = shiftDate.ToString("dd/MM/yyyy");
+
+            if (lbShifts.SelectedItem != null)
+            {
+                holder = lbShifts.SelectedItem.ToString();
+                foreach (ScheduleBase sch in dbSchedules)
+                {
+                    if (holder.Contains(sch.EmployeeId.ToString()) && holder.Contains(sch.Shift))
+                    {
+                        db.AddCheckOutForEmployeeByIdAndShift(sch.EmployeeId, time, sch.Shift, date);
+                        break;
+                    }
+                }
+            }
+        }
+
         public void AddAttendance(string attendance, ListBox lbShifts)
         {
             string holder = "";

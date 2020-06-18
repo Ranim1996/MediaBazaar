@@ -394,7 +394,22 @@ namespace Media_Bazaar
                 connection.Execute($"INSERT INTO schedule (EmployeeID, Date, Shift)  VALUES( '{id}', '{date}', '{shift}')");
             }
         }
-
+        //Add check in time to the database
+        public void AddCheckInForEmployeeByIdAndShift(int id, string time, string shift, string date)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                connection.Execute($"UPDATE schedule SET CheckIn='{time}' WHERE EmployeeID='{id}' AND Shift='{shift}' AND Date='{date}';");
+            }
+        }
+        //Add check out time to the database
+        public void AddCheckOutForEmployeeByIdAndShift(int id, string time, string shift, string date)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                connection.Execute($"UPDATE schedule SET CheckOut='{time}' WHERE EmployeeID='{id}' AND Shift='{shift}' AND Date='{date}';");
+            }
+        }
         //get employee attendance by employee id, shift and date.
         public void AddAttendanceForEmployeeByIdAndShift(int id, string attendance, string shift, string date)
         {

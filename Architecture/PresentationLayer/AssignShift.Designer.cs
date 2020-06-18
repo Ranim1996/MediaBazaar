@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.grpBxViewShifts = new System.Windows.Forms.GroupBox();
+            this.btnCheckOut = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnCheckIn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAbsent = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnLate = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -58,6 +60,8 @@
             // 
             // grpBxViewShifts
             // 
+            this.grpBxViewShifts.Controls.Add(this.btnCheckOut);
+            this.grpBxViewShifts.Controls.Add(this.btnCheckIn);
             this.grpBxViewShifts.Controls.Add(this.label2);
             this.grpBxViewShifts.Controls.Add(this.btnAbsent);
             this.grpBxViewShifts.Controls.Add(this.btnLate);
@@ -71,13 +75,85 @@
             this.grpBxViewShifts.TabStop = false;
             this.grpBxViewShifts.Text = "View Shifts";
             // 
+            // btnCheckOut
+            // 
+            this.btnCheckOut.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnCheckOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnCheckOut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCheckOut.BorderRadius = 0;
+            this.btnCheckOut.ButtonText = "Check Out";
+            this.btnCheckOut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCheckOut.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCheckOut.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnCheckOut.Iconimage = null;
+            this.btnCheckOut.Iconimage_right = null;
+            this.btnCheckOut.Iconimage_right_Selected = null;
+            this.btnCheckOut.Iconimage_Selected = null;
+            this.btnCheckOut.IconMarginLeft = 0;
+            this.btnCheckOut.IconMarginRight = 0;
+            this.btnCheckOut.IconRightVisible = false;
+            this.btnCheckOut.IconRightZoom = 0D;
+            this.btnCheckOut.IconVisible = false;
+            this.btnCheckOut.IconZoom = 90D;
+            this.btnCheckOut.IsTab = false;
+            this.btnCheckOut.Location = new System.Drawing.Point(194, 296);
+            this.btnCheckOut.Margin = new System.Windows.Forms.Padding(43, 81, 43, 81);
+            this.btnCheckOut.Name = "btnCheckOut";
+            this.btnCheckOut.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnCheckOut.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnCheckOut.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnCheckOut.selected = false;
+            this.btnCheckOut.Size = new System.Drawing.Size(110, 32);
+            this.btnCheckOut.TabIndex = 16;
+            this.btnCheckOut.Text = "Check Out";
+            this.btnCheckOut.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCheckOut.Textcolor = System.Drawing.Color.White;
+            this.btnCheckOut.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
+            // 
+            // btnCheckIn
+            // 
+            this.btnCheckIn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnCheckIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnCheckIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCheckIn.BorderRadius = 0;
+            this.btnCheckIn.ButtonText = "Check In";
+            this.btnCheckIn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCheckIn.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCheckIn.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnCheckIn.Iconimage = null;
+            this.btnCheckIn.Iconimage_right = null;
+            this.btnCheckIn.Iconimage_right_Selected = null;
+            this.btnCheckIn.Iconimage_Selected = null;
+            this.btnCheckIn.IconMarginLeft = 0;
+            this.btnCheckIn.IconMarginRight = 0;
+            this.btnCheckIn.IconRightVisible = false;
+            this.btnCheckIn.IconRightZoom = 0D;
+            this.btnCheckIn.IconVisible = false;
+            this.btnCheckIn.IconZoom = 90D;
+            this.btnCheckIn.IsTab = false;
+            this.btnCheckIn.Location = new System.Drawing.Point(70, 296);
+            this.btnCheckIn.Margin = new System.Windows.Forms.Padding(20, 44, 20, 44);
+            this.btnCheckIn.Name = "btnCheckIn";
+            this.btnCheckIn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnCheckIn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnCheckIn.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnCheckIn.selected = false;
+            this.btnCheckIn.Size = new System.Drawing.Size(110, 32);
+            this.btnCheckIn.TabIndex = 15;
+            this.btnCheckIn.Text = "Check In";
+            this.btnCheckIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCheckIn.Textcolor = System.Drawing.Color.White;
+            this.btnCheckIn.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckIn.Click += new System.EventHandler(this.btnCheckIn_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(151, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(255, 18);
+            this.label2.Size = new System.Drawing.Size(204, 15);
             this.label2.TabIndex = 14;
             this.label2.Text = "(click twice on the shift to delete it)";
             // 
@@ -102,7 +178,7 @@
             this.btnAbsent.IconVisible = false;
             this.btnAbsent.IconZoom = 90D;
             this.btnAbsent.IsTab = false;
-            this.btnAbsent.Location = new System.Drawing.Point(249, 344);
+            this.btnAbsent.Location = new System.Drawing.Point(245, 344);
             this.btnAbsent.Margin = new System.Windows.Forms.Padding(43, 81, 43, 81);
             this.btnAbsent.Name = "btnAbsent";
             this.btnAbsent.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
@@ -193,10 +269,10 @@
             // 
             this.lbShifts.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbShifts.FormattingEnabled = true;
-            this.lbShifts.ItemHeight = 24;
+            this.lbShifts.ItemHeight = 19;
             this.lbShifts.Location = new System.Drawing.Point(10, 43);
             this.lbShifts.Name = "lbShifts";
-            this.lbShifts.Size = new System.Drawing.Size(349, 244);
+            this.lbShifts.Size = new System.Drawing.Size(349, 232);
             this.lbShifts.TabIndex = 0;
             this.lbShifts.DoubleClick += new System.EventHandler(this.lbItem_DoubleClick);
             // 
@@ -261,7 +337,7 @@
             "Afternoon -> 12:00-18:00"});
             this.cmbBxWorkShiftSunday.Location = new System.Drawing.Point(129, 101);
             this.cmbBxWorkShiftSunday.Name = "cmbBxWorkShiftSunday";
-            this.cmbBxWorkShiftSunday.Size = new System.Drawing.Size(230, 32);
+            this.cmbBxWorkShiftSunday.Size = new System.Drawing.Size(230, 27);
             this.cmbBxWorkShiftSunday.TabIndex = 7;
             this.cmbBxWorkShiftSunday.Visible = false;
             // 
@@ -274,7 +350,7 @@
             "Afternoon -> 15:00-18:00"});
             this.cmbBxWorkShiftSaturday.Location = new System.Drawing.Point(129, 101);
             this.cmbBxWorkShiftSaturday.Name = "cmbBxWorkShiftSaturday";
-            this.cmbBxWorkShiftSaturday.Size = new System.Drawing.Size(230, 32);
+            this.cmbBxWorkShiftSaturday.Size = new System.Drawing.Size(230, 27);
             this.cmbBxWorkShiftSaturday.TabIndex = 6;
             this.cmbBxWorkShiftSaturday.Visible = false;
             // 
@@ -288,7 +364,7 @@
             "Evening -> 17:00-22:00"});
             this.cmbBxWorkShiftWeekDay.Location = new System.Drawing.Point(129, 101);
             this.cmbBxWorkShiftWeekDay.Name = "cmbBxWorkShiftWeekDay";
-            this.cmbBxWorkShiftWeekDay.Size = new System.Drawing.Size(230, 32);
+            this.cmbBxWorkShiftWeekDay.Size = new System.Drawing.Size(230, 27);
             this.cmbBxWorkShiftWeekDay.TabIndex = 5;
             this.cmbBxWorkShiftWeekDay.Visible = false;
             // 
@@ -298,7 +374,7 @@
             this.label26.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.Location = new System.Drawing.Point(6, 109);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(115, 24);
+            this.label26.Size = new System.Drawing.Size(92, 19);
             this.label26.TabIndex = 4;
             this.label26.Text = "Work shift:";
             // 
@@ -307,7 +383,7 @@
             this.tbEmployeeIdAssignShift.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbEmployeeIdAssignShift.Location = new System.Drawing.Point(129, 60);
             this.tbEmployeeIdAssignShift.Name = "tbEmployeeIdAssignShift";
-            this.tbEmployeeIdAssignShift.Size = new System.Drawing.Size(230, 32);
+            this.tbEmployeeIdAssignShift.Size = new System.Drawing.Size(230, 27);
             this.tbEmployeeIdAssignShift.TabIndex = 1;
             // 
             // label24
@@ -316,7 +392,7 @@
             this.label24.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.Location = new System.Drawing.Point(6, 63);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(134, 24);
+            this.label24.Size = new System.Drawing.Size(111, 19);
             this.label24.TabIndex = 0;
             this.label24.Text = "Employee ID:";
             // 
@@ -326,7 +402,7 @@
             this.tbDate.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDate.Location = new System.Drawing.Point(141, 20);
             this.tbDate.Name = "tbDate";
-            this.tbDate.Size = new System.Drawing.Size(245, 42);
+            this.tbDate.Size = new System.Drawing.Size(245, 35);
             this.tbDate.TabIndex = 11;
             // 
             // label1
@@ -335,7 +411,7 @@
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(33, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 24);
+            this.label1.Size = new System.Drawing.Size(50, 19);
             this.label1.TabIndex = 10;
             this.label1.Text = "Date:";
             // 
@@ -394,7 +470,7 @@
             this.label3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(165, 26);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(255, 18);
+            this.label3.Size = new System.Drawing.Size(204, 15);
             this.label3.TabIndex = 14;
             this.label3.Text = "(click twice on the shift to delete it)";
             // 
@@ -402,10 +478,10 @@
             // 
             this.lbShiftPreferences.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbShiftPreferences.FormattingEnabled = true;
-            this.lbShiftPreferences.ItemHeight = 24;
+            this.lbShiftPreferences.ItemHeight = 19;
             this.lbShiftPreferences.Location = new System.Drawing.Point(19, 44);
             this.lbShiftPreferences.Name = "lbShiftPreferences";
-            this.lbShiftPreferences.Size = new System.Drawing.Size(349, 484);
+            this.lbShiftPreferences.Size = new System.Drawing.Size(349, 479);
             this.lbShiftPreferences.TabIndex = 0;
             this.lbShiftPreferences.DoubleClick += new System.EventHandler(this.lbShiftPreferences_DoubleClick);
             // 
@@ -424,15 +500,15 @@
             // 
             this.lbxAbsenceRecods.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbxAbsenceRecods.FormattingEnabled = true;
-            this.lbxAbsenceRecods.ItemHeight = 24;
+            this.lbxAbsenceRecods.ItemHeight = 19;
             this.lbxAbsenceRecods.Location = new System.Drawing.Point(19, 44);
             this.lbxAbsenceRecods.Name = "lbxAbsenceRecods";
-            this.lbxAbsenceRecods.Size = new System.Drawing.Size(349, 580);
+            this.lbxAbsenceRecods.Size = new System.Drawing.Size(349, 574);
             this.lbxAbsenceRecods.TabIndex = 0;
             // 
             // AssignShift
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(1280, 749);
@@ -484,5 +560,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnAssignSelectedShift;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ListBox lbxAbsenceRecods;
+        private Bunifu.Framework.UI.BunifuFlatButton btnCheckOut;
+        private Bunifu.Framework.UI.BunifuFlatButton btnCheckIn;
     }
 }

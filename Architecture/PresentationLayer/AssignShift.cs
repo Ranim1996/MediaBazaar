@@ -114,6 +114,21 @@ namespace Media_Bazaar
             assignManager = new AssignShiftManagment(shiftDate);
             UpdateList();
         }
+
+        private void btnCheckIn_Click(object sender, EventArgs e)
+        {
+            string time = DateTime.Now.ToString("HH:mm:ss");
+            assignManager = new AssignShiftManagment(shiftDate); //not sure if I need to use this line
+            assignManager.AddCheckIn(time, lbShifts);
+        }
+
+        private void btnCheckOut_Click(object sender, EventArgs e)
+        {
+            string time = DateTime.Now.ToString("HH:mm:ss");
+            assignManager = new AssignShiftManagment(shiftDate); //not sure if I need to use this line
+            assignManager.AddCheckOut(time, lbShifts);
+        }
+
         private void btnPresent_Click(object sender, EventArgs e)
         {
             string attendance = "PRESENT";
@@ -161,7 +176,5 @@ namespace Media_Bazaar
                 UpdateList();
             }
         }
-
-
     }
 }
