@@ -45,10 +45,13 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -120,6 +123,9 @@
             this.btnShiftsTABdepartStats = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton11 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnRestock = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.cbRestock = new System.Windows.Forms.ComboBox();
+            this.chartRestock = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartRequests = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabSearchEmpl = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
@@ -151,12 +157,22 @@
             this.btnSearchTABprofile = new Bunifu.Framework.UI.BunifuFlatButton();
             this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.btnSaveData = new System.Windows.Forms.Button();
+            this.btnEditData = new System.Windows.Forms.Button();
+            this.lblID = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.chartEmplAttendance = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lbUpcomingShifts = new System.Windows.Forms.ListBox();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.tbxPassword = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.tbxNationality = new System.Windows.Forms.TextBox();
+            this.tbxPhoneNumber = new System.Windows.Forms.TextBox();
+            this.tbxEmail = new System.Windows.Forms.TextBox();
+            this.tbxDateOfBirth = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -166,16 +182,6 @@
             this.lblFirstName = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.timerSelectedMenu = new System.Windows.Forms.Timer(this.components);
-            this.label15 = new System.Windows.Forms.Label();
-            this.lblID = new System.Windows.Forms.Label();
-            this.tbxDateOfBirth = new System.Windows.Forms.TextBox();
-            this.tbxEmail = new System.Windows.Forms.TextBox();
-            this.tbxPhoneNumber = new System.Windows.Forms.TextBox();
-            this.tbxNationality = new System.Windows.Forms.TextBox();
-            this.tbxPassword = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.btnEditData = new System.Windows.Forms.Button();
-            this.btnSaveData = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.tabEmployeeStats.SuspendLayout();
             this.tableLayoutPanel27.SuspendLayout();
@@ -213,6 +219,7 @@
             this.tableLayoutPanel13.SuspendLayout();
             this.tableLayoutPanel14.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartRestock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartRequests)).BeginInit();
             this.tabSearchEmpl.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
@@ -377,7 +384,7 @@
             this.bunifuFlatButton39.IconZoom = 90D;
             this.bunifuFlatButton39.IsTab = false;
             this.bunifuFlatButton39.Location = new System.Drawing.Point(4, 389);
-            this.bunifuFlatButton39.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton39.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton39.Name = "bunifuFlatButton39";
             this.bunifuFlatButton39.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton39.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -412,7 +419,7 @@
             this.bunifuFlatButton38.IconZoom = 90D;
             this.bunifuFlatButton38.IsTab = false;
             this.bunifuFlatButton38.Location = new System.Drawing.Point(4, 312);
-            this.bunifuFlatButton38.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton38.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton38.Name = "bunifuFlatButton38";
             this.bunifuFlatButton38.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton38.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -447,7 +454,7 @@
             this.bunifuFlatButton37.IconZoom = 90D;
             this.bunifuFlatButton37.IsTab = false;
             this.bunifuFlatButton37.Location = new System.Drawing.Point(4, 235);
-            this.bunifuFlatButton37.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton37.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton37.Name = "bunifuFlatButton37";
             this.bunifuFlatButton37.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton37.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -494,7 +501,7 @@
             this.bunifuFlatButton9.IconZoom = 90D;
             this.bunifuFlatButton9.IsTab = false;
             this.bunifuFlatButton9.Location = new System.Drawing.Point(4, 158);
-            this.bunifuFlatButton9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton9.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton9.Name = "bunifuFlatButton9";
             this.bunifuFlatButton9.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton9.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -509,11 +516,11 @@
             // tabEmployeeStats
             // 
             this.tabEmployeeStats.Controls.Add(this.tableLayoutPanel27);
-            this.tabEmployeeStats.Location = new System.Drawing.Point(4, 25);
-            this.tabEmployeeStats.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabEmployeeStats.Location = new System.Drawing.Point(4, 22);
+            this.tabEmployeeStats.Margin = new System.Windows.Forms.Padding(2);
             this.tabEmployeeStats.Name = "tabEmployeeStats";
-            this.tabEmployeeStats.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabEmployeeStats.Size = new System.Drawing.Size(1380, 707);
+            this.tabEmployeeStats.Padding = new System.Windows.Forms.Padding(2);
+            this.tabEmployeeStats.Size = new System.Drawing.Size(1033, 572);
             this.tabEmployeeStats.TabIndex = 5;
             this.tabEmployeeStats.Text = "EmployeeStats";
             this.tabEmployeeStats.UseVisualStyleBackColor = true;
@@ -527,12 +534,12 @@
             this.tableLayoutPanel27.Controls.Add(this.tableLayoutPanel28, 0, 0);
             this.tableLayoutPanel27.Controls.Add(this.tableLayoutPanel29, 1, 0);
             this.tableLayoutPanel27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel27.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel27.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel27.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel27.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel27.Name = "tableLayoutPanel27";
             this.tableLayoutPanel27.RowCount = 1;
             this.tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel27.Size = new System.Drawing.Size(1374, 703);
+            this.tableLayoutPanel27.Size = new System.Drawing.Size(1029, 568);
             this.tableLayoutPanel27.TabIndex = 19;
             // 
             // tableLayoutPanel28
@@ -545,8 +552,8 @@
             this.tableLayoutPanel28.Controls.Add(this.pictureBox7, 0, 0);
             this.tableLayoutPanel28.Controls.Add(this.btnSearchTABemplStats, 0, 2);
             this.tableLayoutPanel28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel28.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel28.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel28.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel28.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel28.Name = "tableLayoutPanel28";
             this.tableLayoutPanel28.RowCount = 6;
             this.tableLayoutPanel28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -555,7 +562,7 @@
             this.tableLayoutPanel28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel28.Size = new System.Drawing.Size(301, 699);
+            this.tableLayoutPanel28.Size = new System.Drawing.Size(226, 564);
             this.tableLayoutPanel28.TabIndex = 0;
             // 
             // btnLogOutTABdepart
@@ -580,14 +587,14 @@
             this.btnLogOutTABdepart.IconVisible = false;
             this.btnLogOutTABdepart.IconZoom = 90D;
             this.btnLogOutTABdepart.IsTab = false;
-            this.btnLogOutTABdepart.Location = new System.Drawing.Point(5, 630);
-            this.btnLogOutTABdepart.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnLogOutTABdepart.Location = new System.Drawing.Point(4, 509);
+            this.btnLogOutTABdepart.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogOutTABdepart.Name = "btnLogOutTABdepart";
             this.btnLogOutTABdepart.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABdepart.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnLogOutTABdepart.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogOutTABdepart.selected = false;
-            this.btnLogOutTABdepart.Size = new System.Drawing.Size(291, 64);
+            this.btnLogOutTABdepart.Size = new System.Drawing.Size(218, 51);
             this.btnLogOutTABdepart.TabIndex = 9;
             this.btnLogOutTABdepart.Text = "LOG OUT";
             this.btnLogOutTABdepart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -617,14 +624,14 @@
             this.btnStatsTABemployeeStats.IconVisible = false;
             this.btnStatsTABemployeeStats.IconZoom = 90D;
             this.btnStatsTABemployeeStats.IsTab = false;
-            this.btnStatsTABemployeeStats.Location = new System.Drawing.Point(5, 214);
-            this.btnStatsTABemployeeStats.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnStatsTABemployeeStats.Location = new System.Drawing.Point(4, 173);
+            this.btnStatsTABemployeeStats.Margin = new System.Windows.Forms.Padding(4);
             this.btnStatsTABemployeeStats.Name = "btnStatsTABemployeeStats";
             this.btnStatsTABemployeeStats.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnStatsTABemployeeStats.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnStatsTABemployeeStats.OnHoverTextColor = System.Drawing.Color.White;
             this.btnStatsTABemployeeStats.selected = false;
-            this.btnStatsTABemployeeStats.Size = new System.Drawing.Size(291, 94);
+            this.btnStatsTABemployeeStats.Size = new System.Drawing.Size(218, 76);
             this.btnStatsTABemployeeStats.TabIndex = 5;
             this.btnStatsTABemployeeStats.Text = "Statisitcs";
             this.btnStatsTABemployeeStats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -635,10 +642,10 @@
             // 
             this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(3, 2);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox7.Location = new System.Drawing.Point(2, 2);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(295, 205);
+            this.pictureBox7.Size = new System.Drawing.Size(222, 165);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 0;
             this.pictureBox7.TabStop = false;
@@ -665,14 +672,14 @@
             this.btnSearchTABemplStats.IconVisible = false;
             this.btnSearchTABemplStats.IconZoom = 90D;
             this.btnSearchTABemplStats.IsTab = false;
-            this.btnSearchTABemplStats.Location = new System.Drawing.Point(5, 318);
-            this.btnSearchTABemplStats.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnSearchTABemplStats.Location = new System.Drawing.Point(4, 257);
+            this.btnSearchTABemplStats.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearchTABemplStats.Name = "btnSearchTABemplStats";
             this.btnSearchTABemplStats.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnSearchTABemplStats.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnSearchTABemplStats.OnHoverTextColor = System.Drawing.Color.White;
             this.btnSearchTABemplStats.selected = false;
-            this.btnSearchTABemplStats.Size = new System.Drawing.Size(291, 94);
+            this.btnSearchTABemplStats.Size = new System.Drawing.Size(218, 76);
             this.btnSearchTABemplStats.TabIndex = 2;
             this.btnSearchTABemplStats.Text = "Search Employee";
             this.btnSearchTABemplStats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -688,13 +695,13 @@
             this.tableLayoutPanel29.Controls.Add(this.label46, 0, 0);
             this.tableLayoutPanel29.Controls.Add(this.panel19, 0, 1);
             this.tableLayoutPanel29.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel29.Location = new System.Drawing.Point(310, 2);
-            this.tableLayoutPanel29.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel29.Location = new System.Drawing.Point(232, 2);
+            this.tableLayoutPanel29.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel29.Name = "tableLayoutPanel29";
             this.tableLayoutPanel29.RowCount = 2;
             this.tableLayoutPanel29.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel29.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel29.Size = new System.Drawing.Size(1061, 699);
+            this.tableLayoutPanel29.Size = new System.Drawing.Size(795, 564);
             this.tableLayoutPanel29.TabIndex = 1;
             // 
             // label46
@@ -704,9 +711,10 @@
             this.label46.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold);
             this.label46.ForeColor = System.Drawing.Color.White;
-            this.label46.Location = new System.Drawing.Point(3, 0);
+            this.label46.Location = new System.Drawing.Point(2, 0);
+            this.label46.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(1055, 104);
+            this.label46.Size = new System.Drawing.Size(791, 84);
             this.label46.TabIndex = 0;
             this.label46.Text = "Employees Statistics";
             this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -716,10 +724,10 @@
             this.panel19.BackColor = System.Drawing.Color.White;
             this.panel19.Controls.Add(this.tableLayoutPanel30);
             this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel19.Location = new System.Drawing.Point(3, 106);
-            this.panel19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel19.Location = new System.Drawing.Point(2, 86);
+            this.panel19.Margin = new System.Windows.Forms.Padding(2);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(1055, 591);
+            this.panel19.Size = new System.Drawing.Size(791, 476);
             this.panel19.TabIndex = 1;
             // 
             // tableLayoutPanel30
@@ -729,12 +737,12 @@
             this.tableLayoutPanel30.Controls.Add(this.panel20, 0, 0);
             this.tableLayoutPanel30.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel30.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel30.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel30.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel30.Name = "tableLayoutPanel30";
             this.tableLayoutPanel30.RowCount = 1;
             this.tableLayoutPanel30.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel30.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 586F));
-            this.tableLayoutPanel30.Size = new System.Drawing.Size(1055, 591);
+            this.tableLayoutPanel30.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 476F));
+            this.tableLayoutPanel30.Size = new System.Drawing.Size(791, 476);
             this.tableLayoutPanel30.TabIndex = 0;
             // 
             // panel20
@@ -742,10 +750,10 @@
             this.panel20.Controls.Add(this.tableLayoutPanel7);
             this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel20.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel20.Location = new System.Drawing.Point(3, 2);
-            this.panel20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel20.Location = new System.Drawing.Point(2, 2);
+            this.panel20.Margin = new System.Windows.Forms.Padding(2);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(1049, 587);
+            this.panel20.Size = new System.Drawing.Size(787, 472);
             this.panel20.TabIndex = 1;
             // 
             // tableLayoutPanel7
@@ -756,12 +764,12 @@
             this.tableLayoutPanel7.Controls.Add(this.panel6, 0, 1);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.79393F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.20607F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1049, 587);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(787, 472);
             this.tableLayoutPanel7.TabIndex = 1;
             // 
             // tableLayoutPanel8
@@ -774,14 +782,14 @@
             this.tableLayoutPanel8.Controls.Add(this.btnShiftsTABemplStats, 1, 0);
             this.tableLayoutPanel8.Controls.Add(this.btnDepartStockTABemplStats, 2, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(1043, 59);
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(783, 46);
             this.tableLayoutPanel8.TabIndex = 0;
             // 
             // btnEmployeesTABemplStats
@@ -806,14 +814,14 @@
             this.btnEmployeesTABemplStats.IconVisible = false;
             this.btnEmployeesTABemplStats.IconZoom = 90D;
             this.btnEmployeesTABemplStats.IsTab = false;
-            this.btnEmployeesTABemplStats.Location = new System.Drawing.Point(5, 5);
-            this.btnEmployeesTABemplStats.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnEmployeesTABemplStats.Location = new System.Drawing.Point(4, 4);
+            this.btnEmployeesTABemplStats.Margin = new System.Windows.Forms.Padding(4);
             this.btnEmployeesTABemplStats.Name = "btnEmployeesTABemplStats";
             this.btnEmployeesTABemplStats.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnEmployeesTABemplStats.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnEmployeesTABemplStats.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEmployeesTABemplStats.selected = false;
-            this.btnEmployeesTABemplStats.Size = new System.Drawing.Size(337, 49);
+            this.btnEmployeesTABemplStats.Size = new System.Drawing.Size(253, 38);
             this.btnEmployeesTABemplStats.TabIndex = 0;
             this.btnEmployeesTABemplStats.Text = "Employees";
             this.btnEmployeesTABemplStats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -843,14 +851,14 @@
             this.btnShiftsTABemplStats.IconVisible = false;
             this.btnShiftsTABemplStats.IconZoom = 90D;
             this.btnShiftsTABemplStats.IsTab = false;
-            this.btnShiftsTABemplStats.Location = new System.Drawing.Point(352, 5);
-            this.btnShiftsTABemplStats.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnShiftsTABemplStats.Location = new System.Drawing.Point(265, 4);
+            this.btnShiftsTABemplStats.Margin = new System.Windows.Forms.Padding(4);
             this.btnShiftsTABemplStats.Name = "btnShiftsTABemplStats";
             this.btnShiftsTABemplStats.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnShiftsTABemplStats.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnShiftsTABemplStats.OnHoverTextColor = System.Drawing.Color.White;
             this.btnShiftsTABemplStats.selected = false;
-            this.btnShiftsTABemplStats.Size = new System.Drawing.Size(337, 49);
+            this.btnShiftsTABemplStats.Size = new System.Drawing.Size(253, 38);
             this.btnShiftsTABemplStats.TabIndex = 1;
             this.btnShiftsTABemplStats.Text = "Attendance";
             this.btnShiftsTABemplStats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -880,14 +888,14 @@
             this.btnDepartStockTABemplStats.IconVisible = false;
             this.btnDepartStockTABemplStats.IconZoom = 90D;
             this.btnDepartStockTABemplStats.IsTab = false;
-            this.btnDepartStockTABemplStats.Location = new System.Drawing.Point(699, 5);
-            this.btnDepartStockTABemplStats.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnDepartStockTABemplStats.Location = new System.Drawing.Point(526, 4);
+            this.btnDepartStockTABemplStats.Margin = new System.Windows.Forms.Padding(4);
             this.btnDepartStockTABemplStats.Name = "btnDepartStockTABemplStats";
             this.btnDepartStockTABemplStats.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnDepartStockTABemplStats.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnDepartStockTABemplStats.OnHoverTextColor = System.Drawing.Color.White;
             this.btnDepartStockTABemplStats.selected = false;
-            this.btnDepartStockTABemplStats.Size = new System.Drawing.Size(339, 49);
+            this.btnDepartStockTABemplStats.Size = new System.Drawing.Size(253, 38);
             this.btnDepartStockTABemplStats.TabIndex = 2;
             this.btnDepartStockTABemplStats.Text = "Departament and Stock";
             this.btnDepartStockTABemplStats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -900,10 +908,10 @@
             this.panel6.Controls.Add(this.tableLayoutPanel25);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel6.Location = new System.Drawing.Point(3, 65);
-            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel6.Location = new System.Drawing.Point(2, 52);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1043, 520);
+            this.panel6.Size = new System.Drawing.Size(783, 418);
             this.panel6.TabIndex = 1;
             // 
             // tableLayoutPanel25
@@ -915,11 +923,11 @@
             this.tableLayoutPanel25.Controls.Add(this.chartPositions, 1, 0);
             this.tableLayoutPanel25.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel25.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel25.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel25.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel25.Name = "tableLayoutPanel25";
             this.tableLayoutPanel25.RowCount = 1;
             this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel25.Size = new System.Drawing.Size(1043, 520);
+            this.tableLayoutPanel25.Size = new System.Drawing.Size(783, 418);
             this.tableLayoutPanel25.TabIndex = 2;
             // 
             // chartReleasedAndNot
@@ -931,8 +939,8 @@
             legend1.IsTextAutoFit = false;
             legend1.Name = "Legend1";
             this.chartReleasedAndNot.Legends.Add(legend1);
-            this.chartReleasedAndNot.Location = new System.Drawing.Point(3, 2);
-            this.chartReleasedAndNot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chartReleasedAndNot.Location = new System.Drawing.Point(2, 2);
+            this.chartReleasedAndNot.Margin = new System.Windows.Forms.Padding(2);
             this.chartReleasedAndNot.Name = "chartReleasedAndNot";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
@@ -940,7 +948,7 @@
             series1.Legend = "Legend1";
             series1.Name = "s1";
             this.chartReleasedAndNot.Series.Add(series1);
-            this.chartReleasedAndNot.Size = new System.Drawing.Size(515, 516);
+            this.chartReleasedAndNot.Size = new System.Drawing.Size(387, 414);
             this.chartReleasedAndNot.TabIndex = 0;
             this.chartReleasedAndNot.Text = "chart1";
             title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -957,8 +965,8 @@
             legend2.IsTextAutoFit = false;
             legend2.Name = "Legend1";
             this.chartPositions.Legends.Add(legend2);
-            this.chartPositions.Location = new System.Drawing.Point(524, 2);
-            this.chartPositions.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chartPositions.Location = new System.Drawing.Point(393, 2);
+            this.chartPositions.Margin = new System.Windows.Forms.Padding(2);
             this.chartPositions.Name = "chartPositions";
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
@@ -966,7 +974,7 @@
             series2.Legend = "Legend1";
             series2.Name = "s1";
             this.chartPositions.Series.Add(series2);
-            this.chartPositions.Size = new System.Drawing.Size(516, 516);
+            this.chartPositions.Size = new System.Drawing.Size(388, 414);
             this.chartPositions.TabIndex = 1;
             this.chartPositions.Text = "chart1";
             title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -983,20 +991,20 @@
             this.tabControl1.Controls.Add(this.tabProfile);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1388, 736);
+            this.tabControl1.Size = new System.Drawing.Size(1041, 598);
             this.tabControl1.TabIndex = 17;
             // 
             // tabShiftStats
             // 
             this.tabShiftStats.Controls.Add(this.tableLayoutPanel1);
-            this.tabShiftStats.Location = new System.Drawing.Point(4, 25);
-            this.tabShiftStats.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabShiftStats.Location = new System.Drawing.Point(4, 22);
+            this.tabShiftStats.Margin = new System.Windows.Forms.Padding(2);
             this.tabShiftStats.Name = "tabShiftStats";
-            this.tabShiftStats.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabShiftStats.Size = new System.Drawing.Size(1380, 707);
+            this.tabShiftStats.Padding = new System.Windows.Forms.Padding(2);
+            this.tabShiftStats.Size = new System.Drawing.Size(1033, 572);
             this.tabShiftStats.TabIndex = 6;
             this.tabShiftStats.Text = "ShiftStats";
             this.tabShiftStats.UseVisualStyleBackColor = true;
@@ -1010,12 +1018,12 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1374, 703);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1029, 568);
             this.tableLayoutPanel1.TabIndex = 20;
             // 
             // tableLayoutPanel2
@@ -1028,8 +1036,8 @@
             this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnSearchEmplTABshiftStats, 0, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 6;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -1038,7 +1046,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(301, 699);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(226, 564);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // btnLogOutTABshiftStats
@@ -1063,14 +1071,14 @@
             this.btnLogOutTABshiftStats.IconVisible = false;
             this.btnLogOutTABshiftStats.IconZoom = 90D;
             this.btnLogOutTABshiftStats.IsTab = false;
-            this.btnLogOutTABshiftStats.Location = new System.Drawing.Point(5, 630);
-            this.btnLogOutTABshiftStats.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnLogOutTABshiftStats.Location = new System.Drawing.Point(4, 509);
+            this.btnLogOutTABshiftStats.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogOutTABshiftStats.Name = "btnLogOutTABshiftStats";
             this.btnLogOutTABshiftStats.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABshiftStats.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnLogOutTABshiftStats.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogOutTABshiftStats.selected = false;
-            this.btnLogOutTABshiftStats.Size = new System.Drawing.Size(291, 64);
+            this.btnLogOutTABshiftStats.Size = new System.Drawing.Size(218, 51);
             this.btnLogOutTABshiftStats.TabIndex = 10;
             this.btnLogOutTABshiftStats.Text = "LOG OUT";
             this.btnLogOutTABshiftStats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1100,14 +1108,14 @@
             this.btnStatisticsTABshiftStats.IconVisible = false;
             this.btnStatisticsTABshiftStats.IconZoom = 90D;
             this.btnStatisticsTABshiftStats.IsTab = false;
-            this.btnStatisticsTABshiftStats.Location = new System.Drawing.Point(5, 214);
-            this.btnStatisticsTABshiftStats.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnStatisticsTABshiftStats.Location = new System.Drawing.Point(4, 173);
+            this.btnStatisticsTABshiftStats.Margin = new System.Windows.Forms.Padding(4);
             this.btnStatisticsTABshiftStats.Name = "btnStatisticsTABshiftStats";
             this.btnStatisticsTABshiftStats.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnStatisticsTABshiftStats.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnStatisticsTABshiftStats.OnHoverTextColor = System.Drawing.Color.White;
             this.btnStatisticsTABshiftStats.selected = false;
-            this.btnStatisticsTABshiftStats.Size = new System.Drawing.Size(291, 94);
+            this.btnStatisticsTABshiftStats.Size = new System.Drawing.Size(218, 76);
             this.btnStatisticsTABshiftStats.TabIndex = 5;
             this.btnStatisticsTABshiftStats.Text = "Statisitcs";
             this.btnStatisticsTABshiftStats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1118,10 +1126,10 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(295, 205);
+            this.pictureBox1.Size = new System.Drawing.Size(222, 165);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -1148,14 +1156,14 @@
             this.btnSearchEmplTABshiftStats.IconVisible = false;
             this.btnSearchEmplTABshiftStats.IconZoom = 90D;
             this.btnSearchEmplTABshiftStats.IsTab = false;
-            this.btnSearchEmplTABshiftStats.Location = new System.Drawing.Point(5, 318);
-            this.btnSearchEmplTABshiftStats.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnSearchEmplTABshiftStats.Location = new System.Drawing.Point(4, 257);
+            this.btnSearchEmplTABshiftStats.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearchEmplTABshiftStats.Name = "btnSearchEmplTABshiftStats";
             this.btnSearchEmplTABshiftStats.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnSearchEmplTABshiftStats.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnSearchEmplTABshiftStats.OnHoverTextColor = System.Drawing.Color.White;
             this.btnSearchEmplTABshiftStats.selected = false;
-            this.btnSearchEmplTABshiftStats.Size = new System.Drawing.Size(291, 94);
+            this.btnSearchEmplTABshiftStats.Size = new System.Drawing.Size(218, 76);
             this.btnSearchEmplTABshiftStats.TabIndex = 2;
             this.btnSearchEmplTABshiftStats.Text = "Search Employee";
             this.btnSearchEmplTABshiftStats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1171,13 +1179,13 @@
             this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.panel1, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(310, 2);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(232, 2);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1061, 699);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(795, 564);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // label1
@@ -1187,9 +1195,10 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Location = new System.Drawing.Point(2, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1055, 104);
+            this.label1.Size = new System.Drawing.Size(791, 84);
             this.label1.TabIndex = 0;
             this.label1.Text = "Attendance Statistics";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1199,10 +1208,10 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.tableLayoutPanel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 106);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(2, 86);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1055, 591);
+            this.panel1.Size = new System.Drawing.Size(791, 476);
             this.panel1.TabIndex = 1;
             // 
             // tableLayoutPanel4
@@ -1212,12 +1221,12 @@
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 586F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1055, 591);
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 476F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(791, 476);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // tableLayoutPanel5
@@ -1227,13 +1236,13 @@
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.panel2, 0, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.79393F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.20607F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1049, 587);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(787, 472);
             this.tableLayoutPanel5.TabIndex = 2;
             // 
             // tableLayoutPanel6
@@ -1246,14 +1255,14 @@
             this.tableLayoutPanel6.Controls.Add(this.bunifuFlatButton4, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.btnDepartmentTABshiftStats, 2, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(1043, 59);
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(783, 46);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
             // btnEmployeesTABshiftStats
@@ -1278,14 +1287,14 @@
             this.btnEmployeesTABshiftStats.IconVisible = false;
             this.btnEmployeesTABshiftStats.IconZoom = 90D;
             this.btnEmployeesTABshiftStats.IsTab = false;
-            this.btnEmployeesTABshiftStats.Location = new System.Drawing.Point(5, 5);
-            this.btnEmployeesTABshiftStats.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnEmployeesTABshiftStats.Location = new System.Drawing.Point(4, 4);
+            this.btnEmployeesTABshiftStats.Margin = new System.Windows.Forms.Padding(4);
             this.btnEmployeesTABshiftStats.Name = "btnEmployeesTABshiftStats";
             this.btnEmployeesTABshiftStats.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnEmployeesTABshiftStats.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnEmployeesTABshiftStats.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEmployeesTABshiftStats.selected = false;
-            this.btnEmployeesTABshiftStats.Size = new System.Drawing.Size(337, 49);
+            this.btnEmployeesTABshiftStats.Size = new System.Drawing.Size(253, 38);
             this.btnEmployeesTABshiftStats.TabIndex = 0;
             this.btnEmployeesTABshiftStats.Text = "Employees";
             this.btnEmployeesTABshiftStats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1315,14 +1324,14 @@
             this.bunifuFlatButton4.IconVisible = false;
             this.bunifuFlatButton4.IconZoom = 90D;
             this.bunifuFlatButton4.IsTab = false;
-            this.bunifuFlatButton4.Location = new System.Drawing.Point(352, 5);
-            this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton4.Location = new System.Drawing.Point(265, 4);
+            this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton4.Name = "bunifuFlatButton4";
             this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton4.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton4.selected = false;
-            this.bunifuFlatButton4.Size = new System.Drawing.Size(337, 49);
+            this.bunifuFlatButton4.Size = new System.Drawing.Size(253, 38);
             this.bunifuFlatButton4.TabIndex = 1;
             this.bunifuFlatButton4.Text = "Attendance";
             this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1351,14 +1360,14 @@
             this.btnDepartmentTABshiftStats.IconVisible = false;
             this.btnDepartmentTABshiftStats.IconZoom = 90D;
             this.btnDepartmentTABshiftStats.IsTab = false;
-            this.btnDepartmentTABshiftStats.Location = new System.Drawing.Point(699, 5);
-            this.btnDepartmentTABshiftStats.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnDepartmentTABshiftStats.Location = new System.Drawing.Point(526, 4);
+            this.btnDepartmentTABshiftStats.Margin = new System.Windows.Forms.Padding(4);
             this.btnDepartmentTABshiftStats.Name = "btnDepartmentTABshiftStats";
             this.btnDepartmentTABshiftStats.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnDepartmentTABshiftStats.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnDepartmentTABshiftStats.OnHoverTextColor = System.Drawing.Color.White;
             this.btnDepartmentTABshiftStats.selected = false;
-            this.btnDepartmentTABshiftStats.Size = new System.Drawing.Size(339, 49);
+            this.btnDepartmentTABshiftStats.Size = new System.Drawing.Size(253, 38);
             this.btnDepartmentTABshiftStats.TabIndex = 2;
             this.btnDepartmentTABshiftStats.Text = "Departament and Stock";
             this.btnDepartmentTABshiftStats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1371,10 +1380,10 @@
             this.panel2.Controls.Add(this.chartAttendance);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(3, 65);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(2, 52);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1043, 520);
+            this.panel2.Size = new System.Drawing.Size(783, 418);
             this.panel2.TabIndex = 1;
             // 
             // chartAttendance
@@ -1390,8 +1399,8 @@
             legend3.Name = "Legend1";
             legend3.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chartAttendance.Legends.Add(legend3);
-            this.chartAttendance.Location = new System.Drawing.Point(120, 20);
-            this.chartAttendance.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chartAttendance.Location = new System.Drawing.Point(90, 16);
+            this.chartAttendance.Margin = new System.Windows.Forms.Padding(2);
             this.chartAttendance.Name = "chartAttendance";
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
@@ -1399,7 +1408,7 @@
             series3.Legend = "Legend1";
             series3.Name = "s1";
             this.chartAttendance.Series.Add(series3);
-            this.chartAttendance.Size = new System.Drawing.Size(812, 479);
+            this.chartAttendance.Size = new System.Drawing.Size(610, 385);
             this.chartAttendance.TabIndex = 1;
             this.chartAttendance.Text = "chart1";
             title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1410,11 +1419,11 @@
             // tabDepartStats
             // 
             this.tabDepartStats.Controls.Add(this.tableLayoutPanel9);
-            this.tabDepartStats.Location = new System.Drawing.Point(4, 25);
-            this.tabDepartStats.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabDepartStats.Location = new System.Drawing.Point(4, 22);
+            this.tabDepartStats.Margin = new System.Windows.Forms.Padding(2);
             this.tabDepartStats.Name = "tabDepartStats";
-            this.tabDepartStats.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabDepartStats.Size = new System.Drawing.Size(1380, 707);
+            this.tabDepartStats.Padding = new System.Windows.Forms.Padding(2);
+            this.tabDepartStats.Size = new System.Drawing.Size(1033, 572);
             this.tabDepartStats.TabIndex = 7;
             this.tabDepartStats.Text = "Depart&StockStats";
             this.tabDepartStats.UseVisualStyleBackColor = true;
@@ -1428,12 +1437,12 @@
             this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel10, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel11, 1, 0);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 1;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(1374, 703);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(1029, 568);
             this.tableLayoutPanel9.TabIndex = 20;
             // 
             // tableLayoutPanel10
@@ -1446,8 +1455,8 @@
             this.tableLayoutPanel10.Controls.Add(this.pictureBox2, 0, 0);
             this.tableLayoutPanel10.Controls.Add(this.btnSearchTABdepartStats, 0, 2);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 6;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -1456,7 +1465,7 @@
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(301, 699);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(226, 564);
             this.tableLayoutPanel10.TabIndex = 0;
             // 
             // btnLogOutTABdepartStats
@@ -1481,14 +1490,14 @@
             this.btnLogOutTABdepartStats.IconVisible = false;
             this.btnLogOutTABdepartStats.IconZoom = 90D;
             this.btnLogOutTABdepartStats.IsTab = false;
-            this.btnLogOutTABdepartStats.Location = new System.Drawing.Point(5, 630);
-            this.btnLogOutTABdepartStats.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnLogOutTABdepartStats.Location = new System.Drawing.Point(4, 509);
+            this.btnLogOutTABdepartStats.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogOutTABdepartStats.Name = "btnLogOutTABdepartStats";
             this.btnLogOutTABdepartStats.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABdepartStats.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnLogOutTABdepartStats.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogOutTABdepartStats.selected = false;
-            this.btnLogOutTABdepartStats.Size = new System.Drawing.Size(291, 64);
+            this.btnLogOutTABdepartStats.Size = new System.Drawing.Size(218, 51);
             this.btnLogOutTABdepartStats.TabIndex = 10;
             this.btnLogOutTABdepartStats.Text = "LOG OUT";
             this.btnLogOutTABdepartStats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1518,14 +1527,14 @@
             this.btnStatsTABdepart.IconVisible = false;
             this.btnStatsTABdepart.IconZoom = 90D;
             this.btnStatsTABdepart.IsTab = false;
-            this.btnStatsTABdepart.Location = new System.Drawing.Point(5, 214);
-            this.btnStatsTABdepart.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnStatsTABdepart.Location = new System.Drawing.Point(4, 173);
+            this.btnStatsTABdepart.Margin = new System.Windows.Forms.Padding(4);
             this.btnStatsTABdepart.Name = "btnStatsTABdepart";
             this.btnStatsTABdepart.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnStatsTABdepart.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnStatsTABdepart.OnHoverTextColor = System.Drawing.Color.White;
             this.btnStatsTABdepart.selected = false;
-            this.btnStatsTABdepart.Size = new System.Drawing.Size(291, 94);
+            this.btnStatsTABdepart.Size = new System.Drawing.Size(218, 76);
             this.btnStatsTABdepart.TabIndex = 5;
             this.btnStatsTABdepart.Text = "Statisitcs";
             this.btnStatsTABdepart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1536,10 +1545,10 @@
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(3, 2);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(295, 205);
+            this.pictureBox2.Size = new System.Drawing.Size(222, 165);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -1566,14 +1575,14 @@
             this.btnSearchTABdepartStats.IconVisible = false;
             this.btnSearchTABdepartStats.IconZoom = 90D;
             this.btnSearchTABdepartStats.IsTab = false;
-            this.btnSearchTABdepartStats.Location = new System.Drawing.Point(5, 318);
-            this.btnSearchTABdepartStats.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnSearchTABdepartStats.Location = new System.Drawing.Point(4, 257);
+            this.btnSearchTABdepartStats.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearchTABdepartStats.Name = "btnSearchTABdepartStats";
             this.btnSearchTABdepartStats.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnSearchTABdepartStats.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnSearchTABdepartStats.OnHoverTextColor = System.Drawing.Color.White;
             this.btnSearchTABdepartStats.selected = false;
-            this.btnSearchTABdepartStats.Size = new System.Drawing.Size(291, 94);
+            this.btnSearchTABdepartStats.Size = new System.Drawing.Size(218, 76);
             this.btnSearchTABdepartStats.TabIndex = 2;
             this.btnSearchTABdepartStats.Text = "Search Employee";
             this.btnSearchTABdepartStats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1589,13 +1598,13 @@
             this.tableLayoutPanel11.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel11.Controls.Add(this.panel4, 0, 1);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(310, 2);
-            this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(232, 2);
+            this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 2;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(1061, 699);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(795, 564);
             this.tableLayoutPanel11.TabIndex = 1;
             // 
             // label3
@@ -1605,9 +1614,10 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, 0);
+            this.label3.Location = new System.Drawing.Point(2, 0);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1055, 104);
+            this.label3.Size = new System.Drawing.Size(791, 84);
             this.label3.TabIndex = 0;
             this.label3.Text = "Departament and Stock Statistics";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1617,10 +1627,10 @@
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.tableLayoutPanel12);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 106);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Location = new System.Drawing.Point(2, 86);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1055, 591);
+            this.panel4.Size = new System.Drawing.Size(791, 476);
             this.panel4.TabIndex = 1;
             // 
             // tableLayoutPanel12
@@ -1630,12 +1640,12 @@
             this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel13, 0, 0);
             this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel12.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel12.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
             this.tableLayoutPanel12.RowCount = 1;
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 586F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(1055, 591);
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 476F));
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(791, 476);
             this.tableLayoutPanel12.TabIndex = 0;
             // 
             // tableLayoutPanel13
@@ -1645,13 +1655,13 @@
             this.tableLayoutPanel13.Controls.Add(this.tableLayoutPanel14, 0, 0);
             this.tableLayoutPanel13.Controls.Add(this.panel5, 0, 1);
             this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel13.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel13.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
             this.tableLayoutPanel13.RowCount = 2;
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.79393F));
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.20607F));
-            this.tableLayoutPanel13.Size = new System.Drawing.Size(1049, 587);
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(787, 472);
             this.tableLayoutPanel13.TabIndex = 3;
             // 
             // tableLayoutPanel14
@@ -1664,14 +1674,14 @@
             this.tableLayoutPanel14.Controls.Add(this.btnShiftsTABdepartStats, 1, 0);
             this.tableLayoutPanel14.Controls.Add(this.bunifuFlatButton11, 2, 0);
             this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel14.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel14.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel14.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel14.Name = "tableLayoutPanel14";
             this.tableLayoutPanel14.RowCount = 1;
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
-            this.tableLayoutPanel14.Size = new System.Drawing.Size(1043, 59);
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(783, 46);
             this.tableLayoutPanel14.TabIndex = 0;
             // 
             // btnEmployeesTABdepartStats
@@ -1696,14 +1706,14 @@
             this.btnEmployeesTABdepartStats.IconVisible = false;
             this.btnEmployeesTABdepartStats.IconZoom = 90D;
             this.btnEmployeesTABdepartStats.IsTab = false;
-            this.btnEmployeesTABdepartStats.Location = new System.Drawing.Point(5, 5);
-            this.btnEmployeesTABdepartStats.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnEmployeesTABdepartStats.Location = new System.Drawing.Point(4, 4);
+            this.btnEmployeesTABdepartStats.Margin = new System.Windows.Forms.Padding(4);
             this.btnEmployeesTABdepartStats.Name = "btnEmployeesTABdepartStats";
             this.btnEmployeesTABdepartStats.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnEmployeesTABdepartStats.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnEmployeesTABdepartStats.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEmployeesTABdepartStats.selected = false;
-            this.btnEmployeesTABdepartStats.Size = new System.Drawing.Size(337, 49);
+            this.btnEmployeesTABdepartStats.Size = new System.Drawing.Size(253, 38);
             this.btnEmployeesTABdepartStats.TabIndex = 0;
             this.btnEmployeesTABdepartStats.Text = "Employees";
             this.btnEmployeesTABdepartStats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1733,14 +1743,14 @@
             this.btnShiftsTABdepartStats.IconVisible = false;
             this.btnShiftsTABdepartStats.IconZoom = 90D;
             this.btnShiftsTABdepartStats.IsTab = false;
-            this.btnShiftsTABdepartStats.Location = new System.Drawing.Point(352, 5);
-            this.btnShiftsTABdepartStats.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnShiftsTABdepartStats.Location = new System.Drawing.Point(265, 4);
+            this.btnShiftsTABdepartStats.Margin = new System.Windows.Forms.Padding(4);
             this.btnShiftsTABdepartStats.Name = "btnShiftsTABdepartStats";
             this.btnShiftsTABdepartStats.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnShiftsTABdepartStats.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnShiftsTABdepartStats.OnHoverTextColor = System.Drawing.Color.White;
             this.btnShiftsTABdepartStats.selected = false;
-            this.btnShiftsTABdepartStats.Size = new System.Drawing.Size(337, 49);
+            this.btnShiftsTABdepartStats.Size = new System.Drawing.Size(253, 38);
             this.btnShiftsTABdepartStats.TabIndex = 1;
             this.btnShiftsTABdepartStats.Text = "Attendance";
             this.btnShiftsTABdepartStats.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1770,14 +1780,14 @@
             this.bunifuFlatButton11.IconVisible = false;
             this.bunifuFlatButton11.IconZoom = 90D;
             this.bunifuFlatButton11.IsTab = false;
-            this.bunifuFlatButton11.Location = new System.Drawing.Point(699, 5);
-            this.bunifuFlatButton11.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton11.Location = new System.Drawing.Point(526, 4);
+            this.bunifuFlatButton11.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton11.Name = "bunifuFlatButton11";
             this.bunifuFlatButton11.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton11.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton11.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton11.selected = false;
-            this.bunifuFlatButton11.Size = new System.Drawing.Size(339, 49);
+            this.bunifuFlatButton11.Size = new System.Drawing.Size(253, 38);
             this.bunifuFlatButton11.TabIndex = 2;
             this.bunifuFlatButton11.Text = "Departament and Stock";
             this.bunifuFlatButton11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1786,36 +1796,101 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.btnRestock);
+            this.panel5.Controls.Add(this.cbRestock);
+            this.panel5.Controls.Add(this.chartRestock);
             this.panel5.Controls.Add(this.chartRequests);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel5.Location = new System.Drawing.Point(3, 65);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel5.Location = new System.Drawing.Point(2, 52);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1043, 520);
+            this.panel5.Size = new System.Drawing.Size(783, 418);
             this.panel5.TabIndex = 1;
+            // 
+            // btnRestock
+            // 
+            this.btnRestock.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnRestock.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRestock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnRestock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRestock.BorderRadius = 0;
+            this.btnRestock.ButtonText = "Add";
+            this.btnRestock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRestock.DisabledColor = System.Drawing.Color.Gray;
+            this.btnRestock.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnRestock.Iconimage = null;
+            this.btnRestock.Iconimage_right = null;
+            this.btnRestock.Iconimage_right_Selected = null;
+            this.btnRestock.Iconimage_Selected = null;
+            this.btnRestock.IconMarginLeft = 0;
+            this.btnRestock.IconMarginRight = 0;
+            this.btnRestock.IconRightVisible = false;
+            this.btnRestock.IconRightZoom = 0D;
+            this.btnRestock.IconVisible = false;
+            this.btnRestock.IconZoom = 90D;
+            this.btnRestock.IsTab = false;
+            this.btnRestock.Location = new System.Drawing.Point(597, 33);
+            this.btnRestock.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.btnRestock.Name = "btnRestock";
+            this.btnRestock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnRestock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnRestock.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnRestock.selected = false;
+            this.btnRestock.Size = new System.Drawing.Size(127, 26);
+            this.btnRestock.TabIndex = 7;
+            this.btnRestock.Text = "Add";
+            this.btnRestock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnRestock.Textcolor = System.Drawing.Color.White;
+            this.btnRestock.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btnRestock.Click += new System.EventHandler(this.btnRestock_Click);
+            // 
+            // cbRestock
+            // 
+            this.cbRestock.FormattingEnabled = true;
+            this.cbRestock.Location = new System.Drawing.Point(447, 33);
+            this.cbRestock.Name = "cbRestock";
+            this.cbRestock.Size = new System.Drawing.Size(127, 26);
+            this.cbRestock.TabIndex = 5;
+            // 
+            // chartRestock
+            // 
+            chartArea4.Name = "ChartArea1";
+            this.chartRestock.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartRestock.Legends.Add(legend4);
+            this.chartRestock.Location = new System.Drawing.Point(403, 89);
+            this.chartRestock.Name = "chartRestock";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "restock";
+            this.chartRestock.Series.Add(series4);
+            this.chartRestock.Size = new System.Drawing.Size(377, 326);
+            this.chartRestock.TabIndex = 3;
+            this.chartRestock.Text = "chart1";
             // 
             // chartRequests
             // 
             this.chartRequests.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea4.Name = "ChartArea1";
-            this.chartRequests.ChartAreas.Add(chartArea4);
-            legend4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend4.IsTextAutoFit = false;
-            legend4.Name = "Legend1";
-            this.chartRequests.Legends.Add(legend4);
-            this.chartRequests.Location = new System.Drawing.Point(120, 20);
-            this.chartRequests.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            chartArea5.Name = "ChartArea1";
+            this.chartRequests.ChartAreas.Add(chartArea5);
+            legend5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend5.IsTextAutoFit = false;
+            legend5.Name = "Legend1";
+            this.chartRequests.Legends.Add(legend5);
+            this.chartRequests.Location = new System.Drawing.Point(4, 15);
+            this.chartRequests.Margin = new System.Windows.Forms.Padding(2);
             this.chartRequests.Name = "chartRequests";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series4.Legend = "Legend1";
-            series4.Name = "s1";
-            this.chartRequests.Series.Add(series4);
-            this.chartRequests.Size = new System.Drawing.Size(788, 474);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series5.Legend = "Legend1";
+            series5.Name = "s1";
+            this.chartRequests.Series.Add(series5);
+            this.chartRequests.Size = new System.Drawing.Size(393, 381);
             this.chartRequests.TabIndex = 2;
             this.chartRequests.Text = "chart1";
             title4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1826,11 +1901,11 @@
             // tabSearchEmpl
             // 
             this.tabSearchEmpl.Controls.Add(this.tableLayoutPanel15);
-            this.tabSearchEmpl.Location = new System.Drawing.Point(4, 25);
-            this.tabSearchEmpl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabSearchEmpl.Location = new System.Drawing.Point(4, 22);
+            this.tabSearchEmpl.Margin = new System.Windows.Forms.Padding(2);
             this.tabSearchEmpl.Name = "tabSearchEmpl";
-            this.tabSearchEmpl.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabSearchEmpl.Size = new System.Drawing.Size(1380, 707);
+            this.tabSearchEmpl.Padding = new System.Windows.Forms.Padding(2);
+            this.tabSearchEmpl.Size = new System.Drawing.Size(1033, 572);
             this.tabSearchEmpl.TabIndex = 8;
             this.tabSearchEmpl.Text = "SearchEmployee";
             this.tabSearchEmpl.UseVisualStyleBackColor = true;
@@ -1844,12 +1919,12 @@
             this.tableLayoutPanel15.Controls.Add(this.tableLayoutPanel16, 0, 0);
             this.tableLayoutPanel15.Controls.Add(this.tableLayoutPanel17, 1, 0);
             this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel15.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
             this.tableLayoutPanel15.RowCount = 1;
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(1374, 703);
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(1029, 568);
             this.tableLayoutPanel15.TabIndex = 20;
             // 
             // tableLayoutPanel16
@@ -1862,8 +1937,8 @@
             this.tableLayoutPanel16.Controls.Add(this.pictureBox3, 0, 0);
             this.tableLayoutPanel16.Controls.Add(this.btnSearchTABsearch, 0, 2);
             this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel16.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel16.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel16.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel16.Name = "tableLayoutPanel16";
             this.tableLayoutPanel16.RowCount = 6;
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -1872,7 +1947,7 @@
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(301, 699);
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(226, 564);
             this.tableLayoutPanel16.TabIndex = 0;
             // 
             // btnLogOutTABsearch
@@ -1897,14 +1972,14 @@
             this.btnLogOutTABsearch.IconVisible = false;
             this.btnLogOutTABsearch.IconZoom = 90D;
             this.btnLogOutTABsearch.IsTab = false;
-            this.btnLogOutTABsearch.Location = new System.Drawing.Point(5, 630);
-            this.btnLogOutTABsearch.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnLogOutTABsearch.Location = new System.Drawing.Point(4, 509);
+            this.btnLogOutTABsearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogOutTABsearch.Name = "btnLogOutTABsearch";
             this.btnLogOutTABsearch.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABsearch.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnLogOutTABsearch.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogOutTABsearch.selected = false;
-            this.btnLogOutTABsearch.Size = new System.Drawing.Size(291, 64);
+            this.btnLogOutTABsearch.Size = new System.Drawing.Size(218, 51);
             this.btnLogOutTABsearch.TabIndex = 10;
             this.btnLogOutTABsearch.Text = "LOG OUT";
             this.btnLogOutTABsearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1934,14 +2009,14 @@
             this.btnStatisticsTABsearch.IconVisible = false;
             this.btnStatisticsTABsearch.IconZoom = 90D;
             this.btnStatisticsTABsearch.IsTab = false;
-            this.btnStatisticsTABsearch.Location = new System.Drawing.Point(5, 214);
-            this.btnStatisticsTABsearch.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnStatisticsTABsearch.Location = new System.Drawing.Point(4, 173);
+            this.btnStatisticsTABsearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnStatisticsTABsearch.Name = "btnStatisticsTABsearch";
             this.btnStatisticsTABsearch.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnStatisticsTABsearch.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnStatisticsTABsearch.OnHoverTextColor = System.Drawing.Color.White;
             this.btnStatisticsTABsearch.selected = false;
-            this.btnStatisticsTABsearch.Size = new System.Drawing.Size(291, 94);
+            this.btnStatisticsTABsearch.Size = new System.Drawing.Size(218, 76);
             this.btnStatisticsTABsearch.TabIndex = 5;
             this.btnStatisticsTABsearch.Text = "Statisitcs";
             this.btnStatisticsTABsearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1953,10 +2028,10 @@
             // 
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(3, 2);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox3.Location = new System.Drawing.Point(2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(295, 205);
+            this.pictureBox3.Size = new System.Drawing.Size(222, 165);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
@@ -1983,14 +2058,14 @@
             this.btnSearchTABsearch.IconVisible = false;
             this.btnSearchTABsearch.IconZoom = 90D;
             this.btnSearchTABsearch.IsTab = false;
-            this.btnSearchTABsearch.Location = new System.Drawing.Point(5, 318);
-            this.btnSearchTABsearch.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnSearchTABsearch.Location = new System.Drawing.Point(4, 257);
+            this.btnSearchTABsearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearchTABsearch.Name = "btnSearchTABsearch";
             this.btnSearchTABsearch.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnSearchTABsearch.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnSearchTABsearch.OnHoverTextColor = System.Drawing.Color.White;
             this.btnSearchTABsearch.selected = false;
-            this.btnSearchTABsearch.Size = new System.Drawing.Size(291, 94);
+            this.btnSearchTABsearch.Size = new System.Drawing.Size(218, 76);
             this.btnSearchTABsearch.TabIndex = 2;
             this.btnSearchTABsearch.Text = "Search Employee";
             this.btnSearchTABsearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2006,13 +2081,13 @@
             this.tableLayoutPanel17.Controls.Add(this.label4, 0, 0);
             this.tableLayoutPanel17.Controls.Add(this.panel7, 0, 1);
             this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel17.Location = new System.Drawing.Point(310, 2);
-            this.tableLayoutPanel17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel17.Location = new System.Drawing.Point(232, 2);
+            this.tableLayoutPanel17.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel17.Name = "tableLayoutPanel17";
             this.tableLayoutPanel17.RowCount = 2;
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(1061, 699);
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(795, 564);
             this.tableLayoutPanel17.TabIndex = 1;
             // 
             // label4
@@ -2022,9 +2097,10 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Location = new System.Drawing.Point(2, 0);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(1055, 104);
+            this.label4.Size = new System.Drawing.Size(791, 84);
             this.label4.TabIndex = 0;
             this.label4.Text = "Search Employee";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2034,10 +2110,10 @@
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.Controls.Add(this.tableLayoutPanel18);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(3, 106);
-            this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel7.Location = new System.Drawing.Point(2, 86);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1055, 591);
+            this.panel7.Size = new System.Drawing.Size(791, 476);
             this.panel7.TabIndex = 1;
             // 
             // tableLayoutPanel18
@@ -2047,12 +2123,12 @@
             this.tableLayoutPanel18.Controls.Add(this.panel8, 0, 0);
             this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel18.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel18.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel18.Name = "tableLayoutPanel18";
             this.tableLayoutPanel18.RowCount = 1;
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 586F));
-            this.tableLayoutPanel18.Size = new System.Drawing.Size(1055, 591);
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 476F));
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(791, 476);
             this.tableLayoutPanel18.TabIndex = 0;
             // 
             // panel8
@@ -2067,19 +2143,20 @@
             this.panel8.Controls.Add(this.label5);
             this.panel8.Controls.Add(this.cmbSelectSeachMethod);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(3, 2);
-            this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel8.Location = new System.Drawing.Point(2, 2);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1049, 587);
+            this.panel8.Size = new System.Drawing.Size(787, 472);
             this.panel8.TabIndex = 0;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(359, 39);
+            this.label7.Location = new System.Drawing.Point(269, 32);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(101, 23);
+            this.label7.Size = new System.Drawing.Size(81, 19);
             this.label7.TabIndex = 11;
             this.label7.Text = "Search By:";
             // 
@@ -2088,10 +2165,10 @@
             this.tbxSearchLastname.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbxSearchLastname.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.tbxSearchLastname.Location = new System.Drawing.Point(364, 208);
-            this.tbxSearchLastname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxSearchLastname.Location = new System.Drawing.Point(273, 169);
+            this.tbxSearchLastname.Margin = new System.Windows.Forms.Padding(2);
             this.tbxSearchLastname.Name = "tbxSearchLastname";
-            this.tbxSearchLastname.Size = new System.Drawing.Size(319, 30);
+            this.tbxSearchLastname.Size = new System.Drawing.Size(240, 26);
             this.tbxSearchLastname.TabIndex = 10;
             // 
             // label6
@@ -2100,9 +2177,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(359, 182);
+            this.label6.Location = new System.Drawing.Point(269, 148);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 23);
+            this.label6.Size = new System.Drawing.Size(84, 19);
             this.label6.TabIndex = 9;
             this.label6.Text = "LastName:";
             // 
@@ -2129,14 +2207,14 @@
             this.btnViewProfile.IconVisible = false;
             this.btnViewProfile.IconZoom = 90D;
             this.btnViewProfile.IsTab = false;
-            this.btnViewProfile.Location = new System.Drawing.Point(36, 506);
-            this.btnViewProfile.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnViewProfile.Location = new System.Drawing.Point(27, 406);
+            this.btnViewProfile.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnViewProfile.Name = "btnViewProfile";
             this.btnViewProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnViewProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnViewProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnViewProfile.selected = false;
-            this.btnViewProfile.Size = new System.Drawing.Size(999, 47);
+            this.btnViewProfile.Size = new System.Drawing.Size(749, 38);
             this.btnViewProfile.TabIndex = 8;
             this.btnViewProfile.Text = "View Profile";
             this.btnViewProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2152,10 +2230,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkLbProfile.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.checkLbProfile.FormattingEnabled = true;
-            this.checkLbProfile.Location = new System.Drawing.Point(36, 354);
-            this.checkLbProfile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkLbProfile.Location = new System.Drawing.Point(27, 288);
+            this.checkLbProfile.Margin = new System.Windows.Forms.Padding(2);
             this.checkLbProfile.Name = "checkLbProfile";
-            this.checkLbProfile.Size = new System.Drawing.Size(997, 29);
+            this.checkLbProfile.Size = new System.Drawing.Size(749, 4);
             this.checkLbProfile.TabIndex = 7;
             this.checkLbProfile.Visible = false;
             // 
@@ -2182,14 +2260,14 @@
             this.btnSearchForSpecificEmployee.IconVisible = false;
             this.btnSearchForSpecificEmployee.IconZoom = 90D;
             this.btnSearchForSpecificEmployee.IsTab = false;
-            this.btnSearchForSpecificEmployee.Location = new System.Drawing.Point(364, 273);
-            this.btnSearchForSpecificEmployee.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSearchForSpecificEmployee.Location = new System.Drawing.Point(273, 222);
+            this.btnSearchForSpecificEmployee.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnSearchForSpecificEmployee.Name = "btnSearchForSpecificEmployee";
             this.btnSearchForSpecificEmployee.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnSearchForSpecificEmployee.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnSearchForSpecificEmployee.OnHoverTextColor = System.Drawing.Color.White;
             this.btnSearchForSpecificEmployee.selected = false;
-            this.btnSearchForSpecificEmployee.Size = new System.Drawing.Size(320, 44);
+            this.btnSearchForSpecificEmployee.Size = new System.Drawing.Size(240, 36);
             this.btnSearchForSpecificEmployee.TabIndex = 6;
             this.btnSearchForSpecificEmployee.Text = "Search";
             this.btnSearchForSpecificEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2202,10 +2280,10 @@
             this.tbxSearchID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbxSearchID.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.tbxSearchID.Location = new System.Drawing.Point(364, 134);
-            this.tbxSearchID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxSearchID.Location = new System.Drawing.Point(273, 109);
+            this.tbxSearchID.Margin = new System.Windows.Forms.Padding(2);
             this.tbxSearchID.Name = "tbxSearchID";
-            this.tbxSearchID.Size = new System.Drawing.Size(319, 30);
+            this.tbxSearchID.Size = new System.Drawing.Size(240, 26);
             this.tbxSearchID.TabIndex = 2;
             // 
             // label5
@@ -2214,9 +2292,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(359, 105);
+            this.label5.Location = new System.Drawing.Point(269, 85);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 23);
+            this.label5.Size = new System.Drawing.Size(29, 19);
             this.label5.TabIndex = 1;
             this.label5.Text = "ID:";
             // 
@@ -2229,21 +2308,21 @@
             this.cmbSelectSeachMethod.Items.AddRange(new object[] {
             "Last name",
             "ID"});
-            this.cmbSelectSeachMethod.Location = new System.Drawing.Point(364, 65);
-            this.cmbSelectSeachMethod.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbSelectSeachMethod.Location = new System.Drawing.Point(273, 53);
+            this.cmbSelectSeachMethod.Margin = new System.Windows.Forms.Padding(2);
             this.cmbSelectSeachMethod.Name = "cmbSelectSeachMethod";
-            this.cmbSelectSeachMethod.Size = new System.Drawing.Size(319, 31);
+            this.cmbSelectSeachMethod.Size = new System.Drawing.Size(240, 26);
             this.cmbSelectSeachMethod.TabIndex = 0;
             this.cmbSelectSeachMethod.SelectedIndexChanged += new System.EventHandler(this.cmbSelectSeachMethod_SelectedIndexChanged);
             // 
             // tabProfile
             // 
             this.tabProfile.Controls.Add(this.tableLayoutPanel19);
-            this.tabProfile.Location = new System.Drawing.Point(4, 25);
-            this.tabProfile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabProfile.Location = new System.Drawing.Point(4, 22);
+            this.tabProfile.Margin = new System.Windows.Forms.Padding(2);
             this.tabProfile.Name = "tabProfile";
-            this.tabProfile.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabProfile.Size = new System.Drawing.Size(1380, 707);
+            this.tabProfile.Padding = new System.Windows.Forms.Padding(2);
+            this.tabProfile.Size = new System.Drawing.Size(1033, 572);
             this.tabProfile.TabIndex = 9;
             this.tabProfile.Text = "Profile";
             this.tabProfile.UseVisualStyleBackColor = true;
@@ -2257,12 +2336,12 @@
             this.tableLayoutPanel19.Controls.Add(this.tableLayoutPanel20, 0, 0);
             this.tableLayoutPanel19.Controls.Add(this.tableLayoutPanel21, 1, 0);
             this.tableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel19.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel19.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel19.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel19.Name = "tableLayoutPanel19";
             this.tableLayoutPanel19.RowCount = 1;
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel19.Size = new System.Drawing.Size(1374, 703);
+            this.tableLayoutPanel19.Size = new System.Drawing.Size(1029, 568);
             this.tableLayoutPanel19.TabIndex = 21;
             // 
             // tableLayoutPanel20
@@ -2275,8 +2354,8 @@
             this.tableLayoutPanel20.Controls.Add(this.pictureBox4, 0, 0);
             this.tableLayoutPanel20.Controls.Add(this.btnSearchTABprofile, 0, 2);
             this.tableLayoutPanel20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel20.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel20.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel20.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel20.Name = "tableLayoutPanel20";
             this.tableLayoutPanel20.RowCount = 6;
             this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -2285,7 +2364,7 @@
             this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel20.Size = new System.Drawing.Size(301, 699);
+            this.tableLayoutPanel20.Size = new System.Drawing.Size(226, 564);
             this.tableLayoutPanel20.TabIndex = 0;
             // 
             // btnLogOutTABprofile
@@ -2310,14 +2389,14 @@
             this.btnLogOutTABprofile.IconVisible = false;
             this.btnLogOutTABprofile.IconZoom = 90D;
             this.btnLogOutTABprofile.IsTab = false;
-            this.btnLogOutTABprofile.Location = new System.Drawing.Point(5, 630);
-            this.btnLogOutTABprofile.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnLogOutTABprofile.Location = new System.Drawing.Point(4, 509);
+            this.btnLogOutTABprofile.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogOutTABprofile.Name = "btnLogOutTABprofile";
             this.btnLogOutTABprofile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABprofile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnLogOutTABprofile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogOutTABprofile.selected = false;
-            this.btnLogOutTABprofile.Size = new System.Drawing.Size(291, 64);
+            this.btnLogOutTABprofile.Size = new System.Drawing.Size(218, 51);
             this.btnLogOutTABprofile.TabIndex = 10;
             this.btnLogOutTABprofile.Text = "LOG OUT";
             this.btnLogOutTABprofile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2347,14 +2426,14 @@
             this.btnStatisticsTABprofile.IconVisible = false;
             this.btnStatisticsTABprofile.IconZoom = 90D;
             this.btnStatisticsTABprofile.IsTab = false;
-            this.btnStatisticsTABprofile.Location = new System.Drawing.Point(5, 214);
-            this.btnStatisticsTABprofile.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnStatisticsTABprofile.Location = new System.Drawing.Point(4, 173);
+            this.btnStatisticsTABprofile.Margin = new System.Windows.Forms.Padding(4);
             this.btnStatisticsTABprofile.Name = "btnStatisticsTABprofile";
             this.btnStatisticsTABprofile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnStatisticsTABprofile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnStatisticsTABprofile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnStatisticsTABprofile.selected = false;
-            this.btnStatisticsTABprofile.Size = new System.Drawing.Size(291, 94);
+            this.btnStatisticsTABprofile.Size = new System.Drawing.Size(218, 76);
             this.btnStatisticsTABprofile.TabIndex = 5;
             this.btnStatisticsTABprofile.Text = "Statisitcs";
             this.btnStatisticsTABprofile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2366,10 +2445,10 @@
             // 
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(3, 2);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox4.Location = new System.Drawing.Point(2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(295, 205);
+            this.pictureBox4.Size = new System.Drawing.Size(222, 165);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
@@ -2396,14 +2475,14 @@
             this.btnSearchTABprofile.IconVisible = false;
             this.btnSearchTABprofile.IconZoom = 90D;
             this.btnSearchTABprofile.IsTab = false;
-            this.btnSearchTABprofile.Location = new System.Drawing.Point(5, 318);
-            this.btnSearchTABprofile.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnSearchTABprofile.Location = new System.Drawing.Point(4, 257);
+            this.btnSearchTABprofile.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearchTABprofile.Name = "btnSearchTABprofile";
             this.btnSearchTABprofile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnSearchTABprofile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.btnSearchTABprofile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnSearchTABprofile.selected = false;
-            this.btnSearchTABprofile.Size = new System.Drawing.Size(291, 94);
+            this.btnSearchTABprofile.Size = new System.Drawing.Size(218, 76);
             this.btnSearchTABprofile.TabIndex = 2;
             this.btnSearchTABprofile.Text = "Search Employee";
             this.btnSearchTABprofile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2418,12 +2497,12 @@
             this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel21.Controls.Add(this.panel9, 0, 0);
             this.tableLayoutPanel21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel21.Location = new System.Drawing.Point(310, 2);
-            this.tableLayoutPanel21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel21.Location = new System.Drawing.Point(232, 2);
+            this.tableLayoutPanel21.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel21.Name = "tableLayoutPanel21";
             this.tableLayoutPanel21.RowCount = 1;
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel21.Size = new System.Drawing.Size(1061, 699);
+            this.tableLayoutPanel21.Size = new System.Drawing.Size(795, 564);
             this.tableLayoutPanel21.TabIndex = 1;
             // 
             // panel9
@@ -2444,18 +2523,63 @@
             this.panel9.Controls.Add(this.pictureBox6);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel9.Location = new System.Drawing.Point(3, 2);
-            this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel9.Location = new System.Drawing.Point(2, 2);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1055, 695);
+            this.panel9.Size = new System.Drawing.Size(791, 560);
             this.panel9.TabIndex = 0;
+            // 
+            // btnSaveData
+            // 
+            this.btnSaveData.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveData.Location = new System.Drawing.Point(629, 124);
+            this.btnSaveData.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSaveData.Name = "btnSaveData";
+            this.btnSaveData.Size = new System.Drawing.Size(100, 32);
+            this.btnSaveData.TabIndex = 24;
+            this.btnSaveData.Text = "Save Data";
+            this.btnSaveData.UseVisualStyleBackColor = true;
+            this.btnSaveData.Click += new System.EventHandler(this.BtnSaveData_Click);
+            // 
+            // btnEditData
+            // 
+            this.btnEditData.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditData.Location = new System.Drawing.Point(734, 124);
+            this.btnEditData.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditData.Name = "btnEditData";
+            this.btnEditData.Size = new System.Drawing.Size(87, 32);
+            this.btnEditData.TabIndex = 23;
+            this.btnEditData.Text = "Edit Data";
+            this.btnEditData.UseVisualStyleBackColor = true;
+            this.btnEditData.Click += new System.EventHandler(this.BtnEditData_Click);
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(356, 113);
+            this.lblID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(33, 26);
+            this.lblID.TabIndex = 22;
+            this.lblID.Text = "ID";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(323, 113);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(38, 26);
+            this.label15.TabIndex = 21;
+            this.label15.Text = "ID:";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(25, 242);
+            this.label14.Location = new System.Drawing.Point(19, 197);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(142, 31);
+            this.label14.Size = new System.Drawing.Size(112, 26);
             this.label14.TabIndex = 20;
             this.label14.Text = "LastName:";
             // 
@@ -2463,9 +2587,10 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(25, 210);
+            this.label13.Location = new System.Drawing.Point(19, 171);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(145, 31);
+            this.label13.Size = new System.Drawing.Size(116, 26);
             this.label13.TabIndex = 19;
             this.label13.Text = "FirstName:";
             // 
@@ -2473,9 +2598,10 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(26, 559);
+            this.label12.Location = new System.Drawing.Point(20, 454);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(185, 27);
+            this.label12.Size = new System.Drawing.Size(150, 22);
             this.label12.TabIndex = 18;
             this.label12.Text = "Upcoming Shifts:";
             // 
@@ -2485,23 +2611,23 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chartEmplAttendance.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            chartArea5.Name = "ChartArea1";
-            this.chartEmplAttendance.ChartAreas.Add(chartArea5);
-            legend5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend5.IsTextAutoFit = false;
-            legend5.Name = "Legend1";
-            legend5.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chartEmplAttendance.Legends.Add(legend5);
-            this.chartEmplAttendance.Location = new System.Drawing.Point(616, 254);
-            this.chartEmplAttendance.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            chartArea6.Name = "ChartArea1";
+            this.chartEmplAttendance.ChartAreas.Add(chartArea6);
+            legend6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend6.IsTextAutoFit = false;
+            legend6.Name = "Legend1";
+            legend6.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chartEmplAttendance.Legends.Add(legend6);
+            this.chartEmplAttendance.Location = new System.Drawing.Point(462, 206);
+            this.chartEmplAttendance.Margin = new System.Windows.Forms.Padding(2);
             this.chartEmplAttendance.Name = "chartEmplAttendance";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series5.Legend = "Legend1";
-            series5.Name = "s1";
-            this.chartEmplAttendance.Series.Add(series5);
-            this.chartEmplAttendance.Size = new System.Drawing.Size(411, 426);
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series6.Legend = "Legend1";
+            series6.Name = "s1";
+            this.chartEmplAttendance.Series.Add(series6);
+            this.chartEmplAttendance.Size = new System.Drawing.Size(308, 341);
             this.chartEmplAttendance.TabIndex = 17;
             this.chartEmplAttendance.Text = "chart1";
             title5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2516,11 +2642,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbUpcomingShifts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
             this.lbUpcomingShifts.FormattingEnabled = true;
-            this.lbUpcomingShifts.ItemHeight = 31;
-            this.lbUpcomingShifts.Location = new System.Drawing.Point(25, 590);
-            this.lbUpcomingShifts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbUpcomingShifts.ItemHeight = 25;
+            this.lbUpcomingShifts.Location = new System.Drawing.Point(19, 479);
             this.lbUpcomingShifts.Name = "lbUpcomingShifts";
-            this.lbUpcomingShifts.Size = new System.Drawing.Size(560, 35);
+            this.lbUpcomingShifts.Size = new System.Drawing.Size(421, 4);
             this.lbUpcomingShifts.TabIndex = 16;
             // 
             // panel10
@@ -2538,20 +2663,78 @@
             this.panel10.Controls.Add(this.label10);
             this.panel10.Controls.Add(this.label9);
             this.panel10.Controls.Add(this.label8);
-            this.panel10.Location = new System.Drawing.Point(25, 286);
-            this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel10.Location = new System.Drawing.Point(19, 232);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(563, 271);
+            this.panel10.Size = new System.Drawing.Size(422, 220);
             this.panel10.TabIndex = 11;
+            // 
+            // tbxPassword
+            // 
+            this.tbxPassword.Location = new System.Drawing.Point(136, 177);
+            this.tbxPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxPassword.Multiline = true;
+            this.tbxPassword.Name = "tbxPassword";
+            this.tbxPassword.Size = new System.Drawing.Size(223, 29);
+            this.tbxPassword.TabIndex = 19;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(11, 184);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(86, 21);
+            this.label16.TabIndex = 18;
+            this.label16.Text = "Password:";
+            // 
+            // tbxNationality
+            // 
+            this.tbxNationality.Location = new System.Drawing.Point(136, 53);
+            this.tbxNationality.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxNationality.Multiline = true;
+            this.tbxNationality.Name = "tbxNationality";
+            this.tbxNationality.Size = new System.Drawing.Size(223, 31);
+            this.tbxNationality.TabIndex = 17;
+            // 
+            // tbxPhoneNumber
+            // 
+            this.tbxPhoneNumber.Location = new System.Drawing.Point(136, 137);
+            this.tbxPhoneNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxPhoneNumber.Multiline = true;
+            this.tbxPhoneNumber.Name = "tbxPhoneNumber";
+            this.tbxPhoneNumber.Size = new System.Drawing.Size(223, 29);
+            this.tbxPhoneNumber.TabIndex = 16;
+            // 
+            // tbxEmail
+            // 
+            this.tbxEmail.Location = new System.Drawing.Point(136, 93);
+            this.tbxEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxEmail.Multiline = true;
+            this.tbxEmail.Name = "tbxEmail";
+            this.tbxEmail.Size = new System.Drawing.Size(223, 29);
+            this.tbxEmail.TabIndex = 15;
+            // 
+            // tbxDateOfBirth
+            // 
+            this.tbxDateOfBirth.Location = new System.Drawing.Point(136, 7);
+            this.tbxDateOfBirth.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxDateOfBirth.Multiline = true;
+            this.tbxDateOfBirth.Name = "tbxDateOfBirth";
+            this.tbxDateOfBirth.Size = new System.Drawing.Size(223, 32);
+            this.tbxDateOfBirth.TabIndex = 14;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(15, 169);
+            this.label11.Location = new System.Drawing.Point(11, 137);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(153, 26);
+            this.label11.Size = new System.Drawing.Size(126, 21);
             this.label11.TabIndex = 12;
             this.label11.Text = "PhoneNumber:";
             // 
@@ -2560,9 +2743,10 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(15, 123);
+            this.label10.Location = new System.Drawing.Point(11, 100);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 26);
+            this.label10.Size = new System.Drawing.Size(57, 21);
             this.label10.TabIndex = 11;
             this.label10.Text = "Email:";
             // 
@@ -2571,9 +2755,10 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(15, 65);
+            this.label9.Location = new System.Drawing.Point(11, 53);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(124, 26);
+            this.label9.Size = new System.Drawing.Size(101, 21);
             this.label9.TabIndex = 13;
             this.label9.Text = "Nationality:";
             // 
@@ -2582,9 +2767,10 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(15, 18);
+            this.label8.Location = new System.Drawing.Point(11, 15);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(132, 26);
+            this.label8.Size = new System.Drawing.Size(105, 21);
             this.label8.TabIndex = 10;
             this.label8.Text = "DateOfBirth:";
             // 
@@ -2594,18 +2780,20 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPosInCompany.AutoSize = true;
             this.lblPosInCompany.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPosInCompany.Location = new System.Drawing.Point(24, 130);
+            this.lblPosInCompany.Location = new System.Drawing.Point(18, 106);
+            this.lblPosInCompany.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPosInCompany.Name = "lblPosInCompany";
-            this.lblPosInCompany.Size = new System.Drawing.Size(382, 40);
+            this.lblPosInCompany.Size = new System.Drawing.Size(311, 31);
             this.lblPosInCompany.TabIndex = 4;
             this.lblPosInCompany.Text = "PossitionInTheCompany";
             // 
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(179, 242);
+            this.lblLastName.Location = new System.Drawing.Point(134, 197);
+            this.lblLastName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(135, 31);
+            this.lblLastName.Size = new System.Drawing.Size(107, 26);
             this.lblLastName.TabIndex = 3;
             this.lblLastName.Text = "LastName";
             // 
@@ -2613,9 +2801,10 @@
             // 
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFirstName.Location = new System.Drawing.Point(179, 210);
+            this.lblFirstName.Location = new System.Drawing.Point(134, 171);
+            this.lblFirstName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(138, 31);
+            this.lblFirstName.Size = new System.Drawing.Size(111, 26);
             this.lblFirstName.TabIndex = 2;
             this.lblFirstName.Text = "FirstName";
             // 
@@ -2624,9 +2813,9 @@
             this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(1055, 128);
+            this.pictureBox6.Size = new System.Drawing.Size(791, 104);
             this.pictureBox6.TabIndex = 0;
             this.pictureBox6.TabStop = false;
             // 
@@ -2636,105 +2825,13 @@
             this.timerSelectedMenu.Interval = 10;
             this.timerSelectedMenu.Tick += new System.EventHandler(this.timerSelectedMenu_Tick);
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(431, 139);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(48, 31);
-            this.label15.TabIndex = 21;
-            this.label15.Text = "ID:";
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(475, 139);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(41, 31);
-            this.lblID.TabIndex = 22;
-            this.lblID.Text = "ID";
-            // 
-            // tbxDateOfBirth
-            // 
-            this.tbxDateOfBirth.Location = new System.Drawing.Point(181, 9);
-            this.tbxDateOfBirth.Multiline = true;
-            this.tbxDateOfBirth.Name = "tbxDateOfBirth";
-            this.tbxDateOfBirth.Size = new System.Drawing.Size(296, 38);
-            this.tbxDateOfBirth.TabIndex = 14;
-            // 
-            // tbxEmail
-            // 
-            this.tbxEmail.Location = new System.Drawing.Point(181, 114);
-            this.tbxEmail.Multiline = true;
-            this.tbxEmail.Name = "tbxEmail";
-            this.tbxEmail.Size = new System.Drawing.Size(296, 35);
-            this.tbxEmail.TabIndex = 15;
-            // 
-            // tbxPhoneNumber
-            // 
-            this.tbxPhoneNumber.Location = new System.Drawing.Point(181, 169);
-            this.tbxPhoneNumber.Multiline = true;
-            this.tbxPhoneNumber.Name = "tbxPhoneNumber";
-            this.tbxPhoneNumber.Size = new System.Drawing.Size(296, 35);
-            this.tbxPhoneNumber.TabIndex = 16;
-            // 
-            // tbxNationality
-            // 
-            this.tbxNationality.Location = new System.Drawing.Point(181, 65);
-            this.tbxNationality.Multiline = true;
-            this.tbxNationality.Name = "tbxNationality";
-            this.tbxNationality.Size = new System.Drawing.Size(296, 37);
-            this.tbxNationality.TabIndex = 17;
-            // 
-            // tbxPassword
-            // 
-            this.tbxPassword.Location = new System.Drawing.Point(181, 218);
-            this.tbxPassword.Multiline = true;
-            this.tbxPassword.Name = "tbxPassword";
-            this.tbxPassword.Size = new System.Drawing.Size(296, 35);
-            this.tbxPassword.TabIndex = 19;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(15, 227);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(106, 26);
-            this.label16.TabIndex = 18;
-            this.label16.Text = "Password:";
-            // 
-            // btnEditData
-            // 
-            this.btnEditData.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditData.Location = new System.Drawing.Point(979, 152);
-            this.btnEditData.Name = "btnEditData";
-            this.btnEditData.Size = new System.Drawing.Size(116, 39);
-            this.btnEditData.TabIndex = 23;
-            this.btnEditData.Text = "Edit Data";
-            this.btnEditData.UseVisualStyleBackColor = true;
-            this.btnEditData.Click += new System.EventHandler(this.BtnEditData_Click);
-            // 
-            // btnSaveData
-            // 
-            this.btnSaveData.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveData.Location = new System.Drawing.Point(839, 152);
-            this.btnSaveData.Name = "btnSaveData";
-            this.btnSaveData.Size = new System.Drawing.Size(134, 39);
-            this.btnSaveData.TabIndex = 24;
-            this.btnSaveData.Text = "Save Data";
-            this.btnSaveData.UseVisualStyleBackColor = true;
-            this.btnSaveData.Click += new System.EventHandler(this.BtnSaveData_Click);
-            // 
             // MainManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1388, 736);
+            this.ClientSize = new System.Drawing.Size(1041, 598);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainManager";
@@ -2780,6 +2877,7 @@
             this.tableLayoutPanel13.ResumeLayout(false);
             this.tableLayoutPanel14.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartRestock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartRequests)).EndInit();
             this.tabSearchEmpl.ResumeLayout(false);
             this.tableLayoutPanel15.ResumeLayout(false);
@@ -2933,5 +3031,8 @@
         private System.Windows.Forms.TextBox tbxDateOfBirth;
         private System.Windows.Forms.Button btnEditData;
         private System.Windows.Forms.Button btnSaveData;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartRestock;
+        private System.Windows.Forms.ComboBox cbRestock;
+        private Bunifu.Framework.UI.BunifuFlatButton btnRestock;
     }
 }

@@ -18,7 +18,7 @@ namespace Media_Bazaar
     public partial class MainManager : Form
     {
         private ManagerManagment managerManagment = new ManagerManagment();
-      
+
         public MainManager()
         {
             InitializeComponent();
@@ -26,6 +26,7 @@ namespace Media_Bazaar
             Enabled();
 
             UpdateList(managerManagment.GetAllEmployees());
+            UpdateComboBox(managerManagment.GetAllRestockNames());
             CheckFiredAndWorkingChart();
             CheckAttendance();
             CheckRequests();
@@ -46,9 +47,15 @@ namespace Media_Bazaar
             checkLbProfile.DataSource = employees;
             checkLbProfile.DisplayMember = "FullInfo";
         }
+        private void UpdateComboBox(List<RestockRequestBase> restocks) // update name combo box
+        {
+            cbRestock.ValueMember = "NameInfo";
+            cbRestock.DisplayMember = "NameInfo";
+            cbRestock.DataSource = restocks;
+        }
 
         private void MainManager_Load(object sender, EventArgs e)
-        {            
+        {
             tabControl1.Appearance = TabAppearance.FlatButtons;
             tabControl1.ItemSize = new Size(0, 1);
             tabControl1.SizeMode = TabSizeMode.Fixed;
@@ -59,7 +66,7 @@ namespace Media_Bazaar
         //----------------------------------Start
         //All buttons connections for the AdminForm 
         //DO NOT Modify THIS !!!
-        private void btnSearchTABemplStats_Click(object sender, EventArgs e) 
+        private void btnSearchTABemplStats_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedTab = tabSearchEmpl;
             tbxSearchID.Clear();
@@ -174,7 +181,7 @@ namespace Media_Bazaar
             {
                 MessageBox.Show("Something went wrong !!!!!!!!!!!!");
             }
-            
+
         }
 
         private void UpdateInfoByID(int id) // update employee data by ID
@@ -233,7 +240,7 @@ namespace Media_Bazaar
             {
                 MessageBox.Show("Something went wrong!!!!!!!!!!");
             }
-            
+
         }
 
         private void UpdateInfoByLastname(string lastName) // upadte employee data by last Name
@@ -294,9 +301,9 @@ namespace Media_Bazaar
             {
                 MessageBox.Show("Something went wrong!!!!!!!!");
             }
-            
+
         }
-        
+
 
         private void CheckFiredAndWorkingChart() // check fired employee
         {
@@ -316,12 +323,12 @@ namespace Media_Bazaar
         int nrOfLate = 0;
 
         private void CheckAttendance()
-        {  
+        {
             chartAttendance.Series["s1"].Points.AddXY("Present", managerManagment.NumberOfPresent());
             chartAttendance.Series["s1"].Points.AddXY("Absent", managerManagment.NumberOfAbsent());
             chartAttendance.Series["s1"].Points.AddXY("Late", managerManagment.NumberOfLate());
         }
-        
+
         private void CheckEmployeeAttendance(int id)
         {
             chartEmplAttendance.Series["s1"].Points.AddXY("Present", managerManagment.GetNumberOfPresentByID(id));
@@ -332,11 +339,11 @@ namespace Media_Bazaar
         }
 
         private void CheckRequests()
-        {           
+        {
             chartRequests.Series["s1"].Points.AddXY("Confirmed", managerManagment.NumberOfConfirmedRequests());
             chartRequests.Series["s1"].Points.AddXY("Rejected", managerManagment.NumberOfRejectedRequests());
             chartRequests.Series["s1"].Points.AddXY("Waiting", managerManagment.NumberOfWaitingRequests());
-        }        
+        }
 
         private void btnSearchTABsearch_Click(object sender, EventArgs e)
         {
@@ -344,12 +351,12 @@ namespace Media_Bazaar
             btnViewProfile.Visible = false;
             tbxSearchLastname.Enabled = true;
             tbxSearchID.Enabled = true;
-            
+
         }
 
         private void cmbSelectSeachMethod_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cmbSelectSeachMethod.Text == "Last name")
+            if (cmbSelectSeachMethod.Text == "Last name")
             {
                 tbxSearchID.Enabled = false;
                 tbxSearchLastname.Enabled = true;
@@ -395,6 +402,11 @@ namespace Media_Bazaar
                 MessageBox.Show(ee.ToString());
             }
         }
-    }
 
+        private void btnRestock_Click(object sender, EventArgs e)
+        {
+            string name = cbRestock.Text;
+            chartRestock.Series["restock"].Points.AddXY(Convert.ToString(name), managerManagment.GetRestockQuantity(name));
+        }
+    }
 }

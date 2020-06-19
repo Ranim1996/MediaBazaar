@@ -162,12 +162,6 @@ namespace Media_Bazaar
 
         }
 
-        // Add data according to stock ID
-
-
-        //Get all restocks
-
-
         //get stock id by the given stock id.
         public string GetDBStockIDById(int id)
         {
@@ -222,6 +216,15 @@ namespace Media_Bazaar
             }
         }
 
+        //get stock quantity by the given stock name.
+        public int GetStockQuantityByName(string name)
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<int>($"SELECT Quantity FROM RestockRequest WHERE ProductName ='{name}';");
+            }
+        }
+
         //get stock order date id by the given stock id.
         public string GetDBStockOrderDateById(int id)
         {
@@ -266,6 +269,25 @@ namespace Media_Bazaar
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
                 var output = connection.Query<RestockRequestBase>($"SELECT * FROM RestockRequest").ToList();
+                return output;
+            }
+        }
+
+        // get info about the name of the requested stock.
+        /*public string GetRequestsName()
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                return connection.ExecuteScalar<string>($"SELECT ProductName FROM RestockRequest");
+            }
+        }*/
+
+        // get info about the name of the requested stock.
+        public List<RestockRequestBase> GetRequestsName()
+        {
+            using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
+            {
+                var output = connection.Query<RestockRequestBase>($"SELECT ProductName FROM RestockRequest").ToList();
                 return output;
             }
         }

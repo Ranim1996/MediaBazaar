@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Media_Bazaar
 {
@@ -70,7 +71,10 @@ namespace Media_Bazaar
             return dataAccess.GetAllRequests();
         }
 
-
+        public List<RestockRequestBase> GetAllRestockNames()
+        {
+            return dataAccess.GetRequestsName();
+        }
 
         //FOR CHARTS
         public int NumberrOfWorking()
@@ -226,6 +230,9 @@ namespace Media_Bazaar
             return nrOfWaiting;
         }
 
-
+        public int GetRestockQuantity(string name)
+        {
+            return dataAccess.GetStockQuantityByName(name);
+        }
     }
 }

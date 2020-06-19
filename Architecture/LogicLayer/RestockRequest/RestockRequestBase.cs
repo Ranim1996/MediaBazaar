@@ -8,7 +8,6 @@
         public string Departament { get; set; }
         public int EmployeeID { get; set; }
         public string ExtraInfo { get; set; }
-        //public string FullInfo { get; }
         public string ProductName { get; set; }
         public string Brand { get; set; }
         public int Quantity { get; set; }
@@ -18,6 +17,11 @@
         public virtual string FullInfo
         {
             get { return $"Stock ID:{RequestID} {EmployeeID} {ProductName} {Category} {Brand} {Departament} {Quantity} {DateOfOrder} {DateOfDelivery} {AdminConfirmation} {ExtraInfo})"; }
+        }
+
+        public virtual string NameInfo
+        {
+            get { return $"{ProductName}"; }
         }
     }
 }
