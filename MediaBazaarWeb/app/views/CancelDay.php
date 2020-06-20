@@ -2,11 +2,14 @@
 
 session_start();
 
-require('static/php/dbConnection.php');
+include '../models/User.class.php';
+include '../core/db.class.php';
+include '../models/Calendar.class.php';
 
 //ranim part
 $selectedDate = "";
 $weekDay = "";
+$dbconn = new DB();
 
 if (isset($_GET['date'])) {
 	# code...
@@ -34,9 +37,9 @@ if (isset($_POST['cancel'])) {
 	$status = 'Cancelled';
 
 	$query = "UPDATE schedule SET Status = '$status' WHERE EmployeeID = '$EmployeeID' AND Date = '$formatDate'";
-	$stmt = $conn->prepare($query);
+	$stmt = $dbconn->connect()->prepare($query);
 	$stmt->execute();
-	header('Location: calendar.php');
+	header('Location: Schedule.php');
 }
 
 ?>
@@ -50,8 +53,8 @@ if (isset($_POST['cancel'])) {
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="viewport" content="width = device, initial-scale = 1.0">
-	<link rel="stylesheet" type="text/css" href="static/css/main.css">
-	<link rel="stylesheet" type="text/css" href="static/css/ionicons-master/docs/css/ionicons.min.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/main.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/ionicons-master/docs/css/ionicons.min.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 </head>
@@ -62,14 +65,14 @@ if (isset($_POST['cancel'])) {
 
 		<nav>
 			<div class="nav-calendar">
-				<a href="#home"><img alt="logo" class="logo-nav" src="static/img/logo2.png"></a>
+				<a href="#home"><img alt="logo" class="logo-nav" src="../../public/img/logo2.png"></a>
 				<ul class="main-nav calendar-nav">
-					<li><a href="homePage.php">Home</a></li>
-					<li><a href="calendar.php">Shedule</a></li>
+					<li><a href="Home.php">Home</a></li>
+					<li><a href="Schedule.php">Shedule</a></li>
 				</ul>
 
 				<div class="main-nav logout logout-calendar">
-					<a href="loginPage.html">Log Out</a>
+					<a href="../../public/php/logout.php">Log Out</a>
 				</div>
 			</div>
 		</nav>

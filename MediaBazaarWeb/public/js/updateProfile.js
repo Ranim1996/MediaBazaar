@@ -153,7 +153,7 @@ function updateBio(elem){
   var formElement = document.createElement("form");
   formElement.className = "formUpdate update-fields";
   formElement.setAttribute("method", "post");
-  formElement.setAttribute("action", "static/php/updateBio.php");
+  formElement.setAttribute("action", "../../public/php/updateBio.php");
 
   //create 2 list elements, 1 text area and 1 button
   let liInput = document.createElement("li");
@@ -231,7 +231,7 @@ function updatePassword(elem){
   var formElement = document.createElement("form");
   formElement.className = "formUpdate updateFields";
   formElement.setAttribute("method", "post");
-  formElement.setAttribute("action", "static/php/updatePassword.php");
+  formElement.setAttribute("action", "../../public/php/updatePassword.php");
 
   //create list
   //1)
@@ -435,8 +435,8 @@ function showPassword(){
 //bio using textfield and password using input type - password
 
 //customizing profile page content buttons 
-document.getElementById("custom-contact-email").addEventListener('click', function(){ modifyContent('mail-written', 'static/php/updateEmailInfo.php', 'email'); }, false);
-document.getElementById("custom-contact-phone").addEventListener('click', function(){ modifyPhoneContent('phone-nr', 'static/php/updatePhoneNr.php', 'phone'); }, false);
+document.getElementById("custom-contact-email").addEventListener('click', function(){ modifyContent('mail-written', '../../public/php/updateEmailInfo.php', 'email'); }, false);
+document.getElementById("custom-contact-phone").addEventListener('click', function(){ modifyPhoneContent('phone-nr', '../../public/php/updatePhoneNr.php', 'phone'); }, false);
 //document.getElementById("custom-username").addEventListener('click', function(){ modifyContent('username'); }, false);
 document.getElementById("custom-password").addEventListener('click', function(){ updatePassword('original-input-pass'); }, false);
 document.getElementById("custom-bio").addEventListener('click', function(){ updateBio('personal-bio'); }, false);

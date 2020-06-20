@@ -1,56 +1,38 @@
 <?php
+include '../models/User.class.php';
+include '../core/db.class.php';
+
+$user = new User();
 $msg = "";
 session_start();
-$msg = "";
 
 if (!isset($_SESSION['loggedin'])) {
-  header('Location: loginPage.php');
-  exit;
+    header('Location: ../../Index.php');
+    exit;
 }
-
-require('static/php/dbConnection.php');
-
+$dbconn = new DB();
 $username = $_SESSION['username'];
 $password = $_SESSION['password'];
 
 $query_employee = "SELECT * FROM employee WHERE Username = '$username' AND Password = '$password'";
-$employee_statement = $conn->prepare($query_employee);
+$employee_statement = $dbconn->connect()->prepare($query_employee);
 $employee_statement->execute();
 $employees = $employee_statement->fetchAll();
 $employee_statement->closeCursor();
 
 foreach ($employees as $empl) {
-  $_SESSION['employeeId'] = $empl['EmployeeID'];
+    $_SESSION['employeeId'] = $empl['EmployeeID'];
 }
 
-//sending 'email' to the database 
-$msg = "";
-if (isset($_POST['Submit'])) {
-  $subject = $_POST['subject'];
-  $txt = $_POST['emailContent'];
-  $date = date('d/m/Y');
-  if ($subject == "" || $txt == "") {
-    $msg = "Not all of the values are entered!";
-  } else {
-    $employee_id = $_SESSION['employeeId'];
-
-    $emailContent = "Subject: " . $subject . " Body: " .  $txt;
-
-    $query = "INSERT INTO email (EmployeeID, Email, Date) VALUES ( '$employee_id', '$emailContent', '$date')";
-    $stm = $conn->prepare($query);
-    $stm->execute();
-    header('Location: homePage.php');
-  }
-}
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" type="text/css" href="static/css/main.css">
-  <link rel="stylesheet" type="text/css" href="static/css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="static/css/ionicons-master/docs/css/ionicons.min.css">
+  <link rel="stylesheet" type="text/css" href="../../public/css/main.css">
+  <link rel="stylesheet" type="text/css" href="../../public/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../../public/css/ionicons-master/docs/css/ionicons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
@@ -67,14 +49,14 @@ if (isset($_POST['Submit'])) {
 
     <nav>
       <div class="row">
-        <a href="#home"><img alt="logo" class="logo-nav" src="static/img/logo2.png"></a>
+        <a href="#home"><img alt="logo" class="logo-nav" src="../../public/img/logo2.png"></a>
         <ul class="main-nav">
-          <li><a href="homePage.php">Home</a></li>
-          <li><a href="calendar.php">Shedule</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="Schedule.php">Shedule</a></li>
         </ul>
 
         <div class="main-nav logout">
-          <a href="logoutPage.php">Log Out</a>
+          <a href="../../public/php/logout.php">Log Out</a>
         </div>
       </div>
     </nav>
@@ -86,7 +68,7 @@ if (isset($_POST['Submit'])) {
 
     <div class="content-block">
       <div class="row">
-        <img src="static/img/wallpaper.jpg" alt="wallpaper" class="cover-picture">
+        <img src="../../public/img/wallpaper.jpg" alt="wallpaper" class="cover-picture">
       </div>
       <?php foreach ($employees as $employee) ?>
       <div class="wallpaper-personal-info">
@@ -139,7 +121,7 @@ if (isset($_POST['Submit'])) {
             #the shifts will be taken from the database using the employee id
             $string = "Assigned";
             $query_shift = "SELECT * FROM schedule WHERE EmployeeID = '$employee_id' AND Status = '$string'";
-            $shift_statement = $conn->prepare($query_shift);
+            $shift_statement = $dbconn->connect()->prepare($query_shift);
             $shift_statement->execute();
             $shifts = $shift_statement->fetchAll();
             $shift_statement->closeCursor();
@@ -272,7 +254,7 @@ if (isset($_POST['Submit'])) {
   <section class="home-page-content">
     <div class="row">
       <h2 class="home-content">Make an inquiry</h2>
-      <form class="formInquiry" action="homePage.php" method="POST">
+      <form class="formInquiry" action="<?php $user->SendInquiry()?>" method="POST">
         <input name="subject" placeholder="Subject..."><br>
         <textarea cols="30" rows="10" id="emailContent" name="emailContent" required></textarea><br>
         <input class="submit" type="submit" name="Submit" value="Send">
@@ -315,7 +297,7 @@ if (isset($_POST['Submit'])) {
       </p>
     </div>
   </footer>
-  <script src="static/js/updateProfile.js"></script>
+  <script src="../../public/js/updateProfile.js"></script>
 </body>
 
 </html>

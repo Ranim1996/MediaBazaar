@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="static/css/main.css">
-    <link rel="stylesheet" type="text/css" href="static/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="static/css/ionicons-master/docs/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="../../public/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../../public/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../public/css/ionicons-master/docs/css/ionicons.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap" rel="stylesheet">
-    <script src="static/js/password.js"></script>
+    <script src="../../public/js/password.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -24,7 +24,7 @@
             </div>
         </div>
 
-        <form action="static/php/updateFirstLoginPassword.php" method="POST">
+        <form action="../../public/php/updateFirstLoginPassword.php" method="POST">
             <ul class="list">
                 <li>
                     <h2 id="login-heading">Choose your password</h2>
