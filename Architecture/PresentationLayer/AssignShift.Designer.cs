@@ -33,8 +33,6 @@
             this.btnCheckIn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAbsent = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnLate = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnPresent = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lbShifts = new System.Windows.Forms.ListBox();
             this.grpBxAssignShift = new System.Windows.Forms.GroupBox();
             this.btnAssignWorkShift = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -64,8 +62,6 @@
             this.grpBxViewShifts.Controls.Add(this.btnCheckIn);
             this.grpBxViewShifts.Controls.Add(this.label2);
             this.grpBxViewShifts.Controls.Add(this.btnAbsent);
-            this.grpBxViewShifts.Controls.Add(this.btnLate);
-            this.grpBxViewShifts.Controls.Add(this.btnPresent);
             this.grpBxViewShifts.Controls.Add(this.lbShifts);
             this.grpBxViewShifts.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpBxViewShifts.Location = new System.Drawing.Point(12, 341);
@@ -96,7 +92,7 @@
             this.btnCheckOut.IconVisible = false;
             this.btnCheckOut.IconZoom = 90D;
             this.btnCheckOut.IsTab = false;
-            this.btnCheckOut.Location = new System.Drawing.Point(194, 296);
+            this.btnCheckOut.Location = new System.Drawing.Point(129, 344);
             this.btnCheckOut.Margin = new System.Windows.Forms.Padding(43, 81, 43, 81);
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
@@ -132,7 +128,7 @@
             this.btnCheckIn.IconVisible = false;
             this.btnCheckIn.IconZoom = 90D;
             this.btnCheckIn.IsTab = false;
-            this.btnCheckIn.Location = new System.Drawing.Point(70, 296);
+            this.btnCheckIn.Location = new System.Drawing.Point(10, 344);
             this.btnCheckIn.Margin = new System.Windows.Forms.Padding(20, 44, 20, 44);
             this.btnCheckIn.Name = "btnCheckIn";
             this.btnCheckIn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
@@ -178,7 +174,7 @@
             this.btnAbsent.IconVisible = false;
             this.btnAbsent.IconZoom = 90D;
             this.btnAbsent.IsTab = false;
-            this.btnAbsent.Location = new System.Drawing.Point(245, 344);
+            this.btnAbsent.Location = new System.Drawing.Point(249, 344);
             this.btnAbsent.Margin = new System.Windows.Forms.Padding(43, 81, 43, 81);
             this.btnAbsent.Name = "btnAbsent";
             this.btnAbsent.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
@@ -192,78 +188,6 @@
             this.btnAbsent.Textcolor = System.Drawing.Color.White;
             this.btnAbsent.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbsent.Click += new System.EventHandler(this.btnAbsent_Click);
-            // 
-            // btnLate
-            // 
-            this.btnLate.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.btnLate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnLate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLate.BorderRadius = 0;
-            this.btnLate.ButtonText = "Late";
-            this.btnLate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLate.DisabledColor = System.Drawing.Color.Gray;
-            this.btnLate.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnLate.Iconimage = null;
-            this.btnLate.Iconimage_right = null;
-            this.btnLate.Iconimage_right_Selected = null;
-            this.btnLate.Iconimage_Selected = null;
-            this.btnLate.IconMarginLeft = 0;
-            this.btnLate.IconMarginRight = 0;
-            this.btnLate.IconRightVisible = false;
-            this.btnLate.IconRightZoom = 0D;
-            this.btnLate.IconVisible = false;
-            this.btnLate.IconZoom = 90D;
-            this.btnLate.IsTab = false;
-            this.btnLate.Location = new System.Drawing.Point(129, 344);
-            this.btnLate.Margin = new System.Windows.Forms.Padding(20, 44, 20, 44);
-            this.btnLate.Name = "btnLate";
-            this.btnLate.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnLate.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.btnLate.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnLate.selected = false;
-            this.btnLate.Size = new System.Drawing.Size(110, 32);
-            this.btnLate.TabIndex = 12;
-            this.btnLate.Text = "Late";
-            this.btnLate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnLate.Textcolor = System.Drawing.Color.White;
-            this.btnLate.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLate.Click += new System.EventHandler(this.btnLate_Click);
-            // 
-            // btnPresent
-            // 
-            this.btnPresent.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.btnPresent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnPresent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPresent.BorderRadius = 0;
-            this.btnPresent.ButtonText = "Present";
-            this.btnPresent.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPresent.DisabledColor = System.Drawing.Color.Gray;
-            this.btnPresent.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnPresent.Iconimage = null;
-            this.btnPresent.Iconimage_right = null;
-            this.btnPresent.Iconimage_right_Selected = null;
-            this.btnPresent.Iconimage_Selected = null;
-            this.btnPresent.IconMarginLeft = 0;
-            this.btnPresent.IconMarginRight = 0;
-            this.btnPresent.IconRightVisible = false;
-            this.btnPresent.IconRightZoom = 0D;
-            this.btnPresent.IconVisible = false;
-            this.btnPresent.IconZoom = 90D;
-            this.btnPresent.IsTab = false;
-            this.btnPresent.Location = new System.Drawing.Point(10, 344);
-            this.btnPresent.Margin = new System.Windows.Forms.Padding(9, 24, 9, 24);
-            this.btnPresent.Name = "btnPresent";
-            this.btnPresent.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnPresent.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.btnPresent.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnPresent.selected = false;
-            this.btnPresent.Size = new System.Drawing.Size(110, 32);
-            this.btnPresent.TabIndex = 11;
-            this.btnPresent.Text = "Present";
-            this.btnPresent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnPresent.Textcolor = System.Drawing.Color.White;
-            this.btnPresent.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPresent.Click += new System.EventHandler(this.btnPresent_Click);
             // 
             // lbShifts
             // 
@@ -550,8 +474,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox lbShifts;
         private Bunifu.Framework.UI.BunifuFlatButton btnAbsent;
-        private Bunifu.Framework.UI.BunifuFlatButton btnLate;
-        private Bunifu.Framework.UI.BunifuFlatButton btnPresent;
         private System.Windows.Forms.TextBox tbDate;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
