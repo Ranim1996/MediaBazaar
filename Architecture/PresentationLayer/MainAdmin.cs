@@ -395,7 +395,7 @@ namespace Media_Bazaar
                         {
                             if (adminManagment.ConfirmRequest(i, req))
                             {
-                                MessageBox.Show("Confirmed");
+                                
                             }
                             while (checkedListBox1.CheckedIndices.Count > 0)
                             {
@@ -404,6 +404,7 @@ namespace Media_Bazaar
                         }
                     }
                 }
+                MessageBox.Show("Confirmed");
             }
             UpdateRestockInfo();
         }
@@ -430,7 +431,7 @@ namespace Media_Bazaar
                         {
                             if (adminManagment.RejectRequest(i, req))
                             {
-                                MessageBox.Show("Rejected");
+                                
                             }
                             while (checkedListBox1.CheckedIndices.Count > 0)
                             {
@@ -439,6 +440,7 @@ namespace Media_Bazaar
                         }
                     }
                 }
+                MessageBox.Show("Rejected");
             }
             UpdateRestockInfo();
         }
@@ -804,7 +806,7 @@ namespace Media_Bazaar
                 string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                 ExportDataToCSV(emp, path + "\\EmployeeData.CSV");
 
-                MessageBox.Show("Emplyee Data Downloaded");
+                MessageBox.Show("Employee Data Downloaded");
             }
             catch (Exception excep)
             {

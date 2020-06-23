@@ -221,7 +221,7 @@ namespace Media_Bazaar
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                return connection.ExecuteScalar<int>($"SELECT Quantity FROM RestockRequest WHERE ProductName ='{name}';");
+                return connection.ExecuteScalar<int>($"SELECT Quantity FROM RestockRequest WHERE ProductName='{name}';");
             }
         }
 

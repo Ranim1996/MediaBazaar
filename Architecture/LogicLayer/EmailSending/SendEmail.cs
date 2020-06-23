@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,7 +29,7 @@ namespace Media_Bazaar
                 client.UseDefaultCredentials = false;
                 client.EnableSsl = true;
 
-                client.Credentials = new System.Net.NetworkCredential("media.bazaar2020@gmail.com", "Mediabazaar2020");
+                client.Credentials = new System.Net.NetworkCredential("media.bazaar2020@gmail.com", "SpankLee12.");
                 client.Send(message);
                 message = null;
             }

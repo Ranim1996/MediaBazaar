@@ -42,9 +42,6 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -53,6 +50,9 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel24 = new System.Windows.Forms.TableLayoutPanel();
@@ -123,9 +123,6 @@
             this.btnShiftsTABdepartStats = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton11 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnRestock = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.cbRestock = new System.Windows.Forms.ComboBox();
-            this.chartRestock = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartRequests = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabSearchEmpl = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
@@ -182,6 +179,10 @@
             this.lblFirstName = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.timerSelectedMenu = new System.Windows.Forms.Timer(this.components);
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.btnRestock = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.cbRestock = new System.Windows.Forms.ComboBox();
+            this.chartRestock = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.tabEmployeeStats.SuspendLayout();
             this.tableLayoutPanel27.SuspendLayout();
@@ -219,7 +220,6 @@
             this.tableLayoutPanel13.SuspendLayout();
             this.tableLayoutPanel14.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartRestock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartRequests)).BeginInit();
             this.tabSearchEmpl.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
@@ -238,6 +238,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartEmplAttendance)).BeginInit();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartRestock)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel23
@@ -1796,9 +1798,7 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.btnRestock);
-            this.panel5.Controls.Add(this.cbRestock);
-            this.panel5.Controls.Add(this.chartRestock);
+            this.panel5.Controls.Add(this.panel11);
             this.panel5.Controls.Add(this.chartRequests);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1808,73 +1808,10 @@
             this.panel5.Size = new System.Drawing.Size(783, 418);
             this.panel5.TabIndex = 1;
             // 
-            // btnRestock
-            // 
-            this.btnRestock.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.btnRestock.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRestock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnRestock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRestock.BorderRadius = 0;
-            this.btnRestock.ButtonText = "Add";
-            this.btnRestock.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRestock.DisabledColor = System.Drawing.Color.Gray;
-            this.btnRestock.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnRestock.Iconimage = null;
-            this.btnRestock.Iconimage_right = null;
-            this.btnRestock.Iconimage_right_Selected = null;
-            this.btnRestock.Iconimage_Selected = null;
-            this.btnRestock.IconMarginLeft = 0;
-            this.btnRestock.IconMarginRight = 0;
-            this.btnRestock.IconRightVisible = false;
-            this.btnRestock.IconRightZoom = 0D;
-            this.btnRestock.IconVisible = false;
-            this.btnRestock.IconZoom = 90D;
-            this.btnRestock.IsTab = false;
-            this.btnRestock.Location = new System.Drawing.Point(597, 33);
-            this.btnRestock.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.btnRestock.Name = "btnRestock";
-            this.btnRestock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnRestock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.btnRestock.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnRestock.selected = false;
-            this.btnRestock.Size = new System.Drawing.Size(127, 26);
-            this.btnRestock.TabIndex = 7;
-            this.btnRestock.Text = "Add";
-            this.btnRestock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnRestock.Textcolor = System.Drawing.Color.White;
-            this.btnRestock.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btnRestock.Click += new System.EventHandler(this.btnRestock_Click);
-            // 
-            // cbRestock
-            // 
-            this.cbRestock.FormattingEnabled = true;
-            this.cbRestock.Location = new System.Drawing.Point(447, 33);
-            this.cbRestock.Name = "cbRestock";
-            this.cbRestock.Size = new System.Drawing.Size(127, 26);
-            this.cbRestock.TabIndex = 5;
-            // 
-            // chartRestock
-            // 
-            chartArea4.Name = "ChartArea1";
-            this.chartRestock.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chartRestock.Legends.Add(legend4);
-            this.chartRestock.Location = new System.Drawing.Point(403, 89);
-            this.chartRestock.Name = "chartRestock";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "restock";
-            this.chartRestock.Series.Add(series4);
-            this.chartRestock.Size = new System.Drawing.Size(377, 326);
-            this.chartRestock.TabIndex = 3;
-            this.chartRestock.Text = "chart1";
-            // 
             // chartRequests
             // 
-            this.chartRequests.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chartRequests.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             chartArea5.Name = "ChartArea1";
             this.chartRequests.ChartAreas.Add(chartArea5);
             legend5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1890,7 +1827,7 @@
             series5.Legend = "Legend1";
             series5.Name = "s1";
             this.chartRequests.Series.Add(series5);
-            this.chartRequests.Size = new System.Drawing.Size(393, 381);
+            this.chartRequests.Size = new System.Drawing.Size(442, 400);
             this.chartRequests.TabIndex = 2;
             this.chartRequests.Text = "chart1";
             title4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2825,6 +2762,84 @@
             this.timerSelectedMenu.Interval = 10;
             this.timerSelectedMenu.Tick += new System.EventHandler(this.timerSelectedMenu_Tick);
             // 
+            // panel11
+            // 
+            this.panel11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel11.Controls.Add(this.btnRestock);
+            this.panel11.Controls.Add(this.cbRestock);
+            this.panel11.Controls.Add(this.chartRestock);
+            this.panel11.Location = new System.Drawing.Point(451, 15);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(328, 400);
+            this.panel11.TabIndex = 3;
+            // 
+            // btnRestock
+            // 
+            this.btnRestock.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnRestock.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRestock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnRestock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRestock.BorderRadius = 0;
+            this.btnRestock.ButtonText = "Add";
+            this.btnRestock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRestock.DisabledColor = System.Drawing.Color.Gray;
+            this.btnRestock.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnRestock.Iconimage = null;
+            this.btnRestock.Iconimage_right = null;
+            this.btnRestock.Iconimage_right_Selected = null;
+            this.btnRestock.Iconimage_Selected = null;
+            this.btnRestock.IconMarginLeft = 0;
+            this.btnRestock.IconMarginRight = 0;
+            this.btnRestock.IconRightVisible = false;
+            this.btnRestock.IconRightZoom = 0D;
+            this.btnRestock.IconVisible = false;
+            this.btnRestock.IconZoom = 90D;
+            this.btnRestock.IsTab = false;
+            this.btnRestock.Location = new System.Drawing.Point(200, 23);
+            this.btnRestock.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
+            this.btnRestock.Name = "btnRestock";
+            this.btnRestock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnRestock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnRestock.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnRestock.selected = false;
+            this.btnRestock.Size = new System.Drawing.Size(109, 36);
+            this.btnRestock.TabIndex = 10;
+            this.btnRestock.Text = "Add";
+            this.btnRestock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnRestock.Textcolor = System.Drawing.Color.White;
+            this.btnRestock.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btnRestock.Click += new System.EventHandler(this.btnRestock_Click_1);
+            // 
+            // cbRestock
+            // 
+            this.cbRestock.FormattingEnabled = true;
+            this.cbRestock.Location = new System.Drawing.Point(20, 28);
+            this.cbRestock.Name = "cbRestock";
+            this.cbRestock.Size = new System.Drawing.Size(133, 26);
+            this.cbRestock.TabIndex = 9;
+            // 
+            // chartRestock
+            // 
+            this.chartRestock.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea4.Name = "ChartArea1";
+            this.chartRestock.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartRestock.Legends.Add(legend4);
+            this.chartRestock.Location = new System.Drawing.Point(20, 71);
+            this.chartRestock.Name = "chartRestock";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "restock";
+            this.chartRestock.Series.Add(series4);
+            this.chartRestock.Size = new System.Drawing.Size(303, 326);
+            this.chartRestock.TabIndex = 8;
+            this.chartRestock.Text = "chart1";
+            // 
             // MainManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2877,7 +2892,6 @@
             this.tableLayoutPanel13.ResumeLayout(false);
             this.tableLayoutPanel14.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chartRestock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartRequests)).EndInit();
             this.tabSearchEmpl.ResumeLayout(false);
             this.tableLayoutPanel15.ResumeLayout(false);
@@ -2900,6 +2914,8 @@
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.panel11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartRestock)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3031,8 +3047,9 @@
         private System.Windows.Forms.TextBox tbxDateOfBirth;
         private System.Windows.Forms.Button btnEditData;
         private System.Windows.Forms.Button btnSaveData;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartRestock;
-        private System.Windows.Forms.ComboBox cbRestock;
+        private System.Windows.Forms.Panel panel11;
         private Bunifu.Framework.UI.BunifuFlatButton btnRestock;
+        private System.Windows.Forms.ComboBox cbRestock;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartRestock;
     }
 }

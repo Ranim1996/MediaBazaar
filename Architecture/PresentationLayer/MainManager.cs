@@ -405,6 +405,11 @@ namespace Media_Bazaar
 
         private void btnRestock_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btnRestock_Click_1(object sender, EventArgs e)
+        {
             string name = cbRestock.Text;
             chartRestock.Series["restock"].Points.AddXY(Convert.ToString(name), managerManagment.GetRestockQuantity(name));
         }
