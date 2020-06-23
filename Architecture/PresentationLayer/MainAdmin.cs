@@ -588,10 +588,21 @@ namespace Media_Bazaar
             tabControl1.SelectedTab = SheduleGenerating;
         }
 
+        public void Clean()
+        {
+            this.tbDepartment.Text = "";
+            this.tbNrAdmins.Text = "";
+            this.tbNrManagers.Text = "";
+            this.tbNrDepotWorkers.Text = "";
+            this.tbNrEmployees.Text = "";
+        }
+
         private void btnGenerateScheduleForTheWeek_Click(object sender, EventArgs e)
         {
             adminManagment.GenerateSchedule(tbDepartment.Text, Convert.ToInt32(tbNrAdmins.Text), Convert.ToInt32(tbNrManagers.Text), Convert.ToInt32(tbNrDepotWorkers.Text), Convert.ToInt32(tbNrEmployees.Text));
             MessageBox.Show("Generated!");
+
+            Clean();
         }
 
         private void btnReassign_Click(object sender, EventArgs e)

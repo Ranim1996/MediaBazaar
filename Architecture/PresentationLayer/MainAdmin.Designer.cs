@@ -720,7 +720,7 @@
             this.pnlHolderContentMail.Location = new System.Drawing.Point(64, 70);
             this.pnlHolderContentMail.Margin = new System.Windows.Forms.Padding(4);
             this.pnlHolderContentMail.Name = "pnlHolderContentMail";
-            this.pnlHolderContentMail.Size = new System.Drawing.Size(680, 653);
+            this.pnlHolderContentMail.Size = new System.Drawing.Size(655, 653);
             this.pnlHolderContentMail.TabIndex = 0;
             this.pnlHolderContentMail.Visible = false;
             // 
@@ -747,14 +747,14 @@
             this.btnDeleteMail.IconVisible = false;
             this.btnDeleteMail.IconZoom = 90D;
             this.btnDeleteMail.IsTab = false;
-            this.btnDeleteMail.Location = new System.Drawing.Point(657, 580);
+            this.btnDeleteMail.Location = new System.Drawing.Point(384, 497);
             this.btnDeleteMail.Margin = new System.Windows.Forms.Padding(9, 17, 9, 17);
             this.btnDeleteMail.Name = "btnDeleteMail";
             this.btnDeleteMail.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnDeleteMail.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnDeleteMail.OnHoverTextColor = System.Drawing.Color.White;
             this.btnDeleteMail.selected = false;
-            this.btnDeleteMail.Size = new System.Drawing.Size(483, 81);
+            this.btnDeleteMail.Size = new System.Drawing.Size(177, 61);
             this.btnDeleteMail.TabIndex = 15;
             this.btnDeleteMail.Text = "Delete";
             this.btnDeleteMail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -783,14 +783,14 @@
             this.btnMarkAsRead.IconVisible = false;
             this.btnMarkAsRead.IconZoom = 90D;
             this.btnMarkAsRead.IsTab = false;
-            this.btnMarkAsRead.Location = new System.Drawing.Point(115, 580);
+            this.btnMarkAsRead.Location = new System.Drawing.Point(103, 497);
             this.btnMarkAsRead.Margin = new System.Windows.Forms.Padding(7, 12, 7, 12);
             this.btnMarkAsRead.Name = "btnMarkAsRead";
             this.btnMarkAsRead.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnMarkAsRead.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnMarkAsRead.OnHoverTextColor = System.Drawing.Color.White;
             this.btnMarkAsRead.selected = false;
-            this.btnMarkAsRead.Size = new System.Drawing.Size(527, 81);
+            this.btnMarkAsRead.Size = new System.Drawing.Size(204, 61);
             this.btnMarkAsRead.TabIndex = 14;
             this.btnMarkAsRead.Text = "Mark as read";
             this.btnMarkAsRead.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -815,10 +815,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.rtbEmailBody.Enabled = false;
             this.rtbEmailBody.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtbEmailBody.Location = new System.Drawing.Point(115, 239);
+            this.rtbEmailBody.Location = new System.Drawing.Point(103, 179);
             this.rtbEmailBody.Margin = new System.Windows.Forms.Padding(4);
             this.rtbEmailBody.Name = "rtbEmailBody";
-            this.rtbEmailBody.Size = new System.Drawing.Size(483, 302);
+            this.rtbEmailBody.Size = new System.Drawing.Size(458, 302);
             this.rtbEmailBody.TabIndex = 12;
             this.rtbEmailBody.Text = "";
             // 
@@ -838,7 +838,7 @@
             // 
             this.lblEmailSubject.AutoSize = true;
             this.lblEmailSubject.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailSubject.Location = new System.Drawing.Point(95, 148);
+            this.lblEmailSubject.Location = new System.Drawing.Point(95, 119);
             this.lblEmailSubject.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmailSubject.Name = "lblEmailSubject";
             this.lblEmailSubject.Size = new System.Drawing.Size(168, 44);
@@ -4263,10 +4263,10 @@
             this.tbWage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbWage.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.tbWage.Location = new System.Drawing.Point(353, 536);
+            this.tbWage.Location = new System.Drawing.Point(349, 536);
             this.tbWage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbWage.Name = "tbWage";
-            this.tbWage.Size = new System.Drawing.Size(661, 30);
+            this.tbWage.Size = new System.Drawing.Size(296, 30);
             this.tbWage.TabIndex = 24;
             // 
             // label30
@@ -4287,10 +4287,10 @@
             this.tbMaxHrs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbMaxHrs.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.tbMaxHrs.Location = new System.Drawing.Point(353, 492);
+            this.tbMaxHrs.Location = new System.Drawing.Point(349, 486);
             this.tbMaxHrs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbMaxHrs.Name = "tbMaxHrs";
-            this.tbMaxHrs.Size = new System.Drawing.Size(661, 30);
+            this.tbMaxHrs.Size = new System.Drawing.Size(296, 30);
             this.tbMaxHrs.TabIndex = 22;
             // 
             // tbMinHrs
@@ -4298,10 +4298,10 @@
             this.tbMinHrs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbMinHrs.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.tbMinHrs.Location = new System.Drawing.Point(353, 444);
+            this.tbMinHrs.Location = new System.Drawing.Point(349, 445);
             this.tbMinHrs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbMinHrs.Name = "tbMinHrs";
-            this.tbMinHrs.Size = new System.Drawing.Size(661, 30);
+            this.tbMinHrs.Size = new System.Drawing.Size(296, 30);
             this.tbMinHrs.TabIndex = 21;
             // 
             // label28
