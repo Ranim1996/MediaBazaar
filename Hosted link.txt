@@ -1,1 +1,1 @@
-http://i344446.hera.fhict.nl/mediaBazaar/loginPage.php
+http://i344446.hera.fhict.nl/MediaBazaarWeb/Index.php
