@@ -590,10 +590,21 @@ namespace Media_Bazaar
             tabControl1.SelectedTab = SheduleGenerating;
         }
 
+        public void Clean()
+        {
+            this.tbDepartment.Text = "";
+            this.tbNrAdmins.Text = "";
+            this.tbNrManagers.Text = "";
+            this.tbNrDepotWorkers.Text = "";
+            this.tbNrEmployees.Text = "";
+        }
+
         private void btnGenerateScheduleForTheWeek_Click(object sender, EventArgs e)
         {
             adminManagment.GenerateSchedule(tbDepartment.Text, Convert.ToInt32(tbNrAdmins.Text), Convert.ToInt32(tbNrManagers.Text), Convert.ToInt32(tbNrDepotWorkers.Text), Convert.ToInt32(tbNrEmployees.Text));
             MessageBox.Show("Generated!");
+
+            Clean();
         }
 
         private void btnReassign_Click(object sender, EventArgs e)
@@ -812,6 +823,34 @@ namespace Media_Bazaar
             {
                 MessageBox.Show(excep.ToString());
             }
+        }
+
+        private void bunifuFlatButton4_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabAddProfile;
+        }
+
+        private void bunifuFlatButton5_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabSchedule;
+
+        }
+
+        private void bunifuFlatButton7_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabRestockReq;
+        }
+
+        private void bunifuFlatButton8_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabDepartManage;
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            Login log = new Login();
+            log.Show();
+            this.Visible = false;
         }
     }
 }
