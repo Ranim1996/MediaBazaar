@@ -161,6 +161,7 @@
             this.btnRemoveProfileTABassignDep = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAssignToDepTABassignDep = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.btnExportToCSV = new System.Windows.Forms.Button();
             this.btnExportToExcel = new System.Windows.Forms.Button();
             this.panel17 = new System.Windows.Forms.Panel();
             this.cmbDepartments = new System.Windows.Forms.ComboBox();
@@ -273,7 +274,6 @@
             this.panel29 = new System.Windows.Forms.Panel();
             this.panel30 = new System.Windows.Forms.Panel();
             this.bunifuFlatButton10 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnExportToCSV = new System.Windows.Forms.Button();
             this.tabEmail.SuspendLayout();
             this.tableLayoutPanel20.SuspendLayout();
             this.tableLayoutPanel25.SuspendLayout();
@@ -3030,6 +3030,16 @@
             this.panel9.Size = new System.Drawing.Size(1228, 660);
             this.panel9.TabIndex = 1;
             // 
+            // btnExportToCSV
+            // 
+            this.btnExportToCSV.Location = new System.Drawing.Point(53, 82);
+            this.btnExportToCSV.Name = "btnExportToCSV";
+            this.btnExportToCSV.Size = new System.Drawing.Size(298, 32);
+            this.btnExportToCSV.TabIndex = 11;
+            this.btnExportToCSV.Text = "Export Employee Data to CSV";
+            this.btnExportToCSV.UseVisualStyleBackColor = true;
+            this.btnExportToCSV.Click += new System.EventHandler(this.BtnExportToCSV_Click);
+            // 
             // btnExportToExcel
             // 
             this.btnExportToExcel.Location = new System.Drawing.Point(53, 44);
@@ -4744,6 +4754,7 @@
             this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
+            this.bunifuFlatButton2.Click += new System.EventHandler(this.bunifuFlatButton2_Click);
             // 
             // bunifuFlatButton4
             // 
@@ -4780,6 +4791,7 @@
             this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton4.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
+            this.bunifuFlatButton4.Click += new System.EventHandler(this.bunifuFlatButton4_Click);
             // 
             // pictureBox8
             // 
@@ -4828,6 +4840,7 @@
             this.bunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton5.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton5.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
+            this.bunifuFlatButton5.Click += new System.EventHandler(this.bunifuFlatButton5_Click);
             // 
             // bunifuFlatButton7
             // 
@@ -4864,6 +4877,7 @@
             this.bunifuFlatButton7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton7.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton7.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
+            this.bunifuFlatButton7.Click += new System.EventHandler(this.bunifuFlatButton7_Click);
             // 
             // bunifuFlatButton8
             // 
@@ -4900,6 +4914,7 @@
             this.bunifuFlatButton8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton8.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.bunifuFlatButton8.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
+            this.bunifuFlatButton8.Click += new System.EventHandler(this.bunifuFlatButton8_Click);
             // 
             // tableLayoutPanel34
             // 
@@ -5252,16 +5267,6 @@
             this.bunifuFlatButton10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton10.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton10.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
-            // 
-            // btnExportToCSV
-            // 
-            this.btnExportToCSV.Location = new System.Drawing.Point(53, 82);
-            this.btnExportToCSV.Name = "btnExportToCSV";
-            this.btnExportToCSV.Size = new System.Drawing.Size(298, 32);
-            this.btnExportToCSV.TabIndex = 11;
-            this.btnExportToCSV.Text = "Export Employee Data to CSV";
-            this.btnExportToCSV.UseVisualStyleBackColor = true;
-            this.btnExportToCSV.Click += new System.EventHandler(this.BtnExportToCSV_Click);
             // 
             // MainAdmin
             // 

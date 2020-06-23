@@ -811,5 +811,33 @@ namespace Media_Bazaar
                 MessageBox.Show(excep.ToString());
             }
         }
+
+        private void bunifuFlatButton4_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabAddProfile;
+        }
+
+        private void bunifuFlatButton5_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabSchedule;
+
+        }
+
+        private void bunifuFlatButton7_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabRestockReq;
+        }
+
+        private void bunifuFlatButton8_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabDepartManage;
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            Login log = new Login();
+            log.Show();
+            this.Visible = false;
+        }
     }
 }
