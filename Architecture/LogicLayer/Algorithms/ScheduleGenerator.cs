@@ -40,6 +40,14 @@ namespace Media_Bazaar
 
         private void SeparateTheShiftPerDay(DateTime date)
         {
+            firstShiftPeriod = "";
+            secondShiftPeriod = "";
+            thirdShiftPeriod = "";
+
+            firstShift = new List<EmployeeBase>();
+            secondShift = new List<EmployeeBase>();
+            thirdShift = new List<EmployeeBase>();
+
             if (date.DayOfWeek.ToString() == "Saturday")
             {
                 firstShiftPeriod = "09:00-15:00";
@@ -207,8 +215,49 @@ namespace Media_Bazaar
             separate3.SeparateEmployeesByPosition(thirdShift);
 
 
+            if (date.DayOfWeek == DayOfWeek.Sunday)
+            {
+                GenerateScheduleForShiftByPosition(date, firstShift, separate1.GetAdmins(), "ADMINISTRATOR", nrAdminsPerShift, nrWorkingHoursFirstShift, department, firstShiftPeriod);
+                GenerateScheduleForShiftByPosition(date, firstShift, separate1.GetManagers(), "MANAGER", nrManagersPerShift, nrWorkingHoursFirstShift, department, firstShiftPeriod);
+                GenerateScheduleForShiftByPosition(date, firstShift, separate1.GetDepotWorkers(), "DEPOT", nrDepotWorkersPerShift, nrWorkingHoursFirstShift, department, firstShiftPeriod);
+                GenerateScheduleForShiftByPosition(date, firstShift, separate1.GetEmployees(), "EMPLOYEE", nrEmployeesPerShift, nrWorkingHoursFirstShift, department, firstShiftPeriod);
+            }
+            else if (date.DayOfWeek == DayOfWeek.Saturday)
+            {
+                //generate fisrt shifts
+                GenerateScheduleForShiftByPosition(date, firstShift, separate1.GetAdmins(), "ADMINISTRATOR", nrAdminsPerShift, nrWorkingHoursFirstShift, department, firstShiftPeriod);
+                GenerateScheduleForShiftByPosition(date, firstShift, separate1.GetManagers(), "MANAGER", nrManagersPerShift, nrWorkingHoursFirstShift, department, firstShiftPeriod);
+                GenerateScheduleForShiftByPosition(date, firstShift, separate1.GetDepotWorkers(), "DEPOT", nrDepotWorkersPerShift, nrWorkingHoursFirstShift, department, firstShiftPeriod);
+                GenerateScheduleForShiftByPosition(date, firstShift, separate1.GetEmployees(), "EMPLOYEE", nrEmployeesPerShift, nrWorkingHoursFirstShift, department, firstShiftPeriod);
 
-            //generate fisrt shifts
+                //generate second shifts
+                GenerateScheduleForShiftByPosition(date, secondShift, separate2.GetAdmins(), "ADMINISTRATOR", nrAdminsPerShift, nrWorkingHoursSecondShift, department, secondShiftPeriod);
+                GenerateScheduleForShiftByPosition(date, secondShift, separate2.GetManagers(), "MANAGER", nrManagersPerShift, nrWorkingHoursSecondShift, department, secondShiftPeriod);
+                GenerateScheduleForShiftByPosition(date, secondShift, separate2.GetDepotWorkers(), "DEPOT", nrDepotWorkersPerShift, nrWorkingHoursSecondShift, department, secondShiftPeriod);
+                GenerateScheduleForShiftByPosition(date, secondShift, separate2.GetEmployees(), "EMPLOYEE", nrEmployeesPerShift, nrWorkingHoursSecondShift, department, secondShiftPeriod);
+            }
+            else //weekday
+            {
+                //generate fisrt shifts
+                GenerateScheduleForShiftByPosition(date, firstShift, separate1.GetAdmins(), "ADMINISTRATOR", nrAdminsPerShift, nrWorkingHoursFirstShift, department, firstShiftPeriod);
+                GenerateScheduleForShiftByPosition(date, firstShift, separate1.GetManagers(), "MANAGER", nrManagersPerShift, nrWorkingHoursFirstShift, department, firstShiftPeriod);
+                GenerateScheduleForShiftByPosition(date, firstShift, separate1.GetDepotWorkers(), "DEPOT", nrDepotWorkersPerShift, nrWorkingHoursFirstShift, department, firstShiftPeriod);
+                GenerateScheduleForShiftByPosition(date, firstShift, separate1.GetEmployees(), "EMPLOYEE", nrEmployeesPerShift, nrWorkingHoursFirstShift, department, firstShiftPeriod);
+
+                //generate second shifts
+                GenerateScheduleForShiftByPosition(date, secondShift, separate2.GetAdmins(), "ADMINISTRATOR", nrAdminsPerShift, nrWorkingHoursSecondShift, department, secondShiftPeriod);
+                GenerateScheduleForShiftByPosition(date, secondShift, separate2.GetManagers(), "MANAGER", nrManagersPerShift, nrWorkingHoursSecondShift, department, secondShiftPeriod);
+                GenerateScheduleForShiftByPosition(date, secondShift, separate2.GetDepotWorkers(), "DEPOT", nrDepotWorkersPerShift, nrWorkingHoursSecondShift, department, secondShiftPeriod);
+                GenerateScheduleForShiftByPosition(date, secondShift, separate2.GetEmployees(), "EMPLOYEE", nrEmployeesPerShift, nrWorkingHoursSecondShift, department, secondShiftPeriod);
+
+                //generate third shifts
+                GenerateScheduleForShiftByPosition(date, thirdShift, separate3.GetAdmins(), "ADMINISTRATOR", nrAdminsPerShift, nrWorkingHoursThirdShift, department, thirdShiftPeriod);
+                GenerateScheduleForShiftByPosition(date, thirdShift, separate3.GetManagers(), "MANAGER", nrManagersPerShift, nrWorkingHoursThirdShift, department, thirdShiftPeriod);
+                GenerateScheduleForShiftByPosition(date, thirdShift, separate3.GetDepotWorkers(), "DEPOT", nrDepotWorkersPerShift, nrWorkingHoursThirdShift, department, thirdShiftPeriod);
+                GenerateScheduleForShiftByPosition(date, thirdShift, separate3.GetEmployees(), "EMPLOYEE", nrEmployeesPerShift, nrWorkingHoursThirdShift, department, thirdShiftPeriod);
+            }
+
+            /*//generate fisrt shifts
             GenerateScheduleForShiftByPosition(date, firstShift, separate1.GetAdmins(), "ADMINISTRATOR", nrAdminsPerShift, nrWorkingHoursFirstShift, department, firstShiftPeriod);
             GenerateScheduleForShiftByPosition(date, firstShift, separate1.GetManagers(), "MANAGER", nrManagersPerShift, nrWorkingHoursFirstShift, department, firstShiftPeriod);
             GenerateScheduleForShiftByPosition(date, firstShift, separate1.GetDepotWorkers(), "DEPOT", nrDepotWorkersPerShift, nrWorkingHoursFirstShift, department, firstShiftPeriod);
@@ -224,7 +273,7 @@ namespace Media_Bazaar
             GenerateScheduleForShiftByPosition(date, thirdShift, separate3.GetAdmins(), "ADMINISTRATOR", nrAdminsPerShift, nrWorkingHoursThirdShift, department, thirdShiftPeriod);
             GenerateScheduleForShiftByPosition(date, thirdShift, separate3.GetManagers(), "MANAGER", nrManagersPerShift, nrWorkingHoursThirdShift, department, thirdShiftPeriod);
             GenerateScheduleForShiftByPosition(date, thirdShift, separate3.GetDepotWorkers(), "DEPOT", nrDepotWorkersPerShift, nrWorkingHoursThirdShift, department, thirdShiftPeriod);
-            GenerateScheduleForShiftByPosition(date, thirdShift, separate3.GetEmployees(), "EMPLOYEE", nrEmployeesPerShift, nrWorkingHoursThirdShift, department, thirdShiftPeriod);
+            GenerateScheduleForShiftByPosition(date, thirdShift, separate3.GetEmployees(), "EMPLOYEE", nrEmployeesPerShift, nrWorkingHoursThirdShift, department, thirdShiftPeriod); */
         }
 
         public void GenerateScheduleForWeek(string department, int nrAdminsPerShift, int nrManagersPerShift, int nrDepotWorkersPerShift, int nrEmployeesPerShift)
@@ -266,13 +315,20 @@ namespace Media_Bazaar
             foreach (ScheduleBase scheduleBase in cancelledShifts)
             {
                 employeeWithLessHours = dataAccess.GetEmployeesForReassigning(dataAccess.GetPositionByID(scheduleBase.EmployeeId), dataAccess.GetEmployeeDepartamentByID(scheduleBase.EmployeeId));
-
-                dataAccess.ReassignShift(employeeWithLessHours[0].EmployeeID, scheduleBase.Date, scheduleBase.Shift);
-
+                int i = 0;
+                for(int j = 0; j < employeeWithLessHours.Count; j++)
+                {
+                    if(employeeWithLessHours[j].EmployeeID == scheduleBase.EmployeeId)
+                    {
+                        i++;
+                    }
+                    else
+                    {
+                        dataAccess.ReassignShift(employeeWithLessHours[i].EmployeeID, scheduleBase.Date, scheduleBase.Shift, scheduleBase.EmployeeId);
+                        break;
+                    }
+                }                
             }
-
-
-
         }
     }
 }

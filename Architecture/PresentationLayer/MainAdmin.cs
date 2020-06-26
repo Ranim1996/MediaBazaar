@@ -574,7 +574,7 @@ namespace Media_Bazaar
             tbMaxHrs.Clear();
             tbWage.Clear();
             label13.Text = "";
-            tbNationality.Items.Clear();
+            tbNationality.SelectedItem = "";
             MessageBox.Show("The account has been successfully created!");
         }
 

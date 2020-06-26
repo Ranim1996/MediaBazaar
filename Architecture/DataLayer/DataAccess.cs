@@ -157,7 +157,7 @@ namespace Media_Bazaar
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                connection.Execute($"UPDATE Employee SET Departament ='{departament}' WHERE EmployeeID ='{employeeID}'; ");
+                connection.Execute($"UPDATE Employee SET Departament ='{departament}' WHERE EmployeeID='{employeeID}'; ");
             }
 
         }
@@ -167,7 +167,7 @@ namespace Media_Bazaar
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                return connection.ExecuteScalar<string>($"SELECT RequestID FROM RestockRequest WHERE RequestID ='{id}';");
+                return connection.ExecuteScalar<string>($"SELECT RequestID FROM RestockRequest WHERE RequestID='{id}';");
             }
         }
 
@@ -176,7 +176,7 @@ namespace Media_Bazaar
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                return connection.ExecuteScalar<string>($"SELECT ProductName FROM RestockRequest WHERE RequestID ='{id}';");
+                return connection.ExecuteScalar<string>($"SELECT ProductName FROM RestockRequest WHERE RequestID='{id}';");
             }
         }
 
@@ -185,7 +185,7 @@ namespace Media_Bazaar
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                return connection.ExecuteScalar<string>($"SELECT Category FROM RestockRequest WHERE RequestID ='{id}';");
+                return connection.ExecuteScalar<string>($"SELECT Category FROM RestockRequest WHERE RequestID='{id}';");
             }
         }
 
@@ -194,7 +194,7 @@ namespace Media_Bazaar
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                return connection.ExecuteScalar<string>($"SELECT Departament FROM RestockRequest WHERE RequestID ='{id}';");
+                return connection.ExecuteScalar<string>($"SELECT Departament FROM RestockRequest WHERE RequestID='{id}';");
             }
         }
 
@@ -203,7 +203,7 @@ namespace Media_Bazaar
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                return connection.ExecuteScalar<string>($"SELECT Brand FROM RestockRequest WHERE RequestID ='{id}';");
+                return connection.ExecuteScalar<string>($"SELECT Brand FROM RestockRequest WHERE RequestID='{id}';");
             }
         }
 
@@ -212,7 +212,7 @@ namespace Media_Bazaar
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                return connection.ExecuteScalar<string>($"SELECT Quantity FROM RestockRequest WHERE RequestID ='{id}';");
+                return connection.ExecuteScalar<string>($"SELECT Quantity FROM RestockRequest WHERE RequestID='{id}';");
             }
         }
 
@@ -230,7 +230,7 @@ namespace Media_Bazaar
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                return connection.ExecuteScalar<string>($"SELECT DateOfOrder FROM RestockRequest WHERE RequestID ='{id}';");
+                return connection.ExecuteScalar<string>($"SELECT DateOfOrder FROM RestockRequest WHERE RequestID='{id}';");
             }
         }
 
@@ -239,7 +239,7 @@ namespace Media_Bazaar
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                return connection.ExecuteScalar<string>($"SELECT DateOfDelivery FROM RestockRequest WHERE RequestID ='{id}';");
+                return connection.ExecuteScalar<string>($"SELECT DateOfDelivery FROM RestockRequest WHERE RequestID='{id}';");
             }
         }
 
@@ -248,7 +248,7 @@ namespace Media_Bazaar
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                return connection.ExecuteScalar<string>($"SELECT AdminConfirmation FROM RestockRequest WHERE RequestID ='{id}';");
+                return connection.ExecuteScalar<string>($"SELECT AdminConfirmation FROM RestockRequest WHERE RequestID='{id}';");
             }
         }
 
@@ -257,7 +257,7 @@ namespace Media_Bazaar
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                return connection.ExecuteScalar<string>($"SELECT EmployeeID FROM RestockRequest WHERE RequestID ='{id}';");
+                return connection.ExecuteScalar<string>($"SELECT EmployeeID FROM RestockRequest WHERE RequestID='{id}';");
             }
         }
 
@@ -333,7 +333,7 @@ namespace Media_Bazaar
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<RestockRequestBase>($"SELECT * FROM RestockRequest WHERE AdminConfirmation ='CONFIRMED'").ToList();
+                var output = connection.Query<RestockRequestBase>($"SELECT * FROM RestockRequest WHERE AdminConfirmation='CONFIRMED'").ToList();
                 return output;
             }
         }
@@ -362,7 +362,7 @@ namespace Media_Bazaar
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                connection.Execute($"UPDATE RestockRequest SET AdminConfirmation='REJECTED' WHERE RequestID ='{requestID}'; ");
+                connection.Execute($"UPDATE RestockRequest SET AdminConfirmation='REJECTED' WHERE RequestID='{requestID}'; ");
             }
         }
 
@@ -571,7 +571,7 @@ namespace Media_Bazaar
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<RestockRequest>($"SELECT * FROM restockrequest WHERE Brand = '{brand}'" +
+                var output = connection.Query<RestockRequest>($"SELECT * FROM restockrequest WHERE Brand='{brand}'" +
                     $"AND AdminConfirmation = 'CONFIRMED' ").ToList();
                 return output;
             }
@@ -592,7 +592,7 @@ namespace Media_Bazaar
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<RestockRequest>($"SELECT * FROM restockrequest WHERE Brand = '{brand}'" +
+                var output = connection.Query<RestockRequest>($"SELECT * FROM restockrequest WHERE Brand='{brand}'" +
                     $"AND AdminConfirmation = 'CONFIRMED' ").ToList();
                 return output;
             }
@@ -603,8 +603,8 @@ namespace Media_Bazaar
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<RestockRequest>($"SELECT * FROM restockrequest WHERE Departament = '{dep}'" +
-                    $"AND AdminConfirmation = 'CONFIRMED' ").ToList();
+                var output = connection.Query<RestockRequest>($"SELECT * FROM restockrequest WHERE Departament='{dep}'" +
+                    $"AND AdminConfirmation='CONFIRMED' ").ToList();
                 return output;
             }
         }
@@ -643,7 +643,7 @@ namespace Media_Bazaar
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<DepartmentModel>($"SELECT * FROM departament WHERE DepartamentName = '{name}'" +
+                var output = connection.Query<DepartmentModel>($"SELECT * FROM departament WHERE DepartamentName='{name}'" +
                     $"AND status IS NULL ").ToList();
                 return output;
             }
@@ -774,11 +774,11 @@ namespace Media_Bazaar
             }
         }
 
-        public void ReassignShift(int id,string date,string shift)
+        public void ReassignShift(int id,string date,string shift, int previousId)
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                connection.Execute($"UPDATE schedule SET Status='Assigned', EmployeeID='{id}' WHERE Date='{date}' AND Shift='{shift}';");
+                connection.Execute($"UPDATE schedule SET Status='Assigned', EmployeeID='{id}' WHERE Date='{date}' AND Shift='{shift}' AND EmployeeID='{previousId}' AND Status='Cancelled';");
             }
         }
 
@@ -787,7 +787,7 @@ namespace Media_Bazaar
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<EmployeeBase>($" SELECT `EmployeeID` FROM `employee` WHERE Departament = '{department}' AND Position = '{possition}' ORDER BY CurrentHoursForWeek").ToList();
+                var output = connection.Query<EmployeeBase>($" SELECT `EmployeeID` FROM `employee` WHERE Departament='{department}' AND Position='{possition}' ORDER BY CurrentHoursForWeek").ToList();
                 return output;
             }
         }

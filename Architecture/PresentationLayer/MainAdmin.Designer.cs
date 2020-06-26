@@ -142,6 +142,7 @@
             this.flDays = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlWeekDayWorkShift = new System.Windows.Forms.Panel();
             this.pnlEmail = new System.Windows.Forms.Panel();
+            this.btnEmail = new Bunifu.Framework.UI.BunifuFlatButton();
             this.tabAssignDep = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
@@ -273,7 +274,6 @@
             this.panel29 = new System.Windows.Forms.Panel();
             this.panel30 = new System.Windows.Forms.Panel();
             this.bunifuFlatButton10 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnEmail = new Bunifu.Framework.UI.BunifuFlatButton();
             this.tabEmail.SuspendLayout();
             this.tableLayoutPanel20.SuspendLayout();
             this.tableLayoutPanel25.SuspendLayout();
@@ -394,7 +394,7 @@
             this.tableLayoutPanel20.Controls.Add(this.tableLayoutPanel30, 1, 0);
             this.tableLayoutPanel20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel20.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel20.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel20.Name = "tableLayoutPanel20";
             this.tableLayoutPanel20.RowCount = 1;
             this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -414,7 +414,7 @@
             this.tableLayoutPanel25.Controls.Add(this.btnDepartTABmail, 0, 4);
             this.tableLayoutPanel25.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel25.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel25.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel25.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel25.Name = "tableLayoutPanel25";
             this.tableLayoutPanel25.RowCount = 6;
             this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -449,7 +449,7 @@
             this.btnLogoutTABmail.IconZoom = 90D;
             this.btnLogoutTABmail.IsTab = false;
             this.btnLogoutTABmail.Location = new System.Drawing.Point(4, 646);
-            this.btnLogoutTABmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogoutTABmail.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogoutTABmail.Name = "btnLogoutTABmail";
             this.btnLogoutTABmail.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogoutTABmail.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -486,7 +486,7 @@
             this.btnEmployeeManageTABmail.IconZoom = 90D;
             this.btnEmployeeManageTABmail.IsTab = false;
             this.btnEmployeeManageTABmail.Location = new System.Drawing.Point(4, 218);
-            this.btnEmployeeManageTABmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEmployeeManageTABmail.Margin = new System.Windows.Forms.Padding(4);
             this.btnEmployeeManageTABmail.Name = "btnEmployeeManageTABmail";
             this.btnEmployeeManageTABmail.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnEmployeeManageTABmail.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -505,7 +505,7 @@
             this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
             this.pictureBox7.Location = new System.Drawing.Point(2, 2);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(261, 210);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -535,7 +535,7 @@
             this.btnScheduleTABmail.IconZoom = 90D;
             this.btnScheduleTABmail.IsTab = false;
             this.btnScheduleTABmail.Location = new System.Drawing.Point(4, 325);
-            this.btnScheduleTABmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnScheduleTABmail.Margin = new System.Windows.Forms.Padding(4);
             this.btnScheduleTABmail.Name = "btnScheduleTABmail";
             this.btnScheduleTABmail.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnScheduleTABmail.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -572,7 +572,7 @@
             this.btnRestockTABmail.IconZoom = 90D;
             this.btnRestockTABmail.IsTab = false;
             this.btnRestockTABmail.Location = new System.Drawing.Point(4, 432);
-            this.btnRestockTABmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRestockTABmail.Margin = new System.Windows.Forms.Padding(4);
             this.btnRestockTABmail.Name = "btnRestockTABmail";
             this.btnRestockTABmail.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnRestockTABmail.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -609,7 +609,7 @@
             this.btnDepartTABmail.IconZoom = 90D;
             this.btnDepartTABmail.IsTab = false;
             this.btnDepartTABmail.Location = new System.Drawing.Point(4, 539);
-            this.btnDepartTABmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDepartTABmail.Margin = new System.Windows.Forms.Padding(4);
             this.btnDepartTABmail.Name = "btnDepartTABmail";
             this.btnDepartTABmail.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnDepartTABmail.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -632,7 +632,7 @@
             this.tableLayoutPanel30.Controls.Add(this.panel18, 0, 1);
             this.tableLayoutPanel30.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel30.Location = new System.Drawing.Point(271, 2);
-            this.tableLayoutPanel30.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel30.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel30.Name = "tableLayoutPanel30";
             this.tableLayoutPanel30.RowCount = 2;
             this.tableLayoutPanel30.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
@@ -661,7 +661,7 @@
             this.panel18.Controls.Add(this.tableLayoutPanel31);
             this.panel18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel18.Location = new System.Drawing.Point(2, 109);
-            this.panel18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel18.Margin = new System.Windows.Forms.Padding(2);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(929, 604);
             this.panel18.TabIndex = 1;
@@ -673,11 +673,11 @@
             this.tableLayoutPanel31.Controls.Add(this.panel21, 0, 0);
             this.tableLayoutPanel31.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel31.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel31.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel31.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel31.Name = "tableLayoutPanel31";
             this.tableLayoutPanel31.RowCount = 1;
             this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 608F));
+            this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 604F));
             this.tableLayoutPanel31.Size = new System.Drawing.Size(929, 604);
             this.tableLayoutPanel31.TabIndex = 0;
             // 
@@ -688,7 +688,7 @@
             this.panel21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel21.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel21.Location = new System.Drawing.Point(2, 2);
-            this.panel21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel21.Margin = new System.Windows.Forms.Padding(2);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(925, 600);
             this.panel21.TabIndex = 1;
@@ -860,9 +860,9 @@
             // 
             this.tabDepartManage.Controls.Add(this.tableLayoutPanel26);
             this.tabDepartManage.Location = new System.Drawing.Point(4, 22);
-            this.tabDepartManage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabDepartManage.Margin = new System.Windows.Forms.Padding(2);
             this.tabDepartManage.Name = "tabDepartManage";
-            this.tabDepartManage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabDepartManage.Padding = new System.Windows.Forms.Padding(2);
             this.tabDepartManage.Size = new System.Drawing.Size(1206, 719);
             this.tabDepartManage.TabIndex = 5;
             this.tabDepartManage.Text = "DepartmentManagement";
@@ -878,7 +878,7 @@
             this.tableLayoutPanel26.Controls.Add(this.tableLayoutPanel28, 1, 0);
             this.tableLayoutPanel26.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel26.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel26.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel26.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel26.Name = "tableLayoutPanel26";
             this.tableLayoutPanel26.RowCount = 1;
             this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -898,7 +898,7 @@
             this.tableLayoutPanel27.Controls.Add(this.btnDepartmentTABdepartManage, 0, 4);
             this.tableLayoutPanel27.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel27.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel27.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel27.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel27.Name = "tableLayoutPanel27";
             this.tableLayoutPanel27.RowCount = 6;
             this.tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -933,7 +933,7 @@
             this.btnLogOutTABdepart.IconZoom = 90D;
             this.btnLogOutTABdepart.IsTab = false;
             this.btnLogOutTABdepart.Location = new System.Drawing.Point(4, 641);
-            this.btnLogOutTABdepart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogOutTABdepart.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogOutTABdepart.Name = "btnLogOutTABdepart";
             this.btnLogOutTABdepart.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABdepart.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -970,7 +970,7 @@
             this.btnEmployeeManageTABdepart.IconZoom = 90D;
             this.btnEmployeeManageTABdepart.IsTab = false;
             this.btnEmployeeManageTABdepart.Location = new System.Drawing.Point(4, 217);
-            this.btnEmployeeManageTABdepart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEmployeeManageTABdepart.Margin = new System.Windows.Forms.Padding(4);
             this.btnEmployeeManageTABdepart.Name = "btnEmployeeManageTABdepart";
             this.btnEmployeeManageTABdepart.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnEmployeeManageTABdepart.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -989,7 +989,7 @@
             this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.Location = new System.Drawing.Point(2, 2);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(260, 209);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1019,7 +1019,7 @@
             this.btnScheduleTABdepart.IconZoom = 90D;
             this.btnScheduleTABdepart.IsTab = false;
             this.btnScheduleTABdepart.Location = new System.Drawing.Point(4, 323);
-            this.btnScheduleTABdepart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnScheduleTABdepart.Margin = new System.Windows.Forms.Padding(4);
             this.btnScheduleTABdepart.Name = "btnScheduleTABdepart";
             this.btnScheduleTABdepart.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnScheduleTABdepart.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -1056,7 +1056,7 @@
             this.btnRestockReqTABdepart.IconZoom = 90D;
             this.btnRestockReqTABdepart.IsTab = false;
             this.btnRestockReqTABdepart.Location = new System.Drawing.Point(4, 429);
-            this.btnRestockReqTABdepart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRestockReqTABdepart.Margin = new System.Windows.Forms.Padding(4);
             this.btnRestockReqTABdepart.Name = "btnRestockReqTABdepart";
             this.btnRestockReqTABdepart.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnRestockReqTABdepart.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -1093,7 +1093,7 @@
             this.btnDepartmentTABdepartManage.IconZoom = 90D;
             this.btnDepartmentTABdepartManage.IsTab = false;
             this.btnDepartmentTABdepartManage.Location = new System.Drawing.Point(4, 535);
-            this.btnDepartmentTABdepartManage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDepartmentTABdepartManage.Margin = new System.Windows.Forms.Padding(4);
             this.btnDepartmentTABdepartManage.Name = "btnDepartmentTABdepartManage";
             this.btnDepartmentTABdepartManage.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnDepartmentTABdepartManage.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -1115,7 +1115,7 @@
             this.tableLayoutPanel28.Controls.Add(this.panel19, 0, 1);
             this.tableLayoutPanel28.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel28.Location = new System.Drawing.Point(270, 2);
-            this.tableLayoutPanel28.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel28.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel28.Name = "tableLayoutPanel28";
             this.tableLayoutPanel28.RowCount = 2;
             this.tableLayoutPanel28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
@@ -1144,7 +1144,7 @@
             this.panel19.Controls.Add(this.tableLayoutPanel29);
             this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel19.Location = new System.Drawing.Point(2, 108);
-            this.panel19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel19.Margin = new System.Windows.Forms.Padding(2);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(926, 601);
             this.panel19.TabIndex = 1;
@@ -1156,11 +1156,11 @@
             this.tableLayoutPanel29.Controls.Add(this.panel20, 0, 0);
             this.tableLayoutPanel29.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel29.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel29.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel29.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel29.Name = "tableLayoutPanel29";
             this.tableLayoutPanel29.RowCount = 1;
             this.tableLayoutPanel29.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel29.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 604F));
+            this.tableLayoutPanel29.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 601F));
             this.tableLayoutPanel29.Size = new System.Drawing.Size(926, 601);
             this.tableLayoutPanel29.TabIndex = 0;
             // 
@@ -1170,18 +1170,21 @@
             this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel20.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel20.Location = new System.Drawing.Point(2, 2);
-            this.panel20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel20.Margin = new System.Windows.Forms.Padding(2);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(922, 597);
             this.panel20.TabIndex = 1;
             // 
             // tabControl2
             // 
+            this.tabControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl2.Controls.Add(this.tabPage2);
             this.tabControl2.Controls.Add(this.tabPage3);
             this.tabControl2.Controls.Add(this.tabPage4);
             this.tabControl2.Location = new System.Drawing.Point(3, 14);
-            this.tabControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl2.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
             this.tabControl2.Size = new System.Drawing.Size(920, 586);
@@ -1191,9 +1194,9 @@
             // 
             this.tabPage2.Controls.Add(this.panelAddDepartment);
             this.tabPage2.Location = new System.Drawing.Point(4, 27);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage2.Size = new System.Drawing.Size(912, 555);
             this.tabPage2.TabIndex = 0;
             this.tabPage2.Text = "Create New Department";
@@ -1214,15 +1217,15 @@
             this.panelAddDepartment.Controls.Add(this.label56);
             this.panelAddDepartment.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelAddDepartment.Location = new System.Drawing.Point(4, 4);
-            this.panelAddDepartment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelAddDepartment.Margin = new System.Windows.Forms.Padding(2);
             this.panelAddDepartment.Name = "panelAddDepartment";
-            this.panelAddDepartment.Size = new System.Drawing.Size(1001, 554);
+            this.panelAddDepartment.Size = new System.Drawing.Size(904, 554);
             this.panelAddDepartment.TabIndex = 0;
             // 
             // btnCreateDepartment
             // 
             this.btnCreateDepartment.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.btnCreateDepartment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnCreateDepartment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCreateDepartment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnCreateDepartment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -1242,14 +1245,14 @@
             this.btnCreateDepartment.IconVisible = false;
             this.btnCreateDepartment.IconZoom = 90D;
             this.btnCreateDepartment.IsTab = false;
-            this.btnCreateDepartment.Location = new System.Drawing.Point(46, 458);
+            this.btnCreateDepartment.Location = new System.Drawing.Point(24, 457);
             this.btnCreateDepartment.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnCreateDepartment.Name = "btnCreateDepartment";
             this.btnCreateDepartment.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnCreateDepartment.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnCreateDepartment.OnHoverTextColor = System.Drawing.Color.White;
             this.btnCreateDepartment.selected = false;
-            this.btnCreateDepartment.Size = new System.Drawing.Size(910, 72);
+            this.btnCreateDepartment.Size = new System.Drawing.Size(830, 54);
             this.btnCreateDepartment.TabIndex = 2;
             this.btnCreateDepartment.Text = "Create";
             this.btnCreateDepartment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1265,9 +1268,9 @@
             this.lbDepartaments.FormattingEnabled = true;
             this.lbDepartaments.ItemHeight = 18;
             this.lbDepartaments.Location = new System.Drawing.Point(24, 197);
-            this.lbDepartaments.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbDepartaments.Margin = new System.Windows.Forms.Padding(2);
             this.lbDepartaments.Name = "lbDepartaments";
-            this.lbDepartaments.Size = new System.Drawing.Size(911, 184);
+            this.lbDepartaments.Size = new System.Drawing.Size(830, 184);
             this.lbDepartaments.TabIndex = 11;
             // 
             // tbMaxNr
@@ -1276,9 +1279,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbMaxNr.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.tbMaxNr.Location = new System.Drawing.Point(243, 143);
-            this.tbMaxNr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbMaxNr.Margin = new System.Windows.Forms.Padding(2);
             this.tbMaxNr.Name = "tbMaxNr";
-            this.tbMaxNr.Size = new System.Drawing.Size(692, 26);
+            this.tbMaxNr.Size = new System.Drawing.Size(611, 26);
             this.tbMaxNr.TabIndex = 10;
             // 
             // label23
@@ -1297,9 +1300,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbMinNr.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.tbMinNr.Location = new System.Drawing.Point(243, 89);
-            this.tbMinNr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbMinNr.Margin = new System.Windows.Forms.Padding(2);
             this.tbMinNr.Name = "tbMinNr";
-            this.tbMinNr.Size = new System.Drawing.Size(692, 26);
+            this.tbMinNr.Size = new System.Drawing.Size(611, 26);
             this.tbMinNr.TabIndex = 8;
             // 
             // label11
@@ -1318,9 +1321,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbDepName.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.tbDepName.Location = new System.Drawing.Point(243, 30);
-            this.tbDepName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbDepName.Margin = new System.Windows.Forms.Padding(2);
             this.tbDepName.Name = "tbDepName";
-            this.tbDepName.Size = new System.Drawing.Size(692, 26);
+            this.tbDepName.Size = new System.Drawing.Size(611, 26);
             this.tbDepName.TabIndex = 6;
             // 
             // label56
@@ -1337,9 +1340,9 @@
             // 
             this.tabPage3.Controls.Add(this.panelSearchDep);
             this.tabPage3.Location = new System.Drawing.Point(4, 27);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage3.Size = new System.Drawing.Size(912, 555);
             this.tabPage3.TabIndex = 1;
             this.tabPage3.Text = "Search For Department";
@@ -1355,16 +1358,16 @@
             this.panelSearchDep.Controls.Add(this.tbxDepName);
             this.panelSearchDep.Controls.Add(this.label41);
             this.panelSearchDep.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelSearchDep.Location = new System.Drawing.Point(2, 4);
-            this.panelSearchDep.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelSearchDep.Location = new System.Drawing.Point(4, 4);
+            this.panelSearchDep.Margin = new System.Windows.Forms.Padding(2);
             this.panelSearchDep.Name = "panelSearchDep";
-            this.panelSearchDep.Size = new System.Drawing.Size(807, 687);
+            this.panelSearchDep.Size = new System.Drawing.Size(906, 547);
             this.panelSearchDep.TabIndex = 12;
             // 
             // btnSearchDep
             // 
             this.btnSearchDep.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.btnSearchDep.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnSearchDep.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearchDep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnSearchDep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -1384,14 +1387,14 @@
             this.btnSearchDep.IconVisible = false;
             this.btnSearchDep.IconZoom = 90D;
             this.btnSearchDep.IsTab = false;
-            this.btnSearchDep.Location = new System.Drawing.Point(56, 111);
+            this.btnSearchDep.Location = new System.Drawing.Point(24, 95);
             this.btnSearchDep.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnSearchDep.Name = "btnSearchDep";
             this.btnSearchDep.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnSearchDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnSearchDep.OnHoverTextColor = System.Drawing.Color.White;
             this.btnSearchDep.selected = false;
-            this.btnSearchDep.Size = new System.Drawing.Size(716, 33);
+            this.btnSearchDep.Size = new System.Drawing.Size(815, 43);
             this.btnSearchDep.TabIndex = 2;
             this.btnSearchDep.Text = "Search";
             this.btnSearchDep.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1401,15 +1404,16 @@
             // 
             // lbxFoundDepartaments
             // 
-            this.lbxFoundDepartaments.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lbxFoundDepartaments.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbxFoundDepartaments.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.lbxFoundDepartaments.FormattingEnabled = true;
             this.lbxFoundDepartaments.ItemHeight = 18;
             this.lbxFoundDepartaments.Location = new System.Drawing.Point(24, 197);
-            this.lbxFoundDepartaments.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbxFoundDepartaments.Margin = new System.Windows.Forms.Padding(2);
             this.lbxFoundDepartaments.Name = "lbxFoundDepartaments";
-            this.lbxFoundDepartaments.Size = new System.Drawing.Size(716, 310);
+            this.lbxFoundDepartaments.Size = new System.Drawing.Size(815, 166);
             this.lbxFoundDepartaments.TabIndex = 11;
             // 
             // tbxDepName
@@ -1417,16 +1421,16 @@
             this.tbxDepName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbxDepName.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.tbxDepName.Location = new System.Drawing.Point(274, 28);
-            this.tbxDepName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxDepName.Location = new System.Drawing.Point(242, 47);
+            this.tbxDepName.Margin = new System.Windows.Forms.Padding(2);
             this.tbxDepName.Name = "tbxDepName";
-            this.tbxDepName.Size = new System.Drawing.Size(498, 26);
+            this.tbxDepName.Size = new System.Drawing.Size(597, 26);
             this.tbxDepName.TabIndex = 6;
             // 
             // label41
             // 
             this.label41.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label41.Location = new System.Drawing.Point(21, 30);
+            this.label41.Location = new System.Drawing.Point(21, 47);
             this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(188, 22);
@@ -1437,7 +1441,7 @@
             // 
             this.tabPage4.Controls.Add(this.panelRemoveDepartment);
             this.tabPage4.Location = new System.Drawing.Point(4, 27);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(912, 555);
             this.tabPage4.TabIndex = 2;
@@ -1454,16 +1458,16 @@
             this.panelRemoveDepartment.Controls.Add(this.btnRemove);
             this.panelRemoveDepartment.Controls.Add(this.label38);
             this.panelRemoveDepartment.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelRemoveDepartment.Location = new System.Drawing.Point(10, 11);
-            this.panelRemoveDepartment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelRemoveDepartment.Location = new System.Drawing.Point(10, 2);
+            this.panelRemoveDepartment.Margin = new System.Windows.Forms.Padding(2);
             this.panelRemoveDepartment.Name = "panelRemoveDepartment";
-            this.panelRemoveDepartment.Size = new System.Drawing.Size(801, 548);
+            this.panelRemoveDepartment.Size = new System.Drawing.Size(888, 551);
             this.panelRemoveDepartment.TabIndex = 12;
             // 
             // btnRemoveDep
             // 
             this.btnRemoveDep.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.btnRemoveDep.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnRemoveDep.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRemoveDep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnRemoveDep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -1483,14 +1487,14 @@
             this.btnRemoveDep.IconVisible = false;
             this.btnRemoveDep.IconZoom = 90D;
             this.btnRemoveDep.IsTab = false;
-            this.btnRemoveDep.Location = new System.Drawing.Point(39, 395);
+            this.btnRemoveDep.Location = new System.Drawing.Point(39, 390);
             this.btnRemoveDep.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.btnRemoveDep.Name = "btnRemoveDep";
             this.btnRemoveDep.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnRemoveDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnRemoveDep.OnHoverTextColor = System.Drawing.Color.White;
             this.btnRemoveDep.selected = false;
-            this.btnRemoveDep.Size = new System.Drawing.Size(738, 58);
+            this.btnRemoveDep.Size = new System.Drawing.Size(825, 46);
             this.btnRemoveDep.TabIndex = 9;
             this.btnRemoveDep.Text = "Remove";
             this.btnRemoveDep.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1500,11 +1504,13 @@
             // 
             // clbDepartments
             // 
+            this.clbDepartments.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.clbDepartments.FormattingEnabled = true;
-            this.clbDepartments.Location = new System.Drawing.Point(16, 59);
-            this.clbDepartments.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.clbDepartments.Location = new System.Drawing.Point(39, 55);
+            this.clbDepartments.Margin = new System.Windows.Forms.Padding(2);
             this.clbDepartments.Name = "clbDepartments";
-            this.clbDepartments.Size = new System.Drawing.Size(289, 264);
+            this.clbDepartments.Size = new System.Drawing.Size(825, 244);
             this.clbDepartments.TabIndex = 8;
             // 
             // btnRemove
@@ -1530,14 +1536,14 @@
             this.btnRemove.IconVisible = false;
             this.btnRemove.IconZoom = 90D;
             this.btnRemove.IsTab = false;
-            this.btnRemove.Location = new System.Drawing.Point(52, 629);
+            this.btnRemove.Location = new System.Drawing.Point(52, 632);
             this.btnRemove.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnRemove.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnRemove.OnHoverTextColor = System.Drawing.Color.White;
             this.btnRemove.selected = false;
-            this.btnRemove.Size = new System.Drawing.Size(738, 99);
+            this.btnRemove.Size = new System.Drawing.Size(825, 99);
             this.btnRemove.TabIndex = 2;
             this.btnRemove.Text = "Remove Department";
             this.btnRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1547,7 +1553,7 @@
             // label38
             // 
             this.label38.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label38.Location = new System.Drawing.Point(13, 15);
+            this.label38.Location = new System.Drawing.Point(35, 18);
             this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(218, 22);
@@ -1558,9 +1564,9 @@
             // 
             this.tabRestockReq.Controls.Add(this.tableLayoutPanel21);
             this.tabRestockReq.Location = new System.Drawing.Point(4, 22);
-            this.tabRestockReq.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabRestockReq.Margin = new System.Windows.Forms.Padding(2);
             this.tabRestockReq.Name = "tabRestockReq";
-            this.tabRestockReq.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabRestockReq.Padding = new System.Windows.Forms.Padding(2);
             this.tabRestockReq.Size = new System.Drawing.Size(1206, 719);
             this.tabRestockReq.TabIndex = 4;
             this.tabRestockReq.Text = "RestockRequest";
@@ -1576,7 +1582,7 @@
             this.tableLayoutPanel21.Controls.Add(this.tableLayoutPanel23, 1, 0);
             this.tableLayoutPanel21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel21.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel21.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel21.Name = "tableLayoutPanel21";
             this.tableLayoutPanel21.RowCount = 1;
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -1596,7 +1602,7 @@
             this.tableLayoutPanel22.Controls.Add(this.btnDepartManageTABrestock, 0, 4);
             this.tableLayoutPanel22.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel22.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel22.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel22.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel22.Name = "tableLayoutPanel22";
             this.tableLayoutPanel22.RowCount = 6;
             this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -1631,7 +1637,7 @@
             this.btnLogOutTABrestock.IconZoom = 90D;
             this.btnLogOutTABrestock.IsTab = false;
             this.btnLogOutTABrestock.Location = new System.Drawing.Point(4, 641);
-            this.btnLogOutTABrestock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogOutTABrestock.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogOutTABrestock.Name = "btnLogOutTABrestock";
             this.btnLogOutTABrestock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABrestock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -1668,7 +1674,7 @@
             this.btnEmployeeManagementTABrestock.IconZoom = 90D;
             this.btnEmployeeManagementTABrestock.IsTab = false;
             this.btnEmployeeManagementTABrestock.Location = new System.Drawing.Point(4, 217);
-            this.btnEmployeeManagementTABrestock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEmployeeManagementTABrestock.Margin = new System.Windows.Forms.Padding(4);
             this.btnEmployeeManagementTABrestock.Name = "btnEmployeeManagementTABrestock";
             this.btnEmployeeManagementTABrestock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnEmployeeManagementTABrestock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -1687,7 +1693,7 @@
             this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(2, 2);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(260, 209);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1717,7 +1723,7 @@
             this.btnScheduleTABrestock.IconZoom = 90D;
             this.btnScheduleTABrestock.IsTab = false;
             this.btnScheduleTABrestock.Location = new System.Drawing.Point(4, 323);
-            this.btnScheduleTABrestock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnScheduleTABrestock.Margin = new System.Windows.Forms.Padding(4);
             this.btnScheduleTABrestock.Name = "btnScheduleTABrestock";
             this.btnScheduleTABrestock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnScheduleTABrestock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -1754,7 +1760,7 @@
             this.btnRestockReqTABrestock.IconZoom = 90D;
             this.btnRestockReqTABrestock.IsTab = false;
             this.btnRestockReqTABrestock.Location = new System.Drawing.Point(4, 429);
-            this.btnRestockReqTABrestock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRestockReqTABrestock.Margin = new System.Windows.Forms.Padding(4);
             this.btnRestockReqTABrestock.Name = "btnRestockReqTABrestock";
             this.btnRestockReqTABrestock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnRestockReqTABrestock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -1791,7 +1797,7 @@
             this.btnDepartManageTABrestock.IconZoom = 90D;
             this.btnDepartManageTABrestock.IsTab = false;
             this.btnDepartManageTABrestock.Location = new System.Drawing.Point(4, 535);
-            this.btnDepartManageTABrestock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDepartManageTABrestock.Margin = new System.Windows.Forms.Padding(4);
             this.btnDepartManageTABrestock.Name = "btnDepartManageTABrestock";
             this.btnDepartManageTABrestock.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnDepartManageTABrestock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -1814,7 +1820,7 @@
             this.tableLayoutPanel23.Controls.Add(this.panel3, 0, 1);
             this.tableLayoutPanel23.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel23.Location = new System.Drawing.Point(270, 2);
-            this.tableLayoutPanel23.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel23.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel23.Name = "tableLayoutPanel23";
             this.tableLayoutPanel23.RowCount = 2;
             this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
@@ -1843,7 +1849,7 @@
             this.panel3.Controls.Add(this.tableLayoutPanel24);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(2, 108);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(926, 601);
             this.panel3.TabIndex = 1;
@@ -1855,11 +1861,11 @@
             this.tableLayoutPanel24.Controls.Add(this.panel16, 0, 0);
             this.tableLayoutPanel24.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel24.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel24.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel24.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel24.Name = "tableLayoutPanel24";
             this.tableLayoutPanel24.RowCount = 1;
             this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 604F));
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 601F));
             this.tableLayoutPanel24.Size = new System.Drawing.Size(926, 601);
             this.tableLayoutPanel24.TabIndex = 0;
             // 
@@ -1871,7 +1877,7 @@
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel16.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel16.Location = new System.Drawing.Point(2, 2);
-            this.panel16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel16.Margin = new System.Windows.Forms.Padding(2);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(922, 597);
             this.panel16.TabIndex = 1;
@@ -1960,7 +1966,7 @@
             this.checkedListBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Location = new System.Drawing.Point(68, 11);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(765, 277);
             this.checkedListBox1.TabIndex = 2;
@@ -1970,9 +1976,9 @@
             // 
             this.tabSchedule.Controls.Add(this.tableLayoutPanel16);
             this.tabSchedule.Location = new System.Drawing.Point(4, 22);
-            this.tabSchedule.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabSchedule.Margin = new System.Windows.Forms.Padding(2);
             this.tabSchedule.Name = "tabSchedule";
-            this.tabSchedule.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabSchedule.Padding = new System.Windows.Forms.Padding(2);
             this.tabSchedule.Size = new System.Drawing.Size(1206, 719);
             this.tabSchedule.TabIndex = 3;
             this.tabSchedule.Text = "Schedule";
@@ -1988,7 +1994,7 @@
             this.tableLayoutPanel16.Controls.Add(this.tableLayoutPanel18, 1, 0);
             this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel16.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel16.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel16.Name = "tableLayoutPanel16";
             this.tableLayoutPanel16.RowCount = 1;
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -2008,7 +2014,7 @@
             this.tableLayoutPanel17.Controls.Add(this.btnDepartmentManageTABschedule, 0, 4);
             this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel17.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel17.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel17.Name = "tableLayoutPanel17";
             this.tableLayoutPanel17.RowCount = 6;
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -2043,7 +2049,7 @@
             this.btnLogOutTABschedule.IconZoom = 90D;
             this.btnLogOutTABschedule.IsTab = false;
             this.btnLogOutTABschedule.Location = new System.Drawing.Point(4, 641);
-            this.btnLogOutTABschedule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogOutTABschedule.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogOutTABschedule.Name = "btnLogOutTABschedule";
             this.btnLogOutTABschedule.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABschedule.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -2080,7 +2086,7 @@
             this.btnEmployeManageTABschedule.IconZoom = 90D;
             this.btnEmployeManageTABschedule.IsTab = false;
             this.btnEmployeManageTABschedule.Location = new System.Drawing.Point(4, 217);
-            this.btnEmployeManageTABschedule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEmployeManageTABschedule.Margin = new System.Windows.Forms.Padding(4);
             this.btnEmployeManageTABschedule.Name = "btnEmployeManageTABschedule";
             this.btnEmployeManageTABschedule.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnEmployeManageTABschedule.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -2099,7 +2105,7 @@
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(2, 2);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(260, 209);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -2129,7 +2135,7 @@
             this.btnScheduleTABschedule.IconZoom = 90D;
             this.btnScheduleTABschedule.IsTab = false;
             this.btnScheduleTABschedule.Location = new System.Drawing.Point(4, 323);
-            this.btnScheduleTABschedule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnScheduleTABschedule.Margin = new System.Windows.Forms.Padding(4);
             this.btnScheduleTABschedule.Name = "btnScheduleTABschedule";
             this.btnScheduleTABschedule.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnScheduleTABschedule.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -2165,7 +2171,7 @@
             this.btnRestockReqTABschedule.IconZoom = 90D;
             this.btnRestockReqTABschedule.IsTab = false;
             this.btnRestockReqTABschedule.Location = new System.Drawing.Point(4, 429);
-            this.btnRestockReqTABschedule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRestockReqTABschedule.Margin = new System.Windows.Forms.Padding(4);
             this.btnRestockReqTABschedule.Name = "btnRestockReqTABschedule";
             this.btnRestockReqTABschedule.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnRestockReqTABschedule.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -2202,7 +2208,7 @@
             this.btnDepartmentManageTABschedule.IconZoom = 90D;
             this.btnDepartmentManageTABschedule.IsTab = false;
             this.btnDepartmentManageTABschedule.Location = new System.Drawing.Point(4, 535);
-            this.btnDepartmentManageTABschedule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDepartmentManageTABschedule.Margin = new System.Windows.Forms.Padding(4);
             this.btnDepartmentManageTABschedule.Name = "btnDepartmentManageTABschedule";
             this.btnDepartmentManageTABschedule.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnDepartmentManageTABschedule.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -2225,7 +2231,7 @@
             this.tableLayoutPanel18.Controls.Add(this.panel12, 0, 1);
             this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel18.Location = new System.Drawing.Point(270, 2);
-            this.tableLayoutPanel18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel18.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel18.Name = "tableLayoutPanel18";
             this.tableLayoutPanel18.RowCount = 2;
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
@@ -2255,7 +2261,7 @@
             this.panel12.Controls.Add(this.tableLayoutPanel19);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel12.Location = new System.Drawing.Point(2, 108);
-            this.panel12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel12.Margin = new System.Windows.Forms.Padding(2);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(926, 601);
             this.panel12.TabIndex = 1;
@@ -2267,11 +2273,11 @@
             this.tableLayoutPanel19.Controls.Add(this.panel13, 0, 0);
             this.tableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel19.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel19.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel19.Name = "tableLayoutPanel19";
             this.tableLayoutPanel19.RowCount = 1;
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 604F));
+            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 601F));
             this.tableLayoutPanel19.Size = new System.Drawing.Size(926, 601);
             this.tableLayoutPanel19.TabIndex = 0;
             // 
@@ -2282,7 +2288,7 @@
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel13.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel13.Location = new System.Drawing.Point(2, 2);
-            this.panel13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel13.Margin = new System.Windows.Forms.Padding(2);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(922, 597);
             this.panel13.TabIndex = 1;
@@ -2523,13 +2529,51 @@
             this.pnlEmail.Size = new System.Drawing.Size(363, 85);
             this.pnlEmail.TabIndex = 0;
             // 
+            // btnEmail
+            // 
+            this.btnEmail.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
+            this.btnEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnEmail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEmail.BorderRadius = 0;
+            this.btnEmail.ButtonText = "Inbox";
+            this.btnEmail.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEmail.DisabledColor = System.Drawing.Color.Gray;
+            this.btnEmail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEmail.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btnEmail.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnEmail.Iconimage = null;
+            this.btnEmail.Iconimage_right = null;
+            this.btnEmail.Iconimage_right_Selected = null;
+            this.btnEmail.Iconimage_Selected = null;
+            this.btnEmail.IconMarginLeft = 0;
+            this.btnEmail.IconMarginRight = 0;
+            this.btnEmail.IconRightVisible = false;
+            this.btnEmail.IconRightZoom = 0D;
+            this.btnEmail.IconVisible = false;
+            this.btnEmail.IconZoom = 90D;
+            this.btnEmail.IsTab = false;
+            this.btnEmail.Location = new System.Drawing.Point(0, 0);
+            this.btnEmail.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.btnEmail.Name = "btnEmail";
+            this.btnEmail.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
+            this.btnEmail.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
+            this.btnEmail.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnEmail.selected = false;
+            this.btnEmail.Size = new System.Drawing.Size(363, 85);
+            this.btnEmail.TabIndex = 8;
+            this.btnEmail.Text = "Inbox";
+            this.btnEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEmail.Textcolor = System.Drawing.Color.White;
+            this.btnEmail.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btnEmail.Click += new System.EventHandler(this.btnEmail_Click);
+            // 
             // tabAssignDep
             // 
             this.tabAssignDep.Controls.Add(this.tableLayoutPanel11);
             this.tabAssignDep.Location = new System.Drawing.Point(4, 22);
-            this.tabAssignDep.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabAssignDep.Margin = new System.Windows.Forms.Padding(2);
             this.tabAssignDep.Name = "tabAssignDep";
-            this.tabAssignDep.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabAssignDep.Padding = new System.Windows.Forms.Padding(2);
             this.tabAssignDep.Size = new System.Drawing.Size(1206, 719);
             this.tabAssignDep.TabIndex = 2;
             this.tabAssignDep.Text = "AssignToDepartment";
@@ -2545,7 +2589,7 @@
             this.tableLayoutPanel11.Controls.Add(this.tableLayoutPanel13, 1, 0);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel11.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 1;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -2565,7 +2609,7 @@
             this.tableLayoutPanel12.Controls.Add(this.btnDepartManageTABassignDep, 0, 4);
             this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel12.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel12.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
             this.tableLayoutPanel12.RowCount = 6;
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -2600,7 +2644,7 @@
             this.btnLogOutTABassignDep.IconZoom = 90D;
             this.btnLogOutTABassignDep.IsTab = false;
             this.btnLogOutTABassignDep.Location = new System.Drawing.Point(4, 641);
-            this.btnLogOutTABassignDep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogOutTABassignDep.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogOutTABassignDep.Name = "btnLogOutTABassignDep";
             this.btnLogOutTABassignDep.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABassignDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -2637,7 +2681,7 @@
             this.btnEmployeeManageTABassignDep.IconZoom = 90D;
             this.btnEmployeeManageTABassignDep.IsTab = false;
             this.btnEmployeeManageTABassignDep.Location = new System.Drawing.Point(4, 217);
-            this.btnEmployeeManageTABassignDep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEmployeeManageTABassignDep.Margin = new System.Windows.Forms.Padding(4);
             this.btnEmployeeManageTABassignDep.Name = "btnEmployeeManageTABassignDep";
             this.btnEmployeeManageTABassignDep.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnEmployeeManageTABassignDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -2655,7 +2699,7 @@
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(2, 2);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(260, 209);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -2685,7 +2729,7 @@
             this.btnScheduleTABassignDep.IconZoom = 90D;
             this.btnScheduleTABassignDep.IsTab = false;
             this.btnScheduleTABassignDep.Location = new System.Drawing.Point(4, 323);
-            this.btnScheduleTABassignDep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnScheduleTABassignDep.Margin = new System.Windows.Forms.Padding(4);
             this.btnScheduleTABassignDep.Name = "btnScheduleTABassignDep";
             this.btnScheduleTABassignDep.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnScheduleTABassignDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -2722,7 +2766,7 @@
             this.btnRestockTABassignDep.IconZoom = 90D;
             this.btnRestockTABassignDep.IsTab = false;
             this.btnRestockTABassignDep.Location = new System.Drawing.Point(4, 429);
-            this.btnRestockTABassignDep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRestockTABassignDep.Margin = new System.Windows.Forms.Padding(4);
             this.btnRestockTABassignDep.Name = "btnRestockTABassignDep";
             this.btnRestockTABassignDep.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnRestockTABassignDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -2759,7 +2803,7 @@
             this.btnDepartManageTABassignDep.IconZoom = 90D;
             this.btnDepartManageTABassignDep.IsTab = false;
             this.btnDepartManageTABassignDep.Location = new System.Drawing.Point(4, 535);
-            this.btnDepartManageTABassignDep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDepartManageTABassignDep.Margin = new System.Windows.Forms.Padding(4);
             this.btnDepartManageTABassignDep.Name = "btnDepartManageTABassignDep";
             this.btnDepartManageTABassignDep.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnDepartManageTABassignDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -2782,7 +2826,7 @@
             this.tableLayoutPanel13.Controls.Add(this.panel4, 0, 1);
             this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel13.Location = new System.Drawing.Point(270, 2);
-            this.tableLayoutPanel13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel13.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
             this.tableLayoutPanel13.RowCount = 2;
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
@@ -2811,7 +2855,7 @@
             this.panel4.Controls.Add(this.tableLayoutPanel14);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(2, 108);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(926, 601);
             this.panel4.TabIndex = 1;
@@ -2824,7 +2868,7 @@
             this.tableLayoutPanel14.Controls.Add(this.panel9, 0, 1);
             this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel14.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel14.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel14.Name = "tableLayoutPanel14";
             this.tableLayoutPanel14.RowCount = 2;
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.79393F));
@@ -2843,12 +2887,12 @@
             this.tableLayoutPanel15.Controls.Add(this.btnAssignToDepTABassignDep, 2, 0);
             this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel15.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
             this.tableLayoutPanel15.RowCount = 1;
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
-            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel15.Size = new System.Drawing.Size(922, 60);
             this.tableLayoutPanel15.TabIndex = 0;
             // 
@@ -2876,7 +2920,7 @@
             this.btnNewProfileTABassignDep.IconZoom = 90D;
             this.btnNewProfileTABassignDep.IsTab = false;
             this.btnNewProfileTABassignDep.Location = new System.Drawing.Point(4, 4);
-            this.btnNewProfileTABassignDep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNewProfileTABassignDep.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewProfileTABassignDep.Name = "btnNewProfileTABassignDep";
             this.btnNewProfileTABassignDep.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnNewProfileTABassignDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -2914,7 +2958,7 @@
             this.btnRemoveProfileTABassignDep.IconZoom = 90D;
             this.btnRemoveProfileTABassignDep.IsTab = false;
             this.btnRemoveProfileTABassignDep.Location = new System.Drawing.Point(311, 4);
-            this.btnRemoveProfileTABassignDep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRemoveProfileTABassignDep.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemoveProfileTABassignDep.Name = "btnRemoveProfileTABassignDep";
             this.btnRemoveProfileTABassignDep.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnRemoveProfileTABassignDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -2951,7 +2995,7 @@
             this.btnAssignToDepTABassignDep.IconZoom = 90D;
             this.btnAssignToDepTABassignDep.IsTab = false;
             this.btnAssignToDepTABassignDep.Location = new System.Drawing.Point(618, 4);
-            this.btnAssignToDepTABassignDep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAssignToDepTABassignDep.Margin = new System.Windows.Forms.Padding(4);
             this.btnAssignToDepTABassignDep.Name = "btnAssignToDepTABassignDep";
             this.btnAssignToDepTABassignDep.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnAssignToDepTABassignDep.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -2973,7 +3017,7 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel9.Location = new System.Drawing.Point(2, 66);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(922, 533);
             this.panel9.TabIndex = 1;
@@ -2981,7 +3025,7 @@
             // btnExportToCSV
             // 
             this.btnExportToCSV.Location = new System.Drawing.Point(40, 67);
-            this.btnExportToCSV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExportToCSV.Margin = new System.Windows.Forms.Padding(2);
             this.btnExportToCSV.Name = "btnExportToCSV";
             this.btnExportToCSV.Size = new System.Drawing.Size(224, 26);
             this.btnExportToCSV.TabIndex = 11;
@@ -2992,7 +3036,7 @@
             // btnExportToExcel
             // 
             this.btnExportToExcel.Location = new System.Drawing.Point(40, 36);
-            this.btnExportToExcel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExportToExcel.Margin = new System.Windows.Forms.Padding(2);
             this.btnExportToExcel.Name = "btnExportToExcel";
             this.btnExportToExcel.Size = new System.Drawing.Size(224, 26);
             this.btnExportToExcel.TabIndex = 10;
@@ -3007,7 +3051,7 @@
             this.panel17.Controls.Add(this.btnAssignToDepartment);
             this.panel17.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel17.Location = new System.Drawing.Point(530, 67);
-            this.panel17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel17.Margin = new System.Windows.Forms.Padding(2);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(370, 180);
             this.panel17.TabIndex = 9;
@@ -3019,7 +3063,7 @@
             this.cmbDepartments.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.cmbDepartments.FormattingEnabled = true;
             this.cmbDepartments.Location = new System.Drawing.Point(40, 41);
-            this.cmbDepartments.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbDepartments.Margin = new System.Windows.Forms.Padding(2);
             this.cmbDepartments.Name = "cmbDepartments";
             this.cmbDepartments.Size = new System.Drawing.Size(307, 26);
             this.cmbDepartments.TabIndex = 3;
@@ -3072,7 +3116,7 @@
             this.checkedListBox3.FormattingEnabled = true;
             this.checkedListBox3.HorizontalScrollbar = true;
             this.checkedListBox3.Location = new System.Drawing.Point(28, 108);
-            this.checkedListBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkedListBox3.Margin = new System.Windows.Forms.Padding(2);
             this.checkedListBox3.Name = "checkedListBox3";
             this.checkedListBox3.Size = new System.Drawing.Size(483, 403);
             this.checkedListBox3.TabIndex = 8;
@@ -3081,9 +3125,9 @@
             // 
             this.tabRemoveProfile.Controls.Add(this.tableLayoutPanel1);
             this.tabRemoveProfile.Location = new System.Drawing.Point(4, 22);
-            this.tabRemoveProfile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabRemoveProfile.Margin = new System.Windows.Forms.Padding(2);
             this.tabRemoveProfile.Name = "tabRemoveProfile";
-            this.tabRemoveProfile.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabRemoveProfile.Padding = new System.Windows.Forms.Padding(2);
             this.tabRemoveProfile.Size = new System.Drawing.Size(1206, 719);
             this.tabRemoveProfile.TabIndex = 1;
             this.tabRemoveProfile.Text = "RemoveProfile";
@@ -3099,7 +3143,7 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -3119,7 +3163,7 @@
             this.tableLayoutPanel2.Controls.Add(this.btnDepartManageTABremoveProfile, 0, 4);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 6;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -3154,7 +3198,7 @@
             this.bunifuFlatButton6.IconZoom = 90D;
             this.bunifuFlatButton6.IsTab = false;
             this.bunifuFlatButton6.Location = new System.Drawing.Point(4, 641);
-            this.bunifuFlatButton6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton6.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton6.Name = "bunifuFlatButton6";
             this.bunifuFlatButton6.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton6.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -3191,7 +3235,7 @@
             this.btnEmployeeManageTABremoveProfile.IconZoom = 90D;
             this.btnEmployeeManageTABremoveProfile.IsTab = false;
             this.btnEmployeeManageTABremoveProfile.Location = new System.Drawing.Point(4, 217);
-            this.btnEmployeeManageTABremoveProfile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEmployeeManageTABremoveProfile.Margin = new System.Windows.Forms.Padding(4);
             this.btnEmployeeManageTABremoveProfile.Name = "btnEmployeeManageTABremoveProfile";
             this.btnEmployeeManageTABremoveProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnEmployeeManageTABremoveProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -3209,7 +3253,7 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(2, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(260, 209);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -3239,7 +3283,7 @@
             this.btnScheduleTABremoveProfile.IconZoom = 90D;
             this.btnScheduleTABremoveProfile.IsTab = false;
             this.btnScheduleTABremoveProfile.Location = new System.Drawing.Point(4, 323);
-            this.btnScheduleTABremoveProfile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnScheduleTABremoveProfile.Margin = new System.Windows.Forms.Padding(4);
             this.btnScheduleTABremoveProfile.Name = "btnScheduleTABremoveProfile";
             this.btnScheduleTABremoveProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnScheduleTABremoveProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -3276,7 +3320,7 @@
             this.btnRestockReqTABremoveProfile.IconZoom = 90D;
             this.btnRestockReqTABremoveProfile.IsTab = false;
             this.btnRestockReqTABremoveProfile.Location = new System.Drawing.Point(4, 429);
-            this.btnRestockReqTABremoveProfile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRestockReqTABremoveProfile.Margin = new System.Windows.Forms.Padding(4);
             this.btnRestockReqTABremoveProfile.Name = "btnRestockReqTABremoveProfile";
             this.btnRestockReqTABremoveProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnRestockReqTABremoveProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -3313,7 +3357,7 @@
             this.btnDepartManageTABremoveProfile.IconZoom = 90D;
             this.btnDepartManageTABremoveProfile.IsTab = false;
             this.btnDepartManageTABremoveProfile.Location = new System.Drawing.Point(4, 535);
-            this.btnDepartManageTABremoveProfile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDepartManageTABremoveProfile.Margin = new System.Windows.Forms.Padding(4);
             this.btnDepartManageTABremoveProfile.Name = "btnDepartManageTABremoveProfile";
             this.btnDepartManageTABremoveProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnDepartManageTABremoveProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -3336,7 +3380,7 @@
             this.tableLayoutPanel4.Controls.Add(this.panel1, 0, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(270, 2);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
@@ -3365,7 +3409,7 @@
             this.panel1.Controls.Add(this.tableLayoutPanel9);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(2, 108);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(926, 601);
             this.panel1.TabIndex = 1;
@@ -3378,7 +3422,7 @@
             this.tableLayoutPanel9.Controls.Add(this.panel2, 0, 1);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel9.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 2;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.79393F));
@@ -3397,12 +3441,12 @@
             this.tableLayoutPanel10.Controls.Add(this.btnAssignToDepTABremoveProfile, 2, 0);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel10.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 1;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel10.Size = new System.Drawing.Size(922, 60);
             this.tableLayoutPanel10.TabIndex = 0;
             // 
@@ -3429,7 +3473,7 @@
             this.btnNewProfileTABremoveProfile.IconZoom = 90D;
             this.btnNewProfileTABremoveProfile.IsTab = false;
             this.btnNewProfileTABremoveProfile.Location = new System.Drawing.Point(4, 4);
-            this.btnNewProfileTABremoveProfile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNewProfileTABremoveProfile.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewProfileTABremoveProfile.Name = "btnNewProfileTABremoveProfile";
             this.btnNewProfileTABremoveProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnNewProfileTABremoveProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -3466,7 +3510,7 @@
             this.btnRemoveProfTABremoveProfile.IconZoom = 90D;
             this.btnRemoveProfTABremoveProfile.IsTab = false;
             this.btnRemoveProfTABremoveProfile.Location = new System.Drawing.Point(311, 4);
-            this.btnRemoveProfTABremoveProfile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRemoveProfTABremoveProfile.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemoveProfTABremoveProfile.Name = "btnRemoveProfTABremoveProfile";
             this.btnRemoveProfTABremoveProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnRemoveProfTABremoveProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -3503,7 +3547,7 @@
             this.btnAssignToDepTABremoveProfile.IconZoom = 90D;
             this.btnAssignToDepTABremoveProfile.IsTab = false;
             this.btnAssignToDepTABremoveProfile.Location = new System.Drawing.Point(618, 4);
-            this.btnAssignToDepTABremoveProfile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAssignToDepTABremoveProfile.Margin = new System.Windows.Forms.Padding(4);
             this.btnAssignToDepTABremoveProfile.Name = "btnAssignToDepTABremoveProfile";
             this.btnAssignToDepTABremoveProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnAssignToDepTABremoveProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -3524,7 +3568,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(2, 66);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(922, 533);
             this.panel2.TabIndex = 1;
@@ -3538,7 +3582,7 @@
             this.checkedListBox2.FormattingEnabled = true;
             this.checkedListBox2.HorizontalScrollbar = true;
             this.checkedListBox2.Location = new System.Drawing.Point(19, 21);
-            this.checkedListBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkedListBox2.Margin = new System.Windows.Forms.Padding(2);
             this.checkedListBox2.Name = "checkedListBox2";
             this.checkedListBox2.Size = new System.Drawing.Size(513, 487);
             this.checkedListBox2.TabIndex = 7;
@@ -3550,7 +3594,7 @@
             this.panel10.Controls.Add(this.label57);
             this.panel10.Controls.Add(this.btnRemoveProfile);
             this.panel10.Location = new System.Drawing.Point(572, 21);
-            this.panel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(334, 487);
             this.panel10.TabIndex = 6;
@@ -3562,7 +3606,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbExtraInformationTABremoveProfile.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.tbExtraInformationTABremoveProfile.Location = new System.Drawing.Point(19, 27);
-            this.tbExtraInformationTABremoveProfile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbExtraInformationTABremoveProfile.Margin = new System.Windows.Forms.Padding(2);
             this.tbExtraInformationTABremoveProfile.Multiline = true;
             this.tbExtraInformationTABremoveProfile.Name = "tbExtraInformationTABremoveProfile";
             this.tbExtraInformationTABremoveProfile.Size = new System.Drawing.Size(296, 369);
@@ -3624,9 +3668,9 @@
             // 
             this.tabAddProfile.Controls.Add(this.tableLayoutPanel3);
             this.tabAddProfile.Location = new System.Drawing.Point(4, 22);
-            this.tabAddProfile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabAddProfile.Margin = new System.Windows.Forms.Padding(2);
             this.tabAddProfile.Name = "tabAddProfile";
-            this.tabAddProfile.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabAddProfile.Padding = new System.Windows.Forms.Padding(2);
             this.tabAddProfile.Size = new System.Drawing.Size(1206, 719);
             this.tabAddProfile.TabIndex = 0;
             this.tabAddProfile.Text = "AddProfile";
@@ -3642,7 +3686,7 @@
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel6, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -3662,7 +3706,7 @@
             this.tableLayoutPanel5.Controls.Add(this.btnScheduleTABaddProfile, 0, 2);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 6;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -3697,7 +3741,7 @@
             this.btnLogOutTABaddProfile.IconZoom = 90D;
             this.btnLogOutTABaddProfile.IsTab = false;
             this.btnLogOutTABaddProfile.Location = new System.Drawing.Point(4, 641);
-            this.btnLogOutTABaddProfile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogOutTABaddProfile.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogOutTABaddProfile.Name = "btnLogOutTABaddProfile";
             this.btnLogOutTABaddProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnLogOutTABaddProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -3734,7 +3778,7 @@
             this.btnEmployeeManageTABaddProfile.IconZoom = 90D;
             this.btnEmployeeManageTABaddProfile.IsTab = false;
             this.btnEmployeeManageTABaddProfile.Location = new System.Drawing.Point(4, 217);
-            this.btnEmployeeManageTABaddProfile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEmployeeManageTABaddProfile.Margin = new System.Windows.Forms.Padding(4);
             this.btnEmployeeManageTABaddProfile.Name = "btnEmployeeManageTABaddProfile";
             this.btnEmployeeManageTABaddProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnEmployeeManageTABaddProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -3753,7 +3797,7 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(2, 2);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(260, 209);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -3783,7 +3827,7 @@
             this.btnRestockTABaddProfile.IconZoom = 90D;
             this.btnRestockTABaddProfile.IsTab = false;
             this.btnRestockTABaddProfile.Location = new System.Drawing.Point(4, 429);
-            this.btnRestockTABaddProfile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRestockTABaddProfile.Margin = new System.Windows.Forms.Padding(4);
             this.btnRestockTABaddProfile.Name = "btnRestockTABaddProfile";
             this.btnRestockTABaddProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnRestockTABaddProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -3820,7 +3864,7 @@
             this.btnDepartManageTABaddProfile.IconZoom = 90D;
             this.btnDepartManageTABaddProfile.IsTab = false;
             this.btnDepartManageTABaddProfile.Location = new System.Drawing.Point(4, 535);
-            this.btnDepartManageTABaddProfile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDepartManageTABaddProfile.Margin = new System.Windows.Forms.Padding(4);
             this.btnDepartManageTABaddProfile.Name = "btnDepartManageTABaddProfile";
             this.btnDepartManageTABaddProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnDepartManageTABaddProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -3857,7 +3901,7 @@
             this.btnScheduleTABaddProfile.IconZoom = 90D;
             this.btnScheduleTABaddProfile.IsTab = false;
             this.btnScheduleTABaddProfile.Location = new System.Drawing.Point(4, 323);
-            this.btnScheduleTABaddProfile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnScheduleTABaddProfile.Margin = new System.Windows.Forms.Padding(4);
             this.btnScheduleTABaddProfile.Name = "btnScheduleTABaddProfile";
             this.btnScheduleTABaddProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnScheduleTABaddProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -3880,7 +3924,7 @@
             this.tableLayoutPanel6.Controls.Add(this.panel5, 0, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(270, 2);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 2;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
@@ -3909,7 +3953,7 @@
             this.panel5.Controls.Add(this.tableLayoutPanel7);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(2, 108);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(926, 601);
             this.panel5.TabIndex = 1;
@@ -3922,7 +3966,7 @@
             this.tableLayoutPanel7.Controls.Add(this.panel6, 0, 1);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.79393F));
@@ -3941,12 +3985,12 @@
             this.tableLayoutPanel8.Controls.Add(this.btnAssignToDepTABaddProfile, 2, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(922, 60);
             this.tableLayoutPanel8.TabIndex = 0;
             // 
@@ -3973,7 +4017,7 @@
             this.btnNewProfTABaddProf.IconZoom = 90D;
             this.btnNewProfTABaddProf.IsTab = false;
             this.btnNewProfTABaddProf.Location = new System.Drawing.Point(4, 4);
-            this.btnNewProfTABaddProf.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNewProfTABaddProf.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewProfTABaddProf.Name = "btnNewProfTABaddProf";
             this.btnNewProfTABaddProf.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnNewProfTABaddProf.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -4010,7 +4054,7 @@
             this.btnRemoveProfTABaddProfile.IconZoom = 90D;
             this.btnRemoveProfTABaddProfile.IsTab = false;
             this.btnRemoveProfTABaddProfile.Location = new System.Drawing.Point(311, 4);
-            this.btnRemoveProfTABaddProfile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRemoveProfTABaddProfile.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemoveProfTABaddProfile.Name = "btnRemoveProfTABaddProfile";
             this.btnRemoveProfTABaddProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnRemoveProfTABaddProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -4047,7 +4091,7 @@
             this.btnAssignToDepTABaddProfile.IconZoom = 90D;
             this.btnAssignToDepTABaddProfile.IsTab = false;
             this.btnAssignToDepTABaddProfile.Location = new System.Drawing.Point(618, 4);
-            this.btnAssignToDepTABaddProfile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAssignToDepTABaddProfile.Margin = new System.Windows.Forms.Padding(4);
             this.btnAssignToDepTABaddProfile.Name = "btnAssignToDepTABaddProfile";
             this.btnAssignToDepTABaddProfile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnAssignToDepTABaddProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
@@ -4068,7 +4112,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel6.Location = new System.Drawing.Point(2, 66);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(922, 533);
             this.panel6.TabIndex = 1;
@@ -4083,17 +4127,17 @@
             this.panel7.Controls.Add(this.btnCreateProf);
             this.panel7.Controls.Add(this.label13);
             this.panel7.Controls.Add(this.label15);
-            this.panel7.Location = new System.Drawing.Point(590, 16);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel7.Location = new System.Drawing.Point(492, 16);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(320, 231);
+            this.panel7.Size = new System.Drawing.Size(426, 231);
             this.panel7.TabIndex = 3;
             // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label26.Location = new System.Drawing.Point(24, 117);
+            this.label26.Location = new System.Drawing.Point(19, 104);
             this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(80, 19);
@@ -4104,7 +4148,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label25.Location = new System.Drawing.Point(24, 98);
+            this.label25.Location = new System.Drawing.Point(19, 85);
             this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(84, 19);
@@ -4115,7 +4159,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label14.Location = new System.Drawing.Point(24, 78);
+            this.label14.Location = new System.Drawing.Point(19, 65);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(29, 19);
@@ -4146,14 +4190,14 @@
             this.btnCreateProf.IconVisible = false;
             this.btnCreateProf.IconZoom = 90D;
             this.btnCreateProf.IsTab = false;
-            this.btnCreateProf.Location = new System.Drawing.Point(28, 163);
+            this.btnCreateProf.Location = new System.Drawing.Point(23, 163);
             this.btnCreateProf.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.btnCreateProf.Name = "btnCreateProf";
             this.btnCreateProf.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
             this.btnCreateProf.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnCreateProf.OnHoverTextColor = System.Drawing.Color.White;
             this.btnCreateProf.selected = false;
-            this.btnCreateProf.Size = new System.Drawing.Size(277, 42);
+            this.btnCreateProf.Size = new System.Drawing.Size(356, 42);
             this.btnCreateProf.TabIndex = 19;
             this.btnCreateProf.Text = "Create Profile";
             this.btnCreateProf.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -4165,7 +4209,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label13.Location = new System.Drawing.Point(136, 79);
+            this.label13.Location = new System.Drawing.Point(131, 66);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(0, 19);
@@ -4213,9 +4257,9 @@
             this.panel8.Controls.Add(this.label22);
             this.panel8.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel8.Location = new System.Drawing.Point(17, 16);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(525, 515);
+            this.panel8.Size = new System.Drawing.Size(471, 515);
             this.panel8.TabIndex = 0;
             // 
             // tbWage
@@ -4224,9 +4268,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbWage.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.tbWage.Location = new System.Drawing.Point(265, 427);
-            this.tbWage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbWage.Margin = new System.Windows.Forms.Padding(2);
             this.tbWage.Name = "tbWage";
-            this.tbWage.Size = new System.Drawing.Size(245, 26);
+            this.tbWage.Size = new System.Drawing.Size(191, 26);
             this.tbWage.TabIndex = 24;
             // 
             // label30
@@ -4249,9 +4293,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbMaxHrs.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.tbMaxHrs.Location = new System.Drawing.Point(265, 391);
-            this.tbMaxHrs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbMaxHrs.Margin = new System.Windows.Forms.Padding(2);
             this.tbMaxHrs.Name = "tbMaxHrs";
-            this.tbMaxHrs.Size = new System.Drawing.Size(245, 26);
+            this.tbMaxHrs.Size = new System.Drawing.Size(191, 26);
             this.tbMaxHrs.TabIndex = 22;
             // 
             // tbMinHrs
@@ -4260,9 +4304,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbMinHrs.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.tbMinHrs.Location = new System.Drawing.Point(265, 352);
-            this.tbMinHrs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbMinHrs.Margin = new System.Windows.Forms.Padding(2);
             this.tbMinHrs.Name = "tbMinHrs";
-            this.tbMinHrs.Size = new System.Drawing.Size(245, 26);
+            this.tbMinHrs.Size = new System.Drawing.Size(191, 26);
             this.tbMinHrs.TabIndex = 21;
             // 
             // label28
@@ -4299,11 +4343,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbDateOfBirth.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.tbDateOfBirth.Location = new System.Drawing.Point(262, 78);
-            this.tbDateOfBirth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbDateOfBirth.Margin = new System.Windows.Forms.Padding(2);
             this.tbDateOfBirth.MaxDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.tbDateOfBirth.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.tbDateOfBirth.Name = "tbDateOfBirth";
-            this.tbDateOfBirth.Size = new System.Drawing.Size(248, 26);
+            this.tbDateOfBirth.Size = new System.Drawing.Size(194, 26);
             this.tbDateOfBirth.TabIndex = 18;
             this.tbDateOfBirth.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
@@ -4371,9 +4415,9 @@
             "SI - Slovenia",
             "SY - Syria"});
             this.tbNationality.Location = new System.Drawing.Point(262, 186);
-            this.tbNationality.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbNationality.Margin = new System.Windows.Forms.Padding(2);
             this.tbNationality.Name = "tbNationality";
-            this.tbNationality.Size = new System.Drawing.Size(248, 26);
+            this.tbNationality.Size = new System.Drawing.Size(194, 26);
             this.tbNationality.TabIndex = 17;
             // 
             // rbEmployee
@@ -4435,7 +4479,7 @@
             this.btnAddNewProfile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnAddNewProfile.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAddNewProfile.selected = false;
-            this.btnAddNewProfile.Size = new System.Drawing.Size(485, 34);
+            this.btnAddNewProfile.Size = new System.Drawing.Size(431, 34);
             this.btnAddNewProfile.TabIndex = 4;
             this.btnAddNewProfile.Text = "Add";
             this.btnAddNewProfile.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -4491,9 +4535,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbPhoneNr.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.tbPhoneNr.Location = new System.Drawing.Point(262, 145);
-            this.tbPhoneNr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbPhoneNr.Margin = new System.Windows.Forms.Padding(2);
             this.tbPhoneNr.Name = "tbPhoneNr";
-            this.tbPhoneNr.Size = new System.Drawing.Size(248, 26);
+            this.tbPhoneNr.Size = new System.Drawing.Size(194, 26);
             this.tbPhoneNr.TabIndex = 10;
             // 
             // tbEmail
@@ -4502,9 +4546,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbEmail.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.tbEmail.Location = new System.Drawing.Point(262, 109);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(2);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(248, 26);
+            this.tbEmail.Size = new System.Drawing.Size(194, 26);
             this.tbEmail.TabIndex = 9;
             // 
             // tbLastName
@@ -4513,9 +4557,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbLastName.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.tbLastName.Location = new System.Drawing.Point(262, 46);
-            this.tbLastName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLastName.Margin = new System.Windows.Forms.Padding(2);
             this.tbLastName.Name = "tbLastName";
-            this.tbLastName.Size = new System.Drawing.Size(248, 26);
+            this.tbLastName.Size = new System.Drawing.Size(194, 26);
             this.tbLastName.TabIndex = 7;
             // 
             // tbFirstName
@@ -4524,9 +4568,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbFirstName.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.tbFirstName.Location = new System.Drawing.Point(262, 15);
-            this.tbFirstName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbFirstName.Margin = new System.Windows.Forms.Padding(2);
             this.tbFirstName.Name = "tbFirstName";
-            this.tbFirstName.Size = new System.Drawing.Size(248, 26);
+            this.tbFirstName.Size = new System.Drawing.Size(194, 26);
             this.tbFirstName.TabIndex = 6;
             // 
             // label17
@@ -4625,7 +4669,7 @@
             this.tabControl1.Controls.Add(this.SheduleGenerating);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1214, 745);
@@ -4636,9 +4680,9 @@
             // 
             this.SheduleGenerating.Controls.Add(this.tableLayoutPanel32);
             this.SheduleGenerating.Location = new System.Drawing.Point(4, 22);
-            this.SheduleGenerating.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SheduleGenerating.Margin = new System.Windows.Forms.Padding(2);
             this.SheduleGenerating.Name = "SheduleGenerating";
-            this.SheduleGenerating.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SheduleGenerating.Padding = new System.Windows.Forms.Padding(2);
             this.SheduleGenerating.Size = new System.Drawing.Size(1206, 719);
             this.SheduleGenerating.TabIndex = 7;
             this.SheduleGenerating.Text = "SheduleGeneratorTab";
@@ -4654,7 +4698,7 @@
             this.tableLayoutPanel32.Controls.Add(this.tableLayoutPanel34, 1, 0);
             this.tableLayoutPanel32.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel32.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel32.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel32.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel32.Name = "tableLayoutPanel32";
             this.tableLayoutPanel32.RowCount = 1;
             this.tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -4674,7 +4718,7 @@
             this.tableLayoutPanel33.Controls.Add(this.bunifuFlatButton8, 0, 4);
             this.tableLayoutPanel33.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel33.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel33.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel33.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel33.Name = "tableLayoutPanel33";
             this.tableLayoutPanel33.RowCount = 6;
             this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -4709,7 +4753,7 @@
             this.bunifuFlatButton2.IconZoom = 90D;
             this.bunifuFlatButton2.IsTab = false;
             this.bunifuFlatButton2.Location = new System.Drawing.Point(4, 641);
-            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -4746,7 +4790,7 @@
             this.bunifuFlatButton4.IconZoom = 90D;
             this.bunifuFlatButton4.IsTab = false;
             this.bunifuFlatButton4.Location = new System.Drawing.Point(4, 217);
-            this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton4.Name = "bunifuFlatButton4";
             this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -4765,7 +4809,7 @@
             this.pictureBox8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
             this.pictureBox8.Location = new System.Drawing.Point(2, 2);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(260, 209);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -4795,7 +4839,7 @@
             this.bunifuFlatButton5.IconZoom = 90D;
             this.bunifuFlatButton5.IsTab = false;
             this.bunifuFlatButton5.Location = new System.Drawing.Point(4, 323);
-            this.bunifuFlatButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton5.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton5.Name = "bunifuFlatButton5";
             this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton5.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -4832,7 +4876,7 @@
             this.bunifuFlatButton7.IconZoom = 90D;
             this.bunifuFlatButton7.IsTab = false;
             this.bunifuFlatButton7.Location = new System.Drawing.Point(4, 429);
-            this.bunifuFlatButton7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton7.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton7.Name = "bunifuFlatButton7";
             this.bunifuFlatButton7.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton7.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -4869,7 +4913,7 @@
             this.bunifuFlatButton8.IconZoom = 90D;
             this.bunifuFlatButton8.IsTab = false;
             this.bunifuFlatButton8.Location = new System.Drawing.Point(4, 535);
-            this.bunifuFlatButton8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton8.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton8.Name = "bunifuFlatButton8";
             this.bunifuFlatButton8.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.bunifuFlatButton8.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
@@ -4892,7 +4936,7 @@
             this.tableLayoutPanel34.Controls.Add(this.panel23, 0, 1);
             this.tableLayoutPanel34.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel34.Location = new System.Drawing.Point(270, 2);
-            this.tableLayoutPanel34.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel34.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel34.Name = "tableLayoutPanel34";
             this.tableLayoutPanel34.RowCount = 2;
             this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
@@ -4922,7 +4966,7 @@
             this.panel23.Controls.Add(this.tableLayoutPanel35);
             this.panel23.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel23.Location = new System.Drawing.Point(2, 108);
-            this.panel23.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel23.Margin = new System.Windows.Forms.Padding(2);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(926, 601);
             this.panel23.TabIndex = 1;
@@ -4934,7 +4978,7 @@
             this.tableLayoutPanel35.Controls.Add(this.panel24, 0, 0);
             this.tableLayoutPanel35.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel35.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel35.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel35.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel35.Name = "tableLayoutPanel35";
             this.tableLayoutPanel35.RowCount = 1;
             this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -4949,7 +4993,7 @@
             this.panel24.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel24.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel24.Location = new System.Drawing.Point(2, 2);
-            this.panel24.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel24.Margin = new System.Windows.Forms.Padding(2);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(922, 597);
             this.panel24.TabIndex = 1;
@@ -4979,11 +5023,11 @@
             this.groupBox2.Controls.Add(this.tbNrManagers);
             this.groupBox2.Controls.Add(this.label33);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
-            this.groupBox2.Location = new System.Drawing.Point(418, 37);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Location = new System.Drawing.Point(455, 37);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox2.Size = new System.Drawing.Size(394, 422);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(436, 522);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Next Week";
@@ -5019,7 +5063,7 @@
             this.btnGenerateScheduleForTheWeek.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnGenerateScheduleForTheWeek.OnHoverTextColor = System.Drawing.Color.White;
             this.btnGenerateScheduleForTheWeek.selected = false;
-            this.btnGenerateScheduleForTheWeek.Size = new System.Drawing.Size(333, 50);
+            this.btnGenerateScheduleForTheWeek.Size = new System.Drawing.Size(375, 50);
             this.btnGenerateScheduleForTheWeek.TabIndex = 16;
             this.btnGenerateScheduleForTheWeek.Text = "Generate Schedule";
             this.btnGenerateScheduleForTheWeek.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -5031,7 +5075,7 @@
             // 
             this.tbDepartment.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.tbDepartment.Location = new System.Drawing.Point(203, 39);
-            this.tbDepartment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbDepartment.Margin = new System.Windows.Forms.Padding(2);
             this.tbDepartment.Name = "tbDepartment";
             this.tbDepartment.Size = new System.Drawing.Size(152, 26);
             this.tbDepartment.TabIndex = 10;
@@ -5062,7 +5106,7 @@
             // 
             this.tbNrEmployees.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.tbNrEmployees.Location = new System.Drawing.Point(203, 211);
-            this.tbNrEmployees.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbNrEmployees.Margin = new System.Windows.Forms.Padding(2);
             this.tbNrEmployees.Name = "tbNrEmployees";
             this.tbNrEmployees.Size = new System.Drawing.Size(152, 26);
             this.tbNrEmployees.TabIndex = 9;
@@ -5071,7 +5115,7 @@
             // 
             this.tbNrAdmins.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.tbNrAdmins.Location = new System.Drawing.Point(203, 82);
-            this.tbNrAdmins.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbNrAdmins.Margin = new System.Windows.Forms.Padding(2);
             this.tbNrAdmins.Name = "tbNrAdmins";
             this.tbNrAdmins.Size = new System.Drawing.Size(152, 26);
             this.tbNrAdmins.TabIndex = 6;
@@ -5102,7 +5146,7 @@
             // 
             this.tbNrDepotWorkers.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.tbNrDepotWorkers.Location = new System.Drawing.Point(203, 169);
-            this.tbNrDepotWorkers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbNrDepotWorkers.Margin = new System.Windows.Forms.Padding(2);
             this.tbNrDepotWorkers.Name = "tbNrDepotWorkers";
             this.tbNrDepotWorkers.Size = new System.Drawing.Size(152, 26);
             this.tbNrDepotWorkers.TabIndex = 8;
@@ -5111,7 +5155,7 @@
             // 
             this.tbNrManagers.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.tbNrManagers.Location = new System.Drawing.Point(203, 123);
-            this.tbNrManagers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbNrManagers.Margin = new System.Windows.Forms.Padding(2);
             this.tbNrManagers.Name = "tbNrManagers";
             this.tbNrManagers.Size = new System.Drawing.Size(152, 26);
             this.tbNrManagers.TabIndex = 7;
@@ -5133,10 +5177,10 @@
             this.groupBox1.Controls.Add(this.lbxCancelledShifts);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold);
             this.groupBox1.Location = new System.Drawing.Point(23, 37);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(369, 522);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(415, 522);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Current Week";
@@ -5172,7 +5216,7 @@
             this.btnReassign.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
             this.btnReassign.OnHoverTextColor = System.Drawing.Color.White;
             this.btnReassign.selected = false;
-            this.btnReassign.Size = new System.Drawing.Size(333, 50);
+            this.btnReassign.Size = new System.Drawing.Size(379, 50);
             this.btnReassign.TabIndex = 5;
             this.btnReassign.Text = "Reassign Cancelled Shifts";
             this.btnReassign.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -5184,9 +5228,9 @@
             // 
             this.lbxCancelledShifts.FormattingEnabled = true;
             this.lbxCancelledShifts.Location = new System.Drawing.Point(15, 52);
-            this.lbxCancelledShifts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbxCancelledShifts.Margin = new System.Windows.Forms.Padding(2);
             this.lbxCancelledShifts.Name = "lbxCancelledShifts";
-            this.lbxCancelledShifts.Size = new System.Drawing.Size(334, 256);
+            this.lbxCancelledShifts.Size = new System.Drawing.Size(379, 256);
             this.lbxCancelledShifts.TabIndex = 0;
             // 
             // panel29
@@ -5247,44 +5291,6 @@
             this.bunifuFlatButton10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton10.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton10.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
-            // 
-            // btnEmail
-            // 
-            this.btnEmail.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(208)))), ((int)(((byte)(252)))));
-            this.btnEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.btnEmail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEmail.BorderRadius = 0;
-            this.btnEmail.ButtonText = "Inbox";
-            this.btnEmail.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEmail.DisabledColor = System.Drawing.Color.Gray;
-            this.btnEmail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnEmail.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btnEmail.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnEmail.Iconimage = null;
-            this.btnEmail.Iconimage_right = null;
-            this.btnEmail.Iconimage_right_Selected = null;
-            this.btnEmail.Iconimage_Selected = null;
-            this.btnEmail.IconMarginLeft = 0;
-            this.btnEmail.IconMarginRight = 0;
-            this.btnEmail.IconRightVisible = false;
-            this.btnEmail.IconRightZoom = 0D;
-            this.btnEmail.IconVisible = false;
-            this.btnEmail.IconZoom = 90D;
-            this.btnEmail.IsTab = false;
-            this.btnEmail.Location = new System.Drawing.Point(0, 0);
-            this.btnEmail.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
-            this.btnEmail.Name = "btnEmail";
-            this.btnEmail.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(126)))), ((int)(((byte)(177)))));
-            this.btnEmail.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(61)))), ((int)(((byte)(89)))));
-            this.btnEmail.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnEmail.selected = false;
-            this.btnEmail.Size = new System.Drawing.Size(363, 85);
-            this.btnEmail.TabIndex = 8;
-            this.btnEmail.Text = "Inbox";
-            this.btnEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnEmail.Textcolor = System.Drawing.Color.White;
-            this.btnEmail.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btnEmail.Click += new System.EventHandler(this.btnEmail_Click);
             // 
             // MainAdmin
             // 
