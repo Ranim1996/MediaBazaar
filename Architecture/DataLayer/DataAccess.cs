@@ -333,7 +333,7 @@ namespace Media_Bazaar
         {
             using (MySqlConnection connection = new MySqlConnection(Helper.CnnVal("DB")))
             {
-                var output = connection.Query<RestockRequestBase>($"SELECT * FROM RestockRequest WHERE AdminConfirmation='CONFIRMED'").ToList();
+                var output = connection.Query<RestockRequestBase>($"SELECT * FROM RestockRequest WHERE AdminConfirmation ='CONFIRMED' ").ToList();
                 return output;
             }
         }

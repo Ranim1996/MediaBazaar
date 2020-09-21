@@ -153,7 +153,7 @@ namespace Media_Bazaar
             }
             catch
             {
-                MessageBox.Show("Something went wrong!!!!!!!");
+                //MessageBox.Show("Something went wrong!!!!!!!");
             }
             
         }
@@ -184,7 +184,7 @@ namespace Media_Bazaar
             }
             catch
             {
-                MessageBox.Show("Something went wrong!!!!!!!!!!!");
+                //MessageBox.Show("Something went wrong!!!!!!!!!!!");
             }
             
         }
